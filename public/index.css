@@ -1,0 +1,8 @@
+html,body{
+  background-color:black;
+  color:white;
+}
+html,body,#approot{
+  overflow: hidden;
+  margin: 0px;
+}

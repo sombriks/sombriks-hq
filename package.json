@@ -1,0 +1,31 @@
+{
+  "name": "sombriks-firebase-service",
+  "version": "1.0.0",
+  "description": "service-side for my experiments",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+  },
+  "keywords": [
+    "firebase",
+    "sombriks",
+    "experiments"
+  ],
+  "author": "Leonardo Silveira <sombriks@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "knex": "^0.11.10",
+    "pg": "^6.1.0",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
