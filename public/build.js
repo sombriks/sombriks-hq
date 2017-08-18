@@ -40032,16 +40032,6 @@ module.exports = {
 },{}],190:[function(require,module,exports){
 var css = "html,\nbody {\n  background-color: black;\n  color: white;\n  overflow: hidden;\n  margin: 0px;\n}\n"; (require("browserify-css").createStyle(css, { "href": "src/index.css" }, { "insertAt": "bottom" })); module.exports = css;
 },{"browserify-css":2}],191:[function(require,module,exports){
-// src/main.js
-
-require("./index.css");
-
-const PIXI = require("pixi.js");
-
-const app = new PIXI.Application(window.innerWidth, window.innerHeight);
-
-window.addEventListener("resize", _ => app.renderer.resize(window.innerWidth, window.innerHeight))
-document.getElementById("root").appendChild(app.view);
 
 // https://pixijs.github.io/examples/#/basics/text.js
 
@@ -40065,8 +40055,6 @@ var style = new PIXI.TextStyle({
 var richText = new PIXI.Text('Em Construção', style);
 richText.x = window.innerWidth / 2;
 richText.y = window.innerHeight / 2;
-
-app.stage.addChild(richText);
 
 // https://pixijs.github.io/examples/#/demos/dragging.js
 
@@ -40102,4 +40090,21 @@ function onDragMove() {
     this.y = newPosition.y;
   }
 }
-},{"./index.css":190,"pixi.js":142}]},{},[191]);
+
+module.exports = richText
+},{}],192:[function(require,module,exports){
+// src/main.js
+
+require("./index.css");
+
+const PIXI = require("pixi.js");
+
+const app = new PIXI.Application(window.innerWidth, window.innerHeight);
+
+window.addEventListener("resize", _ => app.renderer.resize(window.innerWidth, window.innerHeight))
+document.getElementById("root").appendChild(app.view);
+
+
+app.stage.addChild(require("./letreiro"));
+
+},{"./index.css":190,"./letreiro":191,"pixi.js":142}]},{},[192]);
