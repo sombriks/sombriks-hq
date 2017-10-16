@@ -4,6 +4,7 @@
   "description": "foo bar hurr duhh",
   "main": "build.js",
   "scripts": {
+    "clean": "make clean",
     "release": "make release",
     "dev": "make dev"
   },
