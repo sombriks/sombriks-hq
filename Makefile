@@ -9,7 +9,7 @@ build: clean
 	cp -R assets public/assets
 
 release: build
-	firebase deploy
+	firebase deploy --token "1/kuw5t8u3MKV0I1BTigT8ZEmbppNq8fM_zVq3emuDhmc"
 
 dev: 
 	budo src/main.js:build.js --live --open -H 127.0.0.1
