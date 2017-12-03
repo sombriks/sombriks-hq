@@ -6,7 +6,7 @@ clean:
 build: clean
 	browserify src/main.js -o public/build.js
 	cp index.html public/index.html
-	cp -R assets public/assets
+	cp assets public/assets
 
 release: build
 	firebase deploy --token "1/kuw5t8u3MKV0I1BTigT8ZEmbppNq8fM_zVq3emuDhmc"
