@@ -21,7 +21,7 @@
     <h2>About Python, PHP, Ruby, ETC</h2>
     <p>I had little contact with those languages, however i discovered that there's need one week or less to get versed with the basics.</p>
     <p>I've toyed in the past with PHP. In the very past. Nowadays we have classes and laravel. That says a lot.</p> 
-    <p>On the python realm we have django and sqlalchemy 
+    <p>On the python realm we have django and sqlalchemy.</p> 
   </div>
 </template>
 
