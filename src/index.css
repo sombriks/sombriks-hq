@@ -4,6 +4,7 @@ html,body{
   color:white;
   /* overflow: hidden; */
   margin: 0px;
+  font-family: Courier New, Courier, monospace;
 }
 a {
   min-height: 30px;
@@ -12,4 +13,8 @@ a {
   border: 1px groove white;
   border-radius: 5px;
   color: white;
+}
+
+li {
+  min-height: 30px;
 }
