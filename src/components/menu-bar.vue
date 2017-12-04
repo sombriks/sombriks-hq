@@ -23,13 +23,4 @@ module.exports = {
 .bar {
   margin: 10px 10px 10px 10px;
 }
-
-.bar > a {
-  min-height: 30px;
-  margin: 10px 10px 10px 10px;
-  padding: 5px 5px 5px 5px;
-  border: 1px groove white;
-  border-radius: 5px;
-  color: white;
-}
 </style>

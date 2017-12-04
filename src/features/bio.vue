@@ -6,18 +6,18 @@
     <p>Made in Brazil.</p>
     <p>Thinker. Coder.</p>
     <p>Never stops to get amazed on how a problem can be torn apart into smaller pieces.</p>
-    <p>Quite unable to understad the fiercer mad love that some people have for Soccer teams.</p>
+    <p>Quite unable to understand the fiercer mad love that some people have for Soccer teams.</p>
     <p>Have a hard time to see the difference between code and have fun.</p>
-    <p>Running guy, Biking guy.</p>
+    <p>Running guy, Biking guy. Swimming guy sometimes.</p>
     <p>You can follow me on these social networks:</p>
     <ul>
       <li><a target="fb" href="https://www.facebook.com/sombriks">Facebook</a></li>
       <li><a target="tw" href="https://twitter.com/sombriks">Twitter</a></li>
       <li><a target="gh" href="https://github.com/sombriks">Github</a></li>
+      <li><a target="in" href="https://www.linkedin.com/in/sombriks/">Linkedin</a></li>
     </ul>
   </div>
 </template>
-
 <script>
 module.exports = {
   name: "Bio",
@@ -43,7 +43,3 @@ module.exports = {
   }
 };
 </script>
-
-<style>
-
-</style>
