@@ -1,14 +1,37 @@
 <template>
   <div>
-    <h1>Under construction</h1>
-    <h3>Blog</h3>
+    <h1>Blog</h1>
+    <a v-for="p in listing" :href="`#/blog/${p}`" :key="p" @click="getpost(p)">{{p}}</a>
+    <br/>
+    <br/>
+    <div v-html="content"></div>
   </div>
 </template>
 
 <script>
+const fs = require("fs");
+const axios = require("axios");
+const marked = require("marked");
+marked.setOptions({
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+});
 module.exports = {
-  name:"Blog"
-}
+  name: "Blog",
+  data: _ => ({
+    listing: fs.readdirSync("assets/posts").filter(e => e.endsWith(".md")).reverse(),
+    content: ""
+  }),
+  created() {
+    if (this.$route.params.post) this.getpost(this.$route.params.post);
+  },
+  methods: {
+    getpost(post) {
+      axios.get(`assets/posts/${post}`).then(ret => this.content = marked(ret.data));
+    }
+  }
+};
 </script>
 
 <style>
