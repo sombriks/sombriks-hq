@@ -6,7 +6,7 @@
     <h2>Platforms and runtimes</h2>
     <p>Linux, Windows, JVM, Nodejs, MySQL, Postgresql</p>
     <h2>Frameworks</h2>
-    <p>Express, Knex.js, Vue.js, Vue Material, mocha, chai, Bootstrap, Font Awesome, Material Design Icons, 
+    <p>Express, Knex.js, Vue.js, Vue Material, mocha, chai, Bootstrap, Phaserjs, Pixi.js, Font Awesome, Material Design Icons, 
       Angularjs (1.x), Angular material (1.x), JEE (JPA, JSF, JMS, etc.), Flywaydb, JUnit</p>
     <h2>Cool tools and services</h2>
     <p>Cordova, NPM, Browserify, PgAdmin3, iReport, Elastic Email, Onesignal, 
