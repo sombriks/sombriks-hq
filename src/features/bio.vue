@@ -7,8 +7,9 @@
     <p>Thinker. Coder.</p>
     <p>Never stops to get amazed on how a problem can be torn apart into smaller pieces.</p>
     <p>Quite unable to understand the fiercer mad love that some people have for Soccer teams.</p>
-    <p>Have a hard time to see the difference between code and have fun.</p>
     <p>Running guy, Biking guy. Swimming guy sometimes.</p>
+    <p>Gamer when it's possible.</p>
+    <p>Have a hard time to see the difference between code and have fun.</p>
     <p>You can follow me on these social networks:</p>
     <ul>
       <li><a target="fb" href="https://www.facebook.com/sombriks">Facebook</a></li>
