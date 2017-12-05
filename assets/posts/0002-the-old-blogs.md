@@ -12,7 +12,9 @@ I did also a effort on other fields, like [advising the young tech professionals
 
 The very single problem about blogging is time. It takes time.
 
-This one have a few advantages, since it's plain markdown and commit is publish. I can switch workspace and write things, i can then change folder again on [visual studio code](https://code.visualstudio.com/) and bam! back to work.
+This one have a few advantages, since it's plain markdown and commit is publish. 
+
+I can switch workspace and write things, i can then change folder again on [visual studio code](https://code.visualstudio.com/) and bam! back to work.
 
 Sounds complicated, but is dead simple.
 

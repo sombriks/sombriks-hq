@@ -19,3 +19,7 @@ a {
 li {
   min-height: 30px;
 }
+
+pre{
+  background-color:#222222;
+}
