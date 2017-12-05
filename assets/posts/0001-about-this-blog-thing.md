@@ -19,3 +19,5 @@ One special transform is [brfs](https://github.com/browserify/brfs), which allow
 Therefore i can list them at build time and keep this index to dynamically load posts at runtime.   
 
 So, we did a blog engine using vue, vue-router, marked, axios, browserify and brfs.
+
+2017-12-04
