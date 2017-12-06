@@ -10,7 +10,7 @@ When i needed to setup a java project, i used to start creating the eclipse proj
 
 And then i found [maven](https://en.wikipedia.org/wiki/Apache_Maven).
 
-The idea itself wasn't new. [Debian's apt-get](https://en.wikipedia.org/wiki/APT_(Debian)) already did something similar for years.
+The idea itself wasn't new. [Debian's apt-get](https://en.wikipedia.org/wiki/APT_(Debian) already did something similar for years.
 
 Even yet, due to my [slackware](http://www.slackware.com/) background, i used to have a little resistance against apt-like tools.
 
@@ -121,10 +121,103 @@ It will output a single file called **package.json** with this content:
 ```
 
 It's said that *the greatest sophistication is the simplicity*. 
-To be fair, the three command line init options are nearly the same difficult if you get some novice crewmen. 
+To be fair, the three command line init options have nearly the same difficult if you get some novice crewmen. 
 But npm options will look far more easier for the ones who already know maven or gradle.
 Still a beautiful illusion.
 
 ## Adding some dependencies
 
-2017-12-05
+On maven/gradle land, you add dependencies copying and pasting them directly inside the project file is the de-facto standard.
+
+let's say we need Processing into our maven awesome project. all we need to do is to open pom.xml and add the dependency:
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.sombriks</groupId>
+  <artifactId>my-awesome-project-tm</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>my-awesome-project-tm</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+        <groupId>org.processing</groupId>
+        <artifactId>java-mode</artifactId>
+        <version>3.3.6</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+
+```
+On gradle realm we would have something like this:
+
+```groovy
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    testCompile 'junit:junit:4.12'
+
+    compile 'org.processing:java-mode:3.3.6'
+}
+```
+
+And a similar operation in the javascript realm would look pretty much like this:
+
+```bash
+npm install processing-js --save
+```
+
+it will modify the **package.json** file for you:
+
+```json
+{
+  "name": "my-awesome-project-tm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "processing-js": "^1.6.6"
+  }
+}
+```
+
+Once you add a dependency and/or call for a build, maven, gradle and npm will download it for ,you.
+
+Unlike the java cousins, npm will download it locally. a folder called node_modules will appear once you start to add dependencies for the registry.
+
+Maven and gradle will store them in an folder called .m2 in side your home directory.
+
+## Packaging
+
+Maven and Gradle will worry about how you plan to package your project. Will it be a .jar file? a .war? .ear? who knows?
+
+But npm however have no business with that. in fact, if you publish your npm project to the registry, lit will carry the layout you make. 
+
+## Some kind of conclusion. It's late.
+
+Those tools carry many differences. Gradle where meant to be a better Maven, but NPM serves us well... on another platform.
+
+We didn't debated here Ruby gems, PHP composer or pip. Yet thinking again about 2007, we lived without these tools. 
+
+My my, we had a sad life.
+
+2017-12-06
