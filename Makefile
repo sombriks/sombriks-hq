@@ -1,9 +1,11 @@
 
 clean: 
 	rm -rf public
+
+prepare:
 	mkdir public
 
-build: clean
+build: clean prepare
 	browserify src/main.js -o public/build.js
 	cp index.html public/index.html
 	cp -r assets public/assets
