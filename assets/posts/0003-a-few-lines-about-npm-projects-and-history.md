@@ -129,7 +129,7 @@ Still a beautiful illusion.
 
 On maven/gradle land, you add dependencies copying and pasting them directly inside the project file is the de-facto standard.
 
-let's say we need Processing into our maven awesome project. all we need to do is to open pom.xml and add the dependency:
+let's say we need [Processing](https://processing.org/) into our maven awesome project. all we need to do is to open pom.xml and add the dependency:
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -157,6 +157,7 @@ let's say we need Processing into our maven awesome project. all we need to do i
 </project>
 
 ```
+
 On gradle realm we would have something like this:
 
 ```groovy
@@ -180,7 +181,7 @@ And a similar operation in the javascript realm would look pretty much like this
 npm install processing-js --save
 ```
 
-it will modify the **package.json** file for you:
+It will modify the **package.json** file for you:
 
 ```json
 {
@@ -200,9 +201,11 @@ it will modify the **package.json** file for you:
 }
 ```
 
-Once you add a dependency and/or call for a build, maven, gradle and npm will download it for ,you.
+Once you add a dependency and/or call for a build, maven, gradle and npm will download it for you.
 
-Unlike the java cousins, npm will download it locally. a folder called node_modules will appear once you start to add dependencies for the registry.
+Unlike the java cousins, npm will download it locally.
+
+A folder called **node_modules** will appear once you start to add dependencies for the registry.
 
 Maven and gradle will store them in an folder called .m2 in side your home directory.
 
@@ -210,9 +213,11 @@ Maven and gradle will store them in an folder called .m2 in side your home direc
 
 Maven and Gradle will worry about how you plan to package your project. Will it be a .jar file? a .war? .ear? who knows?
 
-But npm however have no business with that. in fact, if you publish your npm project to the registry, lit will carry the layout you make. 
+But npm however have no business with that.
 
-## Some kind of conclusion. It's late.
+In fact, if you publish your npm project to the registry, lit will carry the layout you make.
+
+## Some kind of conclusion. It's late
 
 Those tools carry many differences. Gradle where meant to be a better Maven, but NPM serves us well... on another platform.
 
