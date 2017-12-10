@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="picture" width="200" height="200" alt="Gravatar Profile Picture" title="click to change" @click="changepic"/>
+    <img :src="picture" width="200" height="200" alt="Profile Picture" title="click to change" @click="changepic"/>
     <h1>Bio</h1>
     <p>Born in 1984, Male.</p>
     <p>Made in Brazil.</p>
@@ -16,6 +16,7 @@
       <li><a target="tw" href="https://twitter.com/sombriks">Twitter</a></li>
       <li><a target="gh" href="https://github.com/sombriks">Github</a></li>
       <li><a target="in" href="https://www.linkedin.com/in/sombriks/">Linkedin</a></li>
+      <li><a target="so" href="https://stackoverflow.com/users/420096/sombriks?tab=profile">Stack Overflow</a></li>
     </ul>
   </div>
 </template>

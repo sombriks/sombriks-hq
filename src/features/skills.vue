@@ -1,6 +1,13 @@
 <template>
   <div>
     <div id="cnv"></div>
+    <!-- -->
+    <a href="https://stackexchange.com/users/184203">
+      <img src="https://stackexchange.com/users/flair/184203.png?theme=dark" width="208" height="58" 
+      alt="profile for Sombriks on Stack Exchange, a network of free, community-driven Q&amp;A sites" 
+      title="profile for Sombriks on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+    </a>
+    <!-- -->
     <h1>Skills</h1>
     <h2>Programming languages</h2>
     <p>Javascript, Java, SQL, CSS, HTML, C, C++, PHP, Python, Ruby</p>
