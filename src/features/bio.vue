@@ -10,7 +10,8 @@
     <p>Running guy, Biking guy. Swimming guy sometimes.</p>
     <p>Gamer when it's possible.</p>
     <p>Have a hard time to see the difference between code and have fun.</p>
-    <p>You can follow me on these social networks:</p>
+    <h2>Contact</h2>
+    <p>You can contact me on these social networks:</p>
     <ul>
       <li><a target="fb" href="https://www.facebook.com/sombriks">Facebook</a></li>
       <li><a target="tw" href="https://twitter.com/sombriks">Twitter</a></li>

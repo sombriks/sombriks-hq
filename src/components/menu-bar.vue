@@ -1,5 +1,5 @@
 <template>
-  <div class="bar">
+  <div>
     <a v-for="r in routes" :href="`#${r.path}`" :key="r.path">{{r.label}}</a>
   </div>
 </template>
@@ -12,9 +12,3 @@ module.exports = {
   })
 };
 </script>
-
-<style scoped>
-.bar {
-  margin: 10px 10px 10px 10px;
-}
-</style>
