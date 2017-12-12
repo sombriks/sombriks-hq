@@ -13,6 +13,11 @@
     <p>
       It uses <a target="pixi" href="https://github.com/pixijs/pixi.js">pixi.js</a> for drawing 
       and <a target="hammer" href="https://github.com/hammerjs/hammer.js">hammer.js</a> for swipe detection.</p>
+    <hr/>
+    <h2>Rosetta Beer Store</h2>
+    <p><a target="rbs" href="https://github.com/sombriks/rosetta-beer-store">This repository</a> contains a few sample codes to demonstrate how we can 
+    have interchangeable parts and technologies on modern web.</p>
+    <p>(i was a little bored.)</p>
   </div>
 </template>
 
