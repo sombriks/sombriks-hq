@@ -6,6 +6,14 @@ html,body{
   margin: 0px;
   font-family: Courier New, Courier, monospace;
 }
+
+/* body {
+  background-image: url(../assets/backgrounds/2014-07-06_17.40.35.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+  min-height: 100%;
+} */
+
 a {
   min-height: 30px;
   margin: 7px 7px 7px 7px;
