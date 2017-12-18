@@ -18,6 +18,15 @@
     <p><a target="rbs" href="https://github.com/sombriks/rosetta-beer-store">This repository</a> contains a few sample codes to demonstrate how we can 
     have interchangeable parts and technologies on modern web.</p>
     <p>(i was a little bored.)</p>
+    <hr/>
+    <h2>The HelloJs initiative</h2>
+    <p>Back in 2015 i had the need of trained people. Our solution stack was knex, express, angularjs and cordova back then.</p>
+    <p>So, instead just announce positions, <a target="yp" href="https://github.com/yuriploc">@yuriploc</a> 
+    and i set up a fullstack creash course and called it <a target="hj" href="https://github.com/seita-ifce/hello-js-v3">HelloJS</a>.</p>
+    <p>The <a target="ifce" href="http://ifce.edu.br/">IFCE</a> technology students where our main audience and, as expected, 
+    i found among them some good team members.</p>
+    <p>I think that the nicest part on this kind of interview is the chance to know a bit more about behavior instead just skills.</p>
+    <p>Also, the ones we didn't pick up got a full stack crash course, so they didn't wasted their time at all.</p>
   </div>
 </template>
 
