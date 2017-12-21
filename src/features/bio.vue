@@ -16,6 +16,7 @@
       <li><a target="fb" href="https://www.facebook.com/sombriks">Facebook</a></li>
       <li><a target="tw" href="https://twitter.com/sombriks">Twitter</a></li>
       <li><a target="gh" href="https://github.com/sombriks">Github</a></li>
+      <li><a target="kk" href="https://www.hackerrank.com/sombriks">HackerRank</a></li>
       <li><a target="in" href="https://www.linkedin.com/in/sombriks/">Linkedin</a></li>
       <li><a target="so" href="https://stackoverflow.com/users/420096/sombriks?tab=profile">Stack Overflow</a></li>
     </ul>
