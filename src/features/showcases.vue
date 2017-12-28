@@ -13,8 +13,7 @@
     <p>A smaller yet focused
       <a target="gm" href="https://github.com/sombriks/gm-sample-worklog">tech showcase</a> putting
       <a target="sb" href="https://projects.spring.io/spring-boot/">spring boot</a>
-      and companions (data-jpa, test, cache and so on) on the road. The java enterpreise indeed 
-      still have a few nice tricks in their pockets.</p>
+      and companions (data-jpa, test, cache and so on) on the road. The java enterpreise indeed still have a few nice tricks in their pockets.</p>
     <hr/>
     <h2>Yet another 2048</h2>
     <p>
@@ -34,12 +33,15 @@
     <p>Back in 2015 i had the need of trained people. Our solution stack was knex, express, angularjs and cordova back then.</p>
     <p>So, instead just announce positions,
       <a target="yp" href="https://github.com/yuriploc">@yuriploc</a>
-      and i set up a fullstack creash course and called it
+      and i set up a fullstack crash course and called it
       <a target="hj" href="https://github.com/seita-ifce/hello-js-v3">HelloJS</a>.</p>
     <p>The
       <a target="ifce" href="http://ifce.edu.br/">IFCE</a> technology students where our main audience and, as expected, i found among them some good team members.</p>
     <p>I think that the nicest part on this kind of interview is the chance to know a bit more about behavior instead just skills.</p>
     <p>Also, the ones we didn't pick up got a full stack crash course, so they didn't wasted their time at all.</p>
+    <p>I advertised it on facebook
+      <a target="hjs3a" href="https://www.facebook.com/sombriks/media_set?set=a.1408480285899693.1073741883.100002132055657&type=3">there</a> and
+      <a target="hjs3b" href="https://www.facebook.com/sombriks/media_set?set=a.1493013440779710.1073741885.100002132055657&type=3">there</a>.</p>
   </div>
 </template>
 
