@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37990292-20"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-37990292-20');
-  </script>
 
-  <!-- needed by cordova and i-things -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * file: ws: wss: gap: 'unsafe-inline' 'unsafe-eval'; img-src * data: blob: http: https: file:">
-  <!-- better aspect on mobile -->
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-  <!-- since cordova serves from file:// we shall help it on encoding isues -->
-  <meta charset="UTF-8">
-  <title>Sombriks HQ</title>
-</head>
+  <head>
+    <!-- needed by cordova and i-things -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * file: ws: wss: gap: 'unsafe-inline' 'unsafe-eval'; img-src * data: blob: http: https: file:"
+    >
+      <!-- better aspect on mobile -->
+      <meta
+        name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"
+      >
+        <!-- since cordova serves from file:// we shall help it on encoding isues -->
+        <meta charset="UTF-8">
+        <title>Sombriks HQ</title>
+  </head>
 
-<body>
-  <div id="app"></div>
-  <script type="text/javascript" src="build.js"></script>
-</body>
+  <body>
+    <div id="app"></div>
+    <script
+      type="text/javascript"
+      src="build.js"
+    ></script>
+
+      <!-- Google Analytics -->
+      <script>
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', 'UA-37990292-20', 'auto');
+        ga('send', 'pageview');
+        docute.router.afterEach(function (to) {
+          ga('set', 'page', to.fullPath);
+          ga('send', 'pageview');
+        });
+      </script>
+      <script
+        async
+        src='https://www.google-analytics.com/analytics.js'
+      ></script>
+        <!-- End Google Analytics -->
+  </body>
 
 </html>
