@@ -30,6 +30,8 @@
       <a target="hammer" href="https://github.com/hammerjs/hammer.js">hammer.js</a> for swipe detection.</p>
     <hr/>
     <h2>The HelloJs initiative</h2>
+    <p><i>Update: </i>the <a target="hjs5" href="https://github.com/sombriks/hello-js-v5">5th edition</a> 
+      was offered as an extension course by <a target="fanor" href="https://www.devrybrasil.edu.br/fanor/cursos/extensao/tecnologia/javascript-fullstack">DeVry-Fanor</a> in 2018</p>
     <p>Back in 2015 i had the need of trained people. Our solution stack was knex, express, angularjs and cordova back then.</p>
     <p>So, instead just announce positions,
       <a target="yp" href="https://github.com/yuriploc">@yuriploc</a>

@@ -37,7 +37,8 @@ const imgs = [
   "picture_12.jpg",
   "picture_13.jpg",
   "picture_15.jpg",
-  "picture_16.jpg"
+  "picture_16.jpg",
+  "picture_17.jpg"
 ];
 module.exports = {
   name: "Skills",

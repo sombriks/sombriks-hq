@@ -30,8 +30,10 @@ module.exports = {
   name: "Bio",
   data: _ => ({
     idx: 0,
-    picture: "assets/profile-pics/picture_16.jpg",
+    intervalId: null,
+    picture: "assets/profile-pics/picture_17.jpg",
     pictures: [
+      "assets/profile-pics/picture_17.jpg",
       "assets/profile-pics/picture_16.jpg",
       "assets/profile-pics/picture_15.jpg",
       "assets/profile-pics/picture_13.jpg",
@@ -42,11 +44,17 @@ module.exports = {
       "assets/profile-pics/picture_9.jpg",
     ]
   }),
+  mounted() {
+    this.intervalId = setInterval(_ => this.changepic(), 5000)
+  },
+  beforeDestroy() {
+    clearInterval(this.intervalId)
+  },
   methods: {
     changepic() {
-      this.idx = (this.idx + 1) % this.pictures.length;
-      this.picture = this.pictures[this.idx];
+      this.idx = (this.idx + 1) % this.pictures.length
+      this.picture = this.pictures[this.idx]
     }
   }
-};
+}
 </script>
