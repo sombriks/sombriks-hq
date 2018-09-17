@@ -1,4 +1,6 @@
 
+export PATH := ./node_modules/bin:$(PATH)
+
 clean: 
 	rm -rf public
 
@@ -11,7 +13,7 @@ build: clean prepare
 	cp -r assets public/assets
 
 release: build
-	firebase deploy --token "1/kuw5t8u3MKV0I1BTigT8ZEmbppNq8fM_zVq3emuDhmc"
+	firebase deploy
 
 dev: 
 	budo src/main.js:build.js --live --open -H 127.0.0.1
