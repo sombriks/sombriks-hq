@@ -17,7 +17,7 @@
     <p>Express, Knex.js, Vue.js, Vue Material, mocha, chai, axios, Bootstrap, Phaserjs, Pixi.js, Font Awesome, Material Design Icons, 
       Angularjs (1.x), Angular material (1.x), JEE (JPA, JSF, JMS, etc.), Flywaydb, JUnit</p>
     <h2>Cool tools and services</h2>
-    <p>Cordova, NPM, Browserify, PgAdmin3, iReport, Elastic Email, Onesignal, 
+    <p>Cordova, NPM, Browserify, PgAdmin3, iReport, Elastic Email, Onesignal, nativescript (vue edition)
       Make, CMake, Maven, Gradle, Ant</p>
     <h2>Good pratices</h2>
     <p>Funcional Programming, Object-oriented programming, Design Patterns (GOF: factory, facade, adapter, strategy, decorator, etc), 
@@ -38,7 +38,8 @@ const imgs = [
   "picture_13.jpg",
   "picture_15.jpg",
   "picture_16.jpg",
-  "picture_17.jpg"
+  "picture_17.jpg",
+  "picture_21.jpg",
 ];
 module.exports = {
   name: "Skills",

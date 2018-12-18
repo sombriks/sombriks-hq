@@ -1,6 +1,6 @@
-# First post!
+# First post
 
-This is a test to amke sure we can make it dynamic.
+This is a test to make sure it can be dynamic.
 
 - we have listings!
   - and sublistings!

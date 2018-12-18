@@ -20,7 +20,6 @@
     "browserify": "^13.1.0",
     "browserify-css": "^0.11.0",
     "budo": "^10.0.4",
-    "firebase-tools": "^3.16.0",
     "vueify": "^9.4.1"
   },
   "dependencies": {

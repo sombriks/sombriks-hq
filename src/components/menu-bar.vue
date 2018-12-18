@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a v-for="r in routes" :href="`#${r.path}`" :key="r.path">{{r.label}}</a>
+    <a v-for="r in routes" v-if="r.urlitem" :href="`#${r.urlitem}`" :key="r.path">{{r.label}}</a>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 module.exports = {
   name: "MenuBar",
   data: _ => ({
-    routes: require("./routes")
+    routes: require("../routes").routes
   })
 };
 </script>

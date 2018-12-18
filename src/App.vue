@@ -1,6 +1,6 @@
 <template>
 <div class="root">
-  <menu-bar></menu-bar>
+  <menu-bar/>
   <transition name="fade" mode="out-in">
     <router-view></router-view>
   </transition>
@@ -8,13 +8,8 @@
 </template>
 
 <script>
-const VueRouter = require("vue-router");
-const router = new VueRouter({
-  routes: require("./routes")
-});
 module.exports = {
-  name: "MountPoint",
-  router
+  name: "App"
 };
 </script>
 

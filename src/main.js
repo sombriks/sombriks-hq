@@ -1,14 +1,14 @@
 // src/main.js
-require("./index.css")
+require("./index.css");
 
-const Vue = require("vue")
+const Vue = require("vue");
+const { router } = require("./routes");
 
-const VueRouter = require("vue-router")
-Vue.use(VueRouter)
-
-Vue.component("menu-bar",require("./components/menu-bar.vue"))
+Vue.component("menu-bar", require("./components/menu-bar.vue"));
 
 window.vuevm = new Vue({
+  router,
   el: "#app",
-  render: r => r(require("./components/mountpoint.vue"))
-})
+  name: "sombriks-hq",
+  render: r => r(require("./App.vue"))
+});

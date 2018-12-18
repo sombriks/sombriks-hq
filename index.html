@@ -29,10 +29,10 @@
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
         ga('create', 'UA-37990292-20', 'auto');
         ga('send', 'pageview');
-        vuevm.$children[0].$router.afterEach(function (to) {
+        window.afterEach = to => {
           ga('set', 'page', to.fullPath);
           ga('send', 'pageview');
-        });
+        };
       </script>
       <script
         async
