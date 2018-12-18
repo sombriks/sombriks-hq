@@ -264,7 +264,8 @@ Add a file called vue.config.js in the project root containing this:
 ```javascript
 // vue.config.js
 module.exports = {
-  outputDir: "www"
+  outputDir: "www",
+  baseUrl: "./"
 };
 ```
 
