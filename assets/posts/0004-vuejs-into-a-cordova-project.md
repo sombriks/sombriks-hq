@@ -2,7 +2,7 @@
 
 You see, [cordova](https://cordova.apache.org/blog/) has been a reliable tool
 for the last years, almost half a decade. [Vue.js](https://vuejs.org/) delivers
-solutions quite fast thanks to it's simplicity and powerful tools (like
+solutions quite fast thanks to its simplicity and powerful tools (like
 [vue devtools](https://github.com/vuejs/vue-devtools)) available to it.
 
 Both has a cool cli tool to make things easier and well-defined steps for each
@@ -40,7 +40,7 @@ myapp
 ```
 
 Based on this folder, the regular cordova commands (cordova plugin add, cordova
-platform add, cordova build, etc) will work proerly.
+platform add, cordova build, etc) will work properly.
 
 However, the **www** folder, isn't tailored for modern bundle-centered
 front-end development. This is why cool things built on top of cordova,
@@ -52,7 +52,7 @@ industrial, the megaman with all the missing armor parts. Yet still swift and
 simple, focused on deliver solution instead of puzze the developer with
 cabalistic basic configurations.
 
-The vue-cli tool is at it's third major release and can be installed using
+The vue-cli tool is at its third major release and can be installed using
 (surprise!) npm:
 
 ```bash
@@ -92,7 +92,7 @@ Vue CLI v3.2.1
  ◯ E2E Testing
 ```
 
-Just say no for the history mode (there is a reason, i'll tell you later!):
+Just say no for the history mode (there is a reason, I'll tell you later!):
 
 ```bash
 Vue CLI v3.2.1
