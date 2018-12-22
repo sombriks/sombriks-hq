@@ -1,3 +1,4 @@
+@import "../assets/css/ionicons.min.css";
 @import "../assets/css/roboto-material-icons.css";
 @import "../node_modules/vuetify/dist/vuetify.min.css";
 @import "../node_modules/highlight.js/styles/darcula.css";
@@ -39,4 +40,8 @@ pre {
 pre>code {
   background-color: #222222 !important;
   width: 100%;
+}
+
+ion-icon {
+  font-size: 64px !important;
 }

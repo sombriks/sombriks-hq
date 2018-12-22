@@ -4,7 +4,7 @@
       <small>keep it simple</small>
       <v-avatar size="256">
         <img
-          :src="picture"
+          :src="`assets/profile-pics/${picture}`"
           width="200"
           height="200"
           alt="Profile Picture"
@@ -12,6 +12,57 @@
           @click="changepic"
         >
       </v-avatar>
+      <v-layout row wrap>
+        <v-btn
+          title="Facebook"
+          large
+          flat
+          icon
+          target="fb"
+          href="https://www.facebook.com/sombriks"
+        >
+          <i class="icon ion-logo-facebook size24"></i>
+        </v-btn>
+        <v-btn title="Twitter" large flat icon target="tw" href="https://twitter.com/sombriks">
+          <i class="icon ion-logo-twitter size24"></i>
+        </v-btn>
+        <v-btn
+          title="Linkedin"
+          large
+          flat
+          icon
+          target="in"
+          href="https://www.linkedin.com/in/sombriks"
+        >
+          <i class="icon ion-logo-linkedin size24"></i>
+        </v-btn>
+        <v-btn
+          title="Stackoverflow"
+          large
+          flat
+          icon
+          target="so"
+          href="https://stackoverflow.com/users/420096/sombriks?tab=profile"
+        >
+          <i class="icon ion-md-link size24"></i>
+        </v-btn>
+        <v-btn title="Github" large flat icon target="gh" href="https://github.com/sombriks">
+          <i class="icon ion-logo-github size24"></i>
+        </v-btn>
+        <v-btn title="NPM" large flat icon target="gh" href="https://www.npmjs.com/~sombriks">
+          <i class="icon ion-logo-npm size24"></i>
+        </v-btn>
+        <v-btn
+          title="Hacker Rank"
+          large
+          flat
+          icon
+          target="hh"
+          href="https://www.hackerrank.com/sombriks"
+        >
+          <i class="icon ion-md-link size24"></i>
+        </v-btn>
+      </v-layout>
     </v-layout>
     <v-layout column>
       <v-list>
@@ -54,22 +105,22 @@ module.exports = {
     routes: require("../routes").routes,
     idx: 0,
     intervalId: null,
-    picture: "assets/profile-pics/picture_17.jpg",
+    picture: "picture_17.jpg",
     pictures: [
-      "assets/profile-pics/picture_8.png",
-      "assets/profile-pics/picture_9-a.jpg",
-      "assets/profile-pics/picture_9-b.jpg",
-      "assets/profile-pics/picture_9.jpg",
-      "assets/profile-pics/picture_17.jpg",
-      "assets/profile-pics/picture_16.jpg",
-      "assets/profile-pics/picture_15.jpg",
-      "assets/profile-pics/picture_13.jpg",
-      "assets/profile-pics/picture_12.jpg",
-      "assets/profile-pics/picture_11.jpg",
-      "assets/profile-pics/picture_10.jpg",
-      "assets/profile-pics/picture_18.jpg",
-      "assets/profile-pics/picture_19.jpg",
-      "assets/profile-pics/picture_21.jpg"
+      "picture_8.png",
+      "picture_9-a.jpg",
+      "picture_9-b.jpg",
+      "picture_9.jpg",
+      "picture_17.jpg",
+      "picture_16.jpg",
+      "picture_15.jpg",
+      "picture_13.jpg",
+      "picture_12.jpg",
+      "picture_11.jpg",
+      "picture_10.jpg",
+      "picture_18.jpg",
+      "picture_19.jpg",
+      "picture_21.jpg"
     ]
   }),
   mounted() {
@@ -86,3 +137,9 @@ module.exports = {
   }
 };
 </script>
+
+<style scoped>
+.size24 {
+  font-size: 18px !important;
+}
+</style>
