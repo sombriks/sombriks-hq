@@ -35,7 +35,7 @@ const routes = [
 const router = new VueRouter({ routes });
 
 router.afterEach(to => {
-  if (window.afterEach) window.afterEach(`#${to}`);
+  if (window.afterEach) window.afterEach(to);
 });
 
 module.exports = { router, routes };

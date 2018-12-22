@@ -4,3 +4,4 @@ firebase-debug.log
 package-lock.json
 .DS_Store
 .firebase
+tmp.js
