@@ -1,8 +1,5 @@
 <template>
   <div>
-    <h1>Blog</h1>
-    <a v-for="p in listing" :href="`#/blog/${p}`" :key="p" @click="getpost(p)">{{p}}</a>
-    <br>
     <br>
     <div v-html="content"></div>
   </div>
@@ -27,20 +24,30 @@ marked.setOptions({
 module.exports = {
   name: "Blog",
   data: _ => ({
-    listing: fs
-      .readdirSync("assets/posts")
-      .filter(e => e.endsWith(".md"))
-      .reverse(),
     content: "Sometimes i write down something."
   }),
-  created() {
+  mounted() {
     if (this.$route.params.post) this.getpost(this.$route.params.post);
+    this.$store.commit("setTitle", "Blog");
   },
   methods: {
     getpost(post) {
       axios
         .get(`assets/posts/${post}`)
-        .then(ret => (this.content = marked(ret.data)));
+        .then(ret => {
+          this.content = marked(ret.data);
+          this.$store.commit("setTitle", post);
+        })
+        .catch(err => {
+          console.log(err);
+          this.content = marked("_Hey, it does not exists. Yet._");
+        });
+    }
+  },
+  watch: {
+    "$route.params.post"(v) {
+      if (!v) this.content = marked("_Hey, it does not exists. Yet._");
+      else this.getpost(v);
     }
   }
 };

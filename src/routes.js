@@ -2,40 +2,46 @@ const Vue = require("vue");
 const VueRouter = require("vue-router");
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     redirect: "/bio"
   },
   {
-    urlitem: "/bio",
     path: "/bio",
     label: "Bio",
-    component: require("./views/bio.vue")
+    urlitem: "/bio",
+    icon: "account_circle",
+    component: require("./views/bio.vue"),
   },
   {
-    urlitem: "/skills",
+    icon: "build",
     path: "/skills",
     label: "Skills",
-    component: require("./views/skills.vue")
+    urlitem: "/skills",
+    component: require("./views/skills.vue"),
   },
   {
-    urlitem: "/showcases",
+    icon: "stars",
     path: "/showcases",
     label: "Showcases",
-    component: require("./views/showcases.vue")
+    urlitem: "/showcases",
+    component: require("./views/showcases.vue"),
   },
   {
-    urlitem: "/blog",
-    path: "/blog/:post?",
     label: "Blog",
-    component: require("./views/blog.vue")
+    path: "/blog/:post?",
+    component: require("./views/blog.vue"),
   }
 ];
-const router = new VueRouter({ routes });
+const router = new VueRouter({
+  routes
+});
 
 router.afterEach(to => {
   if (window.afterEach) window.afterEach(to);
 });
 
-module.exports = { router, routes };
+module.exports = {
+  router,
+  routes
+};

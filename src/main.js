@@ -2,13 +2,21 @@
 require("./index.css");
 
 const Vue = require("vue");
-const { router } = require("./routes");
+const Vuetify = require("vuetify");
+Vue.use(Vuetify);
+const {
+  router
+} = require("./routes");
+const {
+  store
+} = require("./store");
 
 Vue.component("menu-bar", require("./components/menu-bar.vue"));
 
 window.vuevm = new Vue({
-  router,
-  el: "#app",
+  render: r => r(require("./App.vue")),
   name: "sombriks-hq",
-  render: r => r(require("./App.vue"))
+  el: "#app",
+  router,
+  store,
 });
