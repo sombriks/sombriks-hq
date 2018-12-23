@@ -1,7 +1,6 @@
 <template>
 	<v-layout column>
 		<v-layout row align-start wrap>
-			<div id="cnv"></div>
 			<a href="https://stackexchange.com/users/184203">
 				<img
 					src="https://stackexchange.com/users/flair/184203.png?theme=dark"
@@ -11,6 +10,7 @@
 					title="profile for Sombriks on Stack Exchange, a network of free, community-driven Q&amp;A sites"
 				>
 			</a>
+			<div id="cnv"></div>
 		</v-layout>
 		<v-layout column>
 			<p>

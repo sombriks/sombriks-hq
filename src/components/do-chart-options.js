@@ -1,26 +1,30 @@
-module.exports = (series, labels) => ({
-  labels,
+const randomColor = require("randomcolor");
+module.exports = labels => ({
+	colors: randomColor({
+		luminosity: "light",
+		hue: "blue",
+		count: 30
+	}),
 	plotOptions: {
-		radialBar: {
-			startAngle: -90,
-			endAngle: 90,
-			dataLabels: {
-				name: {
-					fontSize: "22px",
-					color: "white"
-				},
-				value: {
-					fontSize: "16px",
-					formatter: val => val,
-					color: "white"
-				},
-				total: {
-					show: true,
-					label: "Total",
-					formatter: _ => series.reduce((ac, val) => ac + val),
-					color: "white"
-				}
+		bar: { distributed: true, horizontal: true }
+	},
+	tooltip: {
+		theme: "dark"
+	},
+	xaxis: {
+		categories: labels,
+		color: "white",
+		labels: {
+			style: {
+				colors: ["white"]
+			}
+		}
+	},
+	yaxis: {
+		labels: {
+			style: {
+				color: "white"
 			}
 		}
 	}
-})
+});

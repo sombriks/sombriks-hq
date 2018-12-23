@@ -12,6 +12,9 @@
           @click="changepic"
         >
       </v-avatar>
+      <v-layout row>
+        Contact info
+      </v-layout>
       <v-layout row wrap>
         <v-btn
           title="Facebook"
