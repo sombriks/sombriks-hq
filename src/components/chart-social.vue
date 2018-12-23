@@ -23,7 +23,7 @@ module.exports = {
 	data() {
 		return {
 			chartOptions: doOptions(labels),
-			series: [{ data: [95, 90, 85, 70, 60, 55, 50,50,50,50] }]
+			series: [{ data: [95, 90, 85, 70, 60, 55, 50,50,50] }]
 		};
 	}
 };
