@@ -44,20 +44,9 @@
 					already a man, by then it was nothing to me but blinding!
 				</i> -- Bane in <b>Batman: The Dark Knight Rises</b>
 			</p>
+      <h3>Go ahead and click the charts.</h3>
 		</v-layout>
 		<!-- <div>
-    <h2>Frameworks</h2>
-    <p>
-      Express, Knex.js, Vue.js, Vue Material, mocha, chai, axios, Bootstrap, Phaserjs, Pixi.js, Font Awesome, Material Design Icons,
-      Angularjs (1.x), Angular material (1.x), JEE (JPA, JSF, JMS, etc.), Flywaydb, JUnit
-    </p>
-    <h2>Platforms and runtimes</h2>
-    <p>Linux, Windows, JVM, Nodejs, MySQL, Postgresql</p>
-    <h2>Cool tools and services</h2>
-    <p>
-      Cordova, NPM, Browserify, PgAdmin3, iReport, Elastic Email, Onesignal, nativescript (vue edition)
-      Make, CMake, Maven, Gradle, Ant
-    </p>
     <h2>Good pratices</h2>
     <p>
       Funcional Programming, Object-oriented programming, Design Patterns (GOF: factory, facade, adapter, strategy, decorator, etc),
@@ -70,17 +59,17 @@
 			<h1>Languages</h1>
 			<chart-languages/>
 		</v-layout>
-		<v-layout column align-end>
+		<v-layout column>
 			<h1>Frameworks</h1>
+      <chart-frameworks/>
 		</v-layout>
-		<v-layout column align-start>
+		<v-layout column>
 			<h1>DevOps</h1>
+      <chart-devops/>
 		</v-layout>
-		<v-layout column align-end>
-			<h1>Social</h1>
-		</v-layout>
-		<v-layout column align-start>
-			<h1>Other</h1>
+		<v-layout column>
+			<h1>Patterns and Social</h1>
+			<chart-social/>
 		</v-layout>
 	</v-layout>
 </template>

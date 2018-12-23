@@ -18,7 +18,6 @@ Vue.component("chart-languages", require("./components/chart-languages.vue"));
 Vue.component("chart-frameworks", require("./components/chart-frameworks.vue"));
 Vue.component("chart-devops", require("./components/chart-devops.vue"));
 Vue.component("chart-social", require("./components/chart-social.vue"));
-Vue.component("chart-other", require("./components/chart-other.vue"));
 
 window.vuevm = new Vue({
 	render: r => r(require("./App.vue")),

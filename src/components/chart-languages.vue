@@ -1,53 +1,27 @@
 <template>
-	<apexchart type="radialBar" height="600" :options="chartOptions" :series="series"/>
+	<v-layout row justify-center wrap>
+		<v-flex xs12 sm6>
+			<apexchart type="radialBar" height="500" :options="chartOptions1" :series="series1"/>
+		</v-flex>
+		<v-flex xs12 sm6>
+			<apexchart type="radialBar" height="500" :options="chartOptions2" :series="series2"/>
+		</v-flex>
+	</v-layout>
 </template>
 
 <script>
-// const °points =
-const series = [100, 99.99, 99.9, 95, 90, 80, 60, 30, 15, 9];
-const labels = [
-	"Javascript",
-	"Java",
-	"SQL",
-	"HTML",
-	"CSS",
-	"C",
-	"C++",
-	"PHP",
-	"Python",
-	"Ruby"
-];
-const max = series.reduce((ac, val) => ac + val);
+const doOptions = require("./do-chart-options");
+const series1 = [100, 90, 80, 85, 80];
+const series2 = [80, 60, 30, 15, 14, 9];
+const labels1 = ["Javascript", "Java", "SQL", "HTML", "CSS"];
+const labels2 = ["C", "C++", "PHP", "Python", "GO", "Ruby"];
 module.exports = {
 	name: "chart-languages",
 	data: _ => ({
-		series,
-		chartOptions: {
-			labels,
-			plotOptions: {
-				radialBar: {
-					startAngle: -90,
-					endAngle: 90,
-					dataLabels: {
-						name: {
-							fontSize: "22px",
-							color: "white"
-						},
-						value: {
-							fontSize: "16px",
-							formatter: val => val,
-							color: "white"
-						},
-						total: {
-							show: true,
-							label: "Total",
-							formatter: _ => max,
-							color: "white"
-						}
-					}
-				}
-			}
-		}
+		series1,
+		series2,
+		chartOptions1: doOptions(series1, labels1),
+		chartOptions2: doOptions(series2, labels2)
 	})
 };
 </script>
