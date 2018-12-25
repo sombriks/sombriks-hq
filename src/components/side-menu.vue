@@ -47,7 +47,8 @@
           target="so"
           href="https://stackoverflow.com/users/420096/sombriks?tab=profile"
         >
-          <i class="icon ion-md-link size24"></i>
+          <!-- <i class="icon ion-md-link size24"></i> -->
+          <i class="icofont-stack-overflow size24"></i>
         </v-btn>
         <v-btn title="Github" large flat icon target="gh" href="https://github.com/sombriks">
           <i class="icon ion-logo-github size24"></i>
@@ -55,7 +56,7 @@
         <v-btn title="NPM" large flat icon target="gh" href="https://www.npmjs.com/~sombriks">
           <i class="icon ion-logo-npm size24"></i>
         </v-btn>
-        <v-btn
+        <!-- <v-btn
           title="Hacker Rank"
           large
           flat
@@ -64,7 +65,7 @@
           href="https://www.hackerrank.com/sombriks"
         >
           <i class="icon ion-md-link size24"></i>
-        </v-btn>
+        </v-btn> -->
       </v-layout>
     </v-layout>
     <v-layout column>
