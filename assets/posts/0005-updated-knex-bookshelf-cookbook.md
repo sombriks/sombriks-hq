@@ -403,4 +403,6 @@ Bookshelf, knex, express and a relational database can deliver solutions quite
 fast if you know what you're doing. These snippets are just a sample of what is
 possible.
 
+You can find the complete source code [here](https://github.com/sombriks/sample-knex-bookshelf-cookbook).
+
 2018-12-25
