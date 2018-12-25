@@ -20,4 +20,4 @@ release: build
 	firebase deploy
 
 dev: 
-	budo src/main.js:build.js --live --open -H 127.0.0.1
+	budo src/main.js:build.js --live=*.{html,css,js,vue,md} --open -H 127.0.0.1
