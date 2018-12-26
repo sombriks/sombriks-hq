@@ -33,8 +33,8 @@
 			<h2>10 - 99 points</h2>
 			<p>
 				This is what used to pay or pays my rent nowadays. I can tell you by
-        heart how to configure some feature or which bugs or design flaws can
-        compromise a project if we adopt it so we simply avoid such caveats.
+				heart how to configure some feature or which bugs or design flaws can
+				compromise a project if we adopt it so we simply avoid such caveats.
 			</p>
 			<h2>100+ points</h2>
 			<p>
@@ -42,9 +42,10 @@
 					Ah you think darkness is your ally? You merely adopted the dark.
 					I was born in it, molded by it. I didn't see the light until I was
 					already a man, by then it was nothing to me but blinding!
-				</i> -- Bane in <b>Batman: The Dark Knight Rises</b>
+				</i> -- Bane in
+				<b>Batman: The Dark Knight Rises</b>
 			</p>
-      <h3>Go ahead and click the charts.</h3>
+			<h3>Go ahead and click the charts.</h3>
 		</v-layout>
 		<!-- <div>
     <h2>Good pratices</h2>
@@ -61,11 +62,15 @@
 		</v-layout>
 		<v-layout column>
 			<h1>Frameworks</h1>
-      <chart-frameworks/>
+			<chart-frameworks/>
 		</v-layout>
 		<v-layout column>
 			<h1>DevOps</h1>
-      <chart-devops/>
+			<chart-devops/>
+		</v-layout>
+		<v-layout column>
+			<h1>Dev Tools</h1>
+			<chart-dev-tools/>
 		</v-layout>
 		<v-layout column>
 			<h1>Patterns and Social</h1>
