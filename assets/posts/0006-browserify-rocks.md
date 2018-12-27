@@ -47,7 +47,7 @@ You see, lots of small downloads still opens a chance of error if the client
 connection is unstable. So the next step of evolution was to **bundle** up all
 modules at once and deliver it to the client in a single http connection.
 
-![pic1.jpg](../post-pics/0006-browserify-rocks/pic1.jpg)
+![pic1.jpg](assets/post-pics/0006-browserify-rocks/pic1.jpg)
 *a picture stolen from webpack site explaining how a bundle works*
 
 In 2011 came the [Browserify](https://en.wikipedia.org/wiki/Browserify) and in
