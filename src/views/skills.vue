@@ -47,15 +47,6 @@
 			</p>
 			<h3>Go ahead and click the charts.</h3>
 		</v-layout>
-		<!-- <div>
-    <h2>Good pratices</h2>
-    <p>
-      Funcional Programming, Object-oriented programming, Design Patterns (GOF: factory, facade, adapter, strategy, decorator, etc),
-      Test-driven development, Unified modeling language, Model-view-controller, Model-view-view-model, Database Migrations
-    </p>
-    <h2>Misc</h2>
-    <p>Project management, Requirements analysis, Scrum</p>
-		</div>-->
 		<v-layout column>
 			<h1>Languages</h1>
 			<chart-languages/>

@@ -168,7 +168,7 @@
 					<v-card-title class="headline">Born.</v-card-title>
 					<v-card-text>
 						<p>
-							Lots of things happened between this professional experience and the next listed here,
+							Lots of things happened between this first professional experience and the others listed here,
 							however 10+ years sounds good enough to me, hope it sounds good enough to you.
 						</p>
 						<p>
