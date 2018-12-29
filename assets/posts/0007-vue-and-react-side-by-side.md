@@ -277,29 +277,124 @@ in two artifacts. First, App.vue:
 ```html
 <template>
   <div>
-    My name is
-    <input v-model="name">
-    and in reverse it is {{name.split("").reverse().join("")}}
+    My name is <input v-model="name" /> and in reverse it is
+    {{name.split("").reverse().join("")}}
   </div>
 </template>
 <script>
-module.exports = {
-  name: "app",
-  data: _ => ({ name: "" })
-};
+  module.exports = {
+    name: "app",
+    data: _ => ({ name: "" })
+  };
 </script>
-
 ```
 
 Now main.js:
 
 ```javascript
-const Vue = require("vue")
-const app = document.getElementById("div")
-document.body.appendChild(app)
-new Vue({el:app, render: r => r(require("./app.vue"))})
+const Vue = require("vue");
+const app = document.getElementById("div");
+document.body.appendChild(app);
+new Vue({ el: app, render: r => r(require("./app.vue")) });
 ```
 
-Spot any different setting?
+To run this:
+
+```bash
+$ npm run dev
+# ...
+> budo main.js -o -l
+
+[0000] info  Server running at http://192.168.0.184:9966/ (connect)
+[0000] info  LiveReload running
+[0001] 5ms           0B GET    200 / (generated)
+[0001] 1117ms     609KB (browserify)
+[0001] 637ms         0B GET    200 /main.js (generated)
+```
+
+Important things to consider so far:
+
+- react depends on [babel](https://babeljs.io/) to really shine
+- vue scales down better
+- with budo, the index.html is optional
+- embed browserify configurations on package.json helps to keep the project
+  folder clean.
+- what was the `onChange={this.rev.bind(this)}` thing?
+- on vue solution, since we don't have babel, we use `require` instead the
+  `import/from` style.
+
+## 1.3 - The CLI tools way
+
+As i spoke
+[previously](https://sombriks.com.br/#/blog/0006-browserify-rocks.md),
+the bundler role is quite clear today and the new frontier are the tools to
+help configuring new projects easier.
+
+This is no news on [angular](https://cli.angular.io/) or
+[angularjs](http://ngcli.github.io/) world, but unlike vue or react, the
+angular cli is the only way to be really productive.
+
+### 1.3.1 the create-react-app tool
+
+[react cli](https://github.com/facebook/create-react-app) can be installed
+pretty easily if you know npm:
+
+```bash
+sudo npm -g i create-react-app
+```
+
+Then create your project (it even make the folder so you don't have to):
+
+```bash
+$ create-react-app my-react-project-3
+
+Creating a new React app in /Users/sombriks/git/vue-react-comparison/my-react-project-3.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts...
+
+
+> fsevents@1.2.4 install /Users/sombriks/git/vue-react-comparison/my-react-project-3/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/Users/sombriks/git/vue-react-comparison/my-react-project-3/node_modules/fsevents/lib/binding/Release/node-v57-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
++ react@16.7.0
++ react-dom@16.7.0
++ react-scripts@2.1.2
+added 1794 packages from 684 contributors and audited 35709 packages in 317.203s
+found 0 vulnerabilities
+
+
+Success! Created my-react-project-3 at /Users/sombriks/git/vue-react-comparison/my-react-project-3
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd my-react-project-3
+  npm start
+
+Happy hacking!
+```
+
+It gives you a pretty decent starter project. Now let's add routing and a store:
+
+```bash
+cd my-react-project-3
+npm install react-router
+````
 
 2018-12-29

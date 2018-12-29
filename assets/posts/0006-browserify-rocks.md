@@ -47,8 +47,9 @@ You see, lots of small downloads still opens a chance of error if the client
 connection is unstable. So the next step of evolution was to **bundle** up all
 modules at once and deliver it to the client in a single http connection.
 
-![pic1.jpg](assets/post-pics/0006-browserify-rocks/pic1.jpg)
-*a picture stolen from webpack site explaining how a bundle works*
+ ![pic1.jpg](assets/post-pics/0006-browserify-rocks/pic1.jpg)
+
+a picture stolen from webpack site explaining how a bundle works
 
 In 2011 came the [Browserify](https://en.wikipedia.org/wiki/Browserify) and in
 2012 [Webpack](https://en.wikipedia.org/wiki/Webpack)
@@ -57,7 +58,7 @@ and [later](https://rollupjs.org/guide/en) [many](https://poi.js.org/)
 
 [There](https://gulpjs.com/) [where](https://gruntjs.com/) also tools to help
 the development and bundling phase but those where just plain mistakes. They
-should just use [make](https://en.wikipedia.org/wiki/Make_(software)) instead.
+should just use [make](<https://en.wikipedia.org/wiki/Make_(software)>) instead.
 
 Nowadays the bundle role is pretty defined. They must be self-sufficient, clean
 and, when possible, demanding zero configuration.
@@ -128,7 +129,7 @@ It's pretty much like mega man x getting armor parts.
 
 ## Always about scaling up and down
 
-But other bundlers and tools can bring a lot of features *out of the box*, so
+But other bundlers and tools can bring a lot of features _out of the box_, so
 why use a tool with little features?
 
 If you pay attention there are scenarios where the extra shiny parts are just
