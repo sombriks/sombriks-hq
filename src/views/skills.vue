@@ -72,28 +72,16 @@
 
 <script>
 const PIXI = require("pixi.js");
-const imgs = [
-	"picture_9-a.jpg",
-	"picture_9.jpg",
-	"picture_10.jpg",
-	"picture_11.jpg",
-	"picture_12.jpg",
-	"picture_13.jpg",
-	"picture_15.jpg",
-	"picture_16.jpg",
-	"picture_17.jpg",
-	"picture_21.jpg"
-];
+const { mapState } = require("vuex");
 module.exports = {
 	name: "Skills",
+	computed: mapState(["profilepics"]),
 	mounted() {
 		this.$store.commit("setTitle", "Skills");
 		app = new PIXI.Application(350, 50);
 		document.getElementById("cnv").appendChild(app.view);
 
-		const textures = imgs.map(e =>
-			PIXI.Texture.fromImage(`assets/profile-pics/${e}`)
-		);
+		const textures = this.profilepics.map(e => PIXI.Texture.fromImage(e));
 
 		let idx = 0;
 
