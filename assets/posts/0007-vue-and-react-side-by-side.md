@@ -337,7 +337,7 @@ angular cli is the only way to be really productive.
 ### 1.3.1 the create-react-app tool
 
 [react cli](https://github.com/facebook/create-react-app) can be installed
-pretty easily if you know npm:
+pretty easily with npm:
 
 ```bash
 sudo npm -g i create-react-app
@@ -390,11 +390,529 @@ We suggest that you begin by typing:
 Happy hacking!
 ```
 
-It gives you a pretty decent starter project. Now let's add routing and a store:
+It gives you a pretty decent starter project.
+
+Now let's add [routing](https://reacttraining.com/react-router/) and a
+[store](https://redux.js.org/introduction/installation):
 
 ```bash
 cd my-react-project-3
-npm install react-router
-````
+npm install react-router --save
+npm install react-router-dom --save
+npm install redux --save
+npm install react-redux --save
+```
 
-2018-12-29
+Our project structure will be this:
+
+```bash
+my-react-project-3/
+├── README.md
+├── package-lock.json
+├── package.json
+├── node_modules/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src/
+    ├── App.css
+    ├── App.jsx
+    ├── App.test.js
+    ├── components/
+    │   └── Menu.jsx
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reducer.js
+    ├── serviceWorker.js
+    └── views/
+        ├── About.jsx
+        ├── Home.jsx
+        └── Settings.jsx
+```
+
+Inside **src/views** folder some components to serve as views to the routes.
+We have 3 views: home, settings and about.
+
+Inside **src/components** those reusable parts. In our example, just the menu.
+
+The router configuration is pretty straightforward, everything got solved
+inside `App.jsx`:
+
+```jsx
+// src/App.jsx
+import React, { Component } from "react";
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+import Menu from "./components/Menu.jsx";
+import Home from "./views/Home.jsx";
+import About from "./views/About.jsx";
+import Settings from "./views/Settings.jsx";
+
+import { Provider } from "react-redux";
+import store from "./reducer";
+
+import "./App.css";
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Router>
+          <div>
+            <Menu />
+            <Switch>
+              <Redirect exact from="/" to="/home" />
+              <Route path="/home" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/settings" component={Settings} />
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
+    );
+  }
+}
+export default App;
+```
+
+You have to define a [Router](https://reacttraining.com/react-router/core/api/Router)
+and it must have [Route](https://reacttraining.com/react-router/core/api/Route)
+entries inside it. There is also Switch and Redirect, but the docs are good.
+Give it a try.
+
+Next we need to configure the redux thing in order to have a global state flux.
+
+Still at App.jsx, there is that [Provider](https://react-redux.js.org/introduction/quick-start#provider)
+component keeping the entire app inside it. The [store](https://redux.js.org/api/store)
+itself is a property to be passed to it.
+
+The store itself is pretty simple, as you can see at `reducer.js`:
+
+```javascript
+import { createStore } from "redux";
+
+const settings = (state = { settings: { name: "Stranger" } }, action) => {
+  if (action.type === "setName") return { settings: { name: action.name } };
+  return state;
+};
+
+const store = createStore(settings);
+
+export default store;
+```
+
+The only important thing about states is to never try to change it directly.
+This is why that action thing returns a new state.
+
+Set up the store and provider however isn't enough. Lets take a look in
+`Menu.jsx` component:
+
+```jsx
+import React, { Component } from "react";
+
+import { Link } from "react-router-dom";
+
+import { connect } from "react-redux";
+
+class Menu extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Hello, {this.props.settings.name}</h2> |
+        <Link to={"/home"}>Home</Link> |<Link to={"/about"}>About</Link> |
+        <Link to={"/settings"}>Settings</Link>
+      </div>
+    );
+  }
+}
+
+const mapState = state => ({ settings: state.settings });
+
+export default connect(mapState)(Menu);
+```
+
+The menu depends on redux state to know a name, so we must make the state
+available to the component. This is where
+[mapState/connect](https://react-redux.js.org/api/connect) enters.
+
+It works.
+
+Additionally, if you want to change the store state and see it changing
+everywhere of course there is a way too. Let's take a look at `Settings.jsx`:
+
+```jsx
+import React, { Component } from "react";
+
+import { connect } from "react-redux";
+
+class Settings extends Component {
+  state = { name: this.props.settings.name };
+
+  render() {
+    return (
+      <div>
+        <h1>Settings</h1>
+        <p>This is Settings page</p>
+        My name is
+        <input
+          value={this.state.name}
+          onChange={e => this.setState({ name: e.target.value })}
+        />
+        <button onClick={e => this.props.changeName(this.state.name)}>
+          Change
+        </button>
+      </div>
+    );
+  }
+}
+
+const mapState = state => ({ settings: state.settings });
+const mapDispatch = dispatch => {
+  return {
+    changeName: name => dispatch({ type: "setName", name })
+  };
+};
+
+export default connect(
+  mapState,
+  mapDispatch
+)(Settings);
+```
+
+We have in that component a local state and we initialize it with some value
+from the store.
+
+The [dispatch](https://react-redux.js.org/using-react-redux/connect-mapdispatch)
+callback is available to the functions that will be passed to the component.
+
+### 1.3.2 the @vue/cli tool
+
+[vue cli](https://cli.vuejs.org/) can be installed pretty easily with npm:
+
+```bash
+sudo npm -g i @vue/cli
+```
+
+Next step is to use the command `vue create my-vue-project-3`. It will enter
+into a interactive mode. Answer _Manually select features_ to this one:
+
+```bash
+Vue CLI v3.2.1
+? Please pick a preset:
+  vue (vue-router, babel, eslint)
+  sample1 (vue-router, vuex, babel, eslint)
+  sample2 (vue-router, babel)
+  default (babel, eslint)
+❯ Manually select features
+```
+
+In this step add `Router` and `Vuex` options:
+
+```bash
+Vue CLI v3.2.1
+? Please pick a preset: Manually select features
+? Check the features needed for your project:
+ ◉ Babel
+ ◯ TypeScript
+ ◯ Progressive Web App (PWA) Support
+ ◉ Router
+❯◉ Vuex
+ ◯ CSS Pre-processors
+ ◉ Linter / Formatter
+ ◯ Unit Testing
+ ◯ E2E Testing
+```
+
+In this step just leave everything as is:
+
+```bash
+Vue CLI v3.2.1
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, Vuex, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n)
+```
+
+In this step go with Prettier, but it's just a matter of taste:
+
+```bash
+Vue CLI v3.2.1
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, Vuex, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a linter / formatter config:
+  ESLint with error prevention only
+  ESLint + Airbnb config
+  ESLint + Standard config
+❯ ESLint + Prettier
+```
+
+Keep _lint on save_ in this step:
+
+```bash
+Vue CLI v3.2.1
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, Vuex, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a linter / formatter config: Prettier
+? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection)
+❯◉ Lint on save
+ ◯ Lint and fix on commit
+```
+
+Answer `package.json` on this one:
+
+```bash
+Vue CLI v3.2.1
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, Vuex, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a linter / formatter config: Prettier
+? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection)Lint on save
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.?
+  In dedicated config files
+❯ In package.json
+```
+
+Just hit enter on this step (or save your template):
+
+```bash
+Vue CLI v3.2.1
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, Vuex, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a linter / formatter config: Prettier
+? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection)Lint on save
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? In package.json
+? Save this as a preset for future projects? (y/N)
+```
+
+And wait the installation finish:
+
+```bash
+Vue CLI v3.2.1
+✨  Creating project in /Users/sombriks/git/vue-react-comparison/my-vue-project-3.
+⚙  Installing CLI plugins. This might take a while...
+
+
+> fsevents@1.2.4 install /Users/sombriks/git/vue-react-comparison/my-vue-project-3/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/Users/sombriks/git/vue-react-comparison/my-vue-project-3/node_modules/fsevents/lib/binding/Release/node-v57-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
+
+> yorkie@2.0.0 install /Users/sombriks/git/vue-react-comparison/my-vue-project-3/node_modules/yorkie
+> node bin/install.js
+
+setting up Git hooks
+can't find .git directory, skipping Git hooks installation
+added 1176 packages from 761 contributors and audited 14865 packages in 185.671s
+found 0 vulnerabilities
+
+🚀  Invoking generators...
+📦  Installing additional dependencies...
+
+added 35 packages from 28 contributors, updated 2 packages, moved 5 packages and audited 15164 packages in 25.197s
+found 0 vulnerabilities
+
+⚓  Running completion hooks...
+
+📄  Generating README.md...
+
+🎉  Successfully created project my-vue-project-3.
+👉  Get started with the following commands:
+
+ $ cd my-vue-project-3
+ $ npm run serve
+```
+
+Since we already have selected router and vue, we don't have to worry
+about them.
+
+Our project structure will be this:
+
+```bash
+my-vue-project-3/
+├── README.md
+├── babel.config.js
+├── node_modules/
+├── package-lock.json
+├── package.json
+├── public/
+│   ├── favicon.ico
+│   └── index.html
+└── src/
+    ├── App.vue
+    ├── assets/
+    │   └── logo.png
+    ├── components/
+    │   └── Menu.vue
+    ├── main.js
+    ├── router.js
+    ├── store.js
+    └── views/
+        ├── About.vue
+        ├── Home.vue
+        └── Settings.vue
+```
+
+Inside **src/views** folder some components to serve as views to the routes.
+We have 3 views: home, settings and about.
+
+Inside **src/components** those reusable parts. In our example, just the menu.
+
+The router configuration is pretty straightforward, everything got solved
+inside `router.js`:
+
+```javascript
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "./views/Home.vue";
+import About from "./views/About.vue";
+import Settings from "./views/Settings.vue";
+
+Vue.use(Router);
+
+export default new Router({
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes: [
+    { path: "/", redirect: "/home" },
+    { path: "/home", component: Home },
+    { path: "/about", component: About },
+    { path: "/settings", component: Settings }
+  ]
+});
+```
+
+Those routes will be mounted in the component containing the `<router-view/>`
+component, the `App.vue`:
+
+```html
+<template>
+  <div>
+    <my-menu/>
+    <router-view/>
+  </div>
+</template>
+<script>
+import Menu from "./components/Menu.vue"
+export default {
+  name:"app",
+  components:{
+    "my-menu":Menu
+  }
+}
+</script>
+```
+
+We can see the menu, registered locally.
+
+The store creation lies inside `store.js`:
+
+```javascript
+import Vue from "vue";
+import Vuex from "vuex";
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  state: {
+    settings: { name: "Stranger" }
+  },
+  mutations: {
+    setName: (state, name) => (state.settings.name = name)
+  }
+});
+```
+
+Both router and store are registered in the root viewmodel, inside `main.js`:
+
+```javascript
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+
+Vue.config.productionTip = false;
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount("#app");
+```
+
+And this is how we consume the data inside the store from any component:
+
+```html
+<template>
+  <div>
+    <h2>Hello, {{settings.name}}</h2>
+    <router-link to="/home">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <router-link to="/settings">Settings</router-link> |
+  </div>
+</template>
+<script>
+import { mapState } from "vuex";
+export default {
+  name:"my-menu",
+  computed:mapState(["settings"])
+}
+</script>
+```
+
+Similar to redux at react example, there is a mapState, but there is no need of
+connect.
+
+In `Settings.vue` we can see how to change the state:
+
+```html
+<template>
+  <div>
+    <h1>Settings</h1>
+    <p>This is a Settings page</p>My name is
+    <input v-model="name">
+    <button @click="changeName">Change</button>
+  </div>
+</template>
+<script>
+import { mapState } from "vuex";
+export default {
+  name: "settings",
+  computed: mapState(["settings"]),
+  data: _ => ({ name: "" }),
+  created() {
+    this.name = this.settings.name;
+  },
+  methods: {
+    changeName() {
+      this.$store.commit("setName", this.name);
+    }
+  }
+};
+</script>
+```
+
+In order to properly set initial local state, the 
+[created()](https://vuejs.org/v2/api/#created) lifecycle hook is employed.
+
+## 2 - Conclusion. Wait, what
+
+It's late and i am tired.
+
+However we could talk on another article about css/widgets frameworks
+available to each framework.
+
+And about mobile development on another.
+
+The complete source code can be found [there](https://github.com/sombriks/vue-react-comparison).
+
+2018-12-30
