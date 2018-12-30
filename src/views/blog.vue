@@ -52,6 +52,7 @@ module.exports = {
 					this.$store.commit("setTitle", post);
 					this.loading = false;
 					this.gotcontent = true;
+					window.scrollTo(0,0);
 				})
 				.catch(err => {
 					console.log(err);
