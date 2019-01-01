@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<p>here you can find a few samples about coding i cared to show here. This list is always being updated.</p>
+	<!-- 	<div>
+	<p>here you can find a few samples about coding i cared to show here. This list is always being updated.</p>
 		<hr>
 		<h2>Rosetta Beer Store</h2>
 		<p>
@@ -71,8 +71,18 @@
 				target="hjs3b"
 				href="https://www.facebook.com/sombriks/media_set?set=a.1493013440779710.1073741885.100002132055657&type=3"
 			>here</a>.
-		</p>
-	</div>
+		</p> 
+		
+	</div>-->
+	<v-layout column align-center justify-center>
+		<br>
+		<br>
+		<br>
+		<h1 class="display-4">
+			<i class="icofont-under-construction"></i>
+		</h1>
+		<p>under construction</p>
+	</v-layout>
 </template>
 
 <script>
