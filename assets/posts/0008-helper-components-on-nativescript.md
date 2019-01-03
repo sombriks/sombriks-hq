@@ -175,3 +175,5 @@ Nativescript-Vue grows as a good alternative to cordova/ionic and react-native.
 Hope to see more plugins, components, and, why not, more
 [showcases](https://market.nativescript.org/?tab=samples&framework=vue&category=all_samples)
 of it's potential.
+
+2019-01-03
