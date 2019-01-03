@@ -15,13 +15,13 @@
 			<v-layout row>Contact info</v-layout>
 			<v-layout row wrap>
 				<v-btn title="Facebook" large flat icon target="fb" href="https://www.facebook.com/sombriks">
-					<i class="icon ion-logo-facebook size24"></i>
+					<i class="icon ion-logo-facebook size36"></i>
 				</v-btn>
 				<v-btn title="Twitter" large flat icon target="tw" href="https://twitter.com/sombriks">
-					<i class="icon ion-logo-twitter size24"></i>
+					<i class="icon ion-logo-twitter size36"></i>
 				</v-btn>
 				<v-btn title="Linkedin" large flat icon target="in" href="https://www.linkedin.com/in/sombriks">
-					<i class="icon ion-logo-linkedin size24"></i>
+					<i class="icon ion-logo-linkedin size36"></i>
 				</v-btn>
 				<v-btn
 					title="Stackoverflow"
@@ -31,13 +31,13 @@
 					target="so"
 					href="https://stackoverflow.com/users/420096/sombriks?tab=profile"
 				>
-					<i class="icofont-stack-overflow size24"></i>
+					<i class="icofont-stack-overflow size36"></i>
 				</v-btn>
 				<v-btn title="Github" large flat icon target="gh" href="https://github.com/sombriks">
-					<i class="icon ion-logo-github size24"></i>
+					<i class="icon ion-logo-github size36"></i>
 				</v-btn>
 				<v-btn title="NPM" large flat icon target="gh" href="https://www.npmjs.com/~sombriks">
-					<i class="icon ion-logo-npm size24"></i>
+					<i class="icon ion-logo-npm size36"></i>
 				</v-btn>
 				<v-btn
 					title="Coders Rank"
@@ -47,13 +47,13 @@
 					target="ch"
 					href="https://profile.codersrank.io/user/sombriks"
 				>
-					<i class="icofont-code-alt sixe24"></i>
+					<i class="icofont-code-alt size36"></i>
 				</v-btn>
 			</v-layout>
 		</v-layout>
 		<v-layout column>
 			<v-list>
-				<v-list-tile v-for="r in routes" :key="r.path" v-if="r.urlitem" :href="`#${r.urlitem}`">
+				<v-list-tile v-for="r in routes.filter(e => e.urlitem)" :key="r.path" :href="`#${r.urlitem}`">
 					<v-list-tile-avatar>
 						<v-icon>{{ r.icon }}</v-icon>
 					</v-list-tile-avatar>
@@ -97,7 +97,7 @@ module.exports = {
 	}),
 	computed: mapState(["profilepics"]),
 	mounted() {
-		this.intervalId = setInterval(_ => this.changepic(), 5000);
+		this.intervalId = setInterval(this.changepic, 5000);
 	},
 	beforeDestroy() {
 		clearInterval(this.intervalId);
@@ -112,7 +112,7 @@ module.exports = {
 </script>
 
 <style scoped>
-.size24 {
-	font-size: 18px !important;
+.size36 {
+	font-size: 36px !important;
 }
 </style>

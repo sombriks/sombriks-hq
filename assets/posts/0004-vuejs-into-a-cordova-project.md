@@ -48,8 +48,8 @@ front-end development. This is why cool things built on top of cordova,
 
 Vue on the other hand is progressive and scales up and down. It can be as
 simple as cdn library placed inside some html document. It can be huge and
-industrial, the megaman with all the missing armor parts. Yet still swift and
-simple, focused on deliver solution instead of puzze the developer with
+industrial, the Megaman with all the missing armor parts. Yet still swift and
+simple, focused on deliver solution instead of puzzle the developer with
 cabalistic basic configurations.
 
 The vue-cli tool is at its third major release and can be installed using
@@ -188,7 +188,7 @@ The headers looks like this:
 **Step three:** copy cordova.js script tag in the bottom of www/index.html to
 the bottom of public/index.html
 
-You see, this cript does not exsists yet. it's built when the cordova application
+You see, this script does not exists yet. it's built when the cordova application
 gets constructed.
 
 The current index.html inside the public folder should look like this:
@@ -250,10 +250,10 @@ if (window.cordova) document.addEventListener("deviceready", appinit);
 else appinit();
 ```
 
-**Step five:** Changhe the default output folder for _npm run build_ command.
+**Step five:** Change the default output folder for _npm run build_ command.
 
 This step resolves a simple yet powerful detail: when you build your vue app,
-the final output is the dist directoy. Since we want it for our cordova setup,
+the final output is the dist directory. Since we want it for our cordova setup,
 this folder must overwrite the www folder.
 
 We could do this by hand all the time, but the vue build system has a simpler

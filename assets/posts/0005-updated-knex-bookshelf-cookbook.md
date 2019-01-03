@@ -80,17 +80,17 @@ Change the migrate and create your first table:
 
 ```javascript
 exports.up = knex =>
-	knex.schema.createTable("user", tb => {
-		tb.increments("user_id");
-		tb.timestamp("user_dtcreation")
-			.notNullable()
-			.defaultTo(knex.fn.now());
-		tb.string("user_name").notNullable();
-		tb.string("user_password").notNullable();
-		tb.string("user_email")
-			.notNullable()
-			.unique();
-	});
+  knex.schema.createTable("user", tb => {
+    tb.increments("user_id");
+    tb.timestamp("user_dtcreation")
+      .notNullable()
+      .defaultTo(knex.fn.now());
+    tb.string("user_name").notNullable();
+    tb.string("user_password").notNullable();
+    tb.string("user_email")
+      .notNullable()
+      .unique();
+  });
 
 exports.down = knex => knex.schema.dropTable("user");
 ```
@@ -127,34 +127,34 @@ Then make sure the **up** has the inserts and the **down** has the deletes:
 
 ```javascript
 const payload = [
-	{
-		user_name: "Alice",
-		user_password: "123456",
-		user_email: "alice2018@foobar.com"
-	},
-	{
-		user_name: "Bob",
-		user_password: "123456",
-		user_email: "bob2018@foobar.com"
-	},
-	{
-		user_name: "Joe",
-		user_password: "123456",
-		user_email: "joe2018@foobar.com"
-	},
-	{
-		user_name: "Mary",
-		user_password: "123456",
-		user_email: "mary2018@foobar.com"
-	}
+  {
+    user_name: "Alice",
+    user_password: "123456",
+    user_email: "alice2018@foobar.com"
+  },
+  {
+    user_name: "Bob",
+    user_password: "123456",
+    user_email: "bob2018@foobar.com"
+  },
+  {
+    user_name: "Joe",
+    user_password: "123456",
+    user_email: "joe2018@foobar.com"
+  },
+  {
+    user_name: "Mary",
+    user_password: "123456",
+    user_email: "mary2018@foobar.com"
+  }
 ];
 
 exports.up = knex => knex("user").insert(payload);
 
 exports.down = knex =>
-	knex("user")
-		.del()
-		.whereIn("user_email", payload.map(e => e.user_email));
+  knex("user")
+    .del()
+    .whereIn("user_email", payload.map(e => e.user_email));
 ```
 
 You can also use this alternative form for the down/delete:
@@ -177,14 +177,14 @@ Created Migration: /Users/sombriks/Documents/theproject/migrations/2018122501072
 
 ```javascript
 exports.up = knex =>
-	knex.schema.table("user", tb => {
-		tb.date("user_birthdate");
-	});
+  knex.schema.table("user", tb => {
+    tb.date("user_birthdate");
+  });
 
 exports.down = knex =>
-	knex.schema.table("user", tb => {
-		tb.dropColumn("user_birthdate");
-	});
+  knex.schema.table("user", tb => {
+    tb.dropColumn("user_birthdate");
+  });
 ```
 
 You may think "oh, i could just change previous migrate", but this is not how
@@ -198,16 +198,16 @@ again.
 ```javascript
 // create table party
 exports.up = knex =>
-	knex.schema.createTable("party", tb => {
-		tb.increments("party_id");
-		tb.timestamp("party_dtcreation")
-			.notNullable()
-			.defaultTo(knex.fn.now());
-		tb.string("party_name").notNullable();
-		tb.integer("user_id")
-			.references("user.user_id")
-			.comment("the user throwing the party");
-	});
+  knex.schema.createTable("party", tb => {
+    tb.increments("party_id");
+    tb.timestamp("party_dtcreation")
+      .notNullable()
+      .defaultTo(knex.fn.now());
+    tb.string("party_name").notNullable();
+    tb.integer("user_id")
+      .references("user.user_id")
+      .comment("the user throwing the party");
+  });
 
 exports.down = knex => knex.schema.dropTable("party");
 ```
@@ -217,17 +217,17 @@ Please note that a good schema will cope well with cascade:
 ```javascript
 // create pivot party_user
 exports.up = knex =>
-	knex.schema.createTable("party_user", tb => {
-		tb.integer("party_id")
-			.notNullable()
-			.references("party.party_id")
-			.onDelete("cascade");
-		tb.integer("user_id")
-			.notNullable()
-			.references("user.user_id")
-			.onDelete("cascade");
-		tb.unique(["party_id", "user_id"]);
-	});
+  knex.schema.createTable("party_user", tb => {
+    tb.integer("party_id")
+      .notNullable()
+      .references("party.party_id")
+      .onDelete("cascade");
+    tb.integer("user_id")
+      .notNullable()
+      .references("user.user_id")
+      .onDelete("cascade");
+    tb.unique(["party_id", "user_id"]);
+  });
 
 exports.down = knex => knex.schema.dropTable("party_user");
 ```
@@ -243,7 +243,7 @@ the job using [knex.raw](https://knexjs.org/#Raw) mode:
 ```javascript
 // create view guests
 exports.up = knex =>
-	knex.raw(`
+  knex.raw(`
   create view guests as
     select * from party
     natural join party_user
@@ -271,15 +271,15 @@ const knex = require("knex")(cfg[env]);
 const Bookshelf = require("bookshelf")(knex);
 
 const User = Bookshelf.Model.extend({
-	idAttribute: "user_id",
-	tableName: "user"
+  idAttribute: "user_id",
+  tableName: "user"
 });
 
 User.query().then(console.log);
 // similar to
 knex("user")
-	.select()
-	.then(console.log);
+  .select()
+  .then(console.log);
 ```
 
 Unlike other ORM's, all you need to tell to bookshelf is the table name and
@@ -303,24 +303,24 @@ const knex = require("knex")(cfg[env]);
 const Bookshelf = require("bookshelf")(knex);
 
 const User = Bookshelf.Model.extend({
-	idAttribute: "user_id",
-	tableName: "user"
+  idAttribute: "user_id",
+  tableName: "user"
 });
 
 const Party = Bookshelf.Model.extend({
-	idAttribute: "party_id",
-	tableName: "party",
-	host() {
-		return this.belongsTo(User, "user_id");
-	},
-	guests() {
-		return this.belongsToMany(User, "guests", "party_id", "user_id");
-	}
+  idAttribute: "party_id",
+  tableName: "party",
+  host() {
+    return this.belongsTo(User, "user_id");
+  },
+  guests() {
+    return this.belongsToMany(User, "guests", "party_id", "user_id");
+  }
 });
 
 Party.forge()
-	.fetch({ withRelated: ["host", "guests"] })
-	.then(console.log);
+  .fetch({ withRelated: ["host", "guests"] })
+  .then(console.log);
 ```
 
 ## How to easily expose basic CRUD operations with bookshelf and express
@@ -348,19 +348,19 @@ app.use(cors());
 app.use(morgan("dev"));
 
 const User = Bookshelf.Model.extend({
-	idAttribute: "user_id",
-	tableName: "user"
+  idAttribute: "user_id",
+  tableName: "user"
 });
 
 const Party = Bookshelf.Model.extend({
-	idAttribute: "party_id",
-	tableName: "party",
-	host() {
-		return this.belongsTo(User, "user_id");
-	},
-	guests() {
-		return this.belongsToMany(User, "guests", "party_id", "user_id");
-	}
+  idAttribute: "party_id",
+  tableName: "party",
+  host() {
+    return this.belongsTo(User, "user_id");
+  },
+  guests() {
+    return this.belongsToMany(User, "guests", "party_id", "user_id");
+  }
 });
 
 const r1 = new express.Router();
@@ -373,8 +373,8 @@ app.use("/user", r1);
 app.use("/party", r2);
 
 knex.migrate
-	.latest()
-	.then(_ => app.listen(3000, _ => console.log("App online")));
+  .latest()
+  .then(_ => app.listen(3000, _ => console.log("App online")));
 ```
 
 The common-routes requires the bookshelf-page plugin and json body-parser to

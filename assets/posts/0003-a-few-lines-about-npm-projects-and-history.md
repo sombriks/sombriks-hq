@@ -1,10 +1,10 @@
-# Words about package registries, build tools, past, present and future.
+# Words about package registries, build tools, past, present and future
 
 You see, when i got into this train it already was on move. Internet. Databases. Servers. Clients.
 
 All the stuff we still have nowadays.
 
-But back in 2007, i didn't had the slightest idea, for example, what a public registry would be. 
+But back in 2007, i didn't had the slightest idea, for example, what a public registry would be.
 
 When i needed to setup a java project, i used to start creating the eclipse project, then downloading every dependency. One by one.
 
@@ -14,19 +14,19 @@ The idea itself wasn't new. [Debian's apt-get](https://en.wikipedia.org/wiki/APT
 
 Even yet, due to my [slackware](http://www.slackware.com/) background, i used to have a little resistance against apt-like tools.
 
-Also maven was just horrible. 
+Also maven was just horrible.
 
 There where a xml-based config. It forced an entire new project folder layout. The fancy IDE's had zero integration or, when there was, looked much like a liver transplant that went bad.
 
-But yet! 
+But yet!
 
 Maven was huge, disruptive change. The core and most important part of it wasn't the build process, but the [package registry](http://central.maven.org/maven2/). There are [online tools](https://mvnrepository.com/) just to help the _regular java boi_ find the right package for the right project.
 
-[Gradle](https://gradle.org/) dudes got this and their tool is quite compatible with maven central. 
+[Gradle](https://gradle.org/) dudes got this and their tool is quite compatible with maven central.
 
 Enter [npm](http://npmjs.com/) era.
 
-npm not only is useful from command line, but also have a nice package registry.  600k+ by the time of this article. maven central had 640k+. Of course, there are a few others maven-like registries, but this sample is enough to give you the general idea.
+npm not only is useful from command line, but also have a nice package registry. 600k+ by the time of this article. maven central had 640k+. Of course, there are a few others maven-like registries, but this sample is enough to give you the general idea.
 
 The important part about having a good project tool and a healthy and wealthy package registry is how your project will take advantage of it.
 
@@ -56,7 +56,7 @@ Assuming you have gradle on your command line:
 gradle init
 ```
 
-And a few seconds later, bam! **build.gradle  gradle  gradlew  gradlew.bat  settings.gradle**
+And a few seconds later, bam! **build.gradle gradle gradlew gradlew.bat settings.gradle**
 
 See, for example, the generated **build.gradle:**
 
@@ -120,8 +120,8 @@ It will output a single file called **package.json** with this content:
 }
 ```
 
-It's said that *the greatest sophistication is the simplicity*. 
-To be fair, the three command line init options have nearly the same difficult if you get some novice crewmen. 
+It's said that _the greatest sophistication is the simplicity_.
+To be fair, the three command line init options have nearly the same difficult if you get some novice crewmen.
 But npm options will look far more easier for the ones who already know maven or gradle.
 Still a beautiful illusion.
 
@@ -221,7 +221,7 @@ In fact, if you publish your npm project to the registry, lit will carry the lay
 
 Those tools carry many differences. Gradle where meant to be a better Maven, but NPM serves us well... on another platform.
 
-We didn't debated here Ruby gems, PHP composer or pip. Yet thinking again about 2007, we lived without these tools. 
+We didn't debated here Ruby gems, PHP composer or pip. Yet thinking again about 2007, we lived without these tools.
 
 My my, we had a sad life.
 

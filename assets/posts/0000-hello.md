@@ -3,7 +3,7 @@
 This is a test to make sure it can be dynamic.
 
 - we have listings!
-  - and sublistings!
+  - and sub-listings!
 
 We have _italic_ **bold** and [links](https://github.com/chjj/marked)
 
