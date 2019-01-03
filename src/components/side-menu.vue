@@ -15,13 +15,13 @@
 			<v-layout row>Contact info</v-layout>
 			<v-layout row wrap>
 				<v-btn title="Facebook" large flat icon target="fb" href="https://www.facebook.com/sombriks">
-					<i class="icon ion-logo-facebook size36"></i>
+					<i class="icon ion-logo-facebook size28"></i>
 				</v-btn>
 				<v-btn title="Twitter" large flat icon target="tw" href="https://twitter.com/sombriks">
-					<i class="icon ion-logo-twitter size36"></i>
+					<i class="icon ion-logo-twitter size28"></i>
 				</v-btn>
 				<v-btn title="Linkedin" large flat icon target="in" href="https://www.linkedin.com/in/sombriks">
-					<i class="icon ion-logo-linkedin size36"></i>
+					<i class="icon ion-logo-linkedin size28"></i>
 				</v-btn>
 				<v-btn
 					title="Stackoverflow"
@@ -31,13 +31,15 @@
 					target="so"
 					href="https://stackoverflow.com/users/420096/sombriks?tab=profile"
 				>
-					<i class="icofont-stack-overflow size36"></i>
+					<i class="icofont-stack-overflow size28"></i>
 				</v-btn>
+			</v-layout>
+			<v-layout row wrap>
 				<v-btn title="Github" large flat icon target="gh" href="https://github.com/sombriks">
-					<i class="icon ion-logo-github size36"></i>
+					<i class="icon ion-logo-github size28"></i>
 				</v-btn>
 				<v-btn title="NPM" large flat icon target="gh" href="https://www.npmjs.com/~sombriks">
-					<i class="icon ion-logo-npm size36"></i>
+					<i class="icon ion-logo-npm size28"></i>
 				</v-btn>
 				<v-btn
 					title="Coders Rank"
@@ -47,7 +49,10 @@
 					target="ch"
 					href="https://profile.codersrank.io/user/sombriks"
 				>
-					<i class="icofont-code-alt size36"></i>
+					<i class="icofont-code-alt size28"></i>
+				</v-btn>
+				<v-btn title="Sourcerer" large flat icon target="sr" href="https://sourcerer.io/sombriks">
+					<i class="icofont-link size28"></i>
 				</v-btn>
 			</v-layout>
 		</v-layout>
@@ -112,7 +117,7 @@ module.exports = {
 </script>
 
 <style scoped>
-.size36 {
-	font-size: 36px !important;
+.size28 {
+	font-size: 28px !important;
 }
 </style>
