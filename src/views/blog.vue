@@ -7,9 +7,10 @@
 				<v-progress-circular :size="150" color="white" indeterminate>loading...</v-progress-circular>
 			</div>
 		</v-layout>
-		<v-layout v-if="!gotcontent" justify-center align-center>
-			Looking for something to read? try the &nbsp;
-			<b>menu>blog</b>&nbsp; section.
+		<v-layout v-if="!gotcontent">
+			<div class="text-xs-center">
+				Looking for something to read? Hit the <v-icon href="">menu</v-icon> in the topbar.
+			</div>
 		</v-layout>
 	</div>
 </template>
@@ -52,7 +53,7 @@ module.exports = {
 					this.$store.commit("setTitle", post);
 					this.loading = false;
 					this.gotcontent = true;
-					window.scrollTo(0,0);
+					window.scrollTo(0, 0);
 				})
 				.catch(err => {
 					console.log(err);

@@ -162,6 +162,26 @@
 				</v-card>
 			</v-timeline-item>
 
+			<v-timeline-item color="lime">
+				<div>2004 - present</div>
+				<v-card>
+					<v-card-title class="headline">
+						Student at
+						<a
+							target="if"
+							href="https://ifce.edu.br"
+						>IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará</a>
+					</v-card-title>
+					<v-card-text>
+						<p>
+							I started my professional studies there. Technician level. 
+							After a while i started the Engineering course, however i already had 
+							a full time job.
+						</p>
+					</v-card-text>
+				</v-card>
+			</v-timeline-item>
+
 			<v-timeline-item color="white">
 				<div>1984</div>
 				<v-card>

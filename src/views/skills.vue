@@ -10,7 +10,7 @@
 					title="profile for Sombriks on Stack Exchange, a network of free, community-driven Q&amp;A sites"
 				>
 			</a>
-			<div id="cnv"></div>
+			<!-- <div id="cnv"></div> -->
 		</v-layout>
 		<v-layout column>
 			<p>
@@ -71,33 +71,33 @@
 </template>
 
 <script>
-const PIXI = require("pixi.js");
+// const PIXI = require("pixi.js");
 const { mapState } = require("vuex");
 module.exports = {
 	name: "Skills",
 	computed: mapState(["profilepics"]),
 	mounted() {
 		this.$store.commit("setTitle", "Skills");
-		app = new PIXI.Application(350, 50);
-		document.getElementById("cnv").appendChild(app.view);
+		// app = new PIXI.Application(350, 50);
+		// document.getElementById("cnv").appendChild(app.view);
 
-		const textures = this.profilepics.map(e => PIXI.Texture.fromImage(e));
+		// const textures = this.profilepics.map(e => PIXI.Texture.fromImage(e));
 
-		let idx = 0;
+		// let idx = 0;
 
-		const pic = new PIXI.Sprite(textures[0]);
-		pic.anchor.set(0.5, 0.3);
-		pic.x = app.renderer.width / 2;
-		pic.y = app.renderer.height / 2;
-		pic.interactive = true;
-		pic.on("pointerup", _ => {
-			pic.texture = textures[(idx = ++idx % textures.length)];
-		});
+		// const pic = new PIXI.Sprite(textures[0]);
+		// pic.anchor.set(0.5, 0.3);
+		// pic.x = app.renderer.width / 2;
+		// pic.y = app.renderer.height / 2;
+		// pic.interactive = true;
+		// pic.on("pointerup", _ => {
+		// 	pic.texture = textures[(idx = ++idx % textures.length)];
+		// });
 
-		app.stage.addChild(pic);
-		app.ticker.add(delta => {
-			pic.rotation += 0.04 * delta;
-		});
+		// app.stage.addChild(pic);
+		// app.ticker.add(delta => {
+		// 	pic.rotation += 0.04 * delta;
+		// });
 	}
 };
 </script>
