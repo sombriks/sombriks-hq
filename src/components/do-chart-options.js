@@ -1,13 +1,16 @@
 const randomColor = require("randomcolor");
 module.exports = labels => ({
-  toolbar: { show:false },
   colors: randomColor({
     luminosity: "light",
     hue: "blue",
     count: 30
   }),
+  chart: { toolbar: { show: false } },
   plotOptions: {
-    bar: { distributed: true, horizontal: true }
+    bar: {
+      distributed: true,
+      horizontal: true
+    }
   },
   tooltip: {
     theme: "dark"
