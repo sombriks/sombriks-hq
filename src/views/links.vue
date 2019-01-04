@@ -28,18 +28,17 @@
 			href="https://haxiomic.github.io/GPU-Fluid-Experiments/html5/?q=Low"
 		>Quite relaxing</a>
 		<a target="_blank" href="https://www.hackerrank.com">Cool challenges</a>
-		<a target="_blank" href="http://browserquest.mozilla.org/">Cool game</a>
 		<a target="_blank" href="https://xkcd.com/1179/">How to write dates correctly</a>
-    <a target="_blank" href="https://devhints.io/">best TL;DR; ever</a>
-    <a target="_blank" href=""></a>
-    <a target="_blank" href=""></a>
-    <a target="_blank" href=""></a>
-    <a target="_blank" href=""></a>
-    <a target="_blank" href=""></a>
-    <a target="_blank" href=""></a>
-    <a target="_blank" href=""></a>
-    <a target="_blank" href=""></a>
-    
+		<a target="_blank" href="https://devhints.io/">best TL;DR; ever</a>
+		<a target="_blank" href="https://trello.com/">Organize your life a little</a>
+		<a target="_blank" href></a>
+		<a target="_blank" href></a>
+		<a target="_blank" href></a>
+		<a target="_blank" href></a>
+		<a target="_blank" href></a>
+		<a target="_blank" href></a>
+		<a target="_blank" href></a>
+
 		<v-layout column align-center justify-center>
 			<br>
 			<br>
