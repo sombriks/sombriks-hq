@@ -52,7 +52,7 @@ dev:
   budo src/main.js:build.js --live --wg="**.{html,css,js,vue,md}" --open -H 127.0.0.1
 ```
 
-And of course you call in invoking make and a target, for example:
+And of course you call it invoking make and a target, for example:
 
 ```bash
 make build
@@ -121,7 +121,7 @@ npm install --save-dev gulp
 In order to see it happening, hit your bash with this command:
 
 ```bash
-npmx gulp build
+npx gulp build
 ```
 
 And that's it, twice lines of code for half functionality seen on Makefile.
