@@ -30,7 +30,7 @@ Enough talk, look at this:
 
 ```Makefile
 # Makefile
-export PATH := ./node_modules/bin:$(PATH)
+export PATH := ./node_modules/.bin:$(PATH)
 
 clean:
   rm -rf public
@@ -78,7 +78,7 @@ const dev = cb => {
     open: true,
     host: "127.0.0.1",
     stream: process.stdout,
-    watchGlob: "**.{html,css,js,vue,md}"
+    watchGlob: "**.{html,css,js,vue,md}",
   });
   cb();
 };
@@ -92,7 +92,7 @@ const clean = cb => {
 
 const build = cb => {
   browserify({
-    entries: "src/main.js"
+    entries: "src/main.js",
   })
     .bundle()
     .pipe(fs.createWriteStream("public/build.js"));
@@ -126,7 +126,7 @@ npx gulp build
 
 And that's it, twice lines of code for half functionality seen on Makefile.
 
-*Please don't ask me for the Grunt version.*
+_Please don't ask me for the Grunt version._
 
 The only serious caveat to pay attention when adopting Make is windows.
 

@@ -1,5 +1,5 @@
 
-export PATH := ./node_modules/bin:$(PATH)
+export PATH := ./node_modules/.bin:$(PATH)
 
 clean: 
 	rm -rf public
