@@ -22,6 +22,9 @@
     "browserify-css": "^0.11.0",
     "budo": "^10.0.4",
     "common-shakeify": "^0.5.2",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
     "uglify-js-es6": "^2.8.9",
     "vueify": "^9.4.1"
   },
