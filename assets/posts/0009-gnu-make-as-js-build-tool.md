@@ -5,7 +5,7 @@ long time ago and the tales told us that it's destined to be recreated again
 and again over the eons, because people don't understand how make works.
 
 [Ant](https://ant.apache.org/), [SCons](https://en.wikipedia.org/wiki/SCons)
-and others existis because people didn't understood make.
+and others exists because people didn't understood make.
 
 For [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/)
 we open a small exception since they do more than build.
