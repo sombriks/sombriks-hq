@@ -14,7 +14,7 @@
 		</v-layout>
 		<v-layout column>
 			<p>
-				These skills of couse has a little interpretation bias.
+				These skills of course has a little interpretation bias.
 				This is how i see myself.
 			</p>
 			<p>
