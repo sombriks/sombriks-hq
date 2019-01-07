@@ -6,7 +6,10 @@
 			target="_blank"
 			href="https://www.youtube.com/results?search_query=vaporware"
 		>White noise to keep focus on working</a>
-		<a target="_blank" href="https://www.w3schools.com/">Docs everyone denies to use and enjoy it</a>
+		<a
+			target="_blank"
+			href="https://www.w3schools.com/"
+		>Docs everyone denies to use and enjoy to deny it</a>
 		<a target="_blank" href="https://developer.mozilla.org">The true and correct docs for the web</a>
 		<a target="_blank" href="https://vuejs.org/">The good</a>
 		<a target="_blank" href="https://reactjs.org/">The bad</a>
@@ -31,9 +34,9 @@
 		<a target="_blank" href="https://xkcd.com/1179/">How to write dates correctly</a>
 		<a target="_blank" href="https://devhints.io/">best TL;DR; ever</a>
 		<a target="_blank" href="https://trello.com/">Organize your life a little</a>
-		<a target="_blank" href></a>
-		<a target="_blank" href></a>
-		<a target="_blank" href></a>
+		<a target="_blank" href="https://dexie.org/">The nicest non-relational database API you'll ever see</a>
+		<a target="_blank" href="https://www.postgresql.org/docs/manuals/">Database for serious business</a>
+		<a target="_blank" href="https://www.sqlite.org/index.html">Not ANSI SQL but that's ok</a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
