@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<pre>
+			Welcome to my headquartes! Please use the <v-icon @click="$emit('abremenu')">menu</v-icon> in the topbar to see more content
+		</pre>
 		<small>same colors means same working group, just different business</small>
 		<v-timeline dense>
 			<v-timeline-item color="cyan">
@@ -174,8 +177,8 @@
 					</v-card-title>
 					<v-card-text>
 						<p>
-							I started my professional studies there. Technician level. 
-							After a while i started the Engineering course, however i already had 
+							I started my professional studies there. Technician level.
+							After a while i started the Engineering course, however i already had
 							a full time job.
 						</p>
 					</v-card-text>

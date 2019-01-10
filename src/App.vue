@@ -9,7 +9,7 @@
 		</v-toolbar>
 		<v-content>
 			<v-container fluid>
-				<router-view></router-view>
+				<router-view @abremenu="drawer = !drawer"></router-view>
 			</v-container>
 		</v-content>
 		<v-footer app>

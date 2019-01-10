@@ -9,7 +9,7 @@
 		</v-layout>
 		<v-layout v-if="!gotcontent">
 			<div class="text-xs-center">
-				Looking for something to read? Hit the <v-icon href="">menu</v-icon> in the topbar.
+				Looking for something to read? Hit the <v-icon @click="$emit('abremenu')">menu</v-icon> in the topbar.
 			</div>
 		</v-layout>
 	</div>
@@ -59,6 +59,7 @@ module.exports = {
 					console.log(err);
 					this.content = marked("_Hey, it does not exists. Yet._");
 					this.loading = false;
+					this.gotcontent = false;
 				});
 		}
 	},
