@@ -28,7 +28,7 @@
 		<p>In Blog
 			<v-btn flat icon @click="$emit('abremenu')">
 				<v-icon>collections_bookmark</v-icon>
-			</v-btn>section lies some thougths i decided to share with the world.
+			</v-btn>section lies some thoughts i decided to share with the world.
 		</p>
 		<h2>A bit of History</h2>
 		<small>same colors means same working group, just different business</small>
