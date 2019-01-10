@@ -228,7 +228,7 @@ to send your branches, master by default.
 ## Pull, Push
 
 Once you start to work on repos with remotes, you just do the same as you did:
-works, new files, delete files, chance files contents, then add (or stage)
+works, new files, delete files, change files contents, then add (or stage)
 those changes, commit them, merge them... but you will also do this:
 
 ```bash
