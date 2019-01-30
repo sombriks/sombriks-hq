@@ -46,3 +46,10 @@ pre>code {
 ion-icon {
   font-size: 64px !important;
 }
+
+p>img{
+	width:90% !important;
+  justify-content: center;
+  align-content: center;
+  display: block;
+}
