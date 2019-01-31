@@ -35,6 +35,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -47,11 +48,12 @@ import lombok.Data;
 @Table(name = "person")
 public class Person {
 
+  @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "person_id")
   private Integer id;
 
-  @Column(name = "creation")
+  @Column(name = "person_creation")
   @Temporal(TemporalType.TIMESTAMP)
   private Date creation;
 
@@ -64,6 +66,7 @@ public class Person {
       creation = new Date();
   }
 }
+
 ```
 
 On this first example, a few notes:
@@ -76,7 +79,7 @@ On this first example, a few notes:
 - The @PrePersist part is a exotic edge case to help JPA to not try to insert a
   null value where it shouldn't.
 
-Let's see `Party`, `PartyStatus` and `PartyType`:
+Let's see the `Party` entity:
 
 ```java
 package hq.sombriks.sample.model;
@@ -87,7 +90,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -100,6 +105,7 @@ import lombok.Data;
 @Table(name = "party")
 public class Party {
 
+  @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "party_id")
   private Integer id;
@@ -110,13 +116,16 @@ public class Party {
 
   @Column(name = "party_title")
   private String title;
-
+  
+  @OneToOne
   @JoinColumn(name = "person_id")
   private Person hoster;
 
+  @OneToOne
   @JoinColumn(name = "party_status_id")
   private PartyStatus status;
 
+  @OneToOne
   @JoinColumn(name = "party_type_id")
   private PartyType type;
 
@@ -132,10 +141,60 @@ public class Party {
 }
 ```
 
-```java
+One cool thing about JPA is the way it handles foreign keys. Using `@JoinColumn`
+and `@OneToOne` on a class property which is an entity too will bring it from
+database too when we query for it. 
 
+One could query for these entities like this:
+
+```java
+package hq.sombriks.sample;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import hq.sombriks.sample.model.Person;
+
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class SampleApplicationTests {
+
+	@PersistenceContext
+	private EntityManager em;
+
+	@Test
+	public void contextLoads() {
+	}
+
+	@Test
+	public void shouldListPeople() throws Exception {
+		List<Person> people = em.createQuery("select p from Person p", Person.class)//
+				.getResultList();
+		assertEquals(8, people.size()); // see sample-data.sql
+	}
+
+}
 ```
 
-```java
+The `EntityManager` has this special
+[query language](https://en.wikipedia.org/wiki/Java_Persistence_Query_Language)
+and also a [criteria query](https://en.wikibooks.org/wiki/Java_Persistence/Criteria#From)
+api (which is a little horrible to read but is strongly typed).
 
-```
+In this case we're using JPA with a spring boot project created by 
+[spring boot initializr](https://start.spring.io/).
+
+## Another approach: Sequelize
+
+
+
+2019-01-31
