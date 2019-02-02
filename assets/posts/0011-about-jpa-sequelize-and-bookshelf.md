@@ -86,11 +86,12 @@ public class Person {
 On this first example, a few notes:
 
 - The `@Data` annotation comes from [project Lombok](https://projectlombok.org/)
-  and relieves from the tedious work of create get/set methods.
+  and relieves us from the tedious work of create get/set methods.
 - JPA can use attribute name as column name. However our database uses
-  underscores in the table and field names and it's a kind of bad practice.
-  Therefore we need te `@Column` annotation to rename it.
-- The `@PrePersist` part is a exotic edge case to help JPA to not try to insert
+  underscores in the table and field names. Do underscores on java identifiers
+  is a kind of bad practice. Therefore we need the `@Column` annotation so we
+  can rename it.
+- The `@PrePersist` part is an exotic edge case to help JPA to not try to insert
   a null value where it shouldn't.
 
 Let's see the `Party` entity:
@@ -157,7 +158,8 @@ public class Party {
 
 One cool thing about JPA is the way it handles foreign keys. Using `@JoinColumn`
 and `@OneToOne` on a class property which is an entity too will bring it from
-database too when we query for it.
+database too when we query for it, solving the
+[select 1 + N problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-object-relational-mapping)
 
 One could query for these entities like this:
 
@@ -182,19 +184,19 @@ import hq.sombriks.sample.model.Person;
 @RunWith(SpringRunner.class)
 public class SampleApplicationTests {
 
-	@PersistenceContext
-	private EntityManager em;
+  @PersistenceContext
+  private EntityManager em;
 
-	@Test
-	public void contextLoads() {
-	}
+  @Test
+  public void contextLoads() {
+  }
 
-	@Test
-	public void shouldListPeople() throws Exception {
-		List<Person> people = em.createQuery("select p from Person p", Person.class)//
-				.getResultList();
-		assertEquals(8, people.size()); // see sample-data.sql
-	}
+  @Test
+  public void shouldListPeople() throws Exception {
+    List<Person> people = em.createQuery("select p from Person p", Person.class)//
+        .getResultList();
+    assertEquals(8, people.size()); // see sample-data.sql
+  }
 
 }
 ```
@@ -204,7 +206,7 @@ The `EntityManager` has this special
 and also a [criteria query](https://en.wikibooks.org/wiki/Java_Persistence/Criteria#From)
 api (which is a little horrible to read but is strongly typed).
 
-In this case we're using JPA with a spring boot project created by
+For this case we used JPA with a spring boot project created by
 [spring boot initializr](https://start.spring.io/).
 
 ## Another approach: Sequelize
@@ -220,7 +222,9 @@ The connection configuration can be made with this couple of lines:
 ```javascript
 // db.js
 const Sequelize = require("sequelize");
-exports.sequelize = new Sequelize("postgres://postgres:postgres@127.0.0.1:5432/my_party_schema");
+exports.sequelize = new Sequelize(
+  "postgres://postgres:postgres@127.0.0.1:5432/my_party_schema"
+);
 ```
 
 A model in sequelize looks like this:
@@ -228,7 +232,7 @@ A model in sequelize looks like this:
 ```javascript
 // model/Person.js
 const Sequelize = require("sequelize");
-const {sequelize} = require("../db");
+const { sequelize } = require("../db");
 
 exports.Person = sequelize.define(
   "Person",
@@ -236,18 +240,18 @@ exports.Person = sequelize.define(
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
-      field: "person_id",
+      field: "person_id"
     },
     creation: {
       type: Sequelize.DATE,
-      field: "person_creation",
+      field: "person_creation"
     },
     name: {
       type: Sequelize.STRING,
-      field: "person_name",
-    },
+      field: "person_name"
+    }
   },
-  {tableName: "person", timestamps: false},
+  { tableName: "person", timestamps: false }
 );
 ```
 
@@ -263,10 +267,10 @@ Let's see the Party model:
 ```javascript
 // model/Party.js
 const Sequelize = require("sequelize");
-const {sequelize} = require("../db");
-const {Person} = require("./Person");
-const {PartyType} = require("./PartyType");
-const {PartyStatus} = require("./PartyStatus");
+const { sequelize } = require("../db");
+const { Person } = require("./Person");
+const { PartyType } = require("./PartyType");
+const { PartyStatus } = require("./PartyStatus");
 
 exports.Party = sequelize.define(
   "Party",
@@ -274,22 +278,25 @@ exports.Party = sequelize.define(
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
-      field: "party_id",
+      field: "party_id"
     },
     creation: {
       type: Sequelize.DATE,
-      field: "party_creation",
+      field: "party_creation"
     },
     title: {
       type: Sequelize.STRING,
-      field: "party_title",
-    },
+      field: "party_title"
+    }
   },
-  {tableName: "party", timestamps: false},
+  { tableName: "party", timestamps: false }
 );
-exports.Party.hasOne(Person, {as: "hoster", foreignKey: "person_id"});
-exports.Party.hasOne(PartyType, {as: "type", foreignKey: "party_type_id"});
-exports.Party.hasOne(PartyStatus, {as: "status", foreignKey: "party_status_id"});
+exports.Party.hasOne(Person, { as: "hoster", foreignKey: "person_id" });
+exports.Party.hasOne(PartyType, { as: "type", foreignKey: "party_type_id" });
+exports.Party.hasOne(PartyStatus, {
+  as: "status",
+  foreignKey: "party_status_id"
+});
 ```
 
 Sequelize will always bring mixed emotions to the table, because it's way more
@@ -302,13 +309,17 @@ One could query Parties pretty much like this:
 
 ```javascript
 // index.js
-const {Party} = require("./model/Party");
-const {Person} = require("./model/Person");
-const {PartyType} = require("./model/PartyType");
-const {PartyStatus} = require("./model/PartyStatus");
+const { Party } = require("./model/Party");
+const { Person } = require("./model/Person");
+const { PartyType } = require("./model/PartyType");
+const { PartyStatus } = require("./model/PartyStatus");
 
 Party.findAll({
-  include: [{model: Person, as: "hoster"}, {model: PartyType, as: "type"}, {model: PartyStatus, as: "status"}],
+  include: [
+    { model: Person, as: "hoster" },
+    { model: PartyType, as: "type" },
+    { model: PartyStatus, as: "status" }
+  ]
 }).then(ret => console.log(ret));
 ```
 
@@ -337,8 +348,8 @@ const knex = require("knex")({
     port: 5432,
     database: "my_party_schema",
     user: "postgres",
-    password: "postgres",
-  },
+    password: "postgres"
+  }
 });
 exports.Bookshelf = require("bookshelf")(knex);
 ```
@@ -347,14 +358,14 @@ The Person model looks like this:
 
 ```javascript
 // model.js
-const {Bookshelf} = require("./db");
+const { Bookshelf } = require("./db");
 
 const Person = Bookshelf.Model.extend({
   tableName: "person",
-  idAttribute: "person_id",
+  idAttribute: "person_id"
 });
 
-module.exports = {Person};
+module.exports = { Person };
 ```
 
 See the difference?
@@ -370,21 +381,21 @@ Let's see the rest of the models:
 
 ```javascript
 // model.js
-const {Bookshelf} = require("./db");
+const { Bookshelf } = require("./db");
 
 const Person = Bookshelf.Model.extend({
   tableName: "person",
-  idAttribute: "person_id",
+  idAttribute: "person_id"
 });
 
 const PartyStatus = Bookshelf.Model.extend({
   tableName: "party_status",
-  idAttribute: "party_status_id",
+  idAttribute: "party_status_id"
 });
 
 const PartyType = Bookshelf.Model.extend({
   tableName: "party_type",
-  idAttribute: "party_type_id",
+  idAttribute: "party_type_id"
 });
 
 const Party = Bookshelf.Model.extend({
@@ -398,17 +409,17 @@ const Party = Bookshelf.Model.extend({
   },
   type() {
     return this.belongsTo(PartyType, "party_type_id");
-  },
+  }
 });
 
 const InviteStatus = Bookshelf.Model.extend({
   tableName: "invite_status",
-  idAttribute: "invite_status_id",
+  idAttribute: "invite_status_id"
 });
 
 const InviteType = Bookshelf.Model.extend({
   tableName: "invite_type",
-  idAttribute: "invite_type_id",
+  idAttribute: "invite_type_id"
 });
 
 const Invite = Bookshelf.Model.extend({
@@ -425,10 +436,18 @@ const Invite = Bookshelf.Model.extend({
   },
   type() {
     return this.belongsTo(InviteType, "invite_type_id");
-  },
+  }
 });
 
-module.exports = {Person, PartyStatus, PartyType, Party, InviteStatus, InviteType, Invite};
+module.exports = {
+  Person,
+  PartyStatus,
+  PartyType,
+  Party,
+  InviteStatus,
+  InviteType,
+  Invite
+};
 ```
 
 Two things shine most there:
@@ -443,9 +462,11 @@ Finally, query Parties would look like this:
 
 ```javascript
 // index.js
-const {Party} = require("./model");
+const { Party } = require("./model");
 
-Party.fetchAll({withRelated: ["hoster", "type", "status"]}).then(ret => console.log(ret.serialize()));
+Party.fetchAll({ withRelated: ["hoster", "type", "status"] }).then(ret =>
+  console.log(ret.serialize())
+);
 ```
 
 As seen in Sequelize, we need to express which relations we want to be loaded in
