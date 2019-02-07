@@ -157,7 +157,7 @@ module.exports = {
 </script>
 ```
 
-You can see topbar, searchbar and beer-item components 
+You can see topbar, searchbar and beer-item components
 [there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/shell/topbar.vue),
 [there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/shell/searchbar.vue)
 and
@@ -166,5 +166,117 @@ and
 ### React Version
 
 Oh boy.
+
+React version uses **material-ui** as it's material design implementation and
+the proper configuration expands into three files:
+
+#### package.json
+
+```json
+{
+  "name": "beer-store-client-webpack-reactjs",
+  "version": "1.0.0",
+  "description": "sample client to showcase what react can do",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open"
+  },
+  "keywords": [],
+  "author": "sombriks@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^3.9.1",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "^0.18.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^2.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
+```
+
+#### webpack.config.js
+
+```js
+const path = require("path");
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+
+const webpack = require("webpack");
+
+module.exports = {
+  mode: process.env.NODE_ENV || "development",
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader"
+      },
+      {
+        test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+        use: ["file-loader"]
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"]
+      }
+    ]
+  },
+  resolve: {
+    extensions: ["*", ".js", ".jsx"]
+  },
+  entry: "./src/main.jsx",
+  output: {
+    filename: "build.js",
+    path: path.resolve(__dirname, "dist")
+  },
+  devtool:
+    process.env.NODE_ENV == "development" ? "inline-source-map" : undefined,
+  devServer: {
+    contentBase: "./dist",
+    hot: true
+  },
+  plugins: [
+    new CleanWebpackPlugin(["dist"]),
+    new HtmlWebpackPlugin({
+      template: "./index.html"
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ]
+};
+```
+
+#### .babelrc
+
+```json
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": ["@babel/plugin-proposal-class-properties"]
+}
+```
+
+Unlike vue version, babel setup isn't optional, its **mandatory**.
 
 2019-02-06
