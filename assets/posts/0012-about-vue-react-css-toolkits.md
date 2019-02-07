@@ -59,4 +59,112 @@ Other results omitted, either bootstrap or trying to sell support
 
 First let's define what we need to produce so we can be fair.
 
+There is [this study project](https://github.com/sombriks/rosetta-beer-store)
+where it's possible to combine different back ends and front ends.
+
+Regardless what is the front or back, it has a quite well defined contract to be
+fulfilled so this is exactly what we need to make the comparation as fair as
+possible.
+
+We'll run the clients against the
+[beer-store-service-express-knex](https://github.com/sombriks/rosetta-beer-store/tree/master/beer-store-service-express-knex)
+because `npm install` and `npm run dev` are by far the easiest options to put a
+back end online.
+
+### Vue version
+
+It uses **vue-material** as it's material design implementation and things in
+`package.json` couldn't be more honest:
+
+```json
+{
+  "name": "beer-store-client-browserify-vuejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "budo src/main.js:build.js -o -l -H 127.0.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "material-design-icons-iconfont": "^3.0.3",
+    "vue": "^2.5.9",
+    "vue-material": "^0.8.1",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "browserify-css": "^0.14.0",
+    "budo": "^10.0.4",
+    "vueify": "^9.4.1"
+  },
+  "browserify": {
+    "transform": ["browserify-css", "vueify"]
+  }
+}
+```
+
+While webpack has the reasonable zero-conf nowadays, browserify did that in 2014
+and no one made it a big event. Also, in this setup we can clearly see that vue
+is completely possible without babel. Less is more, biggest sophistication is
+simplicity, on my most productive day i threw away a thousand lines of code, you
+got the idea.
+
+Beer listing is this:
+
+```html
+<template>
+  <div>
+    <topbar>
+      <h1 slot="left">Beer Listing</h1>
+    </topbar>
+    <md-layout md-gutter md-column>
+      <searchbar @onsearch="dosearch" :resultlist="beerlist"></searchbar>
+      <beer-item v-for="beer in beerlist" :key="beer.idbeer" :beer="beer">
+        <md-button
+          slot="heading-options"
+          class="md-icon-button"
+          @click="$router.push(`/beer-details/${beer.idbeer}`)"
+        >
+          <md-icon>visibility</md-icon>
+        </md-button>
+      </beer-item>
+    </md-layout>
+  </div>
+</template>
+
+<script>
+const { beerservice } = require("../components/restapi");
+module.exports = {
+  name: "BeerListing",
+  data: _ => ({
+    page: 1,
+    beerlist: []
+  }),
+  created() {
+    this.dosearch();
+  },
+  methods: {
+    async dosearch(s) {
+      const ret = await beerservice.list(s);
+      this.beerlist = ret.data;
+    }
+  }
+};
+</script>
+```
+
+You can see topbar, searchbar and beer-item components 
+[there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/shell/topbar.vue),
+[there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/shell/searchbar.vue)
+and
+[there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/beer/beer-item.vue).
+
+### React Version
+
+Oh boy.
+
 2019-02-06
