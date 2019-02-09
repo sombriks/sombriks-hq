@@ -157,6 +157,10 @@ module.exports = {
 </script>
 ```
 
+We use the `created` lifecycle hook to call our rest api and onc it returns we
+set the beerlist inside data section, which represents the component state, then
+vue and it's reactivity does the magic of dispatch a redraw. 
+
 You can see topbar, searchbar and beer-item components
 [there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/shell/topbar.vue),
 [there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/shell/searchbar.vue)
@@ -277,6 +281,187 @@ module.exports = {
 }
 ```
 
-Unlike vue version, babel setup isn't optional, its **mandatory**.
+Unlike vue version, babel setup isn't optional, its **mandatory**. The dev
+server must be properly configured to load a template instead of detect it, but
+on the plus side it does [HMR](https://webpack.js.org/concepts/hot-module-replacement/)
+instead of reloading, which sometimes is preferable action over page reload.
 
-2019-02-06
+This is beer listing on react:
+
+```javascript
+import React from "react";
+
+import {beerservice} from "../api";
+
+import {TopBar} from "../components/top-bar";
+import {SearchBar} from "../components/search-bar";
+import {BeerItem} from "../components/beer-item";
+
+import List from '@material-ui/core/List';
+import IconButton from "@material-ui/core/IconButton";
+import VisibilityIcon from "@material-ui/icons/Visibility";
+
+export class BeerListing extends React.Component {
+  // @babel/plugin-proposal-class-properties
+  state = {params: {search: "", page: 1, pageSize: 10}, list: []};
+
+  componentDidMount() {
+    this.busca();
+  }
+
+  busca = params => {
+    if (params) {
+      this.state.params = params;
+      this.setState(this.state);
+    }
+    beerservice.list(this.state.params).then(ret => {
+      this.state.list = ret.data;
+      this.setState(this.state);
+    });
+  };
+
+  render() {
+    const {params, list} = this.state;
+    return (
+      <div>
+        <TopBar left={"Beer Listing"} />
+        <SearchBar params={params} list={list} busca={this.busca} />
+        <List>
+          {list.map(beer => (
+            <BeerItem beer={beer} key={beer.idbeer}>
+              <IconButton href={`#/beer-details/${beer.idbeer}`}>
+                <VisibilityIcon/>
+              </IconButton>
+            </BeerItem>
+          ))}
+        </List>
+      </div>
+    );
+  }
+}
+```
+
+We use the `componentDidMount` lifecycle method (not to mistake with
+[hooks](https://reactjs.org/docs/hooks-intro.html)) to call the rest api and
+once it calls the [setState](https://reactjs.org/docs/react-component.html#setstate)
+and only then a redraw is invoked by react.
+
+You can see the TopBar component [here](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-webpack-react/src/components/top-bar.jsx)
+
+But let's talk about the `SearchBar` component a little:
+
+```javascript
+import React from "react";
+
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Input from "@material-ui/core/Input";
+import Button from "@material-ui/core/Button";
+
+import Grid from "@material-ui/core/Grid";
+
+import {withStyles} from "@material-ui/core/styles";
+
+const styles = theme => ({
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  formControl: {
+    margin: theme.spacing.unit,
+    width:"100%"
+  },
+  button: {
+    margin: theme.spacing.unit,
+  },
+});
+
+class SearchBar_ extends React.Component {
+  state = {params: {search: "", page: 1, pageSize: 10}};
+
+  handleChange = ev => {
+    this.state.params.search = ev.target.value;
+    this.state.params.page = 1;
+    this.setState(this.state);
+    this.props.busca(this.state.params);
+  };
+
+  handlePrev = _ => {
+    this.state.params.page--;
+    this.setState(this.state);
+    this.props.busca(this.state.params);
+  };
+
+  handleNext = _ => {
+    this.state.params.page++;
+    this.setState(this.state);
+    this.props.busca(this.state.params);
+  };
+
+  render() {
+    const {params} = this.state;
+    const {list, classes} = this.props;
+    return (
+      <Grid container spacing={24}>
+        <Grid item xs={8}>
+          <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="component-simple">Search</InputLabel>
+            <Input id="component-simple" value={params.search} onChange={this.handleChange} />
+          </FormControl>
+        </Grid>
+        <Grid item xs={2}>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            disabled={params.page == 1}
+            onClick={this.handlePrev}
+          >
+            Prev
+          </Button>
+        </Grid>
+        <Grid item xs={2}>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            disabled={list.length < params.pageSize}
+            onClick={this.handleNext}
+          >
+            Next
+          </Button>
+        </Grid>
+      </Grid>
+    );
+  }
+}
+
+export const SearchBar = withStyles(styles)(SearchBar_);
+```
+
+One exotic and important thing about material-ui is the opinionated way it
+applies css on it's components.
+
+It goes **CSS-IN-JS** all way down.
+
+I don't like this approach at all, since it makes good web designers which are
+well versed in css, scss and others quite obsolete due a questionable evolution.
+
+And BeerItem you can see [here](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-webpack-react/src/components/beer-item.jsx).
+
+## Conclusion
+
+While we could continue to rewrite the same thing on various distinct idioms,
+the results would vary little from what we have here. 
+[Newest vue](https://medium.com/the-vue-point/vue-2-6-released-66aa6c8e785e)
+(did you saw that?! also, zero backward breaking changes! Again!) keeps way more
+friendly to newcomers and to the ones who already know standard web development
+while react ecosystem is huge yet hermetic, closed over itself.
+
+If your major concern is to build a fresh team, go with vue. Nowadays you should
+choose react only if there is a team already well versed on int.
+
+Finally, feel free to explore the [source code](https://github.com/sombriks/rosetta-beer-store)
+of the repository used as foundation to this post.
+
+2019-02-09
