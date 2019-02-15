@@ -14,17 +14,17 @@ const labels = [
 	"SQL",
 	"HTML",
 	"CSS",
+	"Python",
+	"GO",
 	"C",
 	"C++",
 	"PHP",
-	"Python",
-	"GO",
 	"Ruby"
 ];
 module.exports = {
 	name: "chart-languages",
 	data: _ => ({
-		series: [{ data: [160, 110, 90, 85, 80, 80, 60, 30, 15, 14, 9] }],
+		series: [{ data: [160, 110, 90, 85, 80, 70, 60, 30, 15, 14, 9] }],
 		chartOptions: doOptions(labels)
 	})
 };

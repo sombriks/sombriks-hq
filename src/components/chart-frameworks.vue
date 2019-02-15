@@ -17,7 +17,7 @@ const labels = [
 	"JQuery",
 	"JEE (JPA,JSF, JMS, ETC)",
 	"Apache Cordova",
-	"Spring",
+	"Spring Boot",
 	"Vue Nativescript",
 	"React",
 	"Angular 2.x - 8.x",
@@ -25,7 +25,7 @@ const labels = [
 module.exports = {
 	name: "chart-frameworks",
 	data: _ => ({
-		series: [{ data: [150, 120, 110, 97, 90, 85, 70, 70, 50, 35, 9, 5] }],
+		series: [{ data: [150, 120, 110, 97, 90, 85, 70, 70, 60, 35, 29, 5] }],
 		chartOptions: doOptions(labels)
 	})
 };
