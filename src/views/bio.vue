@@ -45,7 +45,29 @@
 							This startup currently deals with software solutions on various fields.
 							From community management to renewable energy.
 						</p>
-						<p>A business by former usix/ebix coworkers.</p>
+						<p>A company built by former usix/ebix coworkers.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>nodejs</v-chip>
+							<v-chip>postgresql</v-chip>
+							<v-chip>knex</v-chip>
+							<v-chip>bookshelf</v-chip>
+							<v-chip>express</v-chip>
+							<v-chip>socket.io</v-chip>
+							<v-chip>onesignal</v-chip>
+							<v-chip>elasticemail</v-chip>
+							<v-chip>sendgrid</v-chip>
+							<v-chip>cordova</v-chip>
+							<v-chip>nativescript</v-chip>
+							<v-chip>webpack</v-chip>
+							<v-chip>browserify</v-chip>
+							<v-chip>vue</v-chip>
+							<v-chip>angularjs</v-chip>
+							<v-chip>material design</v-chip>
+							<v-chip>bootstrap</v-chip>
+							<v-chip>SPA</v-chip>
+							<v-chip>REST</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -63,6 +85,16 @@
 					<v-card-text>
 						<p>This startup was focused on Educational mobile games.</p>
 						<p>A business by former usix/ebix coworkers.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>postgresql</v-chip>
+							<v-chip>Java EE</v-chip>
+							<v-chip>cordova</v-chip>
+							<v-chip>Phaser JS</v-chip>
+							<v-chip>angularjs</v-chip>
+							<v-chip>bootstrap</v-chip>
+							<v-chip>REST</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -79,6 +111,17 @@
 					</v-card-title>
 					<v-card-text>
 						<p>This company was focused on Transit law enforcement.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>postgresql</v-chip>
+							<v-chip>mysql</v-chip>
+							<v-chip>Java EE</v-chip>
+							<v-chip>Spring</v-chip>
+							<v-chip>nrjavaserial</v-chip>
+							<v-chip>angularjs</v-chip>
+							<v-chip>bootstrap</v-chip>
+							<v-chip>image processing</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -95,6 +138,11 @@
 					</v-card-title>
 					<v-card-text>
 						<p>This company was a big outsource provider for software development.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>Java</v-chip>
+							<v-chip>Polopoly</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -109,6 +157,14 @@
 					<v-card-text>
 						<p>This company have various P&D works.</p>
 						<p>A business backed by IFCE professors.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>php</v-chip>
+							<v-chip>mysql</v-chip>
+							<v-chip>Java EE</v-chip>
+							<v-chip>android</v-chip>
+							<v-chip>REST</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -123,6 +179,16 @@
 					<v-card-text>
 						<p>This company have various P&D works.</p>
 						<p>A business backed by IFCE professors.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>oracle database</v-chip>
+							<v-chip>Java EE</v-chip>
+							<v-chip>Spring</v-chip>
+							<v-chip>vraptor</v-chip>
+							<v-chip>angularjs</v-chip>
+							<v-chip>bootstrap</v-chip>
+							<v-chip>CD/CI - continuous delivery and integration</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -140,6 +206,16 @@
 					<v-card-text>
 						<p>This startup had researches in robotics and recommendation systems.</p>
 						<p>A business backed by IFCE professors.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>C/C++</v-chip>
+							<v-chip>embedded systems</v-chip>
+							<v-chip>android</v-chip>
+							<v-chip>REST</v-chip>
+							<v-chip>Java EE</v-chip>
+							<v-chip>mysql</v-chip>
+							<v-chip>recommendation systems - collaborative filtering</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -154,6 +230,16 @@
 					<v-card-text>
 						<p>USIX S/A was acquired by Ebix Inc. in 2010.</p>
 						<p>Core business still was insurance market.</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>JQuery</v-chip>
+							<v-chip>DWR - direct web remoting</v-chip>
+							<v-chip>SPA</v-chip>
+							<v-chip>oracle database</v-chip>
+							<v-chip>websphere application server</v-chip>
+							<v-chip>Java EE</v-chip>
+							<v-chip>proprietary insurance busines metamodel engine</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -170,6 +256,16 @@
 					</v-card-title>
 					<v-card-text>
 						<p>Core business was insurance market and tackle ie6 bugs</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>JQuery</v-chip>
+							<v-chip>DWR - direct web remoting</v-chip>
+							<v-chip>Struts 1</v-chip>
+							<v-chip>oracle database</v-chip>
+							<v-chip>websphere application server</v-chip>
+							<v-chip>Java EE</v-chip>
+							<v-chip>proprietary insurance busines metamodel engine</v-chip>
+						</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -188,6 +284,13 @@
 						<p>
 							A social project to include young students into the digital market outsourcing
 							and building in-house projects.
+						</p>
+						<h5>Tech stack</h5>
+						<p>
+							<v-chip>JQuery</v-chip>
+							<v-chip>Struts 1</v-chip>
+							<v-chip>mysql</v-chip>
+							<v-chip>Java</v-chip>
 						</p>
 					</v-card-text>
 				</v-card>
