@@ -238,6 +238,9 @@
 							<v-chip>oracle database</v-chip>
 							<v-chip>websphere application server</v-chip>
 							<v-chip>Java EE</v-chip>
+							<v-chip>JNI - Java Native Interface</v-chip>
+							<v-chip>C/C++</v-chip>
+							<v-chip>UNIX HP-UX</v-chip>
 							<v-chip>proprietary insurance busines metamodel engine</v-chip>
 						</p>
 					</v-card-text>
@@ -264,6 +267,8 @@
 							<v-chip>oracle database</v-chip>
 							<v-chip>websphere application server</v-chip>
 							<v-chip>Java EE</v-chip>
+							<v-chip>JNI - Java Native Interface</v-chip>
+							<v-chip>C/C++</v-chip>
 							<v-chip>proprietary insurance busines metamodel engine</v-chip>
 						</p>
 					</v-card-text>
