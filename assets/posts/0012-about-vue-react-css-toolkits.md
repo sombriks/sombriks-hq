@@ -157,9 +157,9 @@ module.exports = {
 </script>
 ```
 
-We use the `created` lifecycle hook to call our rest api and onc it returns we
+We use the `created` life cycle hook to call our rest api and onc it returns we
 set the beerlist inside data section, which represents the component state, then
-vue and it's reactivity does the magic of dispatch a redraw. 
+vue and it's reactivity does the magic of dispatch a redraw.
 
 You can see topbar, searchbar and beer-item components
 [there](https://github.com/sombriks/rosetta-beer-store/blob/master/beer-store-client-browserify-vuejs/src/components/shell/topbar.vue),
@@ -452,7 +452,7 @@ And BeerItem you can see [here](https://github.com/sombriks/rosetta-beer-store/b
 ## Conclusion
 
 While we could continue to rewrite the same thing on various distinct idioms,
-the results would vary little from what we have here. 
+the results would vary little from what we have here.
 [Newest vue](https://medium.com/the-vue-point/vue-2-6-released-66aa6c8e785e)
 (did you saw that?! also, zero backward breaking changes! Again!) keeps way more
 friendly to newcomers and to the ones who already know standard web development
