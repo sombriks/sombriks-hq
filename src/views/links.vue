@@ -38,7 +38,7 @@
 		<a target="_blank" href="https://www.postgresql.org/docs/manuals/">Database for serious business</a>
 		<a target="_blank" href="https://www.sqlite.org/index.html">Not ANSI SQL but that's ok</a>
 		<a target="_blank" href="https://www.destroyallsoftware.com/compendium">Core basics of computer science in a very opinionated way</a>
-		<a target="_blank" href></a>
+		<a target="_blank" href="http://raganwald.com/2019/02/14/i-love-programming-and-programmers.html">I like the way compilers work</a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
 
