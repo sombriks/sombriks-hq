@@ -12,11 +12,46 @@ interested in a certain topic and send updates to these subscribers whenever new
 content arrives at the topic.
 
 On this post we'll make a small ~~chat app~~ _game_ to demonstrate how to use
-the [socket.io](https://socket.io) node library.  
+the [socket.io](https://socket.io) node library.
 
 ## The server side
 
 It's a simple npm project, see the `package.json`:
+
+```json
+{
+  "name": "sample-rtc-socket-io-server",
+  "version": "1.0.0",
+  "description": "sample project showcasing real time communication with socket.io",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}
+```
+
+### Topics and events
+
+On socket.io idiom uses two concepts which represents the idea of the topic in
+the pub/sub architecture where subscribers can join and observe.
+
+The first one is the [namespace](https://github.com/socketio/socket.io/blob/master/docs/API.md#namespace).
+
+Every client will connect into the root ("/") namespace.
+
+The second one is the [room](https://github.com/socketio/socket.io/blob/master/docs/API.md#namespacetoroom).
+
+Then everything becomes an emit/observe game. Either someone is emitting an
+event or listening to it.
 
 ## The client side
 
