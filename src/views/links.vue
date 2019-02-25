@@ -26,10 +26,7 @@
 		<a target="_blank" href="https://www.base64encode.org/">How to speak clearly</a>
 		<a target="_blank" href="https://simplycalc.com/base16-encode.php">More clearly</a>
 		<a target="_blank" href="https://www.youtube.com/results?search_query=make+good+art">make good art</a>
-		<a
-			target="_blank"
-			href="https://haxiomic.github.io/GPU-Fluid-Experiments/html5/?q=Low"
-		>Quite relaxing</a>
+		<a target="_blank" href="https://haxiomic.github.io/GPU-Fluid-Experiments/html5/?q=Low">Quite relaxing</a>
 		<a target="_blank" href="https://www.hackerrank.com">Cool challenges</a>
 		<a target="_blank" href="https://xkcd.com/1179/">How to write dates correctly</a>
 		<a target="_blank" href="https://devhints.io/">best TL;DR; ever</a>
@@ -39,11 +36,7 @@
 		<a target="_blank" href="https://www.sqlite.org/index.html">Not ANSI SQL but that's ok</a>
 		<a target="_blank" href="https://www.destroyallsoftware.com/compendium">Core basics of computer science in a very opinionated way</a>
 		<a target="_blank" href="https://www.timsommer.be/famous-laws-of-software-development/">Famous laws of software development</a>
-		<a target="_blank" href></a>
-		<a target="_blank" href></a>
-		<a target="_blank" href></a>
-		<a target="_blank" href></a>
-		<a target="_blank" href></a>
+		<a target="_blank" href="http://raganwald.com/2019/02/14/i-love-programming-and-programmers.html">I like the way compilers work</a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
 
