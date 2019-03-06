@@ -127,6 +127,387 @@ $ FLASK_ENV=development FLASK_APP=app.py pipenv run flask run
 This flask service in development mode is ready to detect script changes and
 reload accordingly.
 
-### The database
+### The database saga
 
-Now we'll install
+Now we'll install sqlalchemy
+[and it's flask binding](http://flask-sqlalchemy.pocoo.org/2.3/) so we can deal
+better with databases:
+
+```bash
+$ pipenv install sqlalchemy flask_sqlalchemy
+Installing sqlalchemy...
+Adding sqlalchemy to Pipfile's [packages]...
+✔ Installation Succeeded
+Installing flask_sqlalchemy...
+Adding flask_sqlalchemy to Pipfile's [packages]...
+✔ Installation Succeeded
+Pipfile.lock (693ac0) out of date, updating to (c17fe3)...
+Locking [dev-packages] dependencies...
+✔ Success!
+Locking [packages] dependencies...
+✔ Success!
+Updated Pipfile.lock (693ac0)!
+Installing dependencies from Pipfile.lock (693ac0)...
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 8/8 — 00:00:02
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+```
+
+And our `app.py` will be this:
+
+```python
+# app.py
+from datetime import datetime
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+
+app = Flask(__name__)
+
+url = 'sqlite:///beerstore.db'
+# if app.config['FLASK_ENV'] == 'development':
+#     url ="postgres://postgres:postgres@127.0.0.1/beerstore"
+app.config['SQLALCHEMY_DATABASE_URI'] = url
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+
+class Media(db.Model):
+    __tablename__ = "media"
+    idmedia = db.Column(db.Integer, nullable=False, primary_key=True)
+    creationdatemedia = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    datamedia = db.Column(db.LargeBinary, nullable=False)
+    nomemedia = db.Column(db.String(255), nullable=False)
+    mimemedia = db.Column(db.String(255), nullable=False)
+
+
+class Beer(db.Model):
+    __tablename__ = "beer"
+    idbeer = db.Column(db.Integer, primary_key=True)
+    creationdatebeer = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    titlebeer = db.Column(db.String(255), nullable=False)
+    descriptionbeer = db.Column(db.Text)
+    idmedia = db.Column(db.Integer, db.ForeignKey('media.idmedia'))
+
+
+@app.route("/status")
+def hello():
+    return "ONLINE!"
+
+
+```
+
+This way we have models but hey, they're neither answering on REST endpoints yet
+or connected to a real database. Also we didn't managed to create the initial
+schema using the
+[sqlalchemy-migrate](https://sqlalchemy-migrate.readthedocs.io/en/latest/):
+
+```bash
+pipenv install sqlalchemy-migrate
+```
+
+Once installed, the **migrate** command will be available to use inside the
+project's virtualenv. But remember, we don't interact directly with virtualenv,
+we call pipenv for it.
+
+Now create the _migrations_ repository:
+
+```bash
+pipenv run migrate create migrations "My beer store repository"
+```
+
+The project structure now looks like this:
+
+```bash
+beer-store-service-python-flask-sqlalchemy/
+├── Pipfile
+├── Pipfile.lock
+├── app.py
+└── migrations
+    ├── README
+    ├── __init__.py
+    ├── manage.py
+    ├── migrate.cfg
+    └── versions
+        ├── __init__.py
+
+4 directories, 10 files
+```
+
+Once the repository gets created, it's time to version the database:
+
+```bash
+$ pipenv shell
+Launching subshell in virtual environment...
+(beer-store-service-python-flask-sqlalchemy)$ python3 ./migrations/manage.py version_control sqlite:///beerstore.db migrations
+```
+
+And finally make our first migration:
+
+```bash
+(beer-store-service-python-flask-sqlalchemy)$  python3 ./migrations/manage.py script_sql sqlite "initial schema" migrations
+```
+
+Note that we had to use and keep inside the subshell created by `pipenv shell`.
+The project structure now looks like this:
+
+```bash
+beer-store-service-python-flask-sqlalchemy/
+├── Pipfile
+├── Pipfile.lock
+├── app.py
+├── beerstore.db
+└── migrations
+    ├── README
+    ├── __init__.py
+    ├── __pycache__
+    │   └── __init__.cpython-37.pyc
+    ├── manage.py
+    ├── migrate.cfg
+    └── versions
+        ├── 001_initial_schema_sqlite_downgrade.sql
+        ├── 001_initial_schema_sqlite_upgrade.sql
+        ├── __init__.py
+        └── __pycache__
+            └── __init__.cpython-37.pyc
+4 directories, 13 files
+```
+
+Open the `001_initial_schema_sqlite_upgrade.sql` file and add the sql code for
+the schema creation:
+
+```sql
+-- name: create-media-table
+create table media (
+  idmedia integer primary key autoincrement,
+  creationdatemedia timestamp not null default CURRENT_TIMESTAMP,
+  datamedia blob not null,
+  nomemedia varchar(255) not null,
+  mimemedia varchar(255) not null
+);
+
+-- name: create-beer-table
+create table beer (
+  idbeer integer primary key autoincrement,
+  creationdatebeer timestamp not null default CURRENT_TIMESTAMP,
+  titlebeer varchar(255) not null,
+  descriptionbeer text,
+  idmedia integer,
+
+  foreign key (idmedia) references media(idmedia)
+);
+```
+
+The `001_initial_schema_sqlite_downgrade.sql` looks like this:
+
+```sql
+drop table media;
+drop table beer;
+```
+
+And you can run the database creation by issuing the upgrade migrate command:
+
+```bash
+(beer-store-service-python-flask-sqlalchemy)$ python3 ./migrations/manage.py upgrade sqlite:///beerstore.db migrations
+0 -> 1...
+done
+```
+
+#### upgrade / downgrade what
+
+A quick one:
+
+classically, migrate strategies have an **up** and a **down** phase.
+
+Both runs on transactions and what up does, down undoes.
+
+The down however only has value on **development time**.
+
+You should not perform downgrades on production environments because you might
+**lose precious data**!
+
+### initial data load
+
+Since it's getting quite tedious to type database url and migration repository
+name/path, edit the manage.py script inside the repository:
+
+```python
+#!/usr/bin/env python
+# migrations/manage.py
+from migrate.versioning.shell import main
+
+if __name__ == '__main__':
+    main(repository='migrations', url='sqlite:///beerstore.db', debug='False')
+```
+
+Now it became easier to create our second migrate:
+
+```bash
+(beer-store-service-python-flask-sqlalchemy)$  python3 ./migrations/manage.py script_sql sqlite "initial load"
+```
+
+Once again it will create the upgrade script:
+
+```sql
+-- 002_initial_load_sqlite_upgrade.sql
+insert into beer (idbeer,titlebeer,descriptionbeer) values (1, 'Brahma', 'A número 1!');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (2, 'Antartica Original', 'Pilsen');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (3, 'Itaipava', 'A cerveja do verão!');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (4, 'Devassa', 'Tropical Lager');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (5, 'Corona', 'extra');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (6, 'Therezópolis', 'Cerveja especial');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (7, 'Budweiser', 'King of Beers');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (8, 'Heinenken', 'Premium quality');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (9, 'Skol', 'A que desce redondo!');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (10, 'Kaiser', 'Cerveja bem cervejada!');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (11, 'Eisenbahn', 'Cerveja puro malte');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (12, 'Liefmans', 'Fruitesse');
+insert into beer (idbeer,titlebeer,descriptionbeer) values (13, 'Bohemia', 'cerveja Pilsen');
+```
+
+And the downgrade script:
+
+```sql
+-- 002_initial_load_sqlite_downgrade.sql
+delete from beer where idbeer in (1,2,3,4,5,6,7,8,9,10,11,12,13);
+```
+
+One could be tempted to use the
+[SQLAlchemy Models](http://flask-sqlalchemy.pocoo.org/2.3/models/) directly on
+migrations (migrations can be python scripts too) but think again: you're
+versioning not only the database with schema migrations, but also your source
+code using some git repo or mercurial, fossil, svn, cvs or something else.
+
+Since models represents the latest version of your schema, they are unable to
+track down the entire evolution history that an agnostic migration strategy can.
+
+Also it's not elegant to speak spanish to french people, i.e. to use python to
+talk to a database.
+
+Well, since we're done on the database side (did schema, data load, coffee time)
+let's make our rest app work.
+
+### It's server time
+
+Fist things first, the app must always run on the latest schema version.
+So let's change our `app.py` script to this:
+
+```python
+# app.py
+from datetime import datetime
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from migrate.versioning.api import upgrade, version_control
+
+
+app = Flask(__name__)
+
+url = 'sqlite:///beerstore.db'
+# if app.config['FLASK_ENV'] == 'development':
+#     url ="postgres://postgres:postgres@127.0.0.1/beerstore"
+app.config['SQLALCHEMY_DATABASE_URI'] = url
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+upgrade(url, 'migrations')
+
+
+class Media(db.Model):
+    __tablename__ = "media"
+    idmedia = db.Column(db.Integer, nullable=False, primary_key=True)
+    creationdatemedia = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    datamedia = db.Column(db.LargeBinary, nullable=False)
+    nomemedia = db.Column(db.String(255), nullable=False)
+    mimemedia = db.Column(db.String(255), nullable=False)
+
+
+class Beer(db.Model):
+    __tablename__ = "beer"
+    idbeer = db.Column(db.Integer, primary_key=True)
+    creationdatebeer = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    titlebeer = db.Column(db.String(255), nullable=False)
+    descriptionbeer = db.Column(db.Text)
+    idmedia = db.Column(db.Integer, db.ForeignKey('media.idmedia'))
+
+
+@app.route("/status")
+def hello():
+    return "ONLINE!"
+```
+
+This simple `upgrade` call grants that the app always will be running against
+the latest schema version.
+
+So let's return some data to the client. Change the `app.py` once more again:
+
+```python
+# app.py
+from datetime import datetime
+from flask import Flask, request
+from flask_sqlalchemy import SQLAlchemy
+from migrate.versioning.api import upgrade, version_control
+
+app = Flask(__name__)
+
+url = 'sqlite:///beerstore.db'
+# if app.config['FLASK_ENV'] == 'development':
+#     url ="postgres://postgres:postgres@127.0.0.1/beerstore"
+app.config['SQLALCHEMY_DATABASE_URI'] = url
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+# if app.config['FLASK_ENV'] == 'development':
+try:
+    version_control(url, 'migrations')
+except:
+    print("db already versioned!")
+
+upgrade(repository='migrations', url=url, debug='False')
+
+
+class Media(db.Model):
+    __tablename__ = "media"
+    idmedia = db.Column(db.Integer, nullable=False, primary_key=True)
+    creationdatemedia = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    datamedia = db.Column(db.LargeBinary, nullable=False)
+    nomemedia = db.Column(db.String(255), nullable=False)
+    mimemedia = db.Column(db.String(255), nullable=False)
+
+
+class Beer(db.Model):
+    __tablename__ = "beer"
+    idbeer = db.Column(db.Integer, primary_key=True)
+    creationdatebeer = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    titlebeer = db.Column(db.String(255), nullable=False)
+    descriptionbeer = db.Column(db.Text)
+    idmedia = db.Column(db.Integer, db.ForeignKey('media.idmedia'))
+
+
+@app.route("/status")
+def hello():
+    return "ONLINE!"
+
+
+@app.route("/beer/list", methods=["GET"])
+def beerlist():
+    page = request.args.get("page")
+    pageSize = request.args.get("pageSize")
+    return Beer.query.paginate(page, pageSize).items
+```
+
+This change is a bit sad because it throws a nasty error:
+`TypeError: 'list' object is not callable`
+
+Unlike javascript, json return isn't a first class citizen.
+
+In order to return json, we must add facilities to make it possible. Change the
+app.py again:
