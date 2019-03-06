@@ -502,12 +502,229 @@ def beerlist():
     page = request.args.get("page")
     pageSize = request.args.get("pageSize")
     return Beer.query.paginate(page, pageSize).items
+
+
 ```
+
+Run the server again and point it to
+[http://127.0.0.1:5000/beer/list](http://127.0.0.1:5000/beer/list)
 
 This change is a bit sad because it throws a nasty error:
 `TypeError: 'list' object is not callable`
 
-Unlike javascript, json return isn't a first class citizen.
+Unlike javascript, json isn't a first class citizen.
 
-In order to return json, we must add facilities to make it possible. Change the
-app.py again:
+Change the `app.py` again:
+
+```python
+# app.py
+from datetime import datetime
+from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from migrate.versioning.api import upgrade, version_control
+
+app = Flask(__name__)
+
+url = 'sqlite:///beerstore.db'
+# if app.config['FLASK_ENV'] == 'development':
+#     url ="postgres://postgres:postgres@127.0.0.1/beerstore"
+app.config['SQLALCHEMY_DATABASE_URI'] = url
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+# if app.config['FLASK_ENV'] == 'development':
+try:
+    version_control(url, 'migrations')
+except:
+    print("db already versioned!")
+
+upgrade(repository='migrations', url=url, debug='False')
+
+
+class Media(db.Model):
+    __tablename__ = "media"
+    idmedia = db.Column(db.Integer, nullable=False, primary_key=True)
+    creationdatemedia = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    datamedia = db.Column(db.LargeBinary, nullable=False)
+    nomemedia = db.Column(db.String(255), nullable=False)
+    mimemedia = db.Column(db.String(255), nullable=False)
+
+
+class Beer(db.Model):
+    __tablename__ = "beer"
+    idbeer = db.Column(db.Integer, primary_key=True)
+    creationdatebeer = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    titlebeer = db.Column(db.String(255), nullable=False)
+    descriptionbeer = db.Column(db.Text)
+    idmedia = db.Column(db.Integer, db.ForeignKey('media.idmedia'))
+
+    def to_dict(self):
+        return {
+            "idbeer": self.idbeer,
+            "creationdatebeer": self.creationdatebeer,
+            "titlebeer": self.titlebeer,
+            "descriptionbeer": self.descriptionbeer,
+            "idmedia": self.idmedia,
+        }
+
+
+@app.route("/status")
+def hello():
+    return "ONLINE!"
+
+
+@app.route("/beer/list", methods=["GET"])
+def beerlist():
+    page = request.args.get("page", default=1, type=int)
+    pageSize = request.args.get("pageSize", default=10, type=int)
+    return jsonify([
+        item.to_dict() for item in Beer.query.paginate(page, pageSize).items
+    ])
+```
+
+And that's nice, because the code is able to answer the browser correctly.
+
+Visiting [this url](http://127.0.0.1:5000/beer/list?pageSize=5) will produce the
+following output:
+
+```json
+[
+  {
+    "creationdatebeer": "Wed, 06 Mar 2019 03:14:01 GMT",
+    "descriptionbeer": "A n\u00famero 1!",
+    "idbeer": 1,
+    "idmedia": null,
+    "titlebeer": "Brahma"
+  },
+  {
+    "creationdatebeer": "Wed, 06 Mar 2019 03:14:01 GMT",
+    "descriptionbeer": "Pilsen",
+    "idbeer": 2,
+    "idmedia": null,
+    "titlebeer": "Antartica Original"
+  },
+  {
+    "creationdatebeer": "Wed, 06 Mar 2019 03:14:01 GMT",
+    "descriptionbeer": "A cerveja do ver\u00e3o!",
+    "idbeer": 3,
+    "idmedia": null,
+    "titlebeer": "Itaipava"
+  },
+  {
+    "creationdatebeer": "Wed, 06 Mar 2019 03:14:01 GMT",
+    "descriptionbeer": "Tropical Lager",
+    "idbeer": 4,
+    "idmedia": null,
+    "titlebeer": "Devassa"
+  },
+  {
+    "creationdatebeer": "Wed, 06 Mar 2019 03:14:01 GMT",
+    "descriptionbeer": "extra",
+    "idbeer": 5,
+    "idmedia": null,
+    "titlebeer": "Corona"
+  }
+]
+```
+
+### adding cors
+
+Install flask_cors:
+
+```bash
+pipenv install flask_cors
+```
+
+And change app.py again:
+
+```python
+# app.py
+from flask_cors import CORS
+from datetime import datetime
+from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from migrate.versioning.api import upgrade, version_control
+
+app = Flask(__name__)
+CORS(app)
+
+url = 'sqlite:///beerstore.db'
+# if app.config['FLASK_ENV'] == 'development':
+#     url ="postgres://postgres:postgres@127.0.0.1/beerstore"
+app.config['SQLALCHEMY_DATABASE_URI'] = url
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+# if app.config['FLASK_ENV'] == 'development':
+try:
+    version_control(url, 'migrations')
+except:
+    print("db already versioned!")
+
+upgrade(repository='migrations', url=url, debug='False')
+
+
+class Media(db.Model):
+    __tablename__ = "media"
+    idmedia = db.Column(db.Integer, nullable=False, primary_key=True)
+    creationdatemedia = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    datamedia = db.Column(db.LargeBinary, nullable=False)
+    nomemedia = db.Column(db.String(255), nullable=False)
+    mimemedia = db.Column(db.String(255), nullable=False)
+
+
+class Beer(db.Model):
+    __tablename__ = "beer"
+    idbeer = db.Column(db.Integer, primary_key=True)
+    creationdatebeer = db.Column(
+        db.DateTime, nullable=False, default=datetime.now)
+    titlebeer = db.Column(db.String(255), nullable=False)
+    descriptionbeer = db.Column(db.Text)
+    idmedia = db.Column(db.Integer, db.ForeignKey('media.idmedia'))
+
+    def to_dict(self):
+        return {
+            "idbeer": self.idbeer,
+            "creationdatebeer": self.creationdatebeer,
+            "titlebeer": self.titlebeer,
+            "descriptionbeer": self.descriptionbeer,
+            "idmedia": self.idmedia,
+        }
+
+
+@app.route("/status")
+def hello():
+    return "ONLINE!"
+
+
+@app.route("/beer/list", methods=["GET"])
+def beerlist():
+    page = request.args.get("page", default=1, type=int)
+    pageSize = request.args.get("pageSize", default=10, type=int)
+    search = request.args.get("search", default="")
+    items = Beer.query.filter(Beer.titlebeer.contains(
+        search)).paginate(page, pageSize).items
+    return jsonify([item.to_dict() for item in items])
+
+```
+
+## Conclusion
+
+At this point the project is pretty much stable and next steps should be fancy
+things like divide this big script into smaller modules so it could grow more
+healthy.
+
+Flask ecosystem can deliver a pretty decent solution with little effort, and
+comes as a first class player on backend game.
+
+As usual, the complete source code can be found
+[here](https://github.com/sombriks/rosetta-beer-store/tree/master/beer-store-service-python-flask-sqlalchemy).
+
+Happy hacking.
+
+2019-03-06
