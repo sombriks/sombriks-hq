@@ -713,6 +713,40 @@ def beerlist():
 
 ```
 
+## Making things easier
+
+This is a small yet worthy update. You can add a `[scripts]` section on your 
+**Pipfile** and not only make your life easier but also explain to project
+newcomers how to rock the boat:
+
+```ini
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pep8 = "*"
+autopep8 = "*"
+
+[packages]
+flask = "*"
+sqlalchemy = "*"
+flask_sqlalchemy= "*"
+sqlalchemy-migrate = "*"
+flask-cors = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+dev = "bash -c 'FLASK_ENV=development FLASK_APP=app pipenv run flask run'"
+migrations = "python3 ./migrations/manage.py"
+
+```
+
+Like package.json or Make, Pipfile becomes *executable documentation* :-)
+
 ## Conclusion
 
 At this point the project is pretty much stable and next steps should be fancy
