@@ -715,7 +715,7 @@ def beerlist():
 
 ## Making things easier
 
-This is a small yet worthy update. You can add a `[scripts]` section on your 
+This is a small yet worthy update. You can add a `[scripts]` section on your
 **Pipfile** and not only make your life easier but also explain to project
 newcomers how to rock the boat:
 
@@ -745,7 +745,7 @@ migrations = "python3 ./migrations/manage.py"
 
 ```
 
-Like package.json or Make, Pipfile becomes *executable documentation* :-)
+Like package.json or Make, Pipfile becomes _executable documentation_ :-)
 
 ## Conclusion
 
