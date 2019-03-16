@@ -35,6 +35,8 @@ export const app = express()
 // ...
 ```
 
+Look, no babel!
+
 ## The not that long story
 
 Back in time Node adopted [CommonsJS](https://en.wikipedia.org/wiki/CommonJS)
@@ -347,6 +349,10 @@ Neat.
 The esm package helps a lot to make the gap between front-end and back-end
 javascript. It may be a luxury, something we can live without, but even ide
 support gets better, since those es6 modules are the future.
+
+To achieve it without relying on [babel](https://babeljs.io) is pretty
+satisfying not because babel is a bad thing, but because soon those modules will
+be first class citizens on both sides of this game.
 
 The final project with the modifications seen there can be found
 [here on github](https://github.com/sombriks/sample-node-esm).
