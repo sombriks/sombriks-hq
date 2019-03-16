@@ -37,7 +37,7 @@
 		<a target="_blank" href="https://www.destroyallsoftware.com/compendium">Core basics of computer science in a very opinionated way</a>
 		<a target="_blank" href="https://www.timsommer.be/famous-laws-of-software-development/">Famous laws of software development</a>
 		<a target="_blank" href="http://raganwald.com/2019/02/14/i-love-programming-and-programmers.html">I like the way compilers work</a>
-		<a target="_blank" href></a>
+		<a target="_blank" href="https://yuml.me/diagram/scruffy/class/draw">yUML does cool uml</a>
 		<a target="_blank" href></a>
 
 		<v-layout column align-center justify-center>

@@ -741,9 +741,12 @@ python_version = "3.7"
 
 [scripts]
 dev = "bash -c 'FLASK_ENV=development FLASK_APP=app pipenv run flask run'"
-migrations = "python3 ./migrations/manage.py"
+db = "python3 ./migrations/manage.py"
 
 ```
+
+Now you can start the app with `pipenv run dev` and test the migration subsystem
+with `pipenv run db test`. Quite nice.
 
 Like package.json or Make, Pipfile becomes _executable documentation_ :-)
 
