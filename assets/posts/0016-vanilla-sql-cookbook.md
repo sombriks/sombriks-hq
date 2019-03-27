@@ -37,7 +37,7 @@ run smoothly.
 
 Automatize it. Spare project time to manage it. Add a backup screen.
 
-## 4 - The type, event and status are your friends
+## 4 - The type and status tables are your friends
 
 Let's say the customer needs a listing of complaints. So you imagine a table to
 store that:
@@ -82,7 +82,7 @@ from
 union select
   *
 from
-  suggestions
+  suggestions;
 ```
 
 If you identify tables that gets too similar, maybe they are the same thing.
@@ -107,3 +107,63 @@ create table messages(
 );
 ```
 
+And the query to build the feed becomes trivial:
+
+```sql
+select * from messages;
+```
+
+In similar fashion, status tables will manage to give you simpler ways to
+represent some change related to the real world interactions which entities
+perform.
+
+Instead of this:
+
+```sql
+create table issue(
+  id integer not null primary key auto_increment,
+  dsc text not null,
+  solved boolean not null default false
+);
+```
+
+Do this:
+
+```sql
+create table issue_status(
+  id integer not null primary key,
+  dsc varchar(255) unique not null
+);
+
+insert into issue_status (id,dsc) values (1,'open');
+insert into issue_status (id,dsc) values (1,'solved');
+
+create table issue(
+  id integer not null primary key auto_increment,
+  dsc text not null,
+  solved integer not null default 1
+);
+```
+
+By using this approach you can even create additional statues in the future.
+
+## 5 - The 'insert into' (...) 'select' data morphing
+
+It's natural to morph data from one table to another. Remember, the schema will
+change.
+
+One approach is to write a migration doing the inserts for the new data and
+another deleting data from the old tables.
+
+Another way to do that is one migrate doing the insert based on a select. For
+example:
+
+```sql
+-- this is the old table
+
+-- this is the old data
+
+-- this is the new table
+
+-- this is how you load new data based on the old data
+```
