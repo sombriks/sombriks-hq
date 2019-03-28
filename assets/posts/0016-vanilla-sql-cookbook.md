@@ -24,6 +24,13 @@ Know which MySQL or MariaDB version you're running, if that Oracle database has
 the exact set of features you just learned, know even if it's safe to use views
 and triggers and if this particular SGBD is ISO 2003 or not.
 
+Even nowadays, where you can issue an
+[one](https://hub.docker.com/_/mysql#start-a-mysql-server-instance)
+[line](https://hub.docker.com/_/postgres#start-a-postgres-instance)
+[docker](https://hub.docker.com/r/oracleinanutshell/oracle-xe-11g)
+[command](https://hub.docker.com/r/microsoft/mssql-server-linux) and get the
+database up and running
+
 ## 2 - Your schema WILL evolve
 
 Be sure about one thing: Everything can change. Your sole hope is to be faster
@@ -155,15 +162,58 @@ change.
 One approach is to write a migration doing the inserts for the new data and
 another deleting data from the old tables.
 
-Another way to do that is one migrate doing the insert based on a select. For
-example:
+Another way to do that is one migrate doing the insert based on a select query.
+For example:
 
 ```sql
 -- this is the old table
+create table complaints(
+  id integer not null primary key auto_increment,
+  msg text not null
+);
 
 -- this is the old data
+insert into complaints (id,msg) values (1,'too old');
+insert into complaints (id,msg) values (1,'too tall');
+insert into complaints (id,msg) values (1,'too ugly');
 
--- this is the new table
+-- these are the new tables
 
--- this is how you load new data based on the old data
+create table msg_type(
+  id integer not null primary key,
+  dsc varchar(255) unique not null
+);
+
+create table msg_status(
+  id integer not null primary key,
+  dsc varchar(255) unique not null
+);
+
+create table messages(
+  id integer not null primary key auto_increment,
+  msg_type_id integer not null default 1,
+  msg_status_id integer not null default 1,
+  msg text not null
+);
+
+-- this is the auxiliary data
+
+insert into msg_type (id,dsc) values (1, 'complaint');
+insert into msg_type (id,dsc) values (2, 'compliment');
+insert into msg_type (id,dsc) values (3, 'suggestion');
+
+insert into msg_status (id,dsc) values (1, 'open');
+insert into msg_status (id,dsc) values (2, 'resolved');
+
+-- and this is how do you load new data based on the old data
+
+insert into messages (id,msg) values select id,msg from from complaints
 ```
+
+## 6 - The natural (left) joins
+
+## 7 - For complex queries, make views
+
+## Conclusion
+
+2019-03-28
