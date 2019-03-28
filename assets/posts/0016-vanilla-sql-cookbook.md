@@ -167,15 +167,17 @@ For example:
 
 ```sql
 -- this is the old table
+
 create table complaints(
   id integer not null primary key auto_increment,
   msg text not null
 );
 
 -- this is the old data
+
 insert into complaints (id,msg) values (1,'too old');
-insert into complaints (id,msg) values (1,'too tall');
-insert into complaints (id,msg) values (1,'too ugly');
+insert into complaints (id,msg) values (2,'too tall');
+insert into complaints (id,msg) values (3,'too ugly');
 
 -- these are the new tables
 
@@ -207,8 +209,10 @@ insert into msg_status (id,dsc) values (2, 'resolved');
 
 -- and this is how do you load new data based on the old data
 
-insert into messages (id,msg) values select id,msg from from complaints
+insert into messages (id,msg) select id,msg from complaints
 ```
+
+Since column names are matching, there is no need to alias column names.
 
 ## 6 - The natural (left) joins
 
