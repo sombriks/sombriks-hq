@@ -216,8 +216,88 @@ Since column names are matching, there is no need to alias column names.
 
 ## 6 - The natural (left) joins
 
+This one is controversial but let's present it properly.
+
+In relational databases, columns can assume the foreign key role. When it
+happens, this column is, in fact information from another table. However it's
+common to reuse column names (for example, 'id' is a pretty common column name
+for primary keys) so when it's needed to performa a join, something like this
+appears:
+
+```sql
+select
+  *
+from
+  messages
+join
+  msg_type on messages.msg_type_id = msg_type.id
+join
+  msg_status on messages.msg_status_id = msg_status.id
+```
+
+Too many moving parts, error prone.
+
+But there is a way to model your database schema so that query might be
+rewritten into this:
+
+```sql
+select
+  *
+from
+  messages
+natural join
+  msg_type
+natural join
+  msg_status
+```
+
+Natural joins can omit the keybinding step (which is important to avoid
+unwanted cartesian operations) therefore removing lots of misleading
+conditionals.
+
+But in order to work properly with natural joins, one crucial rule must be
+respected: **every column name must be unique**. Something like this:
+
+```sql
+create table msg_type(
+  msg_type_id integer not null primary key,
+  msg_type_dsc varchar(255) unique not null
+);
+
+create table msg_status(
+  msg_status_id integer not null primary key,
+  msg_status_dsc varchar(255) unique not null
+);
+
+create table messages(
+  messages_id integer not null primary key auto_increment,
+  msg_type_id integer not null default 1,
+  msg_status_id integer not null default 1,
+  messages_msg text not null
+);
+```
+
+If any column from tables participating to the join query has the sama name,
+those columns are used as join conditions.
+
 ## 7 - For complex queries, make views
 
+Most relational SQL databases support view creations and also they optimize such
+queries internally.
+
+Unless when such queries must be highly dynamic, its a good deal to store them
+inside the relational engine.
+
+And by using a migration strategy, even the creation, modification and even
+destruction of such structures can be easily managed.
+
 ## Conclusion
+
+This is a basic guide with opinions that grew along the years of dealing with
+databases. This is advice built on top real use.
+
+I hope it helps.
+
+Happy coding!
 
 2019-03-28
