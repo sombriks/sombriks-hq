@@ -1,31 +1,37 @@
 <template>
 	<div>
-		<p>Welcome to my headquarters! Please use the
+		<p>
+			Welcome to my headquarters! Please use the
 			<v-btn flat icon @click="$emit('abremenu')">
 				<v-icon>menu</v-icon>
 			</v-btn>the topbar to see more content.
 		</p>
-		<p>In this landing page
+		<p>
+			In this landing page
 			<v-btn flat icon @click="$emit('abremenu')">
 				<v-icon>account_circle</v-icon>
 			</v-btn>you can see what i am doing or used to do.
 		</p>
-		<p>In Skills
+		<p>
+			In Skills
 			<v-btn flat icon @click="$router.push('/skills')">
 				<v-icon>build</v-icon>
 			</v-btn>section you can see how good i think i am.
 		</p>
-		<p>In Showcase
+		<p>
+			In Showcase
 			<v-btn flat icon @click="$router.push('/showcases')">
 				<v-icon>stars</v-icon>
 			</v-btn>section you can see nice solutions i created (under construction).
 		</p>
-		<p>In Link
+		<p>
+			In Link
 			<v-btn flat icon @click="$router.push('/links')">
 				<v-icon>link</v-icon>
 			</v-btn>section you can see very, very important links.
 		</p>
-		<p>In Blog
+		<p>
+			In Blog
 			<v-btn flat icon @click="$emit('abremenu')">
 				<v-icon>collections_bookmark</v-icon>
 			</v-btn>section lies some thoughts i decided to share with the world.
@@ -33,8 +39,52 @@
 		<h2>A bit of History</h2>
 		<small>same colors means same working group, just different business</small>
 		<v-timeline dense>
+			<v-timeline-item color="#ff4422">
+				<div>2019 - present</div>
+				<v-card>
+					<v-card-title class="headline">
+						Software developer at
+						<a target="tp" href="https://techpar.github.io/">Casa Magalhães</a>
+					</v-card-title>
+					<v-card-text>
+						<p>
+							At
+							<a href="https://www.casamagalhaes.com.br">Casa Magalhães Group</a>
+							we deliver mission critical financial operations for the entire
+							country with real time receipt validation against the SEFAZ
+							webservice.
+						</p>
+						<p>But there's more.</p>
+						<p>
+							<v-chip>nodejs</v-chip>
+							<v-chip>mysql</v-chip>
+							<v-chip>sequelize</v-chip>
+							<v-chip>sequelize migrations</v-chip>
+							<v-chip>gulp</v-chip>
+							<v-chip>AWS Lambda</v-chip>
+							<v-chip>Pusher</v-chip>
+							<v-chip>AWS DynamoDB</v-chip>
+							<v-chip>AWS SES</v-chip>
+							<v-chip>AWS Api Gateway</v-chip>
+							<v-chip>QT</v-chip>
+							<v-chip>quasar framework</v-chip>
+							<v-chip>element UI</v-chip>
+							<v-chip>kendo UI</v-chip>
+							<v-chip>webpack</v-chip>
+							<v-chip>vue</v-chip>
+							<v-chip>AWS CodeBuild</v-chip>
+							<v-chip>material design</v-chip>
+							<v-chip>AWS CodePipeline</v-chip>
+							<v-chip>SPA</v-chip>
+							<v-chip>REST</v-chip>
+							<v-chip>AWS SQS</v-chip>
+							<v-chip>codeclimate</v-chip>
+						</p>
+					</v-card-text>
+				</v-card>
+			</v-timeline-item>
 			<v-timeline-item color="cyan">
-				<div>2016 - present</div>
+				<div>2016 - 2019</div>
 				<v-card>
 					<v-card-title class="headline">
 						Chief Technology Officer at
@@ -42,7 +92,7 @@
 					</v-card-title>
 					<v-card-text>
 						<p>
-							This startup currently deals with software solutions on various fields.
+							This startup dealt with software solutions on various fields.
 							From community management to renewable energy.
 						</p>
 						<p>A company built by former usix/ebix coworkers.</p>
