@@ -1,0 +1,41 @@
+{
+  "resume": {
+    "nome": "Leonardo Silveira",
+    "apelido": "sombriks",
+    "country": "Brazilian",
+    "hometown": "Fortaleza",
+    "state": "Ceará",
+    "birthdate": "1984-10-27T20:15:00-03:00",
+    "bio": "I like to solve problems for fun and to pay my rent"
+  },
+  "contact": {
+    "email": "sombriks@gmail.com",
+    "telefone": "+55 (85) 9 9955-7997",
+    "twitter": "https://twitter.com/sombriks",
+    "facebook": "https://facebook.com/sombriks",
+    "instagram": "https://instagram.com/sombriks",
+    "github": "https://github.com/sombriks",
+    "linkedin": "https://www.linkedin.com/in/sombriks",
+    "stackoverflow": "https://stackoverflow.com/users/420096/sombriks?tab=profile"
+  },
+  "work": [
+    {
+      "company":""
+    }
+  ],
+  "education": [
+    {
+      "course": "Engenharia de Computação",
+      "institution": "IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
+      "type": "Engineering college / higher education",
+      "start": "2007"
+    },
+    {
+      "course": "Desenvolvimento de Software",
+      "institution": "IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
+      "type": "Technician/secondary school",
+      "start": "2004",
+      "end": "2006"
+    }
+  ]
+}
