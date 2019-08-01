@@ -20,7 +20,174 @@
   },
   "work": [
     {
-      "company":""
+      "company": "Grupo Casa Magalhães",
+      "site": "https://www.casamagalhaes.com.br",
+      "position": "Software developer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "",
+      "projects": [],
+      "techstack": []
+    },
+    {
+      "company": "Techpar",
+      "site": "https://techpar.github.io",
+      "position": "Chief Technology Officer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "",
+      "projects": [],
+      "techstack": []
+    },
+    {
+      "company": "G4l - Game For Learning",
+      "site": "https://www.facebook.com/gameforlearning",
+      "position": "Chief Technology Officer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "",
+      "projects": [],
+      "techstack": []
+    },
+    {
+      "company": "Atlanta Tecnologia",
+      "site": "http://www.atlantatecnologia.com.br",
+      "position": "Software Developer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "",
+      "projects": [],
+      "techstack": []
+    },
+    {
+      "company": "Ifactory Solutions",
+      "site": "https://www.linkedin.com/company/ifactory-solutions",
+      "position": "Software Developer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "",
+      "projects": [],
+      "techstack": []
+    },
+    {
+      "company": "HEXA",
+      "site": "http://www.hexat.com.br/hexa",
+      "position": "Software Developer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "This company has various P&D projects. It is a business backed by IFCE professors.",
+      "projects": [
+        {
+          "name": "historical documents digitalization",
+          "description": "Handled a wide variety of problems, from basic structures for code versioning to defining technologies to be used to code the solution"
+        }
+      ],
+      "techstack": ["php", "mysql", "Java EE", "android", "REST"]
+    },
+    {
+      "company": "LDS",
+      "site": "http://lds.ifce.edu.br",
+      "position": "Software Developer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "This company has various P&D projects. It is a business backed by IFCE professors.",
+      "projects": [
+        {
+          "name": "Furukawa electric latam",
+          "description": "Java web solution to handle industry operations."
+        }
+      ],
+      "techstack": [
+        "oracle database",
+        "Java EE",
+        "Spring",
+        "vraptor",
+        "angularjs",
+        "bootstrap",
+        "CD/CI - continuous delivery and integration"
+      ]
+    },
+    {
+      "company": "Novelbiz",
+      "site": "https://www.linkedin.com/company/novelbiz",
+      "position": "R&D Software Developer",
+      "start": "2011-09",
+      "end": "2012-04",
+      "description": "This company had various P&D works. It as a business backed by IFCE professors.",
+      "projects": [
+        {
+          "name": "mobile software to recommend products and services",
+          "description": "it was an android solution to offer things based on what the user likes."
+        },
+        {
+          "name": "small robotic car",
+          "description": "robot prototype using a beagleboard. since the robot was in another state, i had to double ssh to get access to the C/C++ openCV code."
+        }
+      ],
+      "techstack": [
+        "C/C++",
+        "embedded systems",
+        "android",
+        "REST",
+        "Java EE",
+        "mysql",
+        "recommendation systems - collaborative filtering"
+      ]
+    },
+    {
+      "company": "Sena Informática|USIX S/A|Ebix Inc",
+      "sites": [
+        "https://www.linkedin.com/company/usix-technology",
+        "https://www.ebix.com/"
+      ],
+      "positions": ["trainee", "junior programmer", "senior programmer"],
+      "start": "2007-08",
+      "end": "2011-09",
+      "description": "This was the biggest insurance solutions provider back in time",
+      "projects": [
+        {
+          "name": "Conta Corrente",
+          "details": "java web with struts and oracle database solution to offer credit to brokers so they could give discounts to their clients. It was an early form of SPA"
+        },
+        {
+          "name": "WIS Sulamérica",
+          "description": "dynamic application to build interfaces to calculate client score online. Apache struts, java + oracle database"
+        },
+        {
+          "name": "WIS Bradesco Seguros",
+          "description": "solution to calculate the client score, but on this project my main responsibility was the JNI interface with the client score library which was implemented in C and was not thread-safe. Also the production server was an itanium so i dealt with HP-UX and the aCC C/C++ compiler. And a lot of Makefiles"
+        },
+        {
+          "name": "WIS Marítima",
+          "description": "in this client score solution i was allowed to apply techniques from conta corrente project since this client did not needed dynamic interface configuration like previous products. heavy use of jQuery and early forms of SPA. we didn't called it that way back in time."
+        }
+      ],
+      "techstack": [
+        "JQuery",
+        "DWR - direct web remoting",
+        "Apache Struts 1",
+        "oracle database",
+        "websphere application server",
+        "Java EE",
+        "JNI - Java Native Interface",
+        "C/C++",
+        "proprietary insurance business metamodel engine"
+      ]
+    },
+    {
+      "company": "Cooperativa Pirambu Digital",
+      "site": "https://www.facebook.com/pirambudigital/?rf=351248931610166",
+      "position": "trainee",
+      "start": "2006",
+      "end": "2007",
+      "description": "The company was a social project to include young students into the digital market.",
+      "projects": [
+        {
+          "name": "CFN",
+          "description": "a java web solution to manage order services to maintain railways. Made with apache struts, java web and mysql"
+        }
+      ],
+      "techstack": ["JQuery", "Struts 1", "mysql", "Java"]
     }
   ],
   "education": [

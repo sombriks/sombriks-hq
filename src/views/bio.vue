@@ -44,7 +44,7 @@
 				<v-card>
 					<v-card-title class="headline">
 						Software developer at
-						<a target="tp" href="https://techpar.github.io/">Casa Magalhães</a>
+						<a target="cm" href="https://www.casamagalhaes.com.br/">Grupo Casa Magalhães</a>
 					</v-card-title>
 					<v-card-text>
 						<p>
