@@ -25,9 +25,33 @@
       "position": "Software developer",
       "start": "2019-03",
       "end": "2012-08",
-      "description": "",
+      "description": "This is a traditional and quite well-established group dealing with sales solutions. Here we help from dealing with the overly complicated brazilian tax systems to offering tools to manage your sales business. Also we do embrace cloud and serverless solutions from Amazon.",
       "projects": [],
-      "techstack": []
+      "techstack": [
+        "nodejs",
+        "mysql",
+        "sequelize",
+        "sequelize migrations",
+        "gulp",
+        "AWS Lambda",
+        "Pusher",
+        "AWS DynamoDB",
+        "AWS SES",
+        "AWS Api Gateway",
+        "QT",
+        "quasar framework",
+        "element UI",
+        "kendo UI",
+        "webpack",
+        "vue",
+        "AWS CodeBuild",
+        "material design",
+        "AWS CodePipeline",
+        "SPA",
+        "REST",
+        "AWS SQS",
+        "codeclimate"
+      ]
     },
     {
       "company": "Techpar",
@@ -35,9 +59,46 @@
       "position": "Chief Technology Officer",
       "start": "2016-08",
       "end": "2019-03",
-      "description": "",
-      "projects": [],
-      "techstack": []
+      "description": "This startup dealt with software solutions on various fields. From community management to renewable energy. Hybrid mobile and rich web technologies were applied on these solutions.",
+      "projects": [
+        {
+          "name": "Ambbi",
+          "description": "Community communications solution. web and mobile, written in angularjs and cordova in order to publish on android and ios from the same codebase."
+        },
+        {
+          "name": "Paróquia Virtual",
+          "description": "Pray app for catholics. Two priest orders (Sagrado Coração de Jejus and Mercedários) where involved. built with cordova and vuejs in order to publish for android and ios from the same codebase."
+        },
+        {
+          "name": "Buscaula",
+          "description": "Vue rich web application to search courses. A node backend with postgresql provided advanced text search."
+        },
+        {
+          "name": "BWDA 5",
+          "description": "Vue rich application to manage order services to maintain wind power towers. Also provides a way to analyse sensor data collected on those towers."
+        }
+      ],
+      "techstack": [
+        "nodejs",
+        "postgresql",
+        "knex",
+        "bookshelf",
+        "express",
+        "socket.io",
+        "onesignal",
+        "elasticemail",
+        "sendgrid",
+        "cordova",
+        "nativescript",
+        "webpack",
+        "browserify",
+        "vue",
+        "angularjs",
+        "material design",
+        "bootstrap",
+        "SPA",
+        "REST"
+      ]
     },
     {
       "company": "G4l - Game For Learning",
@@ -45,9 +106,25 @@
       "position": "Chief Technology Officer",
       "start": "2014-09",
       "end": "2016-08",
-      "description": "",
-      "projects": [],
-      "techstack": []
+      "description": "Here we create innovative educational games, (OED - Objeto de Ensino Digital), building knowledge using the entertainment to keep the student focus.",
+      "projects": [
+        { "name": "Matematicando", "description": "math puzzle game" },
+        {
+          "name": "Aventura Matemática",
+          "description": "adventure/puzzle math game"
+        },
+        { "name": "Educatáxi", "description": "action math game" },
+        { "name": "Super Candy", "description": "another action math game" }
+      ],
+      "techstack": [
+        "postgresql",
+        "Java EE",
+        "cordova",
+        "Phaser JS",
+        "angularjs",
+        "bootstrap",
+        "REST"
+      ]
     },
     {
       "company": "Atlanta Tecnologia",
@@ -55,9 +132,31 @@
       "position": "Software Developer",
       "start": "2013-02",
       "end": "2014-08",
-      "description": "",
-      "projects": [],
-      "techstack": []
+      "description": "We delivered transit law enforcement solutions.",
+      "projects": [
+        {
+          "name": "faixa exclusiva",
+          "description": "java web, serial communications and ip camera solution to detect if cars where on exclusive bus lane"
+        },
+        {
+          "name": "photo labeler",
+          "description": "internal tool java swing based. it was used to correctly apply the infraction label on photos"
+        },
+        {
+          "name": "AT-SMS/AT-SMS2",
+          "description": "This was the main solution on transit law enforcement. On this project we started the migration from a delphi based solution to a java web based solution. that could allow the hardware and operating system be replaced by cheaper options in the future."
+        }
+      ],
+      "techstack": [
+        "postgresql",
+        "mysql",
+        "Java EE",
+        "Spring",
+        "nrjavaserial",
+        "angularjs",
+        "bootstrap",
+        "image processing"
+      ]
     },
     {
       "company": "Ifactory Solutions",
@@ -65,9 +164,14 @@
       "position": "Software Developer",
       "start": "2012-11",
       "end": "2013-01",
-      "description": "",
-      "projects": [],
-      "techstack": []
+      "description": "Ifactory solutions outsourced me and my team to work on-site, at Edson Queiroz Holding.",
+      "projects": [
+        {
+          "name": "Diário do Nordeste",
+          "description": "We produced templates running on top of Polopoly multi-target web cms"
+        }
+      ],
+      "techstack": ["Java", "Polopoly"]
     },
     {
       "company": "HEXA",
