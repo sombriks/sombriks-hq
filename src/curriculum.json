@@ -29,7 +29,7 @@
       "projects": [
         {
           "name": "varejomini/varejopdv",
-          "description": ""
+          "description": "This product solves the problem to the small sales business. It aims to simpler sales workflow, once there are other in-house products to other sales modes (restaurant, market, etc)."
         }
       ],
       "techstack": [
@@ -264,7 +264,7 @@
       "projects": [
         {
           "name": "Conta Corrente",
-          "details": "java web with struts and oracle database solution to offer credit to brokers so they could give discounts to their clients. It was an early form of SPA"
+          "description": "java web with struts and oracle database solution to offer credit to brokers so they could give discounts to their clients. It was an early form of SPA"
         },
         {
           "name": "WIS Sulamérica",
