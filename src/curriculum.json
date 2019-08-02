@@ -24,9 +24,14 @@
       "site": "https://www.casamagalhaes.com.br",
       "position": "Software developer",
       "start": "2019-03",
-      "end": "2012-08",
+      "end": "present day",
       "description": "This is a traditional and quite well-established group dealing with sales solutions. Here we help from dealing with the overly complicated brazilian tax systems to offering tools to manage your sales business. Also we do embrace cloud and serverless solutions from Amazon.",
-      "projects": [],
+      "projects": [
+        {
+          "name": "varejomini/varejopdv",
+          "description": ""
+        }
+      ],
       "techstack": [
         "nodejs",
         "mysql",
@@ -51,7 +56,8 @@
         "REST",
         "AWS SQS",
         "codeclimate"
-      ]
+      ],
+      "color": "#ff4422"
     },
     {
       "company": "Techpar",
@@ -98,7 +104,8 @@
         "bootstrap",
         "SPA",
         "REST"
-      ]
+      ],
+      "color": "cyan"
     },
     {
       "company": "G4l - Game For Learning",
@@ -124,7 +131,8 @@
         "angularjs",
         "bootstrap",
         "REST"
-      ]
+      ],
+      "color": "cyan"
     },
     {
       "company": "Atlanta Tecnologia",
@@ -156,7 +164,8 @@
         "angularjs",
         "bootstrap",
         "image processing"
-      ]
+      ],
+      "color": "indigo"
     },
     {
       "company": "Ifactory Solutions",
@@ -171,7 +180,8 @@
           "description": "We produced templates running on top of Polopoly multi-target web cms"
         }
       ],
-      "techstack": ["Java", "Polopoly"]
+      "techstack": ["Java", "Polopoly"],
+      "color": "green"
     },
     {
       "company": "HEXA",
@@ -186,7 +196,8 @@
           "description": "Handled a wide variety of problems, from basic structures for code versioning to defining technologies to be used to code the solution"
         }
       ],
-      "techstack": ["php", "mysql", "Java EE", "android", "REST"]
+      "techstack": ["php", "mysql", "Java EE", "android", "REST"],
+      "color": "lime"
     },
     {
       "company": "LDS",
@@ -209,7 +220,8 @@
         "angularjs",
         "bootstrap",
         "CD/CI - continuous delivery and integration"
-      ]
+      ],
+      "color": "lime"
     },
     {
       "company": "Novelbiz",
@@ -236,7 +248,8 @@
         "Java EE",
         "mysql",
         "recommendation systems - collaborative filtering"
-      ]
+      ],
+      "color": "lime"
     },
     {
       "company": "Sena Informática|USIX S/A|Ebix Inc",
@@ -276,7 +289,8 @@
         "JNI - Java Native Interface",
         "C/C++",
         "proprietary insurance business metamodel engine"
-      ]
+      ],
+      "color": "#008000"
     },
     {
       "company": "Cooperativa Pirambu Digital",
@@ -291,22 +305,30 @@
           "description": "a java web solution to manage order services to maintain railways. Made with apache struts, java web and mysql"
         }
       ],
-      "techstack": ["JQuery", "Struts 1", "mysql", "Java"]
+      "techstack": ["JQuery", "Struts 1", "mysql", "Java"],
+      "color": "orange"
     }
   ],
   "education": [
     {
       "course": "Engenharia de Computação",
+      "site": "https://ifce.edu.br",
       "institution": "IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
       "type": "Engineering college / higher education",
-      "start": "2007"
+      "description": "After a while i started the Engineering course, however i already had a full time job.",
+      "start": "2007",
+      "end": "present day",
+      "color": "lime"
     },
     {
       "course": "Desenvolvimento de Software",
+      "site": "https://ifce.edu.br",
       "institution": "IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
       "type": "Technician/secondary school",
+      "description": "I started my professional studies there. Technician level.",
       "start": "2004",
-      "end": "2006"
+      "end": "2006",
+      "color": "lime"
     }
   ]
 }

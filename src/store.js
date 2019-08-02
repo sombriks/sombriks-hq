@@ -18,7 +18,8 @@ const state = {
     "assets/profile-pics/picture_10.jpg",
     "assets/profile-pics/picture_18.jpg",
     "assets/profile-pics/picture_19.jpg",
-    "assets/profile-pics/picture_21.jpg"
+    "assets/profile-pics/picture_21.jpg",
+    "assets/profile-pics/picture_22.jpg"
   ]
 };
 

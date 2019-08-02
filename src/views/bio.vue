@@ -1,55 +1,25 @@
 <template>
 	<div>
-		<p>
-			Welcome to my headquarters! Please use the
-			<v-btn flat icon @click="$emit('abremenu')">
-				<v-icon>menu</v-icon>
-			</v-btn>the topbar to see more content.
-		</p>
-		<p>
-			In this landing page
-			<v-btn flat icon @click="$emit('abremenu')">
-				<v-icon>account_circle</v-icon>
-			</v-btn>you can see what i am doing or used to do.
-		</p>
-		<p>
-			In Skills
-			<v-btn flat icon @click="$router.push('/skills')">
-				<v-icon>build</v-icon>
-			</v-btn>section you can see how good i think i am.
-		</p>
-		<p>
-			In Showcase
-			<v-btn flat icon @click="$router.push('/showcases')">
-				<v-icon>stars</v-icon>
-			</v-btn>section you can see nice solutions i created (under construction).
-		</p>
-		<p>
-			In Link
-			<v-btn flat icon @click="$router.push('/links')">
-				<v-icon>link</v-icon>
-			</v-btn>section you can see very, very important links.
-		</p>
-		<p>
-			In Blog
-			<v-btn flat icon @click="$emit('abremenu')">
-				<v-icon>collections_bookmark</v-icon>
-			</v-btn>section lies some thoughts i decided to share with the world.
-		</p>
-		<h2>A bit of History</h2>
-		<small>same colors means same working group, just different business</small>
+		<basic-instructions />
 		<v-timeline dense>
+			<v-timeline-item v-for="w in cv.work" :key="w.company" :color="w.color">
+				<div>{{w.start}} - {{w.end}}</div>
+			</v-timeline-item>
 			<v-timeline-item color="#ff4422">
 				<div>2019 - present</div>
 				<v-card>
 					<v-card-title class="headline">
 						Software developer at
-						<a target="cm" href="https://www.casamagalhaes.com.br/">Grupo Casa Magalhães</a>
+						<a target="cm" href="https://www.casamagalhaes.com.br/"
+							>Grupo Casa Magalhães</a
+						>
 					</v-card-title>
 					<v-card-text>
 						<p>
 							At
-							<a href="https://www.casamagalhaes.com.br">Casa Magalhães Group</a>
+							<a href="https://www.casamagalhaes.com.br"
+								>Casa Magalhães Group</a
+							>
 							we deliver mission critical financial operations for the entire
 							country with real time receipt validation against the SEFAZ
 							webservice.
@@ -92,8 +62,8 @@
 					</v-card-title>
 					<v-card-text>
 						<p>
-							This startup dealt with software solutions on various fields.
-							From community management to renewable energy.
+							This startup dealt with software solutions on various fields. From
+							community management to renewable energy.
 						</p>
 						<p>A company built by former usix/ebix coworkers.</p>
 						<h5>Tech stack</h5>
@@ -127,10 +97,9 @@
 				<v-card>
 					<v-card-title class="headline">
 						Chief Technology Officer at
-						<a
-							target="g4"
-							href="https://www.facebook.com/gameforlearning/"
-						>G4l - Game For Learning</a>
+						<a target="g4" href="https://www.facebook.com/gameforlearning/"
+							>G4l - Game For Learning</a
+						>
 					</v-card-title>
 					<v-card-text>
 						<p>This startup was focused on Educational mobile games.</p>
@@ -157,7 +126,8 @@
 						<a
 							target="at"
 							href="http://www.atlantatecnologia.com.br/pt/index.php"
-						>Atlanta Tecnologia</a>
+							>Atlanta Tecnologia</a
+						>
 					</v-card-title>
 					<v-card-text>
 						<p>This company was focused on Transit law enforcement.</p>
@@ -184,10 +154,14 @@
 						<a
 							target="if"
 							href="https://www.linkedin.com/company/ifactory-solutions/"
-						>Ifactory Solutions</a>
+							>Ifactory Solutions</a
+						>
 					</v-card-title>
 					<v-card-text>
-						<p>This company was a big outsource provider for software development.</p>
+						<p>
+							This company was a big outsource provider for software
+							development.
+						</p>
 						<h5>Tech stack</h5>
 						<p>
 							<v-chip>Java</v-chip>
@@ -202,7 +176,9 @@
 				<v-card>
 					<v-card-title class="headline">
 						Software Developer at
-						<a target="he" href="http://www.hexat.com.br/hexa/">Hexa Tecnologia</a>
+						<a target="he" href="http://www.hexat.com.br/hexa/"
+							>Hexa Tecnologia</a
+						>
 					</v-card-title>
 					<v-card-text>
 						<p>This company have various P&D works.</p>
@@ -248,13 +224,15 @@
 				<v-card>
 					<v-card-title class="headline">
 						R&D Software Developer at
-						<a
-							target="no"
-							href="https://www.linkedin.com/company/novelbiz/"
-						>Novelbiz</a>
+						<a target="no" href="https://www.linkedin.com/company/novelbiz/"
+							>Novelbiz</a
+						>
 					</v-card-title>
 					<v-card-text>
-						<p>This startup had researches in robotics and recommendation systems.</p>
+						<p>
+							This startup had researches in robotics and recommendation
+							systems.
+						</p>
 						<p>A business backed by IFCE professors.</p>
 						<h5>Tech stack</h5>
 						<p>
@@ -305,7 +283,8 @@
 						<a
 							target="us"
 							href="https://www.linkedin.com/company/usix-technology/"
-						>USIX S/A</a>
+							>USIX S/A</a
+						>
 					</v-card-title>
 					<v-card-text>
 						<p>Core business was insurance market and tackle ie6 bugs</p>
@@ -333,12 +312,13 @@
 						<a
 							target="co"
 							href="https://www.facebook.com/pirambudigital/?rf=351248931610166"
-						>Cooperativa Pirambu Digital</a>
+							>Cooperativa Pirambu Digital</a
+						>
 					</v-card-title>
 					<v-card-text>
 						<p>
-							A social project to include young students into the digital market outsourcing
-							and building in-house projects.
+							A social project to include young students into the digital market
+							outsourcing and building in-house projects.
 						</p>
 						<h5>Tech stack</h5>
 						<p>
@@ -351,22 +331,15 @@
 				</v-card>
 			</v-timeline-item>
 
-			<v-timeline-item color="lime">
-				<div>2004 - present</div>
+			<v-timeline-item v-for="e in cv.education" :key="e.course" :color="e.color">
+				<div>{{e.start}} - {{e.end}}</div>
 				<v-card>
 					<v-card-title class="headline">
-						Student at
-						<a
-							target="if"
-							href="https://ifce.edu.br"
-						>IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará</a>
+						{{e.type}} at
+						<a target="if" :href="e.site">{{e.institution}}</a>
 					</v-card-title>
 					<v-card-text>
-						<p>
-							I started my professional studies there. Technician level.
-							After a while i started the Engineering course, however i already had
-							a full time job.
-						</p>
+						<p>{{e.description}}</p>
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
@@ -377,17 +350,18 @@
 					<v-card-title class="headline">Born.</v-card-title>
 					<v-card-text>
 						<p>
-							Lots of things happened between this first professional experience and the others listed here,
-							however 10+ years sounds good enough to me, hope it sounds good enough to you.
+							Lots of things happened between this first professional experience
+							and the others listed here, however 10+ years sounds good enough
+							to me, hope it sounds good enough to you.
 						</p>
 						<p>
-							Nowadays i really like to solve problems, either to pay my bills or just for fun.
-							Also sports, i like to pratice sports. Running. Biking. Swimming sometimes.
-							Gamer when it's possible.
+							Nowadays i really like to solve problems, either to pay my bills
+							or just for fun. Also sports, i like to pratice sports. Running.
+							Biking. Swimming sometimes. Gamer when it's possible.
 						</p>
 						<p>
-							Please let me know if i can help you with something,
-							the sidebar menu has plenty of contact options.
+							Please let me know if i can help you with something, the sidebar
+							menu has plenty of contact options.
 						</p>
 					</v-card-text>
 				</v-card>
@@ -396,10 +370,18 @@
 	</div>
 </template>
 <script>
+const cv = require("../curriculum.json");
+const BasicInstructions = require("../components/basic-instructions.vue")
 module.exports = {
 	name: "Bio",
+	components:{
+		BasicInstructions
+	},
 	mounted() {
 		this.$store.commit("setTitle", "About Myself");
-	}
+	},
+	data: _ => ({
+		cv
+	})
 };
 </script>
