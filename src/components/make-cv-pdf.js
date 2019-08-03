@@ -1,5 +1,6 @@
-const pdfMake = require("pdfmake/build/pdfmake.js");
+const pdfMake = require('pdfmake');
 const pdfFonts = require("pdfmake/build/vfs_fonts.js");
+console.log(pdfFonts.pdfMake.vfs);
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 const cv = require("../../assets/curriculum.json");
 const { profilepics } = require("../store");
