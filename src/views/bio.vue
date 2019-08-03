@@ -6,7 +6,8 @@
 				<div>{{ w.start }} - {{ w.end }}</div>
 				<v-card>
 					<v-card-title class="headline">
-						{{ w.position || w.positions.join(",") }} <i>&nbsp;at&nbsp;</i>
+						{{ w.position || w.positions.join(",") }}
+						<i>&nbsp;at&nbsp;</i>
 						<a v-if="w.site" target="x" :href="w.site">{{ w.company }}</a>
 						<template v-if="w.sites">
 							<b>{{ w.company }}</b>
@@ -18,7 +19,8 @@
 						<h5>Projects/Client</h5>
 						<ul>
 							<li v-for="p in w.projects" :key="p.name">
-								<b>{{ p.name }}</b> - <i>{{ p.description }}</i>
+								<b>{{ p.name }}</b> -
+								<i>{{ p.description }}</i>
 							</li>
 						</ul>
 						<h5>Tech stack</h5>
@@ -28,11 +30,7 @@
 					</v-card-text>
 				</v-card>
 			</v-timeline-item>
-			<v-timeline-item
-				v-for="e in cv.education"
-				:key="e.course"
-				:color="e.color"
-			>
+			<v-timeline-item v-for="e in cv.education" :key="e.course" :color="e.color">
 				<div>{{ e.start }} - {{ e.end }}</div>
 				<v-card>
 					<v-card-title class="headline">
@@ -71,7 +69,7 @@
 	</div>
 </template>
 <script>
-const cv = require("../curriculum.json");
+const cv = require("../../assets/curriculum.json");
 const BasicInstructions = require("../components/basic-instructions.vue");
 module.exports = {
 	name: "Bio",
