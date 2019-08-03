@@ -5,12 +5,12 @@
     "country": "Brazilian",
     "hometown": "Fortaleza",
     "state": "Ceará",
-    "birthdate": "1984-10-27T20:15:00-03:00",
+    "birthdate": "1984-10-27",
     "bio": "I like to solve problems for fun and to pay my rent"
   },
   "contact": {
     "email": "sombriks@gmail.com",
-    "telefone": "+55 (85) 9 9955-7997",
+    "phone": "+55 (85) 9 9955-7997",
     "twitter": "https://twitter.com/sombriks",
     "facebook": "https://facebook.com/sombriks",
     "instagram": "https://instagram.com/sombriks",
