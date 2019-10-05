@@ -15,7 +15,7 @@ build: clean prepare
 	# rm -rf tmp.js
 
 release: build
-	firebase deploy
+	firebase deploy --token 1/INuWqKe7LBhkECXBUSe5x0XIxlPayZVttCXDwAvRuTk
 
 dev: 
 	budo src/main.js:build.js --live --wg="**/*.{html,css,js,vue,md,json}" --open -H 127.0.0.1

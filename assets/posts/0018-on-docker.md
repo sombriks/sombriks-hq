@@ -31,7 +31,11 @@ Docker is nice because put people to work became easier.
 
 On this land you have two major concepts: **containers** and **images**.
 
+Images are machine definitions. You likely will describe them with a **Dockerfile**
+and a context folder. keep in mind that the folder where you're storing the file
+is important.
 
+Containers are the "running machine".
 
 
 
