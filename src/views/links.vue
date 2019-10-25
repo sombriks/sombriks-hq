@@ -39,7 +39,7 @@
 		<a target="_blank" href="http://raganwald.com/2019/02/14/i-love-programming-and-programmers.html">I like the way compilers work</a>
 		<a target="_blank" href="https://yuml.me/diagram/scruffy/class/draw">yUML does cool uml</a>
 		<a target="_blank" href="https://colorhunt.co">Nice and shiny colors</a>
-		<a target="_blank" href></a>
+		<a target="_blank" href="https://www.zeitverschiebung.net">Very very important clock thing</a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
