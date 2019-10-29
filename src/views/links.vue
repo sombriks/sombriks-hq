@@ -40,7 +40,7 @@
 		<a target="_blank" href="https://yuml.me/diagram/scruffy/class/draw">yUML does cool uml</a>
 		<a target="_blank" href="https://colorhunt.co">Nice and shiny colors</a>
 		<a target="_blank" href="https://www.zeitverschiebung.net">Very very important clock thing</a>
-		<a target="_blank" href></a>
+		<a target="_blank" href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">Learn how to use tmux</a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
 		<a target="_blank" href></a>
