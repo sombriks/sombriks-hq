@@ -1,0 +1,334 @@
+{
+  "resume": {
+    "nome": "Leonardo Silveira",
+    "apelido": "sombriks",
+    "country": "Brazilian",
+    "hometown": "Fortaleza",
+    "state": "Ceará",
+    "birthdate": "1984-10-27T20:15:00-03:00",
+    "bio": "I like to solve problems for fun and to pay my rent"
+  },
+  "contact": {
+    "email": "sombriks@gmail.com",
+    "telefone": "+55 (85) 9 9955-7997",
+    "twitter": "https://twitter.com/sombriks",
+    "facebook": "https://facebook.com/sombriks",
+    "instagram": "https://instagram.com/sombriks",
+    "github": "https://github.com/sombriks",
+    "linkedin": "https://www.linkedin.com/in/sombriks",
+    "stackoverflow": "https://stackoverflow.com/users/420096/sombriks?tab=profile"
+  },
+  "work": [
+    {
+      "company": "Grupo Casa Magalhães",
+      "site": "https://www.casamagalhaes.com.br",
+      "position": "Software developer",
+      "start": "2019-03",
+      "end": "present day",
+      "description": "This is a traditional and quite well-established group dealing with sales solutions. Here we help from dealing with the overly complicated brazilian tax systems to offering tools to manage your sales business. Also we do embrace cloud and serverless solutions from Amazon.",
+      "projects": [
+        {
+          "name": "varejomini/varejopdv",
+          "description": "This product solves the problem to the small sales business. It aims to simpler sales workflow, once there are other in-house products to other sales modes (restaurant, market, etc)."
+        }
+      ],
+      "techstack": [
+        "nodejs",
+        "mysql",
+        "sequelize",
+        "sequelize migrations",
+        "gulp",
+        "AWS Lambda",
+        "Pusher",
+        "AWS DynamoDB",
+        "AWS SES",
+        "AWS Api Gateway",
+        "QT",
+        "quasar framework",
+        "element UI",
+        "kendo UI",
+        "webpack",
+        "vue",
+        "AWS CodeBuild",
+        "material design",
+        "AWS CodePipeline",
+        "SPA",
+        "REST",
+        "AWS SQS",
+        "codeclimate"
+      ],
+      "color": "#ff4422"
+    },
+    {
+      "company": "Techpar",
+      "site": "https://techpar.github.io",
+      "position": "Chief Technology Officer",
+      "start": "2016-08",
+      "end": "2019-03",
+      "description": "This startup dealt with software solutions on various fields. From community management to renewable energy. Hybrid mobile and rich web technologies were applied on these solutions.",
+      "projects": [
+        {
+          "name": "Ambbi",
+          "description": "Community communications solution. web and mobile, written in angularjs and cordova in order to publish on android and ios from the same codebase."
+        },
+        {
+          "name": "Paróquia Virtual",
+          "description": "Pray app for catholics. Two priest orders (Sagrado Coração de Jejus and Mercedários) where involved. built with cordova and vuejs in order to publish for android and ios from the same codebase."
+        },
+        {
+          "name": "Buscaula",
+          "description": "Vue rich web application to search courses. A node backend with postgresql provided advanced text search."
+        },
+        {
+          "name": "BWDA 5",
+          "description": "Vue rich application to manage order services to maintain wind power towers. Also provides a way to analyse sensor data collected on those towers."
+        }
+      ],
+      "techstack": [
+        "nodejs",
+        "postgresql",
+        "knex",
+        "bookshelf",
+        "express",
+        "socket.io",
+        "onesignal",
+        "elasticemail",
+        "sendgrid",
+        "cordova",
+        "nativescript",
+        "webpack",
+        "browserify",
+        "vue",
+        "angularjs",
+        "material design",
+        "bootstrap",
+        "SPA",
+        "REST"
+      ],
+      "color": "cyan"
+    },
+    {
+      "company": "G4l - Game For Learning",
+      "site": "https://www.facebook.com/gameforlearning",
+      "position": "Chief Technology Officer",
+      "start": "2014-09",
+      "end": "2016-08",
+      "description": "Here we create innovative educational games, (OED - Objeto de Ensino Digital), building knowledge using the entertainment to keep the student focus.",
+      "projects": [
+        { "name": "Matematicando", "description": "math puzzle game" },
+        {
+          "name": "Aventura Matemática",
+          "description": "adventure/puzzle math game"
+        },
+        { "name": "Educatáxi", "description": "action math game" },
+        { "name": "Super Candy", "description": "another action math game" }
+      ],
+      "techstack": [
+        "postgresql",
+        "Java EE",
+        "cordova",
+        "Phaser JS",
+        "angularjs",
+        "bootstrap",
+        "REST"
+      ],
+      "color": "cyan"
+    },
+    {
+      "company": "Atlanta Tecnologia",
+      "site": "http://www.atlantatecnologia.com.br",
+      "position": "Software Developer",
+      "start": "2013-02",
+      "end": "2014-08",
+      "description": "We delivered transit law enforcement solutions.",
+      "projects": [
+        {
+          "name": "faixa exclusiva",
+          "description": "java web, serial communications and ip camera solution to detect if cars where on exclusive bus lane"
+        },
+        {
+          "name": "photo labeler",
+          "description": "internal tool java swing based. it was used to correctly apply the infraction label on photos"
+        },
+        {
+          "name": "AT-SMS/AT-SMS2",
+          "description": "This was the main solution on transit law enforcement. On this project we started the migration from a delphi based solution to a java web based solution. that could allow the hardware and operating system be replaced by cheaper options in the future."
+        }
+      ],
+      "techstack": [
+        "postgresql",
+        "mysql",
+        "Java EE",
+        "Spring",
+        "nrjavaserial",
+        "angularjs",
+        "bootstrap",
+        "image processing"
+      ],
+      "color": "indigo"
+    },
+    {
+      "company": "Ifactory Solutions",
+      "site": "https://www.linkedin.com/company/ifactory-solutions",
+      "position": "Software Developer",
+      "start": "2012-11",
+      "end": "2013-01",
+      "description": "Ifactory solutions outsourced me and my team to work on-site, at Edson Queiroz Holding.",
+      "projects": [
+        {
+          "name": "Diário do Nordeste",
+          "description": "We produced templates running on top of Polopoly multi-target web cms"
+        }
+      ],
+      "techstack": ["Java", "Polopoly"],
+      "color": "green"
+    },
+    {
+      "company": "HEXA",
+      "site": "http://www.hexat.com.br/hexa",
+      "position": "Software Developer",
+      "start": "2012-09",
+      "end": "2012-10",
+      "description": "This company has various P&D projects. It is a business backed by IFCE professors.",
+      "projects": [
+        {
+          "name": "historical documents digitalization",
+          "description": "Handled a wide variety of problems, from basic structures for code versioning to defining technologies to be used to code the solution"
+        }
+      ],
+      "techstack": ["php", "mysql", "Java EE", "android", "REST"],
+      "color": "lime"
+    },
+    {
+      "company": "LDS",
+      "site": "http://lds.ifce.edu.br",
+      "position": "Software Developer",
+      "start": "2012-04",
+      "end": "2012-08",
+      "description": "This company has various P&D projects. It is a business backed by IFCE professors.",
+      "projects": [
+        {
+          "name": "Furukawa electric latam",
+          "description": "Java web solution to handle industry operations."
+        }
+      ],
+      "techstack": [
+        "oracle database",
+        "Java EE",
+        "Spring",
+        "vraptor",
+        "angularjs",
+        "bootstrap",
+        "CD/CI - continuous delivery and integration"
+      ],
+      "color": "lime"
+    },
+    {
+      "company": "Novelbiz",
+      "site": "https://www.linkedin.com/company/novelbiz",
+      "position": "R&D Software Developer",
+      "start": "2011-09",
+      "end": "2012-04",
+      "description": "This company had various P&D works. It as a business backed by IFCE professors.",
+      "projects": [
+        {
+          "name": "mobile software to recommend products and services",
+          "description": "it was an android solution to offer things based on what the user likes."
+        },
+        {
+          "name": "small robotic car",
+          "description": "robot prototype using a beagleboard. since the robot was in another state, i had to double ssh to get access to the C/C++ openCV code."
+        }
+      ],
+      "techstack": [
+        "C/C++",
+        "embedded systems",
+        "android",
+        "REST",
+        "Java EE",
+        "mysql",
+        "recommendation systems - collaborative filtering"
+      ],
+      "color": "lime"
+    },
+    {
+      "company": "Sena Informática|USIX S/A|Ebix Inc",
+      "sites": [
+        "https://www.linkedin.com/company/usix-technology",
+        "https://www.ebix.com/"
+      ],
+      "positions": ["trainee", "junior programmer", "senior programmer"],
+      "start": "2007-08",
+      "end": "2011-09",
+      "description": "This was the biggest insurance solutions provider back in time",
+      "projects": [
+        {
+          "name": "Conta Corrente",
+          "description": "java web with struts and oracle database solution to offer credit to brokers so they could give discounts to their clients. It was an early form of SPA"
+        },
+        {
+          "name": "WIS Sulamérica",
+          "description": "dynamic application to build interfaces to calculate client score online. Apache struts, java + oracle database"
+        },
+        {
+          "name": "WIS Bradesco Seguros",
+          "description": "solution to calculate the client score, but on this project my main responsibility was the JNI interface with the client score library which was implemented in C and was not thread-safe. Also the production server was an itanium so i dealt with HP-UX and the aCC C/C++ compiler. And a lot of Makefiles"
+        },
+        {
+          "name": "WIS Marítima",
+          "description": "in this client score solution i was allowed to apply techniques from conta corrente project since this client did not needed dynamic interface configuration like previous products. heavy use of jQuery and early forms of SPA. we didn't called it that way back in time."
+        }
+      ],
+      "techstack": [
+        "JQuery",
+        "DWR - direct web remoting",
+        "Apache Struts 1",
+        "oracle database",
+        "websphere application server",
+        "Java EE",
+        "JNI - Java Native Interface",
+        "C/C++",
+        "proprietary insurance business metamodel engine"
+      ],
+      "color": "#008000"
+    },
+    {
+      "company": "Cooperativa Pirambu Digital",
+      "site": "https://www.facebook.com/pirambudigital/?rf=351248931610166",
+      "position": "trainee",
+      "start": "2006",
+      "end": "2007",
+      "description": "The company was a social project to include young students into the digital market.",
+      "projects": [
+        {
+          "name": "CFN",
+          "description": "a java web solution to manage order services to maintain railways. Made with apache struts, java web and mysql"
+        }
+      ],
+      "techstack": ["JQuery", "Struts 1", "mysql", "Java"],
+      "color": "orange"
+    }
+  ],
+  "education": [
+    {
+      "course": "Engenharia de Computação",
+      "site": "https://ifce.edu.br",
+      "institution": "IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
+      "type": "Engineering college / higher education",
+      "description": "After a while i started the Engineering course, however i already had a full time job.",
+      "start": "2007",
+      "end": "present day",
+      "color": "lime"
+    },
+    {
+      "course": "Desenvolvimento de Software",
+      "site": "https://ifce.edu.br",
+      "institution": "IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
+      "type": "Technician/secondary school",
+      "description": "I started my professional studies there. Technician level.",
+      "start": "2004",
+      "end": "2006",
+      "color": "lime"
+    }
+  ]
+}
