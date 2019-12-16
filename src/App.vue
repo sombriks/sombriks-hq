@@ -2,10 +2,10 @@
   <div id="container">
     <div id="nav">
       <router-link to="/bio">Bio</router-link>
-      <router-link to="/blog">Bio</router-link>
-      <router-link to="/contact">Bio</router-link>
-      <router-link to="/experiments">Bio</router-link>
-      <router-link to="/links">Bio</router-link>
+      <router-link to="/blog">Blog</router-link>
+      <router-link to="/contact">Contact</router-link>
+      <router-link to="/experiments">Experiments</router-link>
+      <router-link to="/links">Links</router-link>
     </div>
     <div id="content">
       <router-view />
@@ -51,7 +51,7 @@ export default {
   }
   #nav > a {
     align-self: flex-start;
-    padding: 3em;
+    padding: 1em;
   }
   #content {
     flex-grow: 8;
