@@ -94,7 +94,7 @@
         href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/"
         >Learn how to use tmux</a
       >
-      <a target="_blank" href></a>
+      <a target="_blank" href="https://withkoji.com/pt-br/docs/misc/developing-for-kaios">Let's develop KaiOS apps!</a>
       <a target="_blank" href></a>
       <a target="_blank" href></a>
       <a target="_blank" href></a>
