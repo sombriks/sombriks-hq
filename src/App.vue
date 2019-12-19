@@ -29,7 +29,6 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 600px;
 }
 #nav,
 #content,
@@ -38,6 +37,7 @@ export default {
 }
 #content {
   flex-direction: column;
+  min-height: 600px;
 }
 #footer {
   width: 100%;
@@ -63,6 +63,7 @@ export default {
   }
   #nav {
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
   }

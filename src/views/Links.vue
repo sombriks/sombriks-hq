@@ -95,7 +95,7 @@
         >Learn how to use tmux</a
       >
       <a target="_blank" href="https://withkoji.com/pt-br/docs/misc/developing-for-kaios">Let's develop KaiOS apps!</a>
-      <a target="_blank" href></a>
+      <a target="_blank" href="https://nolanlawson.com/2019/09/22/the-joy-and-challenge-of-developing-for-kaios/">Let's develop KaiOS apps, i'm serious!</a>
       <a target="_blank" href></a>
       <a target="_blank" href></a>
       <a target="_blank" href></a>
