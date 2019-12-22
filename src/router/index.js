@@ -6,7 +6,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path:'/',
-    redirect:'/bio'
+    redirect:'/principal'
+  },
+  {
+    path: '/principal',
+    name: 'principal',
+    component: () => import(/* webpackChunkName: "principal" */ '../views/Principal.vue')
   },
   {
     path: '/bio',

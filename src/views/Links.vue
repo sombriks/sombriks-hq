@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$style.container">
     <h1>Links</h1>
     <div>
       <a target="_blank" href="https://google.com"
@@ -94,8 +94,16 @@
         href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/"
         >Learn how to use tmux</a
       >
-      <a target="_blank" href="https://withkoji.com/pt-br/docs/misc/developing-for-kaios">Let's develop KaiOS apps!</a>
-      <a target="_blank" href="https://nolanlawson.com/2019/09/22/the-joy-and-challenge-of-developing-for-kaios/">Let's develop KaiOS apps, i'm serious!</a>
+      <a
+        target="_blank"
+        href="https://withkoji.com/pt-br/docs/misc/developing-for-kaios"
+        >Let's develop KaiOS apps!</a
+      >
+      <a
+        target="_blank"
+        href="https://nolanlawson.com/2019/09/22/the-joy-and-challenge-of-developing-for-kaios/"
+        >Let's develop KaiOS apps, i'm serious!</a
+      >
       <a target="_blank" href></a>
       <a target="_blank" href></a>
       <a target="_blank" href></a>
@@ -110,12 +118,6 @@ export default {
   name: "links"
 };
 </script>
-<style scoped>
-div {
-  display: flex;
-  flex-direction: column;
-}
-div > h1 {
-  width: 100%;
-}
+<style module lang="scss">
+@import "../design";
 </style>
