@@ -1,10 +1,13 @@
 <template>
-  <div :class="$style.container">
-    <router-link v-if="$route.path != '/principal'" :class="$style.back" to="/principal">Back</router-link>
-    <Search/>
-    <div id="content">
-      <router-view />
-    </div>
+  <div :class="[$style.container]">
+    <router-link
+      v-if="$route.path != '/principal'"
+      :class="$style.back"
+      to="/principal"
+      >Back</router-link
+    >
+    <Search />
+    <router-view />
     <div id="footer">&copy; sombriks (a.k.a. Leonardo Silveira) {{ year }}</div>
   </div>
 </template>
@@ -23,9 +26,9 @@ export default {
 <style lang="scss" module>
 @import "./design";
 .back {
-  position:fixed;
-  top:5px;
-  left:5px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
   background-color: white;
 }
 </style>

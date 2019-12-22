@@ -1,15 +1,12 @@
-
 $color1: gray;
+$primary1: blue;
 
 .container {
   color: $color1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 1920) {
-    justify-content: center;
-  }
-
+  justify-content: center;
 }
 
 .row {
@@ -17,23 +14,22 @@ $color1: gray;
   width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: row;   
+  flex-direction: row;
   align-content: space-between;
   justify-content: stretch;
-  @media (min-width:  1920) {
+  @media (min-width: 1920) {
     min-width: 1280;
   }
-  @media (min-width:  1440) {
+  @media (min-width: 1440) {
     min-width: 1024;
   }
-  @media (min-width:  1280) {
+  @media (min-width: 1280) {
     min-width: 960;
   }
-  @media (min-width:  800) {
+  @media (min-width: 800) {
     min-width: 720;
   }
-  @media (max-width:  799) {
+  @media (max-width: 799) {
     width: 100%;
   }
-  
 }
