@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Bio</h1>
   </div>
 </template>
 <script>

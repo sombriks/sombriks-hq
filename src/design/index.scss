@@ -1,6 +1,35 @@
 $color1: gray;
 $primary1: blue;
 
+.base {
+  margin: 0px;
+  @media screen and (min-width: 1920) {
+    .base{
+      max-width: 1280;
+    }
+  }
+  @media screen and (min-width: 1440) {
+    .base {
+      max-width: 1024;
+    }
+  }
+  @media screen and (min-width: 1280) {
+    .base {
+      max-width: 960;
+    }
+  }
+  @media screen and (min-width: 800) {
+    .base {
+      max-width: 720;
+    }
+  }
+  @media screen and (max-width: 799) {
+    .base {
+      width: 100%;
+    }
+  }
+}
+
 .container {
   color: $color1;
   display: flex;
@@ -17,19 +46,4 @@ $primary1: blue;
   flex-direction: row;
   align-content: space-between;
   justify-content: stretch;
-  @media (min-width: 1920) {
-    min-width: 1280;
-  }
-  @media (min-width: 1440) {
-    min-width: 1024;
-  }
-  @media (min-width: 1280) {
-    min-width: 960;
-  }
-  @media (min-width: 800) {
-    min-width: 720;
-  }
-  @media (max-width: 799) {
-    width: 100%;
-  }
 }

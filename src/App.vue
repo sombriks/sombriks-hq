@@ -1,11 +1,11 @@
 <template>
-  <div :class="[$style.container]">
+  <div :class="$style.base" class="base">
     <router-link
       v-if="$route.path != '/principal'"
-      :class="$style.back"
       to="/principal"
       >Back</router-link
     >
+    <h1>Current Title</h1>
     <Search />
     <router-view />
     <div id="footer">&copy; sombriks (a.k.a. Leonardo Silveira) {{ year }}</div>

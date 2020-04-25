@@ -1,11 +1,10 @@
 <template>
-  <div :class="$style.container">
-      <h1>Sombriks Has a Plan</h1>
-      <router-link to="/bio">Bio</router-link>
-      <router-link to="/blog">Blog</router-link>
-      <router-link to="/contact">Contact</router-link>
-      <router-link to="/experiments">Experiments</router-link>
-      <router-link to="/links">Links</router-link>
+  <div>
+      <router-link :class="$style.row" to="/bio">Bio</router-link>
+      <router-link :class="$style.row" to="/blog">Blog</router-link>
+      <router-link :class="$style.row" to="/contact">Contact</router-link>
+      <router-link :class="$style.row" to="/experiments">Experiments</router-link>
+      <router-link :class="$style.row" to="/links">Links</router-link>
   </div>
 </template>
 
