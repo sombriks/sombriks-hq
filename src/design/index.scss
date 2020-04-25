@@ -1,35 +1,6 @@
 $color1: gray;
 $primary1: blue;
 
-.base {
-  margin: 0px;
-  @media screen and (min-width: 1920) {
-    .base{
-      max-width: 1280;
-    }
-  }
-  @media screen and (min-width: 1440) {
-    .base {
-      max-width: 1024;
-    }
-  }
-  @media screen and (min-width: 1280) {
-    .base {
-      max-width: 960;
-    }
-  }
-  @media screen and (min-width: 800) {
-    .base {
-      max-width: 720;
-    }
-  }
-  @media screen and (max-width: 799) {
-    .base {
-      width: 100%;
-    }
-  }
-}
-
 .container {
   color: $color1;
   display: flex;
@@ -46,4 +17,18 @@ $primary1: blue;
   flex-direction: row;
   align-content: space-between;
   justify-content: stretch;
+}
+
+@keyframes slidein {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+a {
+  padding: 0.5em;
+  margin: 0.5em;
+  border-bottom: 1px solid $primary1;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-name: slidein;
 }

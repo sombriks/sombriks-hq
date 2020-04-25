@@ -1,11 +1,11 @@
 <template>
-  <div :class="$style.base" class="base">
+  <div>
+    <h1>{{$store.state.title}}</h1>
     <router-link
       v-if="$route.path != '/principal'"
       to="/principal"
       >Back</router-link
     >
-    <h1>Current Title</h1>
     <Search />
     <router-view />
     <div id="footer">&copy; sombriks (a.k.a. Leonardo Silveira) {{ year }}</div>
@@ -25,10 +25,4 @@ export default {
 </script>
 <style lang="scss" module>
 @import "./design";
-.back {
-  position: fixed;
-  top: 5px;
-  left: 5px;
-  background-color: white;
-}
 </style>

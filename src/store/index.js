@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    theme:"white"
+    theme:"white",
+    title:"Sombriks Has a Plan"
   },
   mutations: {
   },
