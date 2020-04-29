@@ -1,5 +1,5 @@
+$color0: white;
 $color1: gray;
-$primary1: blue;
 
 .container {
   color: $color1;
@@ -7,28 +7,39 @@ $primary1: blue;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  a {
+    color: $color1;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: stretch;
+    text-decoration-line: none;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-bottom: 1px solid $color1;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-name: grow-in;
+  }
 }
 
-.row {
-  flex-grow: 1;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  align-content: space-between;
-  justify-content: stretch;
+@keyframes grow-in {
+  from {
+    transform: scaleY(0);
+    opacity:0.2;
+  }
+  to {
+    transform: scaleY(1);
+    opacity:0.9;
+  }
 }
 
-@keyframes slidein {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}
-
-a {
-  padding: 0.5em;
-  margin: 0.5em;
-  border-bottom: 1px solid $primary1;
-  animation-timing-function: linear;
-  animation-duration: 0.5s;
-  animation-name: slidein;
+@for $i from 0 through 1000 {
+  .container a:nth-child(#{$i}n) {
+      animation-delay: #{$i * 0.1}s;
+  }
 }
