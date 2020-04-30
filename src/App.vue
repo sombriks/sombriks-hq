@@ -5,7 +5,6 @@
       <router-link v-if="$route.path != '/principal'" to="/principal"
         >Back</router-link
       >
-      <Search />
     </div>
     <router-view />
     <div id="footer">&copy; sombriks (a.k.a. Leonardo Silveira) {{ year }}</div>
@@ -13,10 +12,8 @@
 </template>
 <script>
 const year = new Date().getFullYear();
-import Search from "./components/Search";
 
 export default {
-  components: { Search },
   name: "app",
   data() {
     return { year };
