@@ -2,7 +2,7 @@
   <div>
     <my-card>
       <template #header>
-        <h2 >Teste</h2>
+        <h2>Teste</h2>
 
       </template>
       AAA

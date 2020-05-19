@@ -1,6 +1,20 @@
 <script>
 export default {
   name: "links",
+  data() {
+    return {
+      links: [
+        {
+          link: "https://google.com",
+          label: "The best way to learn something",
+        },
+        {
+          link: "https://yahoo.com",
+          label: "When you need to know if dns is really working",
+        },
+      ],
+    };
+  },
 };
 </script>
 <style module lang="scss">
@@ -8,12 +22,9 @@ export default {
 </style>
 <template>
   <div>
-    <a target="_blank" href="https://google.com"
-      >The best way to learn something</a
-    >
-    <a target="_blank" href="https://yahoo.com"
-      >When you need to know if dns is really working</a
-    >
+    <a v-for="l in links" :key="l.link" target="_blank" :href="l.link">{{
+      l.label
+    }}</a>
     <a
       target="_blank"
       href="https://www.youtube.com/results?search_query=vaporware"
@@ -110,7 +121,12 @@ export default {
       href="https://nolanlawson.com/2019/09/22/the-joy-and-challenge-of-developing-for-kaios/"
       >Let's develop KaiOS apps, i'm serious!</a
     >
-    <a target="_blank" href></a>
+    <a
+      target="_blank"
+      href="https://dev.to/blacksonic/the-vue-3-upgrade-guide-4dc4"
+    >
+      The upgrade from Vue2 to Vue3, simply explained
+    </a>
     <a target="_blank" href></a>
     <a target="_blank" href></a>
     <a target="_blank" href></a>
