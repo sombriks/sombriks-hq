@@ -3,9 +3,8 @@
     <my-card>
       <template #header>
         <h2>Teste</h2>
-
       </template>
-      AAA
+      <template #default>AAA</template>
     </my-card>
   </div>
 </template>

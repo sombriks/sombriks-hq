@@ -1,0 +1,106 @@
+[
+  {
+    "link": "https://google.com",
+    "label": "The best way to learn something"
+  },
+  {
+    "link": "https://yahoo.com",
+    "label": "When you need to know if dns is really working"
+  },
+  {
+    "link": "https://www.youtube.com/results?search_query=vaporware",
+    "label": "White noise to keep focus on working"
+  },
+  {
+    "link": "https://www.w3schools.com/",
+    "label": "Docs everyone denies to use and enjoy to deny it"
+  },
+  {
+    "link": "https://developer.mozilla.org",
+    "label": "The true and correct docs for the web"
+  },
+  { "link": "https://vuejs.org/", "label": "The good" },
+  { "link": "https://reactjs.org/", "label": "The bad" },
+  { "link": "https://angular.io/", "label": "The ugly" },
+  {
+    "link": "http://www.nomnoml.com/",
+    "label": "nomnoml! I always forgot this address but it's so rad!"
+  },
+  { "link": "https://docs.oracle.com/javase/tutorial/", "label": "Origins" },
+  { "link": "https://github.com", "label": "How to save the world" },
+  {
+    "link": "https://css-tricks.com/",
+    "label": "All you need to know about css and more"
+  },
+  {
+    "link": "https://www.wikipedia.org/",
+    "label": "In need of a printed version"
+  },
+  { "link": "https://www.apple.com/", "label": "Evil" },
+  { "link": "https://www.base64encode.org/", "label": "How to speak clearly" },
+  {
+    "link": "https://simplycalc.com/base16-encode.php",
+    "label": "More clearly"
+  },
+  {
+    "link": "https://www.youtube.com/results?search_query=make+good+art",
+    "label": "make good art"
+  },
+  {
+    "link": "https://haxiomic.github.io/GPU-Fluid-Experiments/html5/?q=Low",
+    "label": "Quite relaxing"
+  },
+  { "link": "https://www.hackerrank.com", "label": "Cool challenges" },
+  { "link": "https://xkcd.com/1179/", "label": "How to write dates correctly" },
+  { "link": "https://devhints.io/", "label": "best TL;DR; ever" },
+  { "link": "https://trello.com/", "label": "Organize your life a little" },
+  {
+    "link": "https://dexie.org/",
+    "label": "The nicest non-relational database API you'll ever see"
+  },
+  {
+    "link": "https://www.postgresql.org/docs/manuals/",
+    "label": "Database for serious business"
+  },
+  {
+    "link": "https://www.sqlite.org/index.html",
+    "label": "Not ANSI SQL but that's ok"
+  },
+  {
+    "link": "https://www.destroyallsoftware.com/compendium",
+    "label": "Core basics of computer science in a very opinionated way"
+  },
+  {
+    "link": "https://www.timsommer.be/famous-laws-of-software-development/",
+    "label": "Famous laws of software development"
+  },
+  {
+    "link": "http://raganwald.com/2019/02/14/i-love-programming-and-programmers.html",
+    "label": "I like the way compilers work"
+  },
+  {
+    "link": "https://yuml.me/diagram/scruffy/class/draw",
+    "label": "yUML does cool uml"
+  },
+  { "link": "https://colorhunt.co", "label": "Nice and shiny colors" },
+  {
+    "link": "https://www.zeitverschiebung.net",
+    "label": "Very very important clock thing"
+  },
+  {
+    "link": "https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/",
+    "label": "Learn how to use tmux"
+  },
+  {
+    "link": "https://withkoji.com/pt-br/docs/misc/developing-for-kaios",
+    "label": "Let's develop KaiOS apps!"
+  },
+  {
+    "link": "https://nolanlawson.com/2019/09/22/the-joy-and-challenge-of-developing-for-kaios/",
+    "label": "Let's develop KaiOS apps, i'm serious!"
+  },
+  {
+    "link": "https://dev.to/blacksonic/the-vue-3-upgrade-guide-4dc4",
+    "label": "The upgrade from Vue2 to Vue3, simply explained"
+  }
+]

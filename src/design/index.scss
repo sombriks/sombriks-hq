@@ -21,25 +21,15 @@ $color1: gray;
     padding: 0.5em;
     margin: 0.5em;
     border-bottom: 1px solid $color1;
-    animation-timing-function: linear;
-    animation-duration: 0.5s;
-    animation-name: grow-in;
+    
   }
+
 }
 
-@keyframes grow-in {
-  from {
-    transform: scaleY(0);
-    opacity:0.2;
-  }
-  to {
-    transform: scaleY(1);
-    opacity:0.9;
-  }
+.inv {
+  opacity: 0;
 }
 
-@for $i from 0 through 1000 {
-  .container a:nth-child(#{$i}n) {
-      animation-delay: #{$i * 0.1}s;
-  }
+.vis {
+  opacity: 1;
 }
