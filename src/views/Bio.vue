@@ -1,10 +1,16 @@
 <template>
   <div>
-    <my-card>
+      <h3>Experiência profissional</h3>
+    <my-card v-for="(w,i) in cv.work" :key="i">
       <template #header>
-        <h2>Teste</h2>
+        <h4>{{w.position}} at {{w.company}}</h4>
       </template>
-      <template #default>AAA</template>
+      <template #default>
+        <i>{{w.start}} to {{w.end}}</i>
+        <p>
+          {{w.description}}
+        </p>
+      </template>
     </my-card>
   </div>
 </template>
