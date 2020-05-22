@@ -6,7 +6,9 @@
         >Back</router-link
       >
     </div>
-    <router-view />
+    <div class="container">
+      <router-view />
+    </div>
     <div id="footer">&copy; sombriks (a.k.a. Leonardo Silveira) {{ year }}</div>
   </div>
 </template>
@@ -23,4 +25,28 @@ export default {
 <style lang="scss" module>
 @import "./design";
 
+</style>
+
+
+<style scoped>
+@media (min-width: 480px) {
+  .container {
+    max-width:100%;
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    max-width:80%;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width:60%;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width:40%;
+  }
+}
 </style>

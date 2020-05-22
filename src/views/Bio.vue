@@ -1,15 +1,32 @@
 <template>
   <div>
-      <h3>Experiência profissional</h3>
-    <my-card v-for="(w,i) in cv.work" :key="i">
+    <h3>Professional experience</h3>
+    <my-card v-for="(w, i) in cv.work" :key="i">
       <template #header>
-        <h4>{{w.position}} at {{w.company}}</h4>
+        <h4>{{ w.position }} at {{ w.company }}</h4>
       </template>
       <template #default>
-        <i>{{w.start}} to {{w.end}}</i>
+        <i>{{ w.start }} to {{ w.end }}</i>
         <p>
-          {{w.description}}
+          {{ w.description }}
         </p>
+        <h5>Projects/Client</h5>
+        <ul>
+          <li v-for="p in w.projects" :key="p.name">
+            <b>{{ p.name }}</b> -
+            <i>{{ p.description }}</i>
+          </li>
+        </ul>
+        <h6>Tech stack</h6>
+        <div :class="$style.wrap">
+          <a
+            v-for="st in w.techstack"
+            :key="st"
+            :target="st"
+            :href="`https://bing.com?q=${st}`"
+            >{{ st }}</a
+          >
+        </div>
       </template>
     </my-card>
   </div>
@@ -25,3 +42,10 @@ export default {
   },
 };
 </script>
+<style module lang="scss">
+@import "../design";
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>

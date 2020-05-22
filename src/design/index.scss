@@ -10,13 +10,7 @@ $color1: gray;
 
   a {
     color: $color1;
-    flex-grow: 1;
-    width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: stretch;
     text-decoration-line: none;
     padding: 0.5em;
     margin: 0.5em;

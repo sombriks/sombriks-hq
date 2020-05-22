@@ -30,6 +30,10 @@
         {
           "name": "varejomini/varejopdv",
           "description": "This product solves the problem to the small sales business. It aims to simpler sales workflow, once there are other in-house products to other sales modes (restaurant, market, etc)."
+        },
+        {
+          "name":"varejofacil",
+          "description":"This product eases the problem of managing small and medium retailers business. Best suited for markets, general sales store and restaurants."
         }
       ],
       "techstack": [
