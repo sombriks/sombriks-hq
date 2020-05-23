@@ -19,6 +19,9 @@
       >
         <img :class="$style.w100" src="/icons/stackoverflow.svg" />
       </a>
+      <a :class="$style.e3" target="_blank" :href="`${cv.contact.linkedin}`">
+        <img :class="$style.w100" src="/icons/linkedin.svg" />
+      </a>
       <a :class="$style.e3" target="_blank" :href="`${cv.contact.twitter}`">
         <img :class="$style.w100" src="/icons/twitter.svg" />
       </a>
@@ -33,7 +36,7 @@
       </a> -->
     </div>
     <div :class="$style.container">
-      <img :class="$style.eimg" :src="pics[i]" />
+      <img :class="$style.eimg" :src="pics[i]" @click="nextPic" />
     </div>
   </div>
 </template>
@@ -68,13 +71,16 @@ export default {
     };
   },
   mounted() {
-    this.interval = setInterval(() => {
-      this.i += 1;
-      if (this.i >= this.pics.length) this.i = 0;
-    }, 4500);
+    this.interval = setInterval(this.nextPic, 4500);
   },
   beforeDestroy() {
     clearInterval(this.interval);
+  },
+  methods: {
+    nextPic() {
+      this.i += 1;
+      if (this.i >= this.pics.length) this.i = 0;
+    },
   },
 };
 </script>
@@ -82,6 +88,7 @@ export default {
 @import "../design";
 .w100 {
   width: 100%;
+  fill: $color1;
 }
 .e3 {
   width: 3em;

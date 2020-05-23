@@ -1,5 +1,9 @@
 <template>
   <div>
+    <p>
+      If you need a print-friendly version click <i><span @click="makeCV">here</span></i
+      >.
+    </p>
     <h3>Professional experience</h3>
     <my-card v-for="(w, i) in cv.work" :key="`w${i}`">
       <template #header>
@@ -46,11 +50,16 @@
 <script>
 import cv from "../assets/curriculum.json";
 import MyCard from "../components/MyCard";
+import { makeCV } from "../components/make-cv-pdf";
+
 export default {
   name: "bio",
   components: { MyCard },
   data() {
     return { cv };
+  },
+  methods: {
+    makeCV,
   },
 };
 </script>
