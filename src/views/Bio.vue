@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>Professional experience</h3>
-    <my-card v-for="(w, i) in cv.work" :key="i">
+    <my-card v-for="(w, i) in cv.work" :key="`w${i}`">
       <template #header>
         <h4>{{ w.position }} at {{ w.company }}</h4>
       </template>
@@ -29,6 +29,18 @@
         </div>
       </template>
     </my-card>
+    <h3>Education</h3>
+    <my-card v-for="(w, i) in cv.education" :key="`e${i}`">
+      <template #header>
+        <h4>{{ w.course }} at {{ w.institution }}</h4>
+      </template>
+      <template #default>
+        <i>{{ w.start }} to {{ w.end }}</i>
+        <p>
+          {{ w.description }}
+        </p>
+      </template>
+    </my-card>
   </div>
 </template>
 <script>
@@ -44,8 +56,4 @@ export default {
 </script>
 <style module lang="scss">
 @import "../design";
-.wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
 </style>

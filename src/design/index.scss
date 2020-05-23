@@ -20,10 +20,7 @@ $color1: gray;
 
 }
 
-.inv {
-  opacity: 0;
-}
-
-.vis {
-  opacity: 1;
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -2,6 +2,7 @@
   <div :class="$style.card">
     <div :class="$style.cardContent">
       <slot name="header"></slot>
+      <hr/>
       <slot></slot>
     </div>
   </div>
