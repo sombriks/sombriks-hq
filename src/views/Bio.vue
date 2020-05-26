@@ -50,7 +50,7 @@
 <script>
 import cv from "../assets/curriculum.json";
 import MyCard from "../components/MyCard";
-import { makeCV } from "../components/make-cv-pdf";
+const  { makeCV } = import(/* webpackChunkName: "make-cv" */ "../components/make-cv-pdf");
 
 export default {
   name: "bio",

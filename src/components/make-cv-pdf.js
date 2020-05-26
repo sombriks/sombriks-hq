@@ -4,7 +4,6 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 const cv = require("../assets/curriculum.json");
 
 exports.makeCV = () => {
-  console.log("preparing document definition");
   const dd = {
     info: {
       title: "sombriks (a.k.a. Leonardo Silveira) curriculum",

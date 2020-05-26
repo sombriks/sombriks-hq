@@ -3,12 +3,14 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "npm run articles ; vue-cli-service serve --open",
+    "build": "npm run articles ; vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "articles": "sh list-articles.sh"
   },
   "dependencies": {
     "core-js": "^3.4.3",
+    "markdown-it-vue": "^1.0.11",
     "pdfmake": "^0.1.65",
     "sass": "^1.24.0",
     "sass-loader": "^8.0.0",
