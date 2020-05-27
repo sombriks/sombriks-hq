@@ -47,7 +47,7 @@ You see, lots of small downloads still opens a chance of error if the client
 connection is unstable. So the next step of evolution was to **bundle** up all
 modules at once and deliver it to the client in a single http connection.
 
- <!-- ![pic1.jpg](assets/post-pics/0006-browserify-rocks/pic1.jpg) -->
+ <!-- ![pic1.jpg](/post-pics/0006-browserify-rocks/pic1.jpg) -->
 
  <img src="assets/post-pics/0006-browserify-rocks/pic1.jpg" style="width:100%;"/>
 

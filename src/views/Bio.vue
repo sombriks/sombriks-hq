@@ -1,7 +1,8 @@
 <template>
   <div>
     <p>
-      If you need a print-friendly version click <i><span @click="makeCV">here</span></i
+      If you need a print-friendly version click
+      <i><span @click="makeCV">here</span></i
       >.
     </p>
     <h3>Professional experience</h3>
@@ -50,7 +51,7 @@
 <script>
 import cv from "../assets/curriculum.json";
 import MyCard from "../components/MyCard";
-const  { makeCV } = import(/* webpackChunkName: "make-cv" */ "../components/make-cv-pdf");
+import { makeCV } from "../components/make-cv-pdf";
 
 export default {
   name: "bio",
