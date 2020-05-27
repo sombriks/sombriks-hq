@@ -10,8 +10,10 @@ for art in $found
 do
   posts="$posts\"$art\","
 done
-posts="$posts]"
 
-echo ${posts/,]/]} > ./src/assets/posts.json
+posts="$posts]"
+posts=${posts/,]/]}
+
+echo $posts > ./src/assets/posts.json
 
 

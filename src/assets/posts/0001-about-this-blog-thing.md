@@ -21,3 +21,6 @@ Therefore i can list them at build time and keep this index to dynamically load 
 So, we did a blog engine using vue, vue-router, marked, axios, browserify and brfs.
 
 2017-12-04
+
+Update 2020-05-27 : we don't use axios or brfs anymore. or browserify.
+The new 'engine' is [es6 imports](https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import) in a vue-cli generated project.

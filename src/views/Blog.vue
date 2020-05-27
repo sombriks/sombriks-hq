@@ -57,8 +57,17 @@ export default {
   a {
     display: inline;
   }
+  pre {
+    border: solid 0.5px $color1;
+    padding: 1em;
+    border-radius: 0.6em;
+  }
+  img {
+    width:100%;
+  }
 }
 </style>
 <style lang="scss">
+/* highlight.js doesn't play well with modules scopes etc */
 @import "../../node_modules/highlight.js/scss/foundation.scss";
 </style>
