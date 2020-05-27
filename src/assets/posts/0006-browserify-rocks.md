@@ -49,7 +49,7 @@ modules at once and deliver it to the client in a single http connection.
 
  <!-- ![pic1.jpg](/post-pics/0006-browserify-rocks/pic1.jpg) -->
 
- <img src="assets/post-pics/0006-browserify-rocks/pic1.jpg" style="width:100%;"/>
+ <img src="/post-pics/0006-browserify-rocks/pic1.jpg" style="width:100%;"/>
 
 a picture stolen from webpack site explaining how a bundle works
 
