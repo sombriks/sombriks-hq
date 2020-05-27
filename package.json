@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.4.3",
-    "markdown-it-vue": "^1.0.11",
+    "marked": "^1.1.0",
     "pdfmake": "^0.1.65",
     "sass": "^1.24.0",
     "sass-loader": "^8.0.0",

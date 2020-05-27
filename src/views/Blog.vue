@@ -5,17 +5,19 @@
         {{ p }}
       </router-link>
     </div>
-    <pre v-if="current">
-      {{current}}
-    </pre>
+    <div :class="$style.simpleLinks" v-if="current" v-html="current"></div>
   </div>
 </template>
 <script>
 import posts from "../assets/posts";
+import marked from "marked";
 export default {
   name: "blog",
   data() {
-    return { posts, current: "" };
+    return {
+      posts,
+      current: "",
+    };
   },
   mounted() {
     this.carrega();
@@ -31,7 +33,7 @@ export default {
       if (!p) return;
       import(`../assets/posts/${p}`).then((module) => {
         // console.log(module);
-        this.current = module.default;
+        this.current = marked(module.default);
       });
     },
   },
@@ -39,4 +41,9 @@ export default {
 </script>
 <style module lang="scss">
 @import "../design";
+.simpleLinks {
+  a {
+    display: inline;
+  }
+}
 </style>
