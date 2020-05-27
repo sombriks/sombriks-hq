@@ -11,6 +11,7 @@
 <script>
 import posts from "../assets/posts";
 import marked from "marked";
+import hl from "highlight.js";
 export default {
   name: "blog",
   data() {
@@ -33,7 +34,18 @@ export default {
       if (!p) return;
       import(`../assets/posts/${p}`).then((module) => {
         // console.log(module);
-        this.current = marked(module.default);
+        this.current = marked(module.default, {
+          highlight: function(code) {
+            return hl.highlightAuto(code).value;
+          },
+          gfm: true,
+          tables: true,
+          breaks: false,
+          sanitize: false,
+          smartLists: true,
+          smartypants: false,
+          xhtml: false,
+        });
       });
     },
   },
@@ -46,4 +58,7 @@ export default {
     display: inline;
   }
 }
+</style>
+<style lang="scss">
+@import "../../node_modules/highlight.js/scss/foundation.scss";
 </style>

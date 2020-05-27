@@ -31,17 +31,17 @@ export default {
 <style scoped>
 @media (min-width: 480px) {
   .container {
-    max-width:100%;
+    max-width:95%;
   }
 }
 @media (min-width: 800px) {
   .container {
-    max-width:80%;
+    max-width:75%;
   }
 }
 @media (min-width: 1440px) {
   .container {
-    max-width:60%;
+    max-width:50%;
   }
 }
 @media (min-width: 1920px) {
