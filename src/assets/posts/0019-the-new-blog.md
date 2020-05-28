@@ -13,4 +13,8 @@ as the [webpack](https://webpack.js.org/) is and the vue support is also better.
 
 Also, it was not optimized.
 
-The new blog/site 
+The new blog/site uses an updated stack and es6 modules instead commonsJS.
+
+And that's it.
+
+2020-05-28

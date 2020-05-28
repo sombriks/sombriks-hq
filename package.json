@@ -6,7 +6,8 @@
     "dev": "npm run articles ; vue-cli-service serve --open",
     "build": "npm run articles ; vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "articles": "sh list-articles.sh"
+    "articles": "sh list-articles.sh",
+    "release": "npm run build ; firebase deploy --token 1//0hw1PxECl4ghYCgYIARAAGBESNwF-L9Irrk588Rdu4SMim8mXJ5pVNe9aFVWbJAO71uYhf-rlTKclE3OpH7IfoAFI8girDX4cr_Q"
   },
   "dependencies": {
     "core-js": "^3.4.3",
@@ -29,6 +30,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "firebase-tools": "^8.4.0",
     "raw-loader": "^4.0.1",
     "vue-template-compiler": "^2.6.10"
   }
