@@ -1,5 +1,6 @@
 <template>
   <div>
+    <i>coming soon...</i>
   </div>
 </template>
 <script>
