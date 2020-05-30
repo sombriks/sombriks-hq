@@ -12,7 +12,8 @@ do
 done
 
 posts="$posts]"
-posts=${posts/,]/]}
+posts=${posts/\",]/\"]}
+echo $posts
 
 echo $posts > ./src/assets/posts.json
 
