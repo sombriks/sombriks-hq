@@ -4,7 +4,8 @@ posts="["
 
 found=$(ls ./src/assets/posts)
 
-echo "articles found: $found"
+echo "articles found:" 
+echo "$found"
 
 for art in $found
 do
@@ -12,8 +13,7 @@ do
 done
 
 posts="$posts]"
-posts=${posts/\",]/\"]}
-echo $posts
+posts=`sed 's/,]/]/' <<< $posts`
 
 echo $posts > ./src/assets/posts.json
 
