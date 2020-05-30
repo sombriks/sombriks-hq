@@ -13,7 +13,7 @@ do
 done
 
 posts="$posts]"
-posts=`sed 's/,]/]/' <<< $posts`
+posts=`echo $posts | sed 's/,]/]/'`
 
 echo $posts > ./src/assets/posts.json
 
