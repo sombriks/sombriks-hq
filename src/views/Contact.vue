@@ -35,20 +35,27 @@
         <img :class="$style.w100" src="/icons/telefone.svg"/>
       </a> -->
     </div>
-    <photo-roussel/>
+    <photo-roussel />
   </div>
 </template>
 <script>
 import cv from "../assets/curriculum.json";
 import PhotoRoussel from "../components/PhotoRoussel";
+
+import { page } from "vue-analytics";
 export default {
   name: "contact",
-  components:{ PhotoRoussel },
+  components: { PhotoRoussel },
   data() {
     return {
-      cv
+      cv,
     };
-  }
+  },
+  methods: {
+    track() {
+      page(`/#${this.$route.fullPath}`);
+    },
+  },
 };
 </script>
 <style module lang="scss">

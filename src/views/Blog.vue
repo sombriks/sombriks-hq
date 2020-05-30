@@ -12,6 +12,9 @@
 import posts from "../assets/posts";
 import marked from "marked";
 import hl from "highlight.js";
+
+import { page } from "vue-analytics";
+
 export default {
   name: "blog",
   data() {
@@ -29,6 +32,9 @@ export default {
     },
   },
   methods: {
+    track () {
+      page(`/#${this.$route.fullPath}`)
+    },
     carrega() {
       const p = this.$route.params.post;
       if (!p) return;

@@ -4,7 +4,13 @@
   </div>
 </template>
 <script>
+import { page } from "vue-analytics";
 export default {
-  name: "experiments"
+  name: "experiments",
+  methods: {
+    track() {
+      page(`/#${this.$route.fullPath}`);
+    },
+  },
 };
 </script>

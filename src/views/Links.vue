@@ -1,5 +1,7 @@
 <script>
 import links from "../assets/links.json";
+
+import { page } from "vue-analytics";
 export default {
   name: "links",
   data() {
@@ -7,6 +9,11 @@ export default {
       links,
     };
   },
+  methods:{
+    track () {
+      page(`/#${this.$route.fullPath}`)
+    }
+  }
 };
 </script>
 <template>

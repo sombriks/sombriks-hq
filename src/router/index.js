@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { page } from "vue-analytics";
 
 Vue.use(VueRouter);
 
@@ -49,6 +48,6 @@ const router = new VueRouter({
   routes,
 });
 
-router.afterEach = (to) => page(to.fullPath);
+// router.afterEach = (to) => page(to.fullPath);
 
 export default router;
