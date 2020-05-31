@@ -9,14 +9,8 @@
 </template>
 
 <script>
-import { page } from "vue-analytics";
 export default {
-  name: "principal",
-  methods: {
-    track() {
-      page(`/#${this.$route.fullPath}`);
-    },
-  },
+  name: "principal"
 };
 </script>
 

@@ -42,7 +42,6 @@
 import cv from "../assets/curriculum.json";
 import PhotoRoussel from "../components/PhotoRoussel";
 
-import { page } from "vue-analytics";
 export default {
   name: "contact",
   components: { PhotoRoussel },
@@ -50,12 +49,7 @@ export default {
     return {
       cv,
     };
-  },
-  methods: {
-    track() {
-      page(`/#${this.$route.fullPath}`);
-    },
-  },
+  }
 };
 </script>
 <style module lang="scss">

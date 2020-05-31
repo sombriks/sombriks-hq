@@ -53,8 +53,6 @@ import cv from "../assets/curriculum.json";
 import MyCard from "../components/MyCard";
 import { makeCV } from "../components/make-cv-pdf";
 
-import { page } from "vue-analytics";
-
 export default {
   name: "bio",
   components: { MyCard },
@@ -62,10 +60,7 @@ export default {
     return { cv };
   },
   methods: {
-    makeCV,
-    track () {
-      page(`/#${this.$route.fullPath}`)
-    }
+    makeCV
   },
 };
 </script>
