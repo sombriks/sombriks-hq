@@ -70,5 +70,5 @@ export default {
 </style>
 <style lang="scss">
 /* highlight.js doesn't play well with modules scopes etc */
-@import "../../node_modules/highlight.js/scss/foundation.scss";
+@import "../../node_modules/highlight.js/scss/atelier-dune-light.scss";
 </style>

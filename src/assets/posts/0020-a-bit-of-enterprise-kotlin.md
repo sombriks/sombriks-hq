@@ -84,6 +84,7 @@ Notice the kotlin folder.
 This `build.gradle` is different:
 
 ```gradle
+
 plugins {
   id 'java'
   id 'org.jetbrains.kotlin.jvm' version '1.3.61'
@@ -109,7 +110,7 @@ compileTestKotlin {
   kotlinOptions.jvmTarget = '1.8'
 }
 
-// All kotlin classes are final by default, but we need to open them to the JEE magic
+// Kotlin classes are final by default, we need to open them to the JEE magic
 allOpen {
   annotations(
     'javax.ejb.Singleton',
@@ -119,6 +120,7 @@ allOpen {
     'javax.ws.rs.Path'
   )
 }
+
 ```
 
 Most of it is kotlin language setup.
@@ -132,3 +134,159 @@ them as dependencies if needed.
 Instead of use on single huge source set, we can manage smaller ones, doing a 
 better concern separation.
 
+## When old friends meet new comrades
+
+Enterprise Java infrastructure is almost ubiquous by the time of this article 
+writing since it's huge popularity over past 25 years.
+
+"If it works, don't change it" remains an important rule for mission-critical
+solutions, therefore we'll still see java and java ee and spring for a while.
+
+For example this is a traditional JAX-RS java resource:
+
+```java
+package sample.jee.resource;
+
+import sample.jee.model.User;
+import sample.jee.service.Users;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+@Stateless
+@Path("/user")
+@Produces("application/json")
+public class UserController {
+
+    @EJB
+    private Users users;
+
+    @GET
+    public List<User> list() {
+      return users.listUsers();
+    }
+}
+```
+
+It's already pretty compact, but look at the kotlin version:
+
+```kotlin
+package sample.jee.kotlin.resource
+
+import sample.jee.kotlin.service.Users
+import javax.ejb.EJB
+import javax.ejb.Stateless
+import javax.ws.rs.GET
+import javax.ws.rs.Path
+import javax.ws.rs.Produces
+
+@Stateless
+@Path("/user")
+@Produces("application/json")
+class UserController {
+
+    @EJB
+    lateinit var users: Users
+
+    @GET
+    fun list() = users.listUsers()
+}
+```
+
+This is a JPA model mapping in Java:
+
+```java
+package sample.jee.kotlin.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="usuario")
+public class User {
+    @Id
+    private Long id;
+    private String nome;
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String  
+}
+
+```
+
+And this is the kotlin version:
+
+```kotlin
+package sample.jee.kotlin.model
+
+import javax.persistence.Entity
+import javax.persistence.Id
+import javax.persistence.Table
+
+@Entity
+@Table(name="usuario")
+data class User(
+    @Id
+    var id: Long? = null,
+    var nome: String? = null
+)
+```
+
+Of course, Java 14 has records and soon will allow compact mappings like that.
+But kotlin is there now and it's backward-compatible with java 8.
+
+## Migrations subsystem
+
+As told before, the nice part is to use existing java ee infrastructure with
+ease on kotlin projects. This is a database migrations bootstrapper using flyway
+to manage database schema:
+
+```kotlin
+package sample.jee.kotlin.config
+
+import org.flywaydb.core.Flyway
+import javax.annotation.PostConstruct
+import javax.annotation.Resource
+import javax.ejb.Startup
+import javax.sql.DataSource
+
+import java.util.logging.Logger
+import javax.ejb.Singleton
+import javax.ejb.TransactionManagement
+import javax.ejb.TransactionManagementType
+
+
+@Startup
+@Singleton
+@TransactionManagement(value = TransactionManagementType.BEAN)
+class Migrations {
+
+    @Resource(name = "jdbc/sample-ds") lateinit var  ds: DataSource
+
+    val LOG = Logger.getLogger("Migrations")
+
+    @PostConstruct
+    fun up() {
+        LOG.info("starting migrations subsystem...")
+        val flyway = Flyway.configure().dataSource(ds).load()
+        flyway.baseline()
+        flyway.migrate()
+        LOG.info("migrations done!")
+    }
+}
+```
+
+## Not everything is perfect
+
+Right now, if you want a really pleasant developer experience using kotlin with
+all the jee stuff you will need intellij ultimate. They created the language, so
+they offer the best IDE support right now.
+
+To see the full source code of this article, click 
+[here](https://github.com/sombriks/sample-jee-kotlin).
+
+2020-06-03
