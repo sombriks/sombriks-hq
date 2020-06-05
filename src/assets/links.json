@@ -102,5 +102,9 @@
   {
     "link": "https://dev.to/blacksonic/the-vue-3-upgrade-guide-4dc4",
     "label": "The upgrade from Vue2 to Vue3, simply explained"
+  },
+  {
+    "link":"https://www.jamisbuck.org/mazes/",
+    "label":"i like mazes"
   }
 ]
