@@ -106,5 +106,9 @@
   {
     "link":"https://www.jamisbuck.org/mazes/",
     "label":"i like mazes"
+  },
+  {
+    "link":"https://firebirdsql.org/file/documentation/release_notes/html/en/3_0/rnfb30-compat-initsec.html",
+    "label":"remember to initialize the security db with server offline! use root. check permissions."
   }
 ]
