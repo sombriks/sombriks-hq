@@ -76,8 +76,8 @@ Install [eclipse](https://www.eclipse.org/downloads/).
 If the boss is paying, install
 [Intellij IDEA Ultimate](https://www.jetbrains.com/pt-br/idea/).
 
-Oh, by the way, remember the `/etc/sysctl.conf` setup regarding max file size an
-user can watch:
+Oh, by the way, remember the `/etc/sysctl.conf` setup regarding max file watch
+an user can watch:
 
 ```bash
 [sombriks@physalis ~]$ cat /etc/sysctl.conf 
