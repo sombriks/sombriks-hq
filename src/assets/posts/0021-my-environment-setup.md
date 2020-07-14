@@ -76,6 +76,24 @@ Install [eclipse](https://www.eclipse.org/downloads/).
 If the boss is paying, install
 [Intellij IDEA Ultimate](https://www.jetbrains.com/pt-br/idea/).
 
+Oh, by the way, remember the `/etc/sysctl.conf` setup regarding max file size an
+user can watch:
+
+```bash
+[sombriks@physalis ~]$ cat /etc/sysctl.conf 
+# sysctl settings are defined through files in
+# /usr/lib/sysctl.d/, /run/sysctl.d/, and /etc/sysctl.d/.
+#
+# Vendors settings live in /usr/lib/sysctl.d/.
+# To override a whole file, create a new file with the same in
+# /etc/sysctl.d/ and put new settings there. To override
+# only specific settings, add a file with a lexically later
+# name in /etc/sysctl.d/ and put new settings there.
+#
+# For more information, see sysctl.conf(5) and sysctl.d(5).
+fs.inotify.max_user_watches = 524288
+```
+
 ## Then we work.
 
 That's it. this is what i do on my machines nowadays in order to get ready for
