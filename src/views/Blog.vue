@@ -1,9 +1,10 @@
 <template>
 	<div>
-		<div v-if="!current" :class="$style.wrap">
+		<div v-if="!current && !loading" :class="$style.wrap">
 			<router-link tag="a" :to="`/blog/${p}`" v-for="p in posts" :key="p">{{ p }}</router-link>
 		</div>
 		<div :class="$style.simpleLinks" v-if="current" v-html="current"></div>
+		<h2 v-if="loading">Loading...</h2>
 	</div>
 </template>
 <script>
