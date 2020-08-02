@@ -26,6 +26,14 @@ export default {
 
 
 <style scoped>
+#footer {
+	margin-top: 5em;
+}
+@media (max-width: 479px) {
+	.container {
+		max-width: 99%;
+	}
+}
 @media (min-width: 480px) {
 	.container {
 		max-width: 95%;
