@@ -27,6 +27,7 @@ export default {
         "/profile-pics/picture_22.jpg",
         "/profile-pics/picture_23.jpg",
         "/profile-pics/picture_24.jpg",
+        "/profile-pics/profielpic_25.jpeg",
       ],
       interval: null,
     };
