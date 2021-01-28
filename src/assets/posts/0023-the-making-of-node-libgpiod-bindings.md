@@ -8,9 +8,9 @@ On rasbperry side, i am a huge fan of the hardware, but
 
 Also i am a javascript guy, not a python guy. More on this ahead.
 
-Then i got fedora properly installed, configured network 
+Then i got fedora properly installed, configured network
 ([nmcli](https://fedoraproject.org/wiki/Networking/CLI) is awesome!) and decided
-to run the good old raspeberry hello world example: blink.
+to run the good old raspberry hello world example: blink.
 
 Those nice hardware toys like arduino and rasp always present you to the
 electronics by blinking a led.
@@ -54,7 +54,7 @@ setTimeout(_ => {
 
 Life is perfect, except for one thing: both examples only works if raspberry is
 running [raspbian](https://www.raspberrypi.org/software/), and, as a plus, both
-depends on a 
+depends on a
 [deprecated kernel feature](https://github.com/rust-embedded/rust-sysfs-gpio/issues/38).
 
 The new subsystem is called [libgpiod](https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/).
@@ -71,7 +71,7 @@ The [node-libgpiod](https://github.com/sombriks/node-libgpiod) is a nodejs addon
 written in C++ to allow us to interface with libgpiod on any system with
 libgpiod available.
 
-In fact, in near future, all present GPIO libraries will need to updagre from 
+In fact, in near future, all present GPIO libraries will need to upgrade from
 sysfs-gpio to libgpiod.
 
 Here goes the current blink using my lib:
@@ -96,7 +96,7 @@ const blink = () => {
 setTimeout(blink,1000);
 ```
 
-It was fun to read about how to write addons for node, how to use the 
+It was fun to read about how to write addons for node, how to use the
 [nan](https://github.com/nodejs/nan) library and also remember that we need to
 respect C++. It's verbose but very very powerful.
 
