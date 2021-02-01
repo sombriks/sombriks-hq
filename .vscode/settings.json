@@ -10,6 +10,7 @@
     "pipenv",
     "sdkman",
     "socketio",
+    "stackoverflow",
     "vuejs"
   ]
 }

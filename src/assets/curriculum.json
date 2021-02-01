@@ -6,7 +6,7 @@
     "hometown": "Fortaleza",
     "state": "Ceará",
     "birthdate": "1984-10-27T20:15:00-03:00",
-    "bio": "I like to solve problems for fun and to pay my rent"
+    "bio": "I like to solve problems to pay my rent and for fun!"
   },
   "contact": {
     "email": "sombriks@gmail.com",
@@ -24,7 +24,7 @@
       "site": "https://www.casamagalhaes.com.br",
       "position": "Software developer",
       "start": "2019-03",
-      "end": "present day",
+      "end": "2021-01-29",
       "description": "This is a traditional and quite well-established group dealing with sales solutions. Here we help from dealing with the overly complicated brazilian tax systems to offering tools to manage your sales business. Also we do embrace cloud and serverless solutions from Amazon.",
       "projects": [
         {
@@ -59,7 +59,8 @@
         "SPA",
         "REST",
         "AWS SQS",
-        "codeclimate"
+        "codeclimate",
+        "sentry"
       ],
       "color": "#ff4422"
     },
