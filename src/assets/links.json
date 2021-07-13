@@ -114,5 +114,9 @@
   {
     "link":"https://vitux.com/how-to-use-gnome-shells-secret-screen-recorder/",
     "label":"I always forgot how to configure screen recording time on gnome, so..."
+  },
+  {
+    "link":"https://www.mitchellbosecke.com/post/java-proxies-from-dog-to-transactionaldog",
+    "label":"The transactional dog"
   }
 ]
