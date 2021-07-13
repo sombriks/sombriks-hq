@@ -10,10 +10,9 @@ export default {
     return {
       i: 0,
       pics: [
-        "/profile-pics/picture_8.png",
-        "/profile-pics/picture_9-a.jpg",
-        "/profile-pics/picture_9-b.jpg",
-        "/profile-pics/picture_9.jpg",
+        "/profile-pics/picture_07.png",
+        "/profile-pics/picture_08.jpg",
+        "/profile-pics/picture_09.jpg",
         "/profile-pics/picture_10.jpg",
         "/profile-pics/picture_11.jpg",
         "/profile-pics/picture_12.jpg",
@@ -27,6 +26,8 @@ export default {
         "/profile-pics/picture_22.jpg",
         "/profile-pics/picture_23.jpg",
         "/profile-pics/picture_24.jpg",
+        "/profile-pics/picture_25.jpg",
+        "/profile-pics/picture_26.jpg",
       ],
       interval: null,
     };

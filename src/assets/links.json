@@ -118,5 +118,13 @@
   {
     "link":"https://www.mitchellbosecke.com/post/java-proxies-from-dog-to-transactionaldog",
     "label":"The transactional dog"
+  },
+  {
+    "link":"https://www.ibphoenix.com/resources/documents/how_to/doc_396",
+    "label":"when we need to setup an old db into a new system"
+  },
+  {
+    "link":"https://www.youtube.com/watch?v=rfFnUVxrfAw&list=PLczA8pMWxlsFUFEtlc6MuucBX-OmKPKkN",
+    "label":"Soundtrack to listen while coding"
   }
 ]
