@@ -20,6 +20,24 @@
   },
   "work": [
     {
+      "company":"Jobsity",
+      "site":"https://www.jobsity.com/",
+      "position":"Outsourced Software Developer",
+      "start":"2021-02-01",
+      "end":"present day",
+      "description":"My first international experience, Jobsity applies the 'nearshore' outsourcing model, so clients don't suffer with big timezones differences.",
+      "projects": [
+        {
+          "name":"USA Today/Gannett - Cobalt LocalIQ",
+          "description":"Sales tool used for sales personnel to put sites creation on track for clients. Worked on micro service creation process, moving solution from rails monolith into cloud native solution."
+        },
+        {
+          "name":"USA Today/Gannett - Buy Online Direct",
+          "description":"Sales tool aimed to direct sell of online presence solutions. Stack is cloud native with some degree of transparency regarding the provider nature."
+        }
+      ]
+    },
+    {
       "company": "Grupo Casa Magalhães",
       "site": "https://www.casamagalhaes.com.br",
       "position": "Software developer",

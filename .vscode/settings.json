@@ -7,11 +7,12 @@
   ],
   "cSpell.words": [
     "Intellij",
+    "liquibase",
+    "makemigrate",
     "pipenv",
     "sdkman",
     "socketio",
     "stackoverflow",
-    "vuejs",
-    "liquibase"
+    "vuejs"
   ]
 }
