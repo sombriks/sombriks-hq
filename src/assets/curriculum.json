@@ -35,6 +35,9 @@
           "name":"USA Today/Gannett - Buy Online Direct",
           "description":"Sales tool aimed to direct sell of online presence solutions. Stack is cloud native with some degree of transparency regarding the provider nature."
         }
+      ],
+      "techstack":[
+        "Java","Javascript","SQL","AWS","HTML","CSS","React","jQuery","agile","git","bash","github","REST","Rails","migrations","serverless"
       ]
     },
     {
