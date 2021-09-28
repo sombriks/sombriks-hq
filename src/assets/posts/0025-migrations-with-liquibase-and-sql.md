@@ -103,6 +103,9 @@ expand for many lines.
 The files are read in alphabetical order therefore is a good call to timestamp
 them.
 
+Note: you can have more than one changeset per file. which is good to assure
+some transactional consistency on older databases.
+
 ## make sql templates easily
 
 Create those files in the proper name and format can be a bit boring, so you can
@@ -139,3 +142,5 @@ That way you can create migrate files with the following command:
 It's quite nice to see how flexible liquibase is, and if you need to see this
 example with more details, the source code is available
 [here](https://github.com/sombriks/sample-liquibase).
+
+2021-07-13
