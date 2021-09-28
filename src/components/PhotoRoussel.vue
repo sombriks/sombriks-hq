@@ -50,7 +50,7 @@ export default {
 @import "../design";
 .w100 {
   width: 100%;
-  fill: $color1;
+  fill: var(--color1);
 }
 .e3 {
   width: 3em;

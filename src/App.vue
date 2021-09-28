@@ -22,6 +22,9 @@ export default {
 </script>
 <style lang="scss" module>
 @import "./design";
+body {
+	background-color: var(--color0);
+}
 </style>
 
 

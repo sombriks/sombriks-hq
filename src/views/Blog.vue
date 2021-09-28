@@ -61,7 +61,7 @@ export default {
 		display: inline;
 	}
 	pre {
-		border: solid 0.5px $color1;
+		border: solid 0.5px var(--color1);
 		padding: 1em;
 		border-radius: 0.6em;
 	}
