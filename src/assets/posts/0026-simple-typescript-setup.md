@@ -212,7 +212,7 @@ more tools related to serious development with typescript. For instance, add a
 decent unit tests runtime and cool things like rest services or database access
 becomes easier for this point.
 
-You can see the code of this article in 
+You can see the code of this article in
 [this repo](https://github.com/sombriks/simple-typescript-setup).
 
 2021-12-09
