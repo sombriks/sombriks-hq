@@ -64,7 +64,7 @@ this:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:pro="http://www.liquibase.org/xml/ns/pro"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
     http://www.liquibase.org/xml/ns/pro 
     http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
     <includeAll path="changelogs" relativeToChangelogFile="true"/>
