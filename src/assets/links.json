@@ -142,5 +142,9 @@
   {
     "link":"http://ttcit.net/download/linux/",
     "label":"If you have that bad luck for vpn"
+  },
+  {
+    "link":"https://serverfault.com/a/337928/48288",
+    "label":"dbeaver always tries socket connection, so force it into tcp"
   }
 ]
