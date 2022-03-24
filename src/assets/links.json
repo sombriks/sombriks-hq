@@ -146,5 +146,9 @@
   {
     "link":"https://serverfault.com/a/337928/48288",
     "label":"dbeaver always tries socket connection, so force it into tcp"
+  },
+  {
+    "link":"https://stackoverflow.com/a/49043924/420096",
+    "label":"Whenever mysql dump refuses to restore, add `SET GLOBAL innodb_strict_mode = 0;` into the script!"
   }
 ]
