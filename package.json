@@ -10,29 +10,29 @@
     "release": "npm run build ; firebase deploy --token 1//0hw1PxECl4ghYCgYIARAAGBESNwF-L9Irrk588Rdu4SMim8mXJ5pVNe9aFVWbJAO71uYhf-rlTKclE3OpH7IfoAFI8girDX4cr_Q"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "core-js": "^3.4.3",
-    "highlight.js": "^10.0.3",
-    "marked": "^1.1.0",
-    "pdfmake": "^0.1.65",
-    "sass": "^1.24.0",
-    "sass-loader": "^8.0.0",
-    "vue": "^2.6.11",
+    "axios": "^0.21.4",
+    "core-js": "^3.21.1",
+    "highlight.js": "^10.7.3",
+    "marked": "^1.2.9",
+    "pdfmake": "^0.1.72",
+    "sass": "^1.49.9",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.14",
     "vue-analytics": "^5.22.1",
-    "vue-router": "^3.1.3",
-    "vuex": "^3.1.2"
+    "vue-router": "^3.5.3",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-plugin-router": "^4.1.0",
-    "@vue/cli-plugin-vuex": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
-    "babel-eslint": "^10.0.3",
+    "@vue/cli-plugin-babel": "^4.5.17",
+    "@vue/cli-plugin-eslint": "^4.5.17",
+    "@vue/cli-plugin-router": "^4.5.17",
+    "@vue/cli-plugin-vuex": "^4.5.17",
+    "@vue/cli-service": "^4.5.17",
+    "babel-eslint": "^10.1.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "firebase-tools": "^8.4.0",
-    "raw-loader": "^4.0.1",
-    "vue-template-compiler": "^2.6.10"
+    "firebase-tools": "^8.20.0",
+    "raw-loader": "^4.0.2",
+    "vue-template-compiler": "^2.6.14"
   }
 }
