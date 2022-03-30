@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7cutof');
-  src:  url('fonts/icomoon.eot?7cutof#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7cutof') format('truetype'),
-    url('fonts/icomoon.woff?7cutof') format('woff'),
-    url('fonts/icomoon.svg?7cutof#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?svguc5');
+  src:  url('fonts/icomoon.eot?svguc5#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?svguc5') format('truetype'),
+    url('fonts/icomoon.woff?svguc5') format('woff'),
+    url('fonts/icomoon.svg?svguc5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -42,6 +42,9 @@
 }
 .icon-github:before {
   content: "\eab0";
+}
+.icon-reddit:before {
+  content: "\eac6";
 }
 .icon-linkedin:before {
   content: "\eac9";
