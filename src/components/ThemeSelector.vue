@@ -30,7 +30,7 @@ export default {
   min-width: 2em;
   border: 2px solid var(--color1);
   border-radius: 4px;
-  opacity: 30%;
+  opacity: 0.3;
   display: flex;
 }
 .l {
@@ -42,8 +42,5 @@ export default {
   background-color: var(--color1);
   min-height: 1em;
   min-width: 1em;
-}
-.box:hover {
-  opacity: 100%;
 }
 </style>
