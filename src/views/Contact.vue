@@ -1,41 +1,41 @@
 <template>
   <div>
     <h3>Contact info</h3>
+    <photo-roussel />
     <div :class="$style.wrap">
       <a
         :class="$style.e3"
         target="_blank"
         :href="`mailto:${cv.contact.email}`"
       >
-        <img :class="$style.w100" src="/icons/email.svg" />
+        <span class="icon-mail4"></span>
       </a>
       <a :class="$style.e3" target="_blank" :href="`${cv.contact.github}`">
-        <img :class="$style.w100" src="/icons/github.svg" />
+        <span class="icon-github"></span>
       </a>
       <a
         :class="$style.e3"
         target="_blank"
         :href="`${cv.contact.stackoverflow}`"
       >
-        <img :class="$style.w100" src="/icons/stackoverflow.svg" />
+        <span class="icon-stackoverflow"></span>
       </a>
       <a :class="$style.e3" target="_blank" :href="`${cv.contact.linkedin}`">
-        <img :class="$style.w100" src="/icons/linkedin.svg" />
+        <span class="icon-linkedin"></span>
       </a>
       <a :class="$style.e3" target="_blank" :href="`${cv.contact.twitter}`">
-        <img :class="$style.w100" src="/icons/twitter.svg" />
+        <span class="icon-twitter"></span>
       </a>
       <a :class="$style.e3" target="_blank" :href="`${cv.contact.facebook}`">
-        <img :class="$style.w100" src="/icons/facebook.svg" />
+        <span class="icon-facebook2"></span>
       </a>
       <a :class="$style.e3" target="_blank" :href="`${cv.contact.instagram}`">
-        <img :class="$style.w100" src="/icons/instagram.svg" />
+        <span class="icon-instagram"></span>
       </a>
-      <!-- <a :class="$style.e3" target="_blank" :href="`tel:${cv.contact.telefone}`">
-        <img :class="$style.w100" src="/icons/telefone.svg"/>
-      </a> -->
+      <a :class="$style.e3" target="_blank" :href="`tel:${cv.contact.telefone}`">
+        <span class="icon-phone"></span>
+      </a>
     </div>
-    <photo-roussel />
   </div>
 </template>
 <script>
@@ -54,11 +54,9 @@ export default {
 </script>
 <style module lang="scss">
 @import "../design";
-.w100 {
-  width: 100%;
-  fill: var(--color1);
-}
 .e3 {
-  width: 3em;
+  width: 2em;
+  font-size: 2em;
+  justify-content: center;
 }
 </style>
