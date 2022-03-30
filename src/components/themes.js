@@ -15,5 +15,5 @@ export const changeTheme = (i) => {
   index = (index + 1) % themes.length;
   document.documentElement.style.setProperty("--color0", themes[index][0]);
   document.documentElement.style.setProperty("--color1", themes[index][1]);
-  console.log("current theme is #" + index);
+  // console.log("current theme is #" + index);
 };
