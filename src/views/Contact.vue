@@ -32,9 +32,9 @@
       <a :class="$style.e3" target="_blank" :href="`${cv.contact.instagram}`">
         <span class="icon-instagram"></span>
       </a>
-      <a :class="$style.e3" target="_blank" :href="`tel:${cv.contact.telefone}`">
+      <!-- <a :class="$style.e3" target="_blank" :href="`tel:${cv.contact.telefone}`">
         <span class="icon-phone"></span>
-      </a>
+      </a> -->
     </div>
   </div>
 </template>
