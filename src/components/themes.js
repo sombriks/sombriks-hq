@@ -1,4 +1,5 @@
 // my themes colors
+// ['bg','font']
 export const themes = [
   ["#eee", "#666"],
   ["#E5EFC1", "#557B83"],
@@ -8,6 +9,8 @@ export const themes = [
   ["#333", "orange"],
   ["#18251B", "#DEE5F8"],
   ["#666", "#eee"],
+  ["#055D89", "#A3A272"],
+  ["#00107A", "#E65A27"],
 ];
 let index = 0;
 export const changeTheme = (i) => {
