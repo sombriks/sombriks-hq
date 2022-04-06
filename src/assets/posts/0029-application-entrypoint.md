@@ -1,7 +1,7 @@
-# The history and importance of application entry point in a microservice era
+# Some history and thoughts about application entry point in a microservice era
 
-**Notice:** i will point some concepts the way i remember they, feel free to point
-me out if i got something historically wrong or simply incorrect by any
+**Notice:** i will point some concepts the way i remember them, feel free to
+point out if i got something historically wrong or simply incorrect by any
 communication channel available.
 
 I tend to stick with the basics most of the time because we build things on top
@@ -52,7 +52,7 @@ the memory and the state.
 Then came [Von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture)
 and I/O concept, then things get strange.
 
-## Slow persistent storage wasn't presente in Turing Machine
+## Slow persistent storage wasn't present in Turing Machine
 
 We had to get clever due to physical limitations. For instance, punch cards and
 magnetic tapes weren't the ideal form to interact with computers. Printers where
@@ -96,6 +96,58 @@ registry.
 
 This is how [linked lists](https://en.wikipedia.org/wiki/Linked_list) are built.
 
-### what is better than a list
+### What is better than a list
 
-<TBD>
+Once ordered, lists are quite easy to search. Time required to find something
+inside a list is
+[a logarithm over the list size](https://en.wikipedia.org/wiki/Binary_search_algorithm).
+
+Based on binary search technique, people started to use
+[tree structures](https://en.wikipedia.org/wiki/B-tree) abstractions to squeeze
+some speed from low speed memory.
+
+Most filesystems are still based on tree abstractions.
+
+Filesystems are a strong candidate for *concrete*.
+
+## Users folders and permissions
+
+By the moment computers became not only programable but also reprogrammable, the
+demand for them also raised. That led to time sharing, remote terminals and the
+abstract idea of user hierarchy.
+
+Instead of just programs residing in memory, now there are also users.
+
+Which led to confusing concept of an user inside a folder, interacting with
+programs and files using a shell.
+
+Programs came from executable files, usually from folders present on PATH
+environment variable. Yes there is an environment for users now.
+
+Although users concur for computing resources they can't interfere in other user
+resources if there is no explicit permission.
+
+Users, environments and permissions are there even today and also a good
+candidate for *concrete* in computing.
+
+## Services from internet
+
+When running locally, a program is tied to the
+[current working directory](https://en.wikipedia.org/wiki/Working_director) and
+what else the user running the program can do.
+
+But when consuming programs over the internet, let's say a modern web
+application, that concept gets a bit empty.
+
+The service address is the new current working directory, and the agent (your
+internet browser or your service client consuming the internet thing) is the new
+user, environment and permissions.
+
+## What else
+
+That's it. i was thinking about entry point and how it changed through time.
+
+I don't know if we can call service address as a true successor for operating
+system-based programs entrypoint but it's a quite good candidate for *concrete*.
+
+2022-04-05
