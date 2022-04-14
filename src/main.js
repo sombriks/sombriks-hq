@@ -5,7 +5,7 @@ import router from "./router";
 import store from "./store";
 
 import VueGtag from "vue-gtag";
-4;
+
 Vue.use(
   VueGtag,
   {
