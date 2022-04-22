@@ -6,16 +6,16 @@
 </template>
 
 <script>
-import { changeTheme } from "./themes";
+import { changeTheme, index } from "./themes";
 
 export default {
   name: "theme-selector",
   data() {
-    return {};
+    return { index };
   },
   methods: {
     change() {
-      changeTheme();
+      this.index = changeTheme();
     },
   },
 };
