@@ -10,6 +10,12 @@ Vue.use(
   VueGtag,
   {
     config: { id: "G-SRC55ZDV0D" },
+    pageTrackerTemplate(to) {
+      return {
+        page_title: to.path,
+        page_path: to.path
+      }
+    }
   },
   router
 );
