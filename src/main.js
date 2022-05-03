@@ -12,8 +12,8 @@ Vue.use(
     config: { id: "G-SRC55ZDV0D" },
     pageTrackerTemplate(to) {
       return {
-        page_title: to.path,
-        page_path: to.path
+        page_title: to.fullPath,
+        page_path: to.fullPath
       }
     }
   },
