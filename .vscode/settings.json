@@ -10,6 +10,7 @@
     "Intellij",
     "liquibase",
     "makemigrate",
+    "pageview",
     "pipenv",
     "sdkman",
     "socketio",

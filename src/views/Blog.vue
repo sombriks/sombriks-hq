@@ -38,6 +38,7 @@ export default {
     "$route.params.post"(v) {
       if (v) this.carrega();
       else this.current = null;
+      this.$gtag.pageview(this.$route)
     },
   },
   methods: {
