@@ -3,7 +3,7 @@
 [Back in time](#0007-vue-and-react-side-by-side.md) i did a similar comparison
 but boy time flies.
 
-But this time let's focus. on the global source of truth solution.
+But this time let's focus on the global source of truth solution.
 
 ## About global state / source of truth
 
