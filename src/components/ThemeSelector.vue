@@ -1,21 +1,18 @@
 <template>
-  <div class="box" @click="change" @scroll="change">
-    <div class="l"></div>
+  <div class="box" @click="change">
+    <div class="l">{{ $store.state.index }}</div>
     <div class="r"></div>
   </div>
 </template>
 
 <script>
-import { changeTheme, index } from "./themes";
+import { changeTheme } from "./themes";
 
 export default {
   name: "theme-selector",
-  data() {
-    return { index };
-  },
   methods: {
     change() {
-      this.index = changeTheme();
+      this.$store.commit("setIndex", changeTheme());
     },
   },
 };

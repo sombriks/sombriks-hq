@@ -26,7 +26,7 @@ export default {
   mounted() {
     let x = themes.length;
     let i = Math.floor(Math.random() * x);
-    changeTheme(i);
+    this.$store.commit("setIndex", changeTheme(i));
   },
   components: { ThemeSelector },
 };
