@@ -1,6 +1,6 @@
 # AWS cli introduction
 
-Everything you can do from web aws management console you can do from the
+Everything* you can do from web aws management console you can do from the
 command line.
 
 In this article we'll talk about aws cli and what does it can do.
@@ -64,14 +64,19 @@ and see your file:
 
 ![post-0032-aws-management-console](post-pics/0032-introduction-to-aws-cli/s3-buckets.png)
 
-Remember to not keep uncessary resources draining your credit card on aws.
+Remember to not keep unnecessary resources draining your credit card on aws.
 Delete the file and the bucket, either using the web console or the cli.
 
 ## Further steps
+
+You can manage the
+[static site publishing](https://github.com/sombriks/sample-static-site-on-s3-example) easily.
 
 The advantage to use the cli tool instead of web panel is the script creation.
 
 With enough practice and docs reading you can automate your production pipeline
 entirely.
+
+[*] unless there is a nasty bug.
 
 2022-05-17
