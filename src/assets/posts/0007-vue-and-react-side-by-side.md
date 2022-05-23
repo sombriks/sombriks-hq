@@ -901,7 +901,7 @@ export default {
 </script>
 ```
 
-In order to properly set initial local state, the 
+In order to properly set initial local state, the
 [created()](https://vuejs.org/v2/api/#created) lifecycle hook is employed.
 
 ## 2 - Conclusion. Wait, what

@@ -8,19 +8,19 @@ but it didn't stopped there: it features as backend language, desktop and even
 web frontend, not limited to jvm anymore.
 
 In this article we'll see how to use kotlin to develop a Enterprise jvm-based
-solution (tempted to call it KEE, since people usually call it JEE, but it's 
+solution (tempted to call it KEE, since people usually call it JEE, but it's
 awkward.)
 
 ## About JEE
 
-Back in time java enterprise was a hot trend and people where divided between 
+Back in time java enterprise was a hot trend and people where divided between
 spring framework and the full featured application servers implementing the Java
 Enterprise Specification.
 
 Time passed, spring grow over app server flaws, app servers learned from spring
 and now both has your value.
 
-Application servers nowadays still implement a strong concerns separation and 
+Application servers nowadays still implement a strong concerns separation and
 also starts to scale down too (not only up) with the Microprofile specification.
 
 ## An enterprise project
@@ -40,13 +40,13 @@ sample-jee-kotlin/
 └── settings.gradle
 ```
 
-Each module is a gradle sub-project. This is important because each module can 
+Each module is a gradle sub-project. This is important because each module can
 handle specifics of the business without direct impact on other details.
 
 Since it's a multi-project setup, root `build.gradle` is different from regular
 gradle script:
 
-```gradle
+```groovy
 // parent project just to set general info and repo urls
 allprojects {
 
@@ -83,8 +83,7 @@ Notice the kotlin folder.
 
 This `build.gradle` is different:
 
-```gradle
-
+```groovy
 plugins {
   id 'java'
   id 'org.jetbrains.kotlin.jvm' version '1.3.61'
@@ -120,7 +119,6 @@ allOpen {
     'javax.ws.rs.Path'
   )
 }
-
 ```
 
 Most of it is kotlin language setup.
@@ -131,12 +129,12 @@ server we'll adopt. This is an _agnostic_ or _portable_ enterprise project.
 Still about dependencies, since each module is an isolated project, we can list
 them as dependencies if needed.
 
-Instead of use on single huge source set, we can manage smaller ones, doing a 
+Instead of use on single huge source set, we can manage smaller ones, doing a
 better concern separation.
 
 ## When old friends meet new comrades
 
-Enterprise Java infrastructure is almost ubiquous by the time of this article 
+Enterprise Java infrastructure is almost ubiquous by the time of this article
 writing since it's huge popularity over past 25 years.
 
 "If it works, don't change it" remains an important rule for mission-critical
@@ -286,7 +284,7 @@ Right now, if you want a really pleasant developer experience using kotlin with
 all the jee stuff you will need intellij ultimate. They created the language, so
 they offer the best IDE support right now.
 
-To see the full source code of this article, click 
+To see the full source code of this article, click
 [here](https://github.com/sombriks/sample-jee-kotlin).
 
 2020-06-03

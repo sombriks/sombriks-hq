@@ -62,7 +62,6 @@ the shell executable *inside* the container.
 
 Funny fact is the names given by the docker to containers, :-)
 
-
 ## The Dockerfile
 
 This file is a recipe.
@@ -70,7 +69,7 @@ This file is a recipe.
 It can be a bit confusing sometimes, like the difference between RUN, CMD and
 ENTRYPOINT, but usually it is pretty straightforward.
 
-It defines the image. 
+It defines the image.
 
 Images can inherit from other images using the **FROM** statement.
 
@@ -85,12 +84,12 @@ docker run -it -p 8080:8080 -v /path/on/host:/path/on/container:z drunk_swan
 The **:z** thing is to solve SELinux issues.
 
 The **-p 8080:8080** is pretty much the *-v*, first port is on host, second is
-on container. 
+on container.
 
 Volumes are nice if you want to share content with the container. Files from
 some project you're developing, for example.
 
-## Publishing your images.
+## Publishing your images
 
 Do the docker login so you can create, tag and commit your images to the public
 registry.
@@ -102,6 +101,6 @@ That's it, things can be simplified once you decide to accept docker on your
 life.
 
 Also you can write up [docker-compose](https://docs.docker.com/compose/) files,
-but at this point you can read the official docs by yourself. 
+but at this point you can read the official docs by yourself.
 
 2019-10-05

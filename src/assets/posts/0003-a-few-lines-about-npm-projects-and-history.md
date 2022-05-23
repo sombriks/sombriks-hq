@@ -10,7 +10,7 @@ When i needed to setup a java project, i used to start creating the eclipse proj
 
 And then i found [maven](https://en.wikipedia.org/wiki/Apache_Maven).
 
-The idea itself wasn't new. [Debian's apt-get](https://en.wikipedia.org/wiki/APT_(Debian) already did something similar for years.
+The idea itself wasn't new. [Debian's apt-get](<https://en.wikipedia.org/wiki/APT_(Debian>) already did something similar for years.
 
 Even yet, due to my [slackware](http://www.slackware.com/) background, i used to have a little resistance against apt-like tools.
 

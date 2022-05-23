@@ -10,9 +10,9 @@ In this post i'll share what i did to properly prepare
 [physalis](https://exvius.gamepedia.com/Physalis), the machine succeeding
 [ramza](https://exvius.gamepedia.com/Ramza), for it's maiden workday ride.
 
-## What to do with new Hardware? Pour more hardware on it!
+## What to do with new Hardware? Pour more hardware on it
 
-This is a [Lenovo IdeaPad S145-15API](https://www.lenovo.com/br/pt/laptops/ideapad/ideapad-s-series/Lenovo-IdeaPad-S145-15API/p/88IPS101327) 
+This is a [Lenovo IdeaPad S145-15API](https://www.lenovo.com/br/pt/laptops/ideapad/ideapad-s-series/Lenovo-IdeaPad-S145-15API/p/88IPS101327)
 with expandable memory and a free sata slot. So i put a 16GB RAM module on it
 and a kingston 480GB SSD drive on it.
 
@@ -34,7 +34,7 @@ Whenever you prepare a fedora box, it's important to make the
 ### SDK's needed for pay the rent and for fun
 
 Nowadays i do a lot of [vue](https://vuejs.org/),
-[postgresql](https://www.postgresql.org/) and 
+[postgresql](https://www.postgresql.org/) and
 [java](https://jdk.java.net/java-se-ri/8-MR3). And
 [a container](https://podman.io/) times to times.
 
@@ -51,7 +51,7 @@ database management. Forget that *admin* silly things, what you really need is
 In order to deal with the sweet dread of java stuff, you'll need not only the
 jdk itself, you'll need the [npm](https://www.npmjs.com/) predecessors.
 
-Even if fedora can bring you some of them with its 
+Even if fedora can bring you some of them with its
 [dnf](https://fedoraproject.org/wiki/DNF) package management, a cleaner way to
 get these java things running (for instance, ant, maven and gradle) is
 [sdkman](https://sdkman.io/). Install it and get all the tooling you will need.
@@ -61,7 +61,7 @@ Oh, [git](https://git-scm.com/) comes with fedora, so do not fear nothing.
 ### Corporative communications
 
 There is a [rpm package for slack](https://slack.com/intl/pt-br/downloads/linux)
-and Discord offers a [tarball](https://discord.com/new/download) containing a 
+and Discord offers a [tarball](https://discord.com/new/download) containing a
 .desktop file which you can edit and put inside `~/.local/share/applications`
 folder.
 
@@ -94,7 +94,7 @@ an user can watch:
 fs.inotify.max_user_watches = 524288
 ```
 
-## Then we work.
+## Then we work
 
 That's it. this is what i do on my machines nowadays in order to get ready for
 war.
