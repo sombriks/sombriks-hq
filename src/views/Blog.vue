@@ -22,11 +22,13 @@ import posts from "../assets/posts";
 import marked from "marked";
 import hl from "highlight.js";
 
+const rPosts = posts.reverse();
+
 export default {
   name: "blog",
   data() {
     return {
-      posts,
+      posts: rPosts,
       current: "",
       loading: false,
     };
@@ -38,7 +40,7 @@ export default {
     "$route.params.post"(v) {
       if (v) this.carrega();
       else this.current = null;
-      this.$gtag.pageview(this.$route)
+      this.$gtag.pageview(this.$route);
     },
   },
   methods: {

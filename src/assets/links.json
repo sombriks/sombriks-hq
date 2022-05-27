@@ -128,14 +128,6 @@
     "label": "Learn how to use tmux"
   },
   {
-    "link": "https://withkoji.com/pt-br/docs/misc/developing-for-kaios",
-    "label": "Let's develop KaiOS apps!"
-  },
-  {
-    "link": "https://nolanlawson.com/2019/09/22/the-joy-and-challenge-of-developing-for-kaios/",
-    "label": "Let's develop KaiOS apps, i'm serious!"
-  },
-  {
     "link": "https://dev.to/blacksonic/the-vue-3-upgrade-guide-4dc4",
     "label": "The upgrade from Vue2 to Vue3, simply explained"
   },
@@ -196,7 +188,7 @@
     "link": "https://color.adobe.com/pt/create/color-wheel"
   },
   {
-    "label": "That day i decided tto rant about 'native java'",
+    "label": "That day i decided to rant about 'native java'",
     "link": "https://twitter.com/sombriks/status/1510432070203543554"
   },
   {
