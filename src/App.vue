@@ -93,15 +93,27 @@ a.e3 {
   .container {
     max-width: 99%;
   }
+
+  #footer {
+    margin-top: 1em;
+  }
 }
 @media (min-width: 480px) {
   .container {
     max-width: 95%;
   }
+
+  #footer {
+    margin-top: 2em;
+  }
 }
 @media (min-width: 800px) {
   .container {
     max-width: 75%;
+  }
+
+  #footer {
+    margin-top: 3em;
   }
 }
 @media (min-width: 1440px) {
