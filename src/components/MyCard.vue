@@ -26,4 +26,7 @@ export default {
 .cardContent {
   margin: 1em;
 }
+.cardContent > hr{
+  border: 1px solid var(--color1);
+}
 </style>
