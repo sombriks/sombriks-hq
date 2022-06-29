@@ -60,6 +60,17 @@
       it's own word.
     </p>
     <h2>
+      <a href="https://github.com/sombriks/simple-steps-js">simple-steps-js</a>
+    </h2>
+    <p>
+      I had the need for a simple timeline executor so i could perform some
+      actions with a given delay.
+    </p>
+    <p>
+      It's a very simple, very humble library so i can reuse it in some
+      frontends more easily.
+    </p>
+    <h2>
       <i><b>More to come</b></i>
     </h2>
     <p>
