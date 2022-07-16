@@ -206,5 +206,9 @@
   {
     "label": "Cool css things",
     "link": "https://twitter.com/Amit_T18/status/1524712527317241862"
+  },
+  {
+    "label":"When i had to downgrade security to make vpn work",
+    "link":"https://bugzilla.redhat.com/show_bug.cgi?id=1851585#c4"
   }
 ]
