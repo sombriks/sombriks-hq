@@ -210,5 +210,9 @@
   {
     "label":"When i had to downgrade security to make vpn work",
     "link":"https://bugzilla.redhat.com/show_bug.cgi?id=1851585#c4"
+  },
+  {
+    "label": "make chrome share screen properly on wayland",
+    "link":"https://www.freecodecamp.org/news/how-to-fix-black-screen-on-google-chrome-on-linux-os"
   }
 ]
