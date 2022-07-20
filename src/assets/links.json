@@ -214,5 +214,9 @@
   {
     "label": "make chrome share screen properly on wayland",
     "link":"https://www.freecodecamp.org/news/how-to-fix-black-screen-on-google-chrome-on-linux-os"
+  },
+  {
+    "label": "how to properly use CRON",
+    "link": "https://crontab.guru"
   }
 ]
