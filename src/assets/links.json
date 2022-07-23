@@ -208,19 +208,23 @@
     "link": "https://twitter.com/Amit_T18/status/1524712527317241862"
   },
   {
-    "label": "when you need to fix git branches the hard way",
+    "label": "When you need to fix git branches the hard way",
     "link": "https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/"
   },
   {
-    "label":"When i had to downgrade security to make vpn work",
-    "link":"https://bugzilla.redhat.com/show_bug.cgi?id=1851585#c4"
+    "label": "When i had to downgrade security to make vpn work",
+    "link": "https://bugzilla.redhat.com/show_bug.cgi?id=1851585#c4"
   },
   {
-    "label": "make chrome share screen properly on wayland",
-    "link":"https://www.freecodecamp.org/news/how-to-fix-black-screen-on-google-chrome-on-linux-os"
+    "label": "Make chrome share screen properly on wayland",
+    "link": "https://www.freecodecamp.org/news/how-to-fix-black-screen-on-google-chrome-on-linux-os"
   },
   {
-    "label": "how to properly use CRON",
+    "label": "How to properly use CRON",
     "link": "https://crontab.guru"
+  },
+  {
+    "label": "It used to be a blog post, now it's just a tweet",
+    "link": "https://twitter.com/sombriks/status/1550903875649011715"
   }
 ]
