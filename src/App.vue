@@ -52,6 +52,9 @@
         <a :class="$style.e3" target="_blank" :href="`${cv.contact.reddit}`">
           <span class="icon-reddit"></span>
         </a>
+        <a :class="$style.e3" target="_blank" :href="`${cv.contact.keybase}`">
+          <span class="icon-keybase"></span>
+        </a>
         <!-- <a :class="$style.e3" target="_blank" :href="`tel:${cv.contact.telefone}`">
         <span class="icon-phone"></span>
       </a> -->
