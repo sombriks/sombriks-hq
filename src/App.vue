@@ -1,22 +1,23 @@
 <template>
   <div :class="$style.container">
     <h1>{{ $store.state.title }}</h1>
-    <ThemeSelector />
+    <ThemeSelector/>
     <div>
       <router-link v-if="$route.path != '/principal'" to="/principal"
-        >Back</router-link
+      >Back
+      </router-link
       >
     </div>
     <div class="container">
-      <router-view />
+      <router-view/>
     </div>
     <div id="footer">
       <div>&copy; sombriks (Leonardo Silveira) {{ year }}</div>
       <div>
         <a
-          :class="$style.e3"
-          target="_blank"
-          :href="`mailto:${cv.contact.email}`"
+            :class="$style.e3"
+            target="_blank"
+            :href="`mailto:${cv.contact.email}`"
         >
           <span class="icon-mail4"></span>
         </a>
@@ -24,9 +25,9 @@
           <span class="icon-github"></span>
         </a>
         <a
-          :class="$style.e3"
-          target="_blank"
-          :href="`${cv.contact.stackoverflow}`"
+            :class="$style.e3"
+            target="_blank"
+            :href="`${cv.contact.stackoverflow}`"
         >
           <span class="icon-stackoverflow"></span>
         </a>
@@ -43,9 +44,9 @@
           <span class="icon-instagram"></span>
         </a>
         <a
-          :class="$style.e3"
-          target="_blank"
-          :href="`${cv.contact.hackerrank}`"
+            :class="$style.e3"
+            target="_blank"
+            :href="`${cv.contact.hackerrank}`"
         >
           <span class="icon-hackerrank"></span>
         </a>
@@ -64,25 +65,27 @@
 </template>
 <script>
 import cv from "./assets/curriculum.json";
-import { changeTheme, themes } from "./components/themes";
+import {changeTheme, themes} from "./components/themes";
 import ThemeSelector from "./components/ThemeSelector.vue";
+
 const year = new Date().getFullYear();
 
 export default {
   name: "app",
   data() {
-    return { year, cv };
+    return {year, cv};
   },
   mounted() {
     let x = themes.length;
     let i = Math.floor(Math.random() * x);
     this.$store.commit("setIndex", changeTheme(i));
   },
-  components: { ThemeSelector },
+  components: {ThemeSelector},
 };
 </script>
 <style lang="scss" module>
 @import "./design";
+
 a.e3 {
   display: inline-block;
 }
@@ -92,6 +95,7 @@ a.e3 {
 #footer {
   margin-top: 5em;
 }
+
 @media (max-width: 479px) {
   .container {
     max-width: 99%;
@@ -101,6 +105,7 @@ a.e3 {
     margin-top: 1em;
   }
 }
+
 @media (min-width: 480px) {
   .container {
     max-width: 95%;
@@ -110,6 +115,7 @@ a.e3 {
     margin-top: 2em;
   }
 }
+
 @media (min-width: 800px) {
   .container {
     max-width: 75%;
@@ -119,11 +125,13 @@ a.e3 {
     margin-top: 3em;
   }
 }
+
 @media (min-width: 1440px) {
   .container {
     max-width: 50%;
   }
 }
+
 @media (min-width: 1920px) {
   .container {
     max-width: 40%;

@@ -2,18 +2,19 @@
   <div>
     <div v-if="!current && !loading" :class="$style.wrap">
       <router-link tag="a" :to="`/blog/${p}`" v-for="p in posts" :key="p">{{
-        p
-      }}</router-link>
+          p
+        }}
+      </router-link>
     </div>
     <div :class="$style.simpleLinks" v-if="current" v-html="current"></div>
     <h2 v-if="loading">Loading...</h2>
     <div :class="$style.backBlog">
       <router-link
-        :class="$style.simpleLinks"
-        v-if="!loading && current"
-        to="/blog"
-        >Back</router-link
-      >
+          :class="$style.simpleLinks"
+          v-if="!loading && current"
+          to="/blog"
+      >Back
+      </router-link>
     </div>
   </div>
 </template>
@@ -70,19 +71,23 @@ export default {
 </script>
 <style module lang="scss">
 @import "../design";
+
 .simpleLinks {
   a {
     display: inline;
   }
+
   pre {
     border: solid 0.5px var(--color1);
     padding: 1em;
     border-radius: 0.6em;
   }
+
   img {
     width: 100%;
   }
 }
+
 .backBlog {
   display: flex;
   justify-content: center;
