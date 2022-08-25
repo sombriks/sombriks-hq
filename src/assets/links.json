@@ -226,5 +226,9 @@
   {
     "label": "It used to be a blog post, now it's just a tweet",
     "link": "https://twitter.com/sombriks/status/1550903875649011715"
+  },
+  {
+    "label": "A must-have for frontend. A color picker",
+    "link": "https://chrome.google.com/webstore/detail/color-picker-for-chrome/clldacgmdnnanihiibdgemajcfkmfhia"
   }
 ]
