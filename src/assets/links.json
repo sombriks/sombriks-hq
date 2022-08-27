@@ -242,5 +242,9 @@
   {
     "label": "So, mariadb on mac (using brew) can be tricky",
     "link": "https://gist.github.com/nickcernis/1c2a1c98a0660d4798d55b1999d52b4c"
+  },
+  {
+    "label": "Also postgresql from homebrew can be tricky",
+    "link": "https://daily-dev-tips.com/posts/installing-postgresql-on-a-mac-with-homebrew"
   }
 ]
