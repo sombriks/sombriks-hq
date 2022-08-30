@@ -23,11 +23,21 @@
   },
   "work": [
     {
+      "company":"Nearsure",
+      "site":"https://www.nearsure.com/",
+      "position":"Backend Java Developer",
+      "start": "2022-08-29",
+      "end":"present day",
+      "description":"under construction",
+      "projects":[],
+      "techstack":["Java"]
+    },
+    {
       "company":"Jobsity",
       "site":"https://www.jobsity.com/",
       "position":"Outsourced Software Developer",
       "start":"2021-02-01",
-      "end":"present day",
+      "end":"2022-08-29",
       "description":"My first international experience, Jobsity applies the 'nearshore' outsourcing model, so clients don't suffer with big timezones differences.",
       "projects": [
         {
