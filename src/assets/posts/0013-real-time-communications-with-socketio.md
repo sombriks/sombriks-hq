@@ -105,7 +105,7 @@ console.log("server online");
 
 There is a namespace called **/lobby** and the rtc server is listening on port
 **3001**. The server itself listens to _connect_ events and once the subscriber
-connects three more custom events may happen: 
+connects three more custom events may happen:
 
 - **new-guest:** when a player connects.
 - **move-to:** when a player moves around.
@@ -164,7 +164,7 @@ The vue cli offers first class support for development time and is quite
 flexible, allowing tweaks on every piece of configuration.
 
 We adopt [vuex](https://vuex.vuejs.org/) there in order to better decouple data
-state management from the view component. 
+state management from the view component.
 
 Also it has the plus to make rtc-ish interactions transparent to
 the remaining components, like the [vue-konva](https://konvajs.org/docs/vue/),
@@ -259,24 +259,27 @@ export default store;
 
 What is happening here:
 
-- The connection with the rtc server and it's namespace happens on the following line: 
+- The connection with the rtc server and it's namespace happens on the following line:
 
   ```javascript
   export const sock = io("127.0.0.1:3001/lobby");
   ```
+
   on socket.io, connection establishment is automatic, once it connects it emits
   the _connect_ event which the server already awaits.
 - Just after the connection gets created, the client emits the **new-guest**
   custom event:
+
   ```javascript
   sock.emit("new-guest", guest, g => {
     store.commit("updateGuest", g);
   });
   ```
+
   Emitters can hold a third argument which is the _ack_ function, if you observe
   the server counterpart of this event, the ack function is used back to return
   an augmented version of the newly-created guest.
-    
+
 Store and rtc client play quite well each other and the store mutations are used
 to propagate data easily to all components accessible to it.
 

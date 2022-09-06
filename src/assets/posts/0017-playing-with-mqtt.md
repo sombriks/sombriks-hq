@@ -20,7 +20,7 @@ var server = require('net').createServer(aedes.handle)
 var port = 1883
 
 server.listen(port, function () {
-	console.log('server listening on port', port)
+  console.log('server listening on port', port)
 })
 ```
 
@@ -37,7 +37,7 @@ but can be a subscriber to a management topic to receive proper publishing info.
 It's more like a state machine.
 
 The broker on the other hand is the common nexus between publishers and
-subscribers. it's main mission i just to keep the show running, creating the 
+subscribers. it's main mission i just to keep the show running, creating the
 topics, properly announcing to topics new messages.
 
 We tend to think about the broker as "the server", however it does not works as
@@ -51,15 +51,15 @@ const mqtt = require("mqtt");
 const client = mqtt.connect("mqtt://localhost:1883");
 
 client.on("connect", ack => {
-	console.log("connected!");
+  console.log("connected!");
 
-	setInterval(_ => {
-		client.publish("test", "Hello mqtt " + new Date().getTime());
-	}, 3000);
+  setInterval(_ => {
+    client.publish("test", "Hello mqtt " + new Date().getTime());
+  }, 3000);
 });
 
 client.on("error", err => {
-	console.log(err);
+  console.log(err);
 });
 ```
 
@@ -91,7 +91,7 @@ client.on("error", err => {
 
 There is
 [pretty good materials](https://randomnerdtutorials.com/what-is-mqtt-and-how-it-works/)
-explaining the internals of the protocol, And the 
+explaining the internals of the protocol, And the
 [aedes broker](https://github.com/mcollina/aedes) implementation is the current
 state of the art in nodejs world.
 

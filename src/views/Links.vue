@@ -1,7 +1,6 @@
-
 <template>
   <div>
-    <a v-for="l in links" :key="l.link" target="_blank" :href="l.link">{{
+    <a :class="$style.compact" v-for="l in links" :key="l.link" target="_blank" :href="l.link">{{
       l.label
     }}</a>
   </div>
@@ -15,9 +14,12 @@ export default {
     return {
       links,
     };
-  }
+  },
 };
 </script>
 <style module lang="scss">
 @import "../design";
+a.compact {
+  display: inline-block;
+}
 </style>

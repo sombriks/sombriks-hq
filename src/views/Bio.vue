@@ -1,5 +1,6 @@
 <template>
   <div>
+    <photo-roussel/>
     <p>
       If you need a print-friendly version click
       <i><span @click="makeCV">here</span></i
@@ -25,11 +26,11 @@
         <h6>Tech stack</h6>
         <div :class="$style.wrap">
           <a
-            v-for="st in w.techstack"
-            :key="st"
-            :target="st"
-            :href="`https://bing.com?q=${st}`"
-            >{{ st }}</a
+              v-for="st in w.techstack"
+              :key="st"
+              :target="st"
+              :href="`https://bing.com?q=${st}`"
+          >{{ st }}</a
           >
         </div>
       </template>
@@ -51,13 +52,14 @@
 <script>
 import cv from "../assets/curriculum.json";
 import MyCard from "../components/MyCard";
-import { makeCV } from "../components/make-cv-pdf";
+import PhotoRoussel from "../components/PhotoRoussel";
+import {makeCV} from "../components/make-cv-pdf";
 
 export default {
   name: "bio",
-  components: { MyCard },
+  components: {MyCard, PhotoRoussel},
   data() {
-    return { cv };
+    return {cv};
   },
   methods: {
     makeCV

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?v3jds2');
+  src:  url('fonts/icomoon.eot?v3jds2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?v3jds2') format('truetype'),
+    url('fonts/icomoon.woff?v3jds2') format('woff'),
+    url('fonts/icomoon.svg?v3jds2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-keybase:before {
+  content: "\e900";
+  color: #33a0ff;
+}
+.icon-hackerrank:before {
+  content: "\e902";
+  color: #2ec866;
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-mail4:before {
+  content: "\ea86";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-reddit:before {
+  content: "\eac6";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-stackoverflow:before {
+  content: "\ead0";
+}
