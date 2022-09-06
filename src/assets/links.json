@@ -150,5 +150,9 @@
   {
     "link":"https://stackoverflow.com/a/49043924/420096",
     "label":"Whenever mysql dump refuses to restore, add `SET GLOBAL innodb_strict_mode = 0;` into the script!"
+  },
+  {
+    "label":"Proper way to set java version on mac",
+    "link":"https://twitter.com/sombriks/status/1567239336977899521"
   }
 ]
