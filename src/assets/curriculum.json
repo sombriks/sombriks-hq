@@ -30,7 +30,7 @@
       "end":"present day",
       "description":"under construction",
       "projects":[],
-      "techstack":["Java"]
+      "techstack":["Java","microservices","mysql","angularjs","liquibase","sumologic","aws","github","bash"]
     },
     {
       "company":"Jobsity",
