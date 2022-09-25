@@ -3,10 +3,15 @@
     <h1>{{ $store.state.title }}</h1>
     <ThemeSelector/>
     <div>
-      <router-link v-if="$route.path != '/principal'" to="/principal"
-      >Back
-      </router-link
-      >
+      <router-link 
+        v-if="$route.path != '/principal' && !$route.path.match(/\/blog\/.+/)" 
+        to="/principal">
+        Back
+      </router-link>
+      <router-link 
+        v-if="$route.path.match(/\/blog\/.+/)" to="/blog">
+        Back
+      </router-link>
     </div>
     <div class="container">
       <router-view/>
