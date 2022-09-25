@@ -7,7 +7,7 @@
     "build": "npm run articles ; vue-cli-service build",
     "lint": "vue-cli-service lint",
     "articles": "sh list-articles.sh",
-    "release": "npm run build ; firebase deploy --token 1//0hw1PxECl4ghYCgYIARAAGBESNwF-L9Irrk588Rdu4SMim8mXJ5pVNe9aFVWbJAO71uYhf-rlTKclE3OpH7IfoAFI8girDX4cr_Q"
+    "release": "npm run build ; firebase deploy --token $TOKEN"
   },
   "dependencies": {
     "axios": "^0.21.4",

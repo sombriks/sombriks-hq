@@ -5,6 +5,8 @@ on:
       - master
 jobs:
   build:
+    env:
+      TOKEN: ${{secrets.TOKEN}}
     runs-on: ubuntu-latest
     strategy:
       matrix:

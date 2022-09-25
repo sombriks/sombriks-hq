@@ -1,8 +1,8 @@
 # We need to talk about window functions
 
 SQL is the de-facto standard language when we need to deal with data definition,
-manipulation and refinement. We]
-[discussed in the past](#/blog/0016-vanilla-sql-cookbook.md) a few topics on
+manipulation and refinement. We
+[discussed in the past](/#/blog/0016-vanilla-sql-cookbook.md) a few topics on
 that, but one of most important topics were not there, so let fix that.
 
 ## What is a window
