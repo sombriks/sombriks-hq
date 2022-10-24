@@ -17,40 +17,107 @@
     "github": "https://github.com/sombriks",
     "linkedin": "https://www.linkedin.com/in/sombriks",
     "stackoverflow": "https://stackoverflow.com/users/420096/sombriks?tab=profile",
-    "keybase":"https://keybase.io/sombriks",
-    "hackerrank":"https://www.hackerrank.com/sombriks",
+    "keybase": "https://keybase.io/sombriks",
+    "hackerrank": "https://www.hackerrank.com/sombriks",
     "reddit": "https://www.reddit.com/user/sombriks"
   },
   "work": [
     {
-      "company":"Nearsure",
-      "site":"https://www.nearsure.com/",
-      "position":"Backend Java Developer",
-      "start": "2022-08-29",
-      "end":"present day",
-      "description":"Nearsure is a 'nearshore' outsourcing company with many US-based clients.",
-      "projects":[],
-      "techstack":["Java","microservices","mysql","angularjs","liquibase","sumologic","aws","github","bash"]
-    },
-    {
-      "company":"Jobsity",
-      "site":"https://www.jobsity.com/",
-      "position":"Outsourced Software Developer",
-      "start":"2021-02-01",
-      "end":"2022-08-29",
-      "description":"My first international experience, Jobsity applies the 'nearshore' outsourcing model, so clients don't suffer with big timezones differences.",
+      "company": "Rede Inova",
+      "site": "https://www.redeinova.com.br/",
+      "position": "Senior Fullstack Developer",
+      "start": "2022-07-13",
+      "end": "present day",
+      "description": "Redeinova is a technology company from Brasil delivering solutions to public and private sectors",
       "projects": [
         {
-          "name":"USA Today/Gannett - Cobalt LocalIQ",
-          "description":"Sales tool used for sales personnel to put sites creation on track for clients. Worked on micro service creation process, moving solution from rails monolith into cloud native solution."
+          "name": "Kanoê",
+          "description": "It's a java-based solution to improve efficiency of legal process at PGE-RO"
         },
         {
-          "name":"USA Today/Gannett - Buy Online Direct",
-          "description":"Sales tool aimed to direct sell of online presence solutions. Stack is cloud native with some degree of transparency regarding the provider nature."
+          "name": "42",
+          "description": "It's a java-based solution to recover cross-reference information at PGE-RO"
+        },
+        {
+          "name": "Mapinguari",
+          "description": "It's a java-based solution to improve legal payments at PGE-RO"
         }
       ],
-      "techstack":[
-        "Java","Javascript","SQL","AWS","HTML","CSS","React","jQuery","agile","git","bash","github","REST","Rails","migrations","serverless"
+      "techstack": [
+        "Java",
+        "microservices",
+        "mysql",
+        "angularjs",
+        "angular",
+        "liquibase",
+        "spring-boot",
+        "gitlab"
+      ]
+    },
+    {
+      "company": "Nearsure",
+      "site": "https://www.nearsure.com/",
+      "position": "Backend Java Developer",
+      "start": "2022-08-29",
+      "end": "present day",
+      "description": "Nearsure is a 'nearshore' outsourcing company with many US-based clients.",
+      "projects": [
+        {
+          "name": "platform team",
+          "description": "several tools to allow other teams to work with client's solutions"
+        },
+        {
+          "name": "payment team",
+          "description": "several microservices to handle client customers needs"
+        }
+      ],
+      "techstack": [
+        "Java",
+        "microservices",
+        "mysql",
+        "angularjs",
+        "jsp",
+        "liquibase",
+        "sumologic",
+        "aws",
+        "github",
+        "bash"
+      ]
+    },
+    {
+      "company": "Jobsity",
+      "site": "https://www.jobsity.com/",
+      "position": "Outsourced Software Developer",
+      "start": "2021-02-01",
+      "end": "2022-08-29",
+      "description": "My first international experience, Jobsity applies the 'nearshore' outsourcing model, so clients don't suffer with big timezones differences.",
+      "projects": [
+        {
+          "name": "USA Today/Gannett - Cobalt LocalIQ",
+          "description": "Sales tool used for sales personnel to put sites creation on track for clients. Worked on micro service creation process, moving solution from rails monolith into cloud native solution."
+        },
+        {
+          "name": "USA Today/Gannett - Buy Online Direct",
+          "description": "Sales tool aimed to direct sell of online presence solutions. Stack is cloud native with some degree of transparency regarding the provider nature."
+        }
+      ],
+      "techstack": [
+        "Java",
+        "Javascript",
+        "SQL",
+        "AWS",
+        "HTML",
+        "CSS",
+        "React",
+        "jQuery",
+        "agile",
+        "git",
+        "bash",
+        "github",
+        "REST",
+        "Rails",
+        "migrations",
+        "serverless"
       ]
     },
     {
@@ -66,8 +133,8 @@
           "description": "This product solves the problem to the small sales business. It aims to simpler sales workflow, once there are other in-house products to other sales modes (restaurant, market, etc)."
         },
         {
-          "name":"varejofacil",
-          "description":"This product eases the problem of managing small and medium retailers business. Best suited for markets, general sales store and restaurants."
+          "name": "varejofacil",
+          "description": "This product eases the problem of managing small and medium retailers business. Best suited for markets, general sales store and restaurants."
         }
       ],
       "techstack": [
@@ -154,13 +221,22 @@
       "end": "2016-08",
       "description": "Here we create innovative educational games, (OED - Objeto de Ensino Digital), building knowledge using the entertainment to keep the student focus.",
       "projects": [
-        { "name": "Matematicando", "description": "math puzzle game" },
+        {
+          "name": "Matematicando",
+          "description": "math puzzle game"
+        },
         {
           "name": "Aventura Matemática",
           "description": "adventure/puzzle math game"
         },
-        { "name": "Educatáxi", "description": "action math game" },
-        { "name": "Super Candy", "description": "another action math game" }
+        {
+          "name": "Educatáxi",
+          "description": "action math game"
+        },
+        {
+          "name": "Super Candy",
+          "description": "another action math game"
+        }
       ],
       "techstack": [
         "postgresql",
@@ -219,7 +295,10 @@
           "description": "We produced templates running on top of Polopoly multi-target web cms"
         }
       ],
-      "techstack": ["Java", "Polopoly"],
+      "techstack": [
+        "Java",
+        "Polopoly"
+      ],
       "color": "green"
     },
     {
@@ -235,7 +314,13 @@
           "description": "Handled a wide variety of problems, from basic structures for code versioning to defining technologies to be used to code the solution"
         }
       ],
-      "techstack": ["php", "mysql", "Java EE", "android", "REST"],
+      "techstack": [
+        "php",
+        "mysql",
+        "Java EE",
+        "android",
+        "REST"
+      ],
       "color": "lime"
     },
     {
@@ -296,7 +381,11 @@
         "https://www.linkedin.com/company/usix-technology",
         "https://www.ebix.com/"
       ],
-      "positions": ["trainee", "junior programmer", "senior programmer"],
+      "positions": [
+        "trainee",
+        "junior programmer",
+        "senior programmer"
+      ],
       "start": "2007-08",
       "end": "2011-09",
       "description": "This was the biggest insurance solutions provider back in time",
@@ -344,7 +433,12 @@
           "description": "a java web solution to manage order services to maintain railways. Made with apache struts, java web and mysql"
         }
       ],
-      "techstack": ["JQuery", "Struts 1", "mysql", "Java"],
+      "techstack": [
+        "JQuery",
+        "Struts 1",
+        "mysql",
+        "Java"
+      ],
       "color": "orange"
     }
   ],
