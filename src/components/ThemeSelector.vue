@@ -63,12 +63,13 @@ export default {
 .l {
   background-color: var(--color0);
   min-height: 1em;
-  min-width: 1em;
+  min-width: 2em;
+  text-align: center;
 }
 .r {
   background-color: var(--color1);
   min-height: 1em;
-  min-width: 1em;
+  min-width: 2em;
 }
 
 .options {

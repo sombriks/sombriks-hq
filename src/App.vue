@@ -42,6 +42,9 @@
         <a :class="$style.e3" target="_blank" :href="`${cv.contact.twitter}`">
           <span class="icon-twitter"></span>
         </a>
+        <a :class="$style.e3" target="_blank" :href="`${cv.contact.mastodon}`">
+          <span class="icon-mastodon"></span>
+        </a>
         <a :class="$style.e3" target="_blank" :href="`${cv.contact.facebook}`">
           <span class="icon-facebook2"></span>
         </a>

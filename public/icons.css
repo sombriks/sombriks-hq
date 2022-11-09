@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?v3jds2');
-  src:  url('fonts/icomoon.eot?v3jds2#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?v3jds2') format('truetype'),
-    url('fonts/icomoon.woff?v3jds2') format('woff'),
-    url('fonts/icomoon.svg?v3jds2#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?55xq26');
+  src:  url('fonts/icomoon.eot?55xq26#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?55xq26') format('truetype'),
+    url('fonts/icomoon.woff?55xq26') format('woff'),
+    url('fonts/icomoon.svg?55xq26#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mastodon:before {
+  content: "\e901";
+  color: #3088d4;
+}
 .icon-keybase:before {
   content: "\e900";
   color: #33a0ff;
