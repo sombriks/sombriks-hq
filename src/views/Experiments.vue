@@ -18,7 +18,7 @@
       exploration projects.
     </p>
     <h2>
-      <a href="https://github.com/sombriks/rosetta-beer-store"
+      <a target="experiment" href="https://github.com/sombriks/rosetta-beer-store"
         >rosetta-beer-store</a
       >
     </h2>
@@ -31,7 +31,8 @@
       technologies for your next big thing.
     </p>
     <h2>
-      <a href="https://github.com/sombriks/node-libgpiod">node-libgpiod</a>
+      <a target="experiment" 
+      href="https://github.com/sombriks/node-libgpiod">node-libgpiod</a>
     </h2>
     <p>
       This project is a wrapper for libgpiod to nodejs. By the time i decided to
@@ -48,7 +49,8 @@
     </p>
     <p>This project is open for contributions, ;-)</p>
     <h2>
-      <a href="https://github.com/sombriks/palavrim">palavrim</a>
+      <a target="experiment" 
+      href="https://github.com/sombriks/palavrim">palavrim</a>
     </h2>
     <p>This one is yet another wordle mutated clone.</p>
     <p>
@@ -60,7 +62,8 @@
       it's own word.
     </p>
     <h2>
-      <a href="https://github.com/sombriks/simple-steps-js">simple-steps-js</a>
+      <a target="experiment" 
+      href="https://github.com/sombriks/simple-steps-js">simple-steps-js</a>
     </h2>
     <p>
       I had the need for a simple timeline executor so i could perform some
@@ -70,6 +73,14 @@
       It's a very simple, very humble library so i can reuse it in some
       frontends more easily.
     </p>
+    <h2>
+      <a target="experiment" 
+      href="https://github.com/sombriks/simple-java-run-cmd">Simple java run cmd</a>
+    </h2>
+    <p>This small library helps with process execution and management by a java
+    process. Useful when your program needs to manage another program.</p>
+    <p>It's still under construction, but already has a simple testcase showing
+    it's capabilities.</p>
     <h2>
       <i><b>More to come</b></i>
     </h2>
