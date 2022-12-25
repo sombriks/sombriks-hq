@@ -1,31 +1,31 @@
 <template>
   <div class="parent">
     <div v-if="!menu" class="box" @click="showHide">
-      <div class="l">{{ $store.state.index }}</div>
-      <div class="r"></div>
+      <div class="l">Theme</div>
+      <div class="r">{{ $store.state.index }}</div>
     </div>
     <div class="options" v-if="menu">
       <div
-        v-for="(theme, i) in themes"
-        :key="theme[0] + theme[1]"
-        @click="change(i - 1)"
-        class="option"
-        style="background-color: white"
+          v-for="(theme, i) in themes"
+          :key="theme[0] + theme[1]"
+          @click="change(i - 1)"
+          class="option"
+          style="background-color: white"
       >
         <div
-          class="l"
-          :style="{ color: theme[1], 'background-color': theme[0] }"
+            class="l"
+            :style="{ color: theme[1], 'background-color': theme[0] }"
         >
-          {{ i }}
+          Theme
         </div>
-        <div class="r" :style="{ 'background-color': theme[0] }"></div>
+        <div class="r" :style="{ color: theme[0], 'background-color': theme[1] }"> {{ i }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { changeTheme, themes } from "./themes";
+import {changeTheme, themes} from "./themes";
 
 export default {
   name: "theme-selector",
@@ -51,6 +51,7 @@ export default {
 .parent {
   margin-top: 0.5em;
 }
+
 .box,
 .options {
   position: absolute;
@@ -63,16 +64,22 @@ export default {
   opacity: 0.3;
   display: flex;
 }
+
 .l {
   background-color: var(--color0);
   min-height: 1em;
   min-width: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   text-align: center;
 }
+
 .r {
   background-color: var(--color1);
+  color: var(--color0);
   min-height: 1em;
   min-width: 2em;
+  text-align: center;
 }
 
 .options {

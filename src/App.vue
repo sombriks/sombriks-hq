@@ -115,6 +115,7 @@ a.e3 {
 <style scoped>
 nav {
   display: flex;
+  margin-bottom: 2em;
 }
 
 nav > .sep {
