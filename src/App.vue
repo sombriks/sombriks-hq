@@ -3,12 +3,17 @@
     <h1>{{ $store.state.title }}</h1>
     <nav>
       <router-link :class="$style.row" to="/bio">Bio</router-link>
+      <div class="sep">&nbsp;|&nbsp;</div>
       <router-link :class="$style.row" to="/blog">Blog</router-link>
-      <router-link :class="$style.row" to="/experiments">Experiments</router-link>
+      <div class="sep">&nbsp;|&nbsp;</div>
+      <router-link :class="$style.row" to="/experiments">Experiments
+      </router-link>
+      <div class="sep">&nbsp;|&nbsp;</div>
       <router-link :class="$style.row" to="/links">Links</router-link>
+      <div class="sep">&nbsp;|&nbsp;</div>
       <ThemeSelector/>
     </nav>
-    <div>
+    <div v-if="backVisible">
       <router-link :to="back">Back</router-link>
     </div>
     <div class="container">
@@ -49,11 +54,9 @@
         <a :class="$style.e3" target="_blank" :href="`${cv.contact.instagram}`">
           <span class="icon-instagram"></span>
         </a>
-        <a
-            :class="$style.e3"
-            target="_blank"
-            :href="`${cv.contact.hackerrank}`"
-        >
+        <a :class="$style.e3"
+           target="_blank"
+           :href="`${cv.contact.hackerrank}`">
           <span class="icon-hackerrank"></span>
         </a>
         <a :class="$style.e3" target="_blank" :href="`${cv.contact.reddit}`">
@@ -87,8 +90,11 @@ export default {
     this.$store.commit("setIndex", changeTheme(i));
   },
   computed: {
+    backVisible() {
+      return this.$route.path.match(/\/blog\/.+/);
+    },
     back() {
-      if (this.$route.path.match(/\/blog\/.+/)) {
+      if (this.backVisible) {
         return "/blog"
       } else { //if (this.$route.path != '/principal')
         return "/principal";
@@ -110,6 +116,11 @@ a.e3 {
 nav {
   display: flex;
 }
+
+nav > .sep {
+  margin-top: 0.5em;
+}
+
 #footer {
   margin-top: 5em;
 }
