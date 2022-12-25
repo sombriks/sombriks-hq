@@ -176,10 +176,6 @@
     "label": "dbeaver always tries socket connection, so force it into tcp"
   },
   {
-    "link": "https://stackoverflow.com/a/49043924/420096",
-    "label": "Whenever mysql dump refuses to restore, add `SET GLOBAL innodb_strict_mode = 0;` into the script!"
-  },
-  {
     "label": "What really solved the annoyance with bluetooth keyboard",
     "link": "https://twitter.com/sombriks/status/1509637535336644609"
   },

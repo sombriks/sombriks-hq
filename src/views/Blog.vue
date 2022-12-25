@@ -20,7 +20,7 @@
 </template>
 <script>
 import posts from "../assets/posts";
-import marked from "marked";
+import { marked } from "marked";
 import hl from "highlight.js";
 
 const rPosts = posts.reverse();

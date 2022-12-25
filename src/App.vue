@@ -1,17 +1,15 @@
 <template>
   <div :class="$style.container">
     <h1>{{ $store.state.title }}</h1>
-    <ThemeSelector/>
+    <nav>
+      <router-link :class="$style.row" to="/bio">Bio</router-link>
+      <router-link :class="$style.row" to="/blog">Blog</router-link>
+      <router-link :class="$style.row" to="/experiments">Experiments</router-link>
+      <router-link :class="$style.row" to="/links">Links</router-link>
+      <ThemeSelector/>
+    </nav>
     <div>
-      <router-link 
-        v-if="$route.path != '/principal' && !$route.path.match(/\/blog\/.+/)" 
-        to="/principal">
-        Back
-      </router-link>
-      <router-link 
-        v-if="$route.path.match(/\/blog\/.+/)" to="/blog">
-        Back
-      </router-link>
+      <router-link :to="back">Back</router-link>
     </div>
     <div class="container">
       <router-view/>
@@ -88,6 +86,15 @@ export default {
     let i = Math.floor(Math.random() * x);
     this.$store.commit("setIndex", changeTheme(i));
   },
+  computed: {
+    back() {
+      if (this.$route.path.match(/\/blog\/.+/)) {
+        return "/blog"
+      } else { //if (this.$route.path != '/principal')
+        return "/principal";
+      }
+    }
+  },
   components: {ThemeSelector},
 };
 </script>
@@ -100,6 +107,9 @@ a.e3 {
 </style>
 
 <style scoped>
+nav {
+  display: flex;
+}
 #footer {
   margin-top: 5em;
 }

@@ -1,8 +1,9 @@
 <template>
   <div>
-    <a :class="$style.compact" v-for="l in links" :key="l.link" target="_blank" :href="l.link">{{
-      l.label
-    }}</a>
+    <a :class="$style.compact" v-for="l in links"
+       :key="l.link" target="_blank" :href="l.link">
+      {{ l.label }}
+    </a>
   </div>
 </template>
 <script>
@@ -19,6 +20,7 @@ export default {
 </script>
 <style module lang="scss">
 @import "../design";
+
 a.compact {
   display: inline-block;
 }

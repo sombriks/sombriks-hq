@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="parent">
     <div v-if="!menu" class="box" @click="showHide">
       <div class="l">{{ $store.state.index }}</div>
       <div class="r"></div>
@@ -48,11 +48,14 @@ export default {
 </script>
 
 <style scoped>
+.parent {
+  margin-top: 0.5em;
+}
 .box,
 .options {
-  position: fixed;
-  top: 0.5em;
-  left: 0.5em;
+  position: absolute;
+  /*top: 0.5em;*/
+  /*left: 0.5em;*/
   min-height: 1em;
   min-width: 2em;
   border: 2px solid var(--color1);
