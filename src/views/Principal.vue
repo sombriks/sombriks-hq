@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <i>keep it simple</i>
   </div>
 </template>
 
