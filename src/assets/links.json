@@ -254,5 +254,9 @@
   {
     "label": "When you need maven running JUnit 5 to work under maven",
     "link": "https://github.com/sombriks/simple-java-run-cmd/blob/main/pom.xml"
+  },
+  {
+    "label": "Ok that's pretty cool about git and ssh",
+    "link": "https://www.baeldung.com/linux/ssh-private-key-git-command"
   }
 ]
