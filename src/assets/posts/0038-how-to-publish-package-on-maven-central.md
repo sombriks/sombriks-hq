@@ -255,4 +255,6 @@ your development environment.
 
 In the future let's setup a github action or something like that to automate it.
 
+You can see the source code of the sample package [here](https://github.com/sombriks/simple-java-run-cmd).
+
 2022-12-31
