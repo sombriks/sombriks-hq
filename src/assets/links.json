@@ -258,5 +258,9 @@
   {
     "label": "Ok that's pretty cool about git and ssh",
     "link": "https://www.baeldung.com/linux/ssh-private-key-git-command"
+  },
+  {
+    "label": "Take care of your keys",
+    "link": "https://unix.stackexchange.com/a/399490/143289"
   }
 ]
