@@ -266,5 +266,9 @@
   {
     "label": "In case you need to learn firestore",
     "link": "https://www.youtube.com/playlist?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ"
+  },
+  {
+    "label": "yes knex still amazes me",
+    "link": "https://github.com/knex/knex/issues/3850"
   }
 ]
