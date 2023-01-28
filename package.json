@@ -3,12 +3,17 @@
   "version": "3.0.1",
   "private": true,
   "scripts": {
-    "dev": "npm run articles ; vue-cli-service serve --open",
-    "build": "npm run articles ; vue-cli-service build",
+    "predev": "npm run articles",
+    "dev": "vue-cli-service serve --open",
+    "prebuild": "npm run predev",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "articles": "sh list-articles.sh",
     "local": "dotenv-run-script .env .env.local --",
-    "release": "npm run build ; firebase deploy --token $TOKEN"
+    "prerelease": "npm run build",
+    "release": "firebase deploy",
+    "prerelease:ci": "npm run prerelease",
+    "release:ci": "firebase deploy --token $TOKEN"
   },
   "dependencies": {
     "axios": "^0.21.4",
