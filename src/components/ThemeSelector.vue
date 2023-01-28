@@ -1,6 +1,6 @@
 <template>
   <div class="parent">
-    <div v-if="!menu" class="box" @click="showHide">
+    <div v-if="!menu" class="box" @click.stop="showHide">
       <div class="l">Theme</div>
       <div class="r">{{ $store.state.index }}</div>
     </div>
@@ -43,7 +43,16 @@ export default {
     showHide() {
       this.menu = !this.menu;
     },
+    doClose(e){
+      if (e.target !== this.$el) this.menu = false
+    }
   },
+  mounted() {
+    document.addEventListener("click", this.doClose)
+  },
+  beforeDestroy() {
+    document.removeEventListener("click", this.doClose)
+  }
 };
 </script>
 
@@ -104,11 +113,7 @@ export default {
     max-height: 0px;
   }
 
-  25% {
-    max-height: 20%;
-  }
-
-  75% {
+  50% {
     max-height: 80%;
   }
 

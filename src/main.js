@@ -6,11 +6,9 @@ import store from "./store";
 
 import VueGtag from "vue-gtag";
 import Vs2 from "vue-script2";
-// import Ads from 'vue-google-adsense'
+// import {clickOutside} from "./components/click-outside-directive";
 
 Vue.use(Vs2)
-// Vue.use(Ads.AutoAdsense, { adClient: 'ca-pub-2943310396815221', isNewAdsCode: true })
-
 
 Vue.use(
   VueGtag,
@@ -25,6 +23,8 @@ Vue.use(
   },
   router
 );
+
+// Vue.directive("click-outside", clickOutside);
 
 Vue.config.productionTip = false;
 
