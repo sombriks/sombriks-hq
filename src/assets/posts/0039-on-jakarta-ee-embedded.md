@@ -28,9 +28,9 @@ For the embedded app server i found these samples so far:
 For the project layout i don't have much ideas yet, i am only sure about the
 separation of the two modules. A few questions so far:
 
-- should the embedded runner be a uber jar?
+- should the embedded final jar file be an [uber jar](https://imagej.net/develop/uber-jars)?
 - should the war/ear artifact be repackaged?
-- why this approach iss't more popular, given the clear success of sprin boot?
+- why this approach isn't more popular, given the clear success of sprin boot?
 
 Any comment on this topic is
 welcome [on this thread](https://stackoverflow.com/questions/75274795/embedded-portable-jakartaee-application-design-approach).
