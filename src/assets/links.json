@@ -274,5 +274,9 @@
   {
     "label": "never fall in the trap of download xcode via app store again",
     "link": "https://developer.apple.com/download/all/?q=Xcode"
+  },
+  {
+    "label": "resize font on intellij",
+    "link": "https://www.jetbrains.com/go/guide/tips/change-font-size-from-keyboard/"
   }
 ]
