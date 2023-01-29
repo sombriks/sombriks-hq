@@ -1,12 +1,34 @@
 <template>
   <div>
-    <i>keep it simple</i>
+    <i>{{ welcome }}</i>
   </div>
 </template>
 
 <script>
+import posts from "../assets/posts";
+
 export default {
-  name: "principal"
+  name: "principal",
+  data() {
+    return {
+      posts,
+      unsure: null,
+      aboutToGo: null,
+      welcome: "keep it simple"
+    }
+  },
+  mounted() {
+    this.unsure = setTimeout(() => {
+      this.welcome = "Unsure about what to read? Let me choose for you!";
+      this.aboutToGo = setTimeout(() => {
+        this.$router.push(`/blog/${this.posts[parseInt(Math.random() * this.posts.length)]}`);
+      }, 2500);
+    }, 4000);
+  },
+  beforeDestroy() {
+    clearTimeout(this.aboutToGo);
+    clearTimeout(this.unsure);
+  }
 };
 </script>
 
