@@ -25,6 +25,10 @@ For the embedded app server i found these samples so far:
 - https://github.com/wildfly/wildfly-core/blob/main/embedded/src/test/java/org/wildfly/core/embedded/EmbeddedServerFactorySetupUnitTestCase.java
 - https://www.eclipse.org/jetty/documentation/jetty-11/programming-guide/index.html#creating-helloworld-class
 
+Agood article on this topic follows: 
+
+- https://www.baeldung.com/executable-jar-with-maven
+
 For the project layout i don't have much ideas yet, i am only sure about the
 separation of the two modules. A few questions so far:
 
