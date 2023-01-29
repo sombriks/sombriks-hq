@@ -59,6 +59,8 @@ export default {
 <style scoped>
 .parent {
   margin-top: 0.5em;
+  min-width: 6em;
+  margin-right: 0.2em;
 }
 
 .box,

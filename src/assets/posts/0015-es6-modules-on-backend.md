@@ -1,5 +1,12 @@
 # ES6 modules on backend
 
+## UPDATE for modern node 
+
+Simply add `"type": "module"` into your package.json file in your node version
+[if your node isn't too old](https://nodejs.org/docs/latest-v12.x/api/esm.html#).
+
+---
+
 This is a really quick yet nice one regarding backend.
 
 ## TL;DR

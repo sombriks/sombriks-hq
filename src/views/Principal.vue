@@ -22,8 +22,8 @@ export default {
       this.welcome = "Unsure about what to read? Let me choose for you!";
       this.aboutToGo = setTimeout(() => {
         this.$router.push(`/blog/${this.posts[parseInt(Math.random() * this.posts.length)]}`);
-      }, 2500);
-    }, 4000);
+      }, 1500);
+    }, 2000);
   },
   beforeDestroy() {
     clearTimeout(this.aboutToGo);

@@ -36,6 +36,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "links" */ "../views/Links.vue"),
   },
+  {
+    path: "/privacy",
+    name: "privacy",
+    component: () =>
+        import(/* webpackChunkName: "links" */ "../views/Privacy.vue"),
+  },
 ];
 
 const router = new VueRouter({
