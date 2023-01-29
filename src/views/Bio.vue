@@ -1,18 +1,22 @@
 <template>
   <div>
-    <photo-roussel/>
-    <p>
-      If you need a print-friendly version click
-      <i><span @click="makeCV">here</span></i
-      >.
-    </p>
+    <my-card>
+      <template #header>
+        <photo-roussel/>
+      </template>
+      <template>
+        <p>
+          If you need a print-friendly version,
+          <button @click="makeCV">click here</button>
+        </p>
+      </template>
+    </my-card>
     <h3>Professional experience</h3>
     <my-card v-for="(w, i) in cv.work" :key="`w${i}`">
       <template #header>
-        <h4>{{ w.position }} at {{ w.company }}</h4>
+        <h4><i>{{ w.start }} to {{ w.end }}</i> - {{ w.position }} at {{ w.company }}</h4>
       </template>
       <template #default>
-        <i>{{ w.start }} to {{ w.end }}</i>
         <p>
           {{ w.description }}
         </p>
@@ -38,10 +42,9 @@
     <h3>Education</h3>
     <my-card v-for="(w, i) in cv.education" :key="`e${i}`">
       <template #header>
-        <h4>{{ w.course }} at {{ w.institution }}</h4>
+        <h4><i>{{ w.start }} to {{ w.end }}</i> - {{ w.course }} at {{ w.institution }}</h4>
       </template>
       <template #default>
-        <i>{{ w.start }} to {{ w.end }}</i>
         <p>
           {{ w.description }}
         </p>
