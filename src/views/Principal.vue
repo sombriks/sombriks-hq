@@ -12,22 +12,13 @@ export default {
   data() {
     return {
       posts,
-      unsure: null,
-      aboutToGo: null,
       welcome: "keep it simple"
     }
   },
   mounted() {
-    this.unsure = setTimeout(() => {
-      this.welcome = "Unsure about what to read? Let me choose for you!";
-      this.aboutToGo = setTimeout(() => {
-        this.$router.push(`/blog/${this.posts[parseInt(Math.random() * this.posts.length)]}`);
-      }, 1500);
-    }, 2000);
+    this.$router.push(`/blog/${this.posts[parseInt(Math.random() * this.posts.length)]}`);
   },
   beforeDestroy() {
-    clearTimeout(this.aboutToGo);
-    clearTimeout(this.unsure);
   }
 };
 </script>
