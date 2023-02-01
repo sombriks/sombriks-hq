@@ -66,6 +66,9 @@
         <a :class="$style.e3" target="_blank" :href="`${cv.contact.keybase}`">
           <span class="icon-keybase"></span>
         </a>
+        <a :class="$style.e3" target="_blank" :href="`${cv.contact.polywork}`">
+          <span class="icon-link"></span>
+        </a>
         <!-- <a :class="$style.e3" target="_blank" :href="`tel:${cv.contact.telefone}`">
         <span class="icon-phone"></span>
       </a> -->
