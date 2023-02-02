@@ -1,5 +1,8 @@
 # Light rant about embedded solutions for Javarta EE
 
+_update 2023-02-01_ the [microprofile specification](https://microprofile.io/)
+might be what i want.
+
 Unlike [spring-boot](https://spring.io/projects/spring-boot),
 [JakartaEE](https://jakarta.ee/) applications usually organizes application code
 apart from server code.
