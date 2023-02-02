@@ -60,7 +60,8 @@ export default {
 .parent {
   margin-top: 0.5em;
   min-width: 6em;
-  margin-right: 0.2em;
+  left: 0.1em;
+  margin-right: 0.3em;
 }
 
 .box,

@@ -17,8 +17,8 @@ export default {
 <style module lang="scss">
 @import "../design";
 .card {
-  border: 1px solid var(--color1);
-  border-radius: 0.6em;
+  //border: 1px solid var(--color1);
+  //border-radius: 0.6em;
   box-shadow: 1px;
   min-width: 200px;
   margin: 1em;
