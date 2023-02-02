@@ -78,9 +78,8 @@ export default {
   }
 
   pre {
-    border: solid 0.5px var(--color1);
     padding: 1em;
-    border-radius: 0.6em;
+    margin-left: 2em;
   }
 
   img {
