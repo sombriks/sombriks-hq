@@ -1,19 +1,7 @@
 <template>
   <div :class="$style.container">
     <h1>{{ $store.state.title }}</h1>
-    <nav>
-      <router-link :class="$style.row" to="/bio">Bio</router-link>
-      <div class="sep">|</div>
-      <router-link :class="$style.row" to="/blog">Blog</router-link>
-      <div class="sep">|</div>
-      <router-link :class="$style.row" to="/experiments">Experiments</router-link>
-      <div class="sep">|</div>
-      <router-link :class="$style.row" to="/links">Links</router-link>
-      <div class="sep">|</div>
-      <ThemeSelector/>
-      <div class="sep">|</div>
-      <router-link :class="$style.row" to="/privacy">Privacy</router-link>
-    </nav>
+    <NavBar/>
     <div v-if="backVisible">
       <router-link :to="back">Back</router-link>
     </div>
@@ -79,7 +67,7 @@
 <script>
 import cv from "./assets/curriculum.json";
 import {changeTheme, themes} from "./components/themes";
-import ThemeSelector from "./components/ThemeSelector.vue";
+import NavBar from "./components/NavBar.vue";
 
 const year = new Date().getFullYear();
 
@@ -105,7 +93,7 @@ export default {
       }
     }
   },
-  components: {ThemeSelector},
+  components: {NavBar},
 };
 </script>
 <style lang="scss" module>

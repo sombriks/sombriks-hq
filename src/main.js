@@ -6,7 +6,6 @@ import store from "./store";
 
 import VueGtag from "vue-gtag";
 import Vs2 from "vue-script2";
-// import {clickOutside} from "./components/click-outside-directive";
 
 Vue.use(Vs2)
 
@@ -23,8 +22,6 @@ Vue.use(
   },
   router
 );
-
-// Vue.directive("click-outside", clickOutside);
 
 Vue.config.productionTip = false;
 
