@@ -1,36 +1,17 @@
 <template>
     <div :class="$style.container">
-      <img :class="$style.eimg" :src="pics[i]" @click="nextPic" />
+      <img :class="$style.eimg" :src="`/profile-pics/${pics[i]}`" @click="nextPic" />
     </div>
 </template>
 <script>
+import pics from "../assets/pics.json";
+
 export default {
   name: "photo-roussel",
   data() {
     return {
       i: 0,
-      pics: [
-        "/profile-pics/picture_07.png",
-        "/profile-pics/picture_08.jpg",
-        "/profile-pics/picture_09.jpg",
-        "/profile-pics/picture_10.jpg",
-        "/profile-pics/picture_11.jpg",
-        "/profile-pics/picture_12.jpg",
-        "/profile-pics/picture_13.jpg",
-        "/profile-pics/picture_15.jpg",
-        "/profile-pics/picture_16.jpg",
-        "/profile-pics/picture_17.jpg",
-        "/profile-pics/picture_18.jpg",
-        "/profile-pics/picture_19.jpg",
-        "/profile-pics/picture_21.jpg",
-        "/profile-pics/picture_22.jpg",
-        "/profile-pics/picture_23.jpg",
-        "/profile-pics/picture_24.jpg",
-        "/profile-pics/picture_25.jpg",
-        "/profile-pics/picture_26.jpg",
-        "/profile-pics/picture_27.jpg",
-        "/profile-pics/picture_28.jpg",
-      ],
+      pics,
       interval: null,
     };
   },

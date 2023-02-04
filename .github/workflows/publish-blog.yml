@@ -1,4 +1,4 @@
-name: Publish new blog version
+name: Publish blog updates
 on: 
   push:
     branches: 
