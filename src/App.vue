@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-    <h1>{{ $store.state.title }}</h1>
+    <h1><router-link to="/principal">{{ $store.state.title }}</router-link></h1>
     <NavBar/>
     <div v-if="backVisible">
       <router-link :to="back">Back</router-link>
@@ -8,73 +8,18 @@
     <div class="container">
       <router-view/>
     </div>
-    <div id="footer">
-      <div>&copy; sombriks (Leonardo Silveira) {{ year }}</div>
-      <div>
-        <a
-            :class="$style.e3"
-            target="_blank"
-            :href="`mailto:${cv.contact.email}`"
-        >
-          <span class="icon-mail4"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.github}`">
-          <span class="icon-github"></span>
-        </a>
-        <a
-            :class="$style.e3"
-            target="_blank"
-            :href="`${cv.contact.stackoverflow}`"
-        >
-          <span class="icon-stackoverflow"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.linkedin}`">
-          <span class="icon-linkedin"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.twitter}`">
-          <span class="icon-twitter"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.mastodon}`">
-          <span class="icon-mastodon"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.facebook}`">
-          <span class="icon-facebook2"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.instagram}`">
-          <span class="icon-instagram"></span>
-        </a>
-        <a :class="$style.e3"
-           target="_blank"
-           :href="`${cv.contact.hackerrank}`">
-          <span class="icon-hackerrank"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.reddit}`">
-          <span class="icon-reddit"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.keybase}`">
-          <span class="icon-keybase"></span>
-        </a>
-        <a :class="$style.e3" target="_blank" :href="`${cv.contact.polywork}`">
-          <span class="icon-link"></span>
-        </a>
-        <!-- <a :class="$style.e3" target="_blank" :href="`tel:${cv.contact.telefone}`">
-        <span class="icon-phone"></span>
-      </a> -->
-      </div>
-    </div>
+    <SiteFooter/>
   </div>
 </template>
 <script>
-import cv from "./assets/curriculum.json";
 import {changeTheme, themes} from "./components/themes";
 import NavBar from "./components/NavBar.vue";
-
-const year = new Date().getFullYear();
+import SiteFooter from "./components/SiteFooter.vue";
 
 export default {
   name: "app",
   data() {
-    return {year, cv};
+    return {};
   },
   mounted() {
     let x = themes.length;
@@ -93,38 +38,17 @@ export default {
       }
     }
   },
-  components: {NavBar},
+  components: {NavBar, SiteFooter},
 };
 </script>
 <style lang="scss" module>
 @import "./design";
-
-a.e3 {
-  display: inline-block;
-}
 </style>
 
 <style scoped>
-nav {
-  display: flex;
-  margin-bottom: 2em;
-}
-
-nav > .sep {
-  margin-top: 0.5em;
-}
-
-#footer {
-  margin-top: 5em;
-}
-
 @media (max-width: 479px) {
   .container {
     max-width: 99%;
-  }
-
-  #footer {
-    margin-top: 1em;
   }
 }
 
@@ -132,19 +56,11 @@ nav > .sep {
   .container {
     max-width: 95%;
   }
-
-  #footer {
-    margin-top: 2em;
-  }
 }
 
 @media (min-width: 800px) {
   .container {
     max-width: 75%;
-  }
-
-  #footer {
-    margin-top: 3em;
   }
 }
 

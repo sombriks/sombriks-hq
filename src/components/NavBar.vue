@@ -1,16 +1,16 @@
 <template>
   <nav>
-      <router-link :class="$style.row" to="/bio">Bio</router-link>
+      <router-link to="/bio">Bio</router-link>
       <div class="sep">|</div>
-      <router-link :class="$style.row" to="/blog">Blog</router-link>
+      <router-link to="/blog">Blog</router-link>
       <div class="sep">|</div>
-      <router-link :class="$style.row" to="/experiments">Experiments</router-link>
+      <router-link to="/experiments">Experiments</router-link>
       <div class="sep">|</div>
-      <router-link :class="$style.row" to="/links">Links</router-link>
+      <router-link to="/links">Links</router-link>
       <div class="sep">|</div>
       <ThemeSelector/>
       <div class="sep">|</div>
-      <router-link :class="$style.row" to="/privacy">Privacy</router-link>
+      <router-link to="/privacy">Privacy</router-link>
     </nav>
 </template>
 <script>
