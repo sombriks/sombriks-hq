@@ -2,4 +2,4 @@
 layout: base.webc
 ---
 
-under construction
+blog

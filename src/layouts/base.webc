@@ -4,11 +4,13 @@
     <meta webc:keep charset="utf-8">
     <title>Try To Keep It Simple</title>
     <link rel="icon" href="/assets/logo.png"/>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+    <link webc:keep rel="stylesheet" href="/assets/icons.css"/>
+    <link webc:keep rel="stylesheet" href="/assets/themes.css"/>
     <style webc:keep>
         html {
-            --color0: #523b3b;
-            --color1: #f8ede3;
+            --color0: #333;
+            --color1: #ffa500;
         }
 
         body {
@@ -21,28 +23,49 @@
             justify-content: center;
             align-items: center;
         }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+        
+        a {
+            text-decoration-line: none;
+            padding: 0.03em;
+            margin: 0.5em;
+            color: var(--color1);
+            border-bottom: 1px solid var(--color1);
         }
 
-        @media (min-width: 1440px) {
-            .content {
+        .outer-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 1440px) or (min-width: 1440px) {
+            .outer-container {
                 max-width: 50%;
             }
         }
 
-        @media (min-width: 800px) {
-            .content {
+        @media (max-width: 1280px) {
+            .outer-container {
+                max-width: 60%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .outer-container {
+                max-width: 70%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .outer-container {
                 max-width: 75%;
             }
         }
 
-        @media (min-width: 480px) {
-            .content {
-                max-width: 96%;
+        @media (max-width: 480px) {
+            .outer-container {
+                max-width: 90%;
             }
         }
     </style>
@@ -50,7 +73,7 @@
     <script @raw="getJs(page.url)" webc:keep></script>
 </head>
 <body>
-<div class="content">
+<div class="outer-container">
     <site-header></site-header>
     <div @raw="content"></div>
     <site-footer/>
