@@ -1,32 +1,40 @@
 <style webc:scoped>
-  .footer {
-    display:flex;
-    margin-top: 5em;
-    flex-direction: column;
-    justify-content: center;
-  }
+    .footer {
+        display: flex;
+        margin-top: 5em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .contacts {
-    display:flex;
-  }
+    .contacts {
+        display: flex;
+    }
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    })
+</script>
 <div class="footer">
-  <div>
-    &copy; Leonardo Silveira (a.k.a. sombriks)
-  </div>
-  <div class="contacts">
-    <a target="_blank" href="mailto:sombriks@gmail.com" ><span class="icon-mail4"></span></a>
-    <a target="_blank" href="https://github.com/sombriks" ><span class="icon-github"></span></a>
-    <a target="_blank" href="https://stackoverflow.com/users/420096/sombriks?tab=profile" ><span class="icon-stackoverflow"></span></a>
-    <a target="_blank" href="https://www.linkedin.com/in/sombriks" ><span class="icon-linkedin"></span></a>
-    <a target="_blank" href="https://twitter.com/sombriks" ><span class="icon-twitter"></span></a>
-    <a target="_blank" href="https://mastodon.world/@sombriks" ><span class="icon-mastodon"></span></a>
-    <a target="_blank" href="https://facebook.com/sombriks" ><span class="icon-facebook2"></span></a>
-    <a target="_blank" href="https://instagram.com/sombriks" ><span class="icon-instagram"></span></a>
-    <a target="_blank" href="https://www.hackerrank.com/sombriks" ><span class="icon-hackerrank"></span></a>
-    <a target="_blank" href="https://www.reddit.com/user/sombriks" ><span class="icon-reddit"></span></a>
-    <a target="_blank" href="https://keybase.io/sombriks" ><span class="icon-keybase"></span></a>
-    <a target="_blank" href="https://www.polywork.com/sombriks" ><span class="icon-link"></span></a>
-  </div>
-  <a rel="me" href="https://mastodon.world/@sombriks" style="text-decoration: none; border-bottom: none;">&nbsp;</a>
+    <div>
+        &copy; Leonardo Silveira (a.k.a. sombriks) <span id="year"></span>
+    </div>
+    <div class="contacts">
+        <!-- todo carregar dinamicamente a partir do json -->
+        <a target="_blank" href="mailto:sombriks@gmail.com"><span class="icon-mail4"></span></a>
+        <a target="_blank" href="https://github.com/sombriks"><span class="icon-github"></span></a>
+        <a target="_blank" href="https://stackoverflow.com/users/420096/sombriks?tab=profile"><span
+                class="icon-stackoverflow"></span></a>
+        <a target="_blank" href="https://www.linkedin.com/in/sombriks"><span class="icon-linkedin"></span></a>
+        <a target="_blank" href="https://twitter.com/sombriks"><span class="icon-twitter"></span></a>
+        <a target="_blank" href="https://mastodon.world/@sombriks"><span class="icon-mastodon"></span></a>
+        <a target="_blank" href="https://facebook.com/sombriks"><span class="icon-facebook2"></span></a>
+        <a target="_blank" href="https://instagram.com/sombriks"><span class="icon-instagram"></span></a>
+        <a target="_blank" href="https://www.hackerrank.com/sombriks"><span class="icon-hackerrank"></span></a>
+        <a target="_blank" href="https://www.reddit.com/user/sombriks"><span class="icon-reddit"></span></a>
+        <a target="_blank" href="https://keybase.io/sombriks"><span class="icon-keybase"></span></a>
+        <a target="_blank" href="https://www.polywork.com/sombriks"><span class="icon-link"></span></a>
+    </div>
+    <a rel="me" href="https://mastodon.world/@sombriks" style="text-decoration: none; border-bottom: none;">&nbsp;</a>
 </div>

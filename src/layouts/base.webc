@@ -23,7 +23,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         a {
             text-decoration-line: none;
             padding: 0.03em;
@@ -41,25 +41,25 @@
 
         @media (max-width: 1440px) or (min-width: 1440px) {
             .outer-container {
-                max-width: 50%;
+                max-width: 60%;
             }
         }
 
         @media (max-width: 1280px) {
             .outer-container {
-                max-width: 60%;
+                max-width: 70%;
             }
         }
 
         @media (max-width: 800px) {
             .outer-container {
-                max-width: 70%;
+                max-width: 75%;
             }
         }
 
         @media (max-width: 640px) {
             .outer-container {
-                max-width: 75%;
+                max-width: 80%;
             }
         }
 
@@ -69,8 +69,15 @@
             }
         }
     </style>
-    <style @raw="getCss(page.url)" webc:keep></style>
-    <script @raw="getJs(page.url)" webc:keep></script>
+    <script webc:keep :src="url('/assets/themes.js')"></script>
+    <style webc:keep @raw="getCss(page.url)"></style>
+    <script webc:keep @raw="getJs(page.url)"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const n = parseInt(Math.random() * 13, 0)
+            changeTheme(n)
+        })
+    </script>
 </head>
 <body>
 <div class="outer-container">

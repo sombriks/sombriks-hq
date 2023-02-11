@@ -1,8 +1,76 @@
-.theme1 {
-  --color0:black;
-  --color1:white;
+.theme0 {
+    --color0: #eee;
+    --color1: #666;
 }
+
+.theme1 {
+    --color0: #E5EFC1;
+    --color1: #557B83;
+}
+
+.theme2 {
+    --color0: #f3db76;
+    --color1: #003300;
+}
+
+.theme3 {
+    --color0: #ffd4dc;
+    --color1: #b61785;
+}
+
+.theme4 {
+    --color0: #0e3a5c;
+    --color1: #d2d27a;
+}
+
+.theme5 {
+    --color0: #334;
+    --color1: #eee;
+}
+
+.theme6 {
+    --color0: #262b2c;
+    --color1: #32a0ad;
+}
+
+.theme7 {
+    --color0: #030e57;
+    --color1: #E65A27;
+}
+
+.theme8 {
+    --color0: #333;
+    --color1: #ffa500;
+}
+
 .theme9 {
-  --color0: #333;
-  --color1: #ffa500;
+    --color0: #18251B;
+    --color1: #DEE5F8;
+}
+
+.theme10 {
+    --color0: #26210d;
+    --color1: #B7464c;
+}
+
+.theme11 {
+    --color0: #13005a;
+    --color1: #bccef8;
+}
+
+.theme12 {
+    --color0: #000;
+    --color1: #90ee90;
+}
+
+.theme13 {
+    --color0: #271084;
+    --color1: #198410;
+}
+
+.theme0, .theme1, .theme2, .theme3, .theme4,
+.theme5, .theme6, .theme7, .theme8, .theme9,
+.theme10, .theme11, .theme12, .theme13 {
+    color: var(--color1);
+    background-color: var(--color0);
 }
