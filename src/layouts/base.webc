@@ -1,25 +1,59 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta webc:keep charset="utf-8">
-		<title>Try To Keep It Simple</title>
-		<style webc:keep>
-			html {
-				--color0: #523b3b;
-    		--color1: #f8ede3;
-			}
-			body {
-				margin: 0px;
-				background-color: var(--color0);
-				color: var(--color1);
-			} 
-		</style>
-	</head>
-	<body>
-		<div class="content">
-			<site-header></site-header>
-			<div class="miolo" @raw="content"></div>
-			<site-footer/>
-		</div>
-	</body>
+<html lang="en-us">
+<head>
+    <meta webc:keep charset="utf-8">
+    <title>Try To Keep It Simple</title>
+    <link rel="icon" href="/assets/logo.png"/>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <style webc:keep>
+        html {
+            --color0: #523b3b;
+            --color1: #f8ede3;
+        }
+
+        body {
+            font-family: monospace;
+            margin: 0;
+            background-color: var(--color0);
+            color: var(--color1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        @media (min-width: 1440px) {
+            .content {
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .content {
+                max-width: 75%;
+            }
+        }
+
+        @media (min-width: 480px) {
+            .content {
+                max-width: 96%;
+            }
+        }
+    </style>
+    <style @raw="getCss(page.url)" webc:keep></style>
+    <script @raw="getJs(page.url)" webc:keep></script>
+</head>
+<body>
+<div class="content">
+    <site-header></site-header>
+    <div @raw="content"></div>
+    <site-footer/>
+</div>
+</body>
 </html>
