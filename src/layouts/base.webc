@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta webc:keep charset="utf-8">
+		<title>Try To Keep It Simple</title>
+		<style webc:keep>
+			html {
+				--color0: #523b3b;
+    		--color1: #f8ede3;
+			}
+			body {
+				margin: 0px;
+				background-color: var(--color0);
+				color: var(--color1);
+			} 
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<site-header></site-header>
+			<div class="miolo" @raw="content"></div>
+			<site-footer/>
+		</div>
+	</body>
+</html>

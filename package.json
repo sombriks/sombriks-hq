@@ -3,45 +3,17 @@
   "version": "3.0.1",
   "private": true,
   "scripts": {
-    "predev": "npm run assets",
-    "dev": "vue-cli-service serve --open",
-    "prebuild": "npm run predev",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "assets": "sh list-assets.sh",
+    "dev": "eleventy --serve --incremental",
+    "build": "eleventy",
     "local": "dotenv-run-script .env .env.local --",
     "prerelease": "npm run build",
     "release": "firebase deploy",
     "prerelease:ci": "npm run prerelease",
     "release:ci": "firebase deploy --token $TOKEN"
   },
-  "dependencies": {
-    "axios": "^0.21.4",
-    "core-js": "^3.21.1",
-    "highlight.js": "^10.7.3",
-    "marked": "^4.2.5",
-    "pdfmake": "^0.2.7",
-    "sass": "^1.49.9",
-    "sass-loader": "^8.0.2",
-    "vue": "^2.7.14",
-    "vue-google-adsense": "^1.10.1",
-    "vue-gtag": "^1.16.1",
-    "vue-router": "^3.5.3",
-    "vue-script2": "^2.1.0",
-    "vuex": "^3.6.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.17",
-    "@vue/cli-plugin-eslint": "^4.5.17",
-    "@vue/cli-plugin-router": "^4.5.17",
-    "@vue/cli-plugin-vuex": "^4.5.17",
-    "@vue/cli-service": "^4.5.17",
-    "babel-eslint": "^10.1.0",
-    "dotenv-run-script": "^0.2.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "firebase-tools": "^8.20.0",
-    "raw-loader": "^4.0.2",
-    "vue-template-compiler": "^2.7.14"
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.8.1"
   }
 }

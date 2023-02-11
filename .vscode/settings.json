@@ -1,6 +1,8 @@
 {
+  "files.associations": {
+    "*.webc":"html"
+  },
   "editor.tabSize": 2,
-  "vetur.format.options.useTabs": true,
   "editor.rulers": [
     80,
     120
