@@ -6,7 +6,6 @@
     <link rel="icon" href="/assets/logo.png"/>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <link webc:keep rel="stylesheet" href="/assets/icons.css"/>
-    <link webc:keep rel="stylesheet" href="/assets/themes.css"/>
     <style webc:keep>
         html {
             --color0: #333;
@@ -69,13 +68,13 @@
             }
         }
     </style>
-    <script webc:keep :src="url('/assets/themes.js')"></script>
+
     <style webc:keep @raw="getCss(page.url)"></style>
     <script webc:keep @raw="getJs(page.url)"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const n = parseInt(Math.random() * 13, 0)
-            changeTheme(n)
+            // const n = parseInt(Math.random() * 13, 0)
+            // changeTheme(n)
         })
     </script>
 </head>

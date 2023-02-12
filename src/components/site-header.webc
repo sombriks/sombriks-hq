@@ -25,7 +25,5 @@
     <span>|</span>
     <a class="item" :href="url('/links')">Links</a>
     <span>|</span>
-    <theme-selector></theme-selector>
-    <span>|</span>
     <a class="item" :href="url('/privacy')">Privacy</a>
 </nav>
