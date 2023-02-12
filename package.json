@@ -3,7 +3,7 @@
   "version": "5.0.1",
   "private": true,
   "scripts": {
-    "dev": "eleventy --serve --incremental",
+    "dev": "eleventy --serve",
     "build": "eleventy",
     "local": "dotenv-run-script .env .env.local --",
     "prerelease": "npm run build",

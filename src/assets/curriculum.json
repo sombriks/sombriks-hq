@@ -6,23 +6,88 @@
     "hometown": "Fortaleza",
     "state": "Ceará",
     "birthdate": "1984-10-27T20:15:00-03:00",
-    "bio": "I like to solve problems to pay my rent and for fun!"
+    "bio": "I like to solve coding problems for fun and for rent!"
   },
-  "contact": {
-    "email": "sombriks@gmail.com",
-    "telefone": "+55 (85) 9 9955-7997",
-    "twitter": "https://twitter.com/sombriks",
-    "mastodon": "https://mastodon.world/@sombriks",
-    "facebook": "https://facebook.com/sombriks",
-    "instagram": "https://instagram.com/sombriks",
-    "github": "https://github.com/sombriks",
-    "linkedin": "https://www.linkedin.com/in/sombriks",
-    "stackoverflow": "https://stackoverflow.com/users/420096/sombriks?tab=profile",
-    "keybase": "https://keybase.io/sombriks",
-    "hackerrank": "https://www.hackerrank.com/sombriks",
-    "reddit": "https://www.reddit.com/user/sombriks",
-    "polywork": "https://www.polywork.com/sombriks"
-  },
+  "contacts": [
+    {
+      "link": "mailto:sombriks@gmail.com",
+      "label": "Email",
+      "icon": "icon-mail4",
+      "visible": true
+    },
+    {
+      "link": "tel:+55 (85) 9 9955-7997",
+      "label": "Phone",
+      "icon": "icon-phone",
+      "visible": false
+    },
+    {
+      "link": "https://twitter.com/sombriks",
+      "label": "Twitter",
+      "icon": "icon-twitter",
+      "visible": true
+    },
+    {
+      "link": "https://mastodon.world/@sombriks",
+      "label": "Mastodon",
+      "icon": "icon-mastodon",
+      "visible": true
+    },
+    {
+      "link": "https://facebook.com/sombriks",
+      "label": "Facebook",
+      "icon": "icon-facebook2",
+      "visible": true
+    },
+    {
+      "link": "https://instagram.com/sombriks",
+      "label": "Instagram",
+      "icon": "icon-instagram",
+      "visible": true
+    },
+    {
+      "link": "https://github.com/sombriks",
+      "label": "Github",
+      "icon": "icon-github",
+      "visible": true
+    },
+    {
+      "link": "https://www.linkedin.com/in/sombriks",
+      "label": "Linkedin",
+      "icon": "icon-linkedin",
+      "visible": true
+    },
+    {
+      "link": "https://stackoverflow.com/users/420096/sombriks?tab=profile",
+      "label": "StackOverflow",
+      "icon": "icon-stackoverflow",
+      "visible": true
+    },
+    {
+      "link": "https://keybase.io/sombriks",
+      "label": "Keybase",
+      "icon": "icon-keybase",
+      "visible": true
+    },
+    {
+      "link": "https://www.hackerrank.com/sombriks",
+      "label": "Hackerrank",
+      "icon": "icon-hackerrank",
+      "visible": true
+    },
+    {
+      "link": "https://www.reddit.com/user/sombriks",
+      "label": "Reddit",
+      "icon": "icon-reddit",
+      "visible": true
+    },
+    {
+      "link": "https://www.polywork.com/sombriks",
+      "label": "Polywork",
+      "icon": "icon-link",
+      "visible": true
+    }
+  ],
   "work": [
     {
       "company": "Rede Inova",

@@ -1,4 +1,3 @@
-
 <style webc:scoped>
     .footer {
         display: flex;
@@ -11,6 +10,11 @@
     .contacts {
         display: flex;
     }
+
+    .me {
+        text-decoration: none;
+        border-bottom: none;
+    }
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -22,20 +26,13 @@
         &copy; Leonardo Silveira (a.k.a. sombriks) <span id="year"></span>
     </div>
     <div class="contacts">
-        <!-- todo carregar dinamicamente a partir do json -->
-        <a target="_blank" href="mailto:sombriks@gmail.com"><span class="icon-mail4"></span></a>
-        <a target="_blank" href="https://github.com/sombriks"><span class="icon-github"></span></a>
-        <a target="_blank" href="https://stackoverflow.com/users/420096/sombriks?tab=profile"><span
-                class="icon-stackoverflow"></span></a>
-        <a target="_blank" href="https://www.linkedin.com/in/sombriks"><span class="icon-linkedin"></span></a>
-        <a target="_blank" href="https://twitter.com/sombriks"><span class="icon-twitter"></span></a>
-        <a target="_blank" href="https://mastodon.world/@sombriks"><span class="icon-mastodon"></span></a>
-        <a target="_blank" href="https://facebook.com/sombriks"><span class="icon-facebook2"></span></a>
-        <a target="_blank" href="https://instagram.com/sombriks"><span class="icon-instagram"></span></a>
-        <a target="_blank" href="https://www.hackerrank.com/sombriks"><span class="icon-hackerrank"></span></a>
-        <a target="_blank" href="https://www.reddit.com/user/sombriks"><span class="icon-reddit"></span></a>
-        <a target="_blank" href="https://keybase.io/sombriks"><span class="icon-keybase"></span></a>
-        <a target="_blank" href="https://www.polywork.com/sombriks"><span class="icon-link"></span></a>
+        <script webc:type="js" webc:is="a">
+           curriculum.contacts.filter(c => c.visible).map(c => `
+     <a target="_blank" href="${c.link}" alt="${c.label}" title="${c.label}">
+       <span class="${c.icon}"></span>
+     </a>
+            `).join("\n")
+        </script>
     </div>
-    <a rel="me" href="https://mastodon.world/@sombriks" style="text-decoration: none; border-bottom: none;">&nbsp;</a>
+    <a rel="me" href="https://mastodon.world/@sombriks" class="me">&nbsp;</a>
 </div>
