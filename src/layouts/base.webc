@@ -81,6 +81,7 @@
 <body>
 <div class="outer-container">
     <site-header></site-header>
+    <br/>
     <div @raw="content"></div>
     <site-footer/>
 </div>
