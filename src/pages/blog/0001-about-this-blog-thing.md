@@ -10,6 +10,10 @@ date: 2017-12-04
 **Update 2020-05-27:** we don't use axios or brfs anymore. or browserify.
 The new 'engine' is [es6 imports](https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import) in a vue-cli generated project.
 
+
+---
+
+
 This is not an engine at all.
 
 All i need is to display a few markdown files, just render them and i'm done. Call it a day.

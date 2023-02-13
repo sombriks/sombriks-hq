@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2020-07-14
 ---
 # My developer setup
 
@@ -105,5 +105,3 @@ That's it. this is what i do on my machines nowadays in order to get ready for
 war.
 
 See you, space cowboy!
-
-2020-07-14

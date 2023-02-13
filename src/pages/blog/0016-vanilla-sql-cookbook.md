@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-03-28
 ---
 # The vanilla (or raw, your call) SQL cookbook
 
@@ -304,5 +304,3 @@ databases. This is advice built on top real use.
 I hope it helps.
 
 Happy coding!
-
-2019-03-28

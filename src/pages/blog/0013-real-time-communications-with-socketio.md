@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-02-22
 ---
 # Real-time communications with Socket.io
 
@@ -296,5 +296,3 @@ understandable after
 
 Hope you find this article useful, and as usual the source code can be found
 [here](https://github.com/sombriks/sample-rtc-socket-io).
-
-2019-02-22

@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags:
+  - posts
+  - hello
 date: 2017-12-04
 ---
 # First post
@@ -27,4 +29,4 @@ const x = a => b => b(a)
 
 We have inline images too!
 
-![picture_10.jpg](/profile-pics/picture_10.jpg)
+![picture_10.jpg](/assets/profile-pics/picture_10.jpg)

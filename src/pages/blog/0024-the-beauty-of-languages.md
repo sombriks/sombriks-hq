@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2021-01-28
 ---
 # The Beauty of programming languages and why does it matter
 
@@ -15,5 +15,3 @@ finding individuals to maintain it.
 This is the hidden cost of old legacy systems. Not all of them are pleasant to
 maintain because they're ugly. And because of that, they become harder to
 maintain, since find people to work on it become scarce.
-
-2021-01-28

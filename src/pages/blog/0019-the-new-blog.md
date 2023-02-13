@@ -1,13 +1,13 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2020-05-28
 ---
 # The new blog
 
 It was time for change.
 
-![the old blog](/post-pics/0019-the-new-blog/old.png)
+![the old blog](/assets/post-pics/0019-the-new-blog/old.png)
 
 The fourth version of this place was intended to be also my experimentation
 ground for my [vue](https://vuejs.org/) skills.
@@ -21,5 +21,3 @@ Also, it was not optimized.
 The new blog/site uses an updated stack and es6 modules instead commonsJS.
 
 And that's it.
-
-2020-05-28

@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-10-05
 ---
 # Why Docker after all?
 
@@ -107,5 +107,3 @@ life.
 
 Also you can write up [docker-compose](https://docs.docker.com/compose/) files,
 but at this point you can read the official docs by yourself.
-
-2019-10-05

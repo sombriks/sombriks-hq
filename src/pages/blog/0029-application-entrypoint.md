@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2022-04-05
 ---
 # Some history and thoughts about application entry point in a microservice era
 
@@ -154,5 +154,3 @@ That's it. i was thinking about entry point and how it changed through time.
 
 I don't know if we can call service address as a true successor for operating
 system-based programs entrypoint but it's a quite good candidate for *concrete*.
-
-2022-04-05

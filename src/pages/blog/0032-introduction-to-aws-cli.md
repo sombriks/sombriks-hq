@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2022-05-17
 ---
 # AWS cli introduction
 
@@ -67,7 +67,7 @@ The you can visit the
 [aws management console](https://s3.console.aws.amazon.com/s3/buckets/my-sample-bucket-xpto?region=us-east-1&tab=objects)
 and see your file:
 
-![post-0032-aws-management-console](post-pics/0032-introduction-to-aws-cli/s3-buckets.png)
+![post-0032-aws-management-console](/assets/pot-pics/0032-introduction-to-aws-cli/s3-buckets.png)
 
 Remember to not keep unnecessary resources draining your credit card on aws.
 Delete the file and the bucket, either using the web console or the cli.
@@ -83,5 +83,3 @@ With enough practice and docs reading you can automate your production pipeline
 entirely.
 
 [*] unless there is a nasty bug.
-
-2022-05-17

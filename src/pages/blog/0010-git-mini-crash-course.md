@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-01-09
 ---
 # How to use git
 
@@ -174,13 +174,13 @@ so what's the point?
 Go to [GitHub.com](https://github.com/), make an account (if you don't already
 have) and hit the [new repository](https://github.com/new) menu option:
 
-![GitHub-new](/post-pics/0010-git-mini-crash-course/github-new.png)
+![GitHub-new](/assets/post-pics/0010-git-mini-crash-course/github-new.png)
 
 After that, provide required information but
 **DO NOT 'Initialize this repository with a README'**, since all history about
 commits and branches are in your folder:
 
-![repo-info](/post-pics/0010-git-mini-crash-course/repo-info.png)
+![repo-info](/assets/post-pics/0010-git-mini-crash-course/repo-info.png)
 
 Once you hit the create repository button, you will receive nice hints on what
 to do next. Add the remote to your repo then push your master branch to it:
@@ -208,7 +208,7 @@ which branch, you will just say that you want push code.
 
 Once you do that, your repo will look like this:
 
-![new-repo](/post-pics/0010-git-mini-crash-course/new-repo.png)
+![new-repo](/assets/post-pics/0010-git-mini-crash-course/new-repo.png)
 
 And that's it, your creation is in the internet now.
 
@@ -299,5 +299,3 @@ And some branch for very new feature to be created.
 To close this thing, i hope this small overview helps you to start.
 
 You **will** face problems, but at least you know how to start.
-
-2019-01-09

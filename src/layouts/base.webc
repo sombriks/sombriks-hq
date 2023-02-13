@@ -7,6 +7,8 @@
     <link rel="icon" href="/assets/logo.png"/>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
     <link webc:keep rel="stylesheet" href="/assets/icons.css"/>
+<!--    <link webc:keep rel="stylesheet" href="/assets/prism-synthwave84.css"/>-->
+    <link webc:keep rel="stylesheet" href="/assets/prism-solarized-dark-atom.css"/>
     <style webc:keep>
         html {
             --color0: #333;
@@ -32,6 +34,13 @@
             border-bottom: 1px solid var(--color1);
         }
 
+        img {
+            max-width: 40vw;
+        }
+
+        pre {
+            max-width: 90vw;
+        }
         .outer-container {
             display: flex;
             flex-direction: column;
@@ -72,19 +81,13 @@
 
     <style webc:keep @raw="getCss(page.url)"></style>
     <script webc:keep @raw="getJs(page.url)"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // const n = parseInt(Math.random() * 13, 0)
-            // changeTheme(n)
-        })
-    </script>
 </head>
 <body>
 <div class="outer-container">
     <h1><a :href="url('/')">Sombriks Has A Plan</a></h1>
     <nav-links></nav-links>
     <br/>
-    <div @raw="content"></div>
+    <div style="width:100%;" @raw="content"></div>
     <br/>
     <nav-links></nav-links>
     <site-footer/>

@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-01-31
 ---
 # Thoughts on persistence layer and it's solutions
 
@@ -16,7 +16,7 @@ with distinct frameworks. So we can compare them.
 
 First things first, we'll use this database schema:
 
-![01-my-party-schema.png](/post-pics/0011-about-jpa-sequelize-and-bookshelf/01-my-party-schema.png)
+![01-my-party-schema.png](/assets/post-pics/0011-about-jpa-sequelize-and-bookshelf/01-my-party-schema.png)
 
 We will not discuss [migrations](#/blog/0005-updated-knex-bookshelf-cookbook.md)
 here, although it's a _de-facto_ standard pattern to manage schema evolutions.
@@ -488,5 +488,3 @@ Maybe i add [Go](https://golang.org/) to this challenge,
 
 The source code for this blog post can be found
 [here](https://github.com/sombriks/sample-jpa-sequelize-bookshelf).
-
-2019-01-31

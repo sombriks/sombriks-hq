@@ -231,7 +231,7 @@ https://keys.openpgp.org/upload/TmyI2ZERAhexdHxghzzHufu5u9m3e36vTecjjv83CiRscG9Q
 
 Then open the provided link and validate your key:
 
-![validate key](/post-pics/0038-how-to-publish-package-on-maven-central/validating-gpg-key.png)
+![validate key](/assets/post-pics/0038-how-to-publish-package-on-maven-central/validating-gpg-key.png)
 
 Make sure to create and safely store a backup for your signature. Guard the
 .gnupg folder with care!
@@ -251,7 +251,7 @@ staging phase of this process.
 Once successfull, login into [nexus](https://s01.oss.sonatype.org/#stagingRepositories)
 and proceed with [closing and promoting the library](https://help.sonatype.com/repomanager2/staging-releases/managing-staging-repositories):
 
-![staging repositories](/post-pics/0038-how-to-publish-package-on-maven-central/staging-repositories.png)
+![staging repositories](/assets/post-pics/0038-how-to-publish-package-on-maven-central/staging-repositories.png)
 
 ## Further steps
 

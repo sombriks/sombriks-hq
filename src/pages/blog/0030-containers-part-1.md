@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2022-05-04
 ---
 # Containers containers containers
 
@@ -59,11 +59,11 @@ You can run more than one version of your container image. for example, the
 previous command created a container based on the
 [hello-world image](https://hub.docker.com/_/hello-world). if you run it again:
 
-![docker-hello-world](post-pics/0030-containers-part-1/docker-hello-world.png)
+![docker-hello-world](/assets/pot-pics/0030-containers-part-1/docker-hello-world.png)
 
 It might trick you to believe you just ran the same container. But wait!
 
-![docker-hello-world](post-pics/0030-containers-part-1/docker-ps-a.png)
+![docker-hello-world](/assets/pot-pics/0030-containers-part-1/docker-ps-a.png)
 
 In fact the _run_ command is misleading. It **creates** _and_ **run** new
 containers.
@@ -223,5 +223,3 @@ environment setup from a supermarket shelf instead of craft it piece by piece.
 
 At some point we will cover image publishing on some cloud providers and make that image or images into production
 containers.
-
-2022-05-04

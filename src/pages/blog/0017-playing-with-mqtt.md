@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-08-03
 ---
 # Playing with MQTT
 
@@ -99,5 +99,3 @@ There is
 explaining the internals of the protocol, And the
 [aedes broker](https://github.com/mcollina/aedes) implementation is the current
 state of the art in nodejs world.
-
-2019-08-03
