@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-01-03
 ---
 # Helper components on nativescript-vue
 
@@ -180,5 +180,3 @@ Nativescript-Vue grows as a good alternative to cordova/ionic and react-native.
 Hope to see more plugins, components, and, why not, more
 [showcases](https://market.nativescript.org/?tab=samples&framework=vue&category=all_samples)
 of it's potential.
-
-2019-01-03
