@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Simple typescript setup
 
 I don't really get too serious on typescript at first. It's transpilled, we can

@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-05-23
+---
 # Containers (almost) everywhere
 
 In the [previous article](#/blog/0030-containers-part-1.md) we introduced the
@@ -223,5 +228,3 @@ instead just primary docker hub.
 
 Next step is to run custom container on cloud infrastructure instead of local
 compose orchestration.
-
-2022-05-23

@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Good enough UI on reactive framework era
 
 As [promised](#/0007-vue-and-react-side-by-side.md) before here comes another

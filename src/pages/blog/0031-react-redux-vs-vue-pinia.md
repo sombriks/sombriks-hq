@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Another very opinionated comparison
 
 [Back in time](/blog/#0007-vue-and-react-side-by-side.md) i did a similar comparison

@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Making libgpiod bindings for nodejs
 
 One of my current hobbies is playing with [arduinos](https://www.arduino.cc/)

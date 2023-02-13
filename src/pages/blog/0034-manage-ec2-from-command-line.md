@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-06-21
+---
 # Simple ec2 management from command line
 
 Launch [EC2 instances](https://aws.amazon.com/ec2/) is the level zero for cloud
@@ -83,5 +88,3 @@ aws ec2 terminate-instances --instance-ids i-00491fb41d556a2bd
 ```
 
 The machine might be listed for a while, but eventually it will disappear.
-
-2022-06-21

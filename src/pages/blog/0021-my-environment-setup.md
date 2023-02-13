@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # My developer setup
 
 Times to times we need to upgrade our systems, and there is that moment when the

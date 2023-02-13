@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Real-time communications with Socket.io
 
 Most of the internet is built around the _request/response_ abstraction.

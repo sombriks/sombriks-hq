@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Are you flasking me or life during pipenv time
 
 The [Python](https://www.python.org) language is there as one of the biggest

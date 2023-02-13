@@ -25,3 +25,17 @@ layout: base.webc
 <br/>
 <br/>
 {%- endfor -%}
+<br/>
+<h3>Education</h3>
+<br/>
+{%- for e in curriculum.education -%}
+<div>
+    <h4><i>{{e.start}} to {{e.end}}</i> - {{e.type}} - {{e.course}} at {{e.institution}}</h4>
+    <h5>Details</h5>
+    <p>{{e.description}}</p>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+{%- endfor -%}

@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # A bit of Enterprise Kotlin
 
 [Kotlin](https://kotlinlang.org/) is a pretty nice language that runs on top of

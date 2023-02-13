@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2017-12-05
+---
 # About my old blogs
 
 There are a few older blogs over the net.
@@ -21,5 +26,3 @@ Sounds complicated, but is dead simple.
 Hope this way i start to post more often.
 
 Also i like markdown much more than those sneaky rich text editors.
-
-2017-12-05

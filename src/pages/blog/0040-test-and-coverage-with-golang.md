@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2023-02-04
+---
 # Test and coverage in GO
 
 Just like everything else in this language, test and cover code is just fun and
@@ -75,5 +80,3 @@ And that's it!
 
 You can see more about my go snippets
 [here](https://github.com/sombriks/my-golang-handbook).
-
-2023-02-04

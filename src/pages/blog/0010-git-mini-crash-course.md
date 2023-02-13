@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # How to use git
 
 This is a well covered theme over the internet but it does not harm to put it

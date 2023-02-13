@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Why Docker after all?
 
 You see, the very first time i've heard about it, i thought it was... Silly.

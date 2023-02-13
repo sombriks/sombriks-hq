@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # How to structure a java project
 
 It seems easy, but there is a reason people tend to use
@@ -232,5 +237,3 @@ in early 2000's and then show maven project structure, which is the _de-facto_
 java project layout standard nowadays.
 
 But that is already made by eclipse, netbeans, intellij and many others.
-
-2022-09-24

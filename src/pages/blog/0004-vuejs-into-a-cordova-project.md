@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2018-12-17
+---
 # Vue.js into a Cordova project
 
 You see, [cordova](https://cordova.apache.org/blog/) has been a reliable tool
@@ -356,5 +361,3 @@ out yet, change the line containing the content security police:
 Since HMR needs local and socket access, you will have to allow such sources.
 
 You can see the source code [here](https://github.com/sombriks/sample-cordova-vue).
-
-2018-12-17

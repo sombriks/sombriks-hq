@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-11-20
+---
 # How to configure two databases on spring-boot
 
 Set up one database on spring boot is practically automatic. All you need to do
@@ -172,5 +177,3 @@ This article shows how to set two databases, but it will work for as much
 databases as you need, as long as you point out which one will be the primary.
 
 For more details, [se the complete source code here](https://github.com/sombriks/sample-spring-multiple-databases)
-
-2022-11-20

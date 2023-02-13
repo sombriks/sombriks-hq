@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # The Beauty of programming languages and why does it matter
 
 Languages must be pleasant to read and write. Not only for amusement purposes,

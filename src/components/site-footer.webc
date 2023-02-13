@@ -1,7 +1,6 @@
 <style webc:scoped>
     .footer {
         display: flex;
-        margin-top: 5em;
         flex-direction: column;
         justify-content: center;
         align-items: center;

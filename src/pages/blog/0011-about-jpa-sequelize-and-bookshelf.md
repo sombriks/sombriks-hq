@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Thoughts on persistence layer and it's solutions
 
 One of the most important things in a modern solution is the data being

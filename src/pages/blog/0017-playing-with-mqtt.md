@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Playing with MQTT
 
 The [mqtt protocol](https://en.wikipedia.org/wiki/MQTT) is quite cool.

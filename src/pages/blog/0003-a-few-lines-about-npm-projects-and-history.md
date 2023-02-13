@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2017-12-06
+---
 # Words about package registries, build tools, past, present and future
 
 You see, when i got into this train it already was on move. Internet. Databases. Servers. Clients.
@@ -224,5 +229,3 @@ Those tools carry many differences. Gradle where meant to be a better Maven, but
 We didn't debated here Ruby gems, PHP composer or pip. Yet thinking again about 2007, we lived without these tools.
 
 My my, we had a sad life.
-
-2017-12-06

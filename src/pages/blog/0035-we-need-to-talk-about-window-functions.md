@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-07-10
+---
 # We need to talk about window functions
 
 SQL is the de-facto standard language when we need to deal with data definition,
@@ -172,5 +177,3 @@ Queries start to become more and more funky, but the insight extracted from them
 become more and more precious to make strategic decisions.
 
 The sample data for this article can be found [here](/post-pics/0035-we-need-to-talk-about-window-functions/sample.sql);
-
-2022-07-10

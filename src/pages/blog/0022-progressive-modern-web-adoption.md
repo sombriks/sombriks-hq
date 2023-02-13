@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # On progressive adoption of modern web development
 
 It's no secret that there is still a lot of front-end solutions using 

@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # AWS cli introduction
 
 Everything* you can do from web aws management console you can do from the

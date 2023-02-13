@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Using GNU Make as your preferred javascript build tool
 
 So, [Make](<https://en.wikipedia.org/wiki/Make_(software)>) was created a long

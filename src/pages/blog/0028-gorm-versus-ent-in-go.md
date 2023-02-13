@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # gorm versus ent: which ORM you should choose when going to go land
 
 This is a quite opinionated one, and you can see the approaches here:

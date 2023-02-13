@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Containers containers containers
 
 They're everywhere. Even where they aren't needed. But containers aren't bad.

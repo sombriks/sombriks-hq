@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # The vanilla (or raw, your call) SQL cookbook
 
 Every time someone creates a new way of persistence, given enough time it will

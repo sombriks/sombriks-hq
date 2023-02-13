@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2023-01-29
+---
 # Light rant about embedded solutions for Jakarta EE
 
 _update 2023-02-01_ the [microprofile specification](https://microprofile.io/)
@@ -41,5 +46,3 @@ separation of the two modules. A few questions so far:
 
 Any comment on this topic is
 welcome [on this thread](https://stackoverflow.com/questions/75274795/embedded-portable-jakartaee-application-design-approach).
-
-2023-01-29

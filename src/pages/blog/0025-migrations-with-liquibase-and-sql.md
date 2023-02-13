@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # spring boot java database migrations with liquibase and sql
 
 I really enjoy database migrations.

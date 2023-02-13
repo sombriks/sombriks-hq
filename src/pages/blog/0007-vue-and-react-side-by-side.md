@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2018-12-30
+---
 # Vue and React Side By Side
 
 Ok,
@@ -917,5 +922,3 @@ available to each framework.
 And about mobile development on another.
 
 The complete source code can be found [there](https://github.com/sombriks/vue-react-comparison).
-
-2018-12-30

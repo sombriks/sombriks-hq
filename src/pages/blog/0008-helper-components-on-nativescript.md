@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Helper components on nativescript-vue
 
 This is a quick one, but is quite worth to share so be prepared.

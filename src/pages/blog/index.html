@@ -1,5 +1,8 @@
 ---
 layout: base.webc
 ---
+{%- for post in collections.posts reversed -%}
+<a href="{{post.page.url}}"
+   style="display:inline-block;">{{post.page.fileSlug}}</a>
+{%- endfor -%}
 
-blog

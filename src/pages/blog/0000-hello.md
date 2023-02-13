@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2017-12-04
+---
 # First post
 
 This is a test to make sure it can be dynamic.
@@ -23,5 +28,3 @@ const x = a => b => b(a)
 We have inline images too!
 
 ![picture_10.jpg](/profile-pics/picture_10.jpg)
-
-2017-12-04

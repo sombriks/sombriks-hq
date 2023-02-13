@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # ES6 modules on backend
 
 ## UPDATE for modern node 

@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2022-09-24
+---
 # Some history and thoughts about application entry point in a microservice era
 
 **Notice:** i will point some concepts the way i remember them, feel free to

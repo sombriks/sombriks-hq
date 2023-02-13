@@ -1,3 +1,8 @@
+---
+layout: base.webc
+tags: posts
+date: 2018-12-27
+---
 # Browserify rocks and that's why
 
 **DISCLAIMER: it does not means that other bundlers sucks.**
@@ -146,5 +151,3 @@ far, browserify.
 See the [handbook](https://github.com/browserify/browserify-handbook).
 Give it a try. Even
 [TypeScript](https://www.npmjs.com/package/tsify) speaks with it.
-
-2018-12-27
