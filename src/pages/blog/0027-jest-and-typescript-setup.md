@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2021-12-15
 ---
 # You can test your typescript code too
 
@@ -233,5 +233,3 @@ As usual, you can see the source code
 the repo contains some visual studio configurations to use with the
 [jest plugin](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 so you can run your tests from GUI.
-
-2021-12-15

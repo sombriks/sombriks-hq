@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-03-16
 ---
 # ES6 modules on backend
 
@@ -368,5 +368,3 @@ be first class citizens on both sides of this game.
 
 The final project with the modifications seen there can be found
 [here on github](https://github.com/sombriks/sample-node-esm).
-
-2019-03-16

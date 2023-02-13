@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-01-09
 ---
 # How to use git
 
@@ -299,5 +299,3 @@ And some branch for very new feature to be created.
 To close this thing, i hope this small overview helps you to start.
 
 You **will** face problems, but at least you know how to start.
-
-2019-01-09

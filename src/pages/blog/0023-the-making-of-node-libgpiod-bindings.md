@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2021-01-02
 ---
 # Making libgpiod bindings for nodejs
 
@@ -104,5 +104,3 @@ setTimeout(blink,1000);
 It was fun to read about how to write addons for node, how to use the
 [nan](https://github.com/nodejs/nan) library and also remember that we need to
 respect C++. It's verbose but very very powerful.
-
-2021-01-02

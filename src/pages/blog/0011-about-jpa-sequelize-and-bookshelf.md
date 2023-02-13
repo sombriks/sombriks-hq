@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-01-31
 ---
 # Thoughts on persistence layer and it's solutions
 
@@ -488,5 +488,3 @@ Maybe i add [Go](https://golang.org/) to this challenge,
 
 The source code for this blog post can be found
 [here](https://github.com/sombriks/sample-jpa-sequelize-bookshelf).
-
-2019-01-31

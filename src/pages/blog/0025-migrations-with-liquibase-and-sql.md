@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2021-07-13
 ---
 # spring boot java database migrations with liquibase and sql
 
@@ -147,5 +147,3 @@ That way you can create migrate files with the following command:
 It's quite nice to see how flexible liquibase is, and if you need to see this
 example with more details, the source code is available
 [here](https://github.com/sombriks/sample-liquibase).
-
-2021-07-13

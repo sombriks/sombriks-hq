@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-02-09
 ---
 # Good enough UI on reactive framework era
 
@@ -468,5 +468,3 @@ choose react only if there is a team already well versed on int.
 
 Finally, feel free to explore the [source code](https://github.com/sombriks/rosetta-beer-store)
 of the repository used as foundation to this post.
-
-2019-02-09

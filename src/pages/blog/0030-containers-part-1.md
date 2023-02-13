@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2022-05-04
 ---
 # Containers containers containers
 
@@ -223,5 +223,3 @@ environment setup from a supermarket shelf instead of craft it piece by piece.
 
 At some point we will cover image publishing on some cloud providers and make that image or images into production
 containers.
-
-2022-05-04

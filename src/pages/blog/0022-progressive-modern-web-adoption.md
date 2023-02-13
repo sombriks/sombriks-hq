@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2020-08-01
 ---
 # On progressive adoption of modern web development
 
@@ -258,5 +258,3 @@ think about the complete state-of-the-art frontend stack.
 
 It's important to upgrade technology and mindsets, however it take time. Hit the
 correct pace and profit on it!
-
-2020-08-01

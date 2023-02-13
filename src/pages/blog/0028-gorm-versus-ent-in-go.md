@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2022-03-28
 ---
 # gorm versus ent: which ORM you should choose when going to go land
 
@@ -119,5 +119,3 @@ I really just scratched the go ecosystem surface here.
 
 If you got hooked, take a look at more curated lists over the lang, like
 [this one](https://awesome-go.com/).
-
-2022-03-28

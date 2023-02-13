@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2020-05-28
 ---
 # The new blog
 
@@ -21,5 +21,3 @@ Also, it was not optimized.
 The new blog/site uses an updated stack and es6 modules instead commonsJS.
 
 And that's it.
-
-2020-05-28

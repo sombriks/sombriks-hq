@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2022-05-07
 ---
 # Another very opinionated comparison
 
@@ -236,5 +236,3 @@ Things keeps evolving and in the future we can analyze future versions of redux.
 
 For the moment, if you're going to a new project and you have some decision
 power, give vue3/pinia a chance. It worth it.
-
-2022-05-07

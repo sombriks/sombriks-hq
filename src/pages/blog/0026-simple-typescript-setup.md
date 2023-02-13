@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2021-12-09
 ---
 # Simple typescript setup
 
@@ -219,5 +219,3 @@ becomes easier for this point.
 
 You can see the code of this article in
 [this repo](https://github.com/sombriks/simple-typescript-setup).
-
-2021-12-09

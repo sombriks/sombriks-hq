@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-03-06
 ---
 # Are you flasking me or life during pipenv time
 
@@ -768,5 +768,3 @@ As usual, the complete source code can be found
 [here](https://github.com/sombriks/rosetta-beer-store/tree/master/beer-store-service-python-flask-sqlalchemy).
 
 Happy hacking.
-
-2019-03-06

@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2022-05-17
 ---
 # AWS cli introduction
 
@@ -83,5 +83,3 @@ With enough practice and docs reading you can automate your production pipeline
 entirely.
 
 [*] unless there is a nasty bug.
-
-2022-05-17

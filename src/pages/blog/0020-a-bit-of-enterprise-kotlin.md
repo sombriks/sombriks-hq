@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2020-06-03
 ---
 # A bit of Enterprise Kotlin
 
@@ -291,5 +291,3 @@ they offer the best IDE support right now.
 
 To see the full source code of this article, click
 [here](https://github.com/sombriks/sample-jee-kotlin).
-
-2020-06-03

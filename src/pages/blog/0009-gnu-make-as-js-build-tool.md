@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 tags: posts
-date: 2022-09-24
+date: 2019-01-04
 ---
 # Using GNU Make as your preferred javascript build tool
 
@@ -143,5 +143,3 @@ challenges. Like
 
 So, if someone asks you to set-up grunt or gulp for a brand new project,
 **please don't**.
-
-2019-01-04
