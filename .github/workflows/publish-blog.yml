@@ -2,7 +2,7 @@ name: Publish blog updates
 on: 
   push:
     branches: 
-      - master
+      - blog-v4
 jobs:
   build:
     env:

@@ -74,6 +74,8 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 5em;
+  justify-content: center;
+  align-items: center;
 }
 .contacts {
   display: flex;
