@@ -7,9 +7,7 @@
     "build": "eleventy",
     "local": "dotenv-run-script .env .env.local --",
     "prerelease": "npm run build",
-    "release": "node -r dotenv-flow/config ops/s3deploy.mjs",
-    "prerelease:ci": "npm run prerelease",
-    "release:ci": "firebase deploy --token $TOKEN"
+    "release": "node -r dotenv-flow/config .ops/s3deploy.mjs"
   },
   "dependencies": {},
   "devDependencies": {
