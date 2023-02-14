@@ -22,7 +22,7 @@ exec(`find dist -type f`, (err, stdout, stderr) => {
                 s3.upload({
                     Bucket: process.env.AWS_BUCKET_NAME,
                     Key: newsite[f],
-                    Body: fs.createReadStream(`dist/${newsite[f]}`)
+                    Body: fs.createReadStream("./dist/"+newsite[f])
                 })
             }
         })
