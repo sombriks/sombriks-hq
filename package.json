@@ -7,7 +7,7 @@
     "build": "eleventy",
     "local": "dotenv-run-script .env .env.local --",
     "prerelease": "npm run build",
-    "release": "firebase deploy",
+    "release": "node -r dotenv-flow/config ops/s3deploy.mjs",
     "prerelease:ci": "npm run prerelease",
     "release:ci": "firebase deploy --token $TOKEN"
   },
@@ -16,6 +16,7 @@
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@11ty/eleventy-plugin-webc": "^0.8.1",
+    "aws-sdk": "^2.1314.0",
     "dotenv-flow": "^3.2.0",
     "dotenv-run-script": "^0.2.0"
   }

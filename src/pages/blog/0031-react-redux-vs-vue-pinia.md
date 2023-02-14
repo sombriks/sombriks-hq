@@ -31,7 +31,7 @@ This one is easy to answer.
 
 Take this scenario for instance:
 
-![sample-screen](/assets/pot-pics/0031-redux-vs-pinia/products.jpg)
+![sample-screen](/assets/post-pics/0031-redux-vs-pinia/products.jpg)
 
 I want a certain set of behaviors here:
 

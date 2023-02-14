@@ -59,11 +59,11 @@ You can run more than one version of your container image. for example, the
 previous command created a container based on the
 [hello-world image](https://hub.docker.com/_/hello-world). if you run it again:
 
-![docker-hello-world](/assets/pot-pics/0030-containers-part-1/docker-hello-world.png)
+![docker-hello-world](/assets/post-pics/0030-containers-part-1/docker-hello-world.png)
 
 It might trick you to believe you just ran the same container. But wait!
 
-![docker-hello-world](/assets/pot-pics/0030-containers-part-1/docker-ps-a.png)
+![docker-hello-world](/assets/post-pics/0030-containers-part-1/docker-ps-a.png)
 
 In fact the _run_ command is misleading. It **creates** _and_ **run** new
 containers.
