@@ -1,13 +1,13 @@
 ---
 date: 2023-02-14
 tags:
-- post
-- misc
+  - posts
+  - misc
 ---
 
 ## Farewel to this blog
 
-I am once again change the blog.
+I am once again changing the blog.
 
 This version was cool, a very minimalistic
 [SPA](https://en.wikipedia.org/wiki/Single-page_application) and a good sample
