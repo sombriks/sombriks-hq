@@ -7,7 +7,7 @@
     "build": "eleventy",
     "local": "dotenv-run-script .env .env.local --",
     "prerelease": "npm run build",
-    "release": "node -r dotenv-flow/config .ops/s3deploy.mjs"
+    "release": "node -r dotenv-flow/config .ops/tasks/s3deploy.mjs"
   },
   "dependencies": {},
   "devDependencies": {
