@@ -1,0 +1,41 @@
+---
+layout: base.webc
+---
+<h3>Professional experience</h3>
+<br/>
+{%- for w in curriculum.work -%}
+<div>
+    <h4><i>{{w.start}} to {{w.end}}</i> - {{w.position}} at {{w.company}}</h4>
+    <p>{{w.description}}</p>
+    <h5>Details</h5>
+    <ul>
+        {%- for p in w.projects -%}
+        <li><b>{{p.name}}</b> - {{p.description}}</li>
+        {%- endfor -%}
+    </ul>
+    <h5>Tech stak</h5>
+    <div style="display:flex;flex-wrap: wrap;">
+        {%- for t in w.techstack -%}
+        <a target="{{t}}" href="https://bing.com?q={{t}}">{{t}}</a>
+        {%- endfor -%}
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+{%- endfor -%}
+<br/>
+<h3>Education</h3>
+<br/>
+{%- for e in curriculum.education -%}
+<div>
+    <h4><i>{{e.start}} to {{e.end}}</i> - {{e.type}} - {{e.course}} at {{e.institution}}</h4>
+    <h5>Details</h5>
+    <p>{{e.description}}</p>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+{%- endfor -%}

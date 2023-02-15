@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta webc:keep charset="utf-8">
+    <meta webc:keep name="viewport" content="width=device-width,initial-scale=1">
+    <title>Try To Keep It Simple</title>
+    <link rel="icon" href="/assets/logo.png"/>
+    <link rel="favicon" type="image/x-icon" href="/assets/favicon.ico"/>
+    <link webc:keep rel="StyleSheet" href="/assets/icons.css"/>
+<!--    <link webc:keep rel="StyleSheet" href="/assets/prism-synthwave84.css"/>-->
+    <link webc:keep rel="StyleSheet" href="/assets/prism-solarized-dark-atom.css"/>
+    <style webc:keep>
+        html {
+            --color0: #333;
+            --color1: #ffa500;
+        }
+
+        body {
+            font-family: monospace;
+            margin: 0;
+            background-color: var(--color0);
+            color: var(--color1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration-line: none;
+            padding: 0.03em;
+            margin: 0.5em;
+            color: var(--color1);
+            border-bottom: 1px solid var(--color1);
+        }
+
+        img {
+            max-width: 40vw;
+        }
+
+        pre {
+            max-width: 90vw;
+        }
+
+        .me {
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 1440px) or (min-width: 1440px) {
+            .outer-container {
+                max-width: 60%;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .outer-container {
+                max-width: 70%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .outer-container {
+                max-width: 75%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .outer-container {
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .outer-container {
+                max-width: 90%;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        })
+    </script>
+    <style webc:keep @raw="getCss(page.url)"></style>
+    <script webc:keep @raw="getJs(page.url)"></script>
+</head>
+<body>
+<div class="outer-container">
+    <h1><a :href="url('/')">Sombriks Has A Plan</a></h1>
+    <contact-bar></contact-bar>
+    <nav-links></nav-links>
+    <br/>
+    <div style="width:100%;" @raw="content"></div>
+    <br/>
+    <nav-links></nav-links>
+    <contact-bar></contact-bar>
+    <div class="footer">
+        <div>
+            &copy; Leonardo Silveira (a.k.a. sombriks) <span id="year"></span>
+        </div>
+        <a rel="me" href="https://mastodon.world/@sombriks" class="me">&nbsp;</a>
+    </div>
+</div>
+</body>
+</html>

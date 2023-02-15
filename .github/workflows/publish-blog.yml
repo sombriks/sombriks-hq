@@ -2,11 +2,15 @@ name: Publish blog updates
 on: 
   push:
     branches: 
-      - master
+      - blog-v5
 jobs:
   build:
     env:
-      TOKEN: ${{secrets.TOKEN}}
+      AWS_REGION: ${{secrets.AWS_REGION}}
+      AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+      AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+      AWS_BUCKET_NAME: ${{secrets.AWS_BUCKET_NAME}}
+      HQ_DIST_SITE_FOLDER: ${{secrets.HQ_DIST_SITE_FOLDER}}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -20,4 +24,4 @@ jobs:
     - name: npm install and publish
       run: |
         npm install
-        npm run release:ci
+        npm run release

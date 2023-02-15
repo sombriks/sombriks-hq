@@ -282,5 +282,13 @@
   {
     "label": "cool drawing tool",
     "link": "https://excalidraw.com/"
+  },
+  {
+    "label": "best static site generator ever",
+    "link": "https://www.11ty.dev/"
+  },
+  {
+    "label": "cool highlight thing",
+    "link": "https://prismjs.com/"
   }
 ]
