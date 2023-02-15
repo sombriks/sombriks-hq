@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - go
+  - test
+  - coverage
 date: 2023-02-04
 ---
 # Test and coverage in GO

@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags:
+  - posts
+  - misc
+  - hello
 date: 2017-12-05
 ---
 # About my old blogs

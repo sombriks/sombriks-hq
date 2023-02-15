@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - aws
+  - cloud
+  - aws-cli
 date: 2022-05-17
 ---
 # AWS cli introduction

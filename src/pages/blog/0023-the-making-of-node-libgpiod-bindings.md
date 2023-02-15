@@ -1,6 +1,12 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - node
+  - raspberry pi
+  - C/C++
+  - libgpiod
+  - python
 date: 2021-01-02
 ---
 # Making libgpiod bindings for nodejs

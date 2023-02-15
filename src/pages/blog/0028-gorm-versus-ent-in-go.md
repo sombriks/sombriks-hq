@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - go
+  - gorm
+  - ent
 date: 2022-03-28
 ---
 # gorm versus ent: which ORM you should choose when going to go land

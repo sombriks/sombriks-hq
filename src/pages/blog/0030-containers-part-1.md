@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - docker
 date: 2022-05-04
 ---
 # Containers containers containers

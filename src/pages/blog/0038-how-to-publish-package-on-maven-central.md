@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - java
+  - maven
 date: 2022-12-31
 ---
 # How to publish a maven package on maven central

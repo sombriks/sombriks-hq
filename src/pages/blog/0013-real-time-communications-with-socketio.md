@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags:
+  - posts
+  - socket.io
 date: 2019-02-22
 ---
 # Real-time communications with Socket.io

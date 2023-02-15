@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - misc
+  - hello
 date: 2017-12-04
 ---
 # About this 'Blog Engine'

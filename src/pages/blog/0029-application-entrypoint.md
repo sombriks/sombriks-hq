@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - misc
 date: 2022-04-05
 ---
 # Some history and thoughts about application entry point in a microservice era

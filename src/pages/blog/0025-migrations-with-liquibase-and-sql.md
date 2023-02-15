@@ -1,6 +1,12 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - java
+  - sql
+  - bash
+  - liquibase
+  - database migrations
 date: 2021-07-13
 ---
 # spring boot java database migrations with liquibase and sql

@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - node
+  - jest
+  - typescript
 date: 2021-12-15
 ---
 # You can test your typescript code too

@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - docker
 date: 2019-10-05
 ---
 # Why Docker after all?

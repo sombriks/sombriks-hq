@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - vuejs
+  - cordova
+  - project setup
 date: 2018-12-17
 ---
 # Vue.js into a Cordova project

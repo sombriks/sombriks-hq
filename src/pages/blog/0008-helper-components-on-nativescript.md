@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - vue
+  - nativescript
 date: 2019-01-03
 ---
 # Helper components on nativescript-vue

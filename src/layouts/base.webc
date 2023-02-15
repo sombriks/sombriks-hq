@@ -41,6 +41,19 @@
         pre {
             max-width: 90vw;
         }
+
+        .me {
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .outer-container {
             display: flex;
             flex-direction: column;
@@ -78,19 +91,30 @@
             }
         }
     </style>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        })
+    </script>
     <style webc:keep @raw="getCss(page.url)"></style>
     <script webc:keep @raw="getJs(page.url)"></script>
 </head>
 <body>
 <div class="outer-container">
     <h1><a :href="url('/')">Sombriks Has A Plan</a></h1>
+    <contact-bar></contact-bar>
     <nav-links></nav-links>
     <br/>
     <div style="width:100%;" @raw="content"></div>
     <br/>
     <nav-links></nav-links>
-    <site-footer/>
+    <contact-bar></contact-bar>
+    <div class="footer">
+        <div>
+            &copy; Leonardo Silveira (a.k.a. sombriks) <span id="year"></span>
+        </div>
+        <a rel="me" href="https://mastodon.world/@sombriks" class="me">&nbsp;</a>
+    </div>
 </div>
 </body>
 </html>

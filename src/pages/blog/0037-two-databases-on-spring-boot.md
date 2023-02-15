@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - java
+  - spring-boot
+  - datasource configuration
 date: 2022-11-20
 ---
 # How to configure two databases on spring-boot
