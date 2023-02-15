@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - node
+  - es6
 date: 2019-03-16
 ---
 # ES6 modules on backend

@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - kotlin
+  - gradle
 date: 2020-06-03
 ---
 # A bit of Enterprise Kotlin

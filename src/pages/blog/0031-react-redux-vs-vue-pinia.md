@@ -1,6 +1,11 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - vue
+  - react
+  - redux
+  - pinia
 date: 2022-05-07
 ---
 # Another very opinionated comparison

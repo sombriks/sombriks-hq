@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - build tool
+  - make
+  - javascript
 date: 2019-01-04
 ---
 # Using GNU Make as your preferred javascript build tool

@@ -3,6 +3,7 @@ layout: base.webc
 tags:
   - posts
   - hello
+  - misc
 date: 2017-12-04
 ---
 # First post

@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - java
+  - project structure
 date: 2022-09-24
 ---
 # How to structure a java project

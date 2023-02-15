@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - git
 date: 2019-01-09
 ---
 # How to use git

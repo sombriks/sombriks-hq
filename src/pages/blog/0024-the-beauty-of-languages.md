@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - misc
 date: 2021-01-28
 ---
 # The Beauty of programming languages and why does it matter

@@ -1,6 +1,11 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - python
+  - pipenv
+  - sqlalchemy
+  - flask
 date: 2019-03-06
 ---
 # Are you flasking me or life during pipenv time

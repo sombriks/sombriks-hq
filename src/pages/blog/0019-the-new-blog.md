@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - misc
 date: 2020-05-28
 ---
 # The new blog

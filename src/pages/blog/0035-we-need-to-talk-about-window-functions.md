@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - sql
+  - window functions
 date: 2022-07-10
 ---
 # We need to talk about window functions

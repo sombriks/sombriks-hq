@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - sql
 date: 2019-03-28
 ---
 # The vanilla (or raw, your call) SQL cookbook

@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - aws
+  - aws-cli
+  - ec2
 date: 2022-06-21
 ---
 # Simple ec2 management from command line

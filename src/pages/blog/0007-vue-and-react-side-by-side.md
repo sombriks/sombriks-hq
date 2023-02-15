@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - vue
+  - react
 date: 2018-12-30
 ---
 # Vue and React Side By Side

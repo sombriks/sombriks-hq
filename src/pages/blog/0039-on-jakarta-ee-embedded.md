@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - misc
 date: 2023-01-29
 ---
 # Light rant about embedded solutions for Jakarta EE

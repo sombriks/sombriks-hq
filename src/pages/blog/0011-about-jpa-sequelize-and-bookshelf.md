@@ -1,6 +1,11 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - postgres
+  - jpa
+  - sequelize
+  - bookshelf
 date: 2019-01-31
 ---
 # Thoughts on persistence layer and it's solutions

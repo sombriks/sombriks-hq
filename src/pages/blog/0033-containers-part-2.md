@@ -1,6 +1,12 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - docker
+  - podman
+  - docker-compose
+  - container registry
+  - aws
 date: 2022-05-23
 ---
 # Containers (almost) everywhere

@@ -1,6 +1,11 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - knex
+  - bookshelf
+  - snippets
+  - database migrations
 date: 2018-12-25
 ---
 # The updated knex + bookshelf cookbook

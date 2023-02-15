@@ -1,6 +1,8 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - bundlers
 date: 2018-12-27
 ---
 # Browserify rocks and that's why

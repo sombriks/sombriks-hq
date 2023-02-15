@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - node
+  - mqtt
 date: 2019-08-03
 ---
 # Playing with MQTT

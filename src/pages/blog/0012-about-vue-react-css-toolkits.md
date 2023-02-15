@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - react
+  - vue
+  - css tookits
 date: 2019-02-09
 ---
 # Good enough UI on reactive framework era
@@ -58,7 +62,7 @@ Other results omitted, just not worthy
 - [mui](https://www.muicss.com/docs/v1/react/introduction)
 - [react-mdl](https://tleunen.github.io/react-mdl/)
 
-Other results omitted, either bootstrap or trying to sell support
+Other results omitted, either bootstrap or someone trying to sell support
 
 ## Let's see some action, but first
 

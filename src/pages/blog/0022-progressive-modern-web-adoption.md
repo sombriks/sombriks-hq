@@ -1,6 +1,10 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - jquery
+  - vue
+  - progressive
 date: 2020-08-01
 ---
 # On progressive adoption of modern web development

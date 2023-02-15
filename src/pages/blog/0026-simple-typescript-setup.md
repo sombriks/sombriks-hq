@@ -1,6 +1,9 @@
 ---
 layout: base.webc
-tags: posts
+tags: 
+  - posts
+  - node
+  - typescript
 date: 2021-12-09
 ---
 # Simple typescript setup
