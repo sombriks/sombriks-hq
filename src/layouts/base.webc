@@ -8,7 +8,8 @@
     <link rel="favicon" type="image/x-icon" href="/assets/favicon.ico"/>
     <link webc:keep rel="StyleSheet" href="/assets/icons.css"/>
 <!--    <link webc:keep rel="StyleSheet" href="/assets/prism-synthwave84.css"/>-->
-    <link webc:keep rel="StyleSheet" href="/assets/prism-solarized-dark-atom.css"/>
+<!--    <link webc:keep rel="StyleSheet" href="/assets/prism-solarized-dark-atom.css"/>-->
+    <link webc:keep rel="StyleSheet" href="/assets/prism-duotone-earth.css"/>
     <style webc:keep>
         html {
             --color0: #333;
