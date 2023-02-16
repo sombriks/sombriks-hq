@@ -9,7 +9,7 @@
     <link webc:keep rel="StyleSheet" href="/assets/icons.css"/>
 <!--    <link webc:keep rel="StyleSheet" href="/assets/prism-synthwave84.css"/>-->
 <!--    <link webc:keep rel="StyleSheet" href="/assets/prism-solarized-dark-atom.css"/>-->
-    <link webc:keep rel="StyleSheet" href="/assets/prism-duotone-earth.css"/>
+    <link rel="StyleSheet" href="/assets/prism-theme.css"/>
     <style webc:keep>
         html {
             --color0: #333;

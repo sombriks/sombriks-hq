@@ -17,6 +17,7 @@
     "aws-sdk": "^2.1314.0",
     "dotenv-flow": "^3.2.0",
     "dotenv-run-script": "^0.2.0",
-    "mime-types": "^2.1.35"
+    "mime-types": "^2.1.35",
+    "prism-themes": "^1.9.0"
   }
 }
