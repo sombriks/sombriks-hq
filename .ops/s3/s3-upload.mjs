@@ -15,7 +15,7 @@ export const upload = async (name, prefix, files) => {
                 Bucket: name,
                 Key: newKey,
             }).promise())
-            cnsole.log("done!")
+            console.log("done!")
         }
     } catch (e) {
         console.log("we got a problem!", e)
