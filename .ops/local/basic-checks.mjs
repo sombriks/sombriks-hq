@@ -7,5 +7,8 @@ export const checkEnvironment = () => {
         console.log("Please check your environment variables")
         process.exit(1)
     }
+    if(process.platform === "win32") {
+        console.warn("deploy does not work on windows properly!")
+    }
     return "ok"
 }

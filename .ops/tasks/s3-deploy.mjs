@@ -1,4 +1,4 @@
-import {checkEnvironment} from "../s3/base.mjs";
+import {checkEnvironment} from "../local/basic-checks.mjs";
 import {listLocalFiles} from "../local/file-list.mjs";
 import {cleanBucket} from "../s3/s3-del.mjs";
 import {listBucketObjects} from "../s3/s3-list.mjs";
