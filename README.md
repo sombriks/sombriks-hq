@@ -2,6 +2,8 @@
 
 Stronghold for my curriculum, blog and any other random thoughts.
 
+Roadmap [here](https://github.com/users/sombriks/projects/1)
+
 ## how to publish blog
 
 It's published on firebase-hosting.
