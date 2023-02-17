@@ -1,18 +1,3 @@
-import fs from "fs"
-import AWS from "aws-sdk"
-import mime from "mime-types"
-import {exec} from "child_process"
-
-if (!process.env.AWS_BUCKET_NAME
-    || !process.env.HQ_DIST_SITE_FOLDER
-    || !process.env.AWS_REGION
-    || !process.env.AWS_ACCESS_KEY_ID
-    || !process.env.AWS_SECRET_ACCESS_KEY) {
-    console.log("Please check your environment variables")
-    process.exit(1)
-}
-
-const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 // TODO see https://github.com/sombriks/sample-static-site-on-s3-example
 // https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/s3-example-creating-buckets.html
