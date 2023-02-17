@@ -3,7 +3,7 @@ import AWS from "aws-sdk"
 import mime from "mime-types"
 import {exec} from "child_process"
 
-if(!process.env.AWS_BUCKET_NAME
+if (!process.env.AWS_BUCKET_NAME
     || !process.env.HQ_DIST_SITE_FOLDER
     || !process.env.AWS_REGION
     || !process.env.AWS_ACCESS_KEY_ID
