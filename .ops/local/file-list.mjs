@@ -29,5 +29,3 @@ export const listLocalFiles = (folder) => {
         }
     })
 }
-
-// listLocalFiles(".ops").then(console.log)

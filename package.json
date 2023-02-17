@@ -3,11 +3,13 @@
   "version": "5.0.1",
   "private": true,
   "scripts": {
+    "predev": "npm run clean",
     "dev": "eleventy --serve",
     "build": "eleventy",
     "local": "dotenv-run-script .env .env.local --",
     "prerelease": "npm run build",
-    "release": "node -r dotenv-flow/config .ops/tasks/s3deploy.mjs"
+    "release": "node -r dotenv-flow/config .ops/tasks/s3-deploy.mjs",
+    "clean": "node -r dotenv-flow/config .ops/tasks/clean-local.mjs"
   },
   "dependencies": {},
   "devDependencies": {
