@@ -23,8 +23,8 @@ Actually it **is** broken.
 I tried to put [google adsense](https://www.google.com/adsense) on it and got 5
 to 6 refusals.
 
-since it's an SPA, the crawler is unable to undex it and, therefore, there is no
-indexable content on it. At least this is what i suspect
+since it's an SPA, the crawler is unable to index it and, therefore, there is no
+_valuable_ content on it. At least this is what i suspect
 [after dig into adsense documentation](https://support.google.com/adsense/answer/81904?hl=pt-BR&visit_id=638119984989682795-2409927824&rd=1#insufficient_content).
 
 ## The new headquarters
@@ -60,7 +60,12 @@ json resource files directly during the render phase of the static content.
 Over the years frontend development piled the bad name of too complex and full
 of unnecessary indirections.
 
-Those static site generators, besides the 'static' in the name, aren't so static.
+Those static site generators, besides the 'static' in the name, aren't static at
+all. They are dynamic, modern and very capable source of dynamic content.
+
+I am pretty sure that the age of SPA is ending.
+Not that [SPA](https://goodspaguide.co.uk/features/spa-through-the-ages), this
+[SPA](https://en.wikipedia.org/wiki/Single-page_application).
 
 New developments in this direction are already leading tho new and exciting
 technology hat aren't just nie to use, but also gets the job done early so we

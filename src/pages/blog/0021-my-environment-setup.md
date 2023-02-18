@@ -61,7 +61,9 @@ jdk itself, you'll need the [npm](https://www.npmjs.com/) predecessors.
 Even if fedora can bring you some of them with its
 [dnf](https://fedoraproject.org/wiki/DNF) package management, a cleaner way to
 get these java things running (for instance, ant, maven and gradle) is
-[sdkman](https://sdkman.io/). Install it and get all the tooling you will need.
+[sdkman](https://sdkman.io/). 
+
+Install it and get all the tooling you will need.
 
 Oh, [git](https://git-scm.com/) comes with fedora, so do not fear nothing.
 

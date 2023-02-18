@@ -1,0 +1,93 @@
+<style webc:scoped>
+    .theme-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .current-theme, .theme-options {
+        min-width: 2em;
+        min-height: 2em;
+        border: 1px solid;
+        border-color: var(--color1);
+        border-radius: 2em;
+        display: flex;
+        transform: rotate(45deg);
+        opacity: 0.5;
+    }
+
+    .theme-options {
+        opacity: 1;
+    }
+
+    .options-hide {
+        display: none;
+    }
+
+    .options-show {
+        display: flex;
+    }
+
+    .bg1, .bg2 {
+        overflow: hidden;
+        flex-grow: 1;
+    }
+
+    .bg1 {
+        background-color: var(--color0);
+        border-top-left-radius: 2em;
+        border-bottom-left-radius: 2em;
+    }
+
+    .bg2 {
+        background-color: var(--color1);
+        border-top-right-radius: 2em;
+        border-bottom-right-radius: 2em;
+    }
+</style>
+<script webc:scoped>
+    document.addEventListener("DOMContentLoaded", () => {
+        let theme = localStorage.getItem("current-theme")
+        if (theme) {
+            const {c0, c1} = JSON.parse(theme)
+            updateTheme(c0, c1, true)
+        }
+    })
+
+    function updateTheme(c0, c1, keep) {
+        const rootStyle = document.querySelector(":root").style
+        localStorage.setItem("current-theme", JSON.stringify({c0, c1}))
+        rootStyle.setProperty("--color0", c0)
+        rootStyle.setProperty("--color1", c1)
+        if (!keep) toggleOptions()
+    }
+
+    function toggleOptions() {
+        if (document.querySelector(".options-hide")) {
+            document.querySelectorAll(".options-hide")
+                .forEach(op => op.className = "theme-options options-show")
+        } else {
+            document.querySelectorAll(".options-show")
+                .forEach(op => op.className = "theme-options options-hide")
+        }
+    }
+</script>
+<div class="theme-box">
+    <div onclick="toggleOptions()" class="current-theme" title="Current color theme">
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+    </div>
+    <hr/>
+    <script webc:type="js" webc:is="div">
+        colors.map(t => {
+            return `<div onclick="updateTheme('${t.c0}','${t.c1}')"
+                    style="color:${t.c0}; background-color: ${t.c1};"
+                class="theme-options options-hide" title="${t.label}">
+            <div class="bg1" style="background-color: ${t.c0};"></div>
+            <div class="bg2" style="background-color: ${t.c1};"></div>
+        </div>`
+        }).join("")
+    </script>
+</div>
