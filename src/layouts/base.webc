@@ -3,7 +3,9 @@
 <head>
     <meta webc:keep charset="utf-8">
     <meta webc:keep name="viewport" content="width=device-width,initial-scale=1">
-    <title>Try To Keep It Simple</title>
+    <script webc:type="js" webc:keep webc:is="title">
+        title || page.url
+    </script>
     <!-- google adsense -->
     <script webc:keep async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2943310396815221"
             crossorigin="anonymous"></script>
