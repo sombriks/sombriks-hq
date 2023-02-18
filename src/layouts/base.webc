@@ -4,6 +4,15 @@
     <meta webc:keep charset="utf-8">
     <meta webc:keep name="viewport" content="width=device-width,initial-scale=1">
     <title>Try To Keep It Simple</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X1GE5PPK0B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-X1GE5PPK0B');
+    </script>
     <link rel="icon" href="/assets/logo.png"/>
     <link rel="favicon" type="image/x-icon" href="/assets/favicon.ico"/>
     <link webc:keep rel="StyleSheet" href="/assets/icons.css"/>
