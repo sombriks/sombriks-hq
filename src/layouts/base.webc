@@ -57,6 +57,10 @@
             max-width: 90vw;
         }
 
+        code {
+            font-weight: 900;
+        }
+
         .me {
             text-decoration: none;
             border-bottom: none;

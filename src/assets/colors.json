@@ -1,15 +1,20 @@
 [
   {"c0": "#eee",    "c1": "#666",    "label": "black-ish and whitey"},
+  {"c0": "#afefba", "c1": "#0b3b14", "label": "neighbor grass"},
+  {"c0": "#ebdbb2", "c1": "#282828", "label": "light gruvbox"},
   {"c0": "#f3db76", "c1": "#003300", "label": "bananas from brazil"},
   {"c0": "#ffd4dc", "c1": "#b61785", "label": "pink panther"},
+  {"c0": "#bd93f9", "c1": "#383959", "label": "alucard"},
   {"c0": "#523b3b", "c1": "#f8ede3", "label": "moccatino"},
+  {"c0": "#383959", "c1": "#bd93f9", "label": "dracula"},
   {"c0": "#0e3a5c", "c1": "#d2d27a", "label": "dusk and green"},
   {"c0": "#334"   , "c1": "#eee",    "label": "dark graffitti"},
+  {"c0": "#282828", "c1": "#ebdbb2", "label": "dark gruvbox"},
+  {"c0": "#333"   , "c1": "#ffa500", "label": "stolen from stackoverflow"},
   {"c0": "#262b2c", "c1": "#32a0ad", "label": "the night dive"},
   {"c0": "#030e57", "c1": "#E65A27", "label": "blue orange"},
-  {"c0": "#333"   , "c1": "#ffa500", "label": "stolen from stackoverflow"},
   {"c0": "#18251B", "c1": "#DEE5F8", "label": "darker graffitti"},
-  {"c0": "#26210d", "c1": "#B7464c", "label": "crimson king"},
+  {"c0": "#26210d", "c1": "#E7262c", "label": "crimson king"},
   {"c0": "#13005a", "c1": "#bccef8", "label": "printer toner"},
   {"c0": "#000"   , "c1": "#90ee90", "label": "old cp/m crt"}
 ]
