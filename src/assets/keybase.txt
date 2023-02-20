@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sombriks
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sombriks.com
+  * I am sombriks (https://keybase.io/sombriks) on keybase.
+  * I have a public key ASDnDqdO-YH1z7WZizjF0P_pXfA8AYaUTn1rZFzCPKDuCgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e70ea74ef981f5cfb5998b38c5d0ffe95df03c0186944e7d6b645cc23ca0ee0a0a",
+      "host": "keybase.io",
+      "kid": "0120e70ea74ef981f5cfb5998b38c5d0ffe95df03c0186944e7d6b645cc23ca0ee0a0a",
+      "uid": "b1a525a7deea5c5aa47f7c7d48730819",
+      "username": "sombriks"
+    },
+    "merkle_root": {
+      "ctime": 1676914485,
+      "hash": "a914d85ea1193176d94c6cedd7cbacd22f78f677083eec35d37724f6ff6f10a345944e9a21257adbc19d85e0cea420674ed81db3d95591e74581a760a5d04bec",
+      "hash_meta": "a56645b12237935b0dd53e91ef4b63d0f78b10278978dcaa86167c80b9a220b4",
+      "seqno": 24081776
+    },
+    "service": {
+      "entropy": "8YcWL42WtAVgWtwJkkiqtw/P",
+      "hostname": "sombriks.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.2"
+  },
+  "ctime": 1676914531,
+  "expire_in": 504576000,
+  "prev": "e555fdda4fd79668cdaff24ad440bed73f5a3af63a233cc23f9202ea0c00900d",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5w6nTvmB9c+1mYs4xdD/6V3wPAGGlE59a2Rcwjyg7goKp3BheWxvYWTESpcCD8Qg5VX92k/XlmjNr/JK1EC+1z9aOvY6IzzCP5IC6gwAkA3EIAOf2icLNB05C8mcO/bUpB+3EcoS4Upkr31BFbGOWZUMAgHCo3NpZ8RAVHTURd6BkvRMQx74ji70OxMA2Y5zewm56rCznlWeFXcJOJ0QiQE6dcjS0sjPQXblbx79vCPPYteYN6oLecWMC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPeJCHud9ttus5mmB//hhNO27cSBYj47AMsjsjaFhF57o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sombriks
+
+==================================================================
