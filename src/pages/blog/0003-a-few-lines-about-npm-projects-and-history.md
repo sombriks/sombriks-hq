@@ -1,9 +1,9 @@
 ---
 layout: base.webc
 tags:
-- posts
-  - package managers
-  - long rant
+    - posts 
+    - package managers
+    - long rant
 date: 2017-12-06
 ---
 

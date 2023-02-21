@@ -3,6 +3,7 @@ layout: base.webc
 tags: 
   - posts
   - node
+  - knex
   - es6
 date: 2019-03-16
 ---

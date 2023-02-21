@@ -49,6 +49,19 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(syntaxHighlight);
 
+    eleventyConfig
+        .addFilter('postTags', tags => Object.keys(tags)
+            // .filter(k => k !== "posts")
+            .filter(k => k !== "all")
+            .map(k => ({name: k, count: tags[k].length}))
+            .sort((a, b) => b.count - a.count));
+
+    eleventyConfig
+        .addFilter('classSlugify', postTags =>
+            postTags.map(t => t.replace(/\s/g, "-")).join(" "))
+
+    eleventyConfig
+        .addFilter('classDateify', date => "date-" + date.toISOString().split('T')[0].split("-")[0])
     return {
         dir: {
             input: "src/pages",
