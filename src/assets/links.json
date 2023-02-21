@@ -294,5 +294,9 @@
   {
     "label": "GO has funny strings",
     "link": "https://github.com/golang/go/issues/22127#issuecomment-334288975"
+  },
+  {
+    "label": "Cast things in GO",
+    "link": "https://go.dev/ref/spec#Conversions"
   }
 ]
