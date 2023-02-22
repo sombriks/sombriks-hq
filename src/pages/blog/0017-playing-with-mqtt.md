@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - node
@@ -102,9 +102,3 @@ There is
 explaining the internals of the protocol, And the
 [aedes broker](https://github.com/mcollina/aedes) implementation is the current
 state of the art in nodejs world.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

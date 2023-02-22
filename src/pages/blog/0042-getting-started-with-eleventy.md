@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 date: 2023-02-19
 tags: ['posts', 'eleventy', 'static site generator']
 ---
@@ -161,9 +161,3 @@ the official docs.
 
 The snippets for this blog post can be found
 [here](https://github.com/sombriks/simple-sample-eleventy).
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

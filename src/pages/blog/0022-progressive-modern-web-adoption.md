@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - jquery
@@ -262,9 +262,3 @@ think about the complete state-of-the-art frontend stack.
 
 It's important to upgrade technology and mindsets, however it take time. Hit the
 correct pace and profit on it!
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

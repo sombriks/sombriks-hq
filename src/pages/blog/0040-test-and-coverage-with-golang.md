@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - go
@@ -60,25 +60,13 @@ go test -v -coverprofile=coverage.out
 go tool cover -html=coverage.out -o coverage.html
 ```
 
-<div style="display:flex;justify-content: center;">
-<div style="width:70%;">
-
 ![golang-coverage](/assets/post-pics/0040-test-and-coverage-with-golang/golang-coverage.png)
-</div>
-</div>
 
 Or using your preferred IDE:
 
-<div style="display:flex;">
-<div style="margin:1em;">
-
 ![golang-intellij](/assets/post-pics/0040-test-and-coverage-with-golang/golang-intellij.png)
-</div>
-<div style="margin:1em;">
 
 ![golang-vscode](/assets/post-pics/0040-test-and-coverage-with-golang/golang-vscode.png)
-</div>
-</div>
 
 And that's it!
 

@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - postgresR
@@ -497,9 +497,3 @@ Maybe i add [Go](https://golang.org/) to this challenge,
 
 The source code for this blog post can be found
 [here](https://github.com/sombriks/sample-jpa-sequelize-bookshelf).
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

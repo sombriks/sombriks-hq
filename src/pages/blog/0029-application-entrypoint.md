@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - misc
@@ -156,9 +156,3 @@ That's it. i was thinking about entry point and how it changed through time.
 
 I don't know if we can call service address as a true successor for operating
 system-based programs entrypoint but it's a quite good candidate for *concrete*.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

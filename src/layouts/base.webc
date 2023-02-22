@@ -127,10 +127,6 @@
     <br/>
     <div style="width:100%;" @raw="content"></div>
     <br/>
-    <script webc:type="js" webc:keep webc:is="div">
-        date && date.toISOString().split('T')[0] || ''
-    </script>
-    <br/>
     <nav-links></nav-links>
     <contact-bar></contact-bar>
     <div class="footer">

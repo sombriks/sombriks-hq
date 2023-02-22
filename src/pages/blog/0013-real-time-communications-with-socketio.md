@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags:
   - posts
   - node
@@ -300,9 +300,3 @@ understandable after
 
 Hope you find this article useful, and as usual the source code can be found
 [here](https://github.com/sombriks/sample-rtc-socket-io).
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

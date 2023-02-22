@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - bundlers
@@ -159,9 +159,3 @@ far, browserify.
 See the [handbook](https://github.com/browserify/browserify-handbook).
 Give it a try. Even
 [TypeScript](https://www.npmjs.com/package/tsify) speaks with it.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags:
   - posts
   - misc
@@ -29,9 +29,3 @@ Sounds complicated, but is dead simple.
 Hope this way i start to post more often.
 
 Also i like markdown much more than those sneaky rich text editors.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

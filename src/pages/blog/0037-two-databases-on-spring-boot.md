@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - java
@@ -182,9 +182,3 @@ This article shows how to set two databases, but it will work for as much
 databases as you need, as long as you point out which one will be the primary.
 
 For more details, [se the complete source code here](https://github.com/sombriks/sample-spring-multiple-databases)
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

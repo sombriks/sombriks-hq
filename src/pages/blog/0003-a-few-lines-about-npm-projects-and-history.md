@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags:
     - posts 
     - package managers
@@ -270,9 +270,3 @@ We didn't debated here Ruby gems, PHP composer or pip. Yet thinking again about
 2007, we lived without these tools.
 
 My my, we had a sad life.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

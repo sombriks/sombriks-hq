@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - misc
@@ -17,9 +17,3 @@ finding individuals to maintain it.
 This is the hidden cost of old legacy systems. Not all of them are pleasant to
 maintain because they're ugly. And because of that, they become harder to
 maintain, since find people to work on it become scarce.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

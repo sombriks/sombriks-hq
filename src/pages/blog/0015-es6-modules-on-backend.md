@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - node
@@ -373,9 +373,3 @@ be first class citizens on both sides of this game.
 
 The final project with the modifications seen there can be found
 [here on github](https://github.com/sombriks/sample-node-esm).
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - build tool
@@ -147,9 +147,3 @@ challenges. Like
 
 So, if someone asks you to set-up grunt or gulp for a brand new project,
 **please don't**.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

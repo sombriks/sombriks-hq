@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - misc
@@ -23,9 +23,3 @@ Also, it was not optimized.
 The new blog/site uses an updated stack and es6 modules instead commonsJS.
 
 And that's it.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

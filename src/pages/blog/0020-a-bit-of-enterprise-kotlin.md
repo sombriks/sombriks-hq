@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - kotlin
@@ -295,9 +295,3 @@ they offer the best IDE support right now.
 
 To see the full source code of this article, click
 [here](https://github.com/sombriks/sample-jee-kotlin).
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

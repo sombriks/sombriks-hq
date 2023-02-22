@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - python
@@ -773,9 +773,3 @@ As usual, the complete source code can be found
 [here](https://github.com/sombriks/rosetta-beer-store/tree/master/beer-store-service-python-flask-sqlalchemy).
 
 Happy hacking.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - vue
@@ -365,9 +365,3 @@ out yet, change the line containing the content security police:
 Since HMR needs local and socket access, you will have to allow such sources.
 
 You can see the source code [here](https://github.com/sombriks/sample-cordova-vue).
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

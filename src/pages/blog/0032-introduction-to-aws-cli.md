@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - aws
@@ -87,9 +87,3 @@ With enough practice and docs reading you can automate your production pipeline
 entirely.
 
 [*] unless there is a nasty bug.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}

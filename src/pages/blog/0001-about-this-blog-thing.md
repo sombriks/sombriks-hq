@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - misc
@@ -36,9 +36,3 @@ One special transform is [brfs](https://github.com/browserify/brfs), which allow
 Therefore i can list them at build time and keep this index to dynamically load posts at runtime.
 
 So, we did a blog engine using vue, vue-router, marked, axios, browserify and brfs.
-
----
-Tags:
-{%- for tag in tags -%}
-[{{tag}}](/blog/?tag={{tag | slugify}})
-{%- endfor -%}
