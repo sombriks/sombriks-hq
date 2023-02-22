@@ -49,3 +49,9 @@ separation of the two modules. A few questions so far:
 
 Any comment on this topic is
 welcome [on this thread](https://stackoverflow.com/questions/75274795/embedded-portable-jakartaee-application-design-approach).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

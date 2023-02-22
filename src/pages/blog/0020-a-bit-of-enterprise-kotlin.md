@@ -4,6 +4,7 @@ tags:
   - posts
   - kotlin
   - gradle
+  - jpa
 date: 2020-06-03
 ---
 # A bit of Enterprise Kotlin
@@ -294,3 +295,9 @@ they offer the best IDE support right now.
 
 To see the full source code of this article, click
 [here](https://github.com/sombriks/sample-jee-kotlin).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

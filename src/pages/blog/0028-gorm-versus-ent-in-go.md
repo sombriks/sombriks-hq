@@ -2,6 +2,7 @@
 layout: base.webc
 tags: 
   - posts
+  - sql
   - go
   - gorm
   - ent
@@ -123,3 +124,9 @@ I really just scratched the go ecosystem surface here.
 
 If you got hooked, take a look at more curated lists over the lang, like
 [this one](https://awesome-go.com/).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

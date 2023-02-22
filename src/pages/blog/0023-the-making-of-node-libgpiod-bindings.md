@@ -4,7 +4,8 @@ tags:
   - posts
   - node
   - raspberry pi
-  - C/C++
+  - C
+  - Cpp
   - libgpiod
   - python
 date: 2021-01-02
@@ -110,3 +111,9 @@ setTimeout(blink,1000);
 It was fun to read about how to write addons for node, how to use the
 [nan](https://github.com/nodejs/nan) library and also remember that we need to
 respect C++. It's verbose but very very powerful.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

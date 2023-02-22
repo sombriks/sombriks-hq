@@ -8,6 +8,8 @@ tags:
   - bookshelf
   - knex
   - ORM
+  - java
+  - javascript
 date: 2019-01-31
 ---
 # Thoughts on persistence layer and it's solutions
@@ -495,3 +497,9 @@ Maybe i add [Go](https://golang.org/) to this challenge,
 
 The source code for this blog post can be found
 [here](https://github.com/sombriks/sample-jpa-sequelize-bookshelf).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

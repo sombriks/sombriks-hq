@@ -4,6 +4,7 @@ tags:
   - posts
   - java
   - maven
+  - package publishing
 date: 2022-12-31
 ---
 # How to publish a maven package on maven central
@@ -264,3 +265,9 @@ your development environment.
 In the future let's setup a github action or something like that to automate it.
 
 You can see the source code of the sample package [here](https://github.com/sombriks/simple-java-run-cmd).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

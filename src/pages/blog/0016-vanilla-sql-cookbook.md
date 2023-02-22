@@ -306,3 +306,9 @@ databases. This is advice built on top real use.
 I hope it helps.
 
 Happy coding!
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

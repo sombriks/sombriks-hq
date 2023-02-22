@@ -3,6 +3,7 @@ layout: base.webc
 tags: 
   - posts
   - docker
+  - docker-compose
 date: 2022-05-04
 ---
 # Containers containers containers
@@ -225,3 +226,9 @@ environment setup from a supermarket shelf instead of craft it piece by piece.
 
 At some point we will cover image publishing on some cloud providers and make that image or images into production
 containers.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

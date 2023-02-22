@@ -31,3 +31,9 @@ const x = a => b => b(a)
 We have inline images too!
 
 ![picture_10.jpg](/assets/profile-pics/picture_10.jpg)
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

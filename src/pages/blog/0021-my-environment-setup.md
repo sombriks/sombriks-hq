@@ -109,3 +109,9 @@ That's it. this is what i do on my machines nowadays in order to get ready for
 war.
 
 See you, space cowboy!
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

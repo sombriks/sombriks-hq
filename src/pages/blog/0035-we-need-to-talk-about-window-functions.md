@@ -180,3 +180,9 @@ Queries start to become more and more funky, but the insight extracted from them
 become more and more precious to make strategic decisions.
 
 The sample data for this article can be found [here](/assets/post-pics/0035-we-need-to-talk-about-window-functions/sample.sql);
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

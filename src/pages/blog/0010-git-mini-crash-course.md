@@ -301,3 +301,9 @@ And some branch for very new feature to be created.
 To close this thing, i hope this small overview helps you to start.
 
 You **will** face problems, but at least you know how to start.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

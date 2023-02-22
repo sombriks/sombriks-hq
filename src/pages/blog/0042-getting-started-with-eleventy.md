@@ -161,3 +161,9 @@ the official docs.
 
 The snippets for this blog post can be found
 [here](https://github.com/sombriks/simple-sample-eleventy).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

@@ -414,3 +414,9 @@ fast if you know what you're doing. These snippets are just a sample of what is
 possible.
 
 You can find the complete source code [here](https://github.com/sombriks/sample-knex-bookshelf-cookbook).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

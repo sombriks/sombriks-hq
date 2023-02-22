@@ -472,3 +472,9 @@ choose react only if there is a team already well versed on int.
 
 Finally, feel free to explore the [source code](https://github.com/sombriks/rosetta-beer-store)
 of the repository used as foundation to this post.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

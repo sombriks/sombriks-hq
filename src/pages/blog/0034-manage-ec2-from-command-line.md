@@ -92,3 +92,9 @@ aws ec2 terminate-instances --instance-ids i-00491fb41d556a2bd
 ```
 
 The machine might be listed for a while, but eventually it will disappear.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

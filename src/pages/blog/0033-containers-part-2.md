@@ -234,3 +234,9 @@ instead just primary docker hub.
 
 Next step is to run custom container on cloud infrastructure instead of local
 compose orchestration.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

@@ -222,3 +222,9 @@ becomes easier for this point.
 
 You can see the code of this article in
 [this repo](https://github.com/sombriks/simple-typescript-setup).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

@@ -925,3 +925,9 @@ available to each framework.
 And about mobile development on another.
 
 The complete source code can be found [there](https://github.com/sombriks/vue-react-comparison).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

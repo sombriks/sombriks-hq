@@ -237,7 +237,13 @@ with pinia store.
 This small sample aims to compare those technologies and give a reasonable start
 point to someone planning the adopt one of those technologies.
 
-Things keeps evolving and in the future we can analyze future versions of redux.
+Things keep evolving and in the future we can analyze future versions of redux.
 
 For the moment, if you're going to a new project and you have some decision
 power, give vue3/pinia a chance. It worth it.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

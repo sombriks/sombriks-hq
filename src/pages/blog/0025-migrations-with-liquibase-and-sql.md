@@ -6,6 +6,7 @@ tags:
   - sql
   - bash
   - liquibase
+  - spring-boot
   - database migrations
 date: 2021-07-13
 ---
@@ -153,3 +154,9 @@ That way you can create migrate files with the following command:
 It's quite nice to see how flexible liquibase is, and if you need to see this
 example with more details, the source code is available
 [here](https://github.com/sombriks/sample-liquibase).
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

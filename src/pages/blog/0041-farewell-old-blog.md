@@ -70,3 +70,9 @@ Not that [SPA](https://goodspaguide.co.uk/features/spa-through-the-ages), this
 New developments in this direction are already leading tho new and exciting
 technology hat aren't just nie to use, but also gets the job done early so we
 all can go home early.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

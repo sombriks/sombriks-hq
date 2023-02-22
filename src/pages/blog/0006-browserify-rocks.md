@@ -3,8 +3,14 @@ layout: base.webc
 tags: 
   - posts
   - bundlers
+  - browserify
 date: 2018-12-27
 ---
+
+**Update 2023-02-21**: Please don't use browserify for modern development 
+anymore
+
+
 # Browserify rocks and that's why
 
 **DISCLAIMER: it does not means that other bundlers sucks.**
@@ -153,3 +159,9 @@ far, browserify.
 See the [handbook](https://github.com/browserify/browserify-handbook).
 Give it a try. Even
 [TypeScript](https://www.npmjs.com/package/tsify) speaks with it.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}

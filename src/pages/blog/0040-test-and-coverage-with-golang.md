@@ -3,7 +3,7 @@ layout: base.webc
 tags: 
   - posts
   - go
-  - test
+  - testing
   - coverage
 date: 2023-02-04
 ---

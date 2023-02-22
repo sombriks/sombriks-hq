@@ -109,3 +109,9 @@ life.
 
 Also you can write up [docker-compose](https://docs.docker.com/compose/) files,
 but at this point you can read the official docs by yourself.
+
+---
+Tags:
+{%- for tag in tags -%}
+[{{tag}}](/blog/?tag={{tag | slugify}})
+{%- endfor -%}
