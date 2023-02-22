@@ -7,13 +7,13 @@ tags: ['posts', 'eleventy', 'static site generator']
 
 It calls itself a [simpler static site generator](https://www.11ty.dev/).
 
-Bunt don't get fooled, the content generator is dynamic and versatile as hell.
+But don't get fooled, the content generator is dynamic and versatile as hell.
 
 ## Whait is it good for
 
 You can write your static site in plain old html, that's true.
 
-OR
+**OR**
 
 You can use custom template engines to create a richer experience for those who
 consume your content.
