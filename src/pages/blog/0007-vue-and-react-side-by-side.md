@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - vue

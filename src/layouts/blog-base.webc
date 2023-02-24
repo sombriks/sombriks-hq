@@ -1,0 +1,14 @@
+---
+layout: base.webc
+---
+<div style="width:100%;" webc:nokeep @raw="content"></div>
+<br/>
+<script webc:type="js" webc:keep webc:is="div">
+    date.toISOString().split('T')[0]
+</script>
+<p>Tags:</p>
+<script webc:type="js" webc:keep webc:is="div">
+    tags.map(tag => `
+        <a href="/blog/?tag=${tag.replace(/\s/g,"-")}">${tag}</a>
+    `).join("")
+</script>

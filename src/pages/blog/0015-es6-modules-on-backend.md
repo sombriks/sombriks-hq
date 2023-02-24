@@ -1,8 +1,10 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - node
+  - knex
+  - ems
   - es6
 date: 2019-03-16
 ---

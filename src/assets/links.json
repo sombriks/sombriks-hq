@@ -294,5 +294,17 @@
   {
     "label": "cool free oracle services",
     "link": "https://oracle.github.io/free"
+  },
+  {
+    "label": "GO has funny strings",
+    "link": "https://github.com/golang/go/issues/22127#issuecomment-334288975"
+  },
+  {
+    "label": "Cast things in GO",
+    "link": "https://go.dev/ref/spec#Conversions"
+  },
+  {
+    "label": "Template language for eleventy things",
+    "link": "https://mozilla.github.io/nunjucks/"
   }
 ]

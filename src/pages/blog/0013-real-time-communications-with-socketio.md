@@ -1,7 +1,9 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags:
   - posts
+  - node
+  - vue
   - socket.io
 date: 2019-02-22
 ---

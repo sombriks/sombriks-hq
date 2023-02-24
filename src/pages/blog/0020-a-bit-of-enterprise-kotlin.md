@@ -1,9 +1,10 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - kotlin
   - gradle
+  - jpa
 date: 2020-06-03
 ---
 # A bit of Enterprise Kotlin

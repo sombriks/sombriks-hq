@@ -1,10 +1,11 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - node
   - jest
   - typescript
+  - testing
 date: 2021-12-15
 ---
 # You can test your typescript code too

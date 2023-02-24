@@ -1,8 +1,9 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - java
+  - jpa
   - spring-boot
   - datasource configuration
 date: 2022-11-20

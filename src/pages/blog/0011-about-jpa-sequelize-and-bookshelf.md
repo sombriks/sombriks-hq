@@ -1,11 +1,15 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
-  - postgres
+  - postgresR
   - jpa
   - sequelize
   - bookshelf
+  - knex
+  - ORM
+  - java
+  - javascript
 date: 2019-01-31
 ---
 # Thoughts on persistence layer and it's solutions

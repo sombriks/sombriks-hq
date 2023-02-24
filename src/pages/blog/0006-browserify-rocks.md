@@ -1,10 +1,16 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - bundlers
+  - browserify
 date: 2018-12-27
 ---
+
+**Update 2023-02-21**: Please don't use browserify for modern development 
+anymore
+
+
 # Browserify rocks and that's why
 
 **DISCLAIMER: it does not means that other bundlers sucks.**

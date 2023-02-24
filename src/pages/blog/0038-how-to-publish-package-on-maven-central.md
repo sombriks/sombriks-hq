@@ -1,9 +1,10 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - java
   - maven
+  - package publishing
 date: 2022-12-31
 ---
 # How to publish a maven package on maven central

@@ -1,8 +1,8 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
-  - vuejs
+  - vue
   - cordova
   - project setup
 date: 2018-12-17

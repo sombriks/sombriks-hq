@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - vue
@@ -90,7 +90,9 @@ And this is the _detail_
   export default {
     props: ["current"],
     name: "modal-picker",
-    data: _ => ({ date: new Date() }),
+    data: _ => ({ 
+        date: new Date() 
+    }),
     mounted() {
       this.date = this.current;
     }

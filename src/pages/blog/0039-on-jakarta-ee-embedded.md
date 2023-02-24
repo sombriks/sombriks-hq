@@ -1,8 +1,9 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - misc
+  - long rant
 date: 2023-01-29
 ---
 # Light rant about embedded solutions for Jakarta EE

@@ -1,8 +1,9 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - docker
+  - docker-compose
 date: 2022-05-04
 ---
 # Containers containers containers

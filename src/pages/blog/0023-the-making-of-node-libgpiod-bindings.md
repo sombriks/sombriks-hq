@@ -1,10 +1,11 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - node
   - raspberry pi
-  - C/C++
+  - C
+  - Cpp
   - libgpiod
   - python
 date: 2021-01-02

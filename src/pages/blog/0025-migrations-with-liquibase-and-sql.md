@@ -1,11 +1,12 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 tags: 
   - posts
   - java
   - sql
   - bash
   - liquibase
+  - spring-boot
   - database migrations
 date: 2021-07-13
 ---

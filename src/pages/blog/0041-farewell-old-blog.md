@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: blog-base.webc
 date: 2023-02-14
 tags:
   - posts
