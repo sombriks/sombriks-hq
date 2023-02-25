@@ -51,9 +51,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig
         .addFilter('postTags', tags => Object.keys(tags)
-            // .filter(k => k !== "posts")
+            .filter(k => k !== "posts")
             .filter(k => k !== "all")
-            .map(k => ({name: k, count: tags[k].length}))
+            .map(k => ({ name: k, count: tags[k].length }))
             .sort((a, b) => b.count - a.count));
 
     eleventyConfig
@@ -62,11 +62,12 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig
         .addFilter('classDateify', date => "date-" + date.toISOString().split('T')[0].split("-")[0])
+
     return {
         dir: {
             input: "src/pages",
             layouts: "../layouts",
-            data: "../assets",
+            data: "../data",
             output: "dist",
         }
     }

@@ -15,7 +15,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-X1GE5PPK0B');
     </script>
     <link rel="icon" href="/assets/logo.png"/>

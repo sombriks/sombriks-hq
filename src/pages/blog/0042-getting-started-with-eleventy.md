@@ -9,7 +9,7 @@ It calls itself a [simpler static site generator](https://www.11ty.dev/).
 
 But don't get fooled, the content generator is dynamic and versatile as hell.
 
-## Whait is it good for
+## What is it good for
 
 You can write your static site in plain old html, that's true.
 
@@ -103,7 +103,7 @@ and the data is all yours to manipulate. Example:
 `my-colors.md`
 
 ```markdown
-# Those are the colors i like most
+# These are the colors i like most
 {% raw %} 
 {% for  color in my-colors %}
 - {{color}}
@@ -159,5 +159,5 @@ and the documentation is quite good too.
 I could extend that post for much longer, but if you got interested jus go over
 the official docs.
 
-The snippets for this blog post can be found
+The snippets for this blog post (and a few more!) can be found
 [here](https://github.com/sombriks/simple-sample-eleventy).

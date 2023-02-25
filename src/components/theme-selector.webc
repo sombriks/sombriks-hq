@@ -5,6 +5,8 @@
         left: 0;
         display: flex;
         /*flex-direction: column;*/
+        max-width: 100vw;
+        flex-wrap: wrap;
     }
 
     .current-theme, .theme-options {
