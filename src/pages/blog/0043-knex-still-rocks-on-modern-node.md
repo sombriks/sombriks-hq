@@ -27,26 +27,26 @@ Example, one could query books from a database like this using
 
 ```java
 //...
-String q = "select b from Books b where b.title like concat('%', :title, '%')";
+String q="select b from Books b where b.title like concat('%', :title, '%')";
 List<Book> books = entityManager
-  .createQuery(q, Book.class)
-  .setParameter("title", "mancer")
-  .getResultList();
-  // ...
+        .createQuery(q,Book.class)
+        .setParameter("title","mancer")
+        .getResultList();
+// ...
 ```
 
 We're omitting several things here like model mapping and persistence unit setup
 but it's enough to feel how much indirection is involved.
 
-If we decide to use [spring repositories](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/),
+If we decide to
+use [spring repositories](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/),
 things get a little better, but not that much:
 
 ```java
 //...
 @Repository
-public interface BookRepository extends JpaRepository<Book,Long> {
-
-  List<Book> findByTitleLike(String title);
+public interface BookRepository extends JpaRepository<Book, Long> {
+    List<Book> findByTitleLike(String title);
 }
 //...
 List<Book> books = entityManager = repository.findByTitleLike("mancer");
@@ -66,11 +66,11 @@ doesn't get much better:
 // import {Op} from "sequelize" 
 //...
 const books = Book.findAll({
-  where: {
-    title: {
-      [[Op.substring]: 'mancer']
+    where: {
+        title: {
+            [Op.substring]: 'mancer'
+        }
     }
-  }
 })
 //...
 ```
@@ -88,14 +88,16 @@ const books = knex("book").whereLike("title", `%mancer%`)
 //...
 ```
 
-There are [interesting variations](https://knexjs.org/guide/query-builder.html#wherelike)
+There are 
+[interesting variations](https://knexjs.org/guide/query-builder.html#wherelike)
 of this, but you get the idea.
 
-## So OM's are bad
+## So ORM's are bad
 
 No, but they shouldn't stay on your way.
 
-For instance, JPA, Spring Data and Sequelize (And [Objection](https://vincit.github.io/objection.js/guide/getting-started.html)
+For instance, JPA, Spring Data and Sequelize (and 
+[Objection](https://vincit.github.io/objection.js/guide/getting-started.html)
 too, whi is built on top of knex) offers ways to skip all the model mapping
 drama and access the database directly.
 
@@ -108,3 +110,56 @@ It's just we're not here today to dig on those scenarios.
 
 The simple and concise queries helps to keep tooling out of our way when doing
 more important things.
+
+A select, as you saw, is quite simple. Here goes a few more examples:
+
+### Retrieve a single result:
+
+```js
+// let isbn = "9788576573005"
+//...
+const book = knex("book").where({isbn}).first()
+//...
+```
+
+### Pagination
+
+```js
+const books = knex("book").whereLike("title", `%mancer%`).limit(10).offset(10)
+```
+
+### Total of records
+
+Another common operation, [count](https://knexjs.org/guide/query-builder.html#count)
+total results:
+
+```js
+const books = knex("book").whereLike("title", `%mancer%`).count("* as total")
+```
+
+### Search by fields on different tables
+
+```js
+const books = knex("book").whereIn("author_id", knex("author")
+    .select("id").whereLike("name", `%Will%`))
+```
+
+The select clause can be used to specify columns to participate in the results.
+
+Nothing stops you from perform a query on book title and author name:
+
+```js
+// let q = 'o' 
+const books = knex("book")
+    .whereLike("title", `%${q}%`)
+    .orWhereIn("author_id", knex("author")
+    .select("id").whereLike("name", `%${q}%`))
+```
+
+## Plays nicely with modern node
+
+## Knex migrations still one of the best database migration tools ever made
+
+## It doesn't put itself between you and your testcases
+
+## Conclusion
