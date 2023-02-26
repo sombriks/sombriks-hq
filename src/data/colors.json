@@ -16,5 +16,6 @@
   {"c0": "#18251B", "c1": "#DEE5F8", "label": "darker graffitti"},
   {"c0": "#26210d", "c1": "#E7262c", "label": "crimson king"},
   {"c0": "#13005a", "c1": "#bccef8", "label": "printer toner"},
+  {"c0": "#2a2139", "c1": "#72f0b7", "label": "retrowave"},
   {"c0": "#000"   , "c1": "#90ee90", "label": "old cp/m crt"}
 ]
