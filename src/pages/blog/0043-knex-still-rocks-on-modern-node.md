@@ -1,7 +1,7 @@
 ---
 layout: blog-base.webc
-date: 2023-02-25
-tags: ['posts', 'knex', 'koa', 'c8', 'mocha', 'chai', 'node', 'sql', 'dotenv-flow']
+date: 2023-02-26
+tags: ['posts', 'knex', 'database migrations', 'koa', 'c8', 'mocha', 'chai', 'node', 'sql', 'dotenv-flow']
 ---
 
 # Knex rocks here's why
@@ -57,6 +57,18 @@ Still need to define entity model but now we need to master the black magic of
 proper naming your repository method name. And this thing has limitations as you
 can imagine, making us to rely on @Query annotations which dumps us back to the
 original issue with plain JPA.
+
+[Gorm](https://gorm.io) gets simpler but doesn't land too far:
+
+```go
+//  db, err := gorm.Open(//...
+var books []Books
+// ...
+db.Where("title LIKE ?", "%mancer%").Find(&books)
+```
+
+Again ommiting the [entity mapping](https://gorm.io/docs/models.html) for the
+sake of simplificy.
 
 On node side, [Sequelize](https://sequelize.org/docs/v6/category/core-concepts/)
 doesn't get much better:
@@ -167,24 +179,23 @@ The first time i used knex, node ecosystem was completely built on top of
 [commonjs](https://nodejs.org/docs/latest/api/modules.html#modules-commonjs-modules)
 modules. And so was knex.
 
-In 2016 a service with a simple http service endpoint would look like this:
+In 2016 a simple http service endpoint would look like this:
 
-```node
+```js
+// index.js
 // database config and access with knex
-var knexfile = require("../knexfile.js")
-var knex = require("knex")(knexfile[process.env.NODE_ENV || "development"])
+var cfg = require("../knexfile.js")
+var knex = require("knex")(cfg[process.env.NODE_ENV || "development"])
 
 // good old express
-const bodyParser = require("body-parser")
+var bodyParser = require("body-parser")
 var app = require("express")()
 app.use(bodyParser.json())
 
 // quick and dirty
-app.get("/books", (req, res) => {
-    knex("books")
-        .whereLike("title", "%" + req.query.q + "%")
+app.get("/books", function(req, res) {
+    knex("books").whereLike("title", "%" + req.query.q + "%")
         .then(ret => res.send(ret))
-        .catch(err => res.send(500, err))
 })
 
 // and of course make sure the database is ok before start to listen things
@@ -193,8 +204,62 @@ knex.migrate.latest().then(() => {
 })
 ```
 
+By 2023 there is a few differences:
+
+```js
+// index.mjs
+// database config and access with knex
+import cfg from "../knexfile.cjs"
+import Knex from "knex"
+
+// Koa is the spiritual successor of express
+import Koa from "koa";
+import Router from "@koa/router";
+import bodyParser from "koa-bodyparser";
+
+const knex = Knex(cfg[process.env.NODE_ENV || "development"])
+
+const app = new Koa()
+app.use(bodyParser())
+
+// quick and dirty
+const router = new Router()
+router.get("/books", async ctx => 
+    ctx.body = await knex("books")
+        .whereLike("title", `%${ctx.query.q}%`))
+
+app.use(router.routes()).use(router.allowedMethods());
+
+// and of course make sure the database is ok before start to listen things
+knex.migrate.latest().then(() => {
+    app.listen(process.env.PORT || 3000)
+})
+```
+
+[Express](https://expressjs.com/) is simple and elegant, but
+[Koa](https://koajs.com/) is brutal. Simpler, modular, ready for the future.
+
+And keeps playing nice with Knex and other frameworks famous by being used with
+express.
+
 ## Knex migrations still one of the best database migration tools ever made
 
+[I wrote about migrations before,](/blog/?tag=database-migrations) but it's
+never too much say how important is this topic is for modern application
+development.
+
+With migrations one can be sure about database schema version and application
+expectations about this database since the app runs special scripts (the
+migrations) to put the datbase in the expected state.
+
+### Migrations using es6 modules 
+
+### Custom knexfile.cjs location
+
 ## It doesn't put itself between you and your testcases
+
+### Test with mocha
+
+### Coverage with c8
 
 ## Conclusion
