@@ -3,14 +3,13 @@ layout: blog-base.webc
 date: 2023-02-26
 tags:
   - posts
+  - node
   - knex
   - database migrations
   - koa
   - c8
   - mocha
   - chai
-  - node
-  - sql
   - dotenv-flow
   - cross-env
 ---
@@ -78,15 +77,15 @@ var books []Books
 db.Where("title LIKE ?", "%mancer%").Find(&books)
 ```
 
-Again ommiting the [entity mapping](https://gorm.io/docs/models.html) for the
-sake of simplificy.
+Again omitting the [entity mapping](https://gorm.io/docs/models.html) for the
+sake of simplicity.
 
 On node side, [Sequelize](https://sequelize.org/docs/v6/category/core-concepts/)
 doesn't get much better:
 
 ```js
-// import {Book} from "../models"
-// import {Op} from "sequelize" 
+import {Book} from "../models"
+import {Op} from "sequelize" 
 //...
 const books = await Book.findAll({
     where: {
@@ -111,7 +110,7 @@ const books = await knex("books").whereLike("title", `%mancer%`)
 //...
 ```
 
-There are 
+There are
 [interesting variations](https://knexjs.org/guide/query-builder.html#wherelike)
 of this, but you get the idea.
 
@@ -119,9 +118,9 @@ of this, but you get the idea.
 
 No, but they shouldn't stay on your way.
 
-For instance, JPA, Spring Data and Sequelize (and 
+For instance, JPA, Spring Data and Sequelize (and
 [Objection](https://vincit.github.io/objection.js/guide/getting-started.html)
-too, whi is built on top of knex) offers ways to skip all the model mapping
+too, which is built on top of knex) offers ways to skip all the model mapping
 drama and access the database directly.
 
 But there are scenarios where the advantages os that abstract layer worth the
@@ -136,7 +135,7 @@ more important things.
 
 A select, as you saw, is quite simple. Here goes a few more examples:
 
-### Retrieve a single result:
+### Retrieve a single result
 
 ```js
 // let isbn = "9788576573005"
@@ -261,9 +260,9 @@ development.
 
 With migrations one can be sure about database schema version and application
 expectations about this database since the app runs special scripts (the
-migrations) to put the datbase in the expected state.
+migrations) to put the database in the expected state.
 
-### Knex migrations basics 
+### Knex migrations basics
 
 Enabling migrations on your project is easy as this:
 
@@ -272,7 +271,7 @@ npm i knex
 npx knex init 
 ```
 
-It generates a file called `knexfile.js` in the current folder. That folder 
+It generates a file called `knexfile.js` in the current folder. That folder
 usually is the project root.
 
 The config file itself looks like this:
@@ -327,8 +326,8 @@ module.exports = {
 };
 ```
 
-By default knex offers three configuration profiles, `development`, `staging` 
-and `production`, but in fact you can define whatever you want on this config 
+By default knex offers three configuration profiles, `development`, `staging`
+and `production`, but in fact you can define whatever you want on this config
 file:
 
 ```js
@@ -372,7 +371,7 @@ npx knex migrate:make some_database_change
 ```
 
 It will create something like `migrations/20230226122114_some_database_change.js`
-on your current directory and will looke like this:
+on your current directory and will look like this:
 
 ```js
 /**
@@ -392,10 +391,10 @@ exports.down = function(knex) {
 };
 ```
 
-A migration file has changes to be applied to the database, so it conforms with 
+A migration file has changes to be applied to the database, so it conforms with
 the current app version.
 
-You can learn more about how to fill those two functions 
+You can learn more about how to fill those two functions
 [here](https://knexjs.org/guide/schema-builder.html).
 
 Knex offers that **up** and **down** functions, so you can write the database
@@ -403,25 +402,25 @@ changes in the **up** function.
 
 #### What about the down function?
 
-Migrations frameworks exists because database changes are hard. During 
+Migrations frameworks exists because database changes are hard. During
 development, one could find that latest change did not work as expected, so it
-must be unmade. 
+must be unmade.
 
 This is why the **down** exists.
 
-But mind this: down functions are only useful **during development**, since 
+But mind this: down functions are only useful **during development**, since
 there is a real risk of **data loss** if they run on production environments.
 
 So, **avoid to undo migrate executions on production**
 
-### migrations as es6 modules
+### Migrations as es6 modules
 
-So far we saw knex generating only commonjs modules, but hey, is this 
-supposed to be [modern node development](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_enabling), 
+So far we saw knex generating only commonjs modules, but hey, is this
+supposed to be [modern node development](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_enabling),
 right?
 
 For knexfile itself little can be done, you can rename it to **knexfile.cjs**,
-so node understands what kind of module is it, but migration files can be 
+so node understands what kind of module is it, but migration files can be
 modern es6 modules with little effort. when creating a migration do this:
 
 ```bash
@@ -450,7 +449,7 @@ export const down = async (knex) => {
 
 We're not done, however.
 
-If you decide to use es6 for your migration files, change the extension file 
+If you decide to use es6 for your migration files, change the extension file
 type on your knexfile:
 
 ```js
@@ -473,7 +472,7 @@ If the migrations section does not exist, create one.
 
 When designing a project architecture, a popular topic is the folder layout.
 
-Some (me!) get passionate about it, and when knex forces us to keep that 
+Some (me!) get passionate about it, and when knex forces us to keep that
 migration folder toplevel to the project, not to mention the knexfile.js itself,
 a bit of sadness might hit.
 
@@ -497,12 +496,12 @@ Let's say this is the project layout:
 └── README.md
 ```
 
-Do your knex init as usual but then move `knexfile.js` to 
+Do your knex init as usual but then move `knexfile.js` to
 `app/configs/knexfile.cjs`.
 
 Next step is to avoid miscalculations on **migrations** folder.
 
-By default, knex expects this folder to be toplevel, so migration folder is 
+By default, knex expects this folder to be toplevel, so migration folder is
 derived from there.
 
 To avoid this, set an absolute path to your migration folder. example:
@@ -541,8 +540,8 @@ module.exports = {
 
 That way you put your migrations folder any place you want.
 
-Important: in order to use `knex migrate:make`, `knex migrate:latest`, 
-`knex migrate:rollback` and other knex commands, you must point to the new 
+Important: in order to use `knex migrate:make`, `knex migrate:latest`,
+`knex migrate:rollback` and other knex commands, you must point to the new
 knexfile location. example:
 
 ```js
@@ -553,7 +552,7 @@ npx knex migrate:make --knexfile app/configs/knexfile.cjs -x mjs new_column
 npx knex migrate:latest --knexfile app/configs/knexfile.cjs
 ```
 
-It's possible to avoid those long and tedious commands by adding them  to the 
+It's possible to avoid those long and tedious commands by adding them  to the
 project npm scripts:
 
 ```js
@@ -584,7 +583,7 @@ just that tests in order to be trustful must perform real operations.
 This is why tests should cover database operations, but predict database state
 is not easy.
 
-But it is easy when combining knex with 
+But it is easy when combining knex with
 [configurable environment variables](https://www.npmjs.com/package/dotenv-flow).
 
 In previous examples we already saw how it could work, by getting correct knex
@@ -595,7 +594,7 @@ without purpose:
 const knex = Knex(cfg[process.env.NODE_ENV || "development"])
 ```
 
-Now setup dotenv-flow in the project root (no espace this time!). start by 
+Now setup dotenv-flow in the project root (no espace this time!). start by
 creating the .env and .env override files:
 
 ```bash
@@ -613,7 +612,7 @@ creating the .env and .env override files:
 ├── .env
 ├── .env.development
 ├── .env.development.local
-├── .env.prodcuction
+├── .env.production
 ├── .env.test
 ├── index.mjs
 ├── package.json
@@ -627,10 +626,10 @@ project.
 
 Depending on main state of NODE_ENV variable, some are enabled, some are not.
 
-If there is need to override values locally, a .local file variant can be 
+If there is need to override values locally, a .local file variant can be
 provided.
 
-Lastly, by no means push sensitive values inside .env files to source code 
+Lastly, by no means push sensitive values inside .env files to source code
 version control, it's ok to version the files with variable names, but
 **all values must be empty** unless they are not sensitive.
 
@@ -678,7 +677,7 @@ describe("Books service test", () => {
 })
 ```
 
-Here the magic trick is the proper setup of knex. Knexfile must have a 
+Here the magic trick is the proper setup of knex. Knexfile must have a
 **"test"** section (as saw in our previous example):
 
 ```js
@@ -696,7 +695,7 @@ test: {
 That way the database only existis during the test execution.
 
 Thanks to `before(async () => await doMigrate())` and
-`after(async () => await knex.destroy())`, connection pool is created and 
+`after(async () => await knex.destroy())`, connection pool is created and
 destroyed during the testsuite lifecycle.
 
 Lastly, `doMigrate` is a helper function to run migrations so the database will
@@ -745,7 +744,7 @@ All files         |     100 |    85.71 |     100 |     100 |
 ------------------|---------|----------|---------|---------|-------------------
 ```
 
-Thanks to [cross-env](https://www.npmjs.com/package/cross-env), the current 
+Thanks to [cross-env](https://www.npmjs.com/package/cross-env), the current
 environment is explicit. Thanks to [dotenv-flow](https://www.npmjs.com/package/dotenv-flow),
 it's possible to customize and override variables. and thanks to [c8](https://www.npmjs.com/package/c8)
 we get a coverage report to better understand how the code behaves and how
@@ -753,10 +752,10 @@ trustful it is.
 
 ## Conclusion
 
-Modern Knex is a nice piece of software which does it job and don't mess 
+Modern Knex is a nice piece of software which does it job and don't mess
 with our productivity.
 
-As shown, it plays very nice with companions frameworks offering different 
+As shown, it plays very nice with companions frameworks offering different
 solutions and degrees of abstraction ([Objection](https://vincit.github.io/objection.js/)
 is an ORM on top of Knex) and offers easy steps for integration, if any.
 
