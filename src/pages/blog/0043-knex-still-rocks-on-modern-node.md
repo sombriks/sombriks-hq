@@ -27,7 +27,7 @@ Example, one could query books from a database like this using
 
 ```java
 //...
-String q="select b from Books b where b.title like concat('%', :title, '%')";
+String q = "select b from Books b where b.title like concat('%', :title, '%')";
 List<Book> books = entityManager
         .createQuery(q,Book.class)
         .setParameter("title","mancer")
@@ -65,7 +65,7 @@ doesn't get much better:
 // import {Book} from "../models"
 // import {Op} from "sequelize" 
 //...
-const books = Book.findAll({
+const books = await Book.findAll({
     where: {
         title: {
             [Op.substring]: 'mancer'
@@ -84,7 +84,7 @@ With knex you can do this:
 
 ```js
 //...
-const books = knex("book").whereLike("title", `%mancer%`)
+const books = await knex("book").whereLike("title", `%mancer%`)
 //...
 ```
 
@@ -118,14 +118,15 @@ A select, as you saw, is quite simple. Here goes a few more examples:
 ```js
 // let isbn = "9788576573005"
 //...
-const book = knex("book").where({isbn}).first()
+const book = await knex("book").where({isbn}).first()
 //...
 ```
 
 ### Pagination
 
 ```js
-const books = knex("book").whereLike("title", `%mancer%`).limit(10).offset(10)
+const books = await knex("book")
+    .whereLike("title", `%mancer%`).limit(10).offset(10)
 ```
 
 ### Total of records
@@ -134,13 +135,14 @@ Another common operation, [count](https://knexjs.org/guide/query-builder.html#co
 total results:
 
 ```js
-const books = knex("book").whereLike("title", `%mancer%`).count("* as total")
+const books = await knex("book")
+    .whereLike("title", `%mancer%`).count("* as total")
 ```
 
 ### Search by fields on different tables
 
 ```js
-const books = knex("book").whereIn("author_id", knex("author")
+const books = await knex("book").whereIn("author_id", knex("author")
     .select("id").whereLike("name", `%Will%`))
 ```
 
@@ -150,13 +152,46 @@ Nothing stops you from perform a query on book title and author name:
 
 ```js
 // let q = 'o' 
-const books = knex("book")
+const books = await knex("book")
     .whereLike("title", `%${q}%`)
     .orWhereIn("author_id", knex("author")
     .select("id").whereLike("name", `%${q}%`))
 ```
 
-## Plays nicely with modern node
+The [official docs has much more examples and useful tips](https://knexjs.org/)
+on how to extract maximum results from your database, give it a try!
+
+## Knex plays nicely with modern node
+
+The first time i used knex, node ecosystem was completely built on top of
+[commonjs](https://nodejs.org/docs/latest/api/modules.html#modules-commonjs-modules)
+modules. And so was knex.
+
+In 2016 a service with a simple http service endpoint would look like this:
+
+```node
+// database config and access with knex
+var knexfile = require("../knexfile.js")
+var knex = require("knex")(knexfile[process.env.NODE_ENV || "development"])
+
+// good old express
+const bodyParser = require("body-parser")
+var app = require("express")()
+app.use(bodyParser.json())
+
+// quick and dirty
+app.get("/books", (req, res) => {
+    knex("books")
+        .whereLike("title", "%" + req.query.q + "%")
+        .then(ret => res.send(ret))
+        .catch(err => res.send(500, err))
+})
+
+// and of course make sure the database is ok before start to listen things
+knex.migrate.latest().then(() => {
+    app.listen(process.env.PORT || 3000)
+})
+```
 
 ## Knex migrations still one of the best database migration tools ever made
 
