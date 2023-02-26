@@ -1,0 +1,84 @@
+:root {
+  --color0: #333;
+  --color1: #ffa500;
+}
+
+body {
+  font-family: monospace;
+  margin: 0;
+  background-color: var(--color0);
+  color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration-line: none;
+  padding: 0.03em;
+  margin: 0.5em;
+  color: var(--color1);
+  border-bottom: 1px solid var(--color1);
+}
+
+img {
+  max-width: 40vw;
+}
+
+pre {
+  max-width: 90vw;
+}
+
+code {
+  font-weight: 900;
+}
+
+.me {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1440px) or (min-width: 1440px) {
+  .outer-container {
+      max-width: 60%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .outer-container {
+      max-width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .outer-container {
+      max-width: 75%;
+  }
+}
+
+@media (max-width: 640px) {
+  .outer-container {
+      max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .outer-container {
+      max-width: 90%;
+  }
+}
