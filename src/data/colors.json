@@ -12,6 +12,7 @@
   {"c0": "#282828", "c1": "#ebdbb2", "label": "dark gruvbox"},
   {"c0": "#333"   , "c1": "#ffa500", "label": "stolen from stackoverflow"},
   {"c0": "#262b2c", "c1": "#32a0ad", "label": "the night dive"},
+  {"c0": "#002b36", "c1": "#268bd2", "label": "solarized-ish"},
   {"c0": "#030e57", "c1": "#E65A27", "label": "blue orange"},
   {"c0": "#18251B", "c1": "#DEE5F8", "label": "darker graffitti"},
   {"c0": "#26210d", "c1": "#E7262c", "label": "crimson king"},

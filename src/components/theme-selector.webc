@@ -1,5 +1,6 @@
 <style webc:scoped>
     .theme-box {
+        --theme-rad: 2.5em;
         position: fixed;
         top: 0;
         left: 0;
@@ -10,11 +11,11 @@
     }
 
     .current-theme, .theme-options {
-        min-width: 2em;
-        min-height: 2em;
+        min-width: var(--theme-rad);
+        min-height: var(--theme-rad);
         border: 1px solid;
         border-color: var(--color1);
-        border-radius: 2em;
+        border-radius: var(--theme-rad);
         display: flex;
         transform: rotate(45deg);
         opacity: 0.5;
@@ -39,14 +40,14 @@
 
     .bg1 {
         background-color: var(--color0);
-        border-top-left-radius: 2em;
-        border-bottom-left-radius: 2em;
+        border-top-left-radius: var(--theme-rad);
+        border-bottom-left-radius: var(--theme-rad);
     }
 
     .bg2 {
         background-color: var(--color1);
-        border-top-right-radius: 2em;
-        border-bottom-right-radius: 2em;
+        border-top-right-radius: var(--theme-rad);
+        border-bottom-right-radius: var(--theme-rad);
     }
 </style>
 <script webc:scoped>

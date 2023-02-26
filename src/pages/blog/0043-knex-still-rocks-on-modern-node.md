@@ -1,7 +1,18 @@
 ---
 layout: blog-base.webc
 date: 2023-02-26
-tags: ['posts', 'knex', 'database migrations', 'koa', 'c8', 'mocha', 'chai', 'node', 'sql', 'dotenv-flow']
+tags:
+  - posts
+  - knex
+  - database migrations
+  - koa
+  - c8
+  - mocha
+  - chai
+  - node
+  - sql
+  - dotenv-flow
+  - cross-env
 ---
 
 # Knex rocks here's why
@@ -96,7 +107,7 @@ With knex you can do this:
 
 ```js
 //...
-const books = await knex("book").whereLike("title", `%mancer%`)
+const books = await knex("books").whereLike("title", `%mancer%`)
 //...
 ```
 
@@ -130,14 +141,14 @@ A select, as you saw, is quite simple. Here goes a few more examples:
 ```js
 // let isbn = "9788576573005"
 //...
-const book = await knex("book").where({isbn}).first()
+const book = await knex("books").where({isbn}).first()
 //...
 ```
 
 ### Pagination
 
 ```js
-const books = await knex("book")
+const books = await knex("books")
     .whereLike("title", `%mancer%`).limit(10).offset(10)
 ```
 
@@ -147,14 +158,14 @@ Another common operation, [count](https://knexjs.org/guide/query-builder.html#co
 total results:
 
 ```js
-const books = await knex("book")
+const books = await knex("books")
     .whereLike("title", `%mancer%`).count("* as total")
 ```
 
 ### Search by fields on different tables
 
 ```js
-const books = await knex("book").whereIn("author_id", knex("author")
+const books = await knex("books").whereIn("authors_id", knex("authors")
     .select("id").whereLike("name", `%Will%`))
 ```
 
@@ -164,9 +175,9 @@ Nothing stops you from perform a query on book title and author name:
 
 ```js
 // let q = 'o' 
-const books = await knex("book")
+const books = await knex("books")
     .whereLike("title", `%${q}%`)
-    .orWhereIn("author_id", knex("author")
+    .orWhereIn("authors_id", knex("authors")
     .select("id").whereLike("name", `%${q}%`))
 ```
 
@@ -282,7 +293,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -298,7 +309,7 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -346,7 +357,7 @@ module.exports = {
     },
     production: {
         ..._cfg,
-        client: 'postgresql',
+        client: 'pg',
         connection: process.env.PG_CONNECTION_URL
     }
 }
@@ -390,7 +401,7 @@ You can learn more about how to fill those two functions
 Knex offers that **up** and **down** functions, so you can write the database
 changes in the **up** function.
 
-#### What about the down function
+#### What about the down function?
 
 Migrations frameworks exists because database changes are hard. During 
 development, one could find that latest change did not work as expected, so it
@@ -522,7 +533,7 @@ module.exports = {
     },
     production: {
         ..._cfg,
-        client: 'postgresql',
+        client: 'pg',
         connection: process.env.PG_CONNECTION_URL
     }
 }
@@ -530,10 +541,229 @@ module.exports = {
 
 That way you put your migrations folder any place you want.
 
+Important: in order to use `knex migrate:make`, `knex migrate:latest`, 
+`knex migrate:rollback` and other knex commands, you must point to the new 
+knexfile location. example:
+
+```js
+npx knex migrate:make --knexfile app/configs/knexfile.cjs -x mjs new_column
+```
+
+```js
+npx knex migrate:latest --knexfile app/configs/knexfile.cjs
+```
+
+It's possible to avoid those long and tedious commands by adding them  to the 
+project npm scripts:
+
+```js
+// part of package.json
+"scripts": {
+    "start": "node -r dotenv-flow/config index.mjs",
+    "dev": "cross-env NODE_ENV=development nodemon -r dotenv-flow/config ",
+    "test": "cross-env NODE_ENV=test c8 mocha -r dotenv-flow/config app/**/*",
+    "migrate:make": "knex migrate:make --knexfile app/configs/knexfile.cjs -x mjs -- ",
+    "migrate:latest": "knex migrate:latest --knexfile app/configs/knexfile.cjs",
+    "migrate:rollback": "knex migrate:rollback --knexfile app/configs/knexfile.cjs"
+},
+// part of package.json
+```
+
+So you can do this to create a new migrate instead:
+
+```bash
+npm run migrate:make new_column
+```
+
 ## Knex doesn't put itself between you and your testcases
+
+When writing unit/integration testing it is important to be as true as possible
+to the real/production environment. It doesn't mean that mocks are worthless,
+just that tests in order to be trustful must perform real operations.
+
+This is why tests should cover database operations, but predict database state
+is not easy.
+
+But it is easy when combining knex with 
+[configurable environment variables](https://www.npmjs.com/package/dotenv-flow).
+
+In previous examples we already saw how it could work, by getting correct knex
+configuration from knexfile using environment variables. That line wasn't there
+without purpose:
+
+```js
+const knex = Knex(cfg[process.env.NODE_ENV || "development"])
+```
+
+Now setup dotenv-flow in the project root (no espace this time!). start by 
+creating the .env and .env override files:
+
+```bash
+.
+├── app
+│   ├── configs
+│   │   ├── database.mjs
+│   │   ├── knexfile.cjs
+│   │   └── migrations
+│   ├── index.mjs
+│   ├── index.spec.mjs
+│   └── routes
+│       ├── books.mjs
+│       └── books.spec.mjs
+├── .env
+├── .env.development
+├── .env.development.local
+├── .env.prodcuction
+├── .env.test
+├── index.mjs
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+Each .env file can store specific environment variables that can work as
+[feature-flags](https://en.wikipedia.org/wiki/Feature_toggle) inside the
+project.
+
+Depending on main state of NODE_ENV variable, some are enabled, some are not.
+
+If there is need to override values locally, a .local file variant can be 
+provided.
+
+Lastly, by no means push sensitive values inside .env files to source code 
+version control, it's ok to version the files with variable names, but
+**all values must be empty** unless they are not sensitive.
 
 ### Test with mocha
 
+Assuming this service:
+
+```js
+import { knex } from "../../configs/database.mjs"
+
+export const listBooks = async (q = "") =>
+  await knex("books").whereLike("title", `%${q}%`)
+```
+
+The test for it could be like this:
+
+```js
+import chai from "chai"
+
+import { listBooks } from "./services.mjs"
+import { knex, doMigrate } from "../../configs/database.mjs";
+
+chai.should();
+
+describe("Books service test", () => {
+
+  // setup database for testing
+  before(async () => await doMigrate())
+  after(async () => await knex.destroy())
+
+  it("should list all books", async () => {
+    const books = await listBooks("")
+
+    books.should.be.an("array")
+    books.should.have.lengthOf(3)
+  })
+
+  it("should filter books by name", async () => {
+    const books = await listBooks("neuro")
+
+    books.should.be.an("array")
+    books.should.have.lengthOf(1)
+  })
+
+})
+```
+
+Here the magic trick is the proper setup of knex. Knexfile must have a 
+**"test"** section (as saw in our previous example):
+
+```js
+// knexfile.cjs
+
+test: {
+..._cfg,
+        connection: {
+        filename: ':memory:'
+    }
+},
+// knexfile.cjs
+```
+
+That way the database only existis during the test execution.
+
+Thanks to `before(async () => await doMigrate())` and
+`after(async () => await knex.destroy())`, connection pool is created and 
+destroyed during the testsuite lifecycle.
+
+Lastly, `doMigrate` is a helper function to run migrations so the database will
+be updated by the time of tests executions. You can use it to bootstrap the app
+itself, since it will honor the config chosen by environment flags:
+
+```js
+// database.mjs
+
+import Knex from "knex"
+import cfg from "./knexfile.cjs"
+
+const nodeEnv = process.env.NODE_ENV || "development"
+
+export const knex = Knex(cfg[nodeEnv])
+
+export const doMigrate = () => knex.migrate.latest(cfg[nodeEnv]);
+```
+
 ### Coverage with c8
 
+Lastly, you must make sure that the `test` npm script of your project sets the
+proper environment variables so it will use the memory database during tests:
+
+```bash
+# put this on your npm scripts, but you can invoke it by hand anytime 
+npx cross-env NODE_ENV=test c8 mocha -r dotenv-flow/config app/**/*
+
+  Books service test
+    ✔ should list all books
+    ✔ should filter books by name
+
+
+  2 passing (27ms)
+
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+All files         |     100 |    85.71 |     100 |     100 |                   
+ components/books |     100 |      100 |     100 |     100 |                   
+  routes.mjs      |     100 |      100 |     100 |     100 |                   
+  services.mjs    |     100 |      100 |     100 |     100 |                   
+ configs          |     100 |       75 |     100 |     100 |                   
+  database.mjs    |     100 |    66.66 |     100 |     100 | 4                 
+  knexfile.cjs    |     100 |      100 |     100 |     100 |                   
+------------------|---------|----------|---------|---------|-------------------
+```
+
+Thanks to [cross-env](https://www.npmjs.com/package/cross-env), the current 
+environment is explicit. Thanks to [dotenv-flow](https://www.npmjs.com/package/dotenv-flow),
+it's possible to customize and override variables. and thanks to [c8](https://www.npmjs.com/package/c8)
+we get a coverage report to better understand how the code behaves and how
+trustful it is.
+
 ## Conclusion
+
+Modern Knex is a nice piece of software which does it job and don't mess 
+with our productivity.
+
+As shown, it plays very nice with companions frameworks offering different 
+solutions and degrees of abstraction ([Objection](https://vincit.github.io/objection.js/)
+is an ORM on top of Knex) and offers easy steps for integration, if any.
+
+Some sample code can be found
+[here](https://github.com/sombriks/rosetta-beer-store/tree/master/beer-store-service-koa-knex),
+and other samples [here](https://github.com/sombriks/simple-knex-koa-example).
+
+May Knex helps you in your next project.
+
+Happy Hacking.
