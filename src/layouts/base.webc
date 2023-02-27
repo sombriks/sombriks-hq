@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index, follow">
     <!-- TODO render keywords from tags -->
-    <meta name="keywords" content="programming,open source,technology"/>
+    <meta name="keywords" :content="tags && tags.join(',') || 'technology, open source, programming, and so on'">
     <script webc:type="js" webc:keep webc:is="title">
         title || page.url
     </script>
