@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
         "src/assets": "assets",
         "src/assets/keybase.txt": "keybase.txt",
+        "src/assets/ads.txt": "ads.txt",
         // "node_modules/prism-themes/themes/prism-a11y-dark.min.css": "assets/prism-theme.css"
         // "node_modules/prism-themes/themes/prism-atom-dark.min.css": "assets/prism-theme.css"
         // "node_modules/prism-themes/themes/prism-base16-ateliersulphurpool.light.min.css": "assets/prism-theme.css"
