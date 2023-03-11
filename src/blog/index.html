@@ -20,11 +20,13 @@ layout: base.webc
     {%- endfor -%}
 </div>
 <h2><a href="/blog">Posts</a></h2>
-{%- for post in collections.posts reversed -%}
-<a href="{{post.page.url}}"
-   class="{{post.data.tags | classSlugify}} {{post.data.date | classDateify }}"
-   style="display:inline-block;">{{post.page.fileSlug}}</a>
-{%- endfor -%}
+<div class="postlist">
+    {%- for post in collections.posts reversed -%}
+    <a href="{{post.page.url}}"
+       class="{{post.data.tags | classSlugify}} {{post.data.date | classDateify }}"
+       style="display:inline-block;">{{post.page.fileSlug}}</a>
+    {%- endfor -%}
+</div>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const query = window.location.search

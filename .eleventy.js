@@ -4,9 +4,9 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({
-        "src/assets": "assets",
-        "src/assets/keybase.txt": "keybase.txt",
-        "src/assets/ads.txt": "ads.txt",
+        "src/_assets": "assets",
+        "src/_assets/keybase.txt": "keybase.txt",
+        "src/_assets/ads.txt": "ads.txt",
         // "node_modules/prism-themes/themes/prism-a11y-dark.min.css": "assets/prism-theme.css"
         // "node_modules/prism-themes/themes/prism-atom-dark.min.css": "assets/prism-theme.css"
         // "node_modules/prism-themes/themes/prism-base16-ateliersulphurpool.light.min.css": "assets/prism-theme.css"
@@ -44,8 +44,9 @@ module.exports = function (eleventyConfig) {
         // "node_modules/prism-themes/themes/prism-z-touch.min.css": "assets/prism-theme.css"
     });
 
+    // makes eleventy ignore src/_components AND provide auto-import
     eleventyConfig.addPlugin(pluginWebc, {
-        components: "src/**/*.webc",
+        components:"src/_components/**/*.webc"
     });
 
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -66,9 +67,7 @@ module.exports = function (eleventyConfig) {
 
     return {
         dir: {
-            input: "src/pages",
-            layouts: "../layouts",
-            data: "../data",
+            input: "src",
             output: "dist",
         }
     }

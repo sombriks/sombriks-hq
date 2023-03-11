@@ -1,54 +1,65 @@
 <style webc:scoped>
-    .theme-box {
-        --theme-rad: 2.5em;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        /*flex-direction: column;*/
-        max-width: 100vw;
-        flex-wrap: wrap;
-    }
+  .theme-shadow {
+    display: none;
+    position: fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right: 0px;
+    background-color: var(--color1);
+    opacity: 0.2;
+  }
 
-    .current-theme, .theme-options {
-        min-width: var(--theme-rad);
-        min-height: var(--theme-rad);
-        border: 1px solid;
-        border-color: var(--color1);
-        border-radius: var(--theme-rad);
-        display: flex;
-        transform: rotate(45deg);
-        opacity: 0.5;
-    }
+  .theme-box {
+    --theme-rad: 2.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    /*flex-direction: column;*/
+    max-width: 100vw;
+    flex-wrap: wrap;
+  }
 
-    .theme-options {
-        opacity: 1;
-    }
+  .current-theme, .theme-options {
+    min-width: var(--theme-rad);
+    min-height: var(--theme-rad);
+    border: 1px solid;
+    border-color: var(--color1);
+    border-radius: var(--theme-rad);
+    display: flex;
+    transform: rotate(45deg);
+    opacity: 0.5;
+  }
 
-    .options-hide {
-        display: none;
-    }
+  .theme-options {
+    opacity: 1;
+  }
 
-    .options-show {
-        display: flex;
-    }
+  .options-hide {
+    display: none;
+  }
 
-    .bg1, .bg2 {
-        overflow: hidden;
-        flex-grow: 1;
-    }
+  .options-show {
+    display: flex;
+  }
 
-    .bg1 {
-        background-color: var(--color0);
-        border-top-left-radius: var(--theme-rad);
-        border-bottom-left-radius: var(--theme-rad);
-    }
+  .bg1, .bg2 {
+    overflow: hidden;
+    flex-grow: 1;
+  }
 
-    .bg2 {
-        background-color: var(--color1);
-        border-top-right-radius: var(--theme-rad);
-        border-bottom-right-radius: var(--theme-rad);
-    }
+  .bg1 {
+    background-color: var(--color0);
+    border-top-left-radius: var(--theme-rad);
+    border-bottom-left-radius: var(--theme-rad);
+  }
+
+  .bg2 {
+    background-color: var(--color1);
+    border-top-right-radius: var(--theme-rad);
+    border-bottom-right-radius: var(--theme-rad);
+  }
 </style>
 <script webc:scoped>
     document.addEventListener("DOMContentLoaded", () => {
@@ -71,19 +82,23 @@
         if (document.querySelector(".options-hide")) {
             document.querySelectorAll(".options-hide")
                 .forEach(op => op.className = "theme-options options-show")
+            document.querySelector(".theme-shadow").style.display="block";
         } else {
             document.querySelectorAll(".options-show")
                 .forEach(op => op.className = "theme-options options-hide")
+            document.querySelector(".theme-shadow").style.display="none";
         }
     }
 </script>
+<div class="theme-shadow" onclick="toggleOptions()"></div>
 <div class="theme-box">
-    <div onclick="toggleOptions()" class="current-theme" title="Current color theme">
+    <div onclick="toggleOptions()" class="current-theme"
+         title="Current color theme">
         <div class="bg1"></div>
         <div class="bg2"></div>
     </div>
     <hr/>
-    <script webc:type="js" webc:is="div">
+    <script webc:type="js" webc:is="div" webc:raw>
         colors.map(t => {
             return `<div onclick="updateTheme('${t.c0}','${t.c1}')"
                     style="color:${t.c0}; background-color: ${t.c1};"

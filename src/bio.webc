@@ -1,0 +1,38 @@
+---
+layout: base.webc
+---
+<div class="cv">
+    <div class="topo">
+        <profile-pic class="pic"></profile-pic>
+        <div class="banner">
+            <h2>Leonardo Silveira</h2>
+            <p><i>I solve coding problemas for fun and to pay my rent</i></p>
+        </div>
+    </div>
+    <div class="corpo">
+        <div class="lado"></div>
+        <div class="centro">
+            <i>under construction</i>
+        </div>
+    </div>
+
+</div>
+
+<style webc:scoped>
+  .cv {
+    display: flex;
+    flex-direction: column;
+  }
+  .topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pic {
+    margin: 2em;
+  }
+  .banner {
+    flex-grow: 1;
+  }
+</style>
