@@ -55,9 +55,7 @@ layout: base.webc
             <script webc:type="js" webc:raw>
                 curriculum.work.map(w => `
                     <fieldset>
-                        <legend>${w.start} - ${w.end} | ${w.company} </legend>
-                        <h3>Company</h3>
-                        <p><a target="company" href="${w.site}">${w.company}</a></p>
+                        <legend><a target="company" href="${w.site}">${w.company}</a> | ${w.start} - ${w.end}</legend>
                         <h3>Position</h3>
                         <p>${w.position}</p>
                         <h3>Projects</h3>

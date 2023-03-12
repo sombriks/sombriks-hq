@@ -85,6 +85,11 @@
     "label": "ripe avocado"
   },
   {
+    "c0": "#191f2c",
+    "c1": "#eb55d9",
+    "label": "pink panther dark"
+  },
+  {
     "c0": "#26210d",
     "c1": "#E7262c",
     "label": "crimson king"
@@ -96,7 +101,7 @@
   },
   {
     "c0": "#2a2139",
-    "c1": "#72f0b7",
+    "c1": "#cbff00",
     "label": "retrowave"
   },
   {
