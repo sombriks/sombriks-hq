@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/assets/fonts/icomoon.eot?z3wlpu');
-  src:  url('/assets/fonts/icomoon.eot?z3wlpu#iefix') format('embedded-opentype'),
-  url('/assets/fonts/icomoon.ttf?z3wlpu') format('truetype'),
-  url('/assets/fonts/icomoon.woff?z3wlpu') format('woff'),
-  url('/assets/fonts/icomoon.svg?z3wlpu#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?86hph2');
+  src:  url('fonts/icomoon.eot?86hph2#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?86hph2') format('truetype'),
+  url('fonts/icomoon.woff?86hph2') format('woff'),
+  url('fonts/icomoon.svg?86hph2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,17 +25,96 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-hackerrank:before {
-  content: "\e900";
-  color: #2ec866;
+.icon-python:before {
+  content: "\e916";
+  color: #3776ab;
 }
-.icon-keybase:before {
+.icon-ruby:before {
+  content: "\e900";
+  color: #cc342d;
+}
+.icon-nativescript:before {
   content: "\e901";
-  color: #33a0ff;
+  color: #3655ff;
+}
+.icon-docker:before {
+  content: "\e902";
+  color: #1488c6;
+}
+.icon-spring:before {
+  content: "\e903";
+  color: #6db33f;
+}
+.icon-firebase:before {
+  content: "\e904";
+  color: #ffca28;
+}
+.icon-digitalocean:before {
+  content: "\e905";
+  color: #0080ff;
+}
+.icon-amazonaws:before {
+  content: "\e906";
+}
+.icon-c:before {
+  content: "\e907";
+  color: #a8b9cc;
+}
+.icon-kotlin:before {
+  content: "\e908";
+  color: #0095d5;
+}
+.icon-react:before {
+  content: "\e909";
+  color: #61dafb;
+}
+.icon-angular:before {
+  content: "\e90a";
+  color: #dd0031;
+}
+.icon-vue-dot-js:before {
+  content: "\e90b";
+  color: #4fc08d;
+}
+.icon-oracle:before {
+  content: "\e90c";
+  color: #f80000;
+}
+.icon-postgresql:before {
+  content: "\e90d";
+  color: #336791;
+}
+.icon-mysql:before {
+  content: "\e90e";
+  color: #4479a1;
+}
+.icon-go:before {
+  content: "\e90f";
+  color: #00add8;
+}
+.icon-node-dot-js:before {
+  content: "\e910";
+  color: #393;
+}
+.icon-javascript:before {
+  content: "\e911";
+  color: #f7df1e;
+}
+.icon-java:before {
+  content: "\e912";
+  color: #007396;
 }
 .icon-mastodon:before {
-  content: "\e902";
+  content: "\e913";
   color: #3088d4;
+}
+.icon-keybase:before {
+  content: "\e914";
+  color: #33a0ff;
+}
+.icon-hackerrank:before {
+  content: "\e915";
+  color: #2ec866;
 }
 .icon-phone:before {
   content: "\e942";
@@ -57,6 +136,9 @@
 }
 .icon-github:before {
   content: "\eab0";
+}
+.icon-android:before {
+  content: "\eac0";
 }
 .icon-reddit:before {
   content: "\eac6";

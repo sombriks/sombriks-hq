@@ -94,14 +94,3 @@ code {
     column-count: 1;
   }
 }
-
-@media print {
-  .outer-container {
-    max-width: 100%;
-  }
-
-  :root {
-    --color0: #eee;
-    --color1: #222;
-  }
-}
