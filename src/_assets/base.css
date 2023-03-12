@@ -94,3 +94,13 @@ code {
     column-count: 1;
   }
 }
+
+@media print {
+
+  * {
+    --color0: #eee;
+    --color1: #222;
+    color: var(--color0);
+    border-color: var(--color1);
+  }
+}

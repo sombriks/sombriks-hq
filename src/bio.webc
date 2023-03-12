@@ -15,7 +15,39 @@ layout: base.webc
         <div class="centro">
             <h2>Skills</h2>
             <fieldset class="skills">
-                <legend>under construction</legend>
+                <!-- TODO carregar a partir de _data/curriculum.json-->
+                <legend>Programming Languages</legend>
+                <span  title="java" class="icon-java"></span>
+                <span  title="javascript" class="icon-javascript"></span>
+                <span  title="node.js" class="icon-node-dot-js"></span>
+                <span  title="go" class="icon-go"></span>
+                <span  title="kotlin" class="icon-kotlin"></span>
+                <span  title="python" class="icon-python"></span>
+                <span  title="ruby" class="icon-ruby"></span>
+                <span  title="c" class="icon-c"></span>
+            </fieldset>
+            <fieldset class="skills">
+                <legend>Frameworks</legend>
+                <span title="spring" class="icon-spring"></span>
+                <span title="vue.js" class="icon-vue-dot-js"></span>
+                <span title="react" class="icon-react"></span>
+                <span title="angular" class="icon-angular"></span>
+                <span title="nativescript" class="icon-nativescript"></span>
+                <span title="android" class="icon-android"></span>
+            </fieldset>
+            <fieldset class="skills">
+                <legend>Databases</legend>
+                <span title="postgresql" class="icon-postgresql"></span>
+                <span title="mysql" class="icon-mysql"></span>
+                <span title="oracle" class="icon-oracle"></span>
+            </fieldset>
+            <fieldset class="skills">
+                <legend>Dev & Ops</legend>
+                <span title="github" class="icon-github"></span>
+                <span title="aws" class="icon-aws"></span>
+                <span title="docker" class="icon-docker"></span>
+                <span title="firebase" class="icon-firebase"></span>
+                <span title="digital ocean" class="icon-digitalocean"></span>
             </fieldset>
             <h2>Work Experience</h2>
             <fieldset>
@@ -87,7 +119,7 @@ layout: base.webc
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-    width:100%;
+    width: 100%;
   }
 
   .lado {
@@ -96,7 +128,7 @@ layout: base.webc
     /*width: 15em;*/
   }
 
-  .contato>div {
+  .contato > div {
     margin: 0.5em;
   }
 
@@ -105,23 +137,21 @@ layout: base.webc
     flex-grow: 1;
   }
 
-  @media print {
+  .skills > span {
+    font-size: 2em;
+  }
 
-    * {
-      --color0: #eee;
-      --color1: #222;
-      color: var(--color0);
-      border-color: var(--color1);
-    }
+  @media print {
 
     h2 {
       page-break-after: avoid;
     }
+
     fieldset {
       page-break-inside: avoid;
     }
 
-    @page  {
+    @page {
       size: landscape;
     }
 
