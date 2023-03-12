@@ -39,20 +39,19 @@
   }
 </style>
 <script webc:scoped>
-    let images = []
-    let currentImage = 1
+    window.currentImage = 1
 
     function nextImage(){
+        const images = document.querySelectorAll(".photos > img");
         images.forEach(img => img.style.display = "none");
-        images[currentImage].style.display = "block";
-        currentImage++
-        if (currentImage >= images.length) {
-            currentImage = 0
+        images[window.currentImage].style.display = "block";
+        window.currentImage++
+        if (window.currentImage >= images.length) {
+            window.currentImage = 0
         }
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        images = document.querySelectorAll(".photos > img");
         setInterval(nextImage, 5000)
     })
 </script>

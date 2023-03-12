@@ -2,37 +2,104 @@
 layout: base.webc
 ---
 <div class="cv">
-    <div class="topo">
+    <fieldset class="topo">
         <profile-pic class="pic"></profile-pic>
         <div class="banner">
-            <h2>Leonardo Silveira</h2>
-            <p><i>I solve coding problemas for fun and to pay my rent</i></p>
+            <h2>Leonardo Silveira (sombriks)</h2>
+            <p><i>I solve coding problems for fun and to pay my rent</i></p>
         </div>
-    </div>
+    </fieldset>
     <div class="corpo">
-        <div class="lado"></div>
+        <div class="lado">
+            <fieldset class="contato">
+                <legend>Contacts</legend>
+                <script webc:type="js" webc:raw>
+                    curriculum.contacts.filter(c => c.visible).map(c => `
+                        <div>
+                            <a target="_blank" href="${c.link}" alt="${c.label}" title="${c.label}">
+                                <span class="${c.icon}"></span> ${c.label}
+                            </a>
+                        </div>
+                    `).join("\n")
+                </script>
+            </fieldset>
+            <fieldset class="skills">
+                <legend>Skills</legend>
+            </fieldset>
+        </div>
         <div class="centro">
-            <i>under construction</i>
+            <h2>Work Experience</h2>
+            <fieldset>
+                <legend>under construction</legend>
+                <!-- experiencia profissional -->
+                <!-- -- período -->
+                <!-- -- cargo -->
+                <!-- -- projetos -->
+                <!-- -- tecnologias -->
+            </fieldset>
+            <h2>Education</h2>
+            <fieldset>
+                <legend>under construction</legend>
+                <!-- educação -->
+            </fieldset>
         </div>
     </div>
 
 </div>
 
 <style webc:scoped>
+  fieldset {
+    border-radius: 2em;
+    border-color: var(--color1);
+    padding: 1em;
+  }
+
   .cv {
     display: flex;
     flex-direction: column;
+    padding: 1em;
+    border: 1px solid var(--color1);
   }
+
   .topo {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
   }
+
   .pic {
     margin: 2em;
   }
+
   .banner {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .corpo {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    width:100%;
+  }
+
+  .lado {
+    min-width: 10em;
+    max-width: 15em;
+    width: 15em;
+  }
+
+  .contato>div {
+    margin: 0.5em;
+  }
+
+  .centro {
+    margin-left: 1em;
     flex-grow: 1;
   }
 </style>

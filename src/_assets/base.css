@@ -99,4 +99,9 @@ code {
   .outer-container {
     max-width: 100%;
   }
+
+  :root {
+    --color0: #eee;
+    --color1: #222;
+  }
 }
