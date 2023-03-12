@@ -92,7 +92,7 @@
     {
       "company": "Rede Inova",
       "site": "https://www.redeinova.com.br/",
-      "position": "Senior Fullstack Developer",
+      "position": "Senior Fullstack Developer (part-time)",
       "start": "2022-07-13",
       "end": "present day",
       "description": "Redeinova is a technology company from Brasil delivering solutions to public and private sectors",
@@ -410,7 +410,7 @@
         "vraptor",
         "angularjs",
         "bootstrap",
-        "CD/CI - continuous delivery and integration"
+        "Teamcity"
       ],
       "color": "lime"
     },
@@ -444,15 +444,8 @@
     },
     {
       "company": "Sena Informática|USIX S/A|Ebix Inc",
-      "sites": [
-        "https://www.linkedin.com/company/usix-technology",
-        "https://www.ebix.com/"
-      ],
-      "positions": [
-        "trainee",
-        "junior programmer",
-        "senior programmer"
-      ],
+      "site": "https://www.linkedin.com/company/usix-technology",
+      "position": "trainee, junior programmer, senior programmer",
       "start": "2007-08",
       "end": "2011-09",
       "description": "This was the biggest insurance solutions provider back in time",

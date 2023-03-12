@@ -9,11 +9,19 @@
       "selection": [
         {
           "order": 1,
+          "id": 23,
+          "name": "jira",
+          "prevSize": 32,
+          "code": 59671,
+          "tempChar": ""
+        },
+        {
+          "order": 1,
           "id": 22,
           "prevSize": 32,
           "code": 59670,
           "name": "python",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -21,7 +29,7 @@
           "name": "ruby",
           "prevSize": 32,
           "code": 59648,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -29,7 +37,7 @@
           "name": "nativescript",
           "prevSize": 32,
           "code": 59649,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -37,7 +45,7 @@
           "name": "docker",
           "prevSize": 32,
           "code": 59650,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -45,7 +53,7 @@
           "prevSize": 32,
           "code": 59651,
           "name": "spring",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -53,7 +61,7 @@
           "name": "firebase",
           "prevSize": 32,
           "code": 59652,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -61,7 +69,7 @@
           "name": "digitalocean",
           "prevSize": 32,
           "code": 59653,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -69,7 +77,7 @@
           "name": "amazonaws",
           "prevSize": 32,
           "code": 59654,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -77,7 +85,7 @@
           "name": "c",
           "prevSize": 32,
           "code": 59655,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -85,7 +93,7 @@
           "name": "kotlin",
           "prevSize": 32,
           "code": 59656,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -93,7 +101,7 @@
           "name": "react",
           "prevSize": 32,
           "code": 59657,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -101,7 +109,7 @@
           "name": "angular",
           "prevSize": 32,
           "code": 59658,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -109,7 +117,7 @@
           "name": "vue-dot-js",
           "prevSize": 32,
           "code": 59659,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -117,7 +125,7 @@
           "name": "oracle",
           "prevSize": 32,
           "code": 59660,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -125,7 +133,7 @@
           "name": "postgresql",
           "prevSize": 32,
           "code": 59661,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 2,
@@ -133,7 +141,7 @@
           "name": "mysql",
           "prevSize": 32,
           "code": 59662,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -141,7 +149,7 @@
           "name": "go",
           "prevSize": 32,
           "code": 59663,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -149,7 +157,7 @@
           "name": "node-dot-js",
           "prevSize": 32,
           "code": 59664,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -157,7 +165,7 @@
           "name": "javascript",
           "prevSize": 32,
           "code": 59665,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -165,7 +173,7 @@
           "name": "java",
           "prevSize": 32,
           "code": 59666,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -173,7 +181,7 @@
           "name": "mastodon",
           "prevSize": 32,
           "code": 59667,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -181,7 +189,7 @@
           "name": "keybase",
           "prevSize": 32,
           "code": 59668,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -189,7 +197,7 @@
           "name": "hackerrank",
           "prevSize": 32,
           "code": 59669,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 2,
@@ -208,6 +216,21 @@
       "height": 1024,
       "prevSize": 32,
       "icons": [
+        {
+          "id": 23,
+          "paths": [
+            "M995.115 483.413l-483.115-483.413-483.413 483.413c-7.278 7.389-11.772 17.538-11.772 28.736s4.494 21.347 11.777 28.741l483.408 483.11 483.115-483.115c7.432-7.318 12.037-17.489 12.037-28.736s-4.605-21.418-12.032-28.731l-0.005-0.005zM512 663.509l-151.509-151.509 151.509-151.339 151.381 151.339z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "jira"
+          ],
+          "grid": 0
+        },
         {
           "id": 22,
           "paths": [
@@ -1007,7 +1030,7 @@
           "id": 67,
           "prevSize": 32,
           "code": 59714,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "phone-hang-up, telephone2",
@@ -1832,7 +1855,7 @@
           "id": 204,
           "prevSize": 32,
           "code": 59851,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "flag, report",
@@ -2957,7 +2980,7 @@
           "id": 391,
           "prevSize": 32,
           "code": 60038,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "amazon",
@@ -3026,7 +3049,7 @@
           "id": 402,
           "prevSize": 32,
           "code": 60049,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "instagram, brand12",
@@ -3035,7 +3058,7 @@
           "id": 403,
           "prevSize": 32,
           "code": 60050,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "whatsapp",
@@ -3062,7 +3085,7 @@
           "id": 407,
           "prevSize": 32,
           "code": 60054,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "vine",
@@ -3221,7 +3244,7 @@
           "id": 433,
           "prevSize": 32,
           "code": 60080,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "npm",
@@ -3320,7 +3343,7 @@
           "id": 449,
           "prevSize": 32,
           "code": 60096,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "windows, brand56",
@@ -3359,7 +3382,7 @@
           "id": 455,
           "prevSize": 32,
           "code": 60102,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "hackernews",
@@ -3380,7 +3403,7 @@
           "id": 458,
           "prevSize": 32,
           "code": 60105,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "linkedin2, brand65",
@@ -3425,7 +3448,7 @@
           "id": 465,
           "prevSize": 32,
           "code": 60112,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "pinterest",
@@ -3550,8 +3573,11 @@
         {
           "ligatures": "html-five, w3c",
           "name": "html-five",
-          "order": 0,
-          "id": 485
+          "order": 30,
+          "id": 485,
+          "prevSize": 32,
+          "code": 60132,
+          "tempChar": ""
         },
         {
           "ligatures": "html-five2, w3c2",
@@ -11113,6 +11139,5 @@
     "showCodes": true,
     "gridSize": 16
   },
-  "uid": -1,
-  "time": 1678637399745
+  "uid": -1
 }

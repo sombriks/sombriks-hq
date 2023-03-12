@@ -1,7 +1,7 @@
 ---
 layout: base.webc
 ---
-<div class="cv">
+<div class="curriculum" style="display:flex;flex-direction: column;">
     <fieldset class="topo">
         <profile-pic class="pic"></profile-pic>
         <div class="banner">
@@ -10,63 +10,88 @@ layout: base.webc
         </div>
     </fieldset>
     <div class="corpo">
-        <div class="lado">
-        </div>
+<!--        <div class="lado">-->
+<!--        </div>-->
         <div class="centro">
             <h2>Skills</h2>
             <fieldset class="skills">
                 <!-- TODO carregar a partir de _data/curriculum.json-->
                 <legend>Programming Languages</legend>
-                <span  title="java" class="icon-java"></span>
-                <span  title="javascript" class="icon-javascript"></span>
-                <span  title="node.js" class="icon-node-dot-js"></span>
-                <span  title="go" class="icon-go"></span>
-                <span  title="kotlin" class="icon-kotlin"></span>
-                <span  title="python" class="icon-python"></span>
-                <span  title="ruby" class="icon-ruby"></span>
-                <span  title="c" class="icon-c"></span>
-            </fieldset>
+                <skill-item title="java" icon-class="icon-java" stars="5"></skill-item>
+                <skill-item title="javascript" icon-class="icon-javascript" stars="5"></skill-item>
+                <skill-item title="html 5" icon-class="icon-html-five" stars="5"></skill-item>
+                <skill-item title="node.js" icon-class="icon-node-dot-js" stars="5"></skill-item>
+                <skill-item title="go" icon-class="icon-go" stars="3"></skill-item>
+                <skill-item title="c" icon-class="icon-c" stars="3"></skill-item>
+                <skill-item title="kotlin" icon-class="icon-kotlin" stars="2"></skill-item>
+                <skill-item title="python" icon-class="icon-python" stars="2"></skill-item>
+                <skill-item title="ruby" icon-class="icon-ruby" stars="2"></skill-item>
+            </fieldset><br/>
             <fieldset class="skills">
                 <legend>Frameworks</legend>
-                <span title="spring" class="icon-spring"></span>
-                <span title="vue.js" class="icon-vue-dot-js"></span>
-                <span title="react" class="icon-react"></span>
-                <span title="angular" class="icon-angular"></span>
-                <span title="nativescript" class="icon-nativescript"></span>
-                <span title="android" class="icon-android"></span>
-            </fieldset>
+                <skill-item title="spring" icon-class="icon-spring" stars="5"></skill-item>
+                <skill-item title="vue.js" icon-class="icon-vue-dot-js" stars="5"></skill-item>
+                <skill-item title="react" icon-class="icon-react" stars="3"></skill-item>
+                <skill-item title="angular" icon-class="icon-angular" stars="4"></skill-item>
+                <skill-item title="nativescript" icon-class="icon-nativescript" stars="4"></skill-item>
+                <skill-item title="android" icon-class="icon-android" stars="3"></skill-item>
+            </fieldset><br/>
             <fieldset class="skills">
                 <legend>Databases</legend>
-                <span title="postgresql" class="icon-postgresql"></span>
-                <span title="mysql" class="icon-mysql"></span>
-                <span title="oracle" class="icon-oracle"></span>
-            </fieldset>
+                <skill-item title="postgresql" icon-class="icon-postgresql" stars="5"></skill-item>
+                <skill-item title="mysql" icon-class="icon-mysql" stars="5"></skill-item>
+                <skill-item title="oracle" icon-class="icon-oracle" stars="4"></skill-item>
+            </fieldset><br/>
             <fieldset class="skills">
-                <legend>Dev & Ops</legend>
-                <span title="github" class="icon-github"></span>
-                <span title="aws" class="icon-aws"></span>
-                <span title="docker" class="icon-docker"></span>
-                <span title="firebase" class="icon-firebase"></span>
-                <span title="digital ocean" class="icon-digitalocean"></span>
-            </fieldset>
+                <legend>DevOps</legend>
+                <skill-item title="github" icon-class="icon-github" stars="5"></skill-item>
+                <skill-item title="aws" icon-class="icon-amazonaws" stars="3"></skill-item>
+                <skill-item title="docker" icon-class="icon-docker" stars="3"></skill-item>
+                <skill-item title="firebase" icon-class="icon-firebase" stars="3"></skill-item>
+                <skill-item title="jira" icon-class="icon-jira" stars="3"></skill-item>
+                <skill-item title="digital ocean" icon-class="icon-digitalocean" stars="2"></skill-item>
+            </fieldset><br/>
             <h2>Work Experience</h2>
-            <fieldset>
-                <legend>under construction</legend>
-                <!-- experiencia profissional -->
-                <!-- -- período -->
-                <!-- -- cargo -->
-                <!-- -- projetos -->
-                <!-- -- tecnologias -->
-            </fieldset>
+            <script webc:type="js" webc:raw>
+                curriculum.work.map(w => `
+                    <fieldset>
+                        <legend>${w.start} - ${w.end} | ${w.company} </legend>
+                        <h3>Company</h3>
+                        <p><a target="company" href="${w.site}">${w.company}</a></p>
+                        <h3>Position</h3>
+                        <p>${w.position}</p>
+                        <h3>Projects</h3>
+                        <ul>
+                            ${w.projects.map(p => `
+                                <li>
+                                    <h4>${p.name}</h4>
+                                    <p>${p.description}</p>
+                                </li>
+                            `).join('\n')}
+                        </ul>
+                        <h3>Tech stack</h3>
+                        ${w.techstack.map(t => `
+                            <a target="tech" href="https://bing.com?q=${t}">${t}</a>
+                        `).join("\n")}
+                    </fieldset><br/>
+                `).join("\n")
+            </script>
             <h2>Education</h2>
-            <fieldset>
-                <legend>under construction</legend>
-                <!-- educação -->
-            </fieldset>
-
+            <script webc:type="js" webc:raw>
+                curriculum.education.map(e => `
+                    <fieldset>
+                        <legend>${e.start} - ${e.end} | ${e.course} </legend>
+                        <h3>Institution</h3>
+                        <p><a target="institution" href="${e.site}">${e.institution}</a></p>
+                        <h3>Type</h3>
+                        <p>${e.type}</p>
+                        <p><i>${e.description}</i></p>
+                    </fieldset><br/>
+                `).join("\n")
+            </script>
             <h2>Contacts</h2>
             <fieldset class="contato">
-                <legend>All presence on internet</legend>
+                <legend>All relevant presence on internet</legend>
                 <script webc:type="js" webc:raw>
                     curriculum.contacts.filter(c => c.visible).map(c => `
                         <div>
@@ -89,11 +114,14 @@ layout: base.webc
     padding: 1em;
   }
 
-  .cv {
+  div.curriculum {
     display: flex;
     flex-direction: column;
     padding: 1em;
     border: 1px solid var(--color1);
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .topo {
@@ -119,7 +147,6 @@ layout: base.webc
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-    width: 100%;
   }
 
   .lado {
@@ -137,8 +164,9 @@ layout: base.webc
     flex-grow: 1;
   }
 
-  .skills > span {
-    font-size: 2em;
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   @media print {
@@ -151,9 +179,9 @@ layout: base.webc
       page-break-inside: avoid;
     }
 
-    @page {
-      size: landscape;
-    }
+    /*@page {*/
+    /*  size: landscape;*/
+    /*}*/
 
     .outer-container {
       max-width: 100%;

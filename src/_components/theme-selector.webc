@@ -107,7 +107,7 @@
         <div class="bg2"></div>
     </div>
     <hr/>
-    <script webc:type="js" webc:is="div" webc:raw>
+    <script webc:type="js" webc:raw>
         colors.map(t => {
             return `<div onclick="updateTheme('${t.c0}','${t.c1}')"
                     style="color:${t.c0}; background-color: ${t.c1};"
