@@ -41,6 +41,7 @@ layout: base.webc
                 <skill-item title="postgresql" icon-class="icon-postgresql" stars="5"></skill-item>
                 <skill-item title="mysql" icon-class="icon-mysql" stars="5"></skill-item>
                 <skill-item title="oracle" icon-class="icon-oracle" stars="4"></skill-item>
+                <skill-item title="mongodb" icon-class="icon-mongodb" stars="3"></skill-item>
             </fieldset><br/>
             <fieldset class="skills">
                 <legend>DevOps</legend>
