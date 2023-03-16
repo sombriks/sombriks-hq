@@ -43,11 +43,8 @@ This project is open for contributions, ;-)
 
 This one is yet another wordle mutated clone.
 
-It's not even close to completion, missing a few things but you can challenge
-people around the world to discover the word already.
-
-Unlike original wordle, this one allows the player to invent and share it's own
-word.
+Key purpose was to sample a few different ways to implement the game and also
+sample a little of [vue.js 3](https://github.com/vuejs/core/blob/main/CHANGELOG.md#3247-2023-02-02).
 
 ## [simple-steps-js](https://github.com/sombriks/simple-steps-js)
 
@@ -64,6 +61,14 @@ Useful when your program needs to manage another program.
 
 It's still under construction, but already has a simple testcase showing it's
 capabilities.
+
+## [hello-js-v2](https://github.com/sombriks/hello-js-2.0) and [hello-js-v5](https://github.com/sombriks/hello-js-v5) trainings
+
+These old node trainings where useful back in time to help my fellow students to
+fast track into trainee positions.
+
+They are outdated right now but still worth as a picture of the state of node
+and javascript development back in 2016.
 
 ## _more to come_
 
