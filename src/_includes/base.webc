@@ -6,7 +6,12 @@
     <meta name="robots" content="index, follow">
     <meta name="keywords"
           :content="tags && tags.join(',') || 'technology, open source, programming, and so on'">
-
+    <meta name="twitter:card" :content="title || page.url"/>
+    <meta name="twitter:site" content="https://sombriks.com" />
+    <meta name="twitter:creator" content="@sombriks" />
+    <meta property="og:url" :content="'https://sombriks.com'+(page?.url || '')" />
+    <meta property="og:title" :content="title || page.url" />
+    <meta property="og:description" :content="content.split('\n')[0]" />
     <title @html="title || page.url">
         Sombriks has a plan
     </title>
