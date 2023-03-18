@@ -310,5 +310,9 @@
   {
     "label": "Action to build and deploy your frontend project into github pages",
     "link": "https://github.com/sombriks/red-line-finance/blob/develop/.github/workflows/node.js.yml"
+  },
+  {
+    "label": "spring boot understand dotenv files now",
+    "link": "https://github.com/paulschwarz/spring-dotenv"
   }
 ]
