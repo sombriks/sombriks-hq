@@ -68,9 +68,9 @@ Then it came out!
 
 ## The Jackson serializer "issue"
 
-Te more silent log was hiding a rich, educational and clear jackson
-serializer error behind zero lines at the problematic project and just a single
-line in the issue exploration project.
+Te more silent log was hiding a rich, educational and clear jackson serializer
+error behind zero lines at the problematic project and just a single line in the
+issue exploration project.
 
 The faulty entity was something like this:
 
