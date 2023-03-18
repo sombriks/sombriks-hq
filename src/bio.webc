@@ -44,7 +44,7 @@ layout: base.webc
                 <skill-item title="mongodb" icon-class="icon-mongodb" stars="3"></skill-item>
             </fieldset><br/>
             <fieldset class="skills">
-                <legend>DevOps</legend>
+                <legend>DevOps & Misc</legend>
                 <skill-item title="github" icon-class="icon-github" stars="5"></skill-item>
                 <skill-item title="aws" icon-class="icon-amazonaws" stars="3"></skill-item>
                 <skill-item title="docker" icon-class="icon-docker" stars="3"></skill-item>
