@@ -19,7 +19,7 @@ One `@PostMapping` from a spring `@RestController` simply wasn't working.
 
 No exception, no message. Only a solid 404 on every request.
 
-That poor sooul lost a good amount of time on it, so i jumped in to chet it out.
+That poor soul lost a good amount of time on it, so i jumped in to check it out.
 
 ## The mistery
 
@@ -32,16 +32,28 @@ However, no hit on the handler.
 
 And no log message as well.
 
-So i 
+So i
 [built a sample project](https://github.com/sombriks/sample-spring-web-jackson-issue)
 to study the problem, and tried to my surprise i got it in my first attempt!
 
 ## The log silence
 
-One thing that was supposed to happen was log messages, but they wheren't there.
+One thing that was supposed to happen was log messages, but they weren't there.
 
 So the first action was to
-[raise the log noise to DEBUG](https://github.com/sombriks/sample-spring-web-jackson-issue/blob/ea8c174f566f494c3e9bbb69993be103c164b7c5/src/main/resources/application.properties#L8).
+[raise the log noise to DEBUG](https://github.com/sombriks/sample-spring-web-jackson-issue/blob/ea8c174f566f494c3e9bbb69993be103c164b7c5/src/main/resources/application.properties#L8):
+
+```properties
+# general db info
+spring.data.mongodb.username=${MONGO_INITDB_ROOT_USERNAME}
+spring.data.mongodb.password=${MONGO_INITDB_ROOT_PASSWORD}
+spring.data.mongodb.authentication-database=admin
+spring.data.mongodb.database=books
+
+# remember to enable this if running into unexpected issues
+logging.level.web=DEBUG
+
+```
 
 Then it came out!
 
@@ -56,9 +68,9 @@ Then it came out!
 
 ## The Jackson serializer "issue"
 
-Te more silent log was hiding a rich, educational and clear jackson 
+Te more silent log was hiding a rich, educational and clear jackson
 serializer error behind zero lines at the problematic project and just a single
-line in the issue exploratin project.
+line in the issue exploration project.
 
 The faulty entity was something like this:
 
@@ -82,7 +94,7 @@ public class FaultyDocument {
 
 The correction obviously was to use Boolean instead of byte.
 
-Using the simple http requester available on intellij was also possible to 
+Using the simple http requester available on intellij was also possible to
 properly identify the issue:
 
 ![http-requester.png](/assets/post-pics/0045-keep-your-log-level-sane-on-spring-boot/http-requester.png)
