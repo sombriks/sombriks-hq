@@ -5,6 +5,7 @@
 
 body {
   font-family: monospace;
+  font-size: 1.1em;
   margin: 0;
   background-color: var(--color0);
   color: var(--color1);
@@ -23,7 +24,7 @@ a {
 }
 
 img {
-  max-width: 40vw;
+  max-width: 100%;
 }
 
 pre {

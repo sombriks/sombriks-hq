@@ -46,10 +46,22 @@ module.exports = function (eleventyConfig) {
 
     // makes eleventy ignore src/_components AND provide auto-import
     eleventyConfig.addPlugin(pluginWebc, {
-        components:"src/_components/**/*.webc"
+        components: "src/_components/**/*.webc"
     });
 
     eleventyConfig.addPlugin(syntaxHighlight);
+
+    eleventyConfig
+        .addFilter('yearTags', posts => {
+            const yearsList = posts.map(p => p.data.date.getFullYear())
+            const yearsCount = {}
+            yearsList.forEach(y => {
+                if (!yearsCount[y]) yearsCount[y] = 1
+                else yearsCount[y]++
+            });
+            return Object.keys(yearsCount)
+                .map(yc => ({ name: yc, count: yearsCount[yc] }))
+        });
 
     eleventyConfig
         .addFilter('postTags', tags => Object.keys(tags)

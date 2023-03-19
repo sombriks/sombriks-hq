@@ -9,101 +9,96 @@ layout: base.webc
             <p><i>I solve coding problems for fun and to pay my rent</i></p>
         </div>
     </fieldset>
-    <div class="corpo">
-<!--        <div class="lado">-->
-<!--        </div>-->
-        <div class="centro">
-            <h2>Skills</h2>
-            <fieldset class="skills">
-                <!-- TODO carregar a partir de _data/curriculum.json-->
-                <legend>Programming Languages</legend>
-                <skill-item title="java" icon-class="icon-java" stars="5"></skill-item>
-                <skill-item title="javascript" icon-class="icon-javascript" stars="5"></skill-item>
-                <skill-item title="html 5" icon-class="icon-html-five" stars="5"></skill-item>
-                <skill-item title="node.js" icon-class="icon-node-dot-js" stars="5"></skill-item>
-                <skill-item title="go" icon-class="icon-go" stars="3"></skill-item>
-                <skill-item title="c" icon-class="icon-c" stars="3"></skill-item>
-                <skill-item title="kotlin" icon-class="icon-kotlin" stars="2"></skill-item>
-                <skill-item title="python" icon-class="icon-python" stars="2"></skill-item>
-                <skill-item title="ruby" icon-class="icon-ruby" stars="2"></skill-item>
-            </fieldset><br/>
-            <fieldset class="skills">
-                <legend>Frameworks</legend>
-                <skill-item title="spring" icon-class="icon-spring" stars="5"></skill-item>
-                <skill-item title="vue.js" icon-class="icon-vue-dot-js" stars="5"></skill-item>
-                <skill-item title="react" icon-class="icon-react" stars="3"></skill-item>
-                <skill-item title="angular" icon-class="icon-angular" stars="4"></skill-item>
-                <skill-item title="nativescript" icon-class="icon-nativescript" stars="4"></skill-item>
-                <skill-item title="android" icon-class="icon-android" stars="3"></skill-item>
-            </fieldset><br/>
-            <fieldset class="skills">
-                <legend>Databases</legend>
-                <skill-item title="postgresql" icon-class="icon-postgresql" stars="5"></skill-item>
-                <skill-item title="mysql" icon-class="icon-mysql" stars="5"></skill-item>
-                <skill-item title="oracle" icon-class="icon-oracle" stars="4"></skill-item>
-                <skill-item title="mongodb" icon-class="icon-mongodb" stars="3"></skill-item>
-            </fieldset><br/>
-            <fieldset class="skills">
-                <legend>DevOps & Misc</legend>
-                <skill-item title="github" icon-class="icon-github" stars="5"></skill-item>
-                <skill-item title="aws" icon-class="icon-amazonaws" stars="3"></skill-item>
-                <skill-item title="docker" icon-class="icon-docker" stars="3"></skill-item>
-                <skill-item title="firebase" icon-class="icon-firebase" stars="3"></skill-item>
-                <skill-item title="jira" icon-class="icon-jira" stars="3"></skill-item>
-                <skill-item title="digital ocean" icon-class="icon-digitalocean" stars="2"></skill-item>
-            </fieldset><br/>
-            <h2>Work Experience</h2>
-            <script webc:type="js" webc:raw>
-                curriculum.work.map(w => `
-                    <fieldset>
-                        <legend><a target="company" href="${w.site}">${w.company}</a> | ${w.start} - ${w.end}</legend>
-                        <h3>Position</h3>
-                        <p>${w.position}</p>
-                        <h3>Projects</h3>
-                        <ul>
-                            ${w.projects.map(p => `
-                                <li>
-                                    <h4>${p.name}</h4>
-                                    <p>${p.description}</p>
-                                </li>
-                            `).join('\n')}
-                        </ul>
-                        <h3>Tech stack</h3>
-                        ${w.techstack.map(t => `
-                            <a target="tech" href="https://bing.com?q=${t}">${t}</a>
-                        `).join("\n")}
-                    </fieldset><br/>
-                `).join("\n")
-            </script>
-            <h2>Education</h2>
-            <script webc:type="js" webc:raw>
-                curriculum.education.map(e => `
-                    <fieldset>
-                        <legend>${e.start} - ${e.end} | ${e.course} </legend>
-                        <h3>Institution</h3>
-                        <p><a target="institution" href="${e.site}">${e.institution}</a></p>
-                        <h3>Type</h3>
-                        <p>${e.type}</p>
-                        <p><i>${e.description}</i></p>
-                    </fieldset><br/>
-                `).join("\n")
-            </script>
-            <h2>Contacts</h2>
-            <fieldset class="contato">
-                <legend>All relevant presence on internet</legend>
-                <script webc:type="js" webc:raw>
-                    curriculum.contacts.filter(c => c.visible).map(c => `
-                        <div>
-                            <a target="_blank" href="${c.link}" alt="${c.label}" title="${c.label}">
-                                <span class="${c.icon}"></span> ${c.link}
-                            </a>
-                        </div>
-                    `).join("\n")
-                </script>
-            </fieldset>
-        </div>
-    </div>
-
+    <div class="centro">
+      <h2>Skills</h2>
+      <fieldset class="skills">
+          <!-- TODO carregar a partir de _data/curriculum.json-->
+          <legend>Programming Languages</legend>
+          <skill-item title="java" icon-class="icon-java" stars="5"></skill-item>
+          <skill-item title="javascript" icon-class="icon-javascript" stars="5"></skill-item>
+          <skill-item title="html 5" icon-class="icon-html-five" stars="5"></skill-item>
+          <skill-item title="node.js" icon-class="icon-node-dot-js" stars="5"></skill-item>
+          <skill-item title="go" icon-class="icon-go" stars="3"></skill-item>
+          <skill-item title="c" icon-class="icon-c" stars="3"></skill-item>
+          <skill-item title="kotlin" icon-class="icon-kotlin" stars="2"></skill-item>
+          <skill-item title="python" icon-class="icon-python" stars="2"></skill-item>
+          <skill-item title="ruby" icon-class="icon-ruby" stars="2"></skill-item>
+      </fieldset><br/>
+      <fieldset class="skills">
+          <legend>Frameworks</legend>
+          <skill-item title="spring" icon-class="icon-spring" stars="5"></skill-item>
+          <skill-item title="vue.js" icon-class="icon-vue-dot-js" stars="5"></skill-item>
+          <skill-item title="react" icon-class="icon-react" stars="3"></skill-item>
+          <skill-item title="angular" icon-class="icon-angular" stars="4"></skill-item>
+          <skill-item title="nativescript" icon-class="icon-nativescript" stars="4"></skill-item>
+          <skill-item title="android" icon-class="icon-android" stars="3"></skill-item>
+      </fieldset><br/>
+      <fieldset class="skills">
+          <legend>Databases</legend>
+          <skill-item title="postgresql" icon-class="icon-postgresql" stars="5"></skill-item>
+          <skill-item title="mysql" icon-class="icon-mysql" stars="5"></skill-item>
+          <skill-item title="oracle" icon-class="icon-oracle" stars="4"></skill-item>
+          <skill-item title="mongodb" icon-class="icon-mongodb" stars="3"></skill-item>
+      </fieldset><br/>
+      <fieldset class="skills">
+          <legend>DevOps & Misc</legend>
+          <skill-item title="github" icon-class="icon-github" stars="5"></skill-item>
+          <skill-item title="aws" icon-class="icon-amazonaws" stars="3"></skill-item>
+          <skill-item title="docker" icon-class="icon-docker" stars="3"></skill-item>
+          <skill-item title="firebase" icon-class="icon-firebase" stars="3"></skill-item>
+          <skill-item title="jira" icon-class="icon-jira" stars="3"></skill-item>
+          <skill-item title="digital ocean" icon-class="icon-digitalocean" stars="2"></skill-item>
+      </fieldset><br/>
+      <h2>Work Experience</h2>
+      <script webc:type="js" webc:raw>
+          curriculum.work.map(w => `
+              <fieldset>
+                  <legend><a target="company" href="${w.site}">${w.company}</a> | ${w.start} - ${w.end}</legend>
+                  <h3>Position</h3>
+                  <p>${w.position}</p>
+                  <h3>Projects</h3>
+                  <ul>
+                      ${w.projects.map(p => `
+                          <li>
+                              <h4>${p.name}</h4>
+                              <p>${p.description}</p>
+                          </li>
+                      `).join('\n')}
+                  </ul>
+                  <h3>Tech stack</h3>
+                  ${w.techstack.map(t => `
+                      <a target="tech" href="https://bing.com?q=${t}">${t}</a>
+                  `).join("\n")}
+              </fieldset><br/>
+          `).join("\n")
+      </script>
+      <h2>Education</h2>
+      <script webc:type="js" webc:raw>
+          curriculum.education.map(e => `
+              <fieldset>
+                  <legend>${e.start} - ${e.end} | ${e.course} </legend>
+                  <h3>Institution</h3>
+                  <p><a target="institution" href="${e.site}">${e.institution}</a></p>
+                  <h3>Type</h3>
+                  <p>${e.type}</p>
+                  <p><i>${e.description}</i></p>
+              </fieldset><br/>
+          `).join("\n")
+      </script>
+      <h2>Contacts</h2>
+      <fieldset class="contato">
+          <legend>All relevant presence on internet</legend>
+          <script webc:type="js" webc:raw>
+              curriculum.contacts.filter(c => c.visible).map(c => `
+                  <div>
+                      <a target="_blank" href="${c.link}" alt="${c.label}" title="${c.label}">
+                          <span class="${c.icon}"></span> ${c.link}
+                      </a>
+                  </div>
+              `).join("\n")
+          </script>
+      </fieldset>
+  </div>
 </div>
 
 <style webc:scoped>
@@ -148,19 +143,22 @@ layout: base.webc
     flex-direction: row;
   }
 
-  .lado {
-    /*min-width: 10em;*/
-    /*max-width: 15em;*/
-    /*width: 15em;*/
+  .centro {
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .contato {
+    max-width: 100%;
   }
 
   .contato > div {
     margin: 0.5em;
+    max-width: 100%;
   }
 
-  .centro {
-    margin-left: 1em;
-    flex-grow: 1;
+  .contato > div > a {
+    overflow-wrap: anywhere;
   }
 
   .skills {
