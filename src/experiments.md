@@ -12,7 +12,7 @@ product? and most of the cases the answer is now.
 However, by doing it, i am impeding people to see a curated list of potentially
 useful repositories present on [my github](https://github.com/sombriks?tab=repositories)
 
-Therefore, i'll add here not only _finished_ solutions, but als my exploration
+Therefore, i'll add here not only _finished_ solutions, but also my exploration
 projects.
 
 ## [rosetta-beer-store](https://github.com/sombriks/rosetta-beer-store)
@@ -36,6 +36,18 @@ So i wrote the C++ wrapper code to make nodejs speak with this general
 input/output interface and put that on npm registry
 
 This project is open for contributions, ;-)
+
+## [koa-webc middleware](https://github.com/sombriks/koa-webc)
+
+Small middleware to render [WebC](https://github.com/11ty/webc) components from
+the node [Koa](https://koajs.com/) server.
+
+This one exists mostly because Koa is the next thing after express and WebC is
+quite beautiful and simple to use.
+
+[Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+might finally getting traction and the server side capabilities of WebC can help
+even further to fast track the adoption.
 
 ## [palavrim](https://github.com/sombriks/palavrim)
 
