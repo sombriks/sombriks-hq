@@ -318,5 +318,9 @@
   {
     "label": "cool starter projects",
     "link": "https://twitter.com/sombriks/status/1638178060821479428"
+  },
+  {
+    "label": "about github actions and gitlab CI/CD",
+    "link": "https://docs.github.com/en/actions/migrating-to-github-actions/manual-migrations/migrating-from-gitlab-cicd-to-github-actions"
   }
 ]

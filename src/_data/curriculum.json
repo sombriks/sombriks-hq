@@ -8,84 +8,151 @@
     "birthdate": "1984-10-27T20:15:00-03:00",
     "bio": "I solve coding problems for fun and for rent!"
   },
-  "contacts": [
+  "skills": [
     {
-      "link": "mailto:sombriks@gmail.com",
-      "label": "Email",
-      "icon": "icon-mail4",
-      "visible": true
+      "category": "Programming Languages",
+      "items": [
+        {
+          "title": "java",
+          "icon": "icon-java",
+          "stars": "5"
+        },
+        {
+          "title": "javascript",
+          "icon": "icon-javascript",
+          "stars": "5"
+        },
+        {
+          "title": "html 5",
+          "icon": "icon-html-five",
+          "stars": "5"
+        },
+        {
+          "title": "node.js",
+          "icon": "icon-node-dot-js",
+          "stars": "5"
+        },
+        {
+          "title": "go",
+          "icon": "icon-go",
+          "stars": "3"
+        },
+        {
+          "title": "c",
+          "icon": "icon-c",
+          "stars": "3"
+        },
+        {
+          "title": "kotlin",
+          "icon": "icon-kotlin",
+          "stars": "2"
+        },
+        {
+          "title": "python",
+          "icon": "icon-python",
+          "stars": "2"
+        },
+        {
+          "title": "ruby",
+          "icon": "icon-ruby",
+          "stars": "2"
+        }
+      ]
     },
     {
-      "link": "tel:+55 (85) 9 9955-7997",
-      "label": "Phone",
-      "icon": "icon-phone",
-      "visible": false
+      "category": "Frameworks",
+      "items": [
+        {
+          "title": "spring",
+          "icon": "icon-spring",
+          "stars": "5"
+        },
+        {
+          "title": "vue.js",
+          "icon": "icon-vue-dot-js",
+          "stars": "5"
+        },
+        {
+          "title": "react",
+          "icon": "icon-react",
+          "stars": "4"
+        },
+        {
+          "title": "angular",
+          "icon": "icon-angular",
+          "stars": "4"
+        },
+        {
+          "title": "nativescript",
+          "icon": "icon-nativescript",
+          "stars": "4"
+        },
+        {
+          "title": "android",
+          "icon": "icon-android",
+          "stars": "3"
+        }
+      ]
     },
     {
-      "link": "https://twitter.com/sombriks",
-      "label": "Twitter",
-      "icon": "icon-twitter",
-      "visible": true
+      "category": "Databases",
+      "items": [
+        {
+          "title": "postgresql",
+          "icon": "icon-postgresql",
+          "stars": "5"
+        },
+        {
+          "title": "mysql",
+          "icon": "icon-mysql",
+          "stars": "5"
+        },
+        {
+          "title": "oracle",
+          "icon": "icon-oracle",
+          "stars": "4"
+        },
+        {
+          "title": "mongodb",
+          "icon": "icon-mongodb",
+          "stars": "3"
+        }
+      ]
     },
     {
-      "link": "https://mastodon.world/@sombriks",
-      "label": "Mastodon",
-      "icon": "icon-mastodon",
-      "visible": true
-    },
-    {
-      "link": "https://facebook.com/sombriks",
-      "label": "Facebook",
-      "icon": "icon-facebook2",
-      "visible": true
-    },
-    {
-      "link": "https://instagram.com/sombriks",
-      "label": "Instagram",
-      "icon": "icon-instagram",
-      "visible": true
-    },
-    {
-      "link": "https://github.com/sombriks",
-      "label": "Github",
-      "icon": "icon-github",
-      "visible": true
-    },
-    {
-      "link": "https://www.linkedin.com/in/sombriks",
-      "label": "Linkedin",
-      "icon": "icon-linkedin",
-      "visible": true
-    },
-    {
-      "link": "https://stackoverflow.com/users/420096/sombriks?tab=profile",
-      "label": "StackOverflow",
-      "icon": "icon-stackoverflow",
-      "visible": true
-    },
-    {
-      "link": "https://keybase.io/sombriks",
-      "label": "Keybase",
-      "icon": "icon-keybase",
-      "visible": true
-    },
-    {
-      "link": "https://www.hackerrank.com/sombriks",
-      "label": "Hackerrank",
-      "icon": "icon-hackerrank",
-      "visible": true
-    },
-    {
-      "link": "https://www.reddit.com/user/sombriks",
-      "label": "Reddit",
-      "icon": "icon-reddit",
-      "visible": true
-    },
-    {
-      "link": "https://www.polywork.com/sombriks",
-      "label": "Polywork",
-      "icon": "icon-link",
-      "visible": true
+      "category": "DevOps & Misc",
+      "items": [
+        {
+          "title": "github",
+          "icon": "icon-github",
+          "stars": "5"
+        },
+        {
+          "title": "aws",
+          "icon": "icon-amazonaws",
+          "stars": "3"
+        },
+        {
+          "title": "firebase",
+          "icon": "icon-firebase",
+          "stars": "3"
+        },
+        {
+          "title": "digital ocean",
+          "icon": "icon-digitalocean",
+          "stars": "3"
+        },
+        {
+          "title": "docker",
+          "icon": "icon-docker",
+          "stars": "3"
+        },
+        {
+          "title": "jira",
+          "icon": "icon-jira",
+          "stars": "3"
+        }
+      ]
     }
   ],
   "work": [
@@ -522,6 +589,86 @@
       "start": "2004",
       "end": "2006",
       "color": "lime"
+    }
+  ],
+  "contacts": [
+    {
+      "link": "mailto:sombriks@gmail.com",
+      "label": "Email",
+      "icon": "icon-mail4",
+      "visible": true
+    },
+    {
+      "link": "tel:+55 (85) 9 9955-7997",
+      "label": "Phone",
+      "icon": "icon-phone",
+      "visible": false
+    },
+    {
+      "link": "https://twitter.com/sombriks",
+      "label": "Twitter",
+      "icon": "icon-twitter",
+      "visible": true
+    },
+    {
+      "link": "https://mastodon.world/@sombriks",
+      "label": "Mastodon",
+      "icon": "icon-mastodon",
+      "visible": true
+    },
+    {
+      "link": "https://facebook.com/sombriks",
+      "label": "Facebook",
+      "icon": "icon-facebook2",
+      "visible": true
+    },
+    {
+      "link": "https://instagram.com/sombriks",
+      "label": "Instagram",
+      "icon": "icon-instagram",
+      "visible": true
+    },
+    {
+      "link": "https://github.com/sombriks",
+      "label": "Github",
+      "icon": "icon-github",
+      "visible": true
+    },
+    {
+      "link": "https://www.linkedin.com/in/sombriks",
+      "label": "Linkedin",
+      "icon": "icon-linkedin",
+      "visible": true
+    },
+    {
+      "link": "https://stackoverflow.com/users/420096/sombriks?tab=profile",
+      "label": "StackOverflow",
+      "icon": "icon-stackoverflow",
+      "visible": true
+    },
+    {
+      "link": "https://keybase.io/sombriks",
+      "label": "Keybase",
+      "icon": "icon-keybase",
+      "visible": true
+    },
+    {
+      "link": "https://www.hackerrank.com/sombriks",
+      "label": "Hackerrank",
+      "icon": "icon-hackerrank",
+      "visible": true
+    },
+    {
+      "link": "https://www.reddit.com/user/sombriks",
+      "label": "Reddit",
+      "icon": "icon-reddit",
+      "visible": true
+    },
+    {
+      "link": "https://www.polywork.com/sombriks",
+      "label": "Polywork",
+      "icon": "icon-link",
+      "visible": true
     }
   ]
 }

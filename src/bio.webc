@@ -5,12 +5,23 @@ layout: base.webc
     <fieldset class="topo">
         <profile-pic class="pic"></profile-pic>
         <div class="banner">
-            <h2><span @html="curriculum.resume.nome"></span> (sombriks)</h2>
-            <p><i>I solve coding problems for fun and to pay my rent</i></p>
+            <h2><span @html="curriculum.resume.nome"></span> (<span @html="curriculum.resume.apelido"></span>)</h2>
+            <p><i @html="curriculum.resume.bio"></i></p>
         </div>
     </fieldset>
     <div class="centro">
       <h2>Skills</h2>
+      <!-- <script webc:type="js" webc:raw>
+        curriculum.skills.map(s => `
+
+        <fieldset class="skills">
+          <legend>${s.category}</legend>
+          ${s.items.map(i => `
+            <skill-item title="${i.title}" icon-class="${i.icon}" stars="${i.stars}"></skill-item>              
+          `).join("")}
+        </fieldset>
+        `).join("")
+      </script> -->
       <fieldset class="skills">
           <!-- TODO carregar a partir de _data/curriculum.json-->
           <legend>Programming Languages</legend>
@@ -44,10 +55,10 @@ layout: base.webc
           <legend>DevOps & Misc</legend>
           <skill-item title="github" icon-class="icon-github" stars="5"></skill-item>
           <skill-item title="aws" icon-class="icon-amazonaws" stars="3"></skill-item>
-          <skill-item title="docker" icon-class="icon-docker" stars="3"></skill-item>
           <skill-item title="firebase" icon-class="icon-firebase" stars="3"></skill-item>
-          <skill-item title="jira" icon-class="icon-jira" stars="3"></skill-item>
           <skill-item title="digital ocean" icon-class="icon-digitalocean" stars="2"></skill-item>
+          <skill-item title="docker" icon-class="icon-docker" stars="3"></skill-item>
+          <skill-item title="jira" icon-class="icon-jira" stars="3"></skill-item>
       </fieldset><br/>
       <h2>Work Experience</h2>
       <script webc:type="js" webc:raw>
