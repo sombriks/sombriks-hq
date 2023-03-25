@@ -322,5 +322,9 @@
   {
     "label": "about github actions and gitlab CI/CD",
     "link": "https://docs.github.com/en/actions/migrating-to-github-actions/manual-migrations/migrating-from-gitlab-cicd-to-github-actions"
+  },
+  {
+    "label": "nice and honest article about jwt",
+    "link": "https://howtodoinjava.com/java/java-security/jwt-json-web-token/"
   }
 ]
