@@ -1,203 +1,164 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vct5m6');
-  src:  url('fonts/icomoon.eot?vct5m6#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vct5m6') format('truetype'),
-    url('fonts/icomoon.woff?vct5m6') format('woff'),
-    url('fonts/icomoon.svg?vct5m6#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?7x0w7y');
+    src:  url('fonts/icomoon.eot?7x0w7y#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7x0w7y') format('truetype'),
+    url('fonts/icomoon.woff?7x0w7y') format('woff'),
+    url('fonts/icomoon.svg?7x0w7y#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-mongodb:before {
-  content: "\e91b";
-  /* color: #47a248; */ 
+    content: "\e91b";
+    /* color: #47a248; */
 }
 .icon-jira:before {
-  content: "\e917";
+    content: "\e917";
 }
 .icon-python:before {
-  content: "\e916";
-  /* color: #3776ab; */ 
+    content: "\e916";
+    /* color: #3776ab; */
 }
 .icon-ruby:before {
-  content: "\e900";
-  /* color: #cc342d; */ 
+    content: "\e900";
+    /* color: #cc342d; */
 }
 .icon-nativescript:before {
-  content: "\e901";
-  /* color: #3655ff; */ 
+    content: "\e901";
+    /* color: #3655ff; */
 }
 .icon-docker:before {
-  content: "\e902";
-  /* color: #1488c6; */ 
+    content: "\e902";
+    /* color: #1488c6; */
 }
 .icon-spring:before {
-  content: "\e903";
-  /* color: #6db33f; */ 
+    content: "\e903";
+    /* color: #6db33f; */
 }
 .icon-firebase:before {
-  content: "\e904";
-  /* color: #ffca28; */ 
+    content: "\e904";
+    /* color: #ffca28; */
 }
 .icon-digitalocean:before {
-  content: "\e905";
-  /* color: #0080ff; */ 
+    content: "\e905";
+    /* color: #0080ff; */
 }
 .icon-amazonaws:before {
-  content: "\e906";
+    content: "\e906";
 }
 .icon-c:before {
-  content: "\e907";
-  /* color: #a8b9cc; */ 
+    content: "\e907";
+    /* color: #a8b9cc; */
 }
 .icon-kotlin:before {
-  content: "\e908";
-  /* color: #0095d5; */ 
+    content: "\e908";
+    /* color: #0095d5; */
 }
 .icon-react:before {
-  content: "\e909";
-  /* color: #61dafb; */ 
+    content: "\e909";
+    /* color: #61dafb; */
 }
 .icon-angular:before {
-  content: "\e90a";
-  /* color: #dd0031; */ 
+    content: "\e90a";
+    /* color: #dd0031; */
 }
 .icon-vue-dot-js:before {
-  content: "\e90b";
-  /* color: #4fc08d; */ 
+    content: "\e90b";
+    /* color: #4fc08d; */
 }
 .icon-oracle:before {
-  content: "\e90c";
-  /* color: #f80000; */ 
+    content: "\e90c";
+    /* color: #f80000; */
 }
 .icon-postgresql:before {
-  content: "\e90d";
-  /* color: #336791; */ 
+    content: "\e90d";
+    /* color: #336791; */
 }
 .icon-mysql:before {
-  content: "\e91a";
-  /* color: #4479a1; */ 
+    content: "\e91a";
+    /* color: #4479a1; */
 }
 .icon-go:before {
-  content: "\e90f";
-  /* color: #00add8; */ 
+    content: "\e90f";
+    /* color: #00add8; */
 }
 .icon-node-dot-js:before {
-  content: "\e910";
-  /* color: #393; */ 
+    content: "\e910";
+    /* color: #393; */
 }
 .icon-javascript:before {
-  content: "\e911";
-  /* color: #f7df1e; */ 
+    content: "\e911";
+    /* color: #f7df1e; */
 }
 .icon-java:before {
-  content: "\e912";
-  /* color: #007396; */ 
+    content: "\e912";
+    /* color: #007396; */
 }
 .icon-mastodon:before {
-  content: "\e913";
-  /* color: #3088d4; */ 
+    content: "\e913";
+    /* color: #3088d4; */
 }
 .icon-keybase:before {
-  content: "\e914";
-  /* color: #33a0ff; */ 
+    content: "\e914";
+    /* color: #33a0ff; */
 }
 .icon-hackerrank:before {
-  content: "\e915";
-  /* color: #2ec866; */ 
+    content: "\e915";
+    /* color: #2ec866; */
 }
-.icon-hackerrank1:before {
-  content: "\e90e";
-  /* color: #2ec866; */ 
-}
-.icon-keybase1:before {
-  content: "\e918";
-  /* color: #33a0ff; */ 
-}
-.icon-mastodon1:before {
-  content: "\e919";
-  /* color: #3088d4; */ 
-}
-.icon-phone1:before {
-  content: "\e943";
-}
-.icon-link1:before {
-  content: "\e9cc";
-}
-.icon-mail41:before {
-  content: "\ea87";
-}
-.icon-facebook21:before {
-  content: "\ea93";
-}
-.icon-instagram1:before {
-  content: "\ea94";
-}
-.icon-twitter1:before {
-  content: "\ea97";
-}
-.icon-github1:before {
-  content: "\eab1";
+.icon-npm:before {
+    content: "\eab2";
 }
 .icon-android:before {
-  content: "\eac0";
-}
-.icon-reddit1:before {
-  content: "\eac7";
+    content: "\eac0";
 }
 .icon-linkedin:before {
-  content: "\eac9";
-}
-.icon-stackoverflow1:before {
-  content: "\ead1";
+    content: "\eac9";
 }
 .icon-html-five:before {
-  content: "\eae4";
+    content: "\eae4";
 }
 .icon-phone:before {
-  content: "\e942";
+    content: "\e942";
 }
 .icon-link:before {
-  content: "\e9cb";
+    content: "\e9cb";
 }
 .icon-mail4:before {
-  content: "\ea86";
+    content: "\ea86";
 }
 .icon-facebook2:before {
-  content: "\ea91";
+    content: "\ea91";
 }
 .icon-instagram:before {
-  content: "\ea92";
+    content: "\ea92";
 }
 .icon-twitter:before {
-  content: "\ea96";
+    content: "\ea96";
 }
 .icon-github:before {
-  content: "\eab0";
+    content: "\eab0";
 }
 .icon-reddit:before {
-  content: "\eac6";
-}
-.icon-linkedin1:before {
-  content: "\eaca";
+    content: "\eac6";
 }
 .icon-stackoverflow:before {
-  content: "\ead0";
+    content: "\ead0";
 }

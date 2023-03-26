@@ -665,9 +665,9 @@
       "visible": true
     },
     {
-      "link": "https://www.polywork.com/sombriks",
-      "label": "Polywork",
-      "icon": "icon-link",
+      "link": "https://www.npmjs.com/~sombriks",
+      "label": "NPM",
+      "icon": "icon-npm",
       "visible": true
     }
   ]
