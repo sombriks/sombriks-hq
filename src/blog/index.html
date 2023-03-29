@@ -24,7 +24,7 @@ layout: base.webc
     {%- endfor -%}
 </div>
 <h2><a href="/blog">Posts</a></h2>
-<div class="postlist">
+<div class="post-list">
     {%- for post in collections.posts reversed -%}
     <a href="{{post.page.url}}"
        class="{{post.data.tags | classSlugify}} {{post.data.date | classDateify }}"

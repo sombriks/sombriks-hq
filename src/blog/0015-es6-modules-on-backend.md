@@ -4,13 +4,13 @@ tags:
   - posts
   - node
   - knex
-  - ems
+  - esm
   - es6
 date: 2019-03-16
 ---
 # ES6 modules on backend
 
-## UPDATE for modern node 
+## UPDATE for modern node
 
 Simply add `"type": "module"` into your package.json file in your node version
 [if your node isn't too old](https://nodejs.org/docs/latest-v12.x/api/esm.html#).

@@ -47,15 +47,26 @@ code {
   align-items: center;
 }
 
-.postlist {
+.post-list {
   column-count: 2;
+}
+
+div.comparison-box {
+  display:flex;
+}
+
+div.comparison-box>div {
+  flex-grow:1;
+  margin:1em;
+  min-width:50%;
 }
 
 @media (max-width: 1440px) or (min-width: 1440px) {
   .outer-container {
       max-width: 60%;
   }
-  .postlist {
+
+  .post-list {
     column-count: 2;
   }
 }
@@ -64,8 +75,14 @@ code {
   .outer-container {
       max-width: 70%;
   }
-  .postlist {
+
+  .post-list {
     column-count: 2;
+  }
+
+  div.comparison-box {
+    display:flex;
+    flex-direction: column;
   }
 }
 
@@ -73,7 +90,8 @@ code {
   .outer-container {
       max-width: 75%;
   }
-  .postlist {
+
+  .post-list {
     column-count: 1;
   }
 }
@@ -82,7 +100,8 @@ code {
   .outer-container {
       max-width: 80%;
   }
-  .postlist {
+
+  .post-list {
     column-count: 1;
   }
 }
@@ -91,7 +110,8 @@ code {
   .outer-container {
       max-width: 90%;
   }
-  .postlist {
+  
+  .post-list {
     column-count: 1;
   }
 }
