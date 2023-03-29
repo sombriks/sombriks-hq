@@ -35,7 +35,7 @@ This blog had so far 4 incarnations:
 - <https://sombriks.blogspot.com/>
 - <https://sombriks.com.br>
   - Here we did [V3](https://sombriks.com.br/#/blog/0019-the-new-blog.md) and
-    [v4](https://sombriks.com.br/#/blog/0041-farewell-old-blog.md) 
+    [v4](https://sombriks.com.br/#/blog/0041-farewell-old-blog.md)
 
 The V5 will reside into a new url: <https://sombriks.com>
 
@@ -48,14 +48,14 @@ desires to do it.
 
 It will be built with a static site generator tool called
 [eleventy](https://www.11ty.dev/), which is pretty cool because i can use any
-tempate language i want.
+template language i want.
 
 ![eleventy supported template languages](/assets/post-pics/0041-farewell-old-blog/eleventy-template-languages.jpg)
 
-I also has special static data rendering, so i can use front matter metadata and
-json resource files directly during the render phase of the static content.
+It also has special static data rendering, so i can use front matter metadata
+and json resource files directly during the render phase of the static content.
 
-## The return to innoncence 
+## The return to innocence
 
 Over the years frontend development piled the bad name of too complex and full
 of unnecessary indirections.
