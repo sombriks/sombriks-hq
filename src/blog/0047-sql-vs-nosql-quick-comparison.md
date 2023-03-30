@@ -349,6 +349,8 @@ On both tools data insertion is pretty straigtforward:
 
 <div class="comparison-box"><div>
 
+MySQL:
+
 ```sql
 INSERT INTO movie_crew
     (movie_id, person_id, department_id, job)
@@ -356,6 +358,8 @@ VALUES (285, 2445, 3, 'Producer');
 ```
 
 </div><div>
+
+MongoDB:
 
 ```javascript
 db.movie_crew.insertOne({
@@ -374,6 +378,8 @@ Deletion is also very clean:
 
 <div class="comparison-box"><div>
 
+MySQL:
+
 ```sql
 delete
 from movie_crew
@@ -382,6 +388,8 @@ where movie_id = 285
 ```
 
 </div><div>
+
+MongoDB:
 
 ```javascript
 db.movie_crew.deleteOne({
@@ -398,6 +406,8 @@ Data update also goes with no bigger hassle:
 
 <div class="comparison-box"><div>
 
+MySQL:
+
 ```sql
 update movie_crew
 set department_id = 9
@@ -406,6 +416,8 @@ where movie_id = 285
 ```
 
 </div><div>
+
+MongoDB:
 
 ```javascript
 db.movie_crew.updateOne({
@@ -698,7 +710,8 @@ For instance, mongo will beat mysql on every single direct query not involving
 `$lookups` into other collections. When it needs to do that, mysql beats mongo
 every time.
 
-The key lesson here remains: **mind your data moddeling even if it's schemaless**.
+The key lesson here remains: 
+**mind your data modelling even if it's schemaless**.
 
 Happy Hacking.
 
