@@ -5,6 +5,7 @@
   "scripts": {
     "predev": "npm run clean",
     "dev": "eleventy --serve --incremental",
+    "dev:debug": "DEBUG=Eleventy* eleventy --serve --incremental",
     "build": "eleventy",
     "local": "dotenv-run-script .env .env.local --",
     "prerelease": "npm run build",
@@ -13,10 +14,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1-beta.1",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "@11ty/eleventy-plugin-webc": "^0.9.4",
-    "@11ty/webc": "^0.10.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.0",
+    "@11ty/webc": "^0.11.1",
     "aws-sdk": "^2.1314.0",
     "dotenv-flow": "^3.2.0",
     "dotenv-run-script": "^0.2.0",

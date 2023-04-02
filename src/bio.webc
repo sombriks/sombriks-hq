@@ -100,11 +100,11 @@ layout: base.webc
       <fieldset class="contato">
           <legend>All relevant presence on internet</legend>
           <!-- this one pops undefined on :href="c.link" -->
-          <!-- <div webc:for="c of curriculum.contacts">
-            <a target="_blank" :href="c.link" :alt="c.label" :title="c.label">
-              <span :class="c.icon"></span><span @html="c.link"></span>
-            </a>
-          </div> -->
+<!--           <div webc:for="c of curriculum.contacts">-->
+<!--            <a target="_blank" :href="c.link" :alt="c.label" :title="c.label">-->
+<!--              <span :class="c.icon"></span><span @html="c.link"></span>-->
+<!--            </a>-->
+<!--          </div>-->
           <!-- this one i want to replace -->
           <script webc:type="js" webc:raw>
               curriculum.contacts.filter(c => c.visible).map(c => `
@@ -155,12 +155,6 @@ layout: base.webc
     flex-direction: column;
   }
 
-  .corpo {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-  }
-
   .centro {
     flex-grow: 1;
     max-width: 100%;
@@ -193,10 +187,6 @@ layout: base.webc
     fieldset {
       page-break-inside: avoid;
     }
-
-    /*@page {*/
-    /*  size: landscape;*/
-    /*}*/
 
     .outer-container {
       max-width: 100%;
