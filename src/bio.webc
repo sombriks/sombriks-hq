@@ -7,6 +7,20 @@ layout: base.webc
         <div class="banner">
             <h2><span @html="curriculum.resume.nome"></span> (<span @html="curriculum.resume.apelido"></span>)</h2>
             <p><i @html="curriculum.resume.bio"></i></p>
+          <p>
+            I am Leonardo Silveira, professionally working with technology since
+            2007 as a developer and other roles (software architect, startup
+            founder, consultant fullstack developer and so on). Over this time I
+            became expert in several technologies, such as Java, Javascript, SQL
+            databases, HTML and CSS, Node.js, git, nativescript (see complete
+            list in the document bellow); but also I dealt with first-class
+            cloud solutions such as AWS, project management tools like Jira and
+            top tier teams in Brazil and cross borders in near-shore companies.
+            I produced solutions for several markets, like insurance, community
+            management, educational games, online presence for local business,
+            country-wide retail solutions, and world-class payment platform
+            solutions.
+          </p>
         </div>
     </fieldset>
     <div class="centro">
@@ -73,6 +87,14 @@ layout: base.webc
                           <li>
                               <h4>${p.name}</h4>
                               <p>${p.description}</p>
+                              ${!p.responsibilities ? '' : `
+                                <h5>Responsibilites</h5>
+                                <ul>
+                                  ${p.responsibilities.map(r => `
+                                      <li>${r}</li>
+                                  `).join('')}
+                                </ul>
+                              `}
                           </li>
                       `).join('\n')}
                   </ul>
@@ -145,6 +167,7 @@ layout: base.webc
 
   .pic {
     margin: 2em;
+    min-width:8em;
   }
 
   .banner {

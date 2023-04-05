@@ -157,38 +157,6 @@
   ],
   "work": [
     {
-      "company": "Rede Inova",
-      "site": "https://www.redeinova.com.br/",
-      "position": "Senior Fullstack Developer (part-time)",
-      "start": "2022-07-13",
-      "end": "present day",
-      "description": "Redeinova is a technology company from Brasil delivering solutions to public and private sectors",
-      "projects": [
-        {
-          "name": "Kanoê",
-          "description": "It's a java-based solution to improve efficiency of legal process at PGE-RO"
-        },
-        {
-          "name": "42",
-          "description": "It's a java-based solution to recover cross-reference information at PGE-RO"
-        },
-        {
-          "name": "Mapinguari",
-          "description": "It's a java-based solution to improve legal payments at PGE-RO"
-        }
-      ],
-      "techstack": [
-        "Java",
-        "microservices",
-        "mysql",
-        "angularjs",
-        "angular",
-        "liquibase",
-        "spring-boot",
-        "gitlab"
-      ]
-    },
-    {
       "company": "Nearsure",
       "site": "https://www.nearsure.com/",
       "position": "Backend Java Developer",
@@ -198,11 +166,24 @@
       "projects": [
         {
           "name": "platform team",
-          "description": "several tools to allow other teams to work with client's solutions"
+          "description": "several tools to allow other teams to work with client's solutions",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members"
+          ]
         },
         {
           "name": "payment team",
-          "description": "several microservices to handle client customers needs"
+          "description": "several microservices to handle client customers needs",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         }
       ],
       "techstack": [
@@ -219,6 +200,59 @@
       ]
     },
     {
+      "company": "Rede Inova",
+      "site": "https://www.redeinova.com.br/",
+      "position": "Tech Lead / Senior Fullstack Developer (part-time)",
+      "start": "2022-07-13",
+      "end": "present day",
+      "description": "Redeinova is a technology company from Brasil delivering solutions to public and private sectors",
+      "projects": [
+        {
+          "name": "Kanoê",
+          "description": "It's a java-based solution to improve efficiency of legal process at PGE-RO",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
+        },
+        {
+          "name": "42",
+          "description": "It's a java-based solution to recover cross-reference information at PGE-RO",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
+        },
+        {
+          "name": "Mapinguari",
+          "description": "It's a java-based solution to improve legal payments at PGE-RO",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
+        }
+      ],
+      "techstack": [
+        "Java",
+        "microservices",
+        "mysql",
+        "angularjs",
+        "angular",
+        "liquibase",
+        "spring-boot",
+        "gitlab"
+      ]
+    },
+    {
       "company": "Jobsity",
       "site": "https://www.jobsity.com/",
       "position": "Outsourced Software Developer",
@@ -228,11 +262,25 @@
       "projects": [
         {
           "name": "USA Today/Gannett - Cobalt LocalIQ",
-          "description": "Sales tool used for sales personnel to put sites creation on track for clients. Worked on micro service creation process, moving solution from rails monolith into cloud native solution."
+          "description": "Sales tool used for sales personnel to put sites creation on track for clients. Worked on micro service creation process, moving solution from rails monolith into cloud native solution.",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         },
         {
           "name": "USA Today/Gannett - Buy Online Direct",
-          "description": "Sales tool aimed to direct sell of online presence solutions. Stack is cloud native with some degree of transparency regarding the provider nature."
+          "description": "Sales tool aimed to direct sell of online presence solutions. Stack is cloud native with some degree of transparency regarding the provider nature.",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         }
       ],
       "techstack": [
@@ -264,11 +312,25 @@
       "projects": [
         {
           "name": "varejomini/varejopdv",
-          "description": "This product solves the problem to the small sales business. It aims to simpler sales workflow, once there are other in-house products to other sales modes (restaurant, market, etc)."
+          "description": "This product solves the problem to the small sales business. It aims to simpler sales workflow, once there are other in-house products to other sales modes (restaurant, market, etc).",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         },
         {
           "name": "varejofacil",
-          "description": "This product eases the problem of managing small and medium retailers business. Best suited for markets, general sales store and restaurants."
+          "description": "This product eases the problem of managing small and medium retailers business. Best suited for markets, general sales store and restaurants.",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         }
       ],
       "techstack": [
@@ -309,19 +371,47 @@
       "projects": [
         {
           "name": "Ambbi",
-          "description": "Community communications solution. web and mobile, written in angularjs and cordova in order to publish on android and ios from the same codebase."
+          "description": "Community communications solution. web and mobile, written in angularjs and cordova in order to publish on android and ios from the same codebase.",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         },
         {
           "name": "Paróquia Virtual",
-          "description": "Pray app for catholics. Two priest orders (Sagrado Coração de Jejus and Mercedários) where involved. built with cordova and vuejs in order to publish for android and ios from the same codebase."
+          "description": "Pray app for catholics. Two priest orders (Sagrado Coração de Jejus and Mercedários) where involved. built with cordova and vuejs in order to publish for android and ios from the same codebase.",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         },
         {
           "name": "Buscaula",
-          "description": "Vue rich web application to search courses. A node backend with postgresql provided advanced text search."
+          "description": "Vue rich web application to search courses. A node backend with postgresql provided advanced text search.",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         },
         {
           "name": "BWDA 5",
-          "description": "Vue rich application to manage order services to maintain wind power towers. Also provides a way to analyse sensor data collected on those towers."
+          "description": "Vue rich application to manage order services to maintain wind power towers. Also provides a way to analyse sensor data collected on those towers.",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "help on task specification",
+            "code review on pull requests from team members",
+            "database migrations"
+          ]
         }
       ],
       "techstack": [
@@ -357,19 +447,31 @@
       "projects": [
         {
           "name": "Matematicando",
-          "description": "math puzzle game"
+          "description": "math puzzle game",
+          "responsibilities": [
+            "code development"
+          ]
         },
         {
           "name": "Aventura Matemática",
-          "description": "adventure/puzzle math game"
+          "description": "adventure/puzzle math game",
+          "responsibilities": [
+            "code development"
+          ]
         },
         {
           "name": "Educatáxi",
-          "description": "action math game"
+          "description": "action math game",
+          "responsibilities": [
+            "code development"
+          ]
         },
         {
           "name": "Super Candy",
-          "description": "another action math game"
+          "description": "another action math game",
+          "responsibilities": [
+            "code development"
+          ]
         }
       ],
       "techstack": [
@@ -393,15 +495,25 @@
       "projects": [
         {
           "name": "faixa exclusiva",
-          "description": "java web, serial communications and ip camera solution to detect if cars where on exclusive bus lane"
+          "description": "java web, serial communications and ip camera solution to detect if cars where on exclusive bus lane",
+          "responsibilities": [
+            "code development",
+            "help on task specification"
+          ]
         },
         {
           "name": "photo labeler",
-          "description": "internal tool java swing based. it was used to correctly apply the infraction label on photos"
+          "description": "internal tool java swing based. it was used to correctly apply the infraction label on photos",
+          "responsibilities": [
+            "code development"
+          ]
         },
         {
           "name": "AT-SMS/AT-SMS2",
-          "description": "This was the main solution on transit law enforcement. On this project we started the migration from a delphi based solution to a java web based solution. that could allow the hardware and operating system be replaced by cheaper options in the future."
+          "description": "This was the main solution on transit law enforcement. On this project we started the migration from a delphi based solution to a java web based solution. that could allow the hardware and operating system be replaced by cheaper options in the future.",
+          "responsibilities": [
+            "code development"
+          ]
         }
       ],
       "techstack": [
@@ -426,7 +538,11 @@
       "projects": [
         {
           "name": "Diário do Nordeste",
-          "description": "We produced templates running on top of Polopoly multi-target web cms"
+          "description": "We produced templates running on top of Polopoly multi-target web cms",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps"
+          ]
         }
       ],
       "techstack": [
@@ -445,7 +561,10 @@
       "projects": [
         {
           "name": "historical documents digitalization",
-          "description": "Handled a wide variety of problems, from basic structures for code versioning to defining technologies to be used to code the solution"
+          "description": "Handled a wide variety of problems, from basic structures for code versioning to defining technologies to be used to code the solution",
+          "responsibilities": [
+            "code development"
+          ]
         }
       ],
       "techstack": [
@@ -467,7 +586,10 @@
       "projects": [
         {
           "name": "Furukawa electric latam",
-          "description": "Java web solution to handle industry operations."
+          "description": "Java web solution to handle industry operations.",
+          "responsibilities": [
+            "code development"
+          ]
         }
       ],
       "techstack": [
@@ -491,15 +613,22 @@
       "projects": [
         {
           "name": "mobile software to recommend products and services",
-          "description": "it was an android solution to offer things based on what the user likes."
+          "description": "it was an android solution to offer things based on what the user likes.",
+          "responsibilities": [
+            "code development"
+          ]
         },
         {
           "name": "small robotic car",
-          "description": "robot prototype using a beagleboard. since the robot was in another state, i had to double ssh to get access to the C/C++ openCV code."
+          "description": "robot prototype using a beagleboard. since the robot was in another state, i had to double ssh to get access to the C/C++ openCV code.",
+          "responsibilities": [
+            "code development"
+          ]
         }
       ],
       "techstack": [
         "C/C++",
+        "ssh",
         "embedded systems",
         "android",
         "REST",
@@ -519,19 +648,35 @@
       "projects": [
         {
           "name": "Conta Corrente",
-          "description": "java web with struts and oracle database solution to offer credit to brokers so they could give discounts to their clients. It was an early form of SPA"
+          "description": "java web with struts and oracle database solution to offer credit to brokers so they could give discounts to their clients. It was an early form of SPA",
+          "responsibilities": [
+            "code development",
+            "unit test cases"
+          ]
         },
         {
           "name": "WIS Sulamérica",
-          "description": "dynamic application to build interfaces to calculate client score online. Apache struts, java + oracle database"
+          "description": "dynamic application to build interfaces to calculate client score online. Apache struts, java + oracle database",
+          "responsibilities": [
+            "code development",
+            "unit test cases"
+          ]
         },
         {
           "name": "WIS Bradesco Seguros",
-          "description": "solution to calculate the client score, but on this project my main responsibility was the JNI interface with the client score library which was implemented in C and was not thread-safe. Also the production server was an itanium so i dealt with HP-UX and the aCC C/C++ compiler. And a lot of Makefiles"
+          "description": "solution to calculate the client score, but on this project my main responsibility was the JNI interface with the client score library which was implemented in C and was not thread-safe. Also the production server was an itanium so i dealt with HP-UX and the aCC C/C++ compiler. And a lot of Makefiles",
+          "responsibilities": [
+            "code development",
+            "unit test cases"
+          ]
         },
         {
           "name": "WIS Marítima",
-          "description": "in this client score solution i was allowed to apply techniques from conta corrente project since this client did not needed dynamic interface configuration like previous products. heavy use of jQuery and early forms of SPA. we didn't called it that way back in time."
+          "description": "in this client score solution i was allowed to apply techniques from conta corrente project since this client did not needed dynamic interface configuration like previous products. heavy use of jQuery and early forms of SPA. we didn't called it that way back in time.",
+          "responsibilities": [
+            "code development",
+            "unit test cases"
+          ]
         }
       ],
       "techstack": [
@@ -557,7 +702,10 @@
       "projects": [
         {
           "name": "CFN",
-          "description": "a java web solution to manage order services to maintain railways. Made with apache struts, java web and mysql"
+          "description": "a java web solution to manage order services to maintain railways. Made with apache struts, java web and mysql",
+          "responsibilities": [
+            "code development"
+          ]
         }
       ],
       "techstack": [
