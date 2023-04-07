@@ -35,25 +35,14 @@
         <div class="bg2"></div>
     </div>
     <hr/>
-<!--    <div webc:for="t of colors">-->
-<!--      <div :onclick="updateTheme('${t.c0}','${t.c1}')"-->
-<!--          :style="color:${t.c0}; background-color: ${t.c1};"-->
-<!--          class="theme-options options-hide" title="${t.label}">-->
-<!--        <div class="bg1" :style="background-color: ${t.c0};"></div>-->
-<!--        <div class="bg2" :style="background-color: ${t.c1};"></div>-->
-<!--      </div>-->
-<!--    </div>-->
-    <script webc:raw webc:type="js">
-      $data.colors.map(t => {
-        return `<div
-          onclick="updateTheme('${t.c0}','${t.c1}')"
-          style="color:${t.c0}; background-color: ${t.c1};"
-          class="theme-options options-hide" title="${t.label}">
-            <div class="bg1" style="background-color: ${t.c0};"></div>
-            <div class="bg2" style="background-color: ${t.c1};"></div>
-          </div>`
-      }).join("")
-    </script>
+    <div webc:for="t of $data.colors">
+      <div :onclick="`updateTheme('${t.c0}','${t.c1}')`"
+          :style="`color: ${t.c0}; background-color: ${t.c1};`"
+          class="theme-options options-hide" :title="t.label">
+        <div class="bg1" :style="`background-color: ${t.c0};`"></div>
+        <div class="bg2" :style="`background-color: ${t.c1};`"></div>
+      </div>
+    </div>
 </div>
 <style webc:scoped>
     .theme-shadow {

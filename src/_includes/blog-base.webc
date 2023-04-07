@@ -3,12 +3,8 @@ layout: base.webc
 ---
 <div style="width:100%;" webc:nokeep @raw="content"></div>
 <br/>
-<script webc:type="js" webc:raw>
-    date.toISOString().split('T')[0]
-</script>
+<span @text="$data.date.toISOString().split('T')[0]"></span>
 <p>Tags:</p>
-<script webc:type="js" webc:raw>
-    tags.map(tag => `
-        <a href="/blog/?tag=${tag.replace(/\s/g,"-")}">${tag}</a>
-    `).join("")
-</script>
+<a webc:for="tag of $data.tags"
+   :href="`/blog/?tag=${tag.replace(/\s/g,'-')}`"
+   @text="tag"></a>

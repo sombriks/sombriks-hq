@@ -41,11 +41,6 @@
     <link rel="StyleSheet" href="/assets/prism-theme.css"/>
     <link rel="StyleSheet" href="/assets/icons.css"/>
     <link rel="StyleSheet" href="/assets/base.css"/>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("year").innerHTML = new Date().getFullYear();
-        })
-    </script>
     <style webc:keep @raw="getCss(page.url)"></style>
     <script webc:keep @raw="getJs(page.url)"></script>
 </head>
@@ -62,7 +57,7 @@
     <contact-bar></contact-bar>
     <div class="footer">
         <div>
-            &copy; Leonardo Silveira (a.k.a. sombriks) <span id="year"></span>
+            &copy; Leonardo Silveira (a.k.a. sombriks) <span @text="new Date().getFullYear()"></span>
         </div>
         <a href="https://mastodon.world/@sombriks"
            rel="me" class="me">&nbsp;</a>

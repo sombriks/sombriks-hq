@@ -4,14 +4,12 @@
     }
 </style>
 <div class="contacts">
-    <script webc:type="js" webc:raw>
-        $data.curriculum.contacts.filter(c => c.visible).map(c => `
-         <a target="_blank" href="${c.link}" alt="${c.label}" title="${c.label}">
-           <span class="${c.icon}"></span>
-         </a>
-        `).join("\n")
-    </script>
-<!--  <a webc:for="c of contacts" webc:if="c.visible" target="_blank" :href="c.link" :alt="c.label" :title="c.label">
-    <span :class="c.icon"></span>
-  </a>-->
+  <a webc:for="c of $data.curriculum.contacts"
+     webc:if="c.visible"
+     target="_blank"
+     :href="c.link"
+     :alt="c.label"
+     :title="c.label">
+      <span :class="c.icon"></span>
+  </a>
 </div>
