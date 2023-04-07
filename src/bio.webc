@@ -5,7 +5,8 @@ layout: base.webc
     <fieldset class="topo">
         <profile-pic class="pic"></profile-pic>
         <div class="banner">
-            <h2><span @html="curriculum.resume.nome"></span> (<span @html="curriculum.resume.apelido"></span>)</h2>
+            <h2><span @html="curriculum.resume.nome"></span>
+              (<span @html="curriculum.resume.apelido"></span>)</h2>
             <p><i @html="curriculum.resume.bio"></i></p>
           <p>
             I am Leonardo Silveira, professionally working with technology since
@@ -25,118 +26,64 @@ layout: base.webc
     </fieldset>
     <div class="centro">
       <h2>Skills</h2>
-      <!-- <script webc:type="js" webc:raw>
-        curriculum.skills.map(s => `
-
+      <div webc:for="s of $data.curriculum.skills">
         <fieldset class="skills">
-          <legend>${s.category}</legend>
-          ${s.items.map(i => `
-            <skill-item title="${i.title}" icon-class="${i.icon}" stars="${i.stars}"></skill-item>              
-          `).join("")}
+          <legend @text="s.category"></legend>
+          <skill-item webc:for="i of s.items"
+                      :title="i.title"
+                      :icon-class="i.icon"
+                      :stars="i.stars">
+          </skill-item>
         </fieldset>
-        `).join("")
-      </script> -->
-      <fieldset class="skills">
-          <!-- TODO carregar a partir de _data/curriculum.json-->
-          <legend>Programming Languages</legend>
-          <skill-item title="java" icon-class="icon-java" stars="5"></skill-item>
-          <skill-item title="javascript" icon-class="icon-javascript" stars="5"></skill-item>
-          <skill-item title="html 5" icon-class="icon-html-five" stars="5"></skill-item>
-          <skill-item title="node.js" icon-class="icon-node-dot-js" stars="5"></skill-item>
-          <skill-item title="go" icon-class="icon-go" stars="3"></skill-item>
-          <skill-item title="c" icon-class="icon-c" stars="3"></skill-item>
-          <skill-item title="kotlin" icon-class="icon-kotlin" stars="2"></skill-item>
-          <skill-item title="python" icon-class="icon-python" stars="2"></skill-item>
-          <skill-item title="ruby" icon-class="icon-ruby" stars="2"></skill-item>
-      </fieldset><br/>
-      <fieldset class="skills">
-          <legend>Frameworks</legend>
-          <skill-item title="spring" icon-class="icon-spring" stars="5"></skill-item>
-          <skill-item title="vue.js" icon-class="icon-vue-dot-js" stars="5"></skill-item>
-          <skill-item title="react" icon-class="icon-react" stars="3"></skill-item>
-          <skill-item title="angular" icon-class="icon-angular" stars="4"></skill-item>
-          <skill-item title="nativescript" icon-class="icon-nativescript" stars="4"></skill-item>
-          <skill-item title="android" icon-class="icon-android" stars="3"></skill-item>
-      </fieldset><br/>
-      <fieldset class="skills">
-          <legend>Databases</legend>
-          <skill-item title="postgresql" icon-class="icon-postgresql" stars="5"></skill-item>
-          <skill-item title="mysql" icon-class="icon-mysql" stars="5"></skill-item>
-          <skill-item title="oracle" icon-class="icon-oracle" stars="4"></skill-item>
-          <skill-item title="mongodb" icon-class="icon-mongodb" stars="3"></skill-item>
-      </fieldset><br/>
-      <fieldset class="skills">
-          <legend>DevOps & Misc</legend>
-          <skill-item title="github" icon-class="icon-github" stars="5"></skill-item>
-          <skill-item title="aws" icon-class="icon-amazonaws" stars="3"></skill-item>
-          <skill-item title="firebase" icon-class="icon-firebase" stars="3"></skill-item>
-          <skill-item title="digital ocean" icon-class="icon-digitalocean" stars="2"></skill-item>
-          <skill-item title="docker" icon-class="icon-docker" stars="3"></skill-item>
-          <skill-item title="jira" icon-class="icon-jira" stars="3"></skill-item>
-      </fieldset><br/>
+        <br/>
+      </div>
       <h2>Work Experience</h2>
-      <script webc:type="js" webc:raw>
-          curriculum.work.map(w => `
-              <fieldset>
-                  <legend><a target="company" href="${w.site}">${w.company}</a> | ${w.start} - ${w.end}</legend>
-                  <h3>Position</h3>
-                  <p>${w.position}</p>
-                  <h3>Projects</h3>
-                  <ul>
-                      ${w.projects.map(p => `
-                          <li>
-                              <h4>${p.name}</h4>
-                              <p>${p.description}</p>
-                              ${!p.responsibilities ? '' : `
-                                <h5>Responsibilites</h5>
-                                <ul>
-                                  ${p.responsibilities.map(r => `
-                                      <li>${r}</li>
-                                  `).join('')}
-                                </ul>
-                              `}
-                          </li>
-                      `).join('\n')}
-                  </ul>
-                  <h3>Tech stack</h3>
-                  ${w.techstack.map(t => `
-                      <a target="tech" href="https://bing.com?q=${t}">${t}</a>
-                  `).join("\n")}
-              </fieldset><br/>
-          `).join("\n")
-      </script>
+      <div webc:for="w of $data.curriculum.work">
+        <fieldset>
+          <legend><a target="company" :href="w.site" @text="w.company"></a> |
+            <span @text="`${w.start} - ${w.end}`"></span></legend>
+          <h3>Position</h3>
+          <p @text="w.position"></p>
+          <h3>Projects</h3>
+          <ul>
+            <li webc:for="p of w.projects">
+              <h4 @text="p.name"></h4>
+              <p @text="p.description"></p>
+              <div webc:if="p.responsibilities">
+                <h5>Responsibilities</h5>
+                <ul>
+                  <li webc:for="r of p.responsibilities" @text="r"></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <h3>Tech stack</h3>
+          <a webc:for="t of w.techstack" target="tech"
+             :href="`https://bing.com?q=${t}`" @text="t"></a>
+        </fieldset>
+        <br/>
+      </div>
+
       <h2>Education</h2>
-      <script webc:type="js" webc:raw>
-          curriculum.education.map(e => `
-              <fieldset>
-                  <legend>${e.start} - ${e.end} | ${e.course} </legend>
-                  <h3>Institution</h3>
-                  <p><a target="institution" href="${e.site}">${e.institution}</a></p>
-                  <h3>Type</h3>
-                  <p>${e.type}</p>
-                  <p><i>${e.description}</i></p>
-              </fieldset><br/>
-          `).join("\n")
-      </script>
+      <div webc:for="e of $data.curriculum.education">
+        <fieldset>
+          <legend @text="`${e.start} - ${e.end} | ${e.course} `"></legend>
+          <h3>Institution</h3>
+          <p><a target="institution" :href="e.site" @text="e.institution"></a></p>
+          <h3>Type</h3>
+          <p @text="e.type"></p>
+          <p><i @text="e.description"></i></p>
+        </fieldset>
+        <br/>
+      </div>
       <h2>Contacts</h2>
       <fieldset class="contato">
           <legend>All relevant presence on internet</legend>
-          <!-- this one pops undefined on :href="c.link" -->
-<!--           <div webc:for="c of curriculum.contacts">-->
-<!--            <a target="_blank" :href="c.link" :alt="c.label" :title="c.label">-->
-<!--              <span :class="c.icon"></span><span @html="c.link"></span>-->
-<!--            </a>-->
-<!--          </div>-->
-          <!-- this one i want to replace -->
-          <script webc:type="js" webc:raw>
-              curriculum.contacts.filter(c => c.visible).map(c => `
-                  <div>
-                      <a target="_blank" href="${c.link}" alt="${c.label}" title="${c.label}">
-                          <span class="${c.icon}"></span> ${c.link}
-                      </a>
-                  </div>
-              `).join("\n")
-          </script>
+           <div webc:for="c of $data.curriculum.contacts">
+            <a target="_blank" :href="c.link" :alt="c.label" :title="c.label">
+              <span :class="c.icon"></span>&nbsp;<span @html="c.link"></span>
+            </a>
+          </div>
       </fieldset>
   </div>
 </div>

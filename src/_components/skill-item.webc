@@ -1,4 +1,4 @@
-<div class="skill">
+<div class="skill" :onclick="`search('${title}')`">
     <span :title="title" :class="iconClass"></span>
     <div>
         <span class="star" @html="stars > 0 ? '&#9733;' : '&#9734;'"></span>
@@ -27,4 +27,13 @@
     font-size: 2.5em;
     flex-grow: 1;
   }
+
+  .skill > span:hover {
+    cursor: pointer;
+  }
 </style>
+<script webc:scoped>
+  function search(subject) {
+    window.location.href=`https://google.com?q=${subject}`
+  }
+</script>
