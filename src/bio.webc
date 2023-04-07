@@ -80,7 +80,7 @@ layout: base.webc
       <fieldset class="contato">
           <legend>All relevant presence on internet</legend>
            <div webc:for="c of $data.curriculum.contacts">
-            <a target="_blank" :href="c.link" :alt="c.label" :title="c.label">
+            <a webc:if="c.visible" target="_blank" :href="c.link" :alt="c.label" :title="c.label">
               <span :class="c.icon"></span>&nbsp;<span @html="c.link"></span>
             </a>
           </div>
