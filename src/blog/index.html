@@ -2,15 +2,7 @@
 layout: base.webc
 ---
 <h2>By Date</h2>
-<!-- todo make it dynamic -->
 <div style="display: flex; flex-wrap: wrap;">
-    <!-- <a href="/blog/?tag=date-2017">2017</a>
-    <a href="/blog/?tag=date-2018">2018</a>
-    <a href="/blog/?tag=date-2019">2019</a>
-    <a href="/blog/?tag=date-2020">2020</a>
-    <a href="/blog/?tag=date-2021">2021</a>
-    <a href="/blog/?tag=date-2022">2022</a>
-    <a href="/blog/?tag=date-2023">2023</a> -->
     {% assign years = collections.posts | yearTags %}
     {%- for year in years -%}
         <a href="/blog/?tag=date-{{year.name}}">{{year.name}}({{year.count}})</a>
@@ -25,7 +17,8 @@ layout: base.webc
 </div>
 <h2><a href="/blog">Posts</a></h2>
 <div class="post-list">
-    {%- for post in collections.posts reversed -%}
+    {% assign posts = collections.posts | noDraft %}
+    {%- for post in posts reversed -%}
     <a href="{{post.page.url}}"
        class="{{post.data.tags | classSlugify}} {{post.data.date | classDateify }}"
        style="display:inline-block;">{{post.page.fileSlug}}</a>

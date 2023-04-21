@@ -3,7 +3,8 @@ layout: base.webc
 ---
 <script>
     const surprise = [];
-    {%- for post in collections.posts reversed -%}
+    {% assign posts = collections.posts | noDraft %}
+    {%- for post in posts reversed -%}
     surprise.push("{{post.page.url}}");
     {%- endfor -%}
     window.location.href = surprise[parseInt(Math.random()*surprise.length)];
