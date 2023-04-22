@@ -4,6 +4,7 @@ tags:
   - posts
   - design patterns
   - java
+  - kotlin
   - node
   - DTO
   - Jackson
@@ -16,7 +17,7 @@ date: 2023-04-22
 # Don't do DTO's if you can
 
 When I have to use entities, I often model them in a way they go well with any
-serialization strategy. that way i keep things 
+serialization strategy. That way I keep things 
 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
 In other projects that I just inherited, however, this is not the case and is 
