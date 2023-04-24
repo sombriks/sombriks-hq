@@ -30,8 +30,9 @@ opinion and compromise.
 
 ## DT-what?
 
-The Data Transfer Object (or DTO) is a design pattern that aims to better
-control how data will be presented.
+The [Data Transfer Object](https://en.wikipedia.org/wiki/Data_transfer_object)
+(or DTO) is a design pattern that aims to better control how data will be
+presented.
 
 If you use raw queries, data mappers or Entities to interface with database
 then there is a change that you used DTO's before.
