@@ -57,7 +57,7 @@ import {login} from "./services/auth.mjs"
 // more code
 ```
 
-On node the modes **are** 1:1 with filesystem and files.
+On node the modules **are** 1:1 with filesystem and files.
 
 Other languages like [Go](https://go.dev/doc/code),
 [PHP](https://www.php.net/manual/en/function.include.php) and
