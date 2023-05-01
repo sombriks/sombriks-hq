@@ -6,8 +6,8 @@ tags:
   - classpath
   - modules
   - node
-date: 2023-04-22
-draft: true
+date: 2023-05-01
+draft: false
 ---
 # Quick note on resources inside java classpath
 
@@ -21,7 +21,7 @@ is simple, it's just folders... **But no.**
 
 Don't use relative paths when loading classpath resources.
 
-## The old modules issue
+## The old module system issue
 
 The first thing to address is how
 [modular programming](https://en.wikipedia.org/wiki/Modular_programming) works.
@@ -92,8 +92,97 @@ Thing get even worse when we're dealing with modern java IDE's.
 What you see inside a source folder isn't what you really gets after classpath
 resolution. it combines resource folders and test folders in some cases as well.
 
-### The main issue: relative paths
-
 Now let's pretend for a moment we're loading a text to use into our application.
 
-If i write a
+If you write a loader like this:
+
+```java
+package org.example;
+//...
+    public String loadText() throws Exception {
+        try(InputStream in = App.class.getResourceAsStream("text-file.txt")) {
+            return new String(in.readAllBytes());
+        }
+    }
+//...
+```
+
+Then the `text-file.txt` must be in the same package as the java class. Little
+room for mistakes.
+
+If you do, however:
+
+```java
+package org.example;
+//...
+    public String loadText() throws Exception {
+        try(InputStream in = App.class.getResourceAsStream("/org/example/text-file.txt")) {
+            return new String(in.readAllBytes());
+        }
+    }
+//...
+```
+
+You get the same result with one extra bonus: the full path resolution inside
+classpath makes things more clear.
+
+It also makes transparent if your resource are either inside a jar file or a
+filesystem.
+
+### The main issue: relative paths
+
+Those benefits are gone when you use relative paths. This test suite works fine:
+
+```java
+package org.example;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class AppTest {
+
+    @Test
+    public void shouldWorkOnDevelopmentModeAndJar() throws Exception {
+        String result = new App().load("/root-resource.txt");
+        Assert.assertEquals("i am root resource\n", result);
+    }
+
+    @Test
+    public void shouldWorkOnDevelopmentModeAndFailInJar() throws Exception {
+        String result = new App().load("../another-classpath-resource.txt");
+        Assert.assertEquals("i am another classpath resource", result);
+    }
+
+    @Test
+    public void shouldWorkAlways() throws Exception {
+        String result = new App().load("classpath-resource.txt");
+        Assert.assertEquals("i am a resource somewhere in classpath", result);
+    }
+}
+```
+
+But fails in runtime:
+
+```bash
+./mvnw clean install
+java -jar target/classloader-issue-1.0-SNAPSHOT.jar /root-resource.txt # ok
+java -jar target/classloader-issue-1.0-SNAPSHOT.jar classpath-resource.txt #ok
+java -jar target/classloader-issue-1.0-SNAPSHOT.jar ../another/classpath-resource.txt #fail
+```
+
+That happens because the relative path goes over filesystem instead of jar file
+and then finds nothing.
+
+## Conclusion
+
+Classpath calculations are an important topic when your code goes beyond simple
+tasks and start to interact with other resources or systems, and there still
+much more to see on that matter.
+
+It's a hot topic when it comes to application servers, dynamic plugins and any
+other sort of special way to interact with java code.
+
+The sample code for this article can be found
+[here](https://github.com/sombriks/classloader-issue).
+
+Happy hacking!
