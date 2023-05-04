@@ -272,6 +272,7 @@
         "mysql",
         "sql server",
         "oracle",
+        "mongodb",
         "angularjs",
         "angular",
         "liquibase",
