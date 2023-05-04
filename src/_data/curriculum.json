@@ -33,6 +33,11 @@
           "stars": "5"
         },
         {
+          "title": "kotlin",
+          "icon": "icon-kotlin",
+          "stars": "3"
+        },
+        {
           "title": "go",
           "icon": "icon-go",
           "stars": "3"
@@ -41,11 +46,6 @@
           "title": "c",
           "icon": "icon-c",
           "stars": "3"
-        },
-        {
-          "title": "kotlin",
-          "icon": "icon-kotlin",
-          "stars": "2"
         },
         {
           "title": "python",
