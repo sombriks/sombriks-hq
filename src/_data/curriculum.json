@@ -159,13 +159,13 @@
     {
       "company": "Nearsure",
       "site": "https://www.nearsure.com/",
-      "position": "Backend Java Developer",
+      "position": "Backend Developer",
       "start": "2022-08-29",
       "end": "present day",
       "description": "Nearsure is a 'nearshore' outsourcing company with many US-based clients.",
       "projects": [
         {
-          "name": "platform team",
+          "name": "platform team at boku",
           "description": "several tools to allow other teams to work with client's solutions",
           "responsibilities": [
             "code development",
@@ -175,7 +175,7 @@
           ]
         },
         {
-          "name": "payment team",
+          "name": "payment team at boku",
           "description": "several microservices to handle client customers needs",
           "responsibilities": [
             "code development",
@@ -183,6 +183,17 @@
             "help on task specification",
             "code review on pull requests from team members",
             "database migrations"
+          ]
+        },
+        {
+          "name": "application team at markerr",
+          "description": "maintaining and evolving data service subsystem",
+          "responsibilities": [
+            "code development",
+            "creation of testing steps",
+            "module evolution roadmap",
+            "code review on pull requests from team members",
+            "some infrastructure for release versioning and publishing"
           ]
         }
       ],
@@ -204,7 +215,7 @@
       "site": "https://www.redeinova.com.br/",
       "position": "Tech Lead / Senior Fullstack Developer (part-time)",
       "start": "2022-07-13",
-      "end": "present day",
+      "end": "2023-05-03",
       "description": "Redeinova is a technology company from Brasil delivering solutions to public and private sectors",
       "projects": [
         {
