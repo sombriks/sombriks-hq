@@ -120,7 +120,7 @@
       ]
     },
     {
-      "category": "DevOps & Misc",
+      "category": "DevOps",
       "items": [
         {
           "title": "github",
@@ -147,6 +147,16 @@
           "icon": "icon-docker",
           "stars": "3"
         },
+        {
+          "title": "kubernetes",
+          "icon": "icon-kubernetes",
+          "stars": "2"
+        }
+      ]
+    },
+    {
+      "category": "Misc",
+      "items": [
         {
           "title": "jira",
           "icon": "icon-jira",

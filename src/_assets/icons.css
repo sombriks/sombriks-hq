@@ -25,6 +25,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-kubernetes:before {
+    content: "\e90e";
+    /* color: #326ce5; */
+}
 .icon-mongodb:before {
     content: "\e91b";
     /* color: #47a248; */
