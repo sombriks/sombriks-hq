@@ -209,8 +209,12 @@
       ],
       "techstack": [
         "Java",
+        "Kotlin",
         "microservices",
         "mysql",
+        "postgresql",
+        "spring boot",
+        "React",
         "angularjs",
         "jsp",
         "liquibase",
