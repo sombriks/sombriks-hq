@@ -270,11 +270,14 @@
         "Java",
         "microservices",
         "mysql",
+        "sql server",
+        "oracle",
         "angularjs",
         "angular",
         "liquibase",
         "spring-boot",
-        "gitlab"
+        "gitlab",
+        "ci/cd"
       ]
     },
     {
