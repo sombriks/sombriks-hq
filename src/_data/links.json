@@ -330,5 +330,9 @@
   {
     "label": "never use the wrong mocha glob again",
     "link": "https://remarkablemark.org/blog/2017/02/07/mocha-glob-pattern/"
+  },
+  {
+    "label": "whenever chrome starts to act strange and demands https on localhost",
+    "link": "chrome://net-internals/#hsts"
   }
 ]
