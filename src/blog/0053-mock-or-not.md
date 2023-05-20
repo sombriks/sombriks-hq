@@ -3,10 +3,12 @@ layout: blog-base.webc
 tags:
   - posts
   - kotlin
-  - mockito
+  - mysql
   - h2
+  - jpa
   - test
-date: 2023-05-14
+  - mockito
+date: 2023-05-20
 draft: true
 ---
 # To mock or not to mock, that is the question
@@ -39,7 +41,10 @@ between unit test suites and integration test suites.
 
 ## How to avoid to mock things
 
-Although hard, it usually worths not mock complex test scenarios.
+Although hard, it usually worths not mock complex test scenarios. Question is
+how to create a near real test scenario.
+
+### Not mocking the database
 
 ## If going to mock, how to do that properly
 
