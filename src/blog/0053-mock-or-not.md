@@ -3,10 +3,6 @@ layout: blog-base.webc
 tags:
   - posts
   - kotlin
-  - liquibase
-  - mysql
-  - h2
-  - jpa
   - test
   - mockito
 date: 2023-05-20
