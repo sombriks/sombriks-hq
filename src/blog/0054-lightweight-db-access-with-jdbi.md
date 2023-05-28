@@ -865,4 +865,7 @@ As shown, jdbi resolves the problem and doesn't get in your way.
 And Javalin is quite handy for fast prototyping and even a minimal frontend to
 any experiment or small app.
 
+The complete source code for this article can be found
+[here](https://github.com/sombriks/sample-jdbi-javalin).
+
 Happy hacking!
