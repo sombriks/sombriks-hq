@@ -9,7 +9,7 @@ tags:
   - sql
   - vue
   - h2
-date: 2023-05-27
+date: 2023-05-28
 draft: false
 ---
 # Lightweight database access with jdbi
@@ -225,15 +225,220 @@ $ curl http://localhost:7070
 
 ## Creating a database
 
-## Configuring liquibase and a connection pool
+We'll create a system to manage products, clients and orders:
+
+```sql
+-- liquibase formatted sql
+-- changeset sombriks:2023-05-28-00-00-initial-schema.sql
+
+create table products
+(
+    id          integer        not null auto_increment primary key,
+    description varchar(255)   not null,
+    price       decimal(10, 2) not null
+);
+
+create table clients
+(
+    id   integer      not null auto_increment primary key,
+    name varchar(255) not null
+);
+
+create table orders
+(
+    id         integer   not null auto_increment primary key,
+    clients_id integer   not null,
+    creation   timestamp not null default now(),
+    foreign key (clients_id) references clients (id)
+);
+
+create table orders_products
+(
+    orders_id       integer not null,
+    products_id     integer not null,
+    products_amount integer not null default 1,
+    primary key (orders_id, products_id),
+    foreign key (orders_id) references orders (id),
+    foreign key (products_id) references products (id)
+);
+
+-- rollback drop table orders_products
+-- rollback drop table orders
+-- rollback drop table clients
+-- rollback drop table products
+
+
+```
+
+This sql file is already formatted as a
+[liquibase changeset in sql format](https://docs.liquibase.com/workflows/liquibase-community/using-rollback.html)
+So we can use it in our next step.
+
+## Configuring liquibase, connection pool and jdbi instance
+
+Let's create a kotlin object to proper configure the database when the service
+starts:
+
+```kotlin
+package sample.jdbi.javalin
+
+import com.zaxxer.hikari.HikariConfig
+import com.zaxxer.hikari.HikariDataSource
+import liquibase.Liquibase
+import liquibase.database.jvm.JdbcConnection
+import liquibase.resource.ClassLoaderResourceAccessor
+import org.jdbi.v3.core.Jdbi
+import javax.sql.DataSource
+
+object Config {
+
+    private val dataSource: DataSource by lazy {
+        HikariDataSource(HikariConfig("/datasource.properties"))
+    }
+
+    val db: Jdbi by lazy {
+        Jdbi.create(dataSource)
+    }
+
+    fun migrateLatest() {
+        val liquibase = Liquibase(
+            "/db/changelog/root.xml",
+            ClassLoaderResourceAccessor(),
+            JdbcConnection(dataSource.connection)
+        )
+        liquibase.update()
+    }
+
+}
+
+```
+
+This config file creates a DataSource and it can be shared by both liquibase and
+jdbi. It also features a call to liquibase so we can update the database state.
+
+One important note, `datasource.properties` and `/db/changelog/root.xml` are
+classpath resources, don't mistake the "/" at the beginning of the name as
+system path.
+[We discussed that here already](https://sombriks.com/blog/0051-quick-note-on-java-resources-and-classpath/).
+
+The datasource property file and the root changelog file goes below:
+
+<div class="comparison-box"><div>
+
+More info on datasource properties, see the
+[HikariCP documentation](https://github.com/brettwooldridge/HikariCP#gear-configuration-knobs-baby).
+
+```properties
+# src/main/resources/datasource.properties
+
+driverClassName=org.h2.Driver
+jdbcUrl=jdbc:h2:./sample.db
+maximumPoolSize=10
+minimumIdle=2
+username=sa
+password=sa
+```
+
+</div><div>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- src/main/resources/db/changelog/root.xml -->
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <includeAll path="migrations" relativeToChangelogFile="true"/>
+</databaseChangeLog>
+
+```
+
+The `src/main/resources/db/changelog/migrations` folder must contain the sql
+script we presented earlier.
+
+</div></div>
 
 ## Adding services to use it with jdbi
 
-## Design the rest api
+We're finally in the part we use jdbi. Take `ClientService.kt` as a sample:
+
+```kotlin
+package sample.jdbi.javalin.services
+
+import org.jdbi.v3.core.Jdbi
+import sample.jdbi.javalin.Config
+import sample.jdbi.javalin.models.Client
+
+class ClientService(private val db: Jdbi = Config.db) {
+
+    fun find(id: Int): Client = db.withHandle<Client, Exception> {
+        it.createQuery("select * from clients where id = :id")
+            .bind("id", id).mapToBean(Client::class.java).one()
+    }
+
+    fun list(q: String = ""): List<Client> = db.withHandle<List<Client>, Exception> {
+        it.createQuery("select * from clients where name like :name")
+            .bind("name", "%$q%").mapToBean(Client::class.java).list()
+    }
+
+    fun insert(newClient: Client) {
+        db.useHandle<Exception> {
+            it.createUpdate("insert into clients (name) values (:name)")
+                .bindBean(newClient).execute()
+        }
+    }
+
+    fun update(client: Client) {
+        db.useHandle<Exception> {
+            it.createUpdate("update clients set name = :name where id = :id")
+                .bindBean(client).execute()
+        }
+    }
+
+    fun del(id: Int) {
+        db.useHandle<Exception> {
+            it.createUpdate("delete from clients where id = :id")
+                .bind("id", id).execute()
+        }
+    }
+}
+```
+
+This is a complete CRUD in less than 50 lines of kotlin.
+
+Even if it was plain java, wouldn't be much different. This is why jdbi is
+relevant and could be an option on your next, let's say, microservice project.
+
+Access to the entire java ecosystem but without compromise performance and
+maintenance.
+
+## Defining controllers to wire into javalin routes
+
+Javalin has this [context object](https://javalin.io/documentation#context)
+available to each router.
+
+Controllers therefore needs to know how to handle this object.
+
+```kotlin
+
+```
+
+## Design the REST api
+
+Let's change our Hello.kt again:
+
+```kotlin
+
+```
 
 ## Adding a small vue gui
 
-## Final tweaks on service
+## Final tweaks on project and service
 
 ## Further steps
 
