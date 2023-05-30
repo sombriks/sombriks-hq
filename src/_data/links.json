@@ -334,5 +334,9 @@
   {
     "label": "whenever chrome starts to act strange and demands https on localhost",
     "link": "chrome://net-internals/#hsts"
+  },
+  {
+    "label": "Pretty cool regex tool",
+    "link": "https://regex101.com/"
   }
 ]
