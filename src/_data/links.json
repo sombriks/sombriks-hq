@@ -338,5 +338,9 @@
   {
     "label": "The long rant of professor Dijkstra",
     "link": "https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html"
+  },
+  {
+    "label": "Pretty cool regex tool",
+    "link": "https://regex101.com/"
   }
 ]
