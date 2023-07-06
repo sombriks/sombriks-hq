@@ -334,5 +334,9 @@
   {
     "label": "whenever chrome starts to act strange and demands https on localhost",
     "link": "chrome://net-internals/#hsts"
+  },
+  {
+    "label": "The long rant of professor Dijkstra",
+    "link": "https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html"
   }
 ]

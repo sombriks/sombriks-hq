@@ -5,7 +5,7 @@
 
 body {
   font-family: monospace;
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
   margin: 0;
   background-color: var(--color0);
   color: var(--color1);
