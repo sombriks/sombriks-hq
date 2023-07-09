@@ -84,17 +84,18 @@ external resources:
   into it's properties in a transparent way
 - [dotenv-flow](https://www.npmjs.com/package/dotenv-flow) performs similar job
   on backend node js projects
-- [vite](https://vitejs.dev/guide/env-and-mode.html) and similar tools do the
-  same for frontend development
+- [vite](https://vitejs.dev/guide/env-and-mode.html) and
+  [similar tools](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+  do the same for frontend development
 
 That kind of development style implies sometimes tha a application profile or
-application mode existis and there is some specifications about that, like the
+application mode exists and there is some specifications about that, like the
 [twelve factor app methodology](https://12factor.net/).
 
 ### Building configuration-friendly images
 
 To build a configuration-friendly image we start with a configuration-friendly
-application, as we debated in previous section,
+application, as we debated in previous section.
 
 In [this example](https://github.com/sombriks/simple-knex-koa-example) we can
 see a reasonable configurable application depending on these key environment
