@@ -342,5 +342,9 @@
   {
     "label": "Pretty cool regex tool",
     "link": "https://regex101.com/"
+  },
+  {
+    "label": "A very good 'week 0' course on computer basics for programmers",
+    "link": "https://missing.csail.mit.edu/about/"
   }
 ]

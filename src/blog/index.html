@@ -16,7 +16,7 @@ layout: base.webc
     {%- endfor -%}
 </div>
 <h2><a href="/blog">Posts</a></h2>
-<div class="post-list">
+<div>
     {% assign posts = collections.posts | noDraft %}
     {%- for post in posts reversed -%}
     <a href="{{post.page.url}}"

@@ -1,10 +1,6 @@
 ---
 layout: base.webc
 ---
-<div style="width:100%;" webc:nokeep @raw="content"></div>
-<br/>
-<span @text="$data.date.toISOString().split('T')[0]"></span>
-<p>Tags:</p>
-<a webc:for="tag of $data.tags"
-   :href="`/blog/?tag=${tag.replace(/\s/g,'-')}`"
-   @text="tag"></a>
+<tag-line></tag-line><br/>
+<div style="width:100%;" webc:nokeep @raw="content"></div><br/><br/>
+<tag-line></tag-line>

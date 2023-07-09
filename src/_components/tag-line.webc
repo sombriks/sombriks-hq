@@ -1,0 +1,18 @@
+
+<div class="tagline">
+  <a webc:for="tag of $data.tags"
+     :href="`/blog/?tag=${tag.replace(/\s/g,'-')}`"
+     @text="tag"></a>
+  <a :href="`/blog/?tag=date-${$data.date.toISOString().split('T')[0].split('-')[0]}`"
+     @text="$data.date.toISOString().split('T')[0]"></a>
+</div>
+
+<style webc:scoped>
+  .tagline {
+    text-align: center;
+  }
+  .tagline > a {
+    font-style: italic;
+    display: inline-block;
+  }
+</style>

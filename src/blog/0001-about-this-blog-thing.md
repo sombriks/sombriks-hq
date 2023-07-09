@@ -8,14 +8,12 @@ date: 2017-12-04
 ---
 # About this 'Blog Engine'
 
-**Update 2023-02-13:** Now it uses an engine, it's [eleventy](https://www.11ty.dev/)
+**Update 2023-02-13:** Now it uses an engine, it's called [eleventy](https://www.11ty.dev/)
 
 **Update 2020-05-27:** we don't use axios or brfs anymore. or browserify.
 The new 'engine' is [es6 imports](https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import) in a vue-cli generated project.
 
-
 ---
-
 
 This is not an engine at all.
 
