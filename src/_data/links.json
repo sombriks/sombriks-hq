@@ -346,5 +346,9 @@
   {
     "label": "A very good 'week 0' course on computer basics for programmers",
     "link": "https://missing.csail.mit.edu/about/"
+  },
+  {
+    "label": "That simple and cool article about logging in kotlin",
+    "link": "https://amarszalek.net/blog/2018/05/13/logging-in-kotlin-right-approach/"
   }
 ]
