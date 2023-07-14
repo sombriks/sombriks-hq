@@ -350,5 +350,9 @@
   {
     "label": "That simple and cool article about logging in kotlin",
     "link": "https://amarszalek.net/blog/2018/05/13/logging-in-kotlin-right-approach/"
+  },
+  {
+    "label": "Fix your authorized keys permission after steal it from ec2-user",
+    "link": "https://stackoverflow.com/a/52988125/420096"
   }
 ]
