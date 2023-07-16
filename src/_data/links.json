@@ -354,5 +354,9 @@
   {
     "label": "Fix your authorized keys permission after steal it from ec2-user",
     "link": "https://stackoverflow.com/a/52988125/420096"
+  },
+  {
+    "label": "Proper ack configuration in kafka consumers is very important",
+    "link": "https://www.conduktor.io/kafka/kafka-topic-configuration-min-insync-replicas/"
   }
 ]
