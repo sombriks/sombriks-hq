@@ -1,362 +1,724 @@
 [
   {
     "link": "https://google.com",
-    "label": "The best way to learn something"
+    "label": "The best way to learn something",
+    "tags": [
+      "learn",
+      "google"
+    ]
   },
   {
     "link": "https://yahoo.com",
-    "label": "When you need to know if dns is really working"
+    "label": "When you need to know if dns is really working",
+    "tags": [
+      "nobody visits it"
+    ]
   },
   {
     "link": "https://www.youtube.com/results?search_query=vaporware",
-    "label": "White noise to keep focus on working"
+    "label": "White noise to keep focus on working",
+    "tags": [
+      "vaporware",
+      "downtempo",
+      "barber beats"
+    ]
   },
   {
     "link": "https://www.w3schools.com/",
-    "label": "Docs everyone denies to use and enjoy to deny it"
+    "label": "Docs everyone denies to use and enjoy to deny it",
+    "tags": [
+      "please don't"
+    ]
   },
   {
     "link": "https://developer.mozilla.org",
-    "label": "The true and correct docs for the web"
+    "label": "The true and correct docs for the web",
+    "tags": [
+      "please share"
+    ]
   },
   {
     "link": "https://vuejs.org/",
-    "label": "The good"
+    "label": "The good",
+    "tags": [
+      "my choice of frontend productivity"
+    ]
   },
   {
     "link": "https://reactjs.org/",
-    "label": "The bad"
+    "label": "The bad",
+    "tags": [
+      "do simple things in very complex ways"
+    ]
   },
   {
     "link": "https://angular.io/",
-    "label": "The ugly"
+    "label": "The ugly",
+    "tags": [
+      "don't use it unless someone pays you well"
+    ]
   },
   {
     "link": "http://www.nomnoml.com/",
-    "label": "nomnoml! I always forgot this address but it's so rad!"
+    "label": "nomnoml! I always forgot this address but it's so rad!",
+    "tags": [
+      "uml",
+      "system design"
+    ]
   },
   {
     "link": "https://docs.oracle.com/javase/tutorial/",
-    "label": "Origins"
+    "label": "Origins",
+    "tags": [
+      "tutorial",
+      "java"
+    ]
   },
   {
     "link": "https://github.com",
-    "label": "How to save the world"
+    "label": "How to save the world",
+    "tags": [
+      "repository",
+      "backup",
+      "code"
+    ]
   },
   {
     "link": "https://css-tricks.com/",
-    "label": "All you need to know about css and more"
+    "label": "All you need to know about css and more",
+    "tags": [
+      "css",
+      "every time i forget how to use display:flex i end up here"
+    ]
   },
   {
     "link": "https://www.wikipedia.org/",
-    "label": "In need of a printed version"
+    "label": "In need of a printed version",
+    "tags": [
+      "save one to be safe in case of nuclear apocalypse"
+    ]
   },
   {
     "link": "https://www.apple.com/",
-    "label": "Evil"
+    "label": "Evil",
+    "tags": [
+      "hate different"
+    ]
   },
   {
     "link": "https://www.base64encode.org/",
-    "label": "How to speak clearly"
+    "label": "How to speak clearly",
+    "tags": [
+      "encode",
+      "decode",
+      "base64"
+    ]
   },
   {
     "link": "https://simplycalc.com/base16-encode.php",
-    "label": "More clearly"
+    "label": "More clearly",
+    "tags": [
+      "encode",
+      "decode",
+      "base16"
+    ]
   },
   {
     "link": "https://www.youtube.com/results?search_query=make+good+art",
-    "label": "make good art"
+    "label": "make good art",
+    "tags": [
+      "career advice",
+      "It's Neil Gaiman so pay attention!"
+    ]
   },
   {
     "link": "https://haxiomic.github.io/GPU-Fluid-Experiments/html5/?q=Low",
-    "label": "Quite relaxing"
+    "label": "Quite relaxing",
+    "tags": [
+      "demo",
+      "fluid",
+      "javascript"
+    ]
   },
   {
     "link": "https://www.hackerrank.com",
-    "label": "Cool challenges"
+    "label": "Cool challenges",
+    "tags": [
+      "career advice",
+      "some corps use it to code challenge so make a profile"
+    ]
   },
   {
     "link": "https://xkcd.com/1179/",
-    "label": "How to write dates correctly"
+    "label": "How to write dates correctly",
+    "tags": [
+      "fun",
+      "comics"
+    ]
   },
   {
     "link": "https://devhints.io/",
-    "label": "best TL;DR; ever"
+    "label": "best TL;DR; ever",
+    "tags": [
+      "code",
+      "mini guides"
+    ]
   },
   {
     "link": "https://trello.com/",
-    "label": "Organize your life a little"
+    "label": "Organize your life a little",
+    "tags": [
+      "project management",
+      "start little, start trello. then go full jira, ;_;"
+    ]
   },
   {
     "link": "https://dexie.org/",
-    "label": "The nicest non-relational database API you'll ever see"
+    "label": "The nicest non-relational database API you'll ever see",
+    "tags": [
+      "javascript",
+      "database"
+    ]
   },
   {
     "link": "https://www.postgresql.org/docs/manuals/",
-    "label": "Database for serious business"
+    "label": "Database for serious business",
+    "tags": [
+      "database"
+    ]
   },
   {
     "link": "https://www.sqlite.org/index.html",
-    "label": "Not ANSI SQL but that's ok"
+    "label": "Not ANSI SQL but that's ok",
+    "tags": [
+      "database"
+    ]
   },
   {
     "link": "https://www.destroyallsoftware.com/compendium",
-    "label": "Core basics of computer science in a very opinionated way"
+    "label": "Core basics of computer science in a very opinionated way",
+    "tags": [
+      "cool course"
+    ]
   },
   {
     "link": "https://www.timsommer.be/famous-laws-of-software-development/",
-    "label": "Famous laws of software development"
+    "label": "Famous laws of software development",
+    "tags": [
+      "life advice",
+      "fun"
+    ]
   },
   {
     "link": "http://raganwald.com/2019/02/14/i-love-programming-and-programmers.html",
-    "label": "I like the way compilers work"
+    "label": "I like the way compilers work",
+    "tags": [
+      "finite state machine",
+      "regex",
+      "computer science"
+    ]
   },
   {
     "link": "https://yuml.me/diagram/scruffy/class/draw",
-    "label": "yUML does cool uml"
+    "label": "yUML does cool uml",
+    "tags": [
+      "uml",
+      "system design"
+    ]
   },
   {
     "link": "https://colorhunt.co",
-    "label": "Nice and shiny colors"
+    "label": "Nice and shiny colors",
+    "tags": [
+      "css",
+      "frontend",
+      "design"
+    ]
   },
   {
     "link": "https://www.zeitverschiebung.net",
-    "label": "Very very important clock thing"
+    "label": "Very very important clock thing",
+    "tags": [
+      "timezone"
+    ]
   },
   {
     "link": "https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/",
-    "label": "Learn how to use tmux"
+    "label": "Learn how to use tmux",
+    "tags": [
+      "guide",
+      "tools"
+    ]
   },
   {
     "link": "https://dev.to/blacksonic/the-vue-3-upgrade-guide-4dc4",
-    "label": "The upgrade from Vue2 to Vue3, simply explained"
+    "label": "The upgrade from Vue2 to Vue3, simply explained",
+    "tags": [
+      "frontend",
+      "framework",
+      "migration"
+    ]
   },
   {
     "link": "https://www.jamisbuck.org/mazes/",
-    "label": "i like mazes"
+    "label": "i like mazes",
+    "tags": [
+      "fun",
+      "maze"
+    ]
   },
   {
     "link": "https://firebirdsql.org/file/documentation/release_notes/html/en/3_0/rnfb30-compat-initsec.html",
-    "label": "remember to initialize the security db with server offline! use root. check permissions."
+    "label": "remember to initialize the security db with server offline! use root. check permissions.",
+    "tags": [
+      "database",
+      "vintage"
+    ]
   },
   {
     "link": "https://vitux.com/how-to-use-gnome-shells-secret-screen-recorder/",
-    "label": "I always forgot how to configure screen recording time on gnome, so..."
+    "label": "I always forgot how to configure screen recording time on gnome, so...",
+    "tags": [
+      "gnome",
+      "desktop"
+    ]
   },
   {
     "link": "https://www.mitchellbosecke.com/post/java-proxies-from-dog-to-transactionaldog",
-    "label": "The transactional dog"
+    "label": "The transactional dog",
+    "tags": [
+      "broken link"
+    ]
   },
   {
     "link": "https://www.ibphoenix.com/resources/documents/how_to/doc_396",
-    "label": "when we need to setup an old db into a new system"
+    "label": "when we need to setup an old db into a new system",
+    "tags": [
+      "database",
+      "vintage"
+    ]
   },
   {
     "link": "https://www.youtube.com/watch?v=rfFnUVxrfAw&list=PLczA8pMWxlsFUFEtlc6MuucBX-OmKPKkN",
-    "label": "Soundtrack to listen while coding"
+    "label": "Soundtrack to listen while coding",
+    "tags": [
+      "piano",
+      "soundtrack"
+    ]
   },
   {
     "link": "https://twitter.com/sombriks/status/1441562084463030272",
-    "label": "It used to be an article, now it's a tweet (I)"
+    "label": "It used to be an article, now it's a tweet (I)",
+    "tags": [
+      "container",
+      "docker",
+      "podman"
+    ]
   },
   {
     "link": "https://twitter.com/sombriks/status/1441572448051372038",
-    "label": "It used to be an article, now it's a tweet (II)"
+    "label": "It used to be an article, now it's a tweet (II)",
+    "tags": [
+      "container",
+      "docker",
+      "podman"
+    ]
   },
   {
     "link": "https://www.youtube.com/watch?v=hKetuR_T8hc",
-    "label": "I have a dream"
+    "label": "I have a dream",
+    "tags": [
+      "greg news",
+      "política"
+    ]
   },
   {
     "link": "http://www.hostwaydcs.com/CISCO/AnyConnect/",
-    "label": "If you have that bad luck for vpn"
+    "label": "If you have that bad luck for vpn",
+    "tags": [
+      "cisco",
+      "vpn"
+    ]
   },
   {
     "link": "https://serverfault.com/a/337928/48288",
-    "label": "dbeaver always tries socket connection, so force it into tcp"
+    "label": "dbeaver always tries socket connection, so force it into tcp",
+    "tags": [
+      "database",
+      "tools",
+      "dektop"
+    ]
   },
   {
     "label": "What really solved the annoyance with bluetooth keyboard",
-    "link": "https://twitter.com/sombriks/status/1509637535336644609"
+    "link": "https://twitter.com/sombriks/status/1509637535336644609",
+    "tags": [
+      "bluetooth",
+      "desktop"
+    ]
   },
   {
     "label": "Another nice and important color thing",
-    "link": "https://color.adobe.com/pt/create/color-wheel"
+    "link": "https://color.adobe.com/pt/create/color-wheel",
+    "tags": [
+      "color",
+      "css"
+    ]
   },
   {
     "label": "That day i decided to rant about 'native java'",
-    "link": "https://twitter.com/sombriks/status/1510432070203543554"
+    "link": "https://twitter.com/sombriks/status/1510432070203543554",
+    "tags": [
+      "java",
+      "javalin",
+      "graalvm"
+    ]
   },
   {
     "label": "Hope Sandoval & The Warm Inventions",
-    "link": "https://www.youtube.com/watch?v=3qqiQtyg0tQ"
+    "link": "https://www.youtube.com/watch?v=3qqiQtyg0tQ",
+    "tags": [
+      "soundtrack"
+    ]
   },
   {
     "link": "https://www.youtube.com/watch?v=CVpUuw9XSjY",
-    "label": "React Redux the old style"
+    "label": "React Redux the old style",
+    "tags": [
+      "frontend",
+      "react",
+      "redux"
+    ]
   },
   {
     "link": "https://www.reddit.com/r/gnome/comments/ulrbuj/what_are_you_guys_favorite_and_most_useful/i7z4v0h",
-    "label": "My current gnome shell extension setup"
+    "label": "My current gnome shell extension setup",
+    "tags": [
+      "gnome",
+      "gnome shell extensions"
+    ]
   },
   {
     "label": "Cool css things",
-    "link": "https://twitter.com/Amit_T18/status/1524712527317241862"
+    "link": "https://twitter.com/Amit_T18/status/1524712527317241862",
+    "tags": [
+      "broken link"
+    ]
   },
   {
     "label": "When you need to fix git branches the hard way",
-    "link": "https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/"
+    "link": "https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/",
+    "tags": [
+      "git"
+    ]
   },
   {
     "label": "When i had to downgrade security to make vpn work",
-    "link": "https://bugzilla.redhat.com/show_bug.cgi?id=1851585#c4"
+    "link": "https://bugzilla.redhat.com/show_bug.cgi?id=1851585#c4",
+    "tags": [
+      "cisco",
+      "vpn"
+    ]
   },
   {
     "label": "Make chrome share screen properly on wayland",
-    "link": "https://www.freecodecamp.org/news/how-to-fix-black-screen-on-google-chrome-on-linux-os"
+    "link": "https://www.freecodecamp.org/news/how-to-fix-black-screen-on-google-chrome-on-linux-os",
+    "tags": [
+      "chrome",
+      "share screen"
+    ]
   },
   {
     "label": "How to properly use CRON",
-    "link": "https://crontab.guru"
+    "link": "https://crontab.guru",
+    "tags": [
+      "cron"
+    ]
   },
   {
     "label": "It used to be an article, now it's a tweet (III)",
-    "link": "https://twitter.com/sombriks/status/1550903875649011715"
+    "link": "https://twitter.com/sombriks/status/1550903875649011715",
+    "tags": [
+      "container",
+      "docker",
+      "podman"
+    ]
   },
   {
     "label": "A must-have for frontend. A color picker",
-    "link": "https://chrome.google.com/webstore/detail/color-picker-for-chrome/clldacgmdnnanihiibdgemajcfkmfhia"
+    "link": "https://chrome.google.com/webstore/detail/color-picker-for-chrome/clldacgmdnnanihiibdgemajcfkmfhia",
+    "tags": [
+      "color",
+      "tools"
+    ]
   },
   {
     "label": "But a few things remais with the size of a tweet",
-    "link": "https://twitter.com/sombriks/status/1560685269753397249"
+    "link": "https://twitter.com/sombriks/status/1560685269753397249",
+    "tags": [
+      "database",
+      "configuration",
+      "fedora"
+    ]
   },
   {
     "label": "Friendly reminder",
-    "link": "https://twitter.com/sombriks/status/1561158355149783041"
+    "link": "https://twitter.com/sombriks/status/1561158355149783041",
+    "tags": [
+      "advice",
+      "ide"
+    ]
   },
   {
     "label": "So, mariadb on mac (using brew) can be tricky",
-    "link": "https://gist.github.com/nickcernis/1c2a1c98a0660d4798d55b1999d52b4c"
+    "link": "https://gist.github.com/nickcernis/1c2a1c98a0660d4798d55b1999d52b4c",
+    "tags": [
+      "database",
+      "configuration",
+      "mac"
+    ]
   },
   {
     "link": "https://stackoverflow.com/a/49043924/420096",
-    "label": "Whenever mysql dump refuses to restore, add `SET GLOBAL innodb_strict_mode = 0;` into the script!"
+    "label": "Whenever mysql dump refuses to restore, add `SET GLOBAL innodb_strict_mode = 0;` into the script!",
+    "tags": [
+      "database",
+      "configuration"
+    ]
   },
   {
     "label": "Proper way to set java version on mac",
-    "link": "https://twitter.com/sombriks/status/1567239336977899521"
+    "link": "https://twitter.com/sombriks/status/1567239336977899521",
+    "tags": [
+      "java",
+      "mac"
+    ]
   },
   {
     "label": "Also postgresql from homebrew can be tricky",
-    "link": "https://daily-dev-tips.com/posts/installing-postgresql-on-a-mac-with-homebrew"
+    "link": "https://daily-dev-tips.com/posts/installing-postgresql-on-a-mac-with-homebrew",
+    "tags": [
+      "database",
+      "configuration"
+    ]
   },
   {
     "label": "When you need maven running JUnit 5 to work under maven",
-    "link": "https://github.com/sombriks/simple-java-run-cmd/blob/main/pom.xml"
+    "link": "https://github.com/sombriks/simple-java-run-cmd/blob/main/pom.xml",
+    "tags": [
+      "java",
+      "maven",
+      "test"
+    ]
   },
   {
     "label": "Ok that's pretty cool about git and ssh",
-    "link": "https://www.baeldung.com/linux/ssh-private-key-git-command"
+    "link": "https://www.baeldung.com/linux/ssh-private-key-git-command",
+    "tags": [
+      "git",
+      "ssh",
+      "configuration"
+    ]
   },
   {
     "label": "Take care of your keys",
-    "link": "https://unix.stackexchange.com/a/399490/143289"
+    "link": "https://unix.stackexchange.com/a/399490/143289",
+    "tags": [
+      "gpg"
+    ]
   },
   {
     "label": "In case you need to learn firestore",
-    "link": "https://www.youtube.com/playlist?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ"
+    "link": "https://www.youtube.com/playlist?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ",
+    "tags": [
+      "database",
+      "firebase"
+    ]
   },
   {
     "label": "yes knex still amazes me",
-    "link": "https://github.com/knex/knex/issues/3850"
+    "link": "https://github.com/knex/knex/issues/3850",
+    "tags": [
+      "database",
+      "javascript",
+      "knex"
+    ]
   },
   {
     "label": "never fall in the trap of download xcode via app store again",
-    "link": "https://developer.apple.com/download/all/?q=Xcode"
+    "link": "https://developer.apple.com/download/all/?q=Xcode",
+    "tags": [
+      "mac",
+      "ide",
+      "xcode"
+    ]
   },
   {
     "label": "resize font on intellij",
-    "link": "https://www.jetbrains.com/go/guide/tips/change-font-size-from-keyboard/"
+    "link": "https://www.jetbrains.com/go/guide/tips/change-font-size-from-keyboard/",
+    "tags": [
+      "intellij",
+      "ide"
+    ]
   },
   {
     "label": "cool drawing tool",
-    "link": "https://excalidraw.com/"
+    "link": "https://excalidraw.com/",
+    "tags": [
+      "system design",
+      "tools"
+    ]
   },
   {
     "label": "best static site generator ever",
-    "link": "https://www.11ty.dev/"
+    "link": "https://www.11ty.dev/",
+    "tags": [
+      "javascript",
+      "static site generator",
+      "ssg"
+    ]
   },
   {
     "label": "cool highlight thing",
-    "link": "https://prismjs.com/"
+    "link": "https://prismjs.com/",
+    "tags": [
+      "javascript",
+      "colors"
+    ]
   },
   {
     "label": "cool free oracle services",
-    "link": "https://oracle.github.io/free"
+    "link": "https://oracle.github.io/free",
+    "tags": [
+      "tools",
+      "free"
+    ]
   },
   {
     "label": "GO has funny strings",
-    "link": "https://github.com/golang/go/issues/22127#issuecomment-334288975"
+    "link": "https://github.com/golang/go/issues/22127#issuecomment-334288975",
+    "tags": [
+      "golang"
+    ]
   },
   {
     "label": "Cast things in GO",
-    "link": "https://go.dev/ref/spec#Conversions"
+    "link": "https://go.dev/ref/spec#Conversions",
+    "tags": [
+      "golang"
+    ]
   },
   {
     "label": "Template language for eleventy things",
-    "link": "https://mozilla.github.io/nunjucks/"
+    "link": "https://mozilla.github.io/nunjucks/",
+    "tags": [
+      "javascript"
+    ]
   },
   {
     "label": "Action to build and deploy your frontend project into github pages",
-    "link": "https://github.com/sombriks/red-line-finance/blob/develop/.github/workflows/node.js.yml"
+    "link": "https://github.com/sombriks/red-line-finance/blob/develop/.github/workflows/node.js.yml",
+    "tags": [
+      "github",
+      "action",
+      "devops"
+    ]
   },
   {
     "label": "spring boot understand dotenv files now",
-    "link": "https://github.com/paulschwarz/spring-dotenv"
+    "link": "https://github.com/paulschwarz/spring-dotenv",
+    "tags": [
+      "java",
+      "dotenv",
+      "spring-boot"
+    ]
   },
   {
     "label": "cool starter projects",
-    "link": "https://twitter.com/sombriks/status/1638178060821479428"
+    "link": "https://twitter.com/sombriks/status/1638178060821479428",
+    "tags": [
+      "tools",
+      "project starters"
+    ]
   },
   {
     "label": "about github actions and gitlab CI/CD",
-    "link": "https://docs.github.com/en/actions/migrating-to-github-actions/manual-migrations/migrating-from-gitlab-cicd-to-github-actions"
+    "link": "https://docs.github.com/en/actions/migrating-to-github-actions/manual-migrations/migrating-from-gitlab-cicd-to-github-actions",
+    "tags": [
+      "devops",
+      "gitlab",
+      "github"
+    ]
   },
   {
     "label": "nice and honest article about jwt",
-    "link": "https://howtodoinjava.com/java/java-security/jwt-json-web-token/"
+    "link": "https://howtodoinjava.com/java/java-security/jwt-json-web-token/",
+    "tags": [
+      "jwt",
+      "security"
+    ]
   },
   {
     "label": "never use the wrong mocha glob again",
-    "link": "https://remarkablemark.org/blog/2017/02/07/mocha-glob-pattern/"
+    "link": "https://remarkablemark.org/blog/2017/02/07/mocha-glob-pattern/",
+    "tags": [
+      "javascript",
+      "test",
+      "mocha"
+    ]
   },
   {
     "label": "whenever chrome starts to act strange and demands https on localhost",
-    "link": "chrome://net-internals/#hsts"
+    "link": "chrome://net-internals/#hsts",
+    "tags": [
+      "chrome",
+      "configuration"
+    ]
   },
   {
     "label": "The long rant of professor Dijkstra",
-    "link": "https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html"
+    "link": "https://www.cs.utexas.edu/users/EWD/transcriptions/EWD10xx/EWD1036.html",
+    "tags": [
+      "life advice"
+    ]
   },
   {
     "label": "Pretty cool regex tool",
-    "link": "https://regex101.com/"
+    "link": "https://regex101.com/",
+    "tags": [
+      "tools",
+      "regex"
+    ]
   },
   {
     "label": "A very good 'week 0' course on computer basics for programmers",
-    "link": "https://missing.csail.mit.edu/about/"
+    "link": "https://missing.csail.mit.edu/about/",
+    "tags": [
+      "guide"
+    ]
   },
   {
     "label": "That simple and cool article about logging in kotlin",
-    "link": "https://amarszalek.net/blog/2018/05/13/logging-in-kotlin-right-approach/"
+    "link": "https://amarszalek.net/blog/2018/05/13/logging-in-kotlin-right-approach/",
+    "tags": [
+      "kotlin",
+      "logging"
+    ]
   },
   {
     "label": "Fix your authorized keys permission after steal it from ec2-user",
-    "link": "https://stackoverflow.com/a/52988125/420096"
+    "link": "https://stackoverflow.com/a/52988125/420096",
+    "tags": [
+      "ssh",
+      "devops"
+    ]
   },
   {
     "label": "Proper ack configuration in kafka consumers is very important",
-    "link": "https://www.conduktor.io/kafka/kafka-topic-configuration-min-insync-replicas/"
+    "link": "https://www.conduktor.io/kafka/kafka-topic-configuration-min-insync-replicas/",
+    "tags": [
+      "kafka",
+      "configuration"
+    ]
   }
 ]
