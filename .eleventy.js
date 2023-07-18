@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
     "src/_assets": "assets",
     "src/_assets/keybase.txt": "keybase.txt",
     "src/_assets/ads.txt": "ads.txt",
-    // "node_modules/prism-themes/themes/prism-a11y-dark.min.css": "assets/prism-theme.css"
+    "node_modules/prism-themes/themes/prism-a11y-dark.min.css": "assets/prism-theme.css"
     // "node_modules/prism-themes/themes/prism-atom-dark.min.css": "assets/prism-theme.css"
     // "node_modules/prism-themes/themes/prism-base16-ateliersulphurpool.light.min.css": "assets/prism-theme.css"
     // "node_modules/prism-themes/themes/prism-cb.min.css": "assets/prism-theme.css"
@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
     // "node_modules/prism-themes/themes/prism-synthwave84.min.css": "assets/prism-theme.css"
     // "node_modules/prism-themes/themes/prism-vs.min.css": "assets/prism-theme.css"
     // "node_modules/prism-themes/themes/prism-vsc-dark-plus.min.css": "assets/prism-theme.css"
-    "node_modules/prism-themes/themes/prism-z-touch.min.css": "assets/prism-theme.css"
+    // "node_modules/prism-themes/themes/prism-z-touch.min.css": "assets/prism-theme.css"
   });
 
   // makes eleventy ignore src/_components AND provide auto-import
