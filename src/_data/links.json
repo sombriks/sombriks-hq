@@ -731,6 +731,15 @@
     ]
   },
   {
+    "label": "And tlp. install tlp too.",
+    "link": "https://linrunner.de/tlp/usage/index.html#start",
+    "tags": [
+      "battery",
+      "efficiency",
+      "i as being dumb for all those years"
+    ]
+  },
+  {
     "label": "Detailed examples of how to deal with concurrency in java",
     "link": "https://sourceforge.net/projects/javaconcurrenta/",
     "tags": [
