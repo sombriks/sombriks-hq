@@ -729,5 +729,15 @@
       "efficiency",
       "i as being dumb for all those years"
     ]
+  },
+  {
+    "label": "Detailed examples of how to deal with concurrency in java",
+    "link": "https://sourceforge.net/projects/javaconcurrenta/",
+    "tags": [
+      "java",
+      "thread",
+      "concurrency",
+      "educational"
+    ]
   }
 ]
