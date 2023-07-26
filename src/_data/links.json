@@ -346,7 +346,7 @@
     "tags": [
       "database",
       "tools",
-      "dektop"
+      "desktop"
     ]
   },
   {
@@ -747,6 +747,15 @@
       "thread",
       "concurrency",
       "educational"
+    ]
+  },
+  {
+    "label": "multi line string in yaml is simple*",
+    "link": "https://stackoverflow.com/a/21699210/420096",
+    "tags": [
+      "yml",
+      "yaml",
+      "this language should not be take that serious"
     ]
   }
 ]
