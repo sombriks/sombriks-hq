@@ -346,7 +346,7 @@
     "tags": [
       "database",
       "tools",
-      "dektop"
+      "desktop"
     ]
   },
   {
@@ -748,6 +748,25 @@
       "demo",
       "this is pretty cool",
       "one day i will make a roguelike"
+    ]
+  },
+  {
+    "label": "Detailed examples of how to deal with concurrency in java",
+    "link": "https://sourceforge.net/projects/javaconcurrenta/",
+    "tags": [
+      "java",
+      "thread",
+      "concurrency",
+      "educational"
+    ]
+  },
+  {
+    "label": "multi line string in yaml is simple*",
+    "link": "https://stackoverflow.com/a/21699210/420096",
+    "tags": [
+      "yml",
+      "yaml",
+      "this language should not be take that serious"
     ]
   }
 ]
