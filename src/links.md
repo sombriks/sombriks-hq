@@ -7,6 +7,5 @@ layout: base.webc
 {%- for link in links -%}
   <a  target="_blank"
       title="{{link.tags | join: ", "}}"
-      href="{{link.link}}"
-      style="display:inline-block;">{{link.label}}</a>
+      href="{{link.link}}">{{link.label}}</a>
 {%- endfor -%}

@@ -1,12 +1,39 @@
 ---
 layout: base.webc
+title: Try to keep it simple
 ---
-<script>
-    const surprise = [];
-    {% assign posts = collections.posts | noDraft %}
-    {%- for post in posts reversed -%}
-    surprise.push("{{post.page.url}}");
+<h2>Latest posts</h2>
+{% assign posts = collections.posts | noDraft | reverse %}
+<ul>
+{%- for post in posts limit: 5 -%}
+    <li>
+        <a href="{{post.page.url}}">{{post.page.url}}</a>
+    </li>
+{%- endfor -%}
+    <li><a href="/blog">more...</a></li>
+</ul>
+<h2>Cool links</h2>
+{% assign links = links | shuffle %}
+<ul>
+    {%- for link in links limit: 5 -%}
+    <li>
+        <a target="_blank" href="{{link.link}}">{{link.label}}</a>
+    </li>
     {%- endfor -%}
-    window.location.href = surprise[parseInt(Math.random()*surprise.length)];
-</script>
+    <li><a href="/links">more...</a></li>
+</ul>
+<h2><a href="https://elk.bolha.one/mastodon.world/@sombriks">Social</a></h2>
+<!-- Get a user's latest posts -->
+<fed-embed data-user="https://mastodon.world/@sombriks"></fed-embed>
+<!-- Note the version number in the URL -->
+<script src="//cdn.jsdelivr.net/gh/andy-blum/fed-embed@1.0.0/dist/fed-embed.min.js"></script>
+
+<!--<script>-->
+<!--    const surprise = [];-->
+<!--    {% assign posts = collections.posts | noDraft %}-->
+<!--    {%- for post in posts reversed -%}-->
+<!--    surprise.push("{{post.page.url}}");-->
+<!--    {%- endfor -%}-->
+<!--    window.location.href = surprise[parseInt(Math.random()*surprise.length)];-->
+<!--</script>-->
 

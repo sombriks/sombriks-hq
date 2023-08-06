@@ -1,6 +1,8 @@
 <style webc:scoped>
     .contacts {
-        display: flex;
+        /*display: flex;*/
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
     }
 </style>
 <div class="contacts">
