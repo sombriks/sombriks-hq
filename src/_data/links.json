@@ -768,5 +768,15 @@
       "yaml",
       "this language should not be take that serious"
     ]
+  },
+  {
+    "label": "my guest article at javalin.io",
+    "link": "https://javalin.io/tutorials/javalin-logging",
+    "tags": [
+      "javalin",
+      "logging",
+      "logs",
+      "i really like javalin and it's openness to community"
+    ]
   }
 ]
