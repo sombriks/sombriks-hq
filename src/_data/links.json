@@ -778,5 +778,16 @@
       "logs",
       "i really like javalin and it's openness to community"
     ]
+  },
+  {
+    "label": "THE proper vay to set up the desired jdk on mac, disabling the others!",
+    "link": "https://mrzhubin.wordpress.com/2020/11/23/install-multiple-jdk-on-macos/",
+    "tags": [
+      "mac",
+      "java",
+      "jdk",
+      "multiples jdk's",
+      "i first saw this at stackoverflow but i lost the link so here it goes"
+    ]
   }
 ]
