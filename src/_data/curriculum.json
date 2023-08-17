@@ -35,7 +35,7 @@
         {
           "title": "kotlin",
           "icon": "icon-kotlin",
-          "stars": "3"
+          "stars": "4"
         },
         {
           "title": "go",
@@ -130,6 +130,16 @@
         {
           "title": "aws",
           "icon": "icon-amazonaws",
+          "stars": "4"
+        },
+        {
+          "title": "docker",
+          "icon": "icon-docker",
+          "stars": "4"
+        },
+        {
+          "title": "kubernetes",
+          "icon": "icon-kubernetes",
           "stars": "3"
         },
         {
@@ -141,16 +151,6 @@
           "title": "digital ocean",
           "icon": "icon-digitalocean",
           "stars": "3"
-        },
-        {
-          "title": "docker",
-          "icon": "icon-docker",
-          "stars": "3"
-        },
-        {
-          "title": "kubernetes",
-          "icon": "icon-kubernetes",
-          "stars": "2"
         }
       ]
     },
@@ -197,13 +197,15 @@
         },
         {
           "name": "application team at markerr",
-          "description": "maintaining and evolving data service subsystem",
+          "description": "maintaining and evolving end to end real state intelligence product",
           "responsibilities": [
             "code development",
             "creation of testing steps",
             "module evolution roadmap",
             "code review on pull requests from team members",
-            "some infrastructure for release versioning and publishing"
+            "frontend and backend implementation",
+            "infrastructure for release versioning and publishing of internal libraries",
+            "automation building for application image building, publishing and deployment"
           ]
         }
       ],
@@ -211,6 +213,13 @@
         "Java",
         "Kotlin",
         "microservices",
+        "docker",
+        "kubernetes",
+        "kafka",
+        "aws-ecs",
+        "aws-ecr",
+        "aws-eks",
+        "aws-msk",
         "mysql",
         "postgresql",
         "spring boot",
@@ -330,6 +339,7 @@
         "github",
         "REST",
         "Rails",
+        "docker",
         "migrations",
         "serverless"
       ]
@@ -751,14 +761,22 @@
   ],
   "education": [
     {
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "site": "https://estacio.br",
+      "institution": "Estácio",
+      "type": "College / Higher education / EAD",
+      "description": "In order to keep up my superior degree studies i left Computer Engineering and started this remote-first course.",
+      "start": "2023-08-10",
+      "end": "present day"
+    },
+    {
       "course": "Engenharia de Computação",
       "site": "https://ifce.edu.br",
       "institution": "IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará",
       "type": "Engineering college / higher education",
       "description": "After a while i started the Engineering course, however i already had a full time job.",
       "start": "2007",
-      "end": "present day",
-      "color": "lime"
+      "end": "2023 - did not graduated, changed course"
     },
     {
       "course": "Desenvolvimento de Software",
@@ -767,8 +785,7 @@
       "type": "Technician/secondary school",
       "description": "I started my professional studies there. Technician level.",
       "start": "2004",
-      "end": "2006",
-      "color": "lime"
+      "end": "2006"
     }
   ],
   "contacts": [
