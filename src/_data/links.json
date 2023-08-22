@@ -799,5 +799,14 @@
       "old",
       "i used to play this flash game ages ago, like 2010 or earlier"
     ]
+  },
+  {
+    "label": "The instance safeguard. JS is a weirdo.",
+    "link": "https://stackoverflow.com/questions/22211755/function-f-if-this-instanceof-f-return-new-f/22211771#22211771",
+    "tags": [
+      "javascript",
+      "defensive programming",
+      "from the time where one would never, never ever trust a single line of javascript"
+    ]
   }
 ]
