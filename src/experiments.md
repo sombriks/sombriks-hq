@@ -15,14 +15,6 @@ useful repositories present on [my github](https://github.com/sombriks?tab=repos
 Therefore, i'll add here not only _finished_ solutions, but also my exploration
 projects.
 
-## [rosetta-beer-store](https://github.com/sombriks/rosetta-beer-store)
-
-This is a very cool test project. Here i redo several times interchageable
-clients and services, proving that separation offers such great degree of
-transparency between solution layers but also producing some comments on which
-approach is simper, which one is easier, and who gets more performance. It's a
-must-see if you're in the process to choose technologies for your next big thing.
-
 ## [node-libgpiod](https://github.com/sombriks/node-libgpiod)
 
 This project is a wrapper for libgpiod to nodejs. By the time i decided to build
@@ -39,7 +31,8 @@ This project is open for contributions, ;-)
 
 ## [koa-api-builder](https://github.com/sombriks/koa-api-builder)
 
-A koa library to build apis, heavily inspired on [Javalin](https://javalin.io).
+A [Koa](https://koajs.org) library to build apis, heavily inspired on
+[Javalin](https://javalin.io).
 
 I felt the need on some of my personal projects, did a quick search on
 [Koa ecosystem](https://github.com/koajs/koa/wiki#routing-and-mounting) but
@@ -91,6 +84,28 @@ fast track into trainee positions.
 
 They are outdated right now but still worth as a picture of the state of node
 and javascript development back in 2016.
+
+## [rosetta-beer-store](https://github.com/sombriks/rosetta-beer-store)
+
+This is a very cool test project. Here i redo several times interchageable
+clients and services, proving that separation offers such great degree of
+transparency between solution layers but also producing some comments on which
+approach is simper, which one is easier, and who gets more performance. It's a
+must-see if you're in the process to choose technologies for your next big thing.
+
+## [sample-firebase](https://github.com/sombriks/sample-firebase)
+
+A template project for those who wants to combine the power of vue and firebase.
+
+Everything is sampled, even the local environment for firebase.
+
+The template can be very useful, a good reference on how to proper setup a
+firebase project.
+
+## [simple-knex-koa-example](https://github.com/sombriks/simple-knex-koa-example)
+
+A template project in case someone (mostly me, I and myself!) needs a quickstart
+backend node project.
 
 ## [game inspirator](https://sombriks.github.io/random-game-inspirator/#/inspirator)
 

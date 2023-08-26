@@ -48,6 +48,10 @@ code {
   align-items: center;
 }
 
+.outer-container .feed-social ul {
+  max-width:40vw;
+}
+
 div.comparison-box {
   display:flex;
 }
@@ -62,11 +66,17 @@ div.comparison-box>div {
   .outer-container {
       max-width: 60%;
   }
+  .outer-container .feed-social ul {
+    max-width:40vw;
+  }
 }
 
 @media (max-width: 1280px) {
   .outer-container {
       max-width: 70%;
+  }
+  .outer-container .feed-social ul {
+    max-width:50vw;
   }
 
   div.comparison-box {
@@ -79,17 +89,26 @@ div.comparison-box>div {
   .outer-container {
       max-width: 75%;
   }
+  .outer-container .feed-social ul {
+    max-width:60vw;
+  }
 }
 
 @media (max-width: 640px) {
   .outer-container {
       max-width: 80%;
   }
+  .outer-container .feed-social ul {
+    max-width:80vw;
+  }
 }
 
 @media (max-width: 480px) {
   .outer-container {
       max-width: 90%;
+  }
+  .outer-container .feed-social ul {
+    max-width:90vw;
   }
 }
 
