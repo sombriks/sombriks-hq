@@ -37,6 +37,18 @@ input/output interface and put that on npm registry
 
 This project is open for contributions, ;-)
 
+## [koa-api-builder](https://github.com/sombriks/koa-api-builder)
+
+A koa library to build apis, heavily inspired on [Javalin](https://javalin.io).
+
+I felt the need on some of my personal projects, did a quick search on
+[Koa ecosystem](https://github.com/koajs/koa/wiki#routing-and-mounting) but
+found nothing like what i wanted.
+[So i opened a pull request](https://github.com/koajs/router/pull/167).
+
+But the PR did more sense as an independent library so this experiment came to
+life.
+
 ## [koa-webc middleware](https://github.com/sombriks/koa-webc)
 
 Small middleware to render [WebC](https://github.com/11ty/webc) components from
@@ -50,8 +62,6 @@ might finally getting traction and the server side capabilities of WebC can help
 even further to fast track the adoption.
 
 ## [palavrim](https://github.com/sombriks/palavrim)
-
-**UPDATE**: i am rewriting it.
 
 This one is yet another wordle mutated clone.
 
@@ -81,6 +91,10 @@ fast track into trainee positions.
 
 They are outdated right now but still worth as a picture of the state of node
 and javascript development back in 2016.
+
+## [game inspirator](https://sombriks.github.io/random-game-inspirator/#/inspirator)
+
+Small experiment to test [dexie.js](https://dexie.org/) database.
 
 ## _more to come_
 
