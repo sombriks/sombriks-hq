@@ -1,28 +1,17 @@
 {
   "name": "sombriks-hq",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "private": true,
   "scripts": {
-    "predev": "npm run clean",
     "dev": "eleventy --serve --incremental",
     "dev:debug": "DEBUG=Eleventy* eleventy --serve --incremental",
-    "build": "eleventy",
-    "local": "dotenv-run-script .env .env.local --",
-    "prerelease": "npm run build",
-    "release": "node -r dotenv-flow/config .ops/tasks/s3-deploy.mjs",
-    "clean": "node -r dotenv-flow/config .ops/tasks/clean-local.mjs"
+    "build": "eleventy"
   },
-  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "@11ty/eleventy-plugin-webc": "^0.11.0",
-    "@11ty/webc": "^0.11.3",
-    "aws-sdk": "^2.1314.0",
-    "dotenv-flow": "^3.2.0",
-    "dotenv-run-script": "^0.2.0",
-    "mime-types": "^2.1.35",
-    "node-find-files": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "@11ty/webc": "^0.11.4",
     "prism-themes": "^1.9.0"
   }
 }
