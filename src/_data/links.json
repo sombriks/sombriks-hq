@@ -808,5 +808,14 @@
       "defensive programming",
       "from the time where one would never, never ever trust a single line of javascript"
     ]
+  },
+  {
+    "label": "How to choose a linux distro",
+    "link": "https://distrochooser.de",
+    "tags": [
+      "linux",
+      "choose a distro",
+      "the tool looks accurate, the options really like something i could use"
+    ]
   }
 ]
