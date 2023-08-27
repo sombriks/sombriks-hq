@@ -111,6 +111,14 @@ backend node project.
 
 Small experiment to test [dexie.js](https://dexie.org/) database.
 
+## [vue-openlayers](https://github.com/sombriks/vue-openlayers)
+
+Back in time i did this cool openlayers wrapper for vue2 to use on some
+hybrid-mobile applications i wrote during my startup days at
+[thechpar](https://github.com/techpar).
+
+Its archived but still a nice piece of code and now a snapshot of a time
+
 ## _more to come_
 
 This list is a work in progress, if i create something new or find some
