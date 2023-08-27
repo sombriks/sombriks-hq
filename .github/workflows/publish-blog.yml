@@ -8,25 +8,26 @@ env:
   AWS_REGION: ${{secrets.AWS_REGION}}
   AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
   AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-  AWS_BUCKET_NAME: ${{secrets.AWS_BUCKET_NAME}}
-  HQ_DIST_SITE_FOLDER: ${{secrets.HQ_DIST_SITE_FOLDER}}
+  AWS_S3_BUCKET: ${{secrets.AWS_BUCKET_NAME}}
+  SOURCE_DIR: ${{secrets.HQ_DIST_SITE_FOLDER}}
   
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
+
     steps:
     - name: Checkout 
       uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Prepare Node.js
       uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
         
-    - name: npm install and publish
+    - name: Build static site
       run: |
         npm install
-        npm run release
+        npm run build
+    
+    - name: S3 upload
+      uses: jakejarvis/s3-sync-action@v0.5.1
+      with:
+        args: --acl public-read --follow-symlinks --delete
