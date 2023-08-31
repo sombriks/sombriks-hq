@@ -1,6 +1,7 @@
 ---
 layout: base.webc
 ---
+<link rel="webmention" href="https://webmention.io/sombriks.com/webmention" />
 <tag-line></tag-line><br/>
 <div style="width:100%;" webc:nokeep @raw="content"></div><br/><br/>
 <tag-line></tag-line>
