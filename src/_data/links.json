@@ -817,5 +817,14 @@
       "choose a distro",
       "the tool looks accurate, the options really like something i could use"
     ]
+  },
+  {
+    "label": "React is a joke. A clever joke but still a joke",
+    "link": "https://stackoverflow.com/a/56910429/420096",
+    "tags": [
+      "react",
+      "hooks",
+      "events should simple bubble up"
+    ]
   }
 ]

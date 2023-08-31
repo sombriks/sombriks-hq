@@ -10,6 +10,7 @@ env: # TODO use new env names needed by s3-sync-action
   AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
   AWS_S3_BUCKET: ${{secrets.AWS_BUCKET_NAME}}
   SOURCE_DIR: ${{secrets.HQ_DIST_SITE_FOLDER}}
+  AWS_CF_DIST_ID: ${{secrets.AWS_CF_DIST_ID}}
   
 jobs:
   build:
@@ -31,3 +32,7 @@ jobs:
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
         args: --follow-symlinks --delete
+
+    - name: Clear cloudfront cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CF_DIST_ID }} --paths "/*"

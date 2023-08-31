@@ -35,8 +35,9 @@ When the solution takes longer to come, mailbox flood begins.
 
 ## The solution: [ACT](https://github.com/nektos/act) over the problem
 
-Act is a command-line tool that allows you to run github pipelines locally,
-thanks to a clever combination of [docker](https://www.docker.com/) and
+[Act](https://nektosact.com/introduction.html) is a command-line tool that
+allows you to run github pipelines locally, thanks to a clever combination of
+[docker](https://www.docker.com/) and
 [self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners).
 
 It solves the need of commit every single change made in the pipeline; instead
