@@ -826,5 +826,14 @@
       "hooks",
       "events should simple bubble up"
     ]
+  },
+  {
+    "label": "Which sdk level your android app intend to support?",
+    "link": "https://apilevels.com/",
+    "tags": [
+      "android",
+      "sdk",
+      "api level"
+    ]
   }
 ]
