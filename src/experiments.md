@@ -54,6 +54,11 @@ quite beautiful and simple to use.
 might finally getting traction and the server side capabilities of WebC can help
 even further to fast track the adoption.
 
+## [simple-knex-koa-example](https://github.com/sombriks/simple-knex-koa-example)
+
+A template project in case someone (mostly me, I and myself!) needs a quickstart
+backend node project.
+
 ## [palavrim](https://github.com/sombriks/palavrim)
 
 This one is yet another wordle mutated clone.
@@ -93,6 +98,15 @@ transparency between solution layers but also producing some comments on which
 approach is simper, which one is easier, and who gets more performance. It's a
 must-see if you're in the process to choose technologies for your next big thing.
 
+## [my-golang-handbook](https://github.com/sombriks/my-golang-handbook)
+
+I gathered all my [golang](https://go.dev/) studies into one single easy to
+understand repository.
+
+## [react-studies](https://sombriks.github.io/react-studies/)
+
+My small react study project.
+
 ## [sample-firebase](https://github.com/sombriks/sample-firebase)
 
 A template project for those who wants to combine the power of vue and firebase.
@@ -102,12 +116,7 @@ Everything is sampled, even the local environment for firebase.
 The template can be very useful, a good reference on how to proper setup a
 firebase project.
 
-## [simple-knex-koa-example](https://github.com/sombriks/simple-knex-koa-example)
-
-A template project in case someone (mostly me, I and myself!) needs a quickstart
-backend node project.
-
-## [game inspirator](https://sombriks.github.io/random-game-inspirator/#/inspirator)
+## [game _inspirator_](https://sombriks.github.io/random-game-inspirator/#/inspirator)
 
 Small experiment to test [dexie.js](https://dexie.org/) database.
 
