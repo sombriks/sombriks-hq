@@ -835,5 +835,15 @@
       "sdk",
       "api level"
     ]
+  },
+  {
+    "label": "Beware of maven classifiers!",
+    "link": "https://maven.apache.org/plugins/maven-deploy-plugin/examples/deploying-with-classifiers.html",
+    "tags": [
+      "maven",
+      "dependencies",
+      "classifier",
+      "i spent hours trying to understand what was that plain in the jar name"
+    ]
   }
 ]
