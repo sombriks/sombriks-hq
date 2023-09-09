@@ -15,6 +15,7 @@ layout: base.webc
   document.addEventListener("DOMContentLoaded",() => {
     const theFilter = document.getElementById("the-filter");
     theFilter.addEventListener("keyup", () => {
+      theFilter.value = theFilter.value.toLowerCase()
       for(let link of document.getElementsByClassName("cool-links")) {
         if(link.title.toLowerCase().includes(theFilter.value) || 
         link.innerText.toLocaleLowerCase().includes(theFilter.value)) {
