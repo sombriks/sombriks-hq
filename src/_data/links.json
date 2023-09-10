@@ -284,10 +284,13 @@
     ]
   },
   {
-    "link": "https://www.mitchellbosecke.com/post/java-proxies-from-dog-to-transactionaldog",
+    "link": "https://blog.zvestov.cz/software%20development/2021/01/28/java-proxy-od-psa-k-transakcnimu-psovi.html",
     "label": "The transactional dog",
     "tags": [
-      "broken link"
+      "broken link",
+      "slovenian",
+      "how java proxies works",
+      "previous link was broken"
     ]
   },
   {
