@@ -857,5 +857,14 @@
       "loss of precision",
       "this is so good that need no funny label"
     ]
+  },
+  {
+    "label": "How a computer works",
+    "link": "https://cpu.land/",
+    "tags": [
+      "cpu",
+      "machine code",
+      "this is a cool way to understand processors"
+    ]
   }
 ]
