@@ -284,10 +284,13 @@
     ]
   },
   {
-    "link": "https://www.mitchellbosecke.com/post/java-proxies-from-dog-to-transactionaldog",
+    "link": "https://blog.zvestov.cz/software%20development/2021/01/28/java-proxy-od-psa-k-transakcnimu-psovi.html",
     "label": "The transactional dog",
     "tags": [
-      "broken link"
+      "broken link",
+      "slovenian",
+      "how java proxies works",
+      "previous link was broken"
     ]
   },
   {
@@ -854,6 +857,24 @@
       "colors",
       "script",
       "it must be fun to have proper colors on your terminal"
+    ]
+  },
+  {
+    "label": "https://0.30000000000000004.com/",
+    "link": "https://0.30000000000000004.com/",
+    "tags": [
+      "floating point numbers",
+      "loss of precision",
+      "this is so good that need no funny label"
+    ]
+  },
+  {
+    "label": "How a computer works",
+    "link": "https://cpu.land/",
+    "tags": [
+      "cpu",
+      "machine code",
+      "this is a cool way to understand processors"
     ]
   }
 ]
