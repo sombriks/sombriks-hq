@@ -845,5 +845,15 @@
       "classifier",
       "i spent hours trying to understand what was that plain in the jar name"
     ]
+  },
+  {
+    "label": "In case you want/like colors on your bash scripts",
+    "link": "https://misc.flogisoft.com/bash/tip_colors_and_formatting?fbclid=IwAR3Fwy19ENPT_Hv7q0rjN-_54_iFkOuNHdosmfvEytYR0OvTMkf19q_UGsI",
+    "tags": [
+      "bash",
+      "colors",
+      "script",
+      "it must be fun to have proper colors on your terminal"
+    ]
   }
 ]
