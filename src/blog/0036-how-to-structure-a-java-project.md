@@ -240,3 +240,6 @@ in early 2000's and then show maven project structure, which is the _de-facto_
 java project layout standard nowadays.
 
 But that is already made by eclipse, netbeans, intellij and many others.
+
+You can see the source code for this article
+[here](https://github.com/sombriks/java-project-1).
