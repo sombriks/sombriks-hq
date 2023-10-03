@@ -876,5 +876,18 @@
       "machine code",
       "this is a cool way to understand processors"
     ]
+  },
+  {
+    "label": "embedded NoSQL database for node and the impatient people",
+    "link": "https://github.com/Level/level",
+    "tags": [
+      "NoSQL",
+      "node",
+      "database",
+      "just like SQLite but for NoSQL scenarios",
+      "good for prototyping",
+      "bad for production",
+      "you where warned"
+    ]
   }
 ]
