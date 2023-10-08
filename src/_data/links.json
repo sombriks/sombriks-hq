@@ -889,5 +889,16 @@
       "bad for production",
       "you where warned"
     ]
+  },
+  {
+    "label": "Remember to install sign keys into your openSUSE installation",
+    "link": "https://forums.opensuse.org/t/leap-42-1-cannot-install-google-chrome-stable/112111/8",
+    "tags": [
+      "linux", 
+      "opensuse", 
+      "rpm", 
+      "keys", 
+      "without the key you have to use terminal to ignore the NOKEY and install chrome"
+    ]
   }
 ]
