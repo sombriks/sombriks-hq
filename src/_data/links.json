@@ -894,11 +894,24 @@
     "label": "Remember to install sign keys into your openSUSE installation",
     "link": "https://forums.opensuse.org/t/leap-42-1-cannot-install-google-chrome-stable/112111/8",
     "tags": [
-      "linux", 
-      "opensuse", 
-      "rpm", 
-      "keys", 
+      "linux",
+      "opensuse",
+      "rpm",
+      "keys",
       "without the key you have to use terminal to ignore the NOKEY and install chrome"
+    ]
+  },
+  {
+    "label": "i always forget how to proper setup gdm in multi-monitor setup",
+    "link": "https://askubuntu.com/a/1048966/308569",
+    "tags": [
+      "linux",
+      "gnome",
+      "gdm",
+      "monitor",
+      "display",
+      "multi-monitor",
+      "this is simple yet annoying, but boy i still have to open the lid to fire-up the machine."
     ]
   }
 ]
