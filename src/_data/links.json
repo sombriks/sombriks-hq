@@ -902,7 +902,7 @@
     ]
   },
   {
-    "label": "i always forget how to proper setup gdm in multi-monitor setup",
+    "label": "I always forget how to proper setup gdm in multi-monitor setup",
     "link": "https://askubuntu.com/a/1048966/308569",
     "tags": [
       "linux",
@@ -912,6 +912,18 @@
       "display",
       "multi-monitor",
       "this is simple yet annoying, but boy i still have to open the lid to fire-up the machine."
+    ]
+  },
+  {
+    "label": "Case your openSUSE doesn't show japanese characters properly",
+    "link": "https://mastodon.world/@sombriks/111208937629479199",
+    "tags": [
+      "linux",
+      "opensuse",
+      "postinstall",
+      "fonts",
+      "several issues with this installation",
+      "but it's good to have a second distinct environment around"
     ]
   }
 ]
