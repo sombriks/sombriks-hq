@@ -24,7 +24,7 @@ scenario and see how things evolve.
 
 ## Why java projects structure are the way they are? How that disaster happened?
 
-Well, let's visit our 
+Well, let's visit our
 [sample project](https://github.com/sombriks/how-to-structure-java-projects)
 and add one external dependency:
 
@@ -81,7 +81,7 @@ java programmers where incapable of read or create
 [Makefiles](https://www.gnu.org/software/make/manual/make.html).
 
 Every ant-managed project has a file called `build.xml` and this file defines
-**targets**. 
+**targets**.
 
 Those targets can depend on each other in order to complete the **tasks**
 defined within them:
@@ -302,7 +302,7 @@ mvn clean package
 java -cp ~/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:target/06-maven-project-1.0-SNAPSHOT.jar sample.structure.HelloThere
 ```
 
-You can make use of a maven plugin to avoid such horrific command line. 
+You can make use of a maven plugin to avoid such horrific command line.
 
 Modify your pom.xml and add the [exec plugin](https://www.mojohaus.org/exec-maven-plugin/java-mojo.html):
 
@@ -422,12 +422,18 @@ instead of xml to declare the project configuration, people thought it was a
 good idea to use a full-featured [scripting language](https://groovy-lang.org/)
 to do this mostly declarative job, spicing up things with occasional scripts.
 
-It also showcases a daemon so incremental builds can be performed faster at the
+It also showcases a daemon, so incremental builds can be performed faster at the
 symbolic cost of 1GB of RAM. Good DX, bad on CI/CD pipelines.
 
-The command line to create a gradle project is a bit faulty, even trying to pass
-all possible parameters it still falls into a interactive prompt, but here goes
-our best shot:
+~~The command line to create a gradle project is a bit faulty, even trying to~~
+~~pass all possible parameters it still falls into a interactive prompt, but~~
+~~here goes our best shot:~~
+
+**UPDATE**: soon will be possible to use one single command line to create a
+java application gradle project thanks to
+[this PR](https://github.com/gradle/gradle/pull/26670).
+
+The command follows:
 
 ```bash
 cd 07-gradle-project
@@ -437,7 +443,8 @@ gradle init \
   --test-framework junit-jupiter \
   --package sample.structure \
   --project-name 07-gradle-project \
-  --no-split-project
+  --no-split-project \
+  --java-version 17
 ```
 
 After answering the final items, you earn this project layout:
