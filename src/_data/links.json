@@ -925,5 +925,16 @@
       "several issues with this installation",
       "but it's good to have a second distinct environment around"
     ]
+  },
+  {
+    "label": "How to configure postgres on bare metal, still valid today",
+    "link": "https://sombriks.blogspot.com/2013/01/configuracao-inicial-do-postgresql.html",
+    "tags": [
+      "postgres",
+      "sql",
+      "database",
+      "configuration",
+      "ten years and the guide still works, nice!"
+    ]
   }
 ]
