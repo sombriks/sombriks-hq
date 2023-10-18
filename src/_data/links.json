@@ -936,5 +936,15 @@
       "configuration",
       "ten years and the guide still works, nice!"
     ]
+  },
+  {
+    "label": "sometimes we need to do horrible things like learn EKS",
+    "link": "https://github.com/aws-samples/eks-workshop-v2",
+    "tags": [
+      "aws",
+      "eks",
+      "kubernetes",
+      "seriously how this thing can be so complicated and so popular?"
+    ]
   }
 ]
