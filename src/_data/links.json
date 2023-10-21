@@ -946,5 +946,16 @@
       "kubernetes",
       "seriously how this thing can be so complicated and so popular?"
     ]
+  },
+  {
+    "label": "If you really really need require when you're having a good time doing import",
+    "link": "https://stackoverflow.com/a/75420137/420096",
+    "tags": [
+      "es6",
+      "commonsjs",
+      "require",
+      "import",
+      "i think it's fun we have so many interop options yet js bros keep complaining"
+    ]
   }
 ]
