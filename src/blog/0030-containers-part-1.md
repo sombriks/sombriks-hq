@@ -3,6 +3,7 @@ layout: blog-base.webc
 tags: 
   - posts
   - docker
+  - container
   - docker-compose
 date: 2022-05-04
 ---

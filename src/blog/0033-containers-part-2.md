@@ -4,8 +4,9 @@ tags:
   - posts
   - docker
   - podman
-  - docker-compose
+  - container
   - container registry
+  - docker-compose
   - aws
 date: 2022-05-23
 ---
