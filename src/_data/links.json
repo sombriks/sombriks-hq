@@ -957,5 +957,14 @@
       "import",
       "i think it's fun we have so many interop options yet js bros keep complaining"
     ]
+  },
+  {
+    "label": "Very cool database genealogy",
+    "link": "https://hpi.de/naumann/projects/rdbms-genealogy.html",
+    "tags": [
+      "database",
+      "history",
+      "i like lineage charts"
+    ]
   }
 ]
