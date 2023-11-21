@@ -966,5 +966,17 @@
       "history",
       "i like lineage charts"
     ]
+  },
+  {
+    "label": "That post installation setup for AMD Thinkpads",
+    "link": "https://www.reddit.com/r/thinkpad/comments/16n3yvc/how_i_got_amazing_battery_life_and_little_fan/",
+    "tags": [
+      "linux",
+      "battery",
+      "thinkpad",
+      "setup",
+      "config",
+      "yes it drains a lot"
+    ]
   }
 ]
