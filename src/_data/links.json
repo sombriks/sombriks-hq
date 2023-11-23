@@ -967,5 +967,26 @@
       "metrics-server",
       "kind is cool and it's a sound way to test things before apply in a real cluster but even so you need a tweak sometimes"
     ]
+  },
+  {
+    "label": "Very cool database genealogy",
+    "link": "https://hpi.de/naumann/projects/rdbms-genealogy.html",
+    "tags": [
+      "database",
+      "history",
+      "i like lineage charts"
+    ]
+  },
+  {
+    "label": "That post installation setup for AMD Thinkpads",
+    "link": "https://www.reddit.com/r/thinkpad/comments/16n3yvc/how_i_got_amazing_battery_life_and_little_fan/",
+    "tags": [
+      "linux",
+      "battery",
+      "thinkpad",
+      "setup",
+      "config",
+      "yes it drains a lot"
+    ]
   }
 ]

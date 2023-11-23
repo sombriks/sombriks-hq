@@ -74,6 +74,18 @@ with a given delay.
 It's a very simple, very humble library so i can reuse it in some frontends more
 easily.
 
+## [postman-rpm](https://github.com/sombriks/postman-rpm)
+
+I got very annoyed by the lack of care for linux users from postman team, having
+3rd parties handling the flatpak version of its product, so i decided to package
+it myself as a rpm.
+
+It was very fun to understand how a rpm package works and all the legal issues
+around that.
+
+I do hope to go back to the flatpak version at some point, but for now i solved
+myself the problem of have a proper system-wide installed postman.
+
 ## [simple-java-run-cmd](https://github.com/sombriks/simple-java-run-cmd)
 
 This small library helps with process execution and management by a java process.
