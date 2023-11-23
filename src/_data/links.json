@@ -957,5 +957,15 @@
       "import",
       "i think it's fun we have so many interop options yet js bros keep complaining"
     ]
+  },
+  {
+    "label": "if you need to run metrics-server on kind",
+    "link": "https://gist.github.com/sanketsudake/a089e691286bf2189bfedf295222bd43?permalink_comment_id=3914458#gistcomment-3914458",
+    "tags": [
+      "kind",
+      "kubernetes",
+      "metrics-server",
+      "kind is cool and it's a sound way to test things before apply in a real cluster but even so you need a tweak sometimes"
+    ]
   }
 ]
