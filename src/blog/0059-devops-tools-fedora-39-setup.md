@@ -93,6 +93,10 @@ docker run hello-world
 Everything runs on kubernetes clusters nowadays so you have to have it ready for
 tests, emergency deploys or any other cryptic need.
 
+### Official tool
+
+One way to get this is to follow the official guide:
+
 ```bash
 # configure yum repo for installation and updates
 # This overwrites any existing configuration in /etc/yum.repos.d/kubernetes.repo
@@ -110,6 +114,16 @@ EOF
 # install the cli
 sudo dnf install kubectl
 ```
+
+### From fedora repo
+
+Another way is to simply:
+
+```bash
+sudo dnf install kubernetes-client
+```
+
+### Bash completion
 
 Remember to configure completion for kubectl:
 
@@ -178,6 +192,64 @@ export PATH="$PATH:$HOME/go/bin"
 source <(kind completion bash)
 ```
 
+## Use k0s instead of kind
+
+Regarding the local cluster, other cool option is [k0s][13].
+
+But keep in mind, **pick only one provider for local cluster**. You need a clean
+house in order to proper mess around and find out, ;-)
+
+```bash
+curl -sSLf https://get.k0s.sh | sudo sh
+sudo k0s install controller --single
+sudo k0s start
+```
+
+One cool thing about k0s is it already comes with [metrics-server][14]:
+
+```bash
+[sombriks@lucien ~]$ sudo k0s kubectl get deployments --all-namespaces -o wide
+NAMESPACE     NAME             READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS       IMAGES                                                 SELECTOR
+kube-system   coredns          0/1     1            0           20h   coredns          quay.io/k0sproject/coredns:1.11.1                      k8s-app=kube-dns
+kube-system   metrics-server   0/1     1            0           20h   metrics-server   registry.k8s.io/metrics-server/metrics-server:v0.6.4   k8s-app=metrics-server
+```
+
+And as you can imagine, you can install completion for that tool too:
+
+```bash
+source <(k0s completion bash)
+```
+
+## Combine kubectl configs with yaml-merge
+
+Dealing with several clusters, local and remote, can be crumblesome.
+
+Each tool has a way to provide `~/kube/config` for you, but they don't talk to
+each other out of the box.
+
+One simple solution is to generate several configs and merge them using
+[yaml-merge][15].
+
+Quite easy to install:
+
+```bash
+sudo npm -g install yaml-merge
+```
+
+Quite easy to use:
+
+```bash
+# let's take an eks cluster
+aws eks update-kubeconfig --name my-cluster
+# and our local k0s cluster
+sudo k0s kubeconfig admin > ~/.kube/config-k0s
+# then merge those
+mv ~/.kube/config ~/.kube/config-eks
+yaml-merge ~/.kube/config-k0s ~/.kube/config-eks > ~/.kube/config
+```
+
+Of course, there are several ways to get tha merge done, but the tool is useful!
+
 ## Install VSCode and/or Intellij Ultimate
 
 Both IDE's offer a decent kubernetes plugins which comes to be very handy when
@@ -204,3 +276,6 @@ Happy Hacking!
 [10]: https://linuxconfig.org/linux-system-requirements-for-kubernetes
 [11]: https://minikube.sigs.k8s.io/docs/start/
 [12]: https://go.dev/learn/#guided-learning-journeys
+[13]: https://docs.k0sproject.io/latest/install/
+[14]: https://github.com/kubernetes-sigs/metrics-server
+[15]: https://github.com/alexlafroscia/yaml-merge
