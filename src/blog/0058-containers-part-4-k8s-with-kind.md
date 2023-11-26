@@ -245,6 +245,15 @@ curl http://localhost:3000/books
 
 You can port-forward pods, deployments and services.
 
+One useful parameter of port-forward is the
+[address](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward).
+Sometimes you want to check the service _outside_ the node, so you must bind the
+service port with a less restrictive address:
+
+```bash
+kubectl port-forward --address 0.0.0.0 services/simple-knex-koa-service 3000
+```
+
 ### NodePort
 
 It is possible to define the type of the service to
