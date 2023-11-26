@@ -988,5 +988,15 @@
       "config",
       "yes it drains a lot"
     ]
+  },
+  {
+    "label": "How to fix sudoers $PATH",
+    "link": "https://superuser.com/a/927599/204361",
+    "tags": [
+      "linux",
+      "sudo",
+      "path",
+      "my user has the right path, root has the right path, sudoers doesn't"
+    ]
   }
 ]
