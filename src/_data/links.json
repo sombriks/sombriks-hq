@@ -998,5 +998,14 @@
       "path",
       "my user has the right path, root has the right path, sudoers doesn't"
     ]
+  },
+  {
+    "label": "kubectl command line reference",
+    "link": "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward",
+    "tags": [
+      "kubernetes",
+      "kubectl",
+      "for temporary or permanent changes in the cluster here we go"
+    ]
   }
 ]
