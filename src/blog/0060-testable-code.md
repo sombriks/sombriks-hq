@@ -118,36 +118,88 @@ For now on, we'll have an entrypoint and we'll break requests, database and
 queries in distinct modules:
 
 ```javascript
-// index.mjs, entrypoint
-```
-
-```javascript
-// app/main.mjs, endpoints weaving 
-```
-
-```javascript
 // app/database.mjs // database config
-```
+import Knex from 'knex'
 
-```javascript
-// app/requests.mjs // HTTP requests
+export const db = Knex({
+  connection: 'postgresql://postgres:postgres@localhost:5432/bookshop',
+  pool: { min: 1, max: 2 },
+  client: 'pg'
+})
 ```
 
 ```javascript
 // app/services.mjs // database queries mostly
+import { db } from './database.mjs'
+
+export const listBooks = async query =>
+  await db('books').where(query)
+```
+
+```javascript
+// app/requests.mjs // HTTP requests
+import * as services from './services.mjs'
+
+export const listBooks = async ctx =>
+  ctx.body = await services.listBooks(ctx.query)
+```
+
+```javascript
+// app/main.mjs, endpoints weaving 
+import Koa from 'koa'
+import Router from '@koa/router'
+
+import * as requests from './requests.mjs'
+
+export const app = new Koa()
+
+const router = new Router()
+
+router.get('/books', requests.listBooks)
+
+app.use(router.routes())
+app.use(router.allowedMethods())
+```
+
+```javascript
+// index.mjs, entrypoint
+import { app } from "./app/main.mjs"
+
+app.listen(3000)
+console.log(`api listening at http://localhost:3000`)
 ```
 
 Using this new layout we can add a
-[decent test runtime](https://github.com/avajs/ava) and
-[libraries](https://github.com/ladjs/supertest) to embed the requests inside a
+[decent test library](https://github.com/avajs/ava) and
+[other tools](https://github.com/ladjs/supertest) to embed the requests inside a
 test suite:
 
 ```javascript
 // app/app.test.mjs // testing request
+import test from 'ava'
+import request from 'supertest'
 
+import { app } from './main.mjs'
+
+test('should get books', async t => {
+  //app.callback() returns a node http server compatible handler
+  const result = await request(app.callback())
+    .get('/books').expect('Content-Type', /json/)
+  t.is(200, result.status)
+})
 ```
 
+The bonus here is we don't need a running server anymore to check if our request
+is doing what it is supposed to do. We still need the database.
+
+To be fair, not all that modularization was needed just for this integration
+test case, but this will help with the next steps.
+
 ### Environments
+
+Make the code aware that it's under test has great advantages. For instance,
+having a testing environment can help us to get rid of our current dependency of
+a running database when running tests.
 
 ## Mock polemics and unit tests
 
