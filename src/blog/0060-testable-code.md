@@ -201,6 +201,75 @@ Make the code aware that it's under test has great advantages. For instance,
 having a testing environment can help us to get rid of our current dependency of
 a running database when running tests.
 
+We can rely on a local database like [sqlite](https://www.sqlite.org/index.html)
+and a few initial state scripts managed by test suites to be sure about initial
+database state.
+
+In order to make different environments (for instance, development, production
+and test) to the app, we'll use a library called
+[dotenv-flow](https://github.com/kerimdzhanov/dotenv-flow)
+
+This is the best choice because it implements the
+[12-factor](https://12factor.net/) specification very nicely.
+
+We're changing our code again, mainly our database configuration and our test
+suite:
+
+```javascript
+// app/database.mjs // database config
+import Knex from 'knex'
+
+const config = 'test' === process.env.NODE_ENV ? {
+  connection: ':memory:',
+  client: 'sqlite3'
+} : {
+  connection: process.env.PG_CONNECTION_URL,
+  pool: { min: 1, max: 2 },
+  client: 'pg'
+}
+
+export const db = Knex(config)
+```
+
+[The NODE_ENV variable](https://nodejs.org/en/learn/getting-started/nodejs-the-difference-between-development-and-production)
+is a well-know variable used to govern some aspects on node projects.
+
+Given that our example does not use specific database features, it's ok swap
+PostgreSQL with SQLite. Now our testcase must change to provide a known initial
+state for the test database:
+
+```javascript
+import test from 'ava'
+import request from 'supertest'
+
+import { db } from './database.mjs'
+import { app } from './main.mjs'
+
+test.before(async t => {
+  await db.raw(`
+  create table books(
+    id integer not null primary key autoincrement,
+    title text not null,
+    author text not null
+  );
+  
+  insert into books (title, author) values ('American Gods', 'Neil Gaiman');
+  insert into books (title, author) values ('Sandman', 'Neil Gaiman');
+  insert into books (title, author) values ('Watchmen', 'Alan Moore');  
+  `)
+})
+
+test('should get books', async t => {
+  const result = await request(app.callback())
+    .get('/books').expect('Content-Type', /json/)
+  t.is(200, result.status)
+})
+```
+
+There are several other strategies to keep a proper initial state, but
+[database migrations](https://knexjs.org/guide/migrations.html#migration-cli)
+are my favorite.
+
 ## Mock polemics and unit tests
 
 ## Conclusion
