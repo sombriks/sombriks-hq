@@ -11,8 +11,8 @@ tags:
   - good practices
   - SOLID principles
   - CI/CD
-date: 2023-12-02
-draft: true
+date: 2023-12-04
+draft: false
 ---
 # Testable code
 
