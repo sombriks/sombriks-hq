@@ -235,7 +235,7 @@ export const db = Knex(config)
 is a well-know variable used to govern some aspects on node projects.
 
 Given that our example does not use specific database features, it's ok swap
-PostgreSQL with SQLite. Now our testcase must change to provide a known initial
+PostgreSQL with SQLite. Now our testcase must change, to provide a known initial
 state for the test database:
 
 ```javascript
@@ -246,30 +246,227 @@ import { db } from './database.mjs'
 import { app } from './main.mjs'
 
 test.before(async t => {
-  await db.raw(`
-  create table books(
-    id integer not null primary key autoincrement,
-    title text not null,
-    author text not null
-  );
-  
-  insert into books (title, author) values ('American Gods', 'Neil Gaiman');
-  insert into books (title, author) values ('Sandman', 'Neil Gaiman');
-  insert into books (title, author) values ('Watchmen', 'Alan Moore');  
-  `)
+  const trx = await db.transaction()
+  await trx.schema.createTable('books', t => {
+    t.increments('id')
+    t.string('title').notNullable()
+    t.string('author').notNullable()
+  })
+  await trx.commit()
+
+  const trx2 = await db.transaction()
+  await trx2('books').insert([
+    { title: 'American Gods', author: 'Neil Gaiman' },
+    { title: 'Sandman', author: 'Neil Gaiman' },
+    { title: 'Watchmen', author: 'Alan Moore' }
+  ])
+  await trx2.commit()
 })
 
 test('should get books', async t => {
   const result = await request(app.callback())
     .get('/books').expect('Content-Type', /json/)
   t.is(200, result.status)
+  t.is(3, result.body.length)
 })
 ```
 
 There are several other strategies to keep a proper initial state, but
 [database migrations](https://knexjs.org/guide/migrations.html#migration-cli)
-are my favorite.
+are my favorite and i discussed it several times in the past.
 
-## Mock polemics and unit tests
+## Mocks and unit tests
+
+Even though we can fine-tune and tweak the application to be flexible enough by
+just using what we already presented here, sometimes we don't need all living
+parts to test something.
+
+Some pieces of software can be tested without any special arrangement or just
+using some replacement in order to proper test that behavior. Or at least is
+should be possible.
+
+When a test covers just one part of the software we call it unit test. I kinda
+presented things here backwards because unit test is usually the first kind of
+test one could produce, but i did that way because we started with a very
+untestable example.
+
+Even our current code can present us some challenges to perform unit test, so
+we'll rewrite things again:
+
+```javascript
+// app/database.mjs
+import Knex from 'knex'
+
+export class Database {
+
+  _knex = undefined
+
+  get knex() {
+    return this._knex
+  }
+
+  constructor(env, connectionUrl) {
+    if ('test' === env) {
+      this._knex = Knex({
+        connection: ':memory:',
+        client: 'sqlite3',
+        pool: {
+          min: 1,
+          max: 1,
+          idleTimeoutMillis: 360000 * 1000 // see https://github.com/knex/knex/issues/1871
+        }
+      })
+    } else {
+      this._knex = Knex({
+        connection: connectionUrl,
+        pool: { min: 1, max: 2 },
+        client: 'pg'
+      })
+    }
+  }
+}
+```
+
+```javascript
+// app/services.mjs
+export class BookService {
+
+  db = undefined
+
+  constructor(db) {
+    this.db = db
+  }
+
+  async listBooks(query) {
+    return await this.db.knex('books').where(query)
+  }
+}
+```
+
+```javascript
+// app/requests.mjs
+export class BookRequests {
+
+  service = undefined
+
+  constructor(service) {
+    this.service = service
+  }
+
+  async listBooks(ctx) {
+    ctx.body = await this.service.listBooks(ctx.query)
+  }
+}
+```
+
+```javascript
+// app/main.mjs
+import Koa from 'koa'
+import Router from '@koa/router'
+import { Database } from './database.mjs'
+import { BookService } from './services.mjs'
+import { BookRequests } from './requests.mjs'
+
+export const db = new Database(process.env.NODE_ENV, process.env.PG_CONNECTION_URL)
+const service = new BookService(db)
+const requests = new BookRequests(service)
+export const app = new Koa()
+const router = new Router()
+
+router.get('/books', requests.listBooks.bind(requests))
+
+app.use(router.routes())
+app.use(router.allowedMethods())
+```
+
+Classes are _blueprints_ of what we want. They also ease the job of proper use
+of dependency inversion, [the D in SOLID](https://en.wikipedia.org/wiki/SOLID).
+
+Our previous testcase will look pretty much the same:
+
+```javascript
+import test from 'ava'
+import request from 'supertest'
+
+import { app, db } from './main.mjs'
+
+test.before(async t => {
+  const trx = await db.knex.transaction()
+  await trx.schema.createTable('books', t => {
+    t.increments('id')
+    t.string('title').notNullable()
+    t.string('author').notNullable()
+  })
+  await trx.commit()
+
+  const trx2 = await db.knex.transaction()
+  await trx2('books').insert([
+    { title: 'American Gods', author: 'Neil Gaiman' },
+    { title: 'Sandman', author: 'Neil Gaiman' },
+    { title: 'Watchmen', author: 'Alan Moore' }
+  ])
+  await trx2.commit()
+})
+
+test('should get books', async t => {
+  const result = await request(app.callback())
+    .get('/books').expect('Content-Type', /json/)
+  t.is(200, result.status)
+  t.is(3, result.body.length)
+})
+```
+
+But now we can write a testcase like this:
+
+```javascript
+// app/requests.test.mjs
+import test from 'ava'
+import sinon from 'sinon'
+
+import { BookService } from './services.mjs'
+import { BookRequests } from './requests.mjs'
+
+test.before(t => {
+  t.context = [
+    { title: 'American Gods', author: 'Neil Gaiman' },
+    { title: 'Sandman', author: 'Neil Gaiman' }
+  ]
+})
+
+test('should call listBook request', async t => {
+
+  const service = sinon.createStubInstance(BookService)
+  service.listBooks.resolves(t.context)
+
+  const requests = new BookRequests(service)
+  const ctx = { query: { author: 'Neil Gaiman' } }
+
+  await requests.listBooks(ctx)
+
+  t.true(service.listBooks.called)
+  t.is(ctx.body, t.context)
+})
+```
+
+Where we can use a mock library called
+[sinon](https://sinonjs.org/releases/latest/mocks/) and instead of perform all
+heavy-lift of up entire application, we just pick one component to test and fake
+everything else.
+
+The main advantage of unit testing and mocking dependencies is the **speed**.
+The drawback is of course the missing parts. It is possible that one unit test
+passes while integration and E2E fail.
+
+All in all, unit tests are self-contained, fast and usually reliable.
 
 ## Conclusion
+
+Writing tests is the best way to grow confidence on the code regarding what it
+is supposed to do. In a ever-evolving software solution, the complete test suite
+is what keep us on track about how things are supposed to behave.
+
+For future steps i recommend a good read on Continuous Integration, since the
+tests must run (and always pass!) regularly.
+
+As aways, the complete source code can be found
+[here](https://github.com/sombriks/sample-testable-code).
