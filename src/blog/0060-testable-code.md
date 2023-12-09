@@ -10,7 +10,6 @@ tags:
   - supertest
   - good practices
   - SOLID principles
-  - CI/CD
 date: 2023-12-04
 draft: false
 ---
@@ -468,5 +467,5 @@ is what keep us on track about how things are supposed to behave.
 For future steps i recommend a good read on Continuous Integration, since the
 tests must run (and always pass!) regularly.
 
-As aways, the complete source code can be found
+As always, the complete source code can be found
 [here](https://github.com/sombriks/sample-testable-code).

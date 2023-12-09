@@ -3,7 +3,7 @@ layout: base.webc
 ---
 <h2>Links</h2>
 
-<input id="the-filter" class="link-search" placeholder="search links"/>
+<input id="the-filter" class="content-search" placeholder="search links"/>
 
 <br/>
 <br/>
@@ -18,7 +18,7 @@ layout: base.webc
       theFilter.value = theFilter.value.toLowerCase()
       for(let link of document.getElementsByClassName("cool-links")) {
         if(link.title.toLowerCase().includes(theFilter.value) || 
-        link.innerText.toLocaleLowerCase().includes(theFilter.value)) {
+          link.innerText.toLocaleLowerCase().includes(theFilter.value)) {
           link.style.display="";
         } else {
           link.style.display="none";

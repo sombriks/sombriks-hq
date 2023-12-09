@@ -62,7 +62,7 @@ div.comparison-box>div {
   min-width:50%;
 }
 
-.link-search, .link-search:active, .link-search:focus {
+.content-search, .content-search:active, .content-search:focus {
   width: 100%;
   background-color: var(--color0);
   color: var(--color1);
@@ -71,7 +71,7 @@ div.comparison-box>div {
   font-size: xx-large;
 }
 
-.link-search:focus {
+.content-search:focus {
   border-bottom: var(--color1) 1px inset;
 }
 

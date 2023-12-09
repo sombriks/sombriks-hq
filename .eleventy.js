@@ -72,7 +72,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig
     .addFilter('classSlugify', postTags =>
-      postTags.map(t => t.replace(/\s/g, "-")).join(" "))
+      postTags.map(t => t.toLowerCase().replace(/\s/g, "-")).join(" "))
 
   eleventyConfig
     .addFilter('classDateify', date => "date-" + date.toISOString().split('T')[0].split("-")[0])

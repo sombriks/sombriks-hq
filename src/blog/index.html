@@ -1,27 +1,33 @@
 ---
 layout: base.webc
 ---
-<h2>By Date</h2>
-<div style="display: flex; flex-wrap: wrap;">
-    {% assign years = collections.posts | yearTags %}
-    {%- for year in years -%}
-        <a href="/blog/?tag=date-{{year.name}}">{{year.name}}({{year.count}})</a>
+<h2><a href="/blog">Posts</a></h2>
+
+<input id="the-filter" class="content-search" placeholder="search posts"/>
+
+<br/>
+<br/>
+<div>
+    {% assign posts = collections.posts | noDraft %}
+    {%- for post in posts reversed -%}
+    <a href="{{post.page.url}}"
+       title="{{post.data.tags | classSlugify}} {{post.data.date | classDateify }}""
+       class="{{post.data.tags | classSlugify}} {{post.data.date | classDateify }}"
+       style="display:inline-block;">{{post.page.fileSlug}}</a>
     {%- endfor -%}
 </div>
 <h2>By tag</h2>
 <div style="display: flex; flex-wrap: wrap;">
     {% assign tagList = collections | postTags %}
     {%- for tag in tagList -%}
-    <a href="/blog/?tag={{tag.name | slugify}}">{{tag.name}}({{tag.count}})</a>
+    <a class="tags" href="/blog/?tag={{tag.name | slugify}}">{{tag.name}}({{tag.count}})</a>
     {%- endfor -%}
 </div>
-<h2><a href="/blog">Posts</a></h2>
-<div>
-    {% assign posts = collections.posts | noDraft %}
-    {%- for post in posts reversed -%}
-    <a href="{{post.page.url}}"
-       class="{{post.data.tags | classSlugify}} {{post.data.date | classDateify }}"
-       style="display:inline-block;">{{post.page.fileSlug}}</a>
+<h2>By Date</h2>
+<div style="display: flex; flex-wrap: wrap;">
+    {% assign years = collections.posts | yearTags %}
+    {%- for year in years -%}
+        <a href="/blog/?tag=date-{{year.name}}">{{year.name}}({{year.count}})</a>
     {%- endfor -%}
 </div>
 <script>
@@ -36,6 +42,27 @@ layout: base.webc
             document.querySelectorAll(".posts").forEach(p => p.style.display = "none");
             document.querySelectorAll(query).forEach(p => p.style.display = "inline-block")
         }
+
+        const theFilter = document.getElementById("the-filter");
+        theFilter.addEventListener("keyup", () => {
+            theFilter.value = theFilter.value.toLowerCase()
+            for(let post of document.getElementsByClassName("posts")) {
+                if(post.title.toLowerCase().includes(theFilter.value) || 
+                    post.innerText.toLocaleLowerCase().includes(theFilter.value)) {
+                    post.style.display="inline-block";
+                } else {
+                    post.style.display="none";
+                }
+            }
+            for(let tag of document.getElementsByClassName("tags")) {
+                if(tag.title.toLowerCase().includes(theFilter.value) || 
+                    tag.innerText.toLocaleLowerCase().includes(theFilter.value)) {
+                    tag.style.display="";
+                } else {
+                    tag.style.display="none";
+                }
+            }
+        });
     })
 </script>
 
