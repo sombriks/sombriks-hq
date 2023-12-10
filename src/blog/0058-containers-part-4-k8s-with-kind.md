@@ -74,8 +74,8 @@ Once you get the cli app, you can create a cluster with:
 kind create cluster
 ```
 
-There! cluster created, you can use `kubectl` to interact with your brand new
-cluster:
+There! cluster created **and** configured in `~/.kube/config`, you can use
+`kubectl` to interact with your brand new cluster:
 
 ```bash
 sombriks@thanatos:~/git/simple-knex-koa-example> kubectl get nodes -o wide

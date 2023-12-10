@@ -192,12 +192,23 @@ export PATH="$PATH:$HOME/go/bin"
 source <(kind completion bash)
 ```
 
+### Check ~/.kube/config
+
+In order to interact with the cluster using kubectl, you will need a valid
+`~/.kube/config`.
+
+Kind generates one for you when you [create a cluster](https://kind.sigs.k8s.io/docs/user/quick-start/#creating-a-cluster).
+
 ## Use k0s instead of kind
 
 Regarding the local cluster, other cool option is [k0s][13].
 
 But keep in mind, **pick only one provider for local cluster**. You need a clean
 house in order to proper mess around and find out, ;-)
+
+### Installing
+
+Directly from [quickstart guide][13]:
 
 ```bash
 curl -sSLf https://get.k0s.sh | sudo sh
@@ -214,17 +225,59 @@ kube-system   coredns          0/1     1            0           20h   coredns   
 kube-system   metrics-server   0/1     1            0           20h   metrics-server   registry.k8s.io/metrics-server/metrics-server:v0.6.4   k8s-app=metrics-server
 ```
 
+### Bash completion and ~/.kube/config
+
 And as you can imagine, you can install completion for that tool too:
 
 ```bash
 source <(k0s completion bash)
 ```
 
+But unlike kind, it does not perform automatic setup local user to interact with
+the cluster. Do this:
+
+```bash
+touch ~/.kube/config
+sudo k0s kubeconfig admin > ~/.kube/config
+chmod 600 ~/.kube/config
+```
+
+There! We're good to go.
+
+## Use k3s instead of kind or k0s
+
+Regarding the local cluster, another cool option is [k3s][16].
+
+```bash
+curl -sfL https://get.k3s.io | sh -
+```
+
+And as you can imagine, you can install completion for that tool too:
+
+```bash
+source <(k3s completion bash)
+```
+
+The cool thing about k3s is it comes with metrics and a [ingress controller][17]
+out of the box, so you don't have to install one. You can see what els comes
+bundled with k3s [here][18].
+
+### ~/.kube/config
+
+Once installed, you can set up your local user to interact with the cluster by
+using this command:
+
+```bash
+touch ~/.kube/config
+sudo cat /etc/rancher/k3s/k3s.yaml > ~/.kube/config
+chmod 600 ~/.kube/config
+```
+
 ## Combine kubectl configs with yaml-merge
 
-Dealing with several clusters, local and remote, can be crumblesome.
+Dealing with several clusters, local and remote, can be cumbersome.
 
-Each tool has a way to provide `~/kube/config` for you, but they don't talk to
+Each tool has a way to provide `~/.kube/config` for you, but they don't talk to
 each other out of the box.
 
 One simple solution is to generate several configs and merge them using
@@ -257,6 +310,22 @@ inspecting cluster.
 
 You, like me, will need an IDE for coding anyways.
 
+- [VSCode kubernetes plugin][19]
+- [Intellij IDEA Ultimate plugin][20]
+
+## Install k9s
+
+[k9s][21] is a must-have tool to use alongside kubectl itself. It helps to
+better visualize what's happening and to perform quick actions on the cluster.
+
+The simpler way to install is using go:
+
+```bash
+go install github.com/derailed/k9s@latest
+```
+
+In order to proper work all you have to do is to setup your `~/.kube/config`.
+
 ## Wrap up
 
 There! next time i need to gear up for DevOps, this is the minimum i need. The
@@ -276,6 +345,12 @@ Happy Hacking!
 [10]: https://linuxconfig.org/linux-system-requirements-for-kubernetes
 [11]: https://minikube.sigs.k8s.io/docs/start/
 [12]: https://go.dev/learn/#guided-learning-journeys
-[13]: https://docs.k0sproject.io/latest/install/
+[13]: https://docs.k0sproject.io/latest/install/#install-k0s
 [14]: https://github.com/kubernetes-sigs/metrics-server
 [15]: https://github.com/alexlafroscia/yaml-merge
+[16]: https://docs.k3s.io/quick-start
+[17]: https://kubernetes.io/docs/concepts/services-networking/ingress
+[18]: https://docs.k3s.io/installation/packaged-components#packaged-components
+[19]: https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools
+[20]: https://www.jetbrains.com/help/idea/kubernetes.html
+[21]: https://github.com/derailed/k9s?tab=readme-ov-file#installation
