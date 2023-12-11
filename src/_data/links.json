@@ -1009,6 +1009,24 @@
     ]
   },
   {
+    "label": "The twelve factor application",
+    "link": "https://12factor.net/",
+    "tags": [
+      "best practices",
+      "how to structure an application",
+      "cool guidelines to make your app a first-class solution"
+    ]
+  },
+  {
+    "label": "please PLEASE don't hello",
+    "link": "https://nohello.net/",
+    "tags": [
+      "no hello",
+      "don't waste my time",
+      "be effective"
+    ]
+  },
+  {
     "label": "docs doesn't make it clear but we can have several ingress, they just need not conflict",
     "link": "https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules",
     "tags": [
