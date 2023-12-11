@@ -1007,5 +1007,14 @@
       "kubectl",
       "for temporary or permanent changes in the cluster here we go"
     ]
+  },
+  {
+    "label": "docs doesn't make it clear but we can have several ingress, they just need not conflict",
+    "link": "https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules",
+    "tags": [
+      "kubernetes",
+      "ingress",
+      "i started studying gateway api but ended up back to ingress because it works"
+    ]
   }
 ]
