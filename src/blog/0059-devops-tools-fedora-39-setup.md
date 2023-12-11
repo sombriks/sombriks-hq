@@ -259,7 +259,7 @@ source <(k3s completion bash)
 ```
 
 The cool thing about k3s is it comes with metrics and a [ingress controller][17]
-out of the box, so you don't have to install one. You can see what els comes
+out of the box, so you don't have to install one. You can see what else comes
 bundled with k3s [here][18].
 
 ### ~/.kube/config
