@@ -1043,5 +1043,16 @@
       "music",
       "or to just chill out and do nothing at all"
     ]
+  },
+  {
+    "label": "ssh works but sftp doesn't? don't echo things in non-interactive shells",
+    "link": "https://tldp.org/LDP/abs/html/intandnonint.html",
+    "tags": [
+      "linux",
+      "ssh",
+      "sftp",
+      ".bashrc",
+      "for many years i suffered from it because i always add 'fortune' to my .bashrc"
+    ]
   }
 ]
