@@ -1062,5 +1062,14 @@
       "homeworld",
       "this game has better history than many movies"
     ]
+  },
+  {
+    "label": "Apache Cassandra is hard",
+    "link": "https://sudoconsultants.com/how-to-connect-with-amazon-keyspaces-using-intellij-pycharm-or-datagrip-ides/""tags": [
+      "apache",
+      "cassandra",
+      "configuration",
+      "still getting an annoying error but at least i am connected"
+    ]
   }
 ]
