@@ -1065,7 +1065,8 @@
   },
   {
     "label": "Apache Cassandra is hard",
-    "link": "https://sudoconsultants.com/how-to-connect-with-amazon-keyspaces-using-intellij-pycharm-or-datagrip-ides/""tags": [
+    "link": "https://sudoconsultants.com/how-to-connect-with-amazon-keyspaces-using-intellij-pycharm-or-datagrip-ides/",
+    "tags": [
       "apache",
       "cassandra",
       "configuration",
