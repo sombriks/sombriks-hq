@@ -103,16 +103,21 @@ needed to spin up our application.
 ## Deploying the database
 
 ```bash
-infrastructure
+infrastructure/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── k8s
-│   ├── network
-│   │   ├── db-service.yml
-│   │   └── simple-knex-koa-service.yml
-│   └── workloads
-│       ├── db-stateful-set.yml
-│       └── simple-knex-koa-deployment.yml
+│   ├── network
+│   │   ├── http-routes
+│   │   │   └── app-route.yml
+│   │   └── service
+│   │       ├── app-service.yml
+│   │       └── db-service.yml
+│   └── workloads
+│       ├── deployment
+│       │   └── app-deployment.yml
+│       └── stateful-set
+│           └── db-stateful-set.yml
 └── README.md
 ```
 
@@ -131,14 +136,14 @@ To create the stateful set in the cluster use the following command:
 
 ```bash
 # cd infrastructure
-kubectl apply -f k8s/workloads/db-stateful-set.yml
+kubectl apply -f https://raw.githubusercontent.com/sombriks/simple-knex-koa-example/manual-tag-workflow/infrastructure/k8s/workloads/stateful-set/db-stateful-set.yml
 ```
 
 Then you create the service which will expose this workload:
 
 ```bash
 # cd infrastructure
-kubectl apply -f k8s/network/db-service.yml
+kubectl apply -f https://raw.githubusercontent.com/sombriks/simple-knex-koa-example/manual-tag-workflow/infrastructure/k8s/network/service/db-service.yml
 ```
 
 There! we got the database. We'll address ways of how to test in a moment.
@@ -151,7 +156,7 @@ First of all, you must build the docker image using the
 ```bash
 # cd simple-knex-koa-example
 docker build -f infrastructure/Dockerfile \
-  -t sombriks/simple-knex-koa:development .
+  -t sombriks/simple-knex-koa-example:development .
 ```
 
 In order to offer high availability, we can use deployments do define
@@ -163,7 +168,7 @@ Use the following command to apply the deployment manifest file:
 
 ```bash
 # cd infrastructure
-kubectl apply -f k8s/workloads/simple-knex-koa-deployment.yml
+kubectl apply -f k8s/workloads/deployment/app-deployment.yml
 ```
 
 This command probably might end up in a strange error:
@@ -184,14 +189,14 @@ This happens because the image created isn't available in the
 Fortunately, kind offers a way to _import_ our local image:
 
 ```bash
-kind load docker-image sombriks/simple-knex-koa:development
+kind load docker-image sombriks/simple-knex-koa-example:development
 ```
 
 Sample output:
 
 ```bash
-sombriks@thanatos:~/git/simple-knex-koa-example> kind load docker-image sombriks/simple-knex-koa:development
-Image: "sombriks/simple-knex-koa:development" with ID "sha256:5cd14aad3bc9dc9487fe72a9f9f3fb11f902bb3c58bbfbc3c9b7f8676976cd51" not yet present on node "kind-control-plane", loading...
+sombriks@thanatos:~/git/simple-knex-koa-example> kind load docker-image sombriks/simple-knex-koa-example:development
+Image: "sombriks/simple-knex-koa-example:development" with ID "sha256:5cd14aad3bc9dc9487fe72a9f9f3fb11f902bb3c58bbfbc3c9b7f8676976cd51" not yet present on node "kind-control-plane", loading...
 ```
 
 Now we're good to the next step, the service configuration.
@@ -201,7 +206,7 @@ available:
 
 ```bash
 # cd infrastructure
-kubectl apply -f k8s/network/simple-knex-koa-service.yml
+kubectl apply -f k8s/network/service/app-service.yml
 ```
 
 And finally there, workload and service properly deployed.
@@ -219,7 +224,7 @@ the pods.
 
 This is why the `PG_CONNECTION_URL` variable has `db-service` in the hostname
 part: this is the value of `metadata.name` inside
-[db-service.yml](k8s/network/db-service.yml).
+[db-service.yml](https://github.com/sombriks/simple-knex-koa-example/blob/manual-tag-workflow/infrastructure/k8s/network/service/db-service.yml).
 
 Labels are important. It's thanks to labels that services can connect with pods.
 
@@ -265,12 +270,13 @@ today.
 
 ### Ingress controller
 
-An [Ingress controller](https://kind.sigs.k8s.io/docs/user/ingress/#ingress-nginx)
+An [Ingress controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
 acts as an [API Gateway](https://tibco.com/reference-center/what-is-an-api-gateway)
 and exposes the services through http requests and uri's.
 
-In order to use an ingress we would need to recreate our cluster, so we'll see
-that approach later.
+In order to use an ingress with kind, we would need to
+[recreate our cluster](https://kind.sigs.k8s.io/docs/user/ingress/#create-cluster),
+so we'll see that approach later.
 
 ## Further steps
 
