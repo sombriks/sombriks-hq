@@ -12,7 +12,7 @@ date: 2022-05-23
 ---
 # Containers (almost) everywhere
 
-In the [previous article](#/blog/0030-containers-part-1.md) we introduced the
+In the [previous article](/blog/0030-containers-part-1.md) we introduced the
 basics of local image and container management.
 
 But the fun starts when you publish those images to some online registry so your

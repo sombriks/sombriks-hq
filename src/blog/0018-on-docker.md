@@ -7,7 +7,7 @@ date: 2019-10-05
 ---
 # Why Docker after all?
 
-You see, the very first time i've heard about it, i thought it was... Silly.
+You see, the very first time I've heard about it, i thought it was... Silly.
 
 I know how to configure a database. Kinda like it.
 

@@ -15,7 +15,7 @@ tags:
 date: 2023-11-12
 draft: false
 ---
-# Testing kubernetes configurations with kind
+# Containers on kubernetes with kind
 
 In the [previous article](/blog/0055-containers-part-3-app-container-friendly)
 we discussed how to prepare a good application image.
