@@ -131,6 +131,8 @@ calls another, as we seen in the previous examples.
 
 This is an example of a workflow consuming inputs:
 
+{% raw %}
+
 ```yaml
 name: 05 - Job Inputs
 
@@ -146,10 +148,14 @@ jobs:
   using-input-from-dispatch:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'If you believe, anything $${{inputs.anything}}!'
+      - run: echo 'If you believe, anything ${{inputs.anything}}!'
 ```
 
+{% endraw %}
+
 And this is a job producing outputs:
+
+{% raw %}
 
 ```yaml
 name: 06 - Job outputs
@@ -186,6 +192,8 @@ jobs:
       - run: echo "i got a dynamic value from ${{needs.output-from-step.outputs.from-step-2}}"
 ```
 
+{% endraw %}
+
 You can map [workflow outputs][event-output] at event level ina similar way the
 outputs at step level are mapped, so other workflows using this job can access
 produced outputs with no trouble.
@@ -194,6 +202,8 @@ produced outputs with no trouble.
 
 Variables are a way to tweak workflow behavior by setting values external to the
 event context:
+
+{% raw %}
 
 ```yaml
 name: 07 - Environment variables
@@ -232,6 +242,8 @@ jobs:
             - run: echo "I am using a redefined A, ${{env.A}}"
 ```
 
+{% endraw %}
+
 It is possible creating variables on project configurations either using web
 interface or the [GitHub CLI][gh-cli].
 
@@ -246,6 +258,8 @@ step level.
 
 Secrets are like vars and env but for secrets. The neat touch is they don't echo
 on [workflow execution logs][wf-run-logs]:
+
+{% raw %}
 
 ```yaml
 name: 08 - Using secrets
@@ -264,6 +278,8 @@ jobs:
                 echo "secret doesn't echo, but go ahead and use them!"
                 echo $(( 10 + ${{secrets.X}}))
 ```
+
+{% endraw %}
 
 ## Conclusion
 
