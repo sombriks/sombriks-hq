@@ -117,6 +117,8 @@ But you can create your own either from scratch or reusing actions from the
 marketplace. The example bellow publishes a npm package whenever a git tag is
 pushed to the repo:
 
+{% raw %}
+
 ```yaml
 name: Publish npm package
 
@@ -148,6 +150,8 @@ jobs:
         
 ```
 
+{% endraw %}
+
 This workflow observers push events, then runs one job called `publish`. The job
 has 3 steps: **Checkout**, **Configure Node** and **Publish tag on npm**. First
 two reuses actions from marketplace, last one issues bash commands as if it was
@@ -157,6 +161,8 @@ environment variable. See the project using this action [here][sample-1].
 And of course, a [valid npm account][npm] is needed to get the package published.
 
 Another example: publish a docker image for every tag push:
+
+{% raw %}
 
 ```yaml
 name: Publish git tag as Docker image
@@ -218,6 +224,8 @@ jobs:
           push: true
 ```
 
+{% endraw %}
+
 This one goes all-in with marketplace actions for publishing, and again observes
 a tag push event.
 
@@ -244,6 +252,8 @@ delivery, but there are some catches:
 
 The following example Does the first two parts of a deployment: image publishing
 and desired state update:
+
+{% raw %}
 
 ```yaml
 name: Deploy new version
@@ -289,6 +299,8 @@ jobs:
       TAG: ${{needs.version-bump.outputs.tag}}
 ```
 
+{% endraw %}
+
 It runs whenever code is merged on main branch, which represents the current app
 state.
 
@@ -298,6 +310,8 @@ which basically performs Continuous integration and delivery steps. Remember,
 pipelines, one pipe into another.
 
 On that second workflow file, the noteworthy part is that one:
+
+{% raw %}
 
 ```yaml
 # ...
@@ -341,6 +355,8 @@ On that second workflow file, the noteworthy part is that one:
         git commit -m "manifests image bump to ${{env.image}}"
         git push
 ```
+
+{% endraw %}
 
 For git-based deployment strategies, the current state of the repository is used
 as [Single Source of Truth][ssot]. That means whatever app version is running
