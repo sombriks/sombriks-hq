@@ -1072,5 +1072,15 @@
       "configuration",
       "still getting an annoying error but at least i am connected"
     ]
+  },
+  {
+    "label": "the most hidden or forgotten docs on spring data, paging and sorting",
+    "link": "https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html#repositories.paging-and-sorting",
+    "tag": [
+      "java",
+      "kotlin",
+      "spring-boot",
+      "i always forget this one so let's keep it close for now on"
+    ]
   }
 ]
