@@ -1082,5 +1082,15 @@
       "spring-boot",
       "i always forget this one so let's keep it close for now on"
     ]
+  },
+  {
+    "label": "ThinkPad T14s AMD Gen2 service manual",
+    "link": "https://download.lenovo.com/pccbbs/mobiles_pdf/t14_gen2_p14s_gen2_hmm_en.pdf",
+    "tag": [
+      "thinkpad",
+      "hardware",
+      "manual",
+      "sometimes i look to be sure"
+    ]
   }
 ]
