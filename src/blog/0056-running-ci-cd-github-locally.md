@@ -136,6 +136,8 @@ providing the exact same information.
 That way, actions like [this one](https://github.com/sombriks/koa-api-builder/blob/main/.github/workflows/npm_tag_publish.yml)
 will behave well either running locally or in the cloud runners in github-land:
 
+{% raw %}
+
 ```yaml
 name: Publish npm package
 
@@ -167,6 +169,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   
 ```
+
+{% endraw %}
 
 ### Payload for event simulation
 

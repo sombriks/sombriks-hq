@@ -116,6 +116,8 @@ what we need to do in redux in order to keep it working properly.
 
 This is how the NavBar consumes a pinia store:
 
+{% raw %}
+
 ```html
 <template>
   <div>
@@ -140,6 +142,8 @@ const query = ref(filterStore.query);
 
 <style></style>
 ```
+
+{% endraw %}
 
 ## How redux works
 

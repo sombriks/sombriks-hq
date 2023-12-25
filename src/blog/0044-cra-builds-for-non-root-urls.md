@@ -39,6 +39,8 @@ project; back in time, it was the default method to deploy something using
 github pages, but now there are actions. Use this customized action to properly
 deploy your CRA application:
 
+{% raw %}
+
 ```yaml
 # .github/workflows/gh-page-deploy.yml
 # best approach to use this configuration is to go first into 
@@ -101,6 +103,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 ```
+
+{% endraw %}
 
 And that's it, every push to the main branch will run the action and will
 publish the app.

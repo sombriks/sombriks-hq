@@ -20,14 +20,14 @@ Modern front-end drifted away from classical dynamic pages a lot, yet it's not
 done evolving yet.
 
 If we all were talking about
-[SPA](https://en.wikipedia.org/wiki/Single-page_application)'s and 
+[SPA](https://en.wikipedia.org/wiki/Single-page_application)'s and
 [PWA](https://en.wikipedia.org/wiki/Progressive_web_app)'s ove the years, the
-new gossip in the bar are 
-[SSR](https://vuejs.org/guide/scaling-up/ssr.html)'s and 
+new gossip in the bar are
+[SSR](https://vuejs.org/guide/scaling-up/ssr.html)'s and
 [SSG](https://www.11ty.dev/docs/getting-started/)'s.
 
 Funny part is how similar to [traditional](https://www.php.net/)
-[dynamic](https://www.oracle.com/java/technologies/jspt.html) 
+[dynamic](https://www.oracle.com/java/technologies/jspt.html)
 [sites](https://dotnet.microsoft.com/en-us/apps/aspnet) those techniques are.
 
 In this article we're diving into how leverage some features from modern web
@@ -35,11 +35,11 @@ development into a traditional dynamic java web application.
 
 ## The java web app
 
-One sample app to manage a todo-list using server side rendering with 
-spring-boot can be generated using 
+One sample app to manage a todo-list using server side rendering with
+spring-boot can be generated using
 [spring initializr](https://start.spring.io/):
 
-Select java version up to 11, spring boot 2.7 or higher depending on installed 
+Select java version up to 11, spring boot 2.7 or higher depending on installed
 java version on your machine.
 
 ![initializr-1.png](/assets/post-pics/0048-progressive-vue-js-on-ssr-java/initializr-1.png)
@@ -55,7 +55,7 @@ On dependencies, select:
 
 ![initializr-2.png](/assets/post-pics/0048-progressive-vue-js-on-ssr-java/initializr-2.png)
 
-In our example, the application handles the entire todo list just using forms: 
+In our example, the application handles the entire todo list just using forms:
 
 ![initializr-2.png](/assets/post-pics/0048-progressive-vue-js-on-ssr-java/todo-app-1.png)
 
@@ -123,7 +123,7 @@ How to find the balance then?
 ## Enter petite-vue
 
 In order to avoid both empty page and unnecessary full reloads, we will apply
-techniques focused on partial loads, nowadays called 
+techniques focused on partial loads, nowadays called
 [hydration](https://v2.ssr.vuejs.org/guide/hydration.html) if it's an SSR
 solution or [islands](https://cloudcannon.com/blog/ssg-history-8-islands/) on
 SSG ones.
@@ -218,6 +218,8 @@ On that matter, (petite-)vue js shines, because once reactive script kicks in,
 with a few smart checks it's possible to seamlessly replace content. This is
 the part where progressive reactivity happens:
 
+{% raw %}
+
 ```html
 <h1>My todo list</h1>
 <table v-scope><!-- the v-scope directive instructs where petite-vue enters -->
@@ -262,6 +264,8 @@ the part where progressive reactivity happens:
 </table>
 ```
 
+{% endraw %}
+
 And finally, a new endpoint in the controller must be created in order to return
 the todo list as JSON:
 
@@ -283,18 +287,18 @@ important to add the `@ResponseBody` annotation to this one.
 ## Conclusion
 
 In this article we pass over some modern web development topics and mock a
-little on how things look circular, with bleeding edge techniques resembling 
+little on how things look circular, with bleeding edge techniques resembling
 much of the past.
 
 Truth is, new points of view brings good bits from every single past concepts,
 that's why we see things happening again. But not quite the same.
 
-In terms of _Developer Experience&#8482;_, old programmers will be amazed by 
+In terms of _Developer Experience&#8482;_, old programmers will be amazed by
 reactivity while new ones will miss so much things like hot module replacement
 and dedicated devtools browser extensions.
 
 But here it is, it's possible to breath new life on server side applications
-with little effort, as 
+with little effort, as
 [the source code for this article](https://github.com/sombriks/sample-progressive-app)
 can prove.
 

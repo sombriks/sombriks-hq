@@ -36,6 +36,8 @@ vue component to present the DatePicker and a way to send back the date.
 
 First a sample of the _master_
 
+{% raw %}
+
 ```html
 <!-- MainForm.vue -->
 <template>
@@ -73,6 +75,8 @@ First a sample of the _master_
   };
 </script>
 ```
+
+{% endraw %}
 
 And this is the _detail_
 

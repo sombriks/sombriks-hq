@@ -282,6 +282,8 @@ Then modify the package.json:
 Unlike react version, we'll divide the bootstrap and the component definition
 in two artifacts. First, App.vue:
 
+{% raw %}
+
 ```html
 <template>
   <div>
@@ -299,6 +301,8 @@ in two artifacts. First, App.vue:
   };
 </script>
 ```
+
+{% endraw %}
 
 Now main.js:
 

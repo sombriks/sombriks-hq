@@ -647,6 +647,8 @@ body {
 
 And the `client-list.vue` component goes as follows:
 
+{% raw %}
+
 ```html
 <template id="client-list">
   <ul v-if="clients">
@@ -665,6 +667,8 @@ app.component("client-list", {
 
 </style>
 ```
+
+{% endraw %}
 
 ## Final tweaks on project
 
