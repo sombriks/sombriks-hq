@@ -1,7 +1,10 @@
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPassthroughCopy({
     "src/_assets": "assets",
@@ -60,14 +63,14 @@ module.exports = function (eleventyConfig) {
         else yearsCount[y]++
       });
       return Object.keys(yearsCount)
-        .map(yc => ({name: yc, count: yearsCount[yc]}))
+        .map(yc => ({ name: yc, count: yearsCount[yc] }))
     });
 
   eleventyConfig
     .addFilter('postTags', tags => Object.keys(tags)
       .filter(k => k !== "posts")
       .filter(k => k !== "all")
-      .map(k => ({name: k, count: tags[k].length}))
+      .map(k => ({ name: k, count: tags[k].length }))
       .sort((a, b) => b.count - a.count));
 
   eleventyConfig
