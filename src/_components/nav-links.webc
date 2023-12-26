@@ -26,3 +26,4 @@
     <span>|</span>
     <a class="item" :href="url('/privacy')">Privacy</a>
 </nav>
+<nav><a class="item" :href="url('/feed.xml')">RSS</a></nav>
