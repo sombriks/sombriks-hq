@@ -36,8 +36,8 @@ Before we advertise services for free, these are the key benefits we seek on
 this kind of solution:
 
 - Able to run actual code; if we wanted to just serve static content,
-  [there][firebase] [are][vercel] [several][netifly] [free][render] options over
-  the internet already.
+  [there][firebase] [are][vercel] [several][netifly] free options over the
+  internet already.
 - Integration with git workflows (and with git providers like **GitHub** or
   **GitLab**)
 - As cheap as possible (free tier sometimes)
@@ -82,6 +82,12 @@ git repository, asks for a branch and that's it, one push merged, one deploy.
 There is a [free tier][gcr-free] based on usage, which is nice because you can
 use that one for your pet projects with no worries or surprises in the
 credit-card bill.
+
+## Render
+
+[Render][render] offers a free tier but with some limitations. It does, however,
+a full featured git deployment once you authorize the application to access your
+GitHub or GitLab account.
 
 ## Transparency
 
