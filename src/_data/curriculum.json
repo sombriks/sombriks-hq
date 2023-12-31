@@ -6,7 +6,7 @@
     "hometown": "Fortaleza",
     "state": "Ceará",
     "birthdate": "1984-10-27T20:15:00-03:00",
-    "bio": "I solve coding problems for fun and for rent!"
+    "bio": "I solve coding problems for fun and for rent"
   },
   "skills": [
     {
@@ -175,13 +175,19 @@
       "description": "Nearsure is a 'nearshore' outsourcing company with many US-based clients.",
       "projects": [
         {
-          "name": "platform team at boku",
-          "description": "several tools to allow other teams to work with client's solutions",
+          "name": "application team at markerr",
+          "description": "maintaining and evolving end to end real state intelligence product",
           "responsibilities": [
             "code development",
             "creation of testing steps",
-            "help on task specification",
-            "code review on pull requests from team members"
+            "module evolution roadmap",
+            "code review on pull requests from team members",
+            "frontend and backend implementation",
+            "infrastructure for release versioning and publishing of internal libraries",
+            "automation building for application image building, publishing and deployment",
+            "definition, test and implementation of GitOps pull-based deployments",
+            "kafka stream processing architectural solution",
+            "SQL and NoSQL database operations"
           ]
         },
         {
@@ -196,41 +202,48 @@
           ]
         },
         {
-          "name": "application team at markerr",
-          "description": "maintaining and evolving end to end real state intelligence product",
+          "name": "platform team at boku",
+          "description": "several tools to allow other teams to work with client's solutions",
           "responsibilities": [
             "code development",
             "creation of testing steps",
-            "module evolution roadmap",
-            "code review on pull requests from team members",
-            "frontend and backend implementation",
-            "infrastructure for release versioning and publishing of internal libraries",
-            "automation building for application image building, publishing and deployment"
+            "help on task specification",
+            "code review on pull requests from team members"
           ]
         }
       ],
       "techstack": [
         "Java",
         "Kotlin",
-        "microservices",
-        "docker",
-        "kubernetes",
+        "Node",
         "kafka",
+        "Apache Cassandra",
+        "microservices",
+        "kubernetes",
+        "k9s",
+        "GitOps",
+        "docker",
+        "ArgoCD",
         "aws-ecs",
         "aws-ecr",
         "aws-eks",
         "aws-msk",
         "mysql",
         "postgresql",
-        "spring boot",
+        "spring-boot",
         "React",
         "angularjs",
-        "jsp",
+        "Apache Tomcat",
+        "maven",
+        "gradle",
+        "npm",
         "liquibase",
         "sumologic",
-        "aws",
         "github",
-        "bash"
+        "github-actions",
+        "linear.app",
+        "bash",
+        "jsp"
       ]
     },
     {

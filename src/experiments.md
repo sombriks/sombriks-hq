@@ -59,6 +59,11 @@ even further to fast track the adoption.
 A template project in case someone (mostly me, I and myself!) needs a quickstart
 backend node project.
 
+## [redline](https://github.com/sombriks/redline)
+
+This is a small app for personal finance track. It is also a lab for my DevOps
+studies, since everyone needs kubernetes skills nowadays.
+
 ## [palavrim](https://github.com/sombriks/palavrim)
 
 This one is yet another wordle mutated clone.
