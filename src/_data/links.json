@@ -1102,5 +1102,14 @@
       "packages",
       "it's important to know how to sort things out"
     ]
+  },
+  {
+    "label": "good comments on 12 factor app philosophy",
+    "link": "https://architecturenotes.co/12-factor-app-revisited/",
+    "tag": [
+      "12factor",
+      "system architecture",
+      "besides SOLID Principles i this i recommend 12 factor app guidelines most"
+    ]
   }
 ]
