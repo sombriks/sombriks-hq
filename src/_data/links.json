@@ -1076,7 +1076,7 @@
   {
     "label": "the most hidden or forgotten docs on spring data, paging and sorting",
     "link": "https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html#repositories.paging-and-sorting",
-    "tag": [
+    "tags": [
       "java",
       "kotlin",
       "spring-boot",
@@ -1086,7 +1086,7 @@
   {
     "label": "ThinkPad T14s AMD Gen2 service manual",
     "link": "https://download.lenovo.com/pccbbs/mobiles_pdf/t14_gen2_p14s_gen2_hmm_en.pdf",
-    "tag": [
+    "tags": [
       "thinkpad",
       "hardware",
       "manual",
@@ -1096,7 +1096,7 @@
   {
     "label": "Software architecture is just organize folders, they say",
     "link": "https://go.dev/doc/modules/layout",
-    "tag": [
+    "tags": [
       "go",
       "modules",
       "packages",
@@ -1106,10 +1106,19 @@
   {
     "label": "good comments on 12 factor app philosophy",
     "link": "https://architecturenotes.co/12-factor-app-revisited/",
-    "tag": [
+    "tags": [
       "12factor",
       "system architecture",
       "besides SOLID Principles i this i recommend 12 factor app guidelines most"
+    ]
+  },
+  {
+    "label": "i never remember how to write cron rule but this helps",
+    "link": "https://crontab.guru/",
+    "tags": [
+      "cron",
+      "crontab",
+      "more unix arcane magic"
     ]
   }
 ]
