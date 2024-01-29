@@ -1,4 +1,5 @@
 <div class="photos">
+    <img :src="url('/assets/profile-pics/picture_06.jpg')" onclick="nextImage()"/>
     <img :src="url('/assets/profile-pics/picture_07.png')" onclick="nextImage()" style="display: block"/>
     <img :src="url('/assets/profile-pics/picture_08.jpg')" onclick="nextImage()"/>
     <img :src="url('/assets/profile-pics/picture_09.jpg')" onclick="nextImage()"/>
