@@ -1128,5 +1128,12 @@
       "bash",
       "explained"
     ]
+  },
+  {
+    "label": "Whenever you want to use funky names in your database tables",
+    "link": "https://stackoverflow.com/a/60099740/420096",
+    "tags": [
+      "proper quote column and schema names using hibernate"
+    ]
   }
 ]
