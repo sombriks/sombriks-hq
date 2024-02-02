@@ -1135,5 +1135,12 @@
     "tags": [
       "proper quote column and schema names using hibernate"
     ]
+  },
+  {
+    "label": "Types at runtime in Go",
+    "link": "https://rednafi.com/go/type_assertion_vs_type_switches/",
+    "tags": [
+      "always good to know how to cast types in any language"
+    ]
   }
 ]
