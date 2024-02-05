@@ -1142,5 +1142,15 @@
     "tags": [
       "always good to know how to cast types in any language"
     ]
+  },
+  {
+    "label": "The express.js drama",
+    "link": "https://thefullstack.xyz/history-express-javascript-framework",
+    "tags": [
+      "node",
+      "javascript",
+      "express",
+      "sometimes i forgot how ridiculous express was"
+    ]
   }
 ]
