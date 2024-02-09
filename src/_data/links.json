@@ -1152,5 +1152,14 @@
       "express",
       "sometimes i forgot how ridiculous express was"
     ]
+  },
+  {
+    "label": "A gentle, concise introduction to Go's type system",
+    "link": "https://rakyll.org/typesystem/?fbclid=IwAR1PJItPI67rf-hziH-yKn8dtV7ilIZQlfBOww_WbDzNUus9QsjztpK0Fno",
+    "tags": [
+      "go",
+      "golang",
+      "types"
+    ]
   }
 ]
