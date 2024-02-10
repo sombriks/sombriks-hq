@@ -1161,5 +1161,25 @@
       "golang",
       "types"
     ]
+  },
+  {
+    "label": "if you need k3s guides. yes you do.",
+    "link": "https://k3s.rocks/",
+    "tags": [
+      "containers",
+      "kubernetes",
+      "k3s",
+      "do things in k3s then see if it works on the big beast"
+    ]
+  },
+  {
+    "label": "but if you are a docker swarm person",
+    "link": "https://docs.docker.com/engine/swarm/stack-deploy",
+    "tags": [
+      "containers",
+      "docker",
+      "swarm",
+      "it's simpler and i don't quite understand why people choose k8s"
+    ]
   }
 ]
