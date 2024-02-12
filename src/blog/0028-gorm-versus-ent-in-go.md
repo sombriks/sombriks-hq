@@ -3,7 +3,7 @@ layout: blog-base.webc
 tags: 
   - posts
   - sql
-  - go
+  - golang
   - gorm
   - ent
 date: 2022-03-28

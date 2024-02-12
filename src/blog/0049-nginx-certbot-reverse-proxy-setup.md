@@ -16,7 +16,7 @@ solution.
 
 Hopefully this guide might help you to do that in half hour, ;-)
 
-## TL;DR;
+## TL;DR
 
 - register your domain
 - configure it with dns from your cloud provider
@@ -30,9 +30,9 @@ Hopefully this guide might help you to do that in half hour, ;-)
 
 ## Buy some domains
 
-[Just](https://godaddy.com) 
-[buy](https://www.dreamhost.com/domains/) 
-[something](https://registro.br/). 
+[Just](https://godaddy.com)
+[buy](https://www.dreamhost.com/domains/)
+[something](https://registro.br/).
 
 ## Hand them to your cloud provider
 
@@ -45,8 +45,8 @@ Other providers like
 [gcp](https://console.developers.google.com/),
 [oci](https://cloud.oracle.com/),
 [ibm cloud](https://cloud.ibm.com/),
-[red hat](https://cloud.redhat.com) 
-[and](https://console.scaleway.com) 
+[red hat](https://cloud.redhat.com)
+[and](https://console.scaleway.com)
 [others](https://portal.azure.com)
 offer a wider range of products to use along those domain names.
 
@@ -86,6 +86,7 @@ Now the fun starts.
 sudo dnf install nginx
 sudo dnf install python3-certbot-nginx # more details later
 ```
+
 It gives you a shiny new nginx acting as a server with a config at
 `/etc/nginx/nginx.conf` which looks like this (comments removed for readability:
 
@@ -220,8 +221,7 @@ If you are unsure if you have any certs at all, see them with this command:
 sudo certbot certificates
 ```
 
-After installing the certs, the nginx.conf file will look like this: 
-
+After installing the certs, the nginx.conf file will look like this:
 
 ```bash
 worker_processes  1;
@@ -392,7 +392,7 @@ Now enable it:
 sudo systemctl enable --now cockpit.socket
 ```
 
-You might run into permission denied issues thanks to selinux: 
+You might run into permission denied issues thanks to selinux:
 
 ```bash
 2023/04/06 19:01:14 [crit] 4973#4973: *1 connect() to 127.0.0.1:9090 failed (13: Permission denied) while connecting to upstream, client: xxx.xx.xxx.xx, server: sub2.mydomain.cc, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:9090/favicon.ico", host: "sub2.mydomain.cc", referrer: "http://sub2.mydomain.cc/"
@@ -413,7 +413,7 @@ It's still nice to see that foundation ops technologies still viable and working
 with little to zero vendor lock-in.
 
 Modern cloud providers gives us more and more nice toys which on one hand makes
-us totally forget about tooling and infrastructure, like 
+us totally forget about tooling and infrastructure, like
 [Digital ocean apps](https://www.digitalocean.com/pricing/app-platform),
 [Google App Engine](https://cloud.google.com/appengine),
 [Amazon Lightsail](https://aws.amazon.com/lightsail/pricing),
