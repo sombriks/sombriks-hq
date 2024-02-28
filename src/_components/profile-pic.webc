@@ -7,6 +7,7 @@
     <img :src="url('/assets/profile-pics/picture_11.jpg')" onclick="nextImage()"/>
     <img :src="url('/assets/profile-pics/picture_12.jpg')" onclick="nextImage()"/>
     <img :src="url('/assets/profile-pics/picture_13.jpg')" onclick="nextImage()"/>
+    <img :src="url('/assets/profile-pics/picture_14.jpg')" onclick="nextImage()"/>
     <img :src="url('/assets/profile-pics/picture_15.jpg')" onclick="nextImage()"/>
     <img :src="url('/assets/profile-pics/picture_16.jpg')" onclick="nextImage()"/>
     <img :src="url('/assets/profile-pics/picture_17.jpg')" onclick="nextImage()"/>
