@@ -244,6 +244,8 @@ information about memory usage and function calls. The "black box" benchmark is
 good and lights various insights, but to understand more, we need more
 information.
 
+The source code for this article can be found [here][sourcecode].
+
 Hope this example helps you, happy benchmarking!
 
 [jcompany]: https://www.devmedia.com.br/artigo-java-magazine-64-aplicacoes-corporativas-com-jcompany-free/11397
@@ -262,3 +264,4 @@ Hope this example helps you, happy benchmarking!
 [app1]: https://github.com/sombriks/sample-htmx-koa
 [app2]: https://github.com/sombriks/sample-htmx-javalin
 [node-cluster]: https://nodejs.org/api/cluster.html#how-it-works
+[sourcecode]: https://github.com/sombriks/node-vs-kotlin-k6-benchmark
