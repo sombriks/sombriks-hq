@@ -1236,5 +1236,14 @@
       "boot",
       "spring docs can be hard sometimes"
     ]
+  },
+  {
+    "label": "Richardson maturity model",
+    "link": "https://martinfowler.com/articles/richardsonMaturityModel.html",
+    "tags": [
+      "rest",
+      "api",
+      "glory of rest"
+    ]
   }
 ]
