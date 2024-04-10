@@ -1245,5 +1245,15 @@
       "api",
       "glory of rest"
     ]
+  },
+  {
+    "label": "Definição de 'Pronto'",
+    "link": "https://www.ateomomento.com.br/definition-of-done-dod-a-importancia-do-item-done-no-scrum/",
+    "tags": [
+      "agile",
+      "scrum",
+      "DoD",
+      "done is code deployed, running, generating revenue for the client"
+    ]
   }
 ]
