@@ -1255,5 +1255,14 @@
       "DoD",
       "done is code deployed, running, generating revenue for the client"
     ]
+  },
+  {
+    "label": "Hypermedia",
+    "link": "https://hypermedia.systems/",
+    "tags": [
+      "hypermedia",
+      "htmx",
+      "htmx is the future trust me"
+    ]
   }
 ]
