@@ -1264,5 +1264,14 @@
       "htmx",
       "htmx is the future trust me"
     ]
+  },
+  {
+    "label": "GO proverbs",
+    "link": "https://go-proverbs.github.io/",
+    "tags": [
+      "proverbs",
+      "go",
+      "it's like the 10 commandments but for golang"
+    ]
   }
 ]
