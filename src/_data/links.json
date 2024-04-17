@@ -1273,5 +1273,14 @@
       "go",
       "it's like the 10 commandments but for golang"
     ]
+  },
+  {
+    "label": "SVG arcs are hard",
+    "link": "https://www.youtube.com/watch?v=QXOPYyhifDc",
+    "tags": [
+      "svg",
+      "arcs",
+      "question is just why so hard?"
+    ]
   }
 ]
