@@ -1292,5 +1292,14 @@
       "arcs",
       "boy this ting is driving me crazy"
     ]
+  },
+  {
+    "label": "I am thinking about LSP",
+    "link": "https://en.ewen.works/blog/making-an-lsp-server-in-go",
+    "tags": [
+      "lsp",
+      "server",
+      "for example, bld would need a custom lsp for java completion"
+    ]
   }
 ]
