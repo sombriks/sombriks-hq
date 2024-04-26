@@ -1301,5 +1301,13 @@
       "server",
       "for example, bld would need a custom lsp for java completion"
     ]
+  },
+  {
+    "label": "The birth of SQL and relational database",
+    "link": "https://www.youtube.com/watch?v=z8L202FlmD4",
+    "tags": [
+      "50 years of SQL",
+      "what a ride"
+    ]
   }
 ]
