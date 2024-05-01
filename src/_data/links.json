@@ -1309,5 +1309,14 @@
       "50 years of SQL",
       "what a ride"
     ]
+  },
+  {
+    "label": "Everything",
+    "link": "https://everything.curl.dev/http/post/json.html",
+    "tags": [
+      "curl",
+      "docs",
+      "So you want to know everything about cURL"
+    ]
   }
 ]
