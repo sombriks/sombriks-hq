@@ -1318,5 +1318,14 @@
       "docs",
       "So you want to know everything about cURL"
     ]
+  },
+  {
+    "label": "This chart library should be more popular",
+    "link": "https://vue-data-ui.graphieros.com/",
+    "tags": [
+      "charts",
+      "vue",
+      "they have very neat charts"
+    ]
   }
 ]
