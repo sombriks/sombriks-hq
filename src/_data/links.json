@@ -1327,5 +1327,15 @@
       "vue",
       "they have very neat charts"
     ]
+  },
+  {
+    "label": "Go can have nice tests too",
+    "link": "https://github.com/onsi/ginkgo",
+    "tags": [
+      "go",
+      "test",
+      "bdd",
+      "this is really neat"
+    ]
   }
 ]
