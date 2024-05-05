@@ -583,7 +583,10 @@ even in ci mode and it slows it down.
 
 A quick note on bld workflow:
 
+{% raw %}
+
 ```yml
+---
 name: Java CI with bld
 on:
   push:
@@ -607,6 +610,8 @@ jobs:
         run: ./bld clean download
       - run: ./bld compile test
 ```
+
+{% endraw %}
 
 In order to keep it fast, you must tweak the build process by using the
 [cache action][action-cache]. Maven and gradle actions uses cache, so add it to
