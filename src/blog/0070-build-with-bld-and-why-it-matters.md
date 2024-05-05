@@ -584,7 +584,6 @@ even in ci mode and it slows it down.
 A quick note on bld workflow:
 
 ```yml
----
 name: Java CI with bld
 on:
   push:
