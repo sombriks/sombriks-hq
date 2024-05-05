@@ -16,7 +16,7 @@ tags:
   - project structure
   - project management
 date: 2024-05-05
-draft: false
+draft: true
 ---
 # Build with bld and why it matters to the jvm ecosystem
 
