@@ -4,8 +4,7 @@ tags:
   - posts
   - container
   - kubernetes
-  - github
-  - actions
+  - github actions
   - GitOps
   - CI/CD
   - ArgoCD

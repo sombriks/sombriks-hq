@@ -2,8 +2,7 @@
 layout: blog-base.webc
 tags:
   - posts
-  - github
-  - actions
+  - github actions
   - recipes
   - CI/CD
   - gh-cli
