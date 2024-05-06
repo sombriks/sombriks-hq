@@ -460,7 +460,7 @@ This is the `pom.xml`:
 
 A reminder of XML isn't meant to be read by people but by parsers.
 
-Th gradle counterpart, the `build.gradle` file, looks like this:
+The gradle counterpart, the `build.gradle` file, looks like this:
 
 ```groovy
 plugins {
@@ -569,12 +569,13 @@ java syntax, so there is a smaller cognitive overhead.
 
 And this is definitively easier to read than the maven's pom.xml.
 
-Needless to say, both scripts are able to build a regular spring boot project.
+Needless to say, all three build options in this sample are able to build a
+regular spring boot project.
 
 ### Continuous integration
 
-One last but not least important note: You can put bld to work for you on your
-continuous integration pipeline just as you would do with maven or gradle. The
+One last but not least important note: You can put `bld` to work for you on your
+continuous integration pipeline, just as you would do with maven or gradle. The
 [sample project][spring] has [three][ci-bld] [github][ci-gradle]
 [workflows][ci-maven] sampling how to use each of them.
 
@@ -614,23 +615,24 @@ jobs:
 {% endraw %}
 
 In order to keep it fast, you must tweak the build process by using the
-[cache action][action-cache]. Maven and gradle actions uses cache, so add it to
-your bld workflow as well.
+[cache action][action-cache]. Maven and gradle actions uses cache too, so add it
+to your `bld` workflow as well.
 
-## Conclusion
+## Conclusion (or Why it matters)
 
 For a long time, java, while language and platform, was stuck into a position
 lacking innovation and offering little developer ergonomics.
 
-The recent years however where different: More frequent release, decent LTS
+The recent years however where different: More frequent releases, decent LTS
 support, new features being added and as consequence new adopters, new tools and
 new ideas.
 
 It is important and quite a feat to remain stable and very backwards compatible,
-but embrace the new and deliver good experience like other stacks, that keeps
-the jvm and its ecosystem as not only a safe choice, but also an exciting one.
+but embrace the new and deliver good developer experience, like other stacks do,
+that keeps the jvm and its ecosystem as not only a safe choice, but also an
+exciting, joyful one.
 
-You usually get nice results from happy, excited people.
+You usually get nice results, nice products from happy, excited people.
 
 And boy bld is for sure exciting, node and golang people can't mock me anymore!
 
