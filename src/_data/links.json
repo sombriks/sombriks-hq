@@ -1337,5 +1337,14 @@
       "bdd",
       "this is really neat"
     ]
+  },
+  {
+    "label": "whenever you need something lighter and more flexible than jpa",
+    "link": "https://spring.io/blog/2018/09/17/introducing-spring-data-jdbc",
+    "tags": [
+      "spring",
+      "jdbc",
+      "apis are very similar, but it's a query mapper"
+    ]
   }
 ]
