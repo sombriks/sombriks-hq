@@ -1346,5 +1346,14 @@
       "jdbc",
       "apis are very similar, but it's a query mapper"
     ]
+  },
+  {
+    "label": "Pretty cool UML diagrams. Diagrams are cool.",
+    "link": "https://pintorajs.vercel.app/docs/getting-started/usage/",
+    "tags": [
+      "uml",
+      "diagrams",
+      "i will find a good usage for it, i am sure!"
+    ]
   }
 ]
