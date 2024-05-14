@@ -1355,5 +1355,14 @@
       "diagrams",
       "i will find a good usage for it, i am sure!"
     ]
+  },
+  {
+    "label": "AWS pricing calculator",
+    "link": "https://instances.vantage.sh/",
+    "tags": [
+      "aws",
+      "pricing",
+      "calculator"
+    ]
   }
 ]
