@@ -1364,5 +1364,14 @@
       "pricing",
       "calculator"
     ]
+  },
+  {
+    "label": "accumulating sum using window functions",
+    "link": "https://learnsql.com/blog/sql-for-data-analysis-cheat-sheet/#running-total",
+    "tags": [
+      "sql",
+      "window functions",
+      "i knew the thing was powerful but boy!"
+    ]
   }
 ]
