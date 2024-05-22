@@ -1373,5 +1373,14 @@
       "window functions",
       "i knew the thing was powerful but boy!"
     ]
+  },
+  {
+    "label": "Whenever you need to figure who is using a certain port",
+    "link": "https://superuser.com/a/42849/204361",
+    "tags": [
+      "lsof",
+      "detached process",
+      "sometimes server detaches itself from terminal"
+    ]
   }
 ]
