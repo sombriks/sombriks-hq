@@ -1392,5 +1392,14 @@
       "empty set is not empty",
       "[] => 200, nil => 404"
     ]
+  },
+  {
+    "label": "variadic pack / unpack",
+    "link": "https://golangdocs.com/variadic-functions-in-golang",
+    "tags": [
+      "variadic",
+      "pack and unpack",
+      "on js world they call it spread"
+    ]
   }
 ]
