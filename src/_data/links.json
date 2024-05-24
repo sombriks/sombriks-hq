@@ -1382,5 +1382,15 @@
       "detached process",
       "sometimes server detaches itself from terminal"
     ]
+  },
+  {
+    "label": "Know the difference between just declare and declare and initialize",
+    "link": "https://stackoverflow.com/a/68687363/420096",
+    "tags": [
+      "declare",
+      "initialize",
+      "empty set is not empty",
+      "[] => 200, nil => 404"
+    ]
   }
 ]
