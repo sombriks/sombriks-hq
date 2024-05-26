@@ -1401,5 +1401,16 @@
       "pack and unpack",
       "on js world they call it spread"
     ]
+  },
+  {
+    "label": "An Engineer's GUI Journey",
+    "link": "https://www.youtube.com/watch?v=qxMj5fBFFmg",
+    "tags": [
+      "gui",
+      "tui",
+      "cli",
+      "history",
+      "it amazes me how things ended up like this"
+    ]
   }
 ]
