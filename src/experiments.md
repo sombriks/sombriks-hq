@@ -42,6 +42,11 @@ found nothing like what i wanted.
 But the PR did more sense as an independent library so this experiment came to
 life.
 
+## [hx-dataset-include](https://www.npmjs.com/package/hx-dataset-include)
+
+Humble and brutally simple [htmx](https://htmx.org) extension to include data-*
+attributes in the request.
+
 ## [koa-webc middleware](https://github.com/sombriks/koa-webc)
 
 Small middleware to render [WebC](https://github.com/11ty/webc) components from
