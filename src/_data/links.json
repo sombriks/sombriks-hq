@@ -1389,7 +1389,7 @@
     "tags": [
       "declare",
       "initialize",
-      "empty set is not empty",
+      "empty set is not empty result",
       "[] => 200, nil => 404"
     ]
   },
