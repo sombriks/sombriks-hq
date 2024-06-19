@@ -1364,5 +1364,53 @@
       "pricing",
       "calculator"
     ]
+  },
+  {
+    "label": "accumulating sum using window functions",
+    "link": "https://learnsql.com/blog/sql-for-data-analysis-cheat-sheet/#running-total",
+    "tags": [
+      "sql",
+      "window functions",
+      "i knew the thing was powerful but boy!"
+    ]
+  },
+  {
+    "label": "Whenever you need to figure who is using a certain port",
+    "link": "https://superuser.com/a/42849/204361",
+    "tags": [
+      "lsof",
+      "detached process",
+      "sometimes server detaches itself from terminal"
+    ]
+  },
+  {
+    "label": "Know the difference between just declare and declare and initialize",
+    "link": "https://stackoverflow.com/a/68687363/420096",
+    "tags": [
+      "declare",
+      "initialize",
+      "empty set is not empty",
+      "[] => 200, nil => 404"
+    ]
+  },
+  {
+    "label": "variadic pack / unpack",
+    "link": "https://golangdocs.com/variadic-functions-in-golang",
+    "tags": [
+      "variadic",
+      "pack and unpack",
+      "on js world they call it spread"
+    ]
+  },
+  {
+    "label": "An Engineer's GUI Journey",
+    "link": "https://www.youtube.com/watch?v=qxMj5fBFFmg",
+    "tags": [
+      "gui",
+      "tui",
+      "cli",
+      "history",
+      "it amazes me how things ended up like this"
+    ]
   }
 ]

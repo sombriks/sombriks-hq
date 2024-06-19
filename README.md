@@ -1,17 +1,31 @@
 # sombriks-hq
 
-Stronghold for my curriculum, blog and any other random thoughts.
+Stronghold for my curriculum, blog, cool links and any other random thoughts.
 
-Roadmap [here](https://github.com/users/sombriks/projects/1)
+## dependencies
 
-## how to publish blog
+- node 18+
+- eleventy 2+
 
-It's published on firebase-hosting.
-
-Simply commit into master and the github action does the rest.
-
-If you have to, you can perform publishing from local machine using:
+## how to build
 
 ```bash
-npm run local release
+npm run build
 ```
+
+## how to run
+
+```bash
+npm run dev
+```
+
+## deployment
+
+See the [deployment action](.github/workflows/publish-blog.yml) for details
+
+## noteworthy
+
+- This is the current form of my grimoire. Older versions are abandoned:
+  - https://sombriks.com.br/
+  - https://sombriks.blogspot.com/
+  - https://sombriks.wordpress.com/
