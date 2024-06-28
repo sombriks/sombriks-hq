@@ -1412,5 +1412,15 @@
       "history",
       "it amazes me how things ended up like this"
     ]
+  },
+  {
+    "label": "Whenever you need gradle to refresh dependencies for real",
+    "link": "https://stackoverflow.com/a/31832995/420096",
+    "tags": [
+      "gradle",
+      "refresh",
+      "dependencies",
+      "sometimes dep fails to download but never downloads again due to a zero size file, so we need this"
+    ]
   }
 ]
