@@ -1422,5 +1422,14 @@
       "dependencies",
       "sometimes dep fails to download but never downloads again due to a zero size file, so we need this"
     ]
+  },
+  {
+    "label": "So you want to build kernel modules huh?",
+    "link": "https://www.kernel.org/doc/html/latest/kbuild/modules.html",
+    "tags": [
+      "kernel",
+      "modules",
+      "build"
+    ]
   }
 ]
