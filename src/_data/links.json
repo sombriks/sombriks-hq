@@ -1431,5 +1431,13 @@
       "modules",
       "build"
     ]
+  },
+  {
+    "label": "learn some software anti-patterns so you don't use them",
+    "link": "https://medium.com/@ravikumarray92/software-architecture-antipatterns-d5c7ec44dab6",
+    "tags": [
+      "anti-patterns",
+      "software architecture"
+    ]
   }
 ]
