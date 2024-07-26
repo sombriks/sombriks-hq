@@ -1439,5 +1439,15 @@
       "anti-patterns",
       "software architecture"
     ]
+  },
+  {
+    "label": "remember to set the PGSSLMODE env var to 'no-verify' in heroku so postgres works!",
+    "link": "https://devcenter.heroku.com/articles/connecting-heroku-postgres#connecting-in-node-js",
+    "tags": [
+      "PGSSLMODE",
+      "postgresql",
+      "heroku",
+      "yes time flies heroku is still there and kinda working"
+    ]
   }
 ]
