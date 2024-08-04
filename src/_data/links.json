@@ -1449,5 +1449,14 @@
       "heroku",
       "yes time flies heroku is still there and kinda working"
     ]
+  },
+  {
+    "label": "A brief CP/M history",
+    "link": "https://www.theregister.com/2024/08/02/cpm_50th_anniversary",
+    "tags": [
+      "cp/m",
+      "ms-dos",
+      "the origin of personal operating systems i think"
+    ]
   }
 ]
