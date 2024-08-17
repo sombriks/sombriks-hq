@@ -23,6 +23,11 @@
           "stars": "5"
         },
         {
+          "title": "typescript",
+          "icon": "icon-typescript",
+          "stars": "4"
+        },
+        {
           "title": "html 5",
           "icon": "icon-html-five",
           "stars": "5"
@@ -40,11 +45,16 @@
         {
           "title": "go",
           "icon": "icon-go",
-          "stars": "3"
+          "stars": "5"
         },
         {
           "title": "c",
           "icon": "icon-c",
+          "stars": "3"
+        },
+        {
+          "title": "c++",
+          "icon": "icon-cpp",
           "stars": "3"
         },
         {

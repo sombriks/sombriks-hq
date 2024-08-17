@@ -10,4 +10,13 @@
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/publish-blog.yml"
   ],
+  "cSpell.words": [
+    "Cordova",
+    "Fastify",
+    "Ifactory",
+    "nativescript",
+    "Novelbiz",
+    "Supertest",
+    "Vuetify"
+  ],
 }

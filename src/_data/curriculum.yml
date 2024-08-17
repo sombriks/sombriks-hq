@@ -1,0 +1,179 @@
+---
+# Latest version of my CV. Previously a JSON document.
+resume:
+  metadata: >-
+    All you need to know about the professional life of Leonardo Silveira, best
+    known as sombriks.
+  personal info:
+    country: Brazil
+    state: Ceará
+    city: Fortaleza
+    birth: 1984-10-27T20:15:00-03:00
+    motto: I solve coding problems for fun and for rent
+    email: sombriks@gmail.com
+    phone: +55 85 9 9955-7997
+    website: https://sombriks.com
+  cover letter: |
+    I am Leonardo Silveira, professionally working with technology since 2007 as
+    a developer and other roles (software architect, startup founder, consultant
+    fullstack developer and so on). Over this time I became expert in several
+    technologies, such as Java, Javascript, SQL databases, HTML and CSS,
+    Node.js, git, nativescript (see complete list in the document bellow); but
+    also I dealt with first-class cloud solutions such as AWS, Digital Ocean,
+    and Google Cloud Platform. I also dealt with project management tools like
+    Jira, Linear and Trello. I worked with top tier teams in Brazil and cross
+    borders in near-shore companies. I produced solutions for several markets,
+    like health and car insurance, closed gates community management,
+    educational games, online presence for local business, country-wide retail
+    solutions, world-class payment platform solutions and real state
+    intelligence solutions.
+  skills:
+    - programming languages:
+      items:
+        - Java: ★★★★★
+        - Javascript: ★★★★★
+        - HTML5: ★★★★★
+        - Node.js: ★★★★★
+        - Kotlin: ★★★★☆
+        - Typescript: ★★★★☆
+        - Go: ★★★★☆
+        - C: ★★★☆☆
+        - C++: ★★★☆☆
+        - Python: ★★☆☆☆
+        - Ruby: ★★☆☆☆
+    - frontend (web) frameworks:
+      items:
+        - Vue.js: ★★★★★
+        - React: ★★★★☆
+        - Angular: ★★★★☆
+        - HTMX: ★★★★☆
+        - Angular-Material: ★★★☆☆
+        - Vuetify: ★★★☆☆
+        - Bootstrap: ★★★☆☆
+        - Bulma: ★★★☆☆
+        - Material Design Icons: ★★★☆☆
+        - PrimeNG: ★★☆☆☆
+    - backend frameworks and tools:
+      items:
+        - SpringBoot: ★★★★★
+        - Express.js: ★★★★★
+        - Koa.js: ★★★★★
+        - JakartaEE: ★★★★☆
+        - JPA: ★★★★☆
+        - JDBI: ★★★★☆
+        - Liquibase: ★★★★☆
+        - Javalin: ★★★★☆
+        - Knex.js: ★★★★☆
+        - Vert.x: ★★★☆☆
+        - Kafka: ★★★☆☆
+        - Fastify: ★★★☆☆
+        - Socket.io: ★★☆☆☆
+    - testing and linting tools:
+      items:
+        - JUnit: ★★★★★
+        - Hamcrest: ★★★★★
+        - Jacoco: ★★★★★
+        - PMD: ★★★★☆
+        - Checkstyle: ★★★★☆
+        - Mockito: ★★★★☆
+        - Testcontainers: ★★★★☆
+        - Mocha: ★★★★★
+        - Chai: ★★★★★
+        - Sinon: ★★★★☆
+        - Supertest: ★★★★☆
+        - Ava: ★★★★★
+        - C8: ★★★★★
+        - Istanbul: ★★★★☆
+        - Vitest: ★★★★★
+        - Xo: ★★★★☆
+        - Eslint: ★★★☆☆
+        - Prettier: ★★★☆☆
+        - Spock: ★★☆☆☆
+    - mobile frameworks and technologies:
+      items:
+        - Apache Cordova: ★★★☆☆
+        - Nativescript: ★★★☆☆
+        - Android: ★★★☆☆
+    - project build tools:
+      items:
+        - Maven: ★★★★★
+        - Gradle: ★★★★★
+        - NPM: ★★★★★
+        - BLD: ★★★★☆
+        - Go modules: ★★★★☆
+        - Apache Ant: ★★★★☆
+        - Yarn: ★★★★☆
+        - Make: ★★★★☆
+        - Pip: ★★★☆☆
+        - CMake: ★★★☆☆
+        - Automake & Autoconf: ★★☆☆☆
+        - bundler.io: ★★☆☆☆
+    - databases:
+      items:
+        - PostgreSQL: ★★★★★
+        - MySQL: ★★★★★
+        - SQLite: ★★★★★
+        - Oracle: ★★★★☆
+        - IBM DB2: ★★★☆☆
+        - Microsoft SQLServer: ★★★☆☆
+        - Redis: ★★★☆☆
+        - Apache Cassandra: ★★★☆☆
+        - LevelDB: ★★★☆☆
+        - MongoDB: ★★☆☆☆
+    - devops / gitops:
+      items:
+        - Git, GitHub, GitLab: ★★★★★
+        - GitHub Actions: ★★★★★
+        - Docker: ★★★★★
+        - Kubernetes: ★★★★★
+        - ArgoCD: ★★★★☆
+        - AWS: ★★★★☆
+        - Digital Ocean: ★★★☆☆
+        - GCP: ★★★☆☆
+        - Heroku: ★★★☆☆
+        - Fly.io: ★★☆☆☆
+        - Firebase: ★★☆☆☆
+    - miscellaneous:
+      items:
+        - Linux: ★★★★★
+        - Windows: ★★★☆☆
+        - Mac OS: ★★★☆☆
+        - Jira: ★★★☆☆
+        - Linear: ★★★☆☆
+        - YouTrack: ★★★☆☆
+        - Scrum: ★★★☆☆
+        - UML: ★★★☆☆
+  work:
+    - Nearsure
+    - Rede Inova
+    - Jobsity
+    - Casa Magalhães
+    - TechPar
+    - Game For Learning
+    - Atlanta Tecnologia
+    - Ifactory solutions
+    - HEXA
+    - LDS
+    - Novelbiz
+    - Sena Informática / USIX / Ebix
+    - Cooperativa Pirambu Digital
+  education:
+    - Systems Development and Analysis
+    - Computer Engineering
+    - Software Development
+  other certifications:
+    -
+  contact info:
+    - Email:
+    - Phone:
+    - Mastodon:
+    - Facebook:
+    - Instagram:
+    - GitHub:
+    - Linkedin:
+    - StackOverflow:
+    - Keybase:
+    - Hackerrank:
+    - Codewars:
+    - Reddit:
+    - NPM:

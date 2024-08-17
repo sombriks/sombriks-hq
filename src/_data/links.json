@@ -1458,5 +1458,14 @@
       "ms-dos",
       "the origin of personal operating systems i think"
     ]
+  },
+  {
+    "label": "YAML strings are strange",
+    "link": "https://yaml-multiline.info/",
+    "tags": [
+      "yaml",
+      "string",
+      "multiline"
+    ]
   }
 ]
