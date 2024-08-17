@@ -207,13 +207,21 @@ resume:
       projects:
         - Faixa exclusiva:
           responsibilities: [Code development, Architecture specification]
-          description:
+          description: |
+            A java web, serial communications and ip camera solution to detect
+            if cars where on exclusive bus lane.
         - Photo labeler:
           responsibilities:: [Code development]
-          description:
+          description: |
+            Internal tool java swing based. it was used to correctly apply the
+            infraction label on photos.
         - AT-SMS/AT-SMS2:
           responsibilities: [Code development]
-          description:
+          description: |
+            This was the main solution on transit law enforcement. On this
+            project we started the migration from a delphi based solution to a 
+            java web based solution. that could allow the hardware and operating 
+            system be replaced by cheaper options in the future.
       tech stack:
         [
           PostgreSQL,
