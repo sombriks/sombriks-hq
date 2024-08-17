@@ -25,14 +25,13 @@ resume:
     borders in near-shore companies. I produced solutions for several markets,
     like health and car insurance, closed gates community management,
     educational games, online presence for local business, country-wide retail
-    solutions, world-class payment platform solutions and real state
+    solutions, world-class payment platform solutions and real state business
     intelligence solutions.
   skills:
     - programming languages:
       items:
         - Java: ★★★★★
         - Javascript: ★★★★★
-        - HTML5: ★★★★★
         - Node.js: ★★★★★
         - Kotlin: ★★★★☆
         - Typescript: ★★★★☆
@@ -41,12 +40,14 @@ resume:
         - C++: ★★★☆☆
         - Python: ★★☆☆☆
         - Ruby: ★★☆☆☆
-    - frontend (web) frameworks:
+    - frontend (web) frameworks and technologies:
       items:
+        - HTML 5: ★★★★★
         - Vue.js: ★★★★★
         - React: ★★★★☆
         - Angular: ★★★★☆
         - HTMX: ★★★★☆
+        - CSS: ★★★☆☆
         - Angular-Material: ★★★☆☆
         - Vuetify: ★★★☆☆
         - Bootstrap: ★★★☆☆
@@ -144,36 +145,288 @@ resume:
         - Scrum: ★★★☆☆
         - UML: ★★★☆☆
   work:
-    - Nearsure
-    - Rede Inova
-    - Jobsity
-    - Casa Magalhães
-    - TechPar
-    - Game For Learning
-    - Atlanta Tecnologia
-    - Ifactory solutions
-    - HEXA
-    - LDS
-    - Novelbiz
-    - Sena Informática / USIX / Ebix
-    - Cooperativa Pirambu Digital
+    - Nearsure:
+      position:
+        [
+          Senior backend developer,
+          DevOps developer,
+          Team augmentation consultant,
+          Technical Interviewer,
+        ]
+      period:
+      projects/clients:
+        - name:
+          responsibilities:
+          description:
+      tech stack: []
+    - Rede Inova:
+      position: [Tech lead, Backend developer, Technical Interviewer]
+      period:
+      projects:
+        - name:
+          responsibilities:
+          description:
+      tech stack: []
+    - Jobsity:
+      position: [Senior backend developer, Team augmentation consultant]
+      period:
+      projects/clients:
+        - name:
+          responsibilities:
+          description:
+      tech stack: []
+    - Casa Magalhães:
+      position: [Senior backend developer]
+      period:
+      projects:
+        - name:
+          responsibilities:
+          description:
+      tech stack: []
+    - TechPar:
+      position: [Software developer, Requisites Analyst, CTO]
+      period:
+      projects:
+        - name:
+          responsibilities:
+          description:
+      tech stack: []
+    - Game For Learning:
+      position: [Software developer, CTO]
+      period:
+      projects:
+        - name:
+          responsibilities:
+          description:
+      tech stack: []
+    - Atlanta Tecnologia: http://www.atlantatecnologia.com.br
+      position: [Fullstack Software developer]
+      period: 2013-02 - 2014-08
+      description: |
+        We delivered transit law enforcement solutions.
+      projects:
+        - Faixa exclusiva:
+          responsibilities: [Code development, Architecture specification]
+          description:
+        - Photo labeler:
+          responsibilities:: [Code development]
+          description:
+        - AT-SMS/AT-SMS2:
+          responsibilities: [Code development]
+          description:
+      tech stack:
+        [
+          PostgreSQL,
+          MySQL,
+          Java EE,
+          Spring,
+          Nrjavaserial,
+          Angularjs,
+          Bootstrap,
+          Image processing,
+        ]
+    - Ifactory Solutions: https://www.linkedin.com/company/ifactory-solutions
+      position: [Fullstack Software developer]
+      period: 2012-11 - 2013-01
+      description: |
+        Ifactory solutions outsourced me and my team to work on-site, at Edson
+        Queiroz Holding.
+      projects:
+        - Diário do Nordeste:
+          responsibilities: [Code development, Unit and integration tests]
+          description: |
+            We produced velocity templates running on top of Polopoly
+            multi-target web cms. Our client, one of the biggest printed media
+            in the state, used them for both online and printed version of the
+            daily journal.
+      tech stack: [Java, Velocity, HTML, CSS, Polopoly]
+    - HEXA: http://www.hexat.com.br/hexa
+      description: |
+        This company had various P&D works. It was yet another business backed
+        by IFCE professors.
+      position: [Fullstack Software developer]
+      period: 2012-09 - 2012-10
+      projects:
+        - Historical documents digitalization:
+          responsibilities: [Code development]
+          description: |
+            Handled a wide variety of problems, from basic structures for code
+            versioning to defining technologies to be used to code the solution.
+      tech stack: [PHP, MySQL, Java EE, Android, REST API]
+    - LDS: http://lds.ifce.edu.br
+      description: |
+        This company had various P&D works. It was another business backed by
+        IFCE professors.
+      position: [Fullstack Software developer]
+      period: 2012-04 - 2012-08
+      projects:
+        - Furukawa electric latam: https://www.furukawalatam.com/pt-br
+          responsibilities: [Code development, Unit testing]
+          description: |
+            Java web solution to handle industry operations.
+      tech stack:
+        [
+          Oracle database,
+          Java EE,
+          Spring,
+          VRaptor,
+          Angularjs,
+          Bootstrap,
+          TeamCity,
+          JUnit,
+          Cucumber,
+        ]
+    - Novelbiz: https://www.linkedin.com/company/novelbiz
+      description: |
+        This company had various P&D works. It was a business backed by IFCE
+        professors.
+      position: [R&D Software Developer]
+      period: 2011-09 - 2012-04
+      projects:
+        - Small robotic car:
+          responsibilities: [Experimental code development]
+          description: |
+            A robot prototype using a Beagleboard. since the robot was in 
+            another state, 2000 kilometers apart. I had to double ssh to get
+            access to the C/C++ openCV code inside the robot.
+        - Mobile software to recommend products and services:
+          responsibilities: [Experimental code development]
+          description: |
+            It was an android solution to offer products and services based on
+            what the user likes and its geolocation. It consumed a REST service
+            i designed, running in a Glassfish application server published in a
+            EC2 instance at AWS.
+      tech stack:
+        [
+          C/C++,
+          SSH,
+          Embedded Linux,
+          Android,
+          REST API,
+          Java EE,
+          MySQL,
+          Recommendation systems - collaborative filtering,
+        ]
+    - Sena Informática / USIX S.A./ Ebix Inc.: https://www.linkedin.com/company/usix-technology/
+      description: |
+        This was the biggest Brazilian insurance solutions provider back in time
+      position:
+        [Trainee, Junior programmer, Senior programmer, Software architect]
+      period: 2007-08 - 2011-09
+      projects:
+        - WIS Marítima: https://www.seguroauto.org/maritima-seguros-auto/
+          responsibilities:
+            [
+              Project architecture and initial setup,
+              Code development,
+              Unit test cases,
+              Application deployment,
+            ]
+          description: |
+            In this client score solution i was allowed to apply techniques from
+            Conta Corrente project, since this client did not needed dynamic
+            metamodel configuration like previous products. Heavy use of jQuery
+            and early forms of SPA. We didn't called it that way back in time.
+        - WIS Bradesco Seguros: https://www.bradescoseguros.com.br/clientes
+          responsibilities:
+            [Native Code development, Unit test cases, Application deployment]
+          description: |
+            Solution to calculate the client score, but on this project my main
+            responsibility was the JNI interface with the client score library,
+            which was implemented in C and was not thread-safe. Also the
+            production server was an itanium so i dealt with HP-UX and the aCC
+            C/C++ compiler. And a lot of Makefiles.
+        - WIS Sulamérica: https://portal.sulamericaseguros.com.br/home.htm
+          responsibilities: [Code development, Unit test cases]
+          description: |
+            Dynamic application to build interfaces to calculate client score
+            online. Built with apache struts, java + oracle database.
+        - Conta Corrente: https://portal.sulamericaseguros.com.br/home.htm
+          responsibilities: [Code development, Unit test cases]
+          description: |
+            A java web with struts and oracle database solution to offer credit
+            to brokers so they could give discounts to their clients. It was an
+            early form of SPA.
+      tech stack:
+        [
+          jQuery,
+          DWR - direct web remoting,
+          Apache Struts 1,
+          Oracle database,
+          Websphere application server,
+          Java EE,
+          JNI - Java Native Interface,
+          C/C++,
+          Proprietary insurance business metamodel engine,
+        ]
+    - Cooperativa Pirambu Digital: https://www.facebook.com/pirambudigital/?rf=351248931610166
+      description: |
+        The company was a social project to include young students into the
+        digital market.
+      position: trainee
+      period: 2006 - 2007
+      projects:
+        - CFN: https://pt.wikipedia.org/wiki/Transnordestina_Log%C3%ADstica_S.A.
+          responsibilities: [Code development]
+          description: |
+            Java web solution to manage order services to railways maintenance.
+      tech stack:
+        [
+          MySQL,
+          Java,
+          Apache Struts,
+          Apache Tomcat,
+          Javascript,
+          HTML,
+          CSS,
+          jQuery,
+        ]
   education:
-    - Systems Development and Analysis
-    - Computer Engineering
-    - Software Development
+    - Systems Development and Analysis: https://estacio.br
+      type: College / Higher education / Remote
+      period: 2023-08-10 to present day
+      description: |
+        In order to keep up my superior degree studies, i left my previous
+        course, Computer Engineering, and started this remote-first course. Once
+        i finish it i plan to get a Master Degree.
+    - Computer Engineering: https://ifce.edu.br/
+      type: Engineering college / higher education
+      period: 2007 - 2023 (did not graduated)
+      description: |
+        After a while i started the Engineering course, however i already had a
+        full time professional work. Turnos out i experimented quick career
+        growth, but didn't managed to balance well between my studies and the
+        daily, full-time job.
+    - Software Development (technician): https://ifce.edu.br/
+      type: Technician / secondary school
+      period: 2004 - 2006
+      description: |
+        I started my professional studies there. Technician level.
   other certifications:
-    -
-  contact info:
-    - Email:
-    - Phone:
-    - Mastodon:
-    - Facebook:
-    - Instagram:
-    - GitHub:
-    - Linkedin:
-    - StackOverflow:
-    - Keybase:
-    - Hackerrank:
-    - Codewars:
-    - Reddit:
-    - NPM:
+    - AngularJS: https://www.udemy.com/certificate/UC-583e3f98-9849-4005-b1b0-205eed180595/
+    - MongoDB: https://www.udemy.com/certificate/UC-b7e843fb-028f-4d3d-a55d-2a6556b56705/
+    - AWS EKS: https://www.udemy.com/certificate/UC-62b8f14c-156a-4801-83ce-c57d05fb30bc/
+    - AWS Lambda: https://www.udemy.com/certificate/UC-2848e49e-beb9-4878-b807-7f42d89d7c9e/
+    - AWS ECS: https://www.udemy.com/certificate/UC-715dc855-9141-472c-ad6d-ca5887d8307d/
+    - Terraform: https://www.udemy.com/certificate/UC-da715f89-e393-4ab1-aa93-274c911d84d3/
+    - QT5 Beginner: https://www.udemy.com/certificate/UC-E9X7J3R8/
+    - QT5 Intermediate: https://www.udemy.com/certificate/UC-1456db31-1462-4152-931f-540175c5b2e2/
+    - QT5 Advanced: https://www.udemy.com/certificate/UC-47930431-1b0a-44cd-9f3b-b797d554853b/
+    - Go Fundamentals: https://www.udemy.com/certificate/UC-75d3d156-4ede-4d63-bbc5-2719917d93ed/
+    - Go Multithreading: https://www.udemy.com/certificate/UC-acd2ccc5-48a0-4050-8c68-5dfd8c757cbd/
+    - Go Web Development: https://www.udemy.com/certificate/UC-fc25892b-3764-49e0-85b2-507c548f47e2/
+    - Node.js: https://www.udemy.com/certificate/UC-f5e8e700-f734-4385-b8be-c7aecf71f7cc/
+    - Vue/Laravel: https://www.udemy.com/certificate/UC-7874dad8-c92a-43dd-88a3-403f72ef5c26/
+  other contact info:
+    - Mastodon: https://elk.bolha.one/mastodon.world/@sombriks
+    - Twitter: https://x.com/sombriks
+    - Facebook: https://www.facebook.com/sombriks
+    - Instagram: https://www.instagram.com/sombriks
+    - GitHub: https://github.com/sombriks
+    - Linkedin: https://www.linkedin.com/in/sombriks/
+    - StackOverflow: https://stackoverflow.com/users/420096/sombriks
+    - Keybase: https://keybase.io/sombriks
+    - Hackerrank: https://www.hackerrank.com/sombriks
+    - Codewars: https://www.codewars.com/users/sombriks
+    - Reddit: https://www.reddit.com/user/sombriks
+    - NPM: https://www.npmjs.com/~sombriks
