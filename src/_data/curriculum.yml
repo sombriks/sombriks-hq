@@ -145,7 +145,7 @@ resume:
         - Scrum: ★★★☆☆
         - UML: ★★★☆☆
   work:
-    - Nearsure:
+    - Nearsure: https://www.nearsure.com/
       position:
         [
           Senior backend developer,
@@ -153,52 +153,422 @@ resume:
           Team augmentation consultant,
           Technical Interviewer,
         ]
-      period:
+      period: 2022-08-29 - present day
+      description: |
+        Nearsure is a 'nearshore' outsourcing company with many US-based 
+        clients.
       projects/clients:
-        - name:
+        - Nearsure technical interview team:
+          responsibilities: [Technical interview]
+          description: |
+            I offered my skills to the interview team so i can help to
+            streamline the candidature process at Nearsure. I enjoy to have
+            technical talks and it's even cooler when people know about the
+            technologies being measured.
+        - Application team at Markerr:
           responsibilities:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Service modules evolution roadmap,
+              Code review on pull requests from team members,
+              Frontend and backend implementation,
+              Infrastructure for release versioning and publishing of internal libraries,
+              Automation building for application image building,
+              publishing and deployment,
+              Definition,
+              test and implementation of GitOps pull-based deployments,
+              Kafka stream processing architectural solution,
+              SQL and NoSQL database operations,
+              Processes/services and tools documentation at notion pages,
+            ]
+          description: |
+            Markerr sells market intelligence for real state investors. it
+            refines big data from several sources and present them to the client
+            via bulk reads and also via a tool called datastudio. I work on the
+            ecosystem needed to run this tool: AWS EKS, MSK, RDS, S3 and so on.
+
+            There is a variety of services, most of them written in Kotlin and
+            SpringBoot, but there is also Node.js services and Go services.
+
+            Those services are running inside 3 EKS clusters, completely
+            integrated with a CI/CD pipeline written by me. 
+
+            I am currently in charge of maintain and evolve all services and i
+            plan to move most of them from jvm ecosystem to something more
+            familiar to the rest of the team.
+        - Payment team at Boku:
+          responsibilities:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
           description:
-      tech stack: []
-    - Rede Inova:
-      position: [Tech lead, Backend developer, Technical Interviewer]
-      period:
+        - Platform team at Boku:
+          responsibilities:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+            ]
+          description: |
+            Several tools to allow other teams to work with client's solutions
+      tech stack:
+        [
+          Java,
+          Kotlin,
+          Node.js,
+          Go,
+          Echo,
+          Goqu,
+          Knex,
+          Koa,
+          Kafka,
+          Redis,
+          SpringBoot,
+          Apache Cassandra,
+          Microservices architecture,
+          Kubernetes,
+          Docker,
+          K9s,
+          GitOps,
+          ArgoCD,
+          AWS S3,
+          AWS EC2,
+          AWS ECS,
+          AWS ECR,
+          AWS EKS,
+          AWS MSK,
+          AWS RDS,
+          AWS Cloudwatch,
+          GCP BigQuery,
+          MySQL,
+          PostgreSQL,
+          React,
+          Angularjs,
+          Bash,
+          JSP,
+          Apache Tomcat,
+          Maven,
+          Gradle,
+          NPM,
+          Liquibase,
+          Sumologic,
+          GitHub,
+          Github Actions,
+          Linear.app,
+          Notion,
+        ]
+    - Rede Inova: https://www.redeinova.com.br/
+      position: [Tech lead, Backend developer, Technical interviewer]
+      period: 2022-07-13 - 2023-05-03 (part-time position)
+      description: |
+        Redeinova is a technology company from Brasil delivering solutions to
+        public and private sectors. I assumed this part-time position on my
+        spare time due to a five-hour free time on my other position. Besides my
+        responsibilities as Tech lead, i also performed technical interviews to
+        grow the team for my projects and others over the company.
       projects:
-        - name:
+        - 42:
           responsibilities:
-          description:
-      tech stack: []
-    - Jobsity:
-      position: [Senior backend developer, Team augmentation consultant]
-      period:
+            [
+              Code development,
+              Creation of testing steps,
+              Task specification,
+              Task delegation,
+              Code review on pull requests from team members,
+              Database migrations,
+              Elaboration of technical assessment,
+              Technical interviews,
+            ]
+          description: |
+            It's a java-based solution to recover cross-reference information 
+            at PGE-RO
+        - Kanoê:
+          responsibilities:
+            [
+              Code development,
+              Creation of testing steps,
+              Task specification,
+              Task delegation,
+              Code review on pull requests from team members,
+              Database migrations,
+              Elaboration of technical assessment,
+              Technical interviews,
+            ]
+          description: |
+            It's a java-based solution to improve efficiency of legal process at PGE-RO
+        - Mapinguari:
+          responsibilities:
+            [
+              Code development,
+              Creation of testing steps,
+              Task specification,
+              Task delegation,
+              Code review on pull requests from team members,
+              Database migrations,
+              Elaboration of technical assessment,
+              Technical interviews,
+            ]
+          description: |
+            It's a java-based solution to improve legal payments at PGE-RO
+      tech stack:
+        [
+          Java,
+          Gradle,
+          Microservices architecture,
+          MySQL,
+          Microsoft SQL Server,
+          Oracle database,
+          Mongodb,
+          Angularjs,
+          Angular,
+          Liquibase,
+          SpringBoot,
+          Gitlab,
+          CI/CD pipelines,
+        ]
+    - Jobsity: https://www.jobsity.com/
+      position: [Senior backend developer - Team augmentation consultant]
+      period: 2021-02-01 - 2022-08-29
+      description: |
+        My first international experience, Jobsity applies the 'nearshore'
+        outsourcing model, so clients don't suffer with big timezones
+        differences.
       projects/clients:
-        - name:
+        - USA Today/Gannett - Buy Online Direct:
           responsibilities:
-          description:
-      tech stack: []
-    - Casa Magalhães:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            Sales tool aimed to direct sell of online presence solutions. Stack
+            is cloud native with some degree of transparency regarding the
+            provider thanks to terraform scripts provided by DevOps team.
+        - USA Today/Gannett - Cobalt LocalIQ:
+          responsibilities:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            Sales tool aimed to sell online presence solutions for small
+            business. Stack is cloud native with some degree of transparency
+            regarding the provider nature thanks to terraform scripts provided
+            by the DevOps team.
+      tech stack:
+        [
+          Java,
+          SpringBoot,
+          Javascript,
+          React,
+          jQuery,
+          SQL,
+          Liquibase,
+          AWS,
+          HTML,
+          CSS,
+          Agile,
+          Git,
+          Bash,
+          GitHub,
+          REST,
+          Ruby on Rails,
+          Docker,
+          Database migrations,
+          Serverless microservices,
+        ]
+    - Casa Magalhães: https://www.casamagalhaes.com.br
       position: [Senior backend developer]
-      period:
+      period: 2019-03 - 2021-01-29
+      description: |
+        This is a traditional and quite well-established group dealing with 
+        retail sales solutions. Here we helped small business deal with the
+        overly complicated brazilian tax systems and to offered tools to manage
+        sales, stock, financial reconciliation and so on. Also we did embrace
+        cloud and serverless solutions from Amazon.
       projects:
-        - name:
+        - varejofacil:
           responsibilities:
-          description:
-      tech stack: []
-    - TechPar:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            This product eases the problem of managing small and medium retailers business. Best suited for markets, general sales store and restaurants.
+        - varejomini/varejopdv:
+          responsibilities:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            This product solves the problem to the small sales business. It aims
+            to allow a simpler sales workflow, once there are other in-house
+            products to other sales modes (restaurant, groceries market, etc).
+      tech stack:
+        [
+          Node.js,
+          Java,
+          Tomcat,
+          MySQL,
+          Sequelize,
+          Sequelize migrations,
+          Gulp,
+          AWS Lambda,
+          Pusher,
+          AWS DynamoDB,
+          AWS SES,
+          AWS Api Gateway,
+          QT,
+          Quasar framework,
+          Element UI,
+          Kendo UI,
+          Webpack,
+          Vue.js,
+          Heroku,
+          Docker,
+          AWS CodeBuild,
+          Material design,
+          AWS CodePipeline,
+          SPA,
+          REST,
+          AWS SQS,
+          Codeclimate,
+          Sentry,
+          Jira,
+          Scrum,
+        ]
+    - Game For Learning / TechPar: https://techpar.github.io/
       position: [Software developer, Requisites Analyst, CTO]
-      period:
+      period: 2014-09 - 2019-03
+      description: |
+        At G4L (Game For Learning), we create innovative educational games, (OED
+        - Objeto de Ensino Digital), building knowledge using the entertainment
+        to keep the student focus. Then we pivoted the focus of the startup and 
+        renamed it to TechPar - Tecnologia e Participações.
+
+        At TechPar we dealt with software solutions on various fields. From
+        community management to renewable energy. Hybrid mobile and rich web
+        technologies were applied on these solutions.
       projects:
-        - name:
+        - BWDA 5:
           responsibilities:
-          description:
-      tech stack: []
-    - Game For Learning:
-      position: [Software developer, CTO]
-      period:
-      projects:
-        - name:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            Web and mobile solution to manage service orders to maintain wind
+            power research towers. Admin web interface built with Vue.js and
+            mobile app written in nativescript/vue. Also provides a way to
+            analise sensor data collected on those towers, drawing graphics.
+        - Buscaula:
           responsibilities:
-          description:
-      tech stack: []
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            Vue rich web application to search courses. A node backend with
+            PostgreSQL provided advanced text search.
+        - Paróquia Virtual:
+          responsibilities:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            Pray app for catholics. Two priest orders (Sagrado Coração de Jejus
+            and Mercedários) where involved. Built with Apache Cordova and
+            Vue.js in order to publish on android and ios app stores using the
+            same codebase.
+        - Ambbi - community management:
+          responsibilities:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          description: |
+            Closed gates community communication solution. One Web admin
+            interface and two mobile applications, written in angularjs and
+            Apache Cordova, Allowed us to publish on android and ios app stores
+            from the same codebase.
+        - Super Candy:
+          responsibilities: [Code development]
+          description: |
+            Another action math game. Written using web technologies and
+            packaged for mobile using Apache Cordova.
+        - Educatáxi:
+          responsibilities: [Code development]
+          description: |
+            Action math game. Written using web technologies and packaged for
+            mobile using Apache Cordova.
+        - Aventura matemática:
+          responsibilities: [Code development]
+          description: |
+            Adventure/puzzle math game. Written using web technologies and
+            packaged for mobile using Apache Cordova.
+        - Matematicando:
+          responsibilities: [Code development]
+          description: |
+            Math puzzle game. Written using web technologies and packaged for
+            mobile using Apache Cordova.
+      tech stack:
+        [
+          Nodejs,
+          PostgreSQL,
+          Knex.js,
+          Bookshelf,
+          Express,
+          Socket.io,
+          OneSignal,
+          ElasticEmail,
+          Sendgrid,
+          Apache Cordova,
+          Nativescript,
+          Webpack,
+          Browserify,
+          Phaser JS,
+          Vue.js,
+          Angularjs,
+          Material design,
+          Bootstrap,
+          SPA,
+          REST,
+          Jira,
+          Trello,
+          Scrum,
+        ]
     - Atlanta Tecnologia: http://www.atlantatecnologia.com.br
       position: [Fullstack Software developer]
       period: 2013-02 - 2014-08
