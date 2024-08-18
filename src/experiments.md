@@ -42,6 +42,14 @@ found nothing like what i wanted.
 But the PR did more sense as an independent library so this experiment came to
 life.
 
+## [no-rollback-from-here](https://github.com/sombriks/no-rollback-from-here)
+
+This project was a small challenge i made to myself, wondering how hard would be
+to create a database migration system limited yet useful in a way that most
+complications would be dealt at application level.
+
+It ended up to be a quite fun experiment, still pending a few bits but it works!
+
 ## [hx-dataset-include](https://www.npmjs.com/package/hx-dataset-include)
 
 Humble and brutally simple [htmx](https://htmx.org) extension to include data-*
