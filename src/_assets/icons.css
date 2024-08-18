@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?7x0w7y');
-    src:  url('fonts/icomoon.eot?7x0w7y#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7x0w7y') format('truetype'),
-    url('fonts/icomoon.woff?7x0w7y') format('woff'),
-    url('fonts/icomoon.svg?7x0w7y#icomoon') format('svg');
+    src:  url('fonts/icomoon.eot?vqg22q');
+    src:  url('fonts/icomoon.eot?vqg22q#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?vqg22q') format('truetype'),
+      url('fonts/icomoon.woff?vqg22q') format('woff'),
+      url('fonts/icomoon.svg?vqg22q#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     speak: never;
@@ -19,150 +19,139 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
+  
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-kubernetes:before {
-    content: "\e90e";
-    /* color: #326ce5; */
-}
-.icon-mongodb:before {
-    content: "\e91b";
-    /* color: #47a248; */
-}
-.icon-jira:before {
-    content: "\e917";
-}
-.icon-python:before {
-    content: "\e916";
-    /* color: #3776ab; */
-}
-.icon-ruby:before {
+  }
+  
+  .icon-cpp:before {
     content: "\e900";
-    /* color: #cc342d; */
-}
-.icon-nativescript:before {
-    content: "\e901";
-    /* color: #3655ff; */
-}
-.icon-docker:before {
-    content: "\e902";
-    /* color: #1488c6; */
-}
-.icon-spring:before {
-    content: "\e903";
-    /* color: #6db33f; */
-}
-.icon-firebase:before {
-    content: "\e904";
-    /* color: #ffca28; */
-}
-.icon-digitalocean:before {
-    content: "\e905";
-    /* color: #0080ff; */
-}
-.icon-amazonaws:before {
+  }
+  .icon-amazonaws:before {
     content: "\e906";
-}
-.icon-c:before {
+  }
+  .icon-android:before {
     content: "\e907";
-    /* color: #a8b9cc; */
-}
-.icon-kotlin:before {
+  }
+  .icon-angular:before {
     content: "\e908";
-    /* color: #0095d5; */
-}
-.icon-react:before {
+  }
+  .icon-apachekafka:before {
     content: "\e909";
-    /* color: #61dafb; */
-}
-.icon-angular:before {
-    content: "\e90a";
-    /* color: #dd0031; */
-}
-.icon-vue-dot-js:before {
+  }
+  .icon-digitalocean:before {
     content: "\e90b";
-    /* color: #4fc08d; */
-}
-.icon-oracle:before {
+  }
+  .icon-docker:before {
     content: "\e90c";
-    /* color: #f80000; */
-}
-.icon-postgresql:before {
+  }
+  .icon-googlecloud:before {
     content: "\e90d";
-    /* color: #336791; */
-}
-.icon-mysql:before {
-    content: "\e91a";
-    /* color: #4479a1; */
-}
-.icon-go:before {
+  }
+  .icon-jira:before {
+    content: "\e90e";
+  }
+  .icon-kubernetes:before {
     content: "\e90f";
-    /* color: #00add8; */
-}
-.icon-node-dot-js:before {
+  }
+  .icon-mongodb:before {
     content: "\e910";
-    /* color: #393; */
-}
-.icon-javascript:before {
+  }
+  .icon-mysql:before {
     content: "\e911";
-    /* color: #f7df1e; */
-}
-.icon-java:before {
+  }
+  .icon-nativescript:before {
     content: "\e912";
-    /* color: #007396; */
-}
-.icon-mastodon:before {
+  }
+  .icon-oracle:before {
     content: "\e913";
-    /* color: #3088d4; */
-}
-.icon-keybase:before {
+  }
+  .icon-postgresql:before {
     content: "\e914";
-    /* color: #33a0ff; */
-}
-.icon-hackerrank:before {
+  }
+  .icon-python:before {
     content: "\e915";
-    /* color: #2ec866; */
-}
-.icon-npm:before {
-    content: "\eab2";
-}
-.icon-android:before {
-    content: "\eac0";
-}
-.icon-linkedin:before {
-    content: "\eac9";
-}
-.icon-html-five:before {
-    content: "\eae4";
-}
-.icon-phone:before {
-    content: "\e942";
-}
-.icon-link:before {
-    content: "\e9cb";
-}
-.icon-mail4:before {
+  }
+  .icon-react:before {
+    content: "\e916";
+  }
+  .icon-redis:before {
+    content: "\e917";
+  }
+  .icon-ruby:before {
+    content: "\e918";
+  }
+  .icon-spring:before {
+    content: "\e919";
+  }
+  .icon-vue-dot-js:before {
+    content: "\e91a";
+  }
+  .icon-c:before {
+    content: "\e91b";
+  }
+  .icon-go:before {
+    content: "\e91c";
+  }
+  .icon-kotlin:before {
+    content: "\e91d";
+  }
+  .icon-node-dot-js:before {
+    content: "\e91e";
+  }
+  .icon-codewars:before {
+    content: "\e91f";
+  }
+  .icon-typescript:before {
+    content: "\e920";
+  }
+  .icon-javascript:before {
+    content: "\e921";
+  }
+  .icon-java:before {
+    content: "\e922";
+  }
+  .icon-hackerrank:before {
+    content: "\e923";
+  }
+  .icon-keybase:before {
+    content: "\e924";
+  }
+  .icon-mastodon:before {
+    content: "\e925";
+  }
+  .icon-embed2:before {
+    content: "\ea80";
+  }
+  .icon-mail4:before {
     content: "\ea86";
-}
-.icon-facebook2:before {
+  }
+  .icon-facebook2:before {
     content: "\ea91";
-}
-.icon-instagram:before {
+  }
+  .icon-instagram:before {
     content: "\ea92";
-}
-.icon-twitter:before {
+  }
+  .icon-twitter:before {
     content: "\ea96";
-}
-.icon-github:before {
+  }
+  .icon-github:before {
     content: "\eab0";
-}
-.icon-reddit:before {
+  }
+  .icon-npm:before {
+    content: "\eab1";
+  }
+  .icon-reddit:before {
     content: "\eac6";
-}
-.icon-stackoverflow:before {
+  }
+  .icon-linkedin:before {
+    content: "\eac9";
+  }
+  .icon-stackoverflow:before {
     content: "\ead0";
-}
+  }
+  .icon-html-five:before {
+    content: "\eae4";
+  }
+  

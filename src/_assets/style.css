@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vqg22q');
+  src:  url('fonts/icomoon.eot?vqg22q#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vqg22q') format('truetype'),
+    url('fonts/icomoon.woff?vqg22q') format('woff'),
+    url('fonts/icomoon.svg?vqg22q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cpp:before {
+  content: "\e900";
+  color: #a8b9cc;
+}
+.icon-amazonaws:before {
+  content: "\e906";
+}
+.icon-android:before {
+  content: "\e907";
+  color: #3ddc84;
+}
+.icon-angular:before {
+  content: "\e908";
+  color: #dd0031;
+}
+.icon-apachekafka:before {
+  content: "\e909";
+}
+.icon-digitalocean:before {
+  content: "\e90b";
+  color: #0080ff;
+}
+.icon-docker:before {
+  content: "\e90c";
+  color: #1488c6;
+}
+.icon-googlecloud:before {
+  content: "\e90d";
+  color: #4285f4;
+}
+.icon-jira:before {
+  content: "\e90e";
+}
+.icon-kubernetes:before {
+  content: "\e90f";
+  color: #326ce5;
+}
+.icon-mongodb:before {
+  content: "\e910";
+  color: #47a248;
+}
+.icon-mysql:before {
+  content: "\e911";
+  color: #4479a1;
+}
+.icon-nativescript:before {
+  content: "\e912";
+  color: #3655ff;
+}
+.icon-oracle:before {
+  content: "\e913";
+  color: #f80000;
+}
+.icon-postgresql:before {
+  content: "\e914";
+  color: #336791;
+}
+.icon-python:before {
+  content: "\e915";
+  color: #3776ab;
+}
+.icon-react:before {
+  content: "\e916";
+  color: #61dafb;
+}
+.icon-redis:before {
+  content: "\e917";
+  color: #d82c20;
+}
+.icon-ruby:before {
+  content: "\e918";
+  color: #cc342d;
+}
+.icon-spring:before {
+  content: "\e919";
+  color: #6db33f;
+}
+.icon-vue-dot-js:before {
+  content: "\e91a";
+  color: #4fc08d;
+}
+.icon-c:before {
+  content: "\e91b";
+  color: #a8b9cc;
+}
+.icon-go:before {
+  content: "\e91c";
+  color: #00add8;
+}
+.icon-kotlin:before {
+  content: "\e91d";
+  color: #0095d5;
+}
+.icon-node-dot-js:before {
+  content: "\e91e";
+  color: #393;
+}
+.icon-codewars:before {
+  content: "\e91f";
+  color: #ad2c27;
+}
+.icon-typescript:before {
+  content: "\e920";
+  color: #007acc;
+}
+.icon-javascript:before {
+  content: "\e921";
+  color: #f7df1e;
+}
+.icon-java:before {
+  content: "\e922";
+  color: #007396;
+}
+.icon-hackerrank:before {
+  content: "\e923";
+  color: #2ec866;
+}
+.icon-keybase:before {
+  content: "\e924";
+  color: #33a0ff;
+}
+.icon-mastodon:before {
+  content: "\e925";
+  color: #3088d4;
+}
+.icon-embed2:before {
+  content: "\ea80";
+}
+.icon-mail4:before {
+  content: "\ea86";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-npm:before {
+  content: "\eab1";
+}
+.icon-reddit:before {
+  content: "\eac6";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-stackoverflow:before {
+  content: "\ead0";
+}
+.icon-html-five:before {
+  content: "\eae4";
+}
