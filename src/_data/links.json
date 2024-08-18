@@ -1467,5 +1467,13 @@
       "string",
       "multiline"
     ]
+  },
+  {
+    "label": "keep an eye on your npm dependencies",
+    "link": "https://github.com/raineorshine/npm-check-updates",
+    "tags": [
+      "npm",
+      "update"
+    ]
   }
 ]
