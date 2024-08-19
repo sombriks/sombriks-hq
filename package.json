@@ -5,14 +5,17 @@
   "scripts": {
     "dev": "eleventy --serve --incremental",
     "dev:debug": "DEBUG=Eleventy* eleventy --serve --incremental",
-    "build": "eleventy"
+    "build": "eleventy",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0-beta.1",
+    "@11ty/eleventy-plugin-pug": "^1.0.0-alpha.1",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
     "@11ty/webc": "^0.11.4",
+    "js-yaml": "^4.1.0",
     "prism-themes": "^1.9.0"
   }
 }

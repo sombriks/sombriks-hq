@@ -6,7 +6,7 @@
     }
 </style>
 <div class="contacts">
-  <a webc:for="c of $data.curriculum.contacts"
+  <a webc:for="c of $data._curriculum.contacts"
      webc:if="c.visible"
      target="_blank"
      :href="c.link"

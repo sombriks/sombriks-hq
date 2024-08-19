@@ -1,10 +1,11 @@
-const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const yaml = require("js-yaml");
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
 
-  eleventyConfig.addPlugin(pluginRss);
+  const { default: pluginPug } = await import('@11ty/eleventy-plugin-pug');
 
   eleventyConfig.addPassthroughCopy({
     "src/_assets": "assets",
@@ -47,12 +48,18 @@ module.exports = function (eleventyConfig) {
     // "node_modules/prism-themes/themes/prism-z-touch.min.css": "assets/prism-theme.css"
   });
 
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addPlugin(pluginRss);
+
   // makes eleventy ignore src/_components AND provide auto-import
   eleventyConfig.addPlugin(pluginWebc, {
     components: "src/_components/**/*.webc"
   });
 
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginPug);
+
+  eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
 
   eleventyConfig
     .addFilter('yearTags', posts => {
@@ -88,7 +95,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig
     .addFilter('shuffle', items => items
-      .map(value => ({ value, sort: Math.random() }))
+      .map(value => ({ value, sort: 10 * Math.random() }))
       .sort((a, b) => a.sort - b.sort)
       .map(({ value }) => value))
 

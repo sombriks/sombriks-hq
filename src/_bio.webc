@@ -5,9 +5,9 @@ layout: base.webc
   <fieldset class="topo">
     <profile-pic class="pic"></profile-pic>
     <div class="banner">
-      <h2><span @html="curriculum.resume.nome"></span>
-        (<span @html="curriculum.resume.apelido"></span>)</h2>
-      <p><i @html="curriculum.resume.bio"></i></p>
+      <h2><span @html="_curriculum.resume.nome"></span>
+        (<span @html="_curriculum.resume.apelido"></span>)</h2>
+      <p><i @html="_curriculum.resume.bio"></i></p>
       <p>
         I am Leonardo Silveira, professionally working with technology since
         2007 as a developer and other roles (software architect, startup
@@ -26,7 +26,7 @@ layout: base.webc
   </fieldset>
   <div class="centro">
     <h2>Skills</h2>
-    <div webc:for="s of curriculum.skills">
+    <div webc:for="s of _curriculum.skills">
       <fieldset class="skills">
         <legend @text="s.category"></legend>
         <skill-item webc:for="i of s.items"
@@ -38,7 +38,7 @@ layout: base.webc
       <br/>
     </div>
     <h2>Work Experience</h2>
-    <div webc:for="w of curriculum.work">
+    <div webc:for="w of _curriculum.work">
       <fieldset>
         <legend><a target="company" :href="w.site" @text="w.company"></a> |
           <span @text="`${w.start} - ${w.end}`"></span></legend>
@@ -65,7 +65,7 @@ layout: base.webc
     </div>
 
     <h2>Education</h2>
-    <div webc:for="e of curriculum.education">
+    <div webc:for="e of _curriculum.education">
       <fieldset>
         <legend @text="`${e.start} - ${e.end} | ${e.course} `"></legend>
         <h3>Institution</h3>
@@ -79,7 +79,7 @@ layout: base.webc
     <h2>Contacts</h2>
     <fieldset class="contato">
       <legend>All relevant presence on internet</legend>
-      <div webc:for="c of curriculum.contacts">
+      <div webc:for="c of _curriculum.contacts">
         <a webc:if="c.visible" target="_blank" :href="c.link" :alt="c.label"
            :title="c.label">
           <span :class="c.icon"></span>&nbsp;<span @html="c.link"></span>
