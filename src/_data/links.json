@@ -1475,5 +1475,14 @@
       "npm",
       "update"
     ]
+  },
+  {
+    "label": "If you need vitest but not vite",
+    "link": "https://github.com/vitest-dev/vitest/issues/6390",
+    "tags": [
+      "vitest",
+      "backend",
+      "dotenv"
+    ]
   }
 ]
