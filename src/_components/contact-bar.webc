@@ -6,12 +6,11 @@
     }
 </style>
 <div class="contacts">
-  <a webc:for="c of $data._curriculum.contacts"
-     webc:if="c.visible"
+  <a webc:for="c of $data.curriculum.resume['other contact info']"
      target="_blank"
-     :href="c.link"
-     :alt="c.label"
-     :title="c.label">
+     :href="Object.values(c)[0]"
+     :alt="Object.keys(c)[0]"
+     :title="Object.keys(c)[0]">
       <span :class="c.icon"></span>
   </a>
 </div>

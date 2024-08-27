@@ -33,119 +33,216 @@ resume:
     - programming languages:
       items:
         - Java: ★★★★★
+          icon: icon-java
         - Javascript: ★★★★★
+          icon:
         - Node.js: ★★★★★
+          icon:
         - Kotlin: ★★★★☆
+          icon:
         - Typescript: ★★★★☆
+          icon:
         - Go: ★★★★☆
+          icon:
         - C: ★★★☆☆
+          icon:
         - C++: ★★★☆☆
+          icon:
         - Python: ★★☆☆☆
+          icon:
         - Ruby: ★★☆☆☆
+          icon:
     - frontend (web) frameworks and technologies:
       items:
         - HTML 5: ★★★★★
+          icon:
         - Vue.js: ★★★★★
+          icon:
         - React: ★★★★☆
+          icon:
         - Angular: ★★★★☆
+          icon:
         - HTMX: ★★★★☆
+          icon:
         - CSS: ★★★☆☆
+          icon:
         - Angular-Material: ★★★☆☆
+          icon:
         - Vuetify: ★★★☆☆
+          icon:
         - Bootstrap: ★★★☆☆
+          icon:
         - Bulma: ★★★☆☆
+          icon:
         - Material Design Icons: ★★★☆☆
+          icon:
         - PrimeNG: ★★☆☆☆
+          icon:
     - backend frameworks and tools:
       items:
         - SpringBoot: ★★★★★
+          icon:
         - Express.js: ★★★★★
+          icon:
         - Koa.js: ★★★★★
+          icon:
         - JakartaEE: ★★★★☆
+          icon:
         - JPA: ★★★★☆
+          icon:
         - JDBI: ★★★★☆
+          icon:
         - Liquibase: ★★★★☆
+          icon:
         - Javalin: ★★★★☆
+          icon:
         - Knex.js: ★★★★☆
+          icon:
         - Vert.x: ★★★☆☆
+          icon:
         - Kafka: ★★★☆☆
+          icon:
         - Fastify: ★★★☆☆
+          icon:
         - Socket.io: ★★☆☆☆
+          icon:
     - testing and linting tools:
       items:
         - JUnit: ★★★★★
+          icon:
         - Hamcrest: ★★★★★
+          icon:
         - Jacoco: ★★★★★
+          icon:
         - PMD: ★★★★☆
+          icon:
         - Checkstyle: ★★★★☆
+          icon:
         - Mockito: ★★★★☆
+          icon:
         - Testcontainers: ★★★★☆
+          icon:
         - Mocha: ★★★★★
+          icon:
         - Chai: ★★★★★
+          icon:
         - Sinon: ★★★★☆
+          icon:
         - Supertest: ★★★★☆
+          icon:
         - Ava: ★★★★★
+          icon:
         - C8: ★★★★★
+          icon:
         - Istanbul: ★★★★☆
+          icon:
         - Vitest: ★★★★★
+          icon:
         - Xo: ★★★★☆
+          icon:
         - Eslint: ★★★☆☆
+          icon:
         - Prettier: ★★★☆☆
+          icon:
         - Spock: ★★☆☆☆
+          icon:
     - mobile frameworks and technologies:
       items:
         - Apache Cordova: ★★★☆☆
+          icon:
         - Nativescript: ★★★☆☆
+          icon:
         - Android: ★★★☆☆
+          icon:
     - project build tools:
       items:
         - Maven: ★★★★★
+          icon:
         - Gradle: ★★★★★
+          icon:
         - NPM: ★★★★★
+          icon:
         - BLD: ★★★★☆
+          icon:
         - Go modules: ★★★★☆
+          icon:
         - Apache Ant: ★★★★☆
+          icon:
         - Yarn: ★★★★☆
+          icon:
         - Make: ★★★★☆
+          icon:
         - Pip: ★★★☆☆
+          icon:
         - CMake: ★★★☆☆
+          icon:
         - Automake & Autoconf: ★★☆☆☆
+          icon:
         - bundler.io: ★★☆☆☆
+          icon:
     - databases:
       items:
         - PostgreSQL: ★★★★★
+          icon:
         - MySQL: ★★★★★
+          icon:
         - SQLite: ★★★★★
+          icon:
         - Oracle: ★★★★☆
+          icon:
         - IBM DB2: ★★★☆☆
+          icon:
         - Microsoft SQLServer: ★★★☆☆
+          icon:
         - Redis: ★★★☆☆
+          icon:
         - Apache Cassandra: ★★★☆☆
+          icon:
         - LevelDB: ★★★☆☆
+          icon:
         - MongoDB: ★★☆☆☆
     - devops / gitops:
       items:
         - Git, GitHub, GitLab: ★★★★★
+          icon:
         - GitHub Actions: ★★★★★
+          icon:
         - Docker: ★★★★★
+          icon:
         - Kubernetes: ★★★★★
+          icon:
         - ArgoCD: ★★★★☆
+          icon:
         - AWS: ★★★★☆
+          icon:
         - Digital Ocean: ★★★☆☆
+          icon:
         - GCP: ★★★☆☆
+          icon:
         - Heroku: ★★★☆☆
+          icon:
         - Fly.io: ★★☆☆☆
+          icon:
         - Firebase: ★★☆☆☆
+          icon:
     - miscellaneous:
       items:
         - Linux: ★★★★★
+          icon:
         - Windows: ★★★☆☆
+          icon:
         - Mac OS: ★★★☆☆
+          icon:
         - Jira: ★★★☆☆
+          icon:
         - Linear: ★★★☆☆
+          icon:
         - YouTrack: ★★★☆☆
+          icon:
         - Scrum: ★★★☆☆
+          icon:
         - UML: ★★★☆☆
+          icon:
   work:
     - Nearsure: https://www.nearsure.com/
       position:
@@ -798,15 +895,29 @@ resume:
     - Node.js: https://www.udemy.com/certificate/UC-f5e8e700-f734-4385-b8be-c7aecf71f7cc/
     - Vue/Laravel: https://www.udemy.com/certificate/UC-7874dad8-c92a-43dd-88a3-403f72ef5c26/
   other contact info:
+    - Email: mailto:sombriks@gmail.com
+      icon: icon-mail4
     - Mastodon: https://elk.bolha.one/mastodon.world/@sombriks
+      icon: icon-mastodon
     - Twitter: https://x.com/sombriks
+      icon: icon-twitter
     - Facebook: https://www.facebook.com/sombriks
+      icon: icon-facebook2
     - Instagram: https://www.instagram.com/sombriks
+      icon: icon-instagram
     - GitHub: https://github.com/sombriks
+      icon: icon-github
     - Linkedin: https://www.linkedin.com/in/sombriks/
+      icon: icon-linkedin
     - StackOverflow: https://stackoverflow.com/users/420096/sombriks
-    - Keybase: https://keybase.io/sombriks
+      icon: icon-stackoverflow
+    # - Keybase: https://keybase.io/sombriks
+    #   icon: icon-keybase
     - Hackerrank: https://www.hackerrank.com/sombriks
+      icon: icon-hackerrank
     - Codewars: https://www.codewars.com/users/sombriks
+      icon: icon-codewars
     - Reddit: https://www.reddit.com/user/sombriks
+      icon: icon-reddit
     - NPM: https://www.npmjs.com/~sombriks
+      icon: icon-npm
