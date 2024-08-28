@@ -30,7 +30,7 @@ resume:
     solutions, world-class payment platform solutions and real state business
     intelligence solutions.
   skills:
-    - programming languages:
+    - Programming Languages:
       items:
         - Java: ★★★★★
           icon: icon-java
@@ -52,7 +52,7 @@ resume:
           icon:
         - Ruby: ★★☆☆☆
           icon:
-    - frontend (web) frameworks and technologies:
+    - Frontend (web) Frameworks:
       items:
         - HTML 5: ★★★★★
           icon:
@@ -78,7 +78,7 @@ resume:
           icon:
         - PrimeNG: ★★☆☆☆
           icon:
-    - backend frameworks and tools:
+    - Backend Frameworks:
       items:
         - SpringBoot: ★★★★★
           icon:
@@ -106,7 +106,7 @@ resume:
           icon:
         - Socket.io: ★★☆☆☆
           icon:
-    - testing and linting tools:
+    - Testing and Linting Tools:
       items:
         - JUnit: ★★★★★
           icon:
@@ -120,7 +120,7 @@ resume:
           icon:
         - Mockito: ★★★★☆
           icon:
-        - Testcontainers: ★★★★☆
+        - TestContainers: ★★★★☆
           icon:
         - Mocha: ★★★★★
           icon:
@@ -146,7 +146,7 @@ resume:
           icon:
         - Spock: ★★☆☆☆
           icon:
-    - mobile frameworks and technologies:
+    - Mobile Frameworks:
       items:
         - Apache Cordova: ★★★☆☆
           icon:
@@ -154,7 +154,7 @@ resume:
           icon:
         - Android: ★★★☆☆
           icon:
-    - project build tools:
+    - Project Build Tools:
       items:
         - Maven: ★★★★★
           icon:
@@ -180,7 +180,7 @@ resume:
           icon:
         - bundler.io: ★★☆☆☆
           icon:
-    - databases:
+    - Databases:
       items:
         - PostgreSQL: ★★★★★
           icon:
@@ -201,7 +201,7 @@ resume:
         - LevelDB: ★★★☆☆
           icon:
         - MongoDB: ★★☆☆☆
-    - devops / gitops:
+    - Cloud/DevOps/GitOps:
       items:
         - Git, GitHub, GitLab: ★★★★★
           icon:
@@ -225,7 +225,7 @@ resume:
           icon:
         - Firebase: ★★☆☆☆
           icon:
-    - miscellaneous:
+    - Miscellaneous:
       items:
         - Linux: ★★★★★
           icon:
@@ -438,7 +438,7 @@ resume:
         My first international experience, Jobsity applies the 'nearshore'
         outsourcing model, so clients don't suffer with big timezones
         differences.
-      projects/clients:
+      projects:
         - USA Today/Gannett - Buy Online Direct:
           responsibilities:
             [
@@ -556,7 +556,7 @@ resume:
           Scrum,
         ]
     - Game For Learning / TechPar: https://techpar.github.io/
-      position: [Software developer, Requisites Analyst, CTO]
+      position: [Software developer, Requirements Analyst, CTO]
       period: 2014-09 - 2019-03
       description: |
         At G4L (Game For Learning), we create innovative educational games, (OED
@@ -680,7 +680,7 @@ resume:
             A java web, serial communications and ip camera solution to detect
             if cars where on exclusive bus lane.
         - Photo labeler:
-          responsibilities:: [Code development]
+          responsibilities: [Code development]
           description: |
             Internal tool java swing based. it was used to correctly apply the
             infraction label on photos.
