@@ -1484,5 +1484,19 @@
       "backend",
       "dotenv"
     ]
+  },
+  {
+    "label": "The monospace web",
+    "link": "https://owickstrom.github.io/the-monospace-web/",
+    "tags": [
+      "monospace"
+    ]
+  },
+  {
+    "label": "The departure mono",
+    "link": "https://departuremono.com/",
+    "tags": [
+      "monospace"
+    ]
   }
 ]
