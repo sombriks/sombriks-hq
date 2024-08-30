@@ -14,8 +14,14 @@
         border-style: none;
         border-bottom: 1px solid var(--color1);
     }
+
+    @media print {
+        nav.nav-link {
+            display: none;
+        }
+    }
 </style>
-<nav>
+<nav class="nav-link">
     <a class="item" :href="url('/bio')">Bio</a>
     <span>|</span>
     <a class="item" :href="url('/blog')">Blog</a>
@@ -26,4 +32,4 @@
     <span>|</span>
     <a class="item" :href="url('/privacy')">Privacy</a>
 </nav>
-<nav><a class="item" :href="url('/feed.xml')">RSS</a></nav>
+<nav class="nav-link"><a class="item" :href="url('/feed.xml')">RSS</a></nav>

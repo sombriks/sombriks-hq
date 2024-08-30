@@ -256,7 +256,7 @@ resume:
       description: |
         Nearsure is a 'nearshore' outsourcing company with many US-based 
         clients.
-      projects/clients:
+      projects:
         - Nearsure technical interview team:
           responsibilities: [Technical interview]
           description: |
@@ -899,7 +899,7 @@ resume:
       icon: icon-mail4
     - Mastodon: https://elk.bolha.one/mastodon.world/@sombriks
       icon: icon-mastodon
-    - Twitter: https://x.com/sombriks
+    - Twitter: https://twitter.com/sombriks
       icon: icon-twitter
     - Facebook: https://www.facebook.com/sombriks
       icon: icon-facebook2

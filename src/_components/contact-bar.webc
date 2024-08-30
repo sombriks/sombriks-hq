@@ -4,6 +4,12 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
     }
+
+    @media print {
+        .contacts {
+            display: none;
+        }
+    }
 </style>
 <div class="contacts">
   <a webc:for="c of $data.curriculum.resume['other contact info']"

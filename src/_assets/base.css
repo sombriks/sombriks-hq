@@ -75,7 +75,7 @@ div.comparison-box>div {
   border-bottom: var(--color1) 1px inset;
 }
 
-
+/* responsiveness */
 
 @media (max-width: 1440px) or (min-width: 1440px) {
   .outer-container {
@@ -134,5 +134,9 @@ div.comparison-box>div {
     --color1: #222;
     color: var(--color0);
     border-color: var(--color1);
+  }
+
+  .outer-container>h1 {
+    display: none;
   }
 }

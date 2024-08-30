@@ -45,7 +45,6 @@ layout: base.webc
       </div>
     </div>
   </div>
-
   <div class="do-not-break">
     <h2>Education</h2>
     <div class="do-not-break" webc:for="e of curriculum.resume.education">
@@ -56,27 +55,26 @@ layout: base.webc
       <p><i @text="e.description"></i></p>
     </div>
   </div>
-    <!-- <div webc:for="e of _curriculum.education">
-      <fieldset>
-        <legend @text="`${e.start} - ${e.end} | ${e.course} `"></legend>
-        <h3>Institution</h3>
-        <p><a target="institution" :href="e.site" @text="e.institution"></a></p>
-        <h3>Type</h3>
-        <p @text="e.type"></p>
-        <p><i @text="e.description"></i></p>
-      </fieldset>
-      <br/>
-    </div> -->
+  <div class="do-not-break">
+    <h2>Other Certifications</h2>
+    <i>Things i can handle either immediately or with a little ramp-up time</i>
+    <br/>
+    <a target="certs" 
+       class="do-not-break" 
+       webc:for="oe of curriculum.resume['other certifications']"
+       :href="`https://bing.com?q=${Object.values(oe)}`" @text="Object.keys(oe)">
+    </a>
+  </div>
+  <div class="do-not-break">
     <h2>Contacts</h2>
-    <!-- <fieldset class="contato">
-      <legend>All relevant presence on internet</legend>
-      <div webc:for="c of _curriculum.contacts">
-        <a webc:if="c.visible" target="_blank" :href="c.link" :alt="c.label"
-           :title="c.label">
-          <span :class="c.icon"></span>&nbsp;<span @html="c.link"></span>
-        </a>
-      </div>
-    </fieldset> -->
+    <i>All relevant presence on internet</i>
+    <br/>
+    <div webc:for="c of curriculum.resume['other contact info']">
+      <a target="_blank" :href="Object.values(c)[0]" :alt="Object.keys(c)[0]"
+         :title="Object.keys(c)[0]">
+        <span :class="c.icon"></span>&nbsp;<span @html="Object.values(c)[0]"></span>
+      </a>
+    </div>
   </div>
 </div>
 
