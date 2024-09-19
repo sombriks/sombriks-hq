@@ -1498,5 +1498,14 @@
     "tags": [
       "monospace"
     ]
+  },
+  {
+    "label": "Assembly made easy",
+    "link": "https://www.youtube.com/watch?v=Ui6QyzcD3_E",
+    "tags": [
+      "assembly",
+      "loops",
+      "conditionals"
+    ]
   }
 ]
