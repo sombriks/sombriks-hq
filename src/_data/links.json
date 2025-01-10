@@ -1507,5 +1507,12 @@
       "loops",
       "conditionals"
     ]
+  },
+  {
+    "label": "All about go modules",
+    "link": "https://encore.cloud/guide/go.mod",
+    "tags": [
+      "golang modules"
+    ]
   }
 ]
