@@ -1509,10 +1509,25 @@
     ]
   },
   {
-    "label": "All about go modules",
+    "label": "All* about go modules",
     "link": "https://encore.cloud/guide/go.mod",
     "tags": [
       "golang modules"
+    ]
+  },
+  {
+    "label": "Dark mode everywhere",
+    "link": "https://nighteye.app/",
+    "tags": [
+      "dark mode"
+    ]
+  },
+  {
+    "label": "Zoom your gnome screen",
+    "link": "https://extensions.gnome.org/extension/7263/better-desktop-zoom/",
+    "tags": [
+      "accessibility",
+      "screen zoom"
     ]
   }
 ]
