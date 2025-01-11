@@ -351,9 +351,11 @@ resume:
           AWS RDS,
           AWS Cloudwatch,
           GCP BigQuery,
+          GCP Object Storage,
           MySQL,
           PostgreSQL,
           React,
+          Next.js,
           Angularjs,
           Bash,
           JSP,
@@ -367,6 +369,7 @@ resume:
           Github Actions,
           Linear.app,
           Notion,
+          Jira,
         ]
     - Rede Inova: https://www.redeinova.com.br/
       position: [Tech lead, Backend developer, Technical interviewer]
