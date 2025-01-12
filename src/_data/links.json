@@ -1529,5 +1529,14 @@
       "accessibility",
       "screen zoom"
     ]
+  },
+  {
+    "label": "One of the most hidden links in the internet",
+    "link": "https://community.openvpn.net/openvpn/wiki/OpenVPN3Linux",
+    "tags": [
+      "vpn",
+      "linux",
+      "ovpn"
+    ]
   }
 ]
