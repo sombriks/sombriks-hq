@@ -3,6 +3,7 @@ layout: blog-base.webc
 tags:
   - posts
   - diabetes
+  - long rant
 date: 2024-12-31
 draft: false
 ---
