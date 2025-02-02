@@ -29,6 +29,19 @@ input/output interface and put that on npm registry
 
 This project is open for contributions, ;-)
 
+## [tic-tactics-toe](https://github.com/sombriks/tic-tactics-toe)
+
+Small card game blending memory game and tic-tac-toe
+
+## [my-cpp-handbook](https://github.com/sombriks/my-cpp-handbook)
+
+My handbook for general C++ affairs.
+
+## [enterprise-kotlin-handbook](https://github.com/sombriks/enterprise-kotlin-handbook)
+
+A handbook i started to help frontend developers to become fullstack in the jvm
+ecosystem using spring boot.
+
 ## [koa-api-builder](https://github.com/sombriks/koa-api-builder)
 
 A [Koa](https://koajs.org) library to build apis, heavily inspired on
