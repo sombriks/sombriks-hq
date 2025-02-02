@@ -3,7 +3,7 @@ layout: blog-base.webc
 tags: 
   - posts
   - golang
-  - testing
+  - test
   - coverage
 date: 2023-02-04
 ---

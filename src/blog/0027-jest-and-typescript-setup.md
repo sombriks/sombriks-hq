@@ -5,7 +5,7 @@ tags:
   - node
   - jest
   - typescript
-  - testing
+  - test
 date: 2021-12-15
 ---
 # You can test your typescript code too
