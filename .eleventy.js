@@ -11,6 +11,7 @@ module.exports = async function (eleventyConfig) {
     "src/_assets": "assets",
     "src/_assets/keybase.txt": "keybase.txt",
     "src/_assets/ads.txt": "ads.txt",
+    "src/_assets/app-ads.txt": "app-ads.txt",
     "node_modules/prism-themes/themes/prism-a11y-dark.min.css": "assets/prism-theme.css"
     // "node_modules/prism-themes/themes/prism-atom-dark.min.css": "assets/prism-theme.css"
     // "node_modules/prism-themes/themes/prism-base16-ateliersulphurpool.light.min.css": "assets/prism-theme.css"
