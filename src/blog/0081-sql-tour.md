@@ -12,7 +12,7 @@ This article is a chapter from [my enterprise kotlin handbook][e-kotlin].
 
 ---
 
-## Gentle introduction to relational databases
+# # Gentle introduction to relational databases
 
 For many years, relational databases where the only serious way to keep relevant
 data saved in a safe and retrievable way, whenever needed.
@@ -1586,7 +1586,7 @@ In [the next chapter][0656] we get back to our normal kotlin programming.
 
 [0610]: https://docs.oracle.com/javase/tutorial/jdbc/TOC.html
 
-[0611]: ../samples/project-013-simple-databases/README.md
+[0611]: https://github.com/sombriks/enterprise-kotlin-handbook/blob/main/samples/project-013-simple-databases/README.md
 
 [0612]: https://docs.spring.io/spring-boot/reference/data/sql.html#data.sql.datasource.embedded
 
@@ -1610,7 +1610,7 @@ In [the next chapter][0656] we get back to our normal kotlin programming.
 
 [0622]: https://en.wikipedia.org/wiki/ACID
 
-[0623]: ../samples/project-013-simple-databases/src/project013/QueryDb.kt
+[0623]: https://github.com/sombriks/enterprise-kotlin-handbook/blob/main/samples/project-013-simple-databases/src/project013/QueryDb.kt
 
 [0624]: https://en.wikibooks.org/wiki/SQL_Dialects_Reference/Introduction#SQL_implementations_covered_in_this_book
 
@@ -1676,6 +1676,6 @@ In [the next chapter][0656] we get back to our normal kotlin programming.
 
 [0655]: https://www.statology.org/cumulative-sum-chart-excel/
 
-[0656]: ./0016-spring-with-databases.md
+[0656]: https://github.com/sombriks/enterprise-kotlin-handbook/blob/main/docs/0016-spring-with-databases.md
 
 [e-kotlin]: https://github.com/sombriks/enterprise-kotlin-handbook
