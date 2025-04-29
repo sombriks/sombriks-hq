@@ -1,0 +1,831 @@
+---
+# Última versão do meu currículo. Anteriormente um documento JSON.
+resume:
+  metadata: >-
+    Tudo o que você precisa saber sobre a vida profissional de Leonardo 
+    Silveira, mais conhecido como sombriks.
+  informações pessoais:
+    país: Brasil
+    estado: Ceará
+    cidade: Fortaleza
+    nascimento: 1984-10-27T20:15:00-03:00
+    motto: >-
+      Eu resolvo problemas de programação por diversão e para pagar meu aluguel.
+    nome: Leonardo Silveira
+    apelido: sombriks
+    email: sombriks@gmail.com
+    telefone: +55 85 9 9955-7997
+    website: https://sombriks.com
+  carta de apresentação: |
+    Sou Leonardo Silveira e trabalho profissionalmente com tecnologia desde 2007 
+    como desenvolvedor e em outras funções (arquiteto de software, fundador de
+    startups, consultor desenvolvedor fullstack e assim por diante). Ao longo
+    desse tempo, tornei-me especialista em diversas tecnologias, como Java,
+    Javascript, bancos de dados SQL, HTML e CSS, Node.js, Git, NativeScript
+    (veja a lista completa no documento abaixo); mas também trabalhei com
+    soluções de nuvem de primeira linha, como AWS, Digital Ocean e Google Cloud
+    Platform. Também trabalhei com ferramentas de gerenciamento de projetos como
+    Jira, Linear e Trello. Trabalhei com equipes de primeira linha no Brasil e
+    em empresas internacionais próximas. Produzi soluções para diversos
+    mercados, como seguros de saúde e automóveis, gestão de condomínios
+    fechados, jogos educativos, presença online para empresas locais, soluções
+    de varejo em todo o país, soluções de plataforma de pagamento de classe
+    mundial e soluções de inteligência empresarial imobiliária.
+  habilidades:
+    - Linguagens de programação:
+      items:
+        - Java: ★★★★★
+        - Javascript: ★★★★★
+        - Node.js: ★★★★★
+        - Kotlin: ★★★★☆
+        - Typescript: ★★★★☆
+        - Go: ★★★★☆
+        - C: ★★★☆☆
+        - C++: ★★★☆☆
+        - Python: ★★☆☆☆
+        - Ruby: ★★☆☆☆
+    - Frontend (web) Frameworks:
+      items:
+        - HTML 5: ★★★★★
+        - Vue.js: ★★★★★
+        - React: ★★★★☆
+        - Angular: ★★★★☆
+        - HTMX: ★★★★☆
+        - CSS: ★★★☆☆
+        - Angular-Material: ★★★☆☆
+        - Vuetify: ★★★☆☆
+        - Bootstrap: ★★★☆☆
+        - Bulma: ★★★☆☆
+        - Material Design Icons: ★★★☆☆
+        - PrimeNG: ★★☆☆☆
+    - Backend Frameworks:
+      items:
+        - SpringBoot: ★★★★★
+        - Express.js: ★★★★★
+        - Koa.js: ★★★★★
+        - JakartaEE: ★★★★☆
+        - JPA: ★★★★☆
+        - JDBI: ★★★★☆
+        - Liquibase: ★★★★☆
+        - Javalin: ★★★★☆
+        - Knex.js: ★★★★☆
+        - Vert.x: ★★★☆☆
+        - Kafka: ★★★☆☆
+        - Fastify: ★★★☆☆
+        - Socket.io: ★★☆☆☆
+    - Testing and Linting Tools:
+      items:
+        - JUnit: ★★★★★
+        - Hamcrest: ★★★★★
+        - Jacoco: ★★★★★
+        - PMD: ★★★★☆
+        - Checkstyle: ★★★★☆
+        - Mockito: ★★★★☆
+        - TestContainers: ★★★★☆
+        - Mocha: ★★★★★
+        - Chai: ★★★★★
+        - Sinon: ★★★★☆
+        - Supertest: ★★★★☆
+        - Ava: ★★★★★
+        - C8: ★★★★★
+        - Istanbul: ★★★★☆
+        - Vitest: ★★★★★
+        - Xo: ★★★★☆
+        - Eslint: ★★★☆☆
+        - Prettier: ★★★☆☆
+        - Spock: ★★☆☆☆
+    - Mobile Frameworks:
+      items:
+        - Apache Cordova / Capacitor: ★★★☆☆
+        - Nativescript: ★★★☆☆
+        - Android: ★★★☆☆
+    - Project Build Tools:
+      items:
+        - Maven: ★★★★★
+        - Gradle: ★★★★★
+        - NPM: ★★★★★
+        - BLD: ★★★★☆
+        - Go modules: ★★★★☆
+        - Apache Ant: ★★★★☆
+        - Yarn: ★★★★☆
+        - Make: ★★★★☆
+        - Pip: ★★★☆☆
+        - CMake: ★★★☆☆
+        - Automake & Autoconf: ★★☆☆☆
+        - bundler.io: ★★☆☆☆
+    - Databases:
+      items:
+        - PostgreSQL: ★★★★★
+        - MySQL: ★★★★★
+        - SQLite: ★★★★★
+        - Oracle: ★★★★☆
+        - IBM DB2: ★★★☆☆
+        - Microsoft SQLServer: ★★★☆☆
+        - Redis: ★★★☆☆
+        - Apache Cassandra: ★★★☆☆
+        - LevelDB: ★★★☆☆
+        - MongoDB: ★★☆☆☆
+    - Cloud/DevOps/GitOps:
+      items:
+        - Git, GitHub, GitLab: ★★★★★
+        - GitHub Actions: ★★★★★
+        - Docker: ★★★★★
+        - Kubernetes: ★★★★★
+        - ArgoCD: ★★★★☆
+        - AWS: ★★★★☆
+        - Digital Ocean: ★★★☆☆
+        - GCP: ★★★☆☆
+        - Heroku: ★★★☆☆
+        - Fly.io: ★★☆☆☆
+        - Firebase: ★★☆☆☆
+    - Miscellaneous:
+      items:
+        - Linux: ★★★★★
+        - Windows: ★★★☆☆
+        - Mac OS: ★★★☆☆
+        - Jira: ★★★☆☆
+        - Linear: ★★★☆☆
+        - YouTrack: ★★★☆☆
+        - Scrum: ★★★☆☆
+        - UML: ★★★☆☆
+  Experiência profissional:
+    - Nearsure: https://www.nearsure.com/
+      cargo:
+        [
+          Senior backend developer,
+          DevOps developer,
+          Team augmentation consultant,
+          Technical Interviewer,
+          Fullstack Developer,
+        ]
+      período: 2022-08-29 - present day
+      descrição: |
+        A Nearsure é uma empresa de terceirização 'nearshore' com muitos 
+        clientes sediados nos EUA.
+      projetos:
+        - ARIA team at EasyPark:
+          responsabilidades: [Fullstack development (golang/react)]
+          descrição: |
+            Segundo contato com soluções baseadas em IA, desta vez com a Gemini
+            AI do Google. Também consumi outros serviços do GCP.
+        - Nearsure technical interview team:
+          responsabilidades: [Technical interview]
+          descrição: |
+            Ofereci minhas habilidades à equipe de entrevista para ajudar a
+            agilizar o processo de candidatura na Nearsure. Gosto de ter
+            conversas técnicas e é ainda mais legal quando as pessoas conhecem
+            as tecnologias que estão sendo avaliadas.
+        - Application team at Markerr:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Service modules evolution roadmap,
+              Code review on pull requests from team members,
+              Frontend and backend implementation,
+              Infrastructure for release versioning and publishing of internal libraries,
+              Automation building for application image building,
+              publishing and deployment,
+              Definition,
+              test and implementation of GitOps pull-based deployments,
+              Kafka stream processing architectural solution,
+              SQL and NoSQL database operations,
+              Processes/services and tools documentation at notion pages,
+            ]
+          descrição: |
+            A Markerr vende inteligência de mercado para investidores
+            imobiliários. Ela refina big data de diversas fontes e os apresenta
+            ao cliente por meio de leituras em massa e também por meio de uma
+            ferramenta chamada DataStudio. Trabalho no ecossistema necessário
+            para executar esta ferramenta: AWS EKS, MSK, RDS, S3 e assim por
+            diante.
+
+            Há uma variedade de serviços, a maioria deles escritos em Kotlin e
+            SpringBoot, mas também há serviços em Node.js e Go.
+
+            Esses serviços estão sendo executados em 3 clusters EKS,
+            completamente integrados com um pipeline de CI/CD escrito por mim.
+
+            Fui responsável por manter e desenvolver todos os serviços e
+            planejei a migração a maioria deles do ecossistema JVM para algo
+            mais familiar ao restante da equipe.
+        - Payment team at Boku:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição:
+        - Platform team at Boku:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+            ]
+          descrição: |
+            Várias ferramentas para permitir que outras equipes trabalhem com as
+            soluções do cliente.
+      tech stack:
+        [
+          Java,
+          Kotlin,
+          Node.js,
+          Go,
+          Echo,
+          Goqu,
+          Knex,
+          Koa,
+          Kafka,
+          Redis,
+          SpringBoot,
+          Apache Cassandra,
+          Microservices architecture,
+          Kubernetes,
+          Docker,
+          K9s,
+          GitOps,
+          ArgoCD,
+          AWS S3,
+          AWS EC2,
+          AWS ECS,
+          AWS ECR,
+          AWS EKS,
+          AWS MSK,
+          AWS RDS,
+          AWS Cloudwatch,
+          GCP BigQuery,
+          GCP Object Storage,
+          MySQL,
+          PostgreSQL,
+          React,
+          Next.js,
+          Angularjs,
+          Bash,
+          JSP,
+          Apache Tomcat,
+          Maven,
+          Gradle,
+          NPM,
+          Liquibase,
+          Sumologic,
+          GitHub,
+          Github Actions,
+          Linear.app,
+          Notion,
+          Jira,
+        ]
+    - Rede Inova: https://www.redeinova.com.br/
+      cargo: [Tech lead, Backend developer, Technical interviewer]
+      período: 2022-07-13 - 2023-05-03 (part-time position)
+      descrição: |
+        A Redeinova é uma empresa de tecnologia brasileira que fornece soluções
+        para os setores público e privado. Assumi esta posição de meio período
+        no meu tempo livre, devido a cinco horas livres no meu outro cargo. Além
+        das minhas responsabilidades como líder técnico, também realizei 
+        entrevistas técnicas para aumentar a equipe para meus projetos e outros
+        na empresa.
+      projetos:
+        - 42:
+          responsabilidades:
+            [
+              Code development,
+              Creation of testing steps,
+              Task specification,
+              Task delegation,
+              Code review on pull requests from team members,
+              Database migrations,
+              Elaboration of technical assessment,
+              Technical interviews,
+            ]
+          descrição: |
+            É uma solução baseada em Java para recuperar informações de referência cruzada
+            na PGE-RO.
+        - Kanoê:
+          responsabilidades:
+            [
+              Code development,
+              Creation of testing steps,
+              Task specification,
+              Task delegation,
+              Code review on pull requests from team members,
+              Database migrations,
+              Elaboration of technical assessment,
+              Technical interviews,
+            ]
+          descrição: |
+            É uma solução baseada em Java para melhorar a eficiência do processo
+            legal na PGE-RO.
+        - Mapinguari:
+          responsabilidades:
+            [
+              Code development,
+              Creation of testing steps,
+              Task specification,
+              Task delegation,
+              Code review on pull requests from team members,
+              Database migrations,
+              Elaboration of technical assessment,
+              Technical interviews,
+            ]
+          descrição: |
+            É uma solução baseada em Java para melhorar os pagamentos legais na
+            PGE-RO
+      tech stack:
+        [
+          Java,
+          Gradle,
+          Microservices architecture,
+          MySQL,
+          Microsoft SQL Server,
+          Oracle database,
+          Mongodb,
+          Angularjs,
+          Angular,
+          Liquibase,
+          SpringBoot,
+          Gitlab,
+          CI/CD pipelines,
+        ]
+    - Jobsity: https://www.jobsity.com/
+      cargo: [Senior backend developer - Team augmentation consultant]
+      período: 2021-02-01 - 2022-08-29
+      descrição: |
+        Minha primeira experiência internacional, a Jobsity aplica o modelo de
+        terceirização 'nearshore' para que os clientes não sofram com grandes
+        diferenças de fuso horário.
+      projetos:
+        - USA Today/Gannett - Buy Online Direct:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            Ferramenta de vendas voltada para a venda direta de soluções de
+            presença online. Stack é nativo da nuvem com algum grau de
+            transparência em relação ao provedor, graças aos scripts Terraform
+            fornecidos pela equipe de DevOps.
+        - USA Today/Gannett - Cobalt LocalIQ:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            SFerramenta de vendas destinada a vender soluções de presença online
+            para pequenas empresas. O Stack é nativo da nuvem com algum grau de
+            transparência em relação à natureza do provedor, graças aos scripts Terraform fornecidos
+            pela equipe de DevOps.
+      tech stack:
+        [
+          Java,
+          SpringBoot,
+          Javascript,
+          React,
+          jQuery,
+          SQL,
+          Liquibase,
+          AWS,
+          HTML,
+          CSS,
+          Agile,
+          Git,
+          Bash,
+          GitHub,
+          REST,
+          Ruby on Rails,
+          Docker,
+          Database migrations,
+          Serverless microservices,
+        ]
+    - Casa Magalhães: https://www.casamagalhaes.com.br
+      cargo: [Senior backend developer]
+      período: 2019-03 - 2021-01-29
+      descrição: |
+        Este é um grupo tradicional e bem estabelecido que lida com soluções de
+        vendas no varejo. Aqui, ajudamos pequenas empresas a lidar com os
+        sistemas tributários brasileiros excessivamente complexos e oferecemos
+        ferramentas para gerenciar vendas, estoque, conciliação financeira e
+        assim por diante. Também adotamos soluções em nuvem e sem servidor da
+        Amazon.
+      projetos:
+        - varejofacil:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            Este produto facilita a gestão de pequenos e médios varejistas. É
+            mais adequado para mercados, lojas de departamento e restaurantes.
+        - varejomini/varejopdv:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            Este produto resolve o problema dos pequenos negócios de vendas. Seu
+            objetivo é permitir um fluxo de trabalho de vendas mais simples, uma
+            vez que existem outros produtos internos para outros modos de venda
+            (restaurante, supermercado, etc.).
+      tech stack:
+        [
+          Node.js,
+          Java,
+          Tomcat,
+          MySQL,
+          Sequelize,
+          Sequelize migrations,
+          Gulp,
+          AWS Lambda,
+          Pusher,
+          AWS DynamoDB,
+          AWS SES,
+          AWS Api Gateway,
+          QT,
+          Quasar framework,
+          Element UI,
+          Kendo UI,
+          Webpack,
+          Vue.js,
+          Heroku,
+          Docker,
+          AWS CodeBuild,
+          Material design,
+          AWS CodePipeline,
+          SPA,
+          REST,
+          AWS SQS,
+          Codeclimate,
+          Sentry,
+          Jira,
+          Scrum,
+        ]
+    - Game For Learning / TechPar: https://techpar.github.io/
+      cargo: [Software developer, Requirements Analyst, CTO]
+      período: 2014-09 - 2019-03
+      descrição: |
+        Na G4L (Game For Learning), criamos jogos educacionais inovadores (OED -
+        Objeto de Ensino Digital), construindo conhecimento utilizando o
+        entretenimento para manter o foco do aluno. Então, redirecionamos o foco
+        da startup e a renomeamos para TechPar - Tecnologia e Participações.
+
+        Na TechPar, lidamos com soluções de software em diversas áreas. De
+        gestão de comunidades a energia renovável. Tecnologias híbridas móveis e
+        web rica foram aplicadas a essas soluções.
+      projetos:
+        - BWDA 5:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            Solução web e mobile para gerenciar ordens de serviço para manutenção de torres de pesquisa de energia eólica. Interface web de administração desenvolvida com Vue.js e
+            aplicativo mobile escrito em nativescript/vue. Também fornece uma maneira de
+            analisar dados de sensores coletados nessas torres, desenhando gráficos.
+        - Buscaula:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            Aplicação web rica em Vue para busca de cursos. Um backend Node com
+            busca de texto avançada fornecida pelo PostgreSQL.
+        - Paróquia Virtual:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            Aplicativo Pray para católicos. Duas ordens sacerdotais (Sagrado Coração de Jejus
+            e Mercedários) estiveram envolvidas. Desenvolvido com Apache Cordova e
+            Vue.js para publicação em lojas de aplicativos Android e iOS usando
+            a mesma base de código.
+        - Ambbi - community management:
+          responsabilidades:
+            [
+              Code development,
+              Creation of unit and integration tests,
+              Task specification,
+              Code review on pull requests from team members,
+              Database migrations,
+            ]
+          descrição: |
+            Solução de comunicação para comunidades de portões fechados. Uma interface de administração web
+            e dois aplicativos móveis, escritos em AngularJS e
+            Apache Cordova, nos permitiram publicar nas lojas de aplicativos Android e iOS
+            a partir da mesma base de código.
+        - Super Candy:
+          responsabilidades: [Code development]
+          descrição: |
+            Outro jogo de matemática de ação. Escrito com tecnologias web e
+            empacotado para dispositivos móveis usando Apache Cordova.
+        - Educatáxi:
+          responsabilidades: [Code development]
+          descrição: |
+            Jogo de matemática de ação. Escrito com tecnologias web e empacotado para
+            dispositivos móveis usando Apache Cordova.
+        - Aventura matemática:
+          responsabilidades: [Code development]
+          descrição: |
+            Jogo matemático de aventura/quebra-cabeça. Escrito com tecnologias web e
+            empacotado para dispositivos móveis usando Apache Cordova.
+        - Matematicando:
+          responsabilidades: [Code development]
+          descrição: |
+            Jogo de quebra-cabeça matemático. Escrito com tecnologias web e empacotado para
+            dispositivos móveis usando Apache Cordova.
+      tech stack:
+        [
+          Nodejs,
+          PostgreSQL,
+          Knex.js,
+          Bookshelf,
+          Express,
+          Socket.io,
+          OneSignal,
+          ElasticEmail,
+          Sendgrid,
+          Apache Cordova,
+          Nativescript,
+          Webpack,
+          Browserify,
+          Phaser JS,
+          Vue.js,
+          Angularjs,
+          Material design,
+          Bootstrap,
+          SPA,
+          REST,
+          Jira,
+          Trello,
+          Scrum,
+        ]
+    - Atlanta Tecnologia: http://www.atlantatecnologia.com.br
+      cargo: [Fullstack Software developer]
+      período: 2013-02 - 2014-08
+      descrição: |
+        Nós fornecemos soluções de aplicação da lei de trânsito.
+      projetos:
+        - Faixa exclusiva:
+          responsabilidades: [Code development, Architecture specification]
+          descrição: |
+            Uma solução web Java, comunicações seriais e câmera IP para detectar
+            se os carros estavam na faixa exclusiva de ônibus.
+        - Photo labeler:
+          responsabilidades: [Code development]
+          descrição: |
+            Ferramenta interna baseada em Java Swing. Ela foi usada para aplicar corretamente o
+            rótulo de infração nas fotos.
+        - AT-SMS/AT-SMS2:
+          responsabilidades: [Code development]
+          descrição: |
+            Esta foi a principal solução para a aplicação da lei de trânsito. Neste
+            projeto, iniciamos a migração de uma solução baseada em Delphi para uma
+            solução baseada em Java Web, o que permitiria que o hardware e o
+            sistema operacional fossem substituídos por opções mais baratas no futuro.
+      tech stack:
+        [
+          PostgreSQL,
+          MySQL,
+          Java EE,
+          Spring,
+          Nrjavaserial,
+          Angularjs,
+          Bootstrap,
+          Image processing,
+        ]
+    - Ifactory Solutions: https://www.linkedin.com/company/ifactory-solutions
+      cargo: [Fullstack Software developer]
+      período: 2012-11 - 2013-01
+      descrição: |
+        A Ifactory Solutions terceirizou a mim e minha equipe para trabalhar no
+        local, na Edson Queiroz Holding.
+      projetos:
+        - Diário do Nordeste:
+          responsabilidades: [Code development, Unit and integration tests]
+          descrição: |
+            Produzimos modelos de velocidade rodando sobre o Polopoly
+            web cms multi-target. Nosso cliente, uma das maiores mídias impressas
+            do estado, os utilizou tanto para a versão online quanto para a impressa
+            do jornal diário.
+      tech stack: [Java, Velocity, HTML, CSS, Polopoly]
+    - HEXA: http://www.hexat.com.br/hexa
+      descrição: |
+        Esta empresa tinha vários trabalhos de P&D. Era mais um negócio apoiado
+        por professores do IFCE.
+      cargo: [Fullstack Software developer]
+      período: 2012-09 - 2012-10
+      projetos:
+        - Historical documents digitalization:
+          responsabilidades: [Code development]
+          descrição: |
+            Lidou com uma ampla variedade de problemas, desde estruturas básicas para versionamento de código
+            até a definição de tecnologias a serem usadas para codificar a solução.
+      tech stack: [PHP, MySQL, Java EE, Android, REST API]
+    - LDS: http://lds.ifce.edu.br
+      descrição: |
+        Esta empresa tinha vários trabalhos de P&D. Era outro negócio apoiado por
+        professores do IFCE.
+      cargo: [Fullstack Software developer]
+      período: 2012-04 - 2012-08
+      projetos:
+        - Furukawa electric latam: https://www.furukawalatam.com/pt-br
+          responsabilidades: [Code development, Unit testing]
+          descrição: |
+            Solução web Java para gerenciar operações industriais.
+      tech stack:
+        [
+          Oracle database,
+          Java EE,
+          Spring,
+          VRaptor,
+          Angularjs,
+          Bootstrap,
+          TeamCity,
+          JUnit,
+          Cucumber,
+        ]
+    - Novelbiz: https://www.linkedin.com/company/novelbiz
+      descrição: |
+        Esta empresa tinha vários trabalhos de P&D. Era um negócio apoiado por professores do IFCE.
+      cargo: [R&D Software Developer]
+      período: 2011-09 - 2012-04
+      projetos:
+        - Small robotic car:
+          responsabilidades: [Experimental code development]
+          descrição: |
+            Um protótipo de robô usando um Beagleboard. Como o robô estava em
+            outro estado, a 2.000 quilômetros de distância, tive que usar SSH duplo para obter
+            acesso ao código C/C++ do OpenCV dentro do robô.
+        - Mobile software to recommend products and services:
+          responsabilidades: [Experimental code development]
+          descrição: |
+            Era uma solução Android para oferecer produtos e serviços com base
+            nos gostos do usuário e em sua geolocalização. Consumia um serviço REST
+            que eu projetei, rodando em um servidor de aplicativos Glassfish publicado em uma
+            instância EC2 na AWS.
+      tech stack:
+        [
+          C/C++,
+          SSH,
+          Embedded Linux,
+          Android,
+          REST API,
+          Java EE,
+          MySQL,
+          Recommendation systems - collaborative filtering,
+        ]
+    - Sena Informática / USIX S.A./ Ebix Inc.: https://www.linkedin.com/company/usix-technology/
+      descrição: |
+        Esta foi a maior provedora brasileira de soluções em seguros na época.
+      cargo: [Trainee, Junior programmer, Senior programmer, Software architect]
+      período: 2007-08 - 2011-09
+      projetos:
+        - WIS Marítima: https://www.seguroauto.org/maritima-seguros-auto/
+          responsabilidades:
+            [
+              Project architecture and initial setup,
+              Code development,
+              Unit test cases,
+              Application deployment,
+            ]
+          descrição: |
+            Nesta solução de pontuação do cliente, pude aplicar técnicas do
+            projeto Conta Corrente, pois este cliente não precisava de
+            configuração dinâmica de metamodelo como os produtos anteriores. Uso
+            intenso de jQuery e das primeiras formas de SPA. Não o chamávamos
+            assim antigamente.
+        - WIS Bradesco Seguros: https://www.bradescoseguros.com.br/clientes
+          responsabilidades:
+            [Native Code development, Unit test cases, Application deployment]
+          descrição: |
+            Solução para calcular a pontuação do cliente, mas neste projeto minha principal
+            responsabilidade era a interface JNI com a biblioteca de pontuação do cliente,
+            que era implementada em C e não era thread-safe. Além disso,
+            o servidor de produção era um Itanium, então eu lidava com o HP-UX e o compilador aCC
+            C/C++. E muitos Makefiles.
+        - WIS Sulamérica: https://portal.sulamericaseguros.com.br/home.htm
+          responsabilidades: [Code development, Unit test cases]
+          descrição: |
+            Aplicação dinâmica para criar interfaces para calcular a pontuação do cliente
+            online. Desenvolvido com Apache Struts, Java + banco de dados Oracle.
+        - Conta Corrente: https://portal.sulamericaseguros.com.br/home.htm
+          responsabilidades: [Code development, Unit test cases]
+          descrição: |
+            Uma solução web Java com Struts e banco de dados Oracle para oferecer crédito
+            a corretores para que pudessem dar descontos aos seus clientes. Foi uma
+            forma inicial de SPA.
+      tech stack:
+        [
+          jQuery,
+          DWR - direct web remoting,
+          Apache Struts 1,
+          Oracle database,
+          Websphere application server,
+          Java EE,
+          JNI - Java Native Interface,
+          C/C++,
+          Proprietary insurance business metamodel engine,
+        ]
+    - Cooperativa Pirambu Digital: https://www.facebook.com/pirambudigital/?rf=351248931610166
+      descrição: |
+        A empresa era um projeto social para incluir jovens estudantes no
+        mercado digital.
+      cargo: trainee
+      período: 2006 - 2007
+      projetos:
+        - CFN: https://pt.wikipedia.org/wiki/Transnordestina_Log%C3%ADstica_S.A.
+          responsabilidades: [Code development]
+          descrição: |
+            Solução web Java para gerenciar serviços de pedidos para manutenção ferroviária.
+      tech stack:
+        [
+          MySQL,
+          Java,
+          Apache Struts,
+          Apache Tomcat,
+          Javascript,
+          HTML,
+          CSS,
+          jQuery,
+        ]
+  education:
+    - Análise e Desenvolvimento de Sistemas: https://estacio.br
+      tipo: EAD de Nível Superior
+      período: 2023-08-10 to present day
+      descrição: |
+        Para dar continuidade aos meus estudos de nível superior, abandonei meu
+        curso anterior, Engenharia da Computação, e comecei este curso remoto.
+        Assim que o concluir, pretendo fazer um mestrado.
+    - Engenharia da Computação: https://ifce.edu.br/
+      tipo: Bacharelado / Nível Superior
+      período: 2007 - 2023 (did not graduated)
+      descrição: |
+        Depois de um tempo, comecei o curso de Engenharia, porém já tinha um
+        trabalho profissional em tempo integral. No fim das contas, experimentei um rápido crescimento profissional,
+        mas não conseguia conciliar bem os estudos com o
+        trabalho diário em tempo integral.
+    - Desenvolvimento de Software: https://ifce.edu.br/
+      tipo: Nível Técnico
+      período: 2004 - 2006
+      descrição: |
+        Comecei meus estudos profissionais lá. Nível técnico.
+  outros certificados:
+    - AngularJS: https://www.udemy.com/certificate/UC-583e3f98-9849-4005-b1b0-205eed180595/
+    - MongoDB: https://www.udemy.com/certificate/UC-b7e843fb-028f-4d3d-a55d-2a6556b56705/
+    - AWS EKS: https://www.udemy.com/certificate/UC-62b8f14c-156a-4801-83ce-c57d05fb30bc/
+    - AWS Lambda: https://www.udemy.com/certificate/UC-2848e49e-beb9-4878-b807-7f42d89d7c9e/
+    - AWS ECS: https://www.udemy.com/certificate/UC-715dc855-9141-472c-ad6d-ca5887d8307d/
+    - Terraform: https://www.udemy.com/certificate/UC-da715f89-e393-4ab1-aa93-274c911d84d3/
+    - QT5 Beginner: https://www.udemy.com/certificate/UC-E9X7J3R8/
+    - QT5 Intermediate: https://www.udemy.com/certificate/UC-1456db31-1462-4152-931f-540175c5b2e2/
+    - QT5 Advanced: https://www.udemy.com/certificate/UC-47930431-1b0a-44cd-9f3b-b797d554853b/
+    - Go Fundamentals: https://www.udemy.com/certificate/UC-75d3d156-4ede-4d63-bbc5-2719917d93ed/
+    - Go Multithreading: https://www.udemy.com/certificate/UC-acd2ccc5-48a0-4050-8c68-5dfd8c757cbd/
+    - Go Web Development: https://www.udemy.com/certificate/UC-fc25892b-3764-49e0-85b2-507c548f47e2/
+    - Node.js: https://www.udemy.com/certificate/UC-f5e8e700-f734-4385-b8be-c7aecf71f7cc/
+    - Vue/Laravel: https://www.udemy.com/certificate/UC-7874dad8-c92a-43dd-88a3-403f72ef5c26/
+  outras informações de contato:
+    - Email: mailto:sombriks@gmail.com
+    - Mastodon: https://elk.bolha.one/mastodon.world/@sombriks
+    - Bluesky: https://bsky.app/profile/sombriks.com
+    - Facebook: https://www.facebook.com/sombriks
+    - Instagram: https://www.instagram.com/sombriks
+    - GitHub: https://github.com/sombriks
+    - Linkedin: https://www.linkedin.com/in/sombriks/
+    - StackOverflow: https://stackoverflow.com/users/420096/sombriks
+    - Hackerrank: https://www.hackerrank.com/sombriks
+    - Codewars: https://www.codewars.com/users/sombriks
+    - Reddit: https://www.reddit.com/user/sombriks
+    - NPM: https://www.npmjs.com/~sombriks
