@@ -20,7 +20,7 @@ tags:
   - testify
   - testcontainers
   - recipes
-  - tests
+  - test
   - webjars
   - htmx
   - alpinejs

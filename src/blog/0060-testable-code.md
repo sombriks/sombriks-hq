@@ -2,7 +2,7 @@
 layout: blog-base.webc
 tags:
   - posts
-  - tests
+  - test
   - node
   - koa
   - ava
