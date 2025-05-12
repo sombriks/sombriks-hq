@@ -13,7 +13,7 @@ tags:
   - postgres
   - pglite
   - ava
-  - tests
+  - test
   - supertest
   - github actions
 date: 2024-07-16

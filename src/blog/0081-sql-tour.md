@@ -12,7 +12,7 @@ This article is a chapter from [my enterprise kotlin handbook][e-kotlin].
 
 ---
 
-# # Gentle introduction to relational databases
+## Gentle introduction to relational databases
 
 For many years, relational databases where the only serious way to keep relevant
 data saved in a safe and retrievable way, whenever needed.
@@ -278,7 +278,7 @@ If you insert the same data twice, how to know the difference between records?
 They are the same, yet they're not.
 
 The concept of [identity][0626], from psychology, helps to solve it. You can
-read the [theseus ship paradox][0627] to get things even more clear: data is
+read the [Theseus ship paradox][0627] to get things even more clear: data is
 subject to change over the time, yet each record is supposed to be equal to
 itself no matter the changes.
 
@@ -784,7 +784,7 @@ With an output like this:
 ```
 
 Yes, yes, you can delete all members where team_id = 2 and then perform the
-deletion on team, but you can define a cascade into team_id colum:
+deletion on team, but you can define a cascade into team_id n:
 
 ```sql
 alter table member
@@ -1025,12 +1025,12 @@ Joins has [variations][0647]:
 - **left join**, when the condition in **joining** table involves null values.
 - **right join**, when the condition in **joined** table involves null values.
 - **(inner) join**, when null values **are not allowed** in the junction. On
-  most RDMS the inner is optional, and the comma-separated syntax is equivalent
+  most RDBMS the inner is optional, and the comma-separated syntax is equivalent
   to it, like the example above.
 - **cross outer join**, when null values **are allowed** in the junction.
 
-Now, if you want to append distinct yet slightly similar resuls you need to do a
-[union][0648]. For example for this schema and data:
+Now, if you want to append distinct yet slightly similar results you need to do
+a [union][0648]. For example for this schema and data:
 
 ```sql
 create table colonels
@@ -1427,7 +1427,7 @@ order by length(description) desc limit 2 offset 1;
 | 2  | Banana       | 2024-05-30 20:29:20 |
 | 1  | Apple        | 2024-05-30 20:29:20 |
 
-##### Never paginate without ordenation
+##### Never paginate without ordering
 
 I mean, you can do that, but it will give you unstable results. Without the
 `order by` clause, it's up to the database to decide what goes in each offset.
@@ -1441,7 +1441,7 @@ At last but not least, let's talk about [window functions][0651].
 
 Regular queries are like unroll a scroll. sometimes it's a very long scroll, so
 you use limit, offset, order by to get just the part you want. **Row by row**
-your data will be presented. Some RDMS systems has a concept called
+your data will be presented. Some RDBMS systems has a concept called
 [cursor][0654], it's not quite pagination, but serves a similar purpose.
 
 Aggregation queries are like take that scroll and fold it over itself and doing
@@ -1498,12 +1498,12 @@ from latest_history lh
 Yes, by combining record data and aggregate data in single results you start to
 get better analytical insights.
 
-The form of a windowed colum is:
+The form of a windowed column is:
 
 1. An aggregate function (min, max, sum, avg) or ranking functions (rank,
    dense_rank row_number).
 1. The window, the `over()` part
-2. Inside the window, [partitioning, ordering, frame definition][0651].
+1. Inside the window, [partitioning, ordering, frame definition][0651].
 
 Ranking offers information about who's your top thing.
 
