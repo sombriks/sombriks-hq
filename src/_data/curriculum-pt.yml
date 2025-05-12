@@ -183,7 +183,7 @@ resume:
               Service modules evolution roadmap,
               Code review on pull requests from team members,
               Frontend and backend implementation,
-              Infrastructure for release versioning and publishing of internal libraries,
+              Infrastructure for release versioning and publishing of internallibraries,
               Automation building for application image building,
               publishing and deployment,
               Definition,

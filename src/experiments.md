@@ -29,6 +29,13 @@ input/output interface and put that on npm registry
 
 This project is open for contributions, ;-)
 
+## [mdexec](https://github.com/sombriks/mdexec)
+
+Run scripts embedded in your markdown docs in the terminal.
+
+I used to sample key commands for my projects inside the markdown, and now i can
+run such commands easily from command line.
+
 ## [tic-tactics-toe](https://github.com/sombriks/tic-tactics-toe)
 
 Small card game blending memory game and tic-tac-toe
