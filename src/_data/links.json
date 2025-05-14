@@ -1546,5 +1546,15 @@
       "C++",
       "modern"
     ]
+  },
+  {
+    "label": "No idea why, but this solver the gnome boxes network issue",
+    "link": "https://askubuntu.com/a/1235631/308569",
+    "tags": [
+      "gnome",
+      "boxes",
+      "network",
+      "virtualization"
+    ]
   }
 ]
