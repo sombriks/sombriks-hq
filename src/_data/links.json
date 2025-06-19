@@ -1548,13 +1548,23 @@
     ]
   },
   {
-    "label": "No idea why, but this solver the gnome boxes network issue",
+    "label": "No idea why, but this solves the gnome boxes network issue",
     "link": "https://askubuntu.com/a/1235631/308569",
     "tags": [
       "gnome",
       "boxes",
       "network",
       "virtualization"
+    ]
+  },
+  {
+    "label": "One doc to rule them all",
+    "link": "https://devdocs.io/",
+    "tags": [
+      "documentation",
+      "docs",
+      "all in one place",
+      "i like this one, it has a lot of things"
     ]
   }
 ]
