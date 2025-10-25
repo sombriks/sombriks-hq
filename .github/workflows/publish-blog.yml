@@ -3,19 +3,33 @@ on:
   push:
     branches: 
       - master
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+      - run: |
+          npm install
+          npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist/'
+      - uses: actions/deploy-pages@v4
+        id: deployment
 
-env: # TODO use new env names needed by s3-sync-action
-  AWS_REGION: ${{secrets.AWS_REGION}}
-  AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
-  AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-  AWS_S3_BUCKET: ${{secrets.AWS_BUCKET_NAME}}
-  SOURCE_DIR: ${{secrets.HQ_DIST_SITE_FOLDER}}
-  AWS_CF_DIST_ID: ${{secrets.AWS_CF_DIST_ID}}
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout 
       uses: actions/checkout@v3
