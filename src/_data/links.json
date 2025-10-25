@@ -1576,5 +1576,15 @@
       "history",
       "i like to see how things evolved and how we can learn from the past"
     ]
+  },
+  {
+    "label": "How UTF-8 works",
+    "link": "https://www.youtube.com/watch?v=vpSkBV5vydg",
+    "tags": [
+      "utf-8",
+      "encoding",
+      "characters",
+      "i always forget how utf-8 works internally"
+    ]
   }
 ]
