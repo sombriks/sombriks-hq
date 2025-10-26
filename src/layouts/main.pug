@@ -1,12 +1,19 @@
 ---
 layout: base.pug
 ---
-aside
-    // menu
-main
-    header
-        // links
-    article!= content
-    footer
-        // liks
-        // copy
+include ../components/main-menu
+include ../components/side-bar
+table.noborder
+    tbody
+        tr
+            td.width-min
+                +side-bar()
+                    +main-menu()
+            td.width-auto
+                main
+                    header
+                        // links
+                    article!= content
+                    footer
+                        // liks
+                        // copy

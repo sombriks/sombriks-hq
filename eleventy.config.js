@@ -6,6 +6,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"public": "/"});
   // root folder and others
   eleventyConfig.setInputDirectory("src");
+  eleventyConfig.setIncludesDirectory("components")
   eleventyConfig.setLayoutsDirectory("layouts");
   // destination
   eleventyConfig.setOutputDirectory("dist");

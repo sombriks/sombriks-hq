@@ -1,5 +1,7 @@
 # [sombriks-hq][sombriks-hq]
 
+[![Publish blog updates](https://github.com/sombriks/sombriks-hq/actions/workflows/publish-blog.yml/badge.svg)](https://github.com/sombriks/sombriks-hq/actions/workflows/publish-blog.yml)
+
 My personal blog.
 
 made with [eleventy][eleventy], [pug][pug], 

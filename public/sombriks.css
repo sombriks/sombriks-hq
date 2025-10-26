@@ -1,3 +1,7 @@
 :root {
-    --font-family: monospace; !important;
+    --font-family: monospace !important;
+}
+
+table.noborder, table.noborder > tbody , table.noborder > tbody > tr, table.noborder > tbody > tr > td {
+    border-color: var(--background-color) !important;
 }
