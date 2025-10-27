@@ -1,0 +1,19 @@
+/* default theme values */
+
+:root {
+    --font-family: monospace !important;
+    --c0: #252627;
+    --c1: #f7a664;
+    --c2: #3f4245;
+    --c3: #ffb476;
+}
+
+:root[data-mode='dark'] {
+    --background-color: var(--c0) !important;
+    --text-color: var(--c1) !important;
+}
+
+:root[data-mode='light'] {
+    --background-color: var(--c2) !important;
+    --text-color: var(--c3) !important;
+}
