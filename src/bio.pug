@@ -1,0 +1,23 @@
+---
+layout: main.pug
+---
+style.
+  .block {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .block div {
+    margin-top: 0;
+  }  
+
+h1= curriculum.resume['personal info'].name
+i= curriculum.resume['personal info'].motto
+p= curriculum.resume['cover letter']
+h2 Skills
+each skill in curriculum.resume.skills
+  h3= Object.keys(skill)[0]
+  each item in skill.items
+    .block
+      div= Object.keys(item)[0]
+      div= Object.values(item)[0]
