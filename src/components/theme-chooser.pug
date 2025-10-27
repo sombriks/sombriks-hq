@@ -1,23 +1,76 @@
 -
   let themes = temas.themes // data/temas.yml
 
+// estilos
+style. 
+  div.chooser-active {
+    backdrop-filter: blur(0.3rem);
+    position: absolute;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+  }
+
+  div.theme-panel {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  div.theme-item {
+    transform: rotate(45deg);
+    min-height: 3rem;
+    max-height: 3rem;
+    min-width: 3rem;
+    max-width: 3rem;
+    display: none; 
+    /*none, inline-block*/
+  }
+
+  div.theme-item > div.bg,
+  div.theme-item > div.fg {
+    margin: 0;
+  }
+
 mixin theme-item(t)
   div.theme-item(title=t.name onclick=`chooseTheme("${t.name}")`)
     div.bg(style=`background-color: ${t.c0};`) &nbsp;
     div.fg(style=`background-color: ${t.c1};`) &nbsp;
 
 mixin theme-chooser()
-  .grid-shadow
-    .grid.theme-panel
+  // estrutura
+  .theme-shadow
+    .theme-panel
       each t in themes
         +theme-item(t)
+  // script
   script(type='application/javascript').
-    const theme = document.querySelector(':root')
-      .dataset.theme || 'stolen from stackoverflow'
+    // initial state
+    const theme = localStorage.getItem('theme') || 'stolen from stackoverflow'
     document.querySelector(`.theme-item[title='${theme}']`)
       .style.display = 'block'
+    document.querySelector(':root')
+      .dataset.theme = theme
+    // choose theme
     const chooseTheme = name => {
-      const shadow = document.querySelector('.theme-shadow')
       const panel = document.querySelector('.theme-panel')
-
+      const shadow = document.querySelector('.theme-shadow')
+      if(shadow.classList.contains('chooser-active')) {
+        document.querySelectorAll('.theme-item').forEach(item => {
+          if(item.title === name) {
+            item.style.display = 'block'
+            document.querySelector(':root').dataset.theme = name
+            localStorage.setItem('theme', name);
+          } else {
+            item.style.display = 'none'
+          }
+        })
+        shadow.classList.remove('chooser-active')
+      } else {
+        shadow.classList.add('chooser-active')
+        document.querySelectorAll('.theme-item').forEach(item => {
+          item.style.display = 'block'
+        })
+      }
     }

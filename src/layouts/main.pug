@@ -4,6 +4,14 @@ layout: base.pug
 include ../components/main-menu
 include ../components/side-bar
 include ../components/copy
+style.
+    table.noborder,
+    table.noborder > tbody,
+    table.noborder > tbody > tr,
+    table.noborder > tbody > tr > td {
+        border-color: var(--background-color) !important;
+    }
+
 table.noborder
     tbody
         tr

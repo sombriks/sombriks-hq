@@ -1,6 +1,19 @@
 mixin light-dark()
+  style.
+    div.light-dark {
+      border-width: 0.1rem;
+      font-weight: bold;
+      min-width: 1rem;
+      display: none; /*none, inline*/
+    }
+
+    div.light-dark:hover {
+      cursor: pointer;
+    } 
+
   div.light-dark.light-dark-dark(onclick="toggleLightDark('dark')") 🌛︎︎
   div.light-dark.light-dark-light(onclick="toggleLightDark('light')") 🌞︎︎
+
   script(type="application/javascript").
     const toggleLightDark = mode => {
       document.querySelector(`.light-dark-dark`).style.display = 'inline';
