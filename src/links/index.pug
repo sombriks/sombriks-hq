@@ -2,3 +2,24 @@
 layout: main.pug
 ---
 h1 Links
+input#search(placeholder="Search links..." onkeyup="filterLinks()")
+div
+  each link in links
+    span.info(data-tags=link.tags.join(',')+","+link.label)
+      a(href=link.link)= link.label
+      i &nbsp;
+      i &nbsp;
+script(type="application/javascript").
+  const search = document.getElementById('search')
+  const filterLinks = () => {
+    const links = document.querySelectorAll('span.info')
+    const query = search.value.toLowerCase()
+    links.forEach(link => {
+      const tags = link.getAttribute('data-tags').toLowerCase()
+      if (tags.includes(query)) {
+        link.style.display = ''
+      } else {
+        link.style.display = 'none'
+      }
+    })
+  }
