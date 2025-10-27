@@ -3,6 +3,7 @@ layout: base.pug
 ---
 include ../components/main-menu
 include ../components/side-bar
+include ../components/copy
 table.noborder
     tbody
         tr
@@ -15,5 +16,4 @@ table.noborder
                         // links
                     article!= content
                     footer
-                        // liks
-                        // copy
+                        +copy()

@@ -1,0 +1,10 @@
+mixin copy()
+    footer
+        span &copy;
+        span &nbsp;
+        span.ano 2025
+        span &nbsp;
+        span Sombriks
+    script.
+        const ano = new Date().getFullYear();
+        document.querySelector('span.ano').innerText = ano;
