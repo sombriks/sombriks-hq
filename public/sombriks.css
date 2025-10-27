@@ -3,6 +3,16 @@
     --font-family: monospace !important;
 }
 
+:root[data-mode='dark'] {
+    --background-color: #121212 !important;
+    --text-color: #e0e0e0 !important;
+}
+
+:root[data-mode='light'] {
+    --background-color: #ffffff !important;
+    --text-color: #000000 !important;
+}
+
 table.noborder,
 table.noborder > tbody,
 table.noborder > tbody > tr,
