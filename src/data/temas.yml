@@ -1,0 +1,118 @@
+---
+themes:
+  - name: black-ish and whitey
+    light:
+      c0: "#eee"
+      c1: "#666"
+    dark:
+      c0: "#333"
+      c1: "#aaa"
+  - name: neighbor grass
+    light:
+      c0: "#afefba"
+      c1: "#0b3b14"
+    dark:
+      c0: "#0b3b14"
+      c1: "#afefba"
+# [
+#   {
+#     "c0": "#ebdbb2",
+#     "c1": "#282828",
+#     "label": "light gruvbox"
+#   },
+#   {
+#     "c0": "#f3db76",
+#     "c1": "#003300",
+#     "label": "bananas from brazil"
+#   },
+#   {
+#     "c0": "#ffd4dc",
+#     "c1": "#b61785",
+#     "label": "pink panther"
+#   },
+#   {
+#     "c0": "#bd93f9",
+#     "c1": "#383959",
+#     "label": "alucard"
+#   },
+#   {
+#     "c0": "#523b3b",
+#     "c1": "#f8ede3",
+#     "label": "moccatino"
+#   },
+#   {
+#     "c0": "#383959",
+#     "c1": "#bd93f9",
+#     "label": "dracula"
+#   },
+#   {
+#     "c0": "#0e3a5c",
+#     "c1": "#d2d27a",
+#     "label": "dusk and green"
+#   },
+#   {
+#     "c0": "#334",
+#     "c1": "#eee",
+#     "label": "dark graffitti"
+#   },
+#   {
+#     "c0": "#282828",
+#     "c1": "#ebdbb2",
+#     "label": "dark gruvbox"
+#   },
+#   {
+#     "c0": "#1a3814",
+#     "c1": "#A4AA88",
+#     "label": "army thing"
+#   },
+#   {
+#     "c0": "#333",
+#     "c1": "#ffa500",
+#     "label": "stolen from stackoverflow"
+#   },
+#   {
+#     "c0": "#262b2c",
+#     "c1": "#32a0ad",
+#     "label": "the night dive"
+#   },
+#   {
+#     "c0": "#002b36",
+#     "c1": "#268bd2",
+#     "label": "solarized-ish"
+#   },
+#   {
+#     "c0": "#030e57",
+#     "c1": "#E65A27",
+#     "label": "blue orange"
+#   },
+#   {
+#     "c0": "#1c3232",
+#     "c1": "#ffee55",
+#     "label": "ripe avocado"
+#   },
+#   {
+#     "c0": "#191f2c",
+#     "c1": "#eb55d9",
+#     "label": "pink panther dark"
+#   },
+#   {
+#     "c0": "#26210d",
+#     "c1": "#E7262c",
+#     "label": "crimson king"
+#   },
+#   {
+#     "c0": "#13005a",
+#     "c1": "#bccef8",
+#     "label": "blueprint"
+#   },
+#   {
+#     "c0": "#2a2139",
+#     "c1": "#cbff00",
+#     "label": "retrowave"
+#   },
+#   {
+#     "c0": "#000",
+#     "c1": "#00ff00",
+#     "label": "old cp/m crt"
+#   }
+# ]

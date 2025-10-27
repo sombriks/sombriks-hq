@@ -9,3 +9,22 @@ table.noborder > tbody > tr,
 table.noborder > tbody > tr > td {
     border-color: var(--background-color) !important;
 }
+
+div.avatar, div.theme-item {
+    margin: 1rem;
+    border-color: var(--text-color);
+    border-width: 0.3rem;
+    border-style: solid;
+    border-radius: 50%;
+    overflow: clip;
+}
+div.theme-item {
+    transform: rotate(45deg);
+    max-height: 3rem;
+    max-width: 3rem;
+}
+
+div.theme-item > div.bg,
+div.theme-item > div.fg {
+    margin: 0;
+}

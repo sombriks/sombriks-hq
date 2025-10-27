@@ -1,6 +1,9 @@
 include ./avatar-pic
+include ./theme-chooser
+
 mixin side-bar()
-    aside
-        if block
-            +avatar-pic()
-            block
+  aside
+    if block
+      +avatar-pic()
+      +theme-chooser()
+      block

@@ -1,0 +1,10 @@
+-
+  let t = temas.themes[0]
+
+mixin theme-item()
+  div.theme-item(title=t.name)
+    div.bg(style=`background-color: ${t.dark.c0}`) &nbsp;
+    div.fg(style=`background-color: ${t.dark.c1}`) &nbsp;
+
+mixin theme-chooser()
+  +theme-item()
