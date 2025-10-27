@@ -1,17 +1,3 @@
-/*  */
-:root {
-    --font-family: monospace !important;
-}
-
-:root[data-mode='dark'] {
-    --background-color: #121212 !important;
-    --text-color: #e0e0e0 !important;
-}
-
-:root[data-mode='light'] {
-    --background-color: #ffffff !important;
-    --text-color: #000000 !important;
-}
 
 table.noborder,
 table.noborder > tbody,
@@ -33,6 +19,7 @@ div.theme-item {
     transform: rotate(45deg);
     max-height: 3rem;
     max-width: 3rem;
+    display: none; /*none, inline-block*/
 }
 
 div.theme-item > div.bg,
@@ -43,6 +30,7 @@ div.theme-item > div.fg {
 div.light-dark {
     border-width: 0.1rem;
     font-weight: bold;
+    min-width: 1rem;
     display: none; /*none, inline*/
 }
 

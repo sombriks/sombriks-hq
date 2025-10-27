@@ -2,12 +2,12 @@ mixin light-dark()
   div.light-dark.light-dark-dark(onclick="toggleLightDark('dark')") 🌛︎︎
   div.light-dark.light-dark-light(onclick="toggleLightDark('light')") 🌞︎︎
   script(type="application/javascript").
-
     const toggleLightDark = mode => {
       document.querySelector(`.light-dark-dark`).style.display = 'inline';
       document.querySelector(`.light-dark-light`).style.display = 'inline';
       document.querySelector(`.light-dark-${mode}`).style.display = 'none';
       document.querySelector(":root").dataset.mode = mode;
+      localStorage.setItem('mode', mode);
     }
 
     const tema = e => {
@@ -20,4 +20,6 @@ mixin light-dark()
 
     const matchMedia = window.matchMedia('(prefers-color-scheme: dark)');
     matchMedia.onchange = tema;
-    tema(matchMedia);
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode) toggleLightDark(savedMode);
+    else tema(matchMedia);

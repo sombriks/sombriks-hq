@@ -1,10 +1,23 @@
 -
-  let t = temas.themes[0]
+  let themes = temas.themes // data/temas.yml
 
-mixin theme-item()
-  div.theme-item(title=t.name)
-    div.bg(style=`background-color: ${t.dark.c0}`) &nbsp;
-    div.fg(style=`background-color: ${t.dark.c1}`) &nbsp;
+mixin theme-item(t)
+  div.theme-item(title=t.name onclick=`chooseTheme("${t.name}")`)
+    div.bg(style=`background-color: ${t.c0};`) &nbsp;
+    div.fg(style=`background-color: ${t.c1};`) &nbsp;
 
 mixin theme-chooser()
-  +theme-item()
+  .grid-shadow
+    .grid.theme-panel
+      each t in themes
+        +theme-item(t)
+  script(type='application/javascript').
+    const theme = document.querySelector(':root')
+      .dataset.theme || 'stolen from stackoverflow'
+    document.querySelector(`.theme-item[title='${theme}']`)
+      .style.display = 'block'
+    const chooseTheme = name => {
+      const shadow = document.querySelector('.theme-shadow')
+      const panel = document.querySelector('.theme-panel')
+
+    }
