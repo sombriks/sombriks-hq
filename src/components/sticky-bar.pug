@@ -1,0 +1,19 @@
+include ./theme-chooser
+include ./light-dark
+mixin sticky-bar()
+  style.
+    .sticky-bar {
+      top: 0;
+      margin-top: 0;
+      z-index: 10000;
+      position: fixed;
+      background-color: var(--background-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+  div.sticky-bar
+    div
+      +light-dark()
+    div
+      +theme-chooser()
+    a(href="/") Back
