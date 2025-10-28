@@ -2,15 +2,49 @@
 layout: main.pug
 ---
 -
+  // all posts
   const posts = collections.posts.reverse()
+  // all tags
+  const tags = Object.keys(collections)
+    .filter(t => collections[t].length > 1
+      && t !== 'drafts' 
+      && t !== 'posts' 
+      && t !== 'all')
+    .map(t => ({[t]:collections[t].length}))
+    .toSorted((a, b) => Object.values(b)[0] - Object.values(a)[0])
+  // all dates, grouped
+  const dates = collections.posts
+    .map(p => p.date)
+    .toSorted((a, b) => a - b)
+    .reduce((acc, date) => {
+      const year = date.getFullYear()
+      acc[year] = acc[year] ? acc[year] + 1 : 1
+      return acc
+    }, {})
+h1 Blog Posts
+style.
+  .tag, .date {
+    display: inline-block;
+    margin-top:0;
+  }
 details
-  summary tags
+  summary Tags
+  each tag in tags
+    span.tag
+      a(href=`${page.url}?search=${Object.keys(tag)[0]}`) 
+        i= Object.keys(tag)[0] + "(" + Object.values(tag)[0] + ")"
+      i &nbsp;
 details
   summary Dates
-input#search(placeholder="Search blog posts..." onkeyup="filterPosts()")
+  each date in Object.keys(dates)
+    span.date
+      a(href=`${page.url}?search=${date}`)
+        i= `${date}(${dates[date]})`
+      i &nbsp;
+input#search(name="search" placeholder="Search blog posts..." onkeyup="filterPosts()")
 div
   each post in posts
-    span.posts(data-tags=post.data.tags.join(',')+","+post.fileSlug)
+    span.post(data-tags=post.date.getFullYear()+","+post.data.tags.join(',')+","+post.fileSlug)
       //- a= Object.keys(post)
       a(href=post.url)= post.fileSlug
       i &nbsp;
@@ -18,7 +52,7 @@ div
 script(type="application/javascript").
   const search = document.getElementById('search')
   const filterPosts = () => {
-    const posts = document.querySelectorAll('span.posts')
+    const posts = document.querySelectorAll('span.post')
     posts.forEach(post => {
       const tags = post.getAttribute('data-tags')
       if (tags.toLowerCase().includes(search.value.toLowerCase())) {
@@ -27,4 +61,9 @@ script(type="application/javascript").
         post.style.display = 'none'
       }
     })
+  }
+  const query = new URLSearchParams(window.location.search)
+  if (query.has('search')) {
+    search.value = query.get('search')
+    filterPosts()
   }

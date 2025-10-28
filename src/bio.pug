@@ -10,7 +10,6 @@ style.
   .block div {
     margin-top: 0;
   }  
-
 h1= curriculum.resume['personal info'].name
 i= curriculum.resume['personal info'].motto
 p= curriculum.resume['cover letter']
@@ -31,10 +30,10 @@ h2 Work Experience
 each experience in curriculum.resume.work
   details
     summary
-      | #{experience.position} at 
-      a( target="_blank" href=Object.values(experience)[0]) 
-        | #{Object.keys(experience)[0]}
-      | &nbsp;(#{experience.period})
+      i= `${experience.position} at `
+      a(target="_blank" href=Object.values(experience)[0]) 
+        i= `${Object.keys(experience)[0]}`
+      i= ` (${experience.period})`
     p= experience.description
     h3 Projects
     each project in experience.projects
@@ -51,10 +50,10 @@ h2 Education
 each edu in curriculum.resume.education
   details
     summary
-      | #{edu.type} at
-      a( target="_blank" href=Object.values(edu)[0]) 
-        | #{Object.keys(edu)[0]}
-      | &nbsp;(#{edu.period})
+      i= `${edu.type} at `
+      a(target="_blank" href=Object.values(edu)[0]) 
+        i= `${Object.keys(edu)[0]}`
+      i= ` (${edu.period})`
     p= edu.description
 h2 Other certifications
 each cert in curriculum.resume['other certifications']
