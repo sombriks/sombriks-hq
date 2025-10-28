@@ -1,0 +1,30 @@
+---
+layout: main.pug
+---
+-
+  const posts = collections.posts.reverse()
+details
+  summary tags
+details
+  summary Dates
+input#search(placeholder="Search blog posts..." onkeyup="filterPosts()")
+div
+  each post in posts
+    span.posts(data-tags=post.data.tags.join(',')+","+post.fileSlug)
+      //- a= Object.keys(post)
+      a(href=post.url)= post.fileSlug
+      i &nbsp;
+      i &nbsp;
+script(type="application/javascript").
+  const search = document.getElementById('search')
+  const filterPosts = () => {
+    const posts = document.querySelectorAll('span.posts')
+    posts.forEach(post => {
+      const tags = post.getAttribute('data-tags')
+      if (tags.toLowerCase().includes(search.value.toLowerCase())) {
+        post.style.display = 'inline'
+      } else {
+        post.style.display = 'none'
+      }
+    })
+  }
