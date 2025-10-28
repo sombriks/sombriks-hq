@@ -906,29 +906,12 @@ resume:
     - Node.js: https://www.udemy.com/certificate/UC-f5e8e700-f734-4385-b8be-c7aecf71f7cc/
     - Vue/Laravel: https://www.udemy.com/certificate/UC-7874dad8-c92a-43dd-88a3-403f72ef5c26/
   other contact info:
-    - Email: mailto:sombriks@gmail.com
-      icon: icon-mail4
-    # - Mastodon: https://elk.bolha.one/mastodon.world/@sombriks
-    #   icon: icon-mastodon
-    - Bluesky: https://bsky.app/profile/sombriks.com
-      icon: icon-icons8-butterfly-50
-    # - Facebook: https://www.facebook.com/sombriks
-    #   icon: icon-facebook2
-    # - Instagram: https://www.instagram.com/sombriks
-    #   icon: icon-instagram
-    - GitHub: https://github.com/sombriks
-      icon: icon-github
-    - Linkedin: https://www.linkedin.com/in/sombriks/
-      icon: icon-linkedin
-    - StackOverflow: https://stackoverflow.com/users/420096/sombriks
-      icon: icon-stackoverflow
-    # - Keybase: https://keybase.io/sombriks
-    #   icon: icon-keybase
-    - Hackerrank: https://www.hackerrank.com/sombriks
-      icon: icon-hackerrank
-    - Codewars: https://www.codewars.com/users/sombriks
-      icon: icon-codewars
-    - Reddit: https://www.reddit.com/user/sombriks
-      icon: icon-reddit
-    - NPM: https://www.npmjs.com/~sombriks
-      icon: icon-npm
+    Email: mailto:sombriks@gmail.com
+    Bluesky: https://bsky.app/profile/sombriks.com
+    GitHub: https://github.com/sombriks
+    Linkedin: https://www.linkedin.com/in/sombriks/
+    StackOverflow: https://stackoverflow.com/users/420096/sombriks
+    Hackerrank: https://www.hackerrank.com/sombriks
+    Codewars: https://www.codewars.com/users/sombriks
+    Reddit: https://www.reddit.com/user/sombriks
+    NPM: https://www.npmjs.com/~sombriks

@@ -14,9 +14,9 @@ h1= curriculum.resume['personal info'].name
 i= curriculum.resume['personal info'].motto
 p= curriculum.resume['cover letter']
 h2 Contact info
-each info in curriculum.resume['other contact info']
+each info in Object.keys(curriculum.resume['other contact info']) 
   .block
-    a(target="_blank" href=Object.values(info)[0])= Object.keys(info)[0]
+    a(target="_blank" href=curriculum.resume['other contact info'][info])= info
 
 h2 Skills
 each skill in curriculum.resume.skills

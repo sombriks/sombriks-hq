@@ -1,0 +1,26 @@
+mixin side-menu()
+    ul.tree
+        li
+            a(href="/") Start
+            ul.incremental
+                li
+                    a(href="/bio") Bio
+                    ul.incremental
+                        li
+                            a(href=`${curriculum.resume['other contact info'].Bluesky}`) Bluesky
+                        li
+                            a(href=`${curriculum.resume['other contact info'].GitHub}`) Github
+                        li
+                            a(href=`${curriculum.resume['other contact info'].Linkedin}`) Linkedin
+                        li
+                            a(href=`${curriculum.resume['other contact info'].NPM}`) NPM
+                Bluesky
+                    a(href="/blog") Blog
+                li
+                    a(href="/experiments") Experiments
+                li
+                    a(href="/links") Links
+                li
+                    a(href="/privacy") Privacy
+                li
+                    a(href="/feed.xml") RSS
