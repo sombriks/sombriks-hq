@@ -14,10 +14,49 @@ style.
 h1= curriculum.resume['personal info'].name
 i= curriculum.resume['personal info'].motto
 p= curriculum.resume['cover letter']
+h2 Contact info
+each info in curriculum.resume['other contact info']
+  .block
+    a(target="_blank" href=Object.values(info)[0])= Object.keys(info)[0]
+
 h2 Skills
 each skill in curriculum.resume.skills
-  h3= Object.keys(skill)[0]
-  each item in skill.items
-    .block
-      div= Object.keys(item)[0]
-      div= Object.values(item)[0]
+  details(open=true)
+    summary= Object.keys(skill)[0]
+    each item in skill.items
+      .block
+        div= Object.keys(item)[0]
+        div= Object.values(item)[0]
+h2 Work Experience
+each experience in curriculum.resume.work
+  details
+    summary
+      | #{experience.position} at 
+      a( target="_blank" href=Object.values(experience)[0]) 
+        | #{Object.keys(experience)[0]}
+      | &nbsp;(#{experience.period})
+    p= experience.description
+    h3 Projects
+    each project in experience.projects
+      details
+        summary= Object.keys(project)[0]
+        p= project.description
+        h4 Responsibilities
+        p= project.responsibilities
+    h3 Technologies
+    each tech in experience['tech stack']
+      .block
+        a(target="_blank" href=`http://bing.com?q=${tech}`)= tech
+h2 Education
+each edu in curriculum.resume.education
+  details
+    summary
+      | #{edu.type} at
+      a( target="_blank" href=Object.values(edu)[0]) 
+        | #{Object.keys(edu)[0]}
+      | &nbsp;(#{edu.period})
+    p= edu.description
+h2 Other certifications
+each cert in curriculum.resume['other certifications']
+  .block
+    a(target="_blank" href=Object.values(cert)[0])= Object.keys(cert)[0]

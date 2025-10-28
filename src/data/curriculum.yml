@@ -908,14 +908,14 @@ resume:
   other contact info:
     - Email: mailto:sombriks@gmail.com
       icon: icon-mail4
-    - Mastodon: https://elk.bolha.one/mastodon.world/@sombriks
-      icon: icon-mastodon
+    # - Mastodon: https://elk.bolha.one/mastodon.world/@sombriks
+    #   icon: icon-mastodon
     - Bluesky: https://bsky.app/profile/sombriks.com
       icon: icon-icons8-butterfly-50
-    - Facebook: https://www.facebook.com/sombriks
-      icon: icon-facebook2
-    - Instagram: https://www.instagram.com/sombriks
-      icon: icon-instagram
+    # - Facebook: https://www.facebook.com/sombriks
+    #   icon: icon-facebook2
+    # - Instagram: https://www.instagram.com/sombriks
+    #   icon: icon-instagram
     - GitHub: https://github.com/sombriks
       icon: icon-github
     - Linkedin: https://www.linkedin.com/in/sombriks/
