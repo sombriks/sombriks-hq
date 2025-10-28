@@ -1,5 +1,5 @@
 ---
-layout: blog.pug
+layout: blog-layout.pug
 date: 2023-03-15
 tags:
   - posts

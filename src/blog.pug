@@ -14,11 +14,11 @@ layout: main.pug
     .toSorted((a, b) => Object.values(b)[0] - Object.values(a)[0])
   // all dates, grouped
   const dates = collections.posts
-    .map(p => p.date)
-    .toSorted((a, b) => a - b)
+    .filter(p => p.date instanceof Date)
+    .map(p => p.date.getFullYear())
+    .toSorted((a, b) => b - a)
     .reduce((acc, date) => {
-      const year = date.getFullYear()
-      acc[year] = acc[year] ? acc[year] + 1 : 1
+      acc[date] = acc[date] ? acc[date] + 1 : 1
       return acc
     }, {})
 h1 Blog Posts

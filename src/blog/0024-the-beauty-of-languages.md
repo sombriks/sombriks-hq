@@ -1,5 +1,5 @@
 ---
-layout: blog.pug
+layout: blog-layout.pug
 tags: 
   - posts
   - misc
