@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags: 
   - posts
   - sql
@@ -179,4 +179,4 @@ ID|PRODUCT_CODE|PRODUCT_CATEGORY_CODE|TOTAL_COST|SOLD_ITEMS        |VALUE_ITEMS 
 Queries start to become more and more funky, but the insight extracted from them
 become more and more precious to make strategic decisions.
 
-The sample data for this article can be found [here](/assets/post-pics/0035-we-need-to-talk-about-window-functions/sample.sql);
+The sample data for this article can be found [here](/post-pics/0035-we-need-to-talk-about-window-functions/sample.sql);

@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags:
   - posts
   - java
@@ -97,7 +97,7 @@ The correction obviously was to use Boolean instead of byte.
 Using the simple http requester available on intellij was also possible to
 properly identify the issue:
 
-![http-requester.png](/assets/post-pics/0045-keep-your-log-level-sane-on-spring-boot/http-requester.png)
+![http-requester.png](/post-pics/0045-keep-your-log-level-sane-on-spring-boot/http-requester.png)
 
 ## The end
 

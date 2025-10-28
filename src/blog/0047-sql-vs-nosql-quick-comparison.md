@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags:
   - posts
   - sql
@@ -710,7 +710,7 @@ For instance, mongo will beat mysql on every single direct query not involving
 `$lookups` into other collections. When it needs to do that, mysql beats mongo
 every time.
 
-The key lesson here remains: 
+The key lesson here remains:
 **mind your data modelling even if it's schemaless**.
 
 Happy Hacking.

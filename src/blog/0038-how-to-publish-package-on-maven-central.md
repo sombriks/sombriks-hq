@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags: 
   - posts
   - java
@@ -164,7 +164,7 @@ But in order to publish it on maven central, it should look more like this:
 Sources, javadoc and signatures are mandatory for packages being published on
 maven central, so simply put it on your pom.
 
-The distribution management is needed so you can publish 
+The distribution management is needed so you can publish
 [staging versions](https://help.sonatype.com/repomanager2/staging-releases/configuring-the-staging-suite)
 of your package which can be promoted to release later.
 
@@ -188,7 +188,7 @@ under a custom settings.xml like this one:
 ```
 
 Either put this file under your $HOME/.m2 folder or point to it when runing
-maven from command line. You also can hardcode your credentials. If you dare :-) 
+maven from command line. You also can hardcode your credentials. If you dare :-)
 
 ## The gpg signature
 
@@ -235,7 +235,7 @@ https://keys.openpgp.org/upload/TmyI2ZERAhexdHxghzzHufu5u9m3e36vTecjjv83CiRscG9Q
 
 Then open the provided link and validate your key:
 
-![validate key](/assets/post-pics/0038-how-to-publish-package-on-maven-central/validating-gpg-key.png)
+![validate key](/post-pics/0038-how-to-publish-package-on-maven-central/validating-gpg-key.png)
 
 Make sure to create and safely store a backup for your signature. Guard the
 .gnupg folder with care!
@@ -255,12 +255,12 @@ staging phase of this process.
 Once successfull, login into [nexus](https://s01.oss.sonatype.org/#stagingRepositories)
 and proceed with [closing and promoting the library](https://help.sonatype.com/repomanager2/staging-releases/managing-staging-repositories):
 
-![staging repositories](/assets/post-pics/0038-how-to-publish-package-on-maven-central/staging-repositories.png)
+![staging repositories](/post-pics/0038-how-to-publish-package-on-maven-central/staging-repositories.png)
 
 ## Further steps
 
 With this guide you will be able to publish you library into maven central from
-your development environment. 
+your development environment.
 
 In the future let's setup a github action or something like that to automate it.
 

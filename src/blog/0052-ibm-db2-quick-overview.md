@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags:
   - posts
   - kotlin
@@ -63,7 +63,7 @@ services:
 
 Once (it takes time!) the container finishes to spin up, we're good to connect:
 
-![sample-connection.png](/assets/post-pics/0052-ibm-db2-quick-overview/sample-connection.png)
+![sample-connection.png](/post-pics/0052-ibm-db2-quick-overview/sample-connection.png)
 
 Again, it might take some time.
 

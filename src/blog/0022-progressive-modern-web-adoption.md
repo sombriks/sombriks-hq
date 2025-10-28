@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags: 
   - posts
   - jquery
@@ -9,8 +9,8 @@ date: 2020-08-01
 ---
 # On progressive adoption of modern web development
 
-It's no secret that there is still a lot of front-end solutions using 
-[jQuery](https://jquery.com/). In order to sample how one can migrate from 
+It's no secret that there is still a lot of front-end solutions using
+[jQuery](https://jquery.com/). In order to sample how one can migrate from
 another web library foundation, let's present a gradual, progressive, approach
 for the problem.
 
@@ -29,12 +29,12 @@ regarding, for example, dealing with [Vue](https://vuejs.org/) SFC components.
 
 Instead of radical change, the new library can be adopted on new features and
 paced upgrade on the existing ones. That way the new skills can be developed
-over already known terrain without waste people's muscular memory. 
+over already known terrain without waste people's muscular memory.
 
 ## Sample: todo-list jQuery
 
 [This study](https://github.com/sombriks/sample-java-web-progressive-frontend)
-shows the same do-do list using different approaches on frontend. 
+shows the same do-do list using different approaches on frontend.
 
 First of all, the regular jQuery solution:
 
@@ -158,7 +158,7 @@ components at all.
 
 Why one would do that?
 
-In short, jump from jQuery to webpack-enabled vue-cli project directly is like 
+In short, jump from jQuery to webpack-enabled vue-cli project directly is like
 throw the shrimp in the cold-iced water. It might kill.
 
 Enough talk, here's the code:
@@ -252,7 +252,7 @@ content:
 Markup is almost the same, which is good if you think about it. It's paced
 migration.
 
-Key differences are the lack of almost all id's and the presence of vue special 
+Key differences are the lack of almost all id's and the presence of vue special
 attributes.
 
 ## How to boil a frog

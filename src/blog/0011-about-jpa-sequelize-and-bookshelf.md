@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags: 
   - posts
   - postgres
@@ -25,7 +25,7 @@ with distinct frameworks. So we can compare them.
 
 First things first, we'll use this database schema:
 
-![01-my-party-schema.png](/assets/post-pics/0011-about-jpa-sequelize-and-bookshelf/01-my-party-schema.png)
+![01-my-party-schema.png](/post-pics/0011-about-jpa-sequelize-and-bookshelf/01-my-party-schema.png)
 
 We will not discuss [migrations](#/blog/0005-updated-knex-bookshelf-cookbook.md)
 here, although it's a _de-facto_ standard pattern to manage schema evolutions.

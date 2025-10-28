@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags: 
   - posts
   - bundlers
@@ -8,7 +8,7 @@ date: 2018-12-27
 ---
 # Browserify rocks and that's why
 
-**Update 2023-02-21**: Please don't use browserify for modern development 
+**Update 2023-02-21**: Please don't use browserify for modern development
 anymore
 
 **DISCLAIMER: it does not means that other bundlers sucks.**
@@ -58,9 +58,9 @@ You see, lots of small downloads still opens a chance of error if the client
 connection is unstable. So the next step of evolution was to **bundle** up all
 modules at once and deliver it to the client in a single http connection.
 
- ![pic1.jpg](/assets/post-pics/0006-browserify-rocks/pic1.jpg)
+ ![pic1.jpg](/post-pics/0006-browserify-rocks/pic1.jpg)
 
- <!-- <img src="/assets/post-pics/0006-browserify-rocks/pic1.jpg" style="width:100%;"/> -->
+ <!-- <img src="/post-pics/0006-browserify-rocks/pic1.jpg" style="width:100%;"/> -->
 
 a picture stolen from webpack site explaining how a bundle works
 

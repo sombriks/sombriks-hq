@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 date: 2023-02-14
 tags:
   - posts
@@ -14,7 +14,7 @@ This version was cool, a very minimalistic
 [SPA](https://en.wikipedia.org/wiki/Single-page_application) and a good sample
 on how cool [vuejs](https://vuejs.org/) is.
 
-![golang-coverage](/assets/post-pics/0041-farewell-old-blog/last-screenshot.png)
+![golang-coverage](/post-pics/0041-farewell-old-blog/last-screenshot.png)
 
 ## It ain't broken, why change then?
 
@@ -50,7 +50,7 @@ It will be built with a static site generator tool called
 [eleventy](https://www.11ty.dev/), which is pretty cool because i can use any
 template language i want.
 
-![eleventy supported template languages](/assets/post-pics/0041-farewell-old-blog/eleventy-template-languages.jpg)
+![eleventy supported template languages](/post-pics/0041-farewell-old-blog/eleventy-template-languages.jpg)
 
 It also has special static data rendering, so i can use front matter metadata
 and json resource files directly during the render phase of the static content.

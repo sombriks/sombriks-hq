@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags:
   - posts
   - node
@@ -243,7 +243,7 @@ the bell rings.
 Intellij Ultimate has a nice plugin to deal with images, containers and
 registries:
 
-![sample-docker-compose-healthy.png](/assets/post-pics/0055-containers-part-3/sample-docker-compose-healthy.png)
+![sample-docker-compose-healthy.png](/post-pics/0055-containers-part-3/sample-docker-compose-healthy.png)
 
 ## Conclusion
 

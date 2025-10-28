@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 date: 2023-03-15
 tags:
   - posts
@@ -32,7 +32,7 @@ Publishing a static site at github pages is cool because it's mostly
 [GitOps](https://www.gitops.tech/): commit is publish, and github pages now
 use github actions workflows to deploy your site:
 
-![github-pages-config.png](/assets/post-pics/0044-cra-builds-for-non-root-urls/github-pages-config.png)
+![github-pages-config.png](/post-pics/0044-cra-builds-for-non-root-urls/github-pages-config.png)
 
 The default deploy action, however, tries to deploy the root directory of your
 project; back in time, it was the default method to deploy something using

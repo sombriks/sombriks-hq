@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags:
   - posts
   - vue
@@ -42,7 +42,7 @@ spring-boot can be generated using
 Select java version up to 11, spring boot 2.7 or higher depending on installed
 java version on your machine.
 
-![initializr-1.png](/assets/post-pics/0048-progressive-vue-js-on-ssr-java/initializr-1.png)
+![initializr-1.png](/post-pics/0048-progressive-vue-js-on-ssr-java/initializr-1.png)
 
 On dependencies, select:
 
@@ -53,11 +53,11 @@ On dependencies, select:
 - Liquibase Migration
 - Lombok
 
-![initializr-2.png](/assets/post-pics/0048-progressive-vue-js-on-ssr-java/initializr-2.png)
+![initializr-2.png](/post-pics/0048-progressive-vue-js-on-ssr-java/initializr-2.png)
 
 In our example, the application handles the entire todo list just using forms:
 
-![initializr-2.png](/assets/post-pics/0048-progressive-vue-js-on-ssr-java/todo-app-1.png)
+![initializr-2.png](/post-pics/0048-progressive-vue-js-on-ssr-java/todo-app-1.png)
 
 There is zero-javascript yet the app is dynamic:
 

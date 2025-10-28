@@ -1,5 +1,5 @@
 ---
-layout: blog-base.webc
+layout: blog.pug
 tags:
   - posts
   - design patterns
@@ -17,10 +17,10 @@ date: 2023-04-22
 # Don't do DTO's if you can
 
 When I have to use entities, I often model them in a way they go well with any
-serialization strategy. That way I keep things 
+serialization strategy. That way I keep things
 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
-In other projects that I just inherited, however, this is not the case and is 
+In other projects that I just inherited, however, this is not the case and is
 common place to find an entire Data Transfer Object layer dangling out in the
 source code.
 
@@ -114,10 +114,10 @@ play they roles only when you need to produce responses.
 
 <div class="comparison-box"><div>
 
-![2-way map](/assets/post-pics/0050-beyond-dto-or-back-to-dry/2-way-conversion.drawio.png)
+![2-way map](/post-pics/0050-beyond-dto-or-back-to-dry/2-way-conversion.drawio.png)
 </div><div>
 
-![1-way map](/assets/post-pics/0050-beyond-dto-or-back-to-dry/1-way-conversion.drawio.png)
+![1-way map](/post-pics/0050-beyond-dto-or-back-to-dry/1-way-conversion.drawio.png)
 
 Go with 1-way when possible, it's better
 </div></div>
@@ -320,6 +320,6 @@ This article is just a long rant about pass data through several application
 layers.
 
 Things sometimes need to be transformed into something else due to various
-reasons, either business, technical limitations or just _because_. 
+reasons, either business, technical limitations or just _because_.
 
 It is important to know the consequences of any approach.
