@@ -1,6 +1,6 @@
--
-  const pageTags = [...tags].filter(t => t !== 'posts')
 mixin page-tags()
+  -
+    const pageTags = [...tags].filter(t => t !== 'posts')
   each tag in pageTags
     span
       a(href=`/blog/?search=${tag}`)= tag

@@ -1,26 +1,9 @@
 ---
 layout: base.pug
 ---
-include ../components/side-menu
-include ../components/side-bar
 include ../components/copy
-style.
-    table.noborder,
-    table.noborder > tbody,
-    table.noborder > tbody > tr,
-    table.noborder > tbody > tr > td {
-        border-color: var(--background-color) !important;
-    }
-
-table.noborder
-    tbody
-        tr
-            td.width-min
-                +side-bar()
-                    +side-menu()
-            td.width-auto
-                main
-                    header
-                    article!= content
-                    footer
-                        +copy()
+include ../components/page-tags
+include ../components/sticky-bar
++sticky-bar()
+article!= content
++copy()

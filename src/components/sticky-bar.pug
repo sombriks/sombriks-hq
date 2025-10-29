@@ -4,16 +4,47 @@ mixin sticky-bar()
   style.
     .sticky-bar {
       top: 0;
+      display: flex;
       margin-top: 0;
       z-index: 10000;
-      position: fixed;
+      position: sticky;
+      align-items: center;
       background-color: var(--background-color);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
+    .sticky-bar>div {
+      margin-top: 0;
+    }
+    .grow {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
   div.sticky-bar
+    .grow
+      div
+      div
+        i &nbsp;
+        a(href="/") Start
+      div
+        i &nbsp;
+        a(href="/bio") Bio
+      div
+        i &nbsp;
+        a(href="/blog") Blog
+      div
+        i &nbsp;
+        a(href="/experiments") Experiments
+      div
+        i &nbsp;
+        a(href="/links") Links
+      div
+        i &nbsp;
+        a(href="/privacy") Privacy
+      div
+        i &nbsp;
+        a(href="/feed.xml") RSS
     div
       +light-dark()
     div
       +theme-chooser()
-    a(href="/") Back

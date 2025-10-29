@@ -1,4 +1,9 @@
-mixin avatar-pic()
+mixin avatar-pic(size='6rem')
+  style.
+    div.avatar {
+      width: #{size};
+      height: #{size};
+    }
   div.avatar
     img(src="/profile-pics/picture_06.jpg")
   script(type="application/javascript").

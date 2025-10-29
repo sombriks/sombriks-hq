@@ -1,16 +1,25 @@
 ---
 layout: main.pug
 ---
+include ./components/avatar-pic.pug
 style.
   .block {
     display: inline-block;
     margin-left: 1rem;
   }
-
   .block div {
     margin-top: 0;
   }  
-h1= curriculum.resume['personal info'].name
+  div.foto {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+div.foto
+  h1= curriculum.resume['personal info'].name
+.foto
+  +avatar-pic('7rem')
 i= curriculum.resume['personal info'].motto
 p= curriculum.resume['cover letter']
 h2 Contact info
