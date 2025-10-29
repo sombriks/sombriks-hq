@@ -1,3 +1,4 @@
+include ../components/my-themes
 doctype html
 html
     head
@@ -9,8 +10,7 @@ html
         link(rel="favicon" href="/favicon.ico")/
         link(rel='stylesheet' href='/the-monospace-web/reset.css')/
         link(rel='stylesheet' href='/the-monospace-web/index.css')/
+        +my-themes()
         link(rel='stylesheet' href='/sombriks.css')/
-        link(rel='stylesheet' href='/light-dark.css')/
-        link(rel='stylesheet' href='/themes.css')/
         script(type="application/javascript" src="/sombriks.js")
     body!= content

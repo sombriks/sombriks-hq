@@ -1,57 +1,55 @@
--
-  let themes = temas.themes // data/temas.yml
-
-// estilos
-style. 
-  div.chooser-active {
-    backdrop-filter: blur(0.3rem);
-    position: absolute;
-    z-index: 10000;
-    height: 100vh;
-    width: 100vw;
-    left: 0;
-    top: 0;
-  }
-
-  div.theme-panel {
-    flex-wrap: wrap;
-    display: flex;
-  }
-
-  div.theme-item {
-    transform: rotate(45deg);
-    min-height: 3rem;
-    max-height: 3rem;
-    min-width: 3rem;
-    max-width: 3rem;
-    display: none; 
-    /*none, inline-block*/
-  }
-
-  div.theme-item > div.bg,
-  div.theme-item > div.fg {
-    margin: 0;
-  }
-
-mixin theme-item(t)
-  div.theme-item(title=t.name onclick=`chooseTheme("${t.name}")`)
-    div.bg(style=`background-color: ${t.c0};`) &nbsp;
-    div.fg(style=`background-color: ${t.c1};`) &nbsp;
-
 mixin theme-chooser()
+  //- data/temas.yml
+  -
+    let themes = temas.themes
+  // estilos
+  style. 
+    div.chooser-active {
+      backdrop-filter: blur(0.3rem);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+      border-radius:: 2rem;
+      position: absolute;
+      z-index: 10000;
+      height: 100vh;
+      left: 0;
+      top: 0;
+    }
+
+    div.theme-item {
+      transform: rotate(45deg);
+      min-height: 3rem;
+      max-height: 3rem;
+      min-width: 3rem;
+      max-width: 3rem;
+      display: none; 
+      /*none, inline-block*/
+    }
+
+    div.theme-item > div.bg,
+    div.theme-item > div.fg {
+      margin: 0;
+    }
   // estrutura
   .theme-shadow
-    .theme-panel
+    div
       each t in themes
-        +theme-item(t)
+        div.theme-item(title=t.name onclick=`chooseTheme("${t.name}")`)
+          div.bg(style=`background-color: ${t.c0};`) &nbsp;
+          div.fg(style=`background-color: ${t.c1};`) &nbsp;
   // script
   script(type='application/javascript').
     // initial state
     const theme = localStorage.getItem('theme') || 'stolen from stackoverflow'
-    document.querySelector(`.theme-item[title='${theme}']`)
-      .style.display = 'block'
-    document.querySelector(':root')
-      .dataset.theme = theme
+    const themeItem = document.querySelector(`.theme-item[title='${theme}']`)
+    if(themeItem)   {
+      themeItem.style.display = 'block'
+      document.querySelector(':root')
+        .dataset.theme = theme
+    } else {
+      document
+        .querySelector(`.theme-item`)
+        .style.display = 'block'
+    }
     // choose theme
     const chooseTheme = name => {
       const panel = document.querySelector('.theme-panel')
@@ -59,9 +57,9 @@ mixin theme-chooser()
       if(shadow.classList.contains('chooser-active')) {
         document.querySelectorAll('.theme-item').forEach(item => {
           if(item.title === name) {
-            item.style.display = 'block'
             document.querySelector(':root').dataset.theme = name
             localStorage.setItem('theme', name);
+            item.style.display = 'inline-block'
           } else {
             item.style.display = 'none'
           }
@@ -70,7 +68,7 @@ mixin theme-chooser()
       } else {
         shadow.classList.add('chooser-active')
         document.querySelectorAll('.theme-item').forEach(item => {
-          item.style.display = 'block'
+          item.style.display = 'inline-block'
         })
       }
     }

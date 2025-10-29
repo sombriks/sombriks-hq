@@ -1,39 +1,23 @@
 ---
-# TODO resolver duplicidade como o themes.css
 themes:
   - name: stolen from stackoverflow
     c0: "#252627"
     c1: "#f7a664"
     c2: "#3f4245"
     c3: "#ffb476"
-  - name: black-ish and whitey
-    c0: "#eee"
-    c1: "#666"
-    c2: "#333"
-    c3: "#aaa"
   - name: neighbor grass
-    c0: "#afefba"
-    c1: "#0b3b14"
-    c2: "#0b3b14"
-    c3: "#afefba"
-  - name: light gruvbox
-    c0: "#ebdbb2"
-    c1: "#282828"
-    c2: "#282828"
-    c3: "#ebdbb2"
+    c0: "#0b3b14"
+    c1: "#afefba"
+    c2: "#afefba"
+    c3: "#0b3b14"
+  - name: gruvbox
+    c0: "#282828"
+    c1: "#ebdbb2"
+    c2: "#ebdbb2"
+    c3: "#282828"
   - name: bananas from brazil
-    c0: "#f3db76"
-    c1: "#003300"
-    c2: "#003300"
-    c3: "#f3db76"
-  - name: pink panther
-    c0: "#ffd4dc"
-    c1: "#b61785"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: alucard
-    c0: "#ffd4dc"
-    c1: "#b61785"
+    c0: "#003300"
+    c1: "#f3db76"
     c2: "var(--c1)"
     c3: "var(--c0)"
   - name: moccatino
@@ -49,11 +33,6 @@ themes:
   - name: dark graffitti
     c0: "#334"
     c1: "#eee"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: dark gruvbox
-    c0: "#282828"
-    c1: "#ebdbb2"
     c2: "var(--c1)"
     c3: "var(--c0)"
   - name: army thing

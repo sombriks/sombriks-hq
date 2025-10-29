@@ -1,0 +1,32 @@
+//- in order to keep one single source for my themes instead of two css files
+mixin my-themes()
+  //- data/temas.yml
+  -
+    let themes = temas.themes
+  style.
+    /* default theme values */
+    :root {
+      --font-family: monospace !important;
+      --c0: #{themes[0].c0};
+      --c1: #{themes[0].c1};
+      --c2: #{themes[0].c2};
+      --c3: #{themes[0].c3};
+    }
+
+    :root[data-mode='dark'] {
+      --background-color: var(--c0) !important;
+      --text-color: var(--c1) !important;
+    }
+
+    :root[data-mode='light'] {
+      --background-color: var(--c2) !important;
+      --text-color: var(--c3) !important;
+    }
+  each t in themes
+    style.
+      :root[data-theme='#{t.name}'] {
+        --c0: #{t.c0};
+        --c1: #{t.c1};
+        --c2: #{t.c2};
+        --c3: #{t.c3};
+      }
