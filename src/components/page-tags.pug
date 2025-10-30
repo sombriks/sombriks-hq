@@ -1,8 +1,18 @@
 mixin page-tags()
   -
     const pageTags = [...tags].filter(t => t !== 'posts')
-  each tag in pageTags
+  style.
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .post-tags>span {
+      margin-top: 0;
+    }
+  .post-tags
     span
-      a(href=`/blog/?search=${tag}`)= tag
-      i &nbsp;
+    each tag in pageTags
+      span
+        a(href=`/blog/?search=${tag}`)= tag
+        i &nbsp;
   p= (date || new Date()).toISOString().slice(0, 10)

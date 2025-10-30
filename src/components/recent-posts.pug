@@ -1,0 +1,7 @@
+mixin recent-posts()
+  - const posts = collections.posts
+  h2 Recent Posts
+  ul
+    each post in posts.slice(0, 5)
+      li
+        a(href=post.url)= post.fileSlug

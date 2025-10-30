@@ -1,0 +1,11 @@
+mixin random-links()
+  //- from data/links.json
+  -
+    let i = links.length
+    const cool = []
+    while(i-->0) cool.push(Math.floor(Math.random() * i))
+  h2 Cool links
+  ul
+    each c in cool.slice(0, 5)
+      li
+        a(href=links[c].link)= links[c].label

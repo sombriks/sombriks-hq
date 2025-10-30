@@ -1,10 +1,5 @@
----
-layout: base.pug
----
-include ../components/copy
+extends ./base
 include ../components/page-tags
-include ../components/sticky-bar
-+sticky-bar()
-article!= content
-+page-tags()
-+copy()
+block base-body
+  article!= content
+  +page-tags()

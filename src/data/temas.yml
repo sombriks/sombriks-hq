@@ -1,43 +1,8 @@
 ---
 themes:
-  - name: stolen from stackoverflow
-    c0: "#252627"
-    c1: "#f7a664"
-    c2: "#3f4245"
-    c3: "#ffb476"
-  - name: neighbor grass
-    c0: "#0b3b14"
-    c1: "#afefba"
-    c2: "#afefba"
-    c3: "#0b3b14"
-  - name: gruvbox
-    c0: "#282828"
-    c1: "#ebdbb2"
-    c2: "#ebdbb2"
-    c3: "#282828"
-  - name: bananas from brazil
-    c0: "#003300"
-    c1: "#f3db76"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: moccatino
-    c0: "#523b3b"
-    c1: "#f8ede3"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: dusk and green
-    c0: "#0e3a5c"
-    c1: "#d2d27a"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: dark graffitti
-    c0: "#334"
-    c1: "#eee"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: army thing
-    c0: "#1a3814"
-    c1: "#A4AA88"
+  - name: blueprint
+    c0: "#13005a"
+    c1: "#bccef8"
     c2: "var(--c1)"
     c3: "var(--c0)"
   - name: the night dive
@@ -50,14 +15,64 @@ themes:
     c1: "#268bd2"
     c2: "var(--c1)"
     c3: "var(--c0)"
-  - name: blue orange
-    c0: "#030e57"
-    c1: "#E65A27"
+  - name: dusk and green
+    c0: "#0e3a5c"
+    c1: "#d2d27a"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
+  - name: neighbor grass
+    c0: "#0b3b14"
+    c1: "#afefba"
+    c2: "#afefba"
+    c3: "#0b3b14"
+  - name: bananas from brazil
+    c0: "#003300"
+    c1: "#f3db76"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
+  - name: army thing
+    c0: "#1a3814"
+    c1: "#A4AA88"
     c2: "var(--c1)"
     c3: "var(--c0)"
   - name: ripe avocado
     c0: "#1c3232"
     c1: "#ffee55"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
+  - name: retrowave
+    c0: "#2a2139"
+    c1: "#cbff00"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
+  - name: old crt
+    c0: "#000"
+    c1: "#00ff00"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
+  - name: gruvbox
+    c0: "#282828"
+    c1: "#ebdbb2"
+    c2: "#ebdbb2"
+    c3: "#282828"
+  - name: moccatino
+    c0: "#523b3b"
+    c1: "#f8ede3"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
+  - name: stolen from stackoverflow
+    c0: "#252627"
+    c1: "#f7a664"
+    c2: "#3f4245"
+    c3: "#ffb476"
+  - name: dark graffitti
+    c0: "#334"
+    c1: "#eee"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
+  - name: blue orange
+    c0: "#030e57"
+    c1: "#E65A27"
     c2: "var(--c1)"
     c3: "var(--c0)"
   - name: pink panther dark
@@ -68,20 +83,5 @@ themes:
   - name: crimson king
     c0: "#26210d"
     c1: "#E7262c"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: blueprint
-    c0: "#13005a"
-    c1: "#bccef8"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: retrowave
-    c0: "#2a2139"
-    c1: "#cbff00"
-    c2: "var(--c1)"
-    c3: "var(--c0)"
-  - name: old cp/m crt
-    c0: "#000"
-    c1: "#00ff00"
     c2: "var(--c1)"
     c3: "var(--c0)"

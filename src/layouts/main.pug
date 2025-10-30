@@ -1,9 +1,3 @@
----
-layout: base.pug
----
-include ../components/copy
-include ../components/page-tags
-include ../components/sticky-bar
-+sticky-bar()
-article!= content
-+copy()
+extends ./base
+block base-body
+  article!= content

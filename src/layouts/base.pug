@@ -1,4 +1,6 @@
+include ../components/copy
 include ../components/my-themes
+include ../components/sticky-bar
 doctype html
 html
     head
@@ -13,4 +15,8 @@ html
         +my-themes()
         link(rel='stylesheet' href='/sombriks.css')/
         script(type="application/javascript" src="/sombriks.js")
-    body!= content
+        block base-ead
+    body
+        +sticky-bar()
+        block base-body
+        +copy()
