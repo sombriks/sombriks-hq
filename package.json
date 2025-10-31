@@ -15,7 +15,9 @@
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-pug": "^1.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@owickstrom/the-monospace-web": "^0.1.5",
+    "prismjs": "^1.30.0",
     "yaml": "^2.8.1"
   }
 }

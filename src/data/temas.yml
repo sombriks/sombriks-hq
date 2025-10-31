@@ -82,6 +82,6 @@ themes:
     c3: "var(--c0)"
   - name: crimson king
     c0: "#26210d"
-    c1: "#E7262c"
+    c1: "#FF6666"
     c2: "var(--c1)"
     c3: "var(--c0)"

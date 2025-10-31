@@ -61,13 +61,13 @@ This is why code reuse **must start at control level**. For example:
 
 ```pug
 mixin input-text(label, name, value)
-.field
-  .control
-    label.label(for=name)= label
-    input.input(type="text", id=name,  name=name,
-      value=value)&attributes(attributes)
-    if attributes.help
-      p.help= attributes.help
+  .field
+    .control
+      label.label(for=name)= label
+      input.input(type="text", id=name,  name=name,
+        value=value)&attributes(attributes)
+      if attributes.help
+        p.help= attributes.help
 ```
 
 The [pug][pug] component above is meant to reuse when creating text inputs in
