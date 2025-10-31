@@ -246,6 +246,43 @@ resume:
         - UML: ★★★☆☆
           icon:
   work:
+    - SEPLAG CE: https://www.seplag.ce.gov.br/
+      position: [Systems Analyst]
+      period: 2025-05-13 - present day
+      description: |
+        This is a governamental public entity which provides compute
+        infrastructure and systems for all other gov entities.
+      projects:
+        - SIGA:
+          responsibilities: [Fullstack development]
+          description: |
+            Assets management system, focused on consumable materials
+        - SGBM:
+          responsibilities: [Fullstack development]
+          description: |
+            Assets management system, focused on general furniture and other non
+            consumable tools
+        - SGBI:
+          responsibilities: [Fullstack development]
+          description: |
+            Assets management system, focused on real state management
+      tech stack:
+        [
+          Git,
+          JSF,
+          Java,
+          Docker,
+          Angular,
+          Spring Boot,
+          JBoss Application Server,
+          Oracle database,
+          Javascript,
+          CSS,
+          jQuery,
+          PrimeFaces,
+          Gitlab CI,
+          Maven,
+        ]
     - Nearsure: https://www.nearsure.com/
       position:
         [
@@ -255,7 +292,7 @@ resume:
           Technical Interviewer,
           Fullstack Developer,
         ]
-      period: 2022-08-29 - present day
+      period: 2022-08-29 - 2025-03-31
       description: |
         Nearsure is a 'nearshore' outsourcing company with many US-based 
         clients.
@@ -411,7 +448,8 @@ resume:
               Technical interviews,
             ]
           description: |
-            It's a java-based solution to improve efficiency of legal process at PGE-RO
+            It's a java-based solution to improve efficiency of legal process
+            at PGE-RO
         - Mapinguari:
           responsibilities:
             [
@@ -519,7 +557,9 @@ resume:
               Database migrations,
             ]
           description: |
-            This product eases the problem of managing small and medium retailers business. Best suited for markets, general sales store and restaurants.
+            This product eases the problem of managing small and medium
+            retailers business. Best suited for markets, general sales store
+            and restaurants.
         - varejomini/varejopdv:
           responsibilities:
             [
