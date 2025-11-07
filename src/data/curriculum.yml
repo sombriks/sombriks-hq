@@ -266,11 +266,16 @@ resume:
           responsibilities: [Fullstack development]
           description: |
             Assets management system, focused on real state management
+
+            Besides maintenance, i was involved into conception and
+            implementation of a newer version of this system in order to conform
+            with governamental rules regarding proper financial reports of all
+            govern's real estate.
       tech stack:
         [
           Git,
           JSF,
-          Java,
+          Java 7 - 25,
           Docker,
           Angular,
           Spring Boot,
