@@ -17,7 +17,11 @@
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@owickstrom/the-monospace-web": "^0.1.5",
+    "prism-themes": "^1.9.0",
     "prismjs": "^1.30.0",
     "yaml": "^2.8.1"
+  },
+  "dependencies": {
+    "-": "^0.0.1"
   }
 }
