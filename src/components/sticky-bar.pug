@@ -23,28 +23,22 @@ mixin sticky-bar()
     }
   div.sticky-bar
     .grow
-      div
-      div
-        i &nbsp;
-        a(href="/") _Start
-      div
-        i &nbsp;
-        a(href="/bio") Bio
-      div
-        i &nbsp;
-        a(href="/blog") Blog
-      div
-        i &nbsp;
-        a(href="/experiments") Experiments
-      div
-        i &nbsp;
-        a(href="/links") Links
-      div
-        i &nbsp;
-        a(href="/privacy") Privacy
-      div
-        i &nbsp;
-        a(href="/feed.xml") RSS
+      -
+        const menu = {
+          "_Start": "/",
+          "Bio": "/bio",
+          "Blog": "/blog",
+          "Experiments": "/experiments",
+          "Links": "/links",
+          "Privacy": "/privacy",
+          "RSS": "/feed.xml"
+        }
+      div 
+        // fixes css issue 
+      each l in Object.keys(menu) 
+        div
+          i &nbsp;
+          a(href=menu[l])=l
     div
       +light-dark()
     div
