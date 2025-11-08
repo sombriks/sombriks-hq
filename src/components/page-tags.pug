@@ -1,6 +1,10 @@
 mixin page-tags()
   -
-    const pageTags = [...tags].filter(t => t !== 'posts')
+    const d = (date || new Date()).toISOString().slice(0, 10)
+    const pageTags = tags
+      .filter(t => t !== 'posts')
+      .map(t => ({label:t, link:t}))
+    pageTags.splice(0, 0, {label:d, link:d.slice(0,4)})
   style.
     .post-tags {
       display: flex;
@@ -9,10 +13,11 @@ mixin page-tags()
     .post-tags>span {
       margin-top: 0;
     }
+  p
+    i &nbsp;
   .post-tags
     span
     each tag in pageTags
       span
-        a(href=`/blog/?search=${tag}`)= tag
+        a(href=`/blog/?search=${tag.link}`)= tag.label
         i &nbsp;
-  p= (date || new Date()).toISOString().slice(0, 10)

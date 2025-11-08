@@ -2,12 +2,12 @@
 layout: main.pug
 ---
 -
-  // all posts
+  // all posts except drafts
   const posts = collections.posts.reverse()
   // all tags
   const tags = Object.keys(collections)
     .filter(t => collections[t].length > 1
-      && t !== 'drafts' 
+      && t !== 'draft' 
       && t !== 'posts' 
       && t !== 'all')
     .map(t => ({[t]:collections[t].length}))
