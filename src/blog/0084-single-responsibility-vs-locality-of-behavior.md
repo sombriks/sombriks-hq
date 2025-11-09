@@ -20,7 +20,7 @@ and, for a rushed careless eye, might seem quite the opposite of what
 ## Single responsibility and separation of concerns
 
 Key idea of single responsibility, the 'S' in the cool acronym people like to
-repeat, is that a certain piece of code must have a clear jobo, a clear purpose.
+repeat, is that a certain piece of code must have a clear job, a clear purpose.
 
 And it must do it well.
 
@@ -179,11 +179,11 @@ critical points for other components, making things complex to understand.
 Saying in a even simpler way, *srp* is for *layers*, *lob* is for *components*.
 
 This is why old jQuery applications became hard to maintain, with splittered
-components in half because 'markup and script where has different concerns'.
+components in half because 'markup and script has different concerns'.
 
 This is also why Angular components usually came in folders with at least three
-files, markup, style and script. React and Vue components don't in order to
-favor concern cohesion even further.
+files: markup, style and script. React and Vue components don't do this in order
+to favor concern cohesion even further.
 
 ## How to know when gather behavior into components or design distinct layers?
 
