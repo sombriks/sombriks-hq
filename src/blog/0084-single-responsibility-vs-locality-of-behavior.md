@@ -13,7 +13,7 @@ draft: false
 ---
 # The 'S' in SOLID versus LOB from.. What is LOB?
 
-The [Locality Of Behavior][lob] was first propose by **Richard P. Gabriel**
+The [Locality Of Behavior][lob] was first proposed by **Richard P. Gabriel**
 and, for a rushed careless eye, might seem quite the opposite of what
 **Uncle Bob** stated in [SOLID][solid].
 
