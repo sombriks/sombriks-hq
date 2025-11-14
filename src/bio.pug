@@ -16,6 +16,12 @@ style.
     justify-content: center;
     align-items: center;
   }
+  .break {
+    break-after: page;
+  }
+  details {
+    break-inside: avoid;
+  }
 div.foto
   h1= curriculum.resume['personal info'].name
 .foto
@@ -26,7 +32,7 @@ h2 Contact info
 each info in Object.keys(curriculum.resume['other contact info']) 
   .block
     a(target="_blank" href=curriculum.resume['other contact info'][info])= info
-
+.break
 h2 Skills
 each skill in curriculum.resume.skills
   details(open=true)
@@ -35,6 +41,7 @@ each skill in curriculum.resume.skills
       .block
         div= Object.keys(item)[0]
         div= Object.values(item)[0]
+.break
 h2 Work Experience
 each experience in curriculum.resume.work
   details
