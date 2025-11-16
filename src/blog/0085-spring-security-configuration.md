@@ -360,6 +360,299 @@ sessionless tokens.
 
 The most popular on this field is (**Json Web Token**, or simply JWT.
 
+To enable it on your spring boot service, add this dependency first:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+</dependency>
+```
+
+Then you need to provide at a `JwtDecoder` and some extra bits depending on how
+your JWT workflow will work.
+
+Since there is no session, the service is unaware if that user is a returning
+one, or even if it's a trusted one.
+
+To solve this, HWT are signed and the service must have the ability to verify
+that signature.
+
+To proper provision a `JwtDecoder`, you also must, somehow, provide a
+`PublicKey`.
+
+Not necessarily the service itself is responsible to authenticate users, i.e.
+the service can delegate the production of signed tokens for a dedicated
+authentication server.
+
+That said, for the sake of simplicity of this example, the token encoding will
+also be sampled here.
+
+First things first, configure The `JwtEncoder`, `JwtDecoder` and a `KeyPair`:
+
+```java
+//
+import com.nimbusds.jose.jwk.JWK;
+import com.nimbusds.jose.jwk.JWKSet;
+import com.nimbusds.jose.jwk.RSAKey;
+import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
+import com.nimbusds.jose.jwk.source.JWKSource;
+import com.nimbusds.jose.proc.SecurityContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.jwt.JwtEncoder;
+import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
+import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
+
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.interfaces.RSAPrivateKey;
+import java.security.interfaces.RSAPublicKey;
+
+@Configuration
+public class JwtConfig {
+
+    @Bean
+    public KeyPair keyPair() throws NoSuchAlgorithmException {
+        KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+        keyGen.initialize(2048);
+        return keyGen.genKeyPair();
+    }
+
+    @Bean
+    public JwtDecoder jwtDecoder(KeyPair keyPair) {
+        RSAPublicKey pubKey = (RSAPublicKey) keyPair.getPublic();
+        return NimbusJwtDecoder.withPublicKey(pubKey).build();
+    }
+
+    @Bean
+    public JwtEncoder jwtEncoder(KeyPair keyPair) {
+        RSAPublicKey pubKey = (RSAPublicKey) keyPair.getPublic();
+        RSAPrivateKey privKey = (RSAPrivateKey) keyPair.getPrivate();
+        JWK jwk = new RSAKey.Builder(pubKey).privateKey(privKey).build();
+        JWKSource<SecurityContext> jwks = new ImmutableJWKSet<>(new JWKSet(jwk));
+        return new NimbusJwtEncoder(jwks);
+    }
+}
+```
+
+The `KeyPair` always has a `PublicJey` and a `PrivateKey`. while the decoder
+just needs the public one, the encoder needs both keys.
+
+Once you configured the decoder, you can now configure the security filter to
+look for the jwt token:
+
+```java
+//
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+@EnableWebSecurity
+@EnableMethodSecurity
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http, JwtDecoder jwtDecoder) {
+        return http
+                .csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(sess -> sess
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .oauth2ResourceServer(oauth -> oauth
+                        .jwt(jwt -> jwt.decoder(jwtDecoder)))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/")
+                        .permitAll()
+                        .anyRequest()
+                        .authenticated())
+                .build();
+    }
+}
+```
+
+Now the security filter will look for a **Bearer** in **Authentication** header,
+decode it and check it using the provided `UserDetailsService` implementation.
+
+### Performing 'login'
+
+As mentioned before, create signed tokens not necessarily is done in the same
+service using them for authentication purposes.
+
+But here goes an example.
+
+First, you provide the service able to handle logins:
+
+```java
+//...
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.jwt.JwtClaimsSet;
+import org.springframework.security.oauth2.jwt.JwtEncoder;
+import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
+import org.springframework.stereotype.Service;
+
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.stream.Collectors;
+
+@Service
+public class AuthService {
+
+    private final JwtEncoder jwtEncoder;
+    private final PasswordEncoder passwordEncoder;
+    private final UserDetailsService userDetailsService;
+
+    public AuthService(
+            UserDetailsService userDetailsService,
+            PasswordEncoder passwordEncoder,
+            JwtEncoder jwtEncoder) {
+        this.userDetailsService = userDetailsService;
+        this.passwordEncoder = passwordEncoder;
+        this.jwtEncoder = jwtEncoder;
+    }
+
+
+    public String getToken(LoginDTO login) {
+        // recover user and check if authentication matches
+        UserDetails user = userDetailsService
+                .loadUserByUsername(login.getUsername());
+        if (!passwordEncoder.matches(login.getPassword(), user.getPassword()))
+            throw new UsernameNotFoundException(login.getUsername() + " not found");
+
+        // now prepare to build the token
+        Instant now = Instant.now();
+        Instant exp = now.plus(1, ChronoUnit.DAYS);
+        // mount scopes from GrantedAuthorities 
+        // a frontend app could make use of them
+        String scope = user
+                .getAuthorities()
+                .stream()
+                .map(GrantedAuthority::getAuthority)
+                .collect(Collectors.joining(" "));
+        // JWT claims
+        JwtClaimsSet claims = JwtClaimsSet
+                .builder()
+                .issuedAt(now)
+                .expiresAt(exp)
+                .issuer("example issuer")
+                .subject(user.getUsername())
+                .claim("scope", scope)
+                .build();
+        // finally return the token
+        return jwtEncoder
+                .encode(JwtEncoderParameters.from(claims))
+                .getTokenValue();
+    }
+}
+```
+
+Now you provide a simple endpoint to create the tokens from a pretty standard
+post request:
+
+```java
+//...
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("auth")
+public class AuthCtl {
+
+    private final AuthService authService;
+    
+    public AuthCtl(AuthService authService) {
+        this.authService = authService;
+    }
+    
+    @PostMapping
+    public String auth(@RequestBody LoginDTO login) {
+        return authService.getToken(login);
+    }
+}
+```
+
+And since you're serving this endpoint for login attempts, add it to the list of
+permitted requests in `SecurityConfig`:
+
+```java
+//...
+
+@Configuration
+@EnableWebSecurity
+@EnableMethodSecurity
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http, JwtDecoder jwtDecoder) {
+        return http
+                .csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(sess -> sess
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .oauth2ResourceServer(oauth -> oauth
+                        .jwt(jwt -> jwt.decoder(jwtDecoder)))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/","/auth") // added auth here 
+                        .permitAll()
+                        .anyRequest()
+                        .authenticated())
+                .build();
+    }
+}
+```
+
+One more thing, since you are dealing with jwt now, you must change the
+authentication object injected in the controller:
+
+```java
+//...
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DemoCtl {
+
+    @GetMapping
+    public String index() {
+        return "Hello, stranger!";
+    }
+
+    @GetMapping("protected")
+    public String authenticated(@AuthenticationPrincipal Jwt principal) {
+        return String.format("Hello, %s!", principal.getSubject());
+    }
+
+    @GetMapping("admin")
+    @PreAuthorize("authentication.principal.claims['scope'].contains('ADM')")
+    public String admin(@AuthenticationPrincipal Jwt principal) {
+        return String.format("Hello, admin %s!", principal.getSubject());
+    }
+}
+```
+
+And that's it, you can use your JWT security without any further configuration.
+
 ## Testing security
 
-## Further readings
+Adding security is just one part of the issue you have to deal.
+
+You also must test it so you can trust the code a little more.
+
+In order to proper test such secure requests, you can use `TestRestTemplate`.
+
+Tests can be further inspected in the [sample code project][repo].
+
+[repo]: https://github.com/sombriks/spring-security-demo
