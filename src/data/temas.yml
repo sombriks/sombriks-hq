@@ -80,6 +80,11 @@ themes:
     c1: "#eb55d9"
     c2: "var(--c1)"
     c3: "var(--c0)"
+  - name: Purple issues
+    c0: "#52008F"
+    c1: "#FFDEB9"
+    c2: "var(--c1)"
+    c3: "var(--c0)"
   - name: crimson king
     c0: "#26210d"
     c1: "#FF6666"
