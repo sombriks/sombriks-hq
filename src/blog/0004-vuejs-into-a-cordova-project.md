@@ -4,7 +4,7 @@ tags:
   - posts
   - vue
   - cordova
-  - project setup
+  - project structure
 date: 2018-12-17
 ---
 # Vue.js into a Cordova project

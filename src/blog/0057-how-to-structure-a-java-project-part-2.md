@@ -7,7 +7,7 @@ tags:
   - ant
   - maven
   - gradle
-  - project setup
+  - project structure
   - project structure
 date: 2023-10-01
 draft: false

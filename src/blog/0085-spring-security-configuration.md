@@ -3,6 +3,7 @@ layout: blog-layout.pug
 tags:
   - posts
   - java
+  - recipes
   - spring-boot
   - spring-security
   - test

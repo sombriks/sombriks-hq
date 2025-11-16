@@ -12,7 +12,7 @@ tags:
   - spring
   - build tools
   - github actions
-  - project setup
+  - project structure
   - project structure
   - project management
 date: 2024-05-05
