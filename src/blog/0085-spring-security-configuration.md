@@ -263,13 +263,12 @@ Visit <http://localhost:8080/admin> will only be allowed if the user has the
 proper granted authority in its list of grants.
 
 You might end up with an internal server error when visiting first '/' and later
-'/protected', since we did no special configuration in the security filter.
+'/protected', since you did no special configuration in the security filter.
 
 To fix this, enforce better security rules:
 
 ```java
 // ...
-
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -281,10 +280,10 @@ public class SecurityConfig {
       .httpBasic(withDefaults())
       .authorizeHttpRequests(authorizeRequests ->
         authorizeRequests
-          .requestMatchers("/")
+          .requestMatchers("/") // the index is free to access
           .permitAll()
           .anyRequest()
-          .authenticated())
+          .authenticated()) // demands previous authentication
       .build();
   }
 }
@@ -323,6 +322,8 @@ public class SecurityConfig {
 }
 ```
 
+Check the [login form docs][login-form] for further login form options.
+
 ### CSRF issues
 
 A quick note in case you host the client application along with the service: if
@@ -358,7 +359,7 @@ public class SecurityConfig {
 Another approach on security, quite popular along rich client applications, is
 sessionless tokens.
 
-The most popular on this field is (**Json Web Token**, or simply JWT.
+The most popular on this field is (**Json Web Token**, or simply **JWT**.
 
 To enable it on your spring boot service, add this dependency first:
 
@@ -369,14 +370,16 @@ To enable it on your spring boot service, add this dependency first:
 </dependency>
 ```
 
-Then you need to provide at a `JwtDecoder` and some extra bits depending on how
+Then you need to provide at a `JwtDecoder` and some extra bits, depending on how
 your JWT workflow will work.
 
 Since there is no session, the service is unaware if that user is a returning
 one, or even if it's a trusted one.
 
-To solve this, HWT are signed and the service must have the ability to verify
-that signature.
+To be precise, you deal with `JWT` instead of `UserDetails` or
+`UserDetailsService`.
+
+`JWT` are signed. The service must have the ability to verify that signature.
 
 To proper provision a `JwtDecoder`, you also must, somehow, provide a
 `PublicKey`.
@@ -480,7 +483,7 @@ public class SecurityConfig {
 ```
 
 Now the security filter will look for a **Bearer** in **Authentication** header,
-decode it and check it using the provided `UserDetailsService` implementation.
+decode it and offer a `JWT` instead of an `UserDetails` implementation.
 
 ### Performing 'login'
 
@@ -493,9 +496,6 @@ First, you provide the service able to handle logins:
 
 ```java
 //...
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
@@ -505,49 +505,45 @@ import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.stream.Collectors;
 
 @Service
 public class AuthService {
 
     private final JwtEncoder jwtEncoder;
     private final PasswordEncoder passwordEncoder;
-    private final UserDetailsService userDetailsService;
+    private final MyLoginRepository myLoginRepository;
 
     public AuthService(
-            UserDetailsService userDetailsService,
+            MyLoginRepository myLoginRepository,
             PasswordEncoder passwordEncoder,
             JwtEncoder jwtEncoder) {
-        this.userDetailsService = userDetailsService;
+        this.myLoginRepository = myLoginRepository;
         this.passwordEncoder = passwordEncoder;
         this.jwtEncoder = jwtEncoder;
     }
 
-
     public String getToken(LoginDTO login) {
         // recover user and check if authentication matches
-        UserDetails user = userDetailsService
-                .loadUserByUsername(login.getUsername());
+        MyLogin user = myLoginRepository
+                .getByLogin(login.getUsername())
+                .orElseThrow(() -> new UsernameNotFoundException(login.getUsername()));
         if (!passwordEncoder.matches(login.getPassword(), user.getPassword()))
             throw new UsernameNotFoundException(login.getUsername() + " not found");
 
         // now prepare to build the token
         Instant now = Instant.now();
         Instant exp = now.plus(1, ChronoUnit.DAYS);
-        // mount scopes from GrantedAuthorities 
+        // mount scopes from GrantedAuthorities
         // a frontend app could make use of them
-        String scope = user
-                .getAuthorities()
-                .stream()
-                .map(GrantedAuthority::getAuthority)
-                .collect(Collectors.joining(" "));
+        String scope = user.getPerms()
+                .replaceAll(";", " ");
         // JWT claims
         JwtClaimsSet claims = JwtClaimsSet
                 .builder()
                 .issuedAt(now)
                 .expiresAt(exp)
                 .issuer("example issuer")
-                .subject(user.getUsername())
+                .subject(user.getEmail())
                 .claim("scope", scope)
                 .build();
         // finally return the token
@@ -587,7 +583,6 @@ permitted requests in `SecurityConfig`:
 
 ```java
 //...
-
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -611,8 +606,11 @@ public class SecurityConfig {
 }
 ```
 
-One more thing, since you are dealing with jwt now, you must change the
-authentication object injected in the controller:
+One more thing, since you are dealing with `JWT` now, you must change the
+authentication object injected in the controllers using `UserDetails`.
+
+In fact, using sessionless authentication means you don't need `UserDetails` and
+`UserDetailsService` anymore:
 
 ```java
 //...
@@ -649,10 +647,159 @@ And that's it, you can use your JWT security without any further configuration.
 
 Adding security is just one part of the issue you have to deal.
 
-You also must test it so you can trust the code a little more.
+You also must test it, so you can trust the code a little more.
 
-In order to proper test such secure requests, you can use `TestRestTemplate`.
+In order to proper test such secure requests, you can use `TestRestTemplate`:
+
+```java
+//...
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.resttestclient.TestRestTemplate;
+import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+@AutoConfigureTestRestTemplate
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class DemoApplicationTests {
+
+    @Autowired
+    TestRestTemplate restTemplate;
+
+    @Test
+    void shouldGetHelloStranger() {
+        var result = restTemplate
+                .getForObject("/", String.class);
+        assertThat(result, notNullValue());
+        assertThat(result, containsStringIgnoringCase("hello, stranger!"));
+    }
+
+    @Test
+    void shouldGetHelloUser() {
+        var result = restTemplate
+                .withBasicAuth("bobby@tables.net", "password")
+                .getForObject("/protected", String.class);
+        assertThat(result, notNullValue());
+        assertThat(result, containsStringIgnoringCase("hello, bobby@tables.net!"));
+    }
+
+    @Test
+    void shouldGetHelloAdmin() {
+        var result = restTemplate
+                .withBasicAuth("root@root.com", "password")
+                .getForObject("/admin", String.class);
+        assertThat(result, notNullValue());
+        assertThat(result, containsStringIgnoringCase("hello, admin root@root.com!"));
+    }
+
+    @Test
+    void shouldNotGetHelloUser() {
+        var result = restTemplate
+                .getForEntity("/protected", String.class);
+        assertThat(result, notNullValue());
+        assertThat(result.getStatusCode().is4xxClientError(), is(true));
+    }
+
+    @Test
+    void shouldNotGetHelloAdmin() {
+        var result = restTemplate
+                .withBasicAuth("bobby@tables.net", "password")
+                .getForEntity("/admin", String.class);
+        assertThat(result, notNullValue());
+        assertThat(result.getStatusCode().is4xxClientError(), is(true));
+    }
+}
+```
+
+Te test above can be used to test the **basic auth** configuration.
+For tis kind of authentication, `TestRestTemplate` offers the `withBasicAuth`
+method.
+
+To test JWT based authentication, you need to provide a valid token for each new
+request. The easiest way to do that is to perform a login first:
+
+```java
+//...
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.resttestclient.TestRestTemplate;
+import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+@AutoConfigureTestRestTemplate
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class DemoApplicationTests {
+
+    @Autowired
+    TestRestTemplate restTemplate;
+
+    @Test
+    void shouldGetHelloStranger() {
+        var result = restTemplate.getForObject("/", String.class);
+        assertThat(result, notNullValue());
+        assertThat(result, containsStringIgnoringCase("hello, stranger!"));
+    }
+
+    @Test
+    void shouldGetHelloUser() {
+        HttpHeaders headers = login("bobby@tables.net", "password");
+        var result = restTemplate.exchange("/protected", HttpMethod.GET, new HttpEntity<Void>(headers), String.class);
+        assertThat(result, notNullValue());
+        assertThat(result.getStatusCode().is2xxSuccessful(), is(true));
+        assertThat(result.getBody(), containsStringIgnoringCase("hello, bobby@tables.net!"));
+    }
+
+    @Test
+    void shouldGetHelloAdmin() {
+        HttpHeaders headers = login("root@root.com", "password");
+        var result = restTemplate.exchange("/admin", HttpMethod.GET, new HttpEntity<Void>(headers), String.class);
+        assertThat(result, notNullValue());
+        assertThat(result.getStatusCode().is2xxSuccessful(), is(true));
+        assertThat(result.getBody(), containsStringIgnoringCase("hello, admin root@root.com!"));
+    }
+
+    @Test
+    void shouldNotGetHelloUser() {
+        HttpHeaders headers = new HttpHeaders();
+        var result = restTemplate.exchange("/protected", HttpMethod.GET, new HttpEntity<Void>(headers), String.class);
+        assertThat(result, notNullValue());
+        assertThat(result.getStatusCode().is4xxClientError(), is(true));
+    }
+
+    @Test
+    void shouldNotGetHelloAdmin() {
+        HttpHeaders headers = login("bobby@tables.net", "password");
+        var result = restTemplate.exchange("/admin", HttpMethod.GET, new HttpEntity<Void>(headers), String.class);
+        assertThat(result, notNullValue());
+        assertThat(result.getStatusCode().is4xxClientError(), is(true));
+    }
+
+    private HttpHeaders login(String username, String password) {
+        var token = restTemplate.postForObject("/auth", new LoginDTO(username, password), String.class);
+        var headers = new HttpHeaders();
+        headers.set(HttpHeaders.AUTHORIZATION, "Bearer " + token);
+        return headers;
+    }
+}
+```
+
+Instead of use regular `getForObject` calls, you need to use `exchange` instead.
+
+And the form-login based security can be tested using a `TestRestTemplate` able
+to manage cookies.
 
 Tests can be further inspected in the [sample code project][repo].
 
+Happy hacking!
+
+[login-form]: https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html
 [repo]: https://github.com/sombriks/spring-security-demo
