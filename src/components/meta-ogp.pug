@@ -1,3 +1,8 @@
 mixin meta-ogp()
+  meta(property="twitter:description" content=description)/
   meta(property="og:description" content=description)/
   meta(name="description" content=description)/
+  -
+    const pageTags = tags
+      .filter(t => t !== 'posts')
+  meta(name="keywords" content=pageTags.join(','))/
