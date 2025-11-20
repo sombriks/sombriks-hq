@@ -7,3 +7,15 @@ div.avatar, div.theme-item, div.light-dark {
     overflow: clip;
     margin: 1rem;
 }
+
+.comparison-box {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.comparison-box > div {
+    flex-grow: 1;
+    min-width: 360px;
+
+}

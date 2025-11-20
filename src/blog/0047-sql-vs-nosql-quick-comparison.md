@@ -32,7 +32,7 @@ This is how to install it on [fedora](https://getfedora.org/) /
 and compatible systems:
 
 ```bash
-sudo npm install community-mysql community-mysql-server
+sudo dnf install community-mysql community-mysql-server
 ```
 
 </div><div>

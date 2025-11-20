@@ -1,7 +1,11 @@
 mixin meta-ogp()
-  meta(property="twitter:description" content=description)/
-  meta(property="og:description" content=description)/
-  meta(name="description" content=description)/
+  -
+    const dsc = description || content
+      .split("</p>")[0]
+      .split("<p>")[1]
+  meta(property="twitter:description" content=dsc)/
+  meta(property="og:description" content=dsc)/
+  meta(name="description" content=dsc)/
   -
     const pageTags = (tags || ['blog', 'sombriks'])
       .filter(t => t !== 'posts')
