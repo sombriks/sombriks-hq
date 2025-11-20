@@ -11,7 +11,7 @@ date: 2025-11-15
 ---
 # Spring security, the easy way
 
-Today we will discuss spring security. Like jakarta-ee, spring offers
+Today we will discuss spring security. Like [jakarta-ee][jee], spring offers
 convenient tools to easily enable identification and authorization in your
 service.
 
@@ -20,14 +20,14 @@ service.
 For any minimal security strategy, you need to identify the user and list what
 that user can do.
 
-In jakarta-ee there is JAAS, with roles and principals to deal with.
+In jakarta-ee, there is [JAAS][jaas], with roles and principals to deal with.
 
-In spring there are UserDetails and GrantedAuthority.
+In spring, there are **UserDetails** and **GrantedAuthority**.
 
 You **must** implement those and also implement a service able to get the user,
 so spring-security can handle them.
 
-In short, implement those:
+In short, implement those, taking your own domain in account:
 
 - UserDetails
 - GrantedAuthority
@@ -37,7 +37,7 @@ The rest is just configuration.
 
 ## Dependencies
 
-Simply add the starter:
+Simply add the starter for spring security:
 
 ```xml
 <dependency>
@@ -109,7 +109,7 @@ For the `UserDetailsService`, it's a quite simple interface: given a *username*,
 return the proper `UserDetails`.
 
 Since you need to implement it based on your own domain, you can compose with
-the service responsible to get `MyLogin` instances, something like this:
+the service or repository responsible to get `MyLogin` instances, like this:
 
 ```java
 //
@@ -181,7 +181,7 @@ public class AuthConfig {
 
 And *voilá*, the basic configuration, which does nothing yet.
 
-But we need to talk about *session* and *sessionless* authentication now.
+Now we need to talk about *session* and *sessionless* authentication.
 
 ## Session-based configurations
 
@@ -193,8 +193,8 @@ Therefore, it's possible to keep a persistent conversation with users.
 
 ### Basic authentication
 
-Most basic of auth configuration, all you need to set it up is to use this
-security filter:
+Most basic of auth configuration, all you need to set it up is to use this in
+your security filter:
 
 ```java
 // ...
@@ -284,7 +284,7 @@ public class SecurityConfig {
           .requestMatchers("/") // the index is free to access
           .permitAll()
           .anyRequest()
-          .authenticated()) // demands previous authentication
+          .authenticated()) // demands authentication
       .build();
   }
 }
@@ -328,7 +328,7 @@ Check the [login form docs][login-form] for further login form options.
 ### CSRF issues
 
 A quick note in case you host the client application along with the service: if
-your app users fetch or ajax requests, you will need to disable the
+your app users fetch or [ajax][ajax] requests, you will need to disable the
 **cross site request forgery** protection. This is also quite easy:
 
 ```java
@@ -375,9 +375,9 @@ Then you need to provide at a `JwtDecoder` and some extra bits, depending on how
 your JWT workflow will work.
 
 Since there is no session, the service is unaware if that user is a returning
-one, or even if it's a trusted one.
+one, or even if it's a trusted one. All relies on the token be trusted or not.
 
-To be precise, you deal with `JWT` instead of `UserDetails` or
+To be precise, you deal with `JWT` instead of `UserDetails` and
 `UserDetailsService`.
 
 `JWT` are signed. The service must have the ability to verify that signature.
@@ -527,7 +527,7 @@ public class AuthService {
         // recover user and check if authentication matches
         MyLogin user = myLoginRepository
                 .getByLogin(login.getUsername())
-                .orElseThrow(() -> new UsernameNotFoundException(login.getUsername()));
+                .orElseThrow(() -> new UsernameNotFoundException(login.getUsername() + " not found"));
         if (!passwordEncoder.matches(login.getPassword(), user.getPassword()))
             throw new UsernameNotFoundException(login.getUsername() + " not found");
 
@@ -717,9 +717,9 @@ class DemoApplicationTests {
 
 Te test above can be used to test the **basic auth** configuration.
 For tis kind of authentication, `TestRestTemplate` offers the `withBasicAuth`
-method.
+method to make life easier.
 
-To test JWT based authentication, you need to provide a valid token for each new
+To test JWT based authentication, you need to provide a valid token for each
 request. The easiest way to do that is to perform a login first:
 
 ```java
@@ -795,12 +795,104 @@ class DemoApplicationTests {
 
 Instead of use regular `getForObject` calls, you need to use `exchange` instead.
 
-And the form-login based security can be tested using a `TestRestTemplate` able
-to manage cookies.
+### Form login tests
+
+In order to test form-based authentication, `TestRestTemplate` should be
+configured with an http client able to persist cookies.
+
+This is a complex step, so consider those alternatives:
+
+1. Use an alternative security configuration fort tests.
+   Simply add in test classpath a second configuration to take the place of the
+   default one.
+1. Mock security.
+
+You can test your security using mocks like this:
+
+```java
+//...
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.hamcrest.Matchers.containsStringIgnoringCase;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.formLogin;
+import static org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.authenticated;
+import static org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.unauthenticated;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+class DemoApplicationTests {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    void shouldGetHelloStranger() throws Exception {
+        mockMvc.perform(get("/"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsStringIgnoringCase("hello, stranger!")));
+    }
+
+    @Test
+    void shouldLogin() throws Exception {
+        mockMvc.perform(formLogin()
+                        .user("bobby@tables.net")
+                        .password("password"))
+                .andExpect(authenticated())
+                .andExpect(redirectedUrl("/"));
+    }
+
+    @Test
+    void shouldFailedLogin() throws Exception {
+        mockMvc.perform(formLogin().user("user").password("wrongpassword"))
+                .andExpect(unauthenticated())
+                .andExpect(redirectedUrl("/login?error"));
+    }
+
+    @Test
+    @WithMockUser(username = "bobby@tables.net")
+    void shouldGetHelloUser() throws Exception {
+        mockMvc.perform(get("/protected"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsStringIgnoringCase("hello, bobby@tables.net!")));
+    }
+
+    @Test
+    @WithMockUser(username = "root@root.com", authorities = {"ADM"})
+    void shouldGetHelloAdmin() throws Exception {
+        mockMvc.perform(get("/admin"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsStringIgnoringCase("hello, admin root@root.com!")));
+    }
+
+    @Test
+    void shouldNotGetHelloUser() throws Exception {
+        mockMvc.perform(get("/protected"))
+                .andExpect(status().isFound()) // does not fail rightaway, it tries to auth first
+                .andExpect(redirectedUrl("/login"));
+    }
+
+    @Test
+    @WithMockUser(username = "bobby@tables.net")
+    void shouldNotGetHelloAdmin() throws Exception {
+        mockMvc.perform(get("/admin"))
+                .andExpect(status().isForbidden());
+    }
+}
+```
 
 Tests can be further inspected in the [sample code project][repo].
 
 Happy hacking!
 
+[jee]: https://jakarta.ee/
+[jaas]: https://jakarta.ee/learn/docs/jakartaee-tutorial/current/security/security-intro/security-intro.html
 [login-form]: https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html
+[ajax]: https://www.w3schools.com/whatis/whatis_ajax.asp
 [repo]: https://github.com/sombriks/spring-security-demo
