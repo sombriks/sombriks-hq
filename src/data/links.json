@@ -1586,5 +1586,14 @@
       "characters",
       "i always forget how utf-8 works internally"
     ]
+  },
+  {
+    "label": "how page metadata works",
+    "link": "https://ogp.me/",
+    "tags": [
+      "metadata",
+      "ogp",
+      "social media"
+    ]
   }
 ]
