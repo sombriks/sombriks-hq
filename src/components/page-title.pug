@@ -4,3 +4,6 @@ mixin page-title(prefix='Sombriks HQ - ')
     .split("</h1>")[0]
     .split("<h1>")[1]
   title= pageTitle
+  meta(property="twitter:title" content=pageTitle)/
+  meta(property="og:title" content=pageTitle)/
+  meta(property="title" content=pageTitle)/
