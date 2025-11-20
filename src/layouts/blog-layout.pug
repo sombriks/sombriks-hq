@@ -1,5 +1,10 @@
 extends ./base
 include ../components/page-tags
+include ../components/page-title
+include ../components/meta-ogp
+block base-head
+  +page-title
+  +meta-ogp
 block base-body
   article!= content
   +page-tags

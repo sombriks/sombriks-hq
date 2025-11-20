@@ -3,6 +3,6 @@ mixin meta-ogp()
   meta(property="og:description" content=description)/
   meta(name="description" content=description)/
   -
-    const pageTags = tags
+    const pageTags = (tags || ['blog', 'sombriks'])
       .filter(t => t !== 'posts')
   meta(name="keywords" content=pageTags.join(','))/
