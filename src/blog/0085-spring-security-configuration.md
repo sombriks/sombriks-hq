@@ -7,6 +7,8 @@ tags:
   - spring-boot
   - spring-security
   - test
+  - mockito
+  - jwt
 date: 2025-11-15
 ---
 # Spring security, the easy way
@@ -802,10 +804,11 @@ configured with an http client able to persist cookies.
 
 This is a complex step, so consider those alternatives:
 
-1. Use an alternative security configuration fort tests.
+1. **Use an alternative security configuration for tests**.
    Simply add in test classpath a second configuration to take the place of the
-   default one.
-1. Mock security.
+   default one. see [TestConfiguration][testconfig] and [Profile][profile] for
+   further details.
+1. **Mock security**.
 
 You can test your security using mocks like this:
 
@@ -887,6 +890,9 @@ class DemoApplicationTests {
 }
 ```
 
+If you don't like the idea of use mocks for this, take a moment to
+[read this][mock-or-not].
+
 Tests can be further inspected in the [sample code project][repo].
 
 Happy hacking!
@@ -895,4 +901,7 @@ Happy hacking!
 [jaas]: https://jakarta.ee/learn/docs/jakartaee-tutorial/current/security/security-intro/security-intro.html
 [login-form]: https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html
 [ajax]: https://www.w3schools.com/whatis/whatis_ajax.asp
-[repo]: https://github.com/sombriks/spring-security-demo
+[testconfig]: https://reflectoring.io/spring-boot-testconfiguration/
+[profile]: https://docs.spring.io/spring-boot/reference/features/profiles.html
+[mock-or-not]: /blog/0053-mock-or-not/
+[repo]: <https://github.com/sombriks/spring-security-demo>
