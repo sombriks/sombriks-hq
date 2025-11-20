@@ -34,12 +34,12 @@ mixin sticky-bar()
           "RSS": "/feed.xml"
         }
       div 
-        // fixes css issue 
+        // empty div fixes css issue 
       each l in Object.keys(menu) 
         div
           i &nbsp;
           a(href=menu[l])=l
     div
-      +light-dark()
+      +light-dark
     div
-      +theme-chooser()
+      +theme-chooser

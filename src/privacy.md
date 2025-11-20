@@ -1,5 +1,6 @@
 ---
 layout: main.pug
+description: Privacy policy of my site and apps
 ---
 # Privacy policy
 

@@ -1,0 +1,6 @@
+mixin page-title(prefix='Sombriks HQ - ')
+  -
+    const pageTitle = prefix + content
+    .split("</h1>")[0]
+    .split("<h1>")[1]
+  title= pageTitle

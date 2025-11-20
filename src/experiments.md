@@ -1,5 +1,6 @@
 ---
 layout: main.pug
+description: Some fun experiments
 ---
 # Experiments
 

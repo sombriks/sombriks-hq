@@ -4,6 +4,7 @@ mixin page-tags()
     const pageTags = tags
       .filter(t => t !== 'posts')
       .map(t => ({label:t, link:t}))
+    //- add date as first tag
     pageTags.splice(0, 0, {label:d, link:d.slice(0,4)})
   style.
     .post-tags {
