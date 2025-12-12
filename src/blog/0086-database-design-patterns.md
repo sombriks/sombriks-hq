@@ -163,17 +163,65 @@ To tackle down such issues, the schema can be modified to something like this:
 <figcaption>A somewhat consistent, denormalized, performatic schema</figcaption>
 </figure>
 
-Chances are simple, but materializes derivative data as first-class data in the
+Changes are simple, just materializes derivative data as first-class data in the
 database schema. On the other hand, they save us potentially from performing
-millions of operations to deliver a highly demanded information.
+expensive operations to deliver a highly demanded information.
 
 ## Historical columns
 
-// short intro
+The third design i present is one that you can find when searching for the past
+value issue. Whenever keep track of changes that a certain column suffers over
+time is needed, this pattern is the one to apply.
 
-// basic usage
+Take this simple example:
 
-// example
+<figure>
+<pre>
+┌─────────────┐
+│ Product     │
+├─────────────┤
+│ id          │  ┌────────────┐
+│ description │  │ Sale       │
+│ price       │  ├────────────┤
+└─────────────┘  │ id         │
+                 │ product_id │
+                 └────────────┘
+</pre>
+<figcaption>Product table</figcaption>
+</figure>
+
+This table is barely enough to describe a product and its price.
+
+However, what happens if we decide to change the product price? We update it,
+yes, but by doing so, we not only promote loss of information but also corrupts
+existing sales entries.
+
+To avoid this,add a third table to track prices:
+
+<figure>
+<pre>
+┌──────────────────┐
+│ Product          │
+├──────────────────┤                   ┌──────────────┐
+│ id               │  ┌────────────┐   │ Sale         │
+│ description      │  │ PriceTag   │   ├──────────────┤
+│ current_price_id │  ├────────────┤   │ id           │
+└──────────────────┘  │ id         │   │ price_tag_id │
+                      │ product_id │   └──────────────┘
+                      │ start_date │
+                      │ price      │
+                      └────────────┘
+</pre>
+<figcaption>PriceTag table</figcaption>
+</figure>
+
+With this arrangement, it's now possible to update a product price and still
+keep track of earings sales correctly.
+
+In the example there is also a key for the current price tag on the product. It
+is added just to avoid funky operations to discover the latest price tag
+available for a product. But this is a denormalization, so a careless operation
+can introduce inconsistencies to the data.
 
 ## Append-only ledger
 
