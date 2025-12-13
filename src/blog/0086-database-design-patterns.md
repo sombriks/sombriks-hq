@@ -434,20 +434,164 @@ reasons:
 This database design pattern is one of the most powerful ones, it stores raw
 data in a way that several levels of information refinement are possible.
 
+It is also known as [time-series table][time-series].
+
 It introduces several redundancies that might seem a waste at first, but even on
-the repetition is invaluable information encoded.
+repetition lies invaluable information encoded.
 
-// basic usage
+Let's sample this starting with a stocks portfolio:
 
-// example
+<figure>
+<pre>
+         ┌─────────────┐  ┌───────────────┐
+         │ Portfolio   │  │ PortfolioItem │
+         ├─────────────┤  ├───────────────┤
+         │ id          │  │ id            │
+         │ account_id  │  │ portfolio_id  │
+         │ description │  │ stock_id      │
+         └─────────────┘  │ amount        │
+                          └───────────────┘
+</pre>
+<figcaption>Portfolio system</figcaption>
+</figure>
+
+We can extract useful information from this.
+
+For example, what is our top 3 most valuable stocks in our portfolio?
+
+```sql
+with most_valuables as 
+(select pi.portfolio_id,
+        st.code,
+        st.value,
+        pi.amount,
+        dense_rank() 
+          over(partition by pi.portfolio_id 
+          order by st.value * pi.amount desc) as rank_pos
+from PortfolioItem pi
+join Stock st on pi.stock_id = st.id
+order by st.value * pi.amount desc)
+select s1.rank_pos as pos1, s1.code as code1, s1.amount * s1.value as total1,
+       s2.rank_pos as pos2, s2.code as code2, s2.amount * s2.value as total2,
+       s3.rank_pos as pos3, s3.code as code3, s3.amount * s3.value as total3
+from most_valuables s1,
+     most_valuables s2,
+     most_valuables s3
+where s1.portfolio_id = s2.portfolio_id
+  and s1.portfolio_id = s3.portfolio_id
+  and s2.portfolio_id = s3.portfolio_id
+  and s1.rank_pos = 1
+  and s2.rank_pos = 2
+  and s3.rank_pos = 3
+```
+
+Assuming a portfolio based on this:
+
+<figure>
+<figcaption>Table PortfolioItem</figcaption>
+
+| id | portfolio_id | stock_id | amount |
+|----|--------------|----------|--------|
+| 11 | 1            | 5        | 11     |
+| 12 | 1            | 6        | 15     |
+| 13 | 1            | 7        | 5      |
+| 14 | 1            | 8        | 20     |
+| 15 | 1            | 9        | 300    |
+
+</figure>
+<figure>
+<figcaption>Table Stock</figcaption>
+
+| id | code | value |
+|----|------|-------|
+| 5  | AAPL | 150   |
+| 6  | GOOG | 100   |
+| 7  | MSFT | 200   |
+| 8  | TSLA | 50    |
+| 9  | MGLU | 3     |
+
+</figure>
+
+The presented query would produce something like this:
+
+<figure>
+<figcaption>Top 3 investments</figcaption>
+
+| pos1 | code1 | total1 | pos2 | code2 | total2 | pos3 | code3 | total3 |
+|------|-------|--------|------|-------|--------|------|-------|--------|
+| 1    | AAPL  | 1650   | 2    | GOOG  | 1500   | 3    | MSFT  | 1000   |
+
+</figure>
+
+But hey, this is a snapshot. How well this portfolio does over the time?
+
+To answer this, let's modify our schema to incorporate the time dimension:
+
+<figure>
+<pre>
+         ┌─────────────┐  ┌───────────────┐
+         │ Portfolio   │  │ PortfolioItem │
+         ├─────────────┤  ├───────────────┤
+         │ id          │  │ id            │
+         │ account_id  │  │ portfolio_id  │
+         │ description │  │ stock_id      │
+         └─────────────┘  │ date          │
+                          │ amount        │
+                          └───────────────┘
+</pre>
+<figcaption>Longitudinal orders system</figcaption>
+</figure>
+
+This simple addition changes everything, since now it's possible to ask new
+questions, like "What are my top 3 stocks in the last 3 days?":
+
+```sql
+with most_valuables as 
+(select pi.portfolio_id,
+        pi.date,
+        st.code,
+        st.value,
+        pi.amount,
+        dense_rank() 
+          over(partition by pi.portfolio_id,pi.date
+          order by st.value * pi.amount desc) as rank_pos
+from PortfolioItem pi
+join Stock st on pi.stock_id = st.id
+order by st.value * pi.amount desc)
+select s1.date,
+       s1.rank_pos as pos1, s1.code as code1, s1.amount * s1.value as total1,
+       s2.rank_pos as pos2, s2.code as code2, s2.amount * s2.value as total2,
+       s3.rank_pos as pos3, s3.code as code3, s3.amount * s3.value as total3
+from most_valuables s1,
+     most_valuables s2,
+     most_valuables s3
+where s1.portfolio_id = s2.portfolio_id
+  and s1.portfolio_id = s3.portfolio_id
+  and s2.portfolio_id = s3.portfolio_id
+  and s1.rank_pos = 1
+  and s2.rank_pos = 2
+  and s3.rank_pos = 3
+  and s1.date > '2025-12-01'
+```
+
+Now we get information over time, simple as that.
+
+One drawback is that longitudinal tables is the growth over time. Long tuples
+with many relations (which can be replicated over time as well) can accumulate
+and slow proper filtering the old the database gets.
+
+Time series databases are like an extra dimension over the entire database. The
+extra space can make queries more complex, but this design pattern produces very
+dense databases, capable of produce lots of information.
 
 ## Snapshot tables
 
-// short intro
+The last design pattern for today is the **snapshot table**.
 
-// basic usage
+All patterns presented here so far are meant to prevent loss of information and
+make it denser. The drawback is that the schema becomes complex.
 
-// example
+Enter the **snapshot table** pattern.
 
 ## Conclusion
 
@@ -456,3 +600,4 @@ the repetition is invaluable information encoded.
 [transaction]: https://en.wikipedia.org/wiki/Database_transaction
 [microservice]: https://dzone.com/microservices
 [dist-transactions]: https://en.wikipedia.org/wiki/Distributed_transaction
+[time-series]: https://en.wikipedia.org/wiki/Time_series_database
