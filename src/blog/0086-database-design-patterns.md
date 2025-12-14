@@ -539,7 +539,7 @@ To answer this, let's modify our schema to incorporate the time dimension:
                           │ amount        │
                           └───────────────┘
 </pre>
-<figcaption>Longitudinal orders system</figcaption>
+<figcaption>Longitudinal portfolio system</figcaption>
 </figure>
 
 This simple addition changes everything, since now it's possible to ask new
@@ -589,11 +589,70 @@ dense databases, capable of produce lots of information.
 The last design pattern for today is the **snapshot table**.
 
 All patterns presented here so far are meant to prevent loss of information and
-make it denser. The drawback is that the schema becomes complex.
+make it denser. The drawback is that the schema becomes complex. For example, in
+the `PortfolioItem` table, to recover the latest items in the portfolio is no
+longer a simple select, but:
+
+```sql
+select portfolio_id,
+       stock_id,
+       max("date"),       
+       max(amount),      
+from PortfolioItem
+group by portfolio_id,
+         stock_id;
+```
 
 Enter the **snapshot table** pattern.
 
+This pattern is a bit funny because it's like a *return to innocence*: we create
+an entire table, or even a set of tables, to represent just the latest, most
+recent value of the current state of the data.
+
+The snapshot pattern is built on top of time series / longitudinal pattern. It
+is a complete copy of the longitudinal table, except for the time component.
+
+Like this:
+
+<figure>
+<pre>
+         ┌─────────────┐  ┌───────────────┐  ┌───────┐
+         │ Portfolio   │  │ PortfolioItem │  │ Stock │
+         ├─────────────┤  ├───────────────┤  ├───────┤
+         │ id          │  │ id            │  │ id    │
+         │ account_id  │  │ portfolio_id  │  │ code  │
+         │ description │  │ stock_id      │  │ value │
+         └─────────────┘  │ amount        │  └───────┘
+                          └───────────────┘
+           ┌───────────────────┐
+           │ PortfolioItemLog  │  
+           ├───────────────────┤    ┌──────────┐
+           │ id                │    │ StockLog │
+           │ portfolio_item_id │    ├──────────┤
+           │ portfolio_id      │    │ id       │
+           │ stock_log_id      │    │ stock_id │
+           │ amount            │    │ code     │
+           │ date              │    │ value    │
+           └───────────────────┘    │ date     │
+                                    └──────────┘
+</pre>
+<figcaption>Snapshot/Longitudinal portfolio system</figcaption>
+</figure>
+
+And just like that, longitudinal tables keep growing and condensing more and
+more information, but for latest values there is the snapshot values.
+
+Note also that, like what happened with append-only ledgers, each update in the
+snapshots an insert into the longitudinal tables.
+
 ## Conclusion
+
+Those approaches are quite common and may have other names. Those thing keep
+being rediscovered, so many names are expected.
+
+There are also many others, we may cover more in the future.
+
+That's it and happy hacking!
 
 [efcobb]: https://en.wikipedia.org/wiki/Edgar_F._Codd
 [join]: https://en.wikipedia.org/wiki/Join_(SQL)
