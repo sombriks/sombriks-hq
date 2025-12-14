@@ -4,7 +4,6 @@ tags:
   - posts
   - node
   - raspberry pi
-  - C
   - Cpp
   - libgpiod
   - python
