@@ -35,6 +35,7 @@ Next, Create a regular npm project:
 mkdir my-project
 cd my-project
 npm init -y
+npm pkg set type=module
 ```
 
 The next step is to install [node-gyp], a tool which enables your node project
@@ -87,6 +88,57 @@ Now, let's check some hello worlds to better understand the differences between
 the available apis.
 
 ### Bare-bones node-v8
+
+This is still relevant because it is very straight-forward.
+
+Create the source file configured on binding.gyp and a js file:
+
+```bash
+mkdir src
+touch src/main.cc
+touch index.js
+```
+
+The C++ code goes like this:
+
+```cpp
+#include <node.h>
+
+void HelloMethod(const v8::FunctionCallbackInfo<v8::Value> &args)
+{
+  v8::Isolate *isolate = args.GetIsolate();
+  args.GetReturnValue()
+      .Set(v8::String::NewFromUtf8(isolate, "Hello world!").ToLocalChecked());
+}
+
+void Initialize(v8::Local<v8::Object> exports)
+{
+  NODE_SET_METHOD(exports, "hello", HelloMethod);
+}
+
+NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize)
+```
+
+Next, invoke node-gyp to build the native addon:
+
+```bash
+npx node-gyp configure
+npx node-gyp build
+```
+
+in the `index.js`:
+
+```javascript
+// index.js
+import bindings from "bindings"
+
+const addon = bindings("my_project")
+
+console.log(addon.hello())
+// node index.js
+```
+
+For very simple addons, bare node-v8 delivers the simples setup possible.
 
 ### NAN
 
