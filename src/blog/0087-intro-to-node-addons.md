@@ -38,8 +38,8 @@ npm init -y
 npm pkg set type=module
 ```
 
-The next step is to install [node-gyp], a tool which enables your node project
-to compile addons:
+The next step is to install [node-gyp](https://github.com/nodejs/node-gyp), a
+tool which enables your node project to compile addons:
 
 ```bash
 npm i node-gyp bindings
@@ -66,7 +66,8 @@ This is a json file, fill it with this initial content:
 ```
 
 Then we hit a crossroads. The native part can be implemented in C++ using two
-different API's: [node-v8] or [napi].
+different API's: [node-v8](https://nodejs.org/api/addons.html) or
+[napi](https://github.com/nodejs/node-addon-api).
 
 ## Choosing the right API
 
@@ -77,8 +78,8 @@ some already existing _v8-aware_ code, or some sort of existing codebase.
 
 Plain v8 add-ons are simple, but also subject to v8 api breaking changes.
 
-The node-v8 + [NAN] approach tries to make things easier when dealing with v8,
-but even it still exposes the user to v8.
+The node-v8 + [NAN](https://github.com/nodejs/nan) approach tries to make things
+easier when dealing with v8, but even it still exposes the user to v8.
 
 On the other hand, napi promises not only a stable api, but also a stable abi,
 which means that an addon can be precompiled and run across different node
@@ -214,6 +215,10 @@ the `binding.gyp`:
 }
 ```
 
+The `-fno-exceptions` flag is needed because napi is mainly a
+[plain C api](https://nodejs.org/api/n-api.html). it also means that you can't
+use C++ exception  in your code.
+
 Next, install the dependency:
 
 ```bash
@@ -253,10 +258,12 @@ processing, runs addons in the main thread by default.
 
 This means that any heavy operation will block the node runtime entirely.
 
-If you go with bare node-v8, you be left with [libuv] and v8. This is not the
-best approach to solve heavy loads, so i am not even sampling it here.
+If you go with bare-bones node-v8, you'll be left with
+[libuv](https://libuv.org/). This is not the best approach to solve heavy loads
+since it's highly error-prone, so i am not even sampling it here.
 
-You can, however, go with nan and [Nan::AsyncWorker]:
+You can, however, go with nan and
+[Nan::AsyncWorker](https://docs.ros.org/en/indigo/api/dji_ronin/html/classNan_1_1AsyncWorker.html):
 
 ```cpp
 #include <chrono>
@@ -318,7 +325,8 @@ store the result.
 In this phase, no v8 api can be accessed, since it's on another thread.
 
 when it finishes, `void HeavyCalculationWorker::HandleOKCallback()` assumes and
-can report back to the [node event loop] the result of the async work.
+can report back to the [node event loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
+the result of the async work.
 
 And napi offers, of course, a similar api for the same purpose:
 
@@ -392,9 +400,109 @@ event loop is illegal and kills the process.
 
 To deal with it properly, napi offers the `Napi::ThreadSafeFunction`. this class
 wraps the node javascript callback in a way that it can be called properly,
-without violating the event loop lifecycle.
+without violating the event loop lifecycle:
 
-See this more complex example on the [sample code project].
+```cpp
+// src/sensor-sim-monitor.cc
+
+#include "sensor-sim-monitor.hh"
+
+void SensorSimMonitor::Init(Napi::Env env, Napi::Object exports)
+{
+  Napi::Function func = DefineClass(
+      env,
+      "SensorSimMonitor",
+      {
+          InstanceMethod("startMonitoring", &SensorSimMonitor::StartMonitoring),
+          InstanceMethod("stopMonitoring", &SensorSimMonitor::StopMonitoring),
+          InstanceMethod("isMonitoring", &SensorSimMonitor::IsMonitoring),
+      });
+
+  Napi::FunctionReference *constructor = new Napi::FunctionReference();
+  *constructor = Napi::Persistent(func);
+  env.SetInstanceData(constructor);
+
+  exports.Set("SensorSimMonitor", func);
+}
+
+SensorSimMonitor::SensorSimMonitor(const Napi::CallbackInfo &info)
+    : Napi::ObjectWrap<SensorSimMonitor>(info)
+{
+  this->sensorSim = nullptr;
+  this->tsfn = nullptr;
+}
+
+SensorSimMonitor::~SensorSimMonitor()
+{
+  this->stop();
+}
+
+Napi::Value SensorSimMonitor::IsMonitoring(const Napi::CallbackInfo &info)
+{
+  Napi::Env env = info.Env();
+  bool monitoring = false;
+  if (this->sensorSim != nullptr)
+  {
+    monitoring = this->sensorSim->isRunning();
+  }
+  return Napi::Boolean::New(env, monitoring);
+}
+
+void SensorSimMonitor::StartMonitoring(const Napi::CallbackInfo &info)
+{
+  Napi::Env env = info.Env();
+  Napi::Function jsCallback = info[0].As<Napi::Function>();
+
+  if (this->sensorSim == nullptr)
+  {
+    this->sensorSim = new SensorSim();
+    this->tsfn = new Napi::ThreadSafeFunction(Napi::ThreadSafeFunction::New(env, jsCallback, "SensorSimMonitor", 0, 1));
+    auto dataCallback = [this](const int data)
+    {
+      // are we stil alive?
+      if (this->tsfn == nullptr)
+        return;
+      this->tsfn->BlockingCall(
+          new int(data),
+          [](Napi::Env env, Napi::Function jsCallback, int *data)
+          {
+            jsCallback.Call({Napi::Number::New(env, *data)});
+            delete data;
+          });
+    };
+    this->sensorSim->start(dataCallback);
+  }
+  else
+  {
+    Napi::TypeError::New(env, "SensorSim is already running")
+        .ThrowAsJavaScriptException();
+  }
+}
+
+void SensorSimMonitor::StopMonitoring(const Napi::CallbackInfo &info)
+{
+  this->stop();
+}
+
+void SensorSimMonitor::stop()
+{
+  if (this->sensorSim != nullptr)
+  {
+    this->sensorSim->stop();
+    delete this->sensorSim;
+    this->sensorSim = nullptr;
+  }
+  if (this->tsfn != nullptr)
+  {
+    this->tsfn->Release();
+    delete this->tsfn;
+    this->tsfn = nullptr;
+  }
+}
+```
+
+See the complete example on the
+[sample code project](https://github.com/sombriks/sample-node-addon/blob/napi-addon/src/sensor-sim-monitor.hh).
 
 ## Further reading
 
@@ -403,5 +511,7 @@ addon apis for C++ adds more flexibility and ease of integration with almost any
 other technology.
 
 The napi itself is also a [plain old C api], meaning that other integrations are
-possible, like [rust], [golang] and any other language able to interact with
-libraries exposing c-style calls.
+possible, like [rust](https://napi.rs), [golang](https://github.com/akshayganeshen/napi-go)
+and any other language able to interact with libraries exposing c-style calls.
+
+Happy hacking!
