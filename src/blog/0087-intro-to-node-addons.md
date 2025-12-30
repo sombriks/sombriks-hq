@@ -3,7 +3,7 @@ layout: blog-layout.pug
 tags:
   - posts
   - node
-  - cpp
+  - Cpp
   - addon
   - nan
   - napi
