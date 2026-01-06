@@ -5,6 +5,7 @@ include ../components/sticky-bar
 doctype html
 html
   head
+    +ga
     meta(charset="UTF-8")/
     meta(name="robots" content="index, follow")/
     meta(name="viewport" content="width=device-width, initial-scale=1.0")/
@@ -62,7 +63,6 @@ html
     +my-themes
     link(rel='stylesheet' href='/sombriks.css')/
     script(type="application/javascript" src="/sombriks.js")
-    +ga
     block base-head
   body
     +sticky-bar
