@@ -1595,5 +1595,12 @@
       "ogp",
       "social media"
     ]
+  },
+  {
+    "label": "Showing some 'love' to XML",
+    "link": "https://harmful.cat-v.org/software/xml/",
+    "tags": [
+      "xml"
+    ]
   }
 ]
