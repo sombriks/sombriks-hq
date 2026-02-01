@@ -4,8 +4,11 @@ description: Privacy policy of my site and apps
 ---
 # Privacy policy
 
-- Third party vendors, including Google, use cookies to serve ads based on a
-  user's prior visits to this website or other websites.
+- Third party vendors, including Google, use cookies to serve ads based on
+  user's prior visits to this website or other mediums i offer.
 
 - Google's use of advertising cookies enables it and its partners to serve ads
   to you based on your visit to this site and/or other sites on the Internet.
+
+- The Google Analytics and Google Adsense technologies are used in this site and
+other mediums i offer.
