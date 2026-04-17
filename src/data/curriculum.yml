@@ -247,23 +247,23 @@ resume:
           icon:
   work:
     - SEPLAG CE: https://www.seplag.ce.gov.br/
-      position: [Systems Analyst]
+      position: [ Systems Analyst ]
       period: 2025-05-13 - present day
       description: |
         This is a governamental public entity which provides compute
         infrastructure and systems for all other gov entities.
       projects:
         - SIGA:
-          responsibilities: [Fullstack development]
+          responsibilities: [ Fullstack development ]
           description: |
             Assets management system, focused on consumable materials
         - SGBM:
-          responsibilities: [Fullstack development]
+          responsibilities: [ Fullstack development ]
           description: |
             Assets management system, focused on general furniture and other non
             consumable tools
         - SGBI:
-          responsibilities: [Fullstack development]
+          responsibilities: [ Fullstack development ]
           description: |
             Assets management system, focused on real state management
 
@@ -279,9 +279,13 @@ resume:
           Docker,
           Angular,
           Spring Boot,
+          Testcontainers,
           JBoss Application Server,
           Oracle database,
+          PostgreSQL,
           Javascript,
+          Typescript,
+          HTML,
           CSS,
           jQuery,
           PrimeFaces,
@@ -303,12 +307,12 @@ resume:
         clients.
       projects:
         - ARIA team at EasyPark:
-          responsibilities: [Fullstack development (golang/react)]
+          responsibilities: [ Fullstack development (golang/react) ]
           description: |
             Second contact with ai-based solutions, this time with gemini ai
             from google. Also consumed other GCP services.
         - Nearsure technical interview team:
-          responsibilities: [Technical interview]
+          responsibilities: [ Technical interview ]
           description: |
             I offered my skills to the interview team so i can help to
             streamline the candidature process at Nearsure. I enjoy to have
@@ -322,7 +326,8 @@ resume:
               Service modules evolution roadmap,
               Code review on pull requests from team members,
               Frontend and backend implementation,
-              Infrastructure for release versioning and publishing of internal libraries,
+              Infrastructure for release versioning and publishing of internal
+                libraries,
               Automation building for application image building,
               publishing and deployment,
               Definition,
@@ -416,7 +421,7 @@ resume:
           Jira,
         ]
     - Rede Inova: https://www.redeinova.com.br/
-      position: [Tech lead, Backend developer, Technical interviewer]
+      position: [ Tech lead, Backend developer, Technical interviewer ]
       period: 2022-07-13 - 2023-05-03 (part-time position)
       description: |
         Redeinova is a technology company from Brasil delivering solutions to
@@ -486,7 +491,7 @@ resume:
           CI/CD pipelines,
         ]
     - Jobsity: https://www.jobsity.com/
-      position: [Senior backend developer - Team augmentation consultant]
+      position: [ Senior backend developer - Team augmentation consultant ]
       period: 2021-02-01 - 2022-08-29
       description: |
         My first international experience, Jobsity applies the 'nearshore'
@@ -543,7 +548,7 @@ resume:
           Serverless microservices,
         ]
     - Casa Magalhães: https://www.casamagalhaes.com.br
-      position: [Senior backend developer]
+      position: [ Senior backend developer ]
       period: 2019-03 - 2021-01-29
       description: |
         This is a traditional and quite well-established group dealing with 
@@ -612,7 +617,7 @@ resume:
           Scrum,
         ]
     - Game For Learning / TechPar: https://techpar.github.io/
-      position: [Software developer, Requirements Analyst, CTO]
+      position: [ Software developer, Requirements Analyst, CTO ]
       period: 2014-09 - 2019-03
       description: |
         At G4L (Game For Learning), we create innovative educational games, (OED
@@ -679,22 +684,22 @@ resume:
             Apache Cordova, Allowed us to publish on android and ios app stores
             from the same codebase.
         - Super Candy:
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             Another action math game. Written using web technologies and
             packaged for mobile using Apache Cordova.
         - Educatáxi:
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             Action math game. Written using web technologies and packaged for
             mobile using Apache Cordova.
         - Aventura matemática:
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             Adventure/puzzle math game. Written using web technologies and
             packaged for mobile using Apache Cordova.
         - Matematicando:
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             Math puzzle game. Written using web technologies and packaged for
             mobile using Apache Cordova.
@@ -725,23 +730,23 @@ resume:
           Scrum,
         ]
     - Atlanta Tecnologia: http://www.atlantatecnologia.com.br
-      position: [Fullstack Software developer]
+      position: [ Fullstack Software developer ]
       period: 2013-02 - 2014-08
       description: |
         We delivered transit law enforcement solutions.
       projects:
         - Faixa exclusiva:
-          responsibilities: [Code development, Architecture specification]
+          responsibilities: [ Code development, Architecture specification ]
           description: |
             A java web, serial communications and ip camera solution to detect
             if cars where on exclusive bus lane.
         - Photo labeler:
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             Internal tool java swing based. it was used to correctly apply the
             infraction label on photos.
         - AT-SMS/AT-SMS2:
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             This was the main solution on transit law enforcement. On this
             project we started the migration from a delphi based solution to a 
@@ -759,42 +764,42 @@ resume:
           Image processing,
         ]
     - Ifactory Solutions: https://www.linkedin.com/company/ifactory-solutions
-      position: [Fullstack Software developer]
+      position: [ Fullstack Software developer ]
       period: 2012-11 - 2013-01
       description: |
         Ifactory solutions outsourced me and my team to work on-site, at Edson
         Queiroz Holding.
       projects:
         - Diário do Nordeste:
-          responsibilities: [Code development, Unit and integration tests]
+          responsibilities: [ Code development, Unit and integration tests ]
           description: |
             We produced velocity templates running on top of Polopoly
             multi-target web cms. Our client, one of the biggest printed media
             in the state, used them for both online and printed version of the
             daily journal.
-      tech stack: [Java, Velocity, HTML, CSS, Polopoly]
+      tech stack: [ Java, Velocity, HTML, CSS, Polopoly ]
     - HEXA: http://www.hexat.com.br/hexa
       description: |
         This company had various P&D works. It was yet another business backed
         by IFCE professors.
-      position: [Fullstack Software developer]
+      position: [ Fullstack Software developer ]
       period: 2012-09 - 2012-10
       projects:
         - Historical documents digitalization:
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             Handled a wide variety of problems, from basic structures for code
             versioning to defining technologies to be used to code the solution.
-      tech stack: [PHP, MySQL, Java EE, Android, REST API]
+      tech stack: [ PHP, MySQL, Java EE, Android, REST API ]
     - LDS: http://lds.ifce.edu.br
       description: |
         This company had various P&D works. It was another business backed by
         IFCE professors.
-      position: [Fullstack Software developer]
+      position: [ Fullstack Software developer ]
       period: 2012-04 - 2012-08
       projects:
         - Furukawa electric latam: https://www.furukawalatam.com/pt-br
-          responsibilities: [Code development, Unit testing]
+          responsibilities: [ Code development, Unit testing ]
           description: |
             Java web solution to handle industry operations.
       tech stack:
@@ -813,17 +818,17 @@ resume:
       description: |
         This company had various P&D works. It was a business backed by IFCE
         professors.
-      position: [R&D Software Developer]
+      position: [ R&D Software Developer ]
       period: 2011-09 - 2012-04
       projects:
         - Small robotic car:
-          responsibilities: [Experimental code development]
+          responsibilities: [ Experimental code development ]
           description: |
             A robot prototype using a Beagleboard. since the robot was in 
             another state, 2000 kilometers apart. I had to double ssh to get
             access to the C/C++ openCV code inside the robot.
         - Mobile software to recommend products and services:
-          responsibilities: [Experimental code development]
+          responsibilities: [ Experimental code development ]
           description: |
             It was an android solution to offer products and services based on
             what the user likes and its geolocation. It consumed a REST service
@@ -843,8 +848,7 @@ resume:
     - Sena Informática / USIX S.A./ Ebix Inc.: https://www.linkedin.com/company/usix-technology/
       description: |
         This was the biggest Brazilian insurance solutions provider back in time
-      position:
-        [Trainee, Junior programmer, Senior programmer, Software architect]
+      position: [ Trainee, Junior programmer, Senior programmer, Software architect ]
       period: 2007-08 - 2011-09
       projects:
         - WIS Marítima: https://www.seguroauto.org/maritima-seguros-auto/
@@ -861,8 +865,7 @@ resume:
             metamodel configuration like previous products. Heavy use of jQuery
             and early forms of SPA. We didn't called it that way back in time.
         - WIS Bradesco Seguros: https://www.bradescoseguros.com.br/clientes
-          responsibilities:
-            [Native Code development, Unit test cases, Application deployment]
+          responsibilities: [ Native Code development, Unit test cases, Application deployment ]
           description: |
             Solution to calculate the client score, but on this project my main
             responsibility was the JNI interface with the client score library,
@@ -870,12 +873,12 @@ resume:
             production server was an itanium so i dealt with HP-UX and the aCC
             C/C++ compiler. And a lot of Makefiles.
         - WIS Sulamérica: https://portal.sulamericaseguros.com.br/home.htm
-          responsibilities: [Code development, Unit test cases]
+          responsibilities: [ Code development, Unit test cases ]
           description: |
             Dynamic application to build interfaces to calculate client score
             online. Built with apache struts, java + oracle database.
         - Conta Corrente: https://portal.sulamericaseguros.com.br/home.htm
-          responsibilities: [Code development, Unit test cases]
+          responsibilities: [ Code development, Unit test cases ]
           description: |
             A java web with struts and oracle database solution to offer credit
             to brokers so they could give discounts to their clients. It was an
@@ -900,7 +903,7 @@ resume:
       period: 2006 - 2007
       projects:
         - CFN: https://pt.wikipedia.org/wiki/Transnordestina_Log%C3%ADstica_S.A.
-          responsibilities: [Code development]
+          responsibilities: [ Code development ]
           description: |
             Java web solution to manage order services to railways maintenance.
       tech stack:
