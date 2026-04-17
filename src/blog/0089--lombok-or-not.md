@@ -3,7 +3,7 @@ layout: blog-layout.pug
 tags:
   - posts
   - java
-  - spring
+  - spring-boot
   - lombok
 date: 2026-04-18
 draft: false
