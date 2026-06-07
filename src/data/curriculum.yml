@@ -64,6 +64,12 @@ resume:
           icon:
         - HTMX: ★★★★☆
           icon:
+        - Thymeleaf: ★★★★☆
+          icon:
+        - Pug: ★★★★☆
+          icon:
+        - Nunjucks: ★★★★☆
+          icon:
         - CSS: ★★★☆☆
           icon:
         - Angular-Material: ★★★☆☆
