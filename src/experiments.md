@@ -15,6 +15,10 @@ useful repositories present on [my github](https://github.com/sombriks?tab=repos
 Therefore, i'll add here not only _finished_ solutions, but also my exploration
 projects.
 
+## [preditor](https://github.com/sombriks/preditor)
+
+Simple ascii-art online editor.
+
 ## [node-libgpiod](https://github.com/sombriks/node-libgpiod)
 
 This project is a wrapper for libgpiod to nodejs. By the time i decided to build
