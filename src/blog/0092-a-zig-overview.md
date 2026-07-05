@@ -43,13 +43,13 @@ My study notes on [Zig][Zig], the _better than C_ programming language.
 Over the years i studied a few languages in order to have fun and to pay my
 rent.
 
-Get into computers, like any other career, is lie joining an ongoing party: a
-lot is happening, a lot already happened, no real need to understand everything
+Get into computers, like any other career, is like joining an ongoing party: a
+lot is happening, a lot already happened, no real need to understand everything,
 but you start to get it, over the time, little by little.
 
 At first i learned [java][java], like everyone else. Then
-[javascript][javascript], because technologic limitations in the client. Then
-[sql][sql]. Then [C++][cpp]. And so on.
+[javascript][javascript], because of technological limitations in the client.
+Then [sql][sql]. Then [C++][cpp]. And so on.
 
 [java]: https://dev.java
 
@@ -59,12 +59,12 @@ At first i learned [java][java], like everyone else. Then
 
 [cpp]: https://cppreference.com/
 
-Each language, along with its associated runtimes and ecosystems, had an
-specific target problem. And over the years i started to figure out what tool
-best suites the current problem.
+Each language, along with its associated runtimes and ecosystems, had a
+specific target problem. And over the years i started to figure out what tool is
+best suited to the current problem.
 
 This skill also evolved into the intuition of what skill should i master in
-order to proper solve a problem.
+order to properly solve a problem.
 
 So here we are, looking at another nice tool to add into the tool belt.
 
@@ -73,7 +73,7 @@ So here we are, looking at another nice tool to add into the tool belt.
 In a world full of good hammers, why choose a new one? Are the old tools
 broken, inefficient, or something?
 
-Mot really, in fact fact the hammers aren't the problem. The nails that keeps
+Mot really, in fact the hammers aren't the problem. The nails that keeps
 changing.
 
 Once a problem is solved, new objectives emerges and life goes on. Therefore
@@ -152,7 +152,7 @@ sudo dnf install zig
 [fedora]: https://getfedora.org
 
 One extra tool that will help is the the [zls][zls], a language server to the
-language, so ypu get autocomplete working in lightweight text editors, such as
+language, so you get autocomplete working in lightweight text editors, such as
 [kate][kate].
 
 [zls]: https://github.com/zigtools/zls
@@ -305,7 +305,7 @@ pub fn main() u8 {
 
 ## 03: Control Flow
 
-In zig, control flow is pretty straightforward, with a few improvemente when
+In zig, control flow is pretty straightforward, with a few improvements when
 compared with C.
 
 ### Conditionals
@@ -537,12 +537,12 @@ pub fn main() void {
 ### Namespace and Member functions
 
 If you define a function inside a struct, it will act as a
-[namespace][namespace] and will hekp to avoi name clashes.
+[namespace][namespace] and will help to avoid name clashes.
 
 [namespace]: https://en.wikipedia.org/wiki/Namespace
 
 Defining functions with [special signatures][member-functions] inside a
-namespace/struct grants them the special status of **member fuctions**:
+namespace/struct grants them the special status of **member functions**:
 
 [member-functions]: https://zig.guide/language-basics/structs
 
@@ -871,7 +871,7 @@ pub fn main(init: std.process.Init) !void {
 ```
 
 See, the explicit control starts paying the extra effort. We just serialized,
-casted, and translated pieces of memory in anytthing we want with little
+casted, and translated pieces of memory in anything we want with little
 trouble.
 
 ### Read and write structs
@@ -1108,7 +1108,7 @@ pub fn main(init: std.process.Init) !void {
 }
 ```
 
-Thge difference is sutile, but now the error, if it happens, will be passed to
+The difference is sutile, but now the error, if it happens, will be passed to
 the function caller.
 
 ### How to pass errors
@@ -1441,7 +1441,7 @@ pub fn main(init: std.process.Init) !void {
 
 And why is it better?
 
-Well, it abrstracts the underlying concurrency implementation, making the code
+Well, it abstracts the underlying concurrency implementation, making the code
 portable event to platforms without this capability.
 
 Also, the [future api][future-api] only decouples execution from result
@@ -2136,6 +2136,8 @@ touch infra/database.yml
 The `database.yml` is just a simple [docker-compose][docker-compose] manifest to
 provision a postgresql database:
 
+[docker-compose]: https://docs.docker.com/compose/
+
 ```yml
 ---
 # infra/database.yml
@@ -2299,7 +2301,7 @@ from [vue][vue].
 
 The built-ins and libraries showcased in this writing are far from being
 complete, and the community around the platform keeps growing and offering
-moe and more libraries. Also they are nice people.
+more and more libraries. Also, they are nice people.
 
 For instance, it is dead easy to package and distribute software with zig.
 The long-term outcome is a huge amount of libraries.
@@ -2322,7 +2324,7 @@ pretty much like how Go used to compare with Java.
 
 The fact that Zig is not an Object-oriented language is not a problem, the
 state of node libraries are proof of that. Less type gymnastics is a plus,
-although the steady growth of Typescript trues to prove me wrong.
+although the steady growth of Typescript tries to prove me wrong.
 
 Of those 3, the one with biggest 3rd party libraries is Java, i think,
 featuring maven central as the one place to publish and find packages. The
