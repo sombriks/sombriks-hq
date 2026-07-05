@@ -8,7 +8,6 @@ tags:
   - gradle
   - java
   - kotlin
-  - zig
 date: 2026-06-07
 draft: false
 ---
