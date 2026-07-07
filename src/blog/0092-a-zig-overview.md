@@ -45,11 +45,11 @@ rent.
 
 Get into computers, like any other career, is like joining an ongoing party: a
 lot is happening, a lot already happened, no real need to understand everything,
-but you start to get it, over the time, little by little.
+but you start to get it, over time, little by little.
 
 At first i learned [java][java], like everyone else. Then
-[javascript][javascript], because of technological limitations in the client.
-Then [sql][sql]. Then [C++][cpp]. And so on.
+[javascript][javascript], because of a technology limitation in the client. Then
+[sql][sql]. Then [C++][cpp]. And so on.
 
 [java]: https://dev.java
 
@@ -59,9 +59,9 @@ Then [sql][sql]. Then [C++][cpp]. And so on.
 
 [cpp]: https://cppreference.com/
 
-Each language, along with its associated runtimes and ecosystems, had a
-specific target problem. And over the years i started to figure out what tool is
-best suited to the current problem.
+Each language, along with its associated runtimes and ecosystems, had a specific
+target problem. And over the years i started to figure out which tool is best
+suited for the current problem.
 
 This skill also evolved into the intuition of what skill should i master in
 order to properly solve a problem.
@@ -73,17 +73,17 @@ So here we are, looking at another nice tool to add into the tool belt.
 In a world full of good hammers, why choose a new one? Are the old tools
 broken, inefficient, or something?
 
-Mot really, in fact the hammers aren't the problem. The nails that keeps
+Mot really. In fact, the hammers aren't the problem. The nail that keeps
 changing.
 
-Once a problem is solved, new objectives emerges and life goes on. Therefore
+Once a problem is solved, a new objective emerges and life goes on. Therefore,
 it's natural to keep checking on new ways to solve problems.
 
-Bu old tools doesn't get automatically unusable. In fact, there are lots of
+But an old tool doesn't get automatically unusable. In fact, there are lots of
 solutions written in java that i am still willing to maintain. Several problems
 that i still consider to use [golang][golang] if i have the opportunity, and
 would still choose [vue][vue] over [htmx][htmx], depending on the context. It is
-a matter of best possible combination of tools for a given problem.
+a matter of picking the best possible combination of tools for a given problem.
 
 [golang]: https://golang.org
 
@@ -97,10 +97,10 @@ The language promises **performance**, **developer experience** and an
 impressive **C interoperability**. It also doubles as a **robust build system**,
 compatible with existing codebases.
 
-The C ABI compatibility also is an interesting offer, because it opens to zig
+The C ABI compatibility is also an interesting offer because it opens to Zig
 Projects a wide range of library options, ready to use.
 
-So, at first, zig looks like a nice option to write code to run in de
+So, at first, zig looks like a nice option to write code to run in the
 middleware, between a client application and a database or a specialized
 system, assuming the scenario of usual enterprise solutions. Of course, zig
 promises also systems, low-level, cross-platform and embedded capabilities, and
@@ -113,11 +113,11 @@ Because of this, careless memory management can be captured at compile time,
 getting rid of a whole class of bugs possible in C or C++ projects.
 
 The manual memory management also means that, unlike java or golang, the code
-is highly predictable, no gc pauses to clean things up.
+is highly predictable: no gc pauses to clean things up.
 
-The explicitness baked in zig also mean that there is no such thing as higher
+The explicitness baked in zig also means that there is no such thing as higher
 abstractions like classes or function overloading. In fact, the language
-relates more C or rust instead of java, golang, or C++.
+relates more to C or rust instead of java, golang, or C++.
 
 This does not mean that zig has little expressiveness. in fact, concepts like
 [generics][generics], [null-safe][null-safe] operations, sophisticated
@@ -133,11 +133,11 @@ available as key parts of the language.
 [reflection]: https://ziglang.org/documentation/master/#Function-Reflection
 
 Moreover, in zig is straightforward the use of C libraries, opening a rich
-ecosystem ecosystem from day zero of any project.
+ecosystem from day zero of any project.
 
 Zig also doubles as a build system, where the build script is written in zig
 itself, and given the high portability and ease of installation of its
-runtime, makes it an ideal tool for projects that not necessarily are zig
+runtime, makes it an ideal tool for projects that aren't necessarily are zig
 projects: remember, zig is also a C compiler.
 
 ## Installation
@@ -151,7 +151,7 @@ sudo dnf install zig
 
 [fedora]: https://getfedora.org
 
-One extra tool that will help is the the [zls][zls], a language server to the
+One extra tool that will help is the [zls][zls], a language server to the Zig
 language, so you get autocomplete working in lightweight text editors, such as
 [kate][kate].
 
@@ -186,12 +186,12 @@ zig build-exe 1-hello-world.zig
 ```
 
 This hello world has nothing special, except for the use of the built-in log
-library instead of direct use of standard output stream. So it's closer to a
+library instead of direct use of the standard output stream. So it's closer to a
 [node.js][node.js] hello world than a C hello world.
 
 [node.js]: https://nodejs.org
 
-An alternative, more closer to native languages would be like this:
+An alternative, closer to native languages, would be like this:
 
 ```zig
 // 2-hello-world.zig
@@ -211,9 +211,9 @@ Instead, the design choice of be highly explicit surfaces:
 - We need an io context (`init.io`) to perform io operations
 - We stream to the output so we don't need to handle a buffer and a writer
 
-it affected even the main function signature, demanding it to be more explicit
-about the possible errors, adding !void as return type, and declaring the init
-parameter so we get some goodies ready to use.
+it affects the main function signature even, demanding it to be more explicit
+about the possible errors, adding !void as the return type, and declaring the
+init parameter so we get some goodies ready to use.
 
 We even need to call the function using [try][try], since the io operation
 might return an error.
@@ -231,7 +231,7 @@ pub fn main() void {
 }
 ```
 
-In short, explicitness does not need to translate in complexity.
+In short, explicitness does not need to translate as complexity.
 
 ## 02: Basic types
 
@@ -243,9 +243,9 @@ This is why the type names in zig are as explicit as possible.
 
 ### Integers
 
-Basic integers follows: `i8`, `i16`, `i32`, `i64` and `i128`. Those types can
-hold the entire range of positive and negative numbers possible to represent
-using the number of bytes presented after the _i_ letter.
+The list of asic integers follows: `i8`, `i16`, `i32`, `i64` and `i128`. Those
+types can hold the entire range of positive and negative numbers possible to
+represent using the number of bytes presented after the _i_ letter.
 
 If you need to represent only positive integers, then the types are `u8`,`u16`,
 `u32`, `u64` and `u128`.
@@ -260,14 +260,14 @@ Just one bit, but here you write `true` or `false`.
 
 ### Custom bit sizes
 
-Another interesting feature of zig's type system is custom sized types. For
+Another interesting feature of zig's type system is custom-sized types. For
 example, let's represent a type able to hold **8** distinct values. To make it
 sol, all you need is **3 bits**, so declare `var x: u3 = 0;` is a complete
 valid statement.
 
 ### Small tour on types
 
-Below a small sample on how those types behave:
+This is a small sample of how those types behave:
 
 ```zig
 // 1-sample-types.zig
@@ -596,7 +596,7 @@ pub fn main() void {
 }
 ```
 
-Note that syntax sugar does not conflicts with the explicit control philosophy
+Note that syntax sugar does not conflict with the explicit control philosophy
 of the language.
 
 ## 05: Pointers and memory allocation
@@ -614,7 +614,7 @@ The Zig standard library provides a pattern for allocating memory, which allows
 the programmer to choose precisely how memory allocations are done within the
 standard library. No allocations happen behind your back!
 
-This is where zig really shines: several allocators are available and the
+This is where zig really shines: several allocators are available, and the
 control over memory and leak detection makes it easier to write good quality
 software.
 
@@ -639,7 +639,7 @@ pub fn main() void {
 }
 ```
 
-The example above works but ends in a thing that i didn't faced so far when
+The example above works but ends in a thing that i didn't face so far when
 dealing with zig: a runtime error!
 
 Pointer operations are straight forward:
@@ -695,7 +695,7 @@ pub fn main() void {
 
 ## 06: Modules and Functions
 
-In zig, modules works pretty much like [node.js][node.js] modules. All file
+In zig, modules work pretty much like [node.js][node.js] modules. All file
 contents are private except if marked as public, with the `pub` keyword.
 
 We must use the `@import` built-in function to look for modules:
@@ -779,7 +779,7 @@ pub fn main(init: std.process.Init) !void {
     std.log.debug("Guess the number:",.{} );
     // setup io subsystem
     const io = init.io;
-    var buf: [32]u8 = [_]u8{0} ** 32;
+    var buf: [32]u8 = @splat(0);
     const stdin = std.Io.File.stdin();
     var reader = stdin.reader(io, &buf);
     // call the reader
@@ -791,7 +791,7 @@ pub fn main(init: std.process.Init) !void {
 ```
 
 And Zig exposes this philosophy of explicitness again. But once set, the
-readline api and the number format api shines its ergonomics.
+readline api and the number format api shine its ergonomics.
 
 ## 08: Basic Output
 
@@ -871,7 +871,7 @@ pub fn main(init: std.process.Init) !void {
 ```
 
 See, the explicit control starts paying the extra effort. We just serialized,
-casted, and translated pieces of memory in anything we want with little
+cast, and translated pieces of memory to anytthing we want with little
 trouble.
 
 ### Read and write structs
@@ -896,7 +896,7 @@ pub fn main(init: std.process.Init) !void {
     var todos: [10]TodoItem = undefined;
     for (&todos, 0..) |*item, i| {
         // Fill description with some text
-        var desc: [256]u8 = [_]u8{0} ** 256;
+        var desc: [256]u8 = @splat(0);
         const text = "Todo item number ";
         std.mem.copyForwards(u8, desc[0..text.len], text);
         desc[text.len] = @intCast('0' + i);
@@ -1022,7 +1022,7 @@ const std = @import("std");
 pub fn main(init: std.process.Init) void {
     const stdin = std.Io.File.stdin();
     defer stdin.close(init.io);
-    var buffer = [_]u8{0} ** 1024;
+    var buffer: [1024]u8 = @splat(0);
     const errorOrBytesRead = stdin.readStreaming(init.io,&.{&buffer});
     std.log.info("Returned tytpe: {any}", .{@TypeOf(errorOrBytesRead)});
     std.log.info("Returned value: {any}", .{errorOrBytesRead});
@@ -1036,7 +1036,7 @@ pub fn main(init: std.process.Init) void {
 ```
 
 In this first example, the error comes wrapped, and although life would simply
-goes on if we didn't mind to look at it, we can deal with it as if it where an
+go on if we didn't mind looking at it, we can deal with it as if it was an
 [optional value][optional-value].
 
 [optional-value]: https://zig.guide/language-basics/optionals/
@@ -1044,7 +1044,7 @@ goes on if we didn't mind to look at it, we can deal with it as if it where an
 ### Catch errors
 
 An alternative and more concise idiom is the [error catching][error-catch]. Use
-it to completely ignore the error (at your own risk of course):
+it to completely ignore the error (at your own risk, of course):
 
 [error-catch]: https://zig.guide/language-basics/errors
 
@@ -1056,7 +1056,7 @@ const std = @import("std");
 pub fn main(init: std.process.Init) void {
     const stdin = std.Io.File.stdin();
     defer stdin.close(init.io);
-    var buffer = [_]u8{0} ** 1024;
+    var buffer: [1024]u8 = @splat(0);
     const bytesRead = stdin.readStreaming(init.io, &.{&buffer}) catch unreachable;
     std.log.info("Returned tytpe: {any}", .{@TypeOf(bytesRead)});
     std.log.info("Returned value: {any}", .{bytesRead});
@@ -1075,7 +1075,7 @@ const std = @import("std");
 pub fn main(init: std.process.Init) void {
     const stdin = std.Io.File.stdin();
     defer stdin.close(init.io);
-    var buffer = [_]u8{0} ** 1024;
+    var buffer: [1024]u8 = @splat(0);
     const bytesRead = stdin.readStreaming(init.io, &.{&buffer}) catch |err| {
         std.log.err("this shouldn't happen: {any}", .{err});
         return; // end the function here
@@ -1100,7 +1100,7 @@ const std = @import("std");
 pub fn main(init: std.process.Init) !void {
     const stdin = std.Io.File.stdin();
     defer stdin.close(init.io);
-    var buffer = [_]u8{0} ** 1024;
+    var buffer: [1024]u8 = @splat(0);
     const bytesRead = try stdin.readStreaming(init.io, &.{&buffer});
     std.log.info("Returned tytpe: {any}", .{@TypeOf(bytesRead)});
     std.log.info("Returned value: {any}", .{bytesRead});
@@ -1142,8 +1142,8 @@ pub fn main() void {
 }
 ```
 
-I think that this is the kind of thing that makes Zig worth consider to use on
-your next project. Error handling is what really matters on complex projects.
+I think that this is the kind of thing that makes Zig worth using on your
+next project. Error handling is what really matters in complex projects.
 
 ## 10: Tests
 
@@ -1177,7 +1177,7 @@ zig test samples/10/1-tests.zig
 
 ### Expect functions
 
-To check if the code does what it was supposed to, use [expect][expect]
+To check if the code does what it was supposed to, use the [expect][expect]
 functions family:
 
 [expect]: https://ziglang.org/documentation/master/#toc-Zig-Test
@@ -1202,9 +1202,9 @@ test "It should be same text" {
 
 ## 11: Generic Types
 
-The way that Zig solves type-safety issues with container types and other type
-related scenarios is using a clever combination of types as values and
-compile-time functions.
+The way that Zig solves type-safety issues with container types and other
+type-related scenarios is using a clever combination of types as values and
+**compile-time** functions.
 
 The [comptime][comptime] keyword makes code blocks to be known at compile time.
 That combined with type as first-class citizens in zig, The type information
@@ -1229,14 +1229,14 @@ pub fn main() void {
 }
 ```
 
-Types, like functions and errors, are first class citizens, so they can be
+Types, like functions and errors, are first-class citizens, so they can be
 assigned as regular variables.
 
 ## 12: Project Setup
 
 Like any reliable tool, Zig can scale up or down, depending on what you need.
 
-In order to organize big projects, consuming 3rd party libraries, setup a zig
+In order to organize big projects, consuming 3rd party libraries, set up a zig
 project with `zig init`:
 
 ```bash
@@ -1303,7 +1303,7 @@ Fetch command modifies the manifest file, adding the dependency:
 }
 ```
 
-Once installed, its time to declare the dependency into your `build.zig`:
+Once installed, it's time to declare the dependency into your `build.zig`:
 
 ```zig
 // my-project/build.zig
@@ -1445,7 +1445,7 @@ Well, it abstracts the underlying concurrency implementation, making the code
 portable event to platforms without this capability.
 
 Also, the [future api][future-api] only decouples execution from result
-gathering, it **avoids**
+gathering: it **avoids**
 [color functions][color-functions] introduction in your codebase.
 
 [future-api]: https://ziglang.org/documentation/0.16.0/std/#std.Io.Future
@@ -1533,8 +1533,8 @@ fn sampleServer(io: Io, addr: IpAddress) !void {
     defer srv.deinit(io);
     const stream = try srv.accept(io);
     defer stream.close(io);
-    var buffer = [_]u8{0} ** 1024;
-    var chunk = [_]u8{0} ** 1024;
+    var buffer: [1024]u8 = @splat(0);
+    var chunk: [1024]u8 = @splat(0);
     var reader_obj = stream.reader(io, &buffer);
     var reader = &reader_obj.interface;
     const read = try reader.readSliceShort(&chunk);
@@ -1545,7 +1545,7 @@ fn sampleClient(io: Io, addr: IpAddress) !void {
     std.log.info("prepare client", .{});
     var stream = try addr.connect(io, .{ .mode = .stream });
     defer stream.close(io);
-    var buffer = [_]u8{0} ** 1024;
+    var buffer: [1024]u8 = @splat(0);
     var writer_obj = stream.writer(io, &buffer);
     var writer = &writer_obj.interface;
     try writer.writeAll("Hello from client");
@@ -2106,7 +2106,7 @@ Noteworthy: the code is pretty _c-ish_, returning those integer error codes.
 Also, at least in my personal experience, the language server (zls) win not
 offer type information for the translated c header file.
 
-But boy it works and it's fast!
+But boy, it works and it's fast!
 
 For a more idiomatic approach, there are a few wrapper projects written in
 zig, like [zig-sqlite][zig-sqlite] or [zqlite.zig][zqlite.zig].
@@ -2291,7 +2291,7 @@ Right now, Zig lives for its promise of performance, general purpose,
 scalable and of course, _better than C_.
 
 The design of asynchronous IO operations, the explicit memory control, the
-explicit way to do things, all of this, are both beautiful and mental-model
+explicit way to do things, all of this are both beautiful and mental-model
 braking change. Remembers me when i started to learn [htmx][htmx], coming
 from [vue][vue].
 
@@ -2304,7 +2304,7 @@ complete, and the community around the platform keeps growing and offering
 more and more libraries. Also, they are nice people.
 
 For instance, it is dead easy to package and distribute software with zig.
-The long-term outcome is a huge amount of libraries.
+The long-term outcome is a huge number of libraries.
 
 The first-party access of C libraries also contributes to the expected
 growth of Zig.
@@ -2313,24 +2313,24 @@ Oh, and the language is neat, a real pleasure to write. That helps!
 
 ### Compared to other platforms
 
-When i think of low-level, high-performance scenarios, then C and C++ comes
-to the table. Zig **explicitly** compares itself to those and ues, it does a
+When i think of low-level, high-performance scenarios, then C and C++ come to
+the table. Zig **explicitly** compares itself to those and ues, it does a
 good job.
 
-Then there is the application scenarios. Here, languages like Node, Go and
+Then there are the application scenarios. Here, languages like Node, Go and
 Java come to my mind. Since performance isn't the main concern, the lack of
 libraries can downplay Zig when comparing against those other platforms,
 pretty much like how Go used to compare with Java.
 
 The fact that Zig is not an Object-oriented language is not a problem, the
-state of node libraries are proof of that. Less type gymnastics is a plus,
-although the steady growth of Typescript tries to prove me wrong.
+state of node libraries is proof of that. Less type gymnastics is a plus,
+although the steady growth of TypeScript tries to prove me wrong.
 
-Of those 3, the one with biggest 3rd party libraries is Java, i think,
+Of those 3, the one with the biggest 3rd party libraries is Java, i think,
 featuring maven central as the one place to publish and find packages. The
-more ergonomic one, regarding the ease of installation, is Node/npm combo.
-But the real end-to-end best experiences, from consuming to publishing
-packages, is Go with Go modules. And Zig mimics this one, with slightly
+more ergonomic one, regarding the ease of installation, is the Node/npm combo.
+But the real end-to-end best experience, from consuming to publishing
+packages, is Go with Go modules. And Zig mimics this one, with slight
 improvements, like the build and metadata separation.
 
 Finally, regarding portability, Zig is a first-class citizen on this one,
@@ -2341,9 +2341,9 @@ cases.
 
 ### Future
 
-Zig still not at 1.0 release. This matters a lot. But this also keeps things
-quite honest, so when that stable release finally arrives, Any architect can
-make a solid decision, able to endure over the years.
+Zig isn't at 1.0 release yet. This matters a lot. But this also keeps
+things quite honest, so when that stable release finally arrives, Any
+architect can make a solid decision, able to endure over the years.
 
 I think it's a matter of time now to see the ecosystem around zig grows
 enormously. It's dead easy to publish, to write, test and reach other people
