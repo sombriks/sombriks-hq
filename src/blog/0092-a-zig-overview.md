@@ -35,7 +35,7 @@ My study notes on [Zig][Zig], the _better than C_ programming language.
 - 15: List and Map
 - 16: Zig As A C Compiler
 - 17: Databases
-- 18: Does it worth learning Zig
+- 18: Is it worth learning Zig
 - Conclusion
 
 ## Introduction
@@ -2279,9 +2279,9 @@ zig build db
 zig build run
 ```
 
-## 18: Does it Worth Learning Zig
+## 18: Is it Worth Learning Zig
 
-So, does it worth the effort?
+So, is it worth the effort?
 
 The short answer is **yes**, no fear of wasting time.
 
