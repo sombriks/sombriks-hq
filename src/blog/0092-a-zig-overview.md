@@ -1411,7 +1411,7 @@ But it really shines with the new concurrent [async/await][async/await] API:
 
 [async/await]: https://www.youtube.com/watch?v=iqhS98J6PNU
 
-```zjg
+```zig
 // 2-threads.zig
 
 const std = @import("std");
