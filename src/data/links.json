@@ -1610,5 +1610,15 @@
       "information",
       "quite inspiring history of information"
     ]
+  },
+  {
+    "label": "Proficiente Parallel Programming",
+    "link": "https://www.youtube.com/watch?v=x1N9JPPPC18",
+    "tags": [
+      "zig",
+      "parallel",
+      "concurrency",
+      "deep knowledge on parallel programming"
+    ]
   }
 ]
