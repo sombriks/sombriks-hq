@@ -1620,5 +1620,13 @@
       "concurrency",
       "deep knowledge on parallel programming"
     ]
+  },
+  {
+    "label": "The Java Story",
+    "link": "https://www.youtube.com/watch?v=ZqGSg4b_cZA",
+    "tags":[
+      "java",
+      "history"
+    ]
   }
 ]
