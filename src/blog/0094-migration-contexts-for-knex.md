@@ -6,6 +6,7 @@ tags:
   - liquibase
   - java
   - node
+  - database migrations
 date: 2026-08-01
 draft: false
 ---
