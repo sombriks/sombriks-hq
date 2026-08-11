@@ -1518,4 +1518,8 @@ presented here.
 
 But my case is made, the gun is loaded and ready to (j)bang.
 
+Check the complete source code [here][code].
+
+[code]: https://github.com/sombriks/hello-jbang
+
 Happy hacking!
