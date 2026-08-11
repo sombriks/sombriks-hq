@@ -1,6 +1,7 @@
 ---
 layout: blog-layout.pug
 tags:
+  - posts
   - jbang
   - java
   - kotlin
