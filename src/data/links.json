@@ -1646,5 +1646,15 @@
       "parcel",
       "mpa"
     ]
+  },
+  {
+    "label": "HTML DOM over the terminal, pretty cool",
+    "link": "https://termdom.org/",
+    "tags": [
+      "terminal",
+      "html",
+      "dom",
+      "tui"
+    ]
   }
 ]
