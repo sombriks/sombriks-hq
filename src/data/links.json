@@ -1656,5 +1656,13 @@
       "dom",
       "tui"
     ]
+  },
+  {
+    "label": "Why can't we have simple software?",
+    "link": "https://www.youtube.com/watch?v=czzAVuVz7u4",
+    "tags": [
+      "software",
+      "simplicity"
+    ]
   }
 ]
