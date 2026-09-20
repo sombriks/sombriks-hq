@@ -2,6 +2,7 @@
 layout: blog-layout.pug
 date: 2026-09-20
 tags:
+  - posts
   - git
   - linux
   - cron
