@@ -22,6 +22,8 @@ tags:
   - fastify
   - date-fns
   - jwt
+  - container
+  - CI/CD
 draft: false
 ---
 # GitOps Above Bare Minimum
