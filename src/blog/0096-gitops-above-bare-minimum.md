@@ -326,7 +326,6 @@ cockpit.sombriks.org {
 Next, we configure cockpit to accept connection through the reverse proxy.
 
 If the file `/etc/cockpit/cockpit.conf` doesn't exist, create one:  
-```
 
 ```ini
 [WebService]
