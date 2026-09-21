@@ -24,6 +24,8 @@ tags:
   - jwt
   - container
   - CI/CD
+  - ava
+  - testcontainers
 draft: false
 ---
 # GitOps Above Bare Minimum
