@@ -305,6 +305,8 @@ public class SwingApp extends JFrame {
 
 Swing at its best: layouts, models, renderes and events.
 
+![todo-swing](/post-pics/0097-state-of-java-desktop/todo-swing.png)
+
 Note also the dark theme registration: the [flatlaf][flatlaf] dependency
 makes the swing appearance more bearable, and the defaults delivers a good
 experience.
@@ -539,6 +541,8 @@ public class TerminalApp extends ToolkitApp {
 ```
 
 Now, this is interesting.
+
+![todo-terminal](/post-pics/0097-state-of-java-desktop/todo-terminal.png)
 
 We have a CSS dialect, a render function and a fluent api to setup the UI,
 and the separation of concerns is pretty solid.
@@ -789,6 +793,8 @@ public class JavaFxApp extends Application {
 ```
 
 What a ride.
+
+![todo-fx](/post-pics/0097-state-of-java-desktop/todo-fx.png)
 
 JavaFx delivers a nice experience, but hits an uncanny spot: it either can
 be better than swing or worse, much worse.
@@ -1063,7 +1069,10 @@ public class SwtApp {
 
 The swt version is the most verbose one.
 
-On the other hand, it will integrate perfectly with your current desktop.
+![todo-swt](/post-pics/0097-state-of-java-desktop/todo-swt.png)
+
+On the other hand, it will integrate perfectly with your current desktop, 
+even adopting light mode, dark mode, accent colors, whatever you have!
 
 But boy, it's so much work to get just the same.
 
