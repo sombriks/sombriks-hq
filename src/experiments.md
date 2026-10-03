@@ -15,6 +15,16 @@ useful repositories present on [my github](https://github.com/sombriks?tab=repos
 Therefore, i'll add here not only _finished_ solutions, but also my exploration
 projects.
 
+## [WorHou Time](https://worhou.getsheetdone.net/)
+
+This application is a simple experiment on how to get simple things working. If
+_redline_ was a sample on how to harness the modern cloud infrastructure,
+_worhou_ dwells somewhere bellow, something more simple but pretty capable.
+
+The application tracks work time and uses [HTMX](https://htmx.org) and
+[node](https://nodejs.org) in its implementation along other simple yet powerful
+libraries and tools.
+
 ## [preditor](https://github.com/sombriks/preditor)
 
 Simple ascii-art online editor.
