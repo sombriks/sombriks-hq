@@ -5,7 +5,7 @@ description: A curated list of useful and interesting links by Sombriks.
 h1 Links
 input#search(placeholder="Search links..." onkeyup="filterLinks()")
 div
-  each link in links
+  each link in links.reverse()
     span.info(data-tags=link.tags.join(',')+","+link.label)
       a(href=link.link)= link.label
       i &nbsp;
