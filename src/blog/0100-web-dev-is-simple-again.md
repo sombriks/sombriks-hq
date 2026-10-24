@@ -15,7 +15,7 @@ draft: false
 
 16 years ago, web development was all about to produce some html pages, a ccs
 style and a couple of scripts. A lot happened since then, but nowadays it's like
-16 years ago again. And that's a hyge revolution!
+16 years ago again. And that's a hue revolution!
 
 This is not a complete return to the same, but to something else entirely. You
 see, in the last 16 year so much tools, techniques and cultural changes 
