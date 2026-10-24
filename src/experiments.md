@@ -15,6 +15,12 @@ useful repositories present on [my github](https://github.com/sombriks?tab=repos
 Therefore, i'll add here not only _finished_ solutions, but also my exploration
 projects.
 
+## [Joãozinho Attack](https://sombriks.github.io/joaozinhoattack/)
+
+The game i wrote to my nephew. I hope one day he fix this game.
+
+I used phaser and parcel, and boy it was a luxyry of DX.
+
 ## [WorHou Time](https://worhou.getsheetdone.net/)
 
 This application is a simple experiment on how to get simple things working. If
