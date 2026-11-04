@@ -20,8 +20,5 @@
     "prism-themes": "^1.9.0",
     "prismjs": "^1.30.0",
     "yaml": "^2.8.1"
-  },
-  "dependencies": {
-    "-": "^0.0.1"
   }
 }
