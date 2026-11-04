@@ -44,11 +44,13 @@ resume:
           icon:
         - Go: ★★★★☆
           icon:
+        - Zig: ★★★☆☆
+          icon:
         - C: ★★★☆☆
           icon:
-        - C++: ★★★☆☆
+        - C++: ★★★★☆
           icon:
-        - Python: ★★☆☆☆
+        - Python: ★★★☆☆
           icon:
         - Ruby: ★★☆☆☆
           icon:
@@ -58,9 +60,9 @@ resume:
           icon:
         - Vue.js: ★★★★★
           icon:
-        - React: ★★★★☆
+        - React: ★★★★★
           icon:
-        - Angular: ★★★★☆
+        - Angular: ★★★★★
           icon:
         - HTMX: ★★★★☆
           icon:
@@ -70,9 +72,9 @@ resume:
           icon:
         - Nunjucks: ★★★★☆
           icon:
-        - CSS: ★★★☆☆
+        - CSS: ★★★★☆
           icon:
-        - Angular-Material: ★★★☆☆
+        - Angular-Material: ★★★★☆
           icon:
         - Vuetify: ★★★☆☆
           icon:
@@ -92,11 +94,11 @@ resume:
           icon:
         - Koa.js: ★★★★★
           icon:
-        - JakartaEE: ★★★★☆
+        - JakartaEE: ★★★★★
           icon:
-        - JPA: ★★★★☆
+        - JPA: ★★★★★
           icon:
-        - JDBI: ★★★★☆
+        - JDBI: ★★★★★
           icon:
         - Liquibase: ★★★★☆
           icon:
@@ -106,7 +108,7 @@ resume:
           icon:
         - Vert.x: ★★★☆☆
           icon:
-        - Kafka: ★★★☆☆
+        - Kafka: ★★★★☆
           icon:
         - Fastify: ★★★☆☆
           icon:
@@ -166,13 +168,17 @@ resume:
           icon:
         - Gradle: ★★★★★
           icon:
-        - NPM: ★★★★★
+        - Apache Ant: ★★★★☆
+          icon:
+        - jBang: ★★★★☆
           icon:
         - BLD: ★★★★☆
           icon:
+        - Zig Build: ★★★★☆
+          icon:
         - Go modules: ★★★★☆
           icon:
-        - Apache Ant: ★★★★☆
+        - NPM: ★★★★★
           icon:
         - Yarn: ★★★★☆
           icon:
@@ -207,6 +213,7 @@ resume:
         - LevelDB: ★★★☆☆
           icon:
         - MongoDB: ★★☆☆☆
+          icon:
     - Cloud/DevOps/GitOps:
       items:
         - Git, GitHub, GitLab: ★★★★★
@@ -217,9 +224,11 @@ resume:
           icon:
         - Docker: ★★★★★
           icon:
+        - Podman: ★★★★★
+          icon:
         - Kubernetes: ★★★★★
           icon:
-        - ArgoCD: ★★★★☆
+        - ArgoCD/GitOps: ★★★★☆
           icon:
         - AWS: ★★★★☆
           icon:
@@ -227,11 +236,19 @@ resume:
           icon:
         - GCP: ★★★☆☆
           icon:
+        - Microsoft Azure: ★★★☆☆
+          icon:
+        - Oracle Cloud Infrastructure: ★★★☆☆
+          icon:
         - Heroku: ★★★☆☆
           icon:
         - Fly.io: ★★☆☆☆
           icon:
         - Firebase: ★★☆☆☆
+          icon:
+        - Terraform: ★★☆☆☆
+          icon:
+        - Kubernetes Charts: ★★☆☆☆
           icon:
     - Miscellaneous:
       items:
@@ -240,6 +257,8 @@ resume:
         - Windows: ★★★☆☆
           icon:
         - Mac OS: ★★★☆☆
+          icon:
+        - HP-UX: ★★☆☆☆
           icon:
         - Jira: ★★★☆☆
           icon:
@@ -251,13 +270,18 @@ resume:
           icon:
         - UML: ★★★☆☆
           icon:
+        - Agentic Development: ★★★☆☆
+          icon:
   work:
     - SEPLAG CE: https://www.seplag.ce.gov.br/
       position: [ Systems Analyst ]
       period: 2025-05-13 - present day
       description: |
         This is a governamental public entity which provides compute
-        infrastructure and systems for all other gov entities.
+        infrastructure and systems for all other gov entities. My hey role is
+        system maintenance and evolution, applying modern, affordable, java
+        solutions and, more recently, doing so harnessing the possibilities of
+        agentic development.
       projects:
         - SIGA:
           responsibilities: [ Fullstack development ]
@@ -271,12 +295,14 @@ resume:
         - SGBI:
           responsibilities: [ Fullstack development ]
           description: |
-            Assets management system, focused on real state management
+            Assets management system, focused on real estate management
 
             Besides maintenance, i was involved into conception and
             implementation of a newer version of this system in order to conform
             with governamental rules regarding proper financial reports of all
             govern's real estate.
+            
+            This project is also the pilot regarding agentic development.
       tech stack:
         [
           Git,
@@ -297,6 +323,7 @@ resume:
           PrimeFaces,
           Gitlab CI,
           Maven,
+          NPM
         ]
     - Nearsure: https://www.nearsure.com/
       position:
