@@ -4,7 +4,7 @@ date: 2026-10-23
 tags:
   - posts
   - long rant
-  - project-structure
+  - project structure
   - javascript
   - phaser
   - parcel

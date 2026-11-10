@@ -9,7 +9,7 @@ tags:
   - listen/notify
   - podman
   - sql
-  - project-structure
+  - project structure
 draft: false
 ---
 
@@ -367,4 +367,3 @@ than the process PID number!
 
 So, if you need high performance, good scalability, either up or down, and have
 the time, go with zig. It's better than C.
-
