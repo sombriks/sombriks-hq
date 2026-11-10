@@ -10,7 +10,7 @@ style.
   }
   .block div {
     margin-top: 0;
-  }  
+  }
   div.foto {
     margin-top: 0;
     display: flex;
@@ -23,6 +23,11 @@ style.
   details {
     break-inside: avoid;
   }
+  @media print {
+    :root {
+      font-size: 16px;
+    }
+  }
 .foto
   h1= curriculum.resume['personal info'].name
 .foto
@@ -30,7 +35,7 @@ style.
 i= curriculum.resume['personal info'].motto
 p= curriculum.resume['cover letter']
 h2 Contact info
-each info in Object.keys(curriculum.resume['other contact info']) 
+each info in Object.keys(curriculum.resume['other contact info'])
   .block
     a(target="_blank" href=curriculum.resume['other contact info'][info])= info
 .break
@@ -48,7 +53,7 @@ each experience in curriculum.resume.work
   details
     summary
       i= `${experience.position} at `
-      a(target="_blank" href=Object.values(experience)[0]) 
+      a(target="_blank" href=Object.values(experience)[0])
         i= `${Object.keys(experience)[0]}`
       i= ` (${experience.period})`
     p= experience.description
@@ -68,7 +73,7 @@ each edu in curriculum.resume.education
   details
     summary
       i= `${edu.type} at `
-      a(target="_blank" href=Object.values(edu)[0]) 
+      a(target="_blank" href=Object.values(edu)[0])
         i= `${Object.keys(edu)[0]}`
       i= ` (${edu.period})`
     p= edu.description

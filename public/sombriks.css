@@ -17,5 +17,8 @@ div.avatar, div.theme-item, div.light-dark {
 .comparison-box > div {
     flex-grow: 1;
     min-width: 360px;
+}
 
+:root {
+  font-size: 26px;
 }

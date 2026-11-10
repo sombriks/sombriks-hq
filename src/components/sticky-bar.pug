@@ -21,6 +21,11 @@ mixin sticky-bar()
       flex-wrap: wrap;
       align-items: center;
     }
+    @media print {
+      .sticky-bar {
+        display:none;
+      }
+    }
   div.sticky-bar
     .grow
       -
@@ -35,9 +40,9 @@ mixin sticky-bar()
           "Privacy": "/privacy",
           "RSS": "/feed.xml"
         }
-      div 
-        // empty div fixes css issue 
-      each l in Object.keys(menu) 
+      div
+        // empty div fixes css issue
+      each l in Object.keys(menu)
         div
           i &nbsp;
           a(href=menu[l])=l

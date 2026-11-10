@@ -248,7 +248,7 @@ resume:
           icon:
         - Terraform: ★★☆☆☆
           icon:
-        - Kubernetes Charts: ★★☆☆☆
+        - Helm Charts: ★★☆☆☆
           icon:
     - Miscellaneous:
       items:
@@ -301,7 +301,7 @@ resume:
             implementation of a newer version of this system in order to conform
             with governamental rules regarding proper financial reports of all
             govern's real estate.
-            
+
             This project is also the pilot regarding agentic development.
       tech stack:
         [
@@ -309,8 +309,9 @@ resume:
           JSF,
           Java 7 - 25,
           Docker,
-          Angular,
+          Angular 21+,
           Spring Boot,
+          Thymeleaf
           Testcontainers,
           JBoss Application Server,
           Oracle database,
@@ -322,6 +323,8 @@ resume:
           jQuery,
           PrimeFaces,
           Gitlab CI,
+          ArgoCD,
+          Helm Charts,
           Maven,
           NPM
         ]
@@ -336,7 +339,7 @@ resume:
         ]
       period: 2022-08-29 - 2025-03-31
       description: |
-        Nearsure is a 'nearshore' outsourcing company with many US-based 
+        Nearsure is a 'nearshore' outsourcing company with many US-based
         clients.
       projects:
         - ARIA team at EasyPark:
@@ -379,7 +382,7 @@ resume:
             SpringBoot, but there is also Node.js services and Go services.
 
             Those services are running inside 3 EKS clusters, completely
-            integrated with a CI/CD pipeline written by me. 
+            integrated with a CI/CD pipeline written by me.
 
             I am currently in charge of maintain and evolve all services and i
             plan to move most of them from jvm ecosystem to something more
@@ -476,7 +479,7 @@ resume:
               Technical interviews,
             ]
           description: |
-            It's a java-based solution to recover cross-reference information 
+            It's a java-based solution to recover cross-reference information
             at PGE-RO
         - Kanoê:
           responsibilities:
@@ -584,7 +587,7 @@ resume:
       position: [ Senior backend developer ]
       period: 2019-03 - 2021-01-29
       description: |
-        This is a traditional and quite well-established group dealing with 
+        This is a traditional and quite well-established group dealing with
         retail sales solutions. Here we helped small business deal with the
         overly complicated brazilian tax systems and to offered tools to manage
         sales, stock, financial reconciliation and so on. Also we did embrace
@@ -655,7 +658,7 @@ resume:
       description: |
         At G4L (Game For Learning), we create innovative educational games, (OED
         - Objeto de Ensino Digital), building knowledge using the entertainment
-        to keep the student focus. Then we pivoted the focus of the startup and 
+        to keep the student focus. Then we pivoted the focus of the startup and
         renamed it to TechPar - Tecnologia e Participações.
 
         At TechPar we dealt with software solutions on various fields. From
@@ -782,8 +785,8 @@ resume:
           responsibilities: [ Code development ]
           description: |
             This was the main solution on transit law enforcement. On this
-            project we started the migration from a delphi based solution to a 
-            java web based solution. that could allow the hardware and operating 
+            project we started the migration from a delphi based solution to a
+            java web based solution. that could allow the hardware and operating
             system be replaced by cheaper options in the future.
       tech stack:
         [
@@ -857,7 +860,7 @@ resume:
         - Small robotic car:
           responsibilities: [ Experimental code development ]
           description: |
-            A robot prototype using a Beagleboard. since the robot was in 
+            A robot prototype using a Beagleboard. since the robot was in
             another state, 2000 kilometers apart. I had to double ssh to get
             access to the C/C++ openCV code inside the robot.
         - Mobile software to recommend products and services:
