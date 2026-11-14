@@ -2,80 +2,102 @@ mixin theme-chooser()
   //- data/temas.yml
   -
     let themes = temas.themes
-  // estilos
   style.
-    div.theme-panel {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    div.chooser-active {
-      backdrop-filter: blur(0.3rem);
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-      border-radius: 2rem;
-      position: absolute;
-      z-index: 10000;
-      height: 100vh;
-      left: 0;
-      top: 0;
+    div.theme-shadow {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
     }
 
-    div.theme-item {
-      transform: rotate(45deg);
-      min-height: 3rem;
-      max-height: 3rem;
-      min-width: 3rem;
-      max-width: 3rem;
+    div.theme-shadow.chooser-active {
+      max-height: 16rem;
+      overflow-y: auto;
+      border-top: 1px dashed var(--text-color);
+      padding-top: 0.4rem;
+    }
+
+    button.theme-item {
       display: none;
-      /*none, inline-block*/
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 0.6ch;
+      white-space: nowrap;
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      text-align: left;
+      padding: 0.15rem 0.25rem;
+      cursor: pointer;
+      user-select: none;
+      width: 100%;
     }
 
-    div.theme-item > div.bg,
-    div.theme-item > div.fg {
+    button.theme-item.active,
+    div.theme-shadow.chooser-active button.theme-item {
+      display: flex;
+    }
+
+    button.theme-item span {
+      display: inline-block;
       margin: 0;
+      padding: 0;
     }
-  // estrutura
+
+    button.theme-item:hover,
+    div.theme-shadow.chooser-active button.theme-item.active {
+      background-color: var(--text-color);
+      color: var(--background-color);
+    }
+
+    span.theme-check::before {
+      content: "[ ]";
+    }
+
+    button.theme-item.active span.theme-check::before {
+      content: "[*]";
+    }
+
+    span.swatch-blocks {
+      display: inline-flex !important;
+      flex-shrink: 0;
+    }
+
+    span.theme-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
   .theme-shadow
-    div
-      each t in themes
-        div.theme-item(title=t.name onclick=`chooseTheme("${t.name}")`)
-          div.bg(style=`background-color: ${t.c0};`) &nbsp;
-          div.fg(style=`background-color: ${t.c1};`) &nbsp;
-  // script
+    each t in themes
+      button.theme-item(type="button" title=t.name onclick=`chooseTheme("${t.name}")`)
+        span.theme-check
+        span.swatch-blocks
+          span(style=`color: ${t.c0};background-color:${t.c1};`) 🮘
+          span(style=`color: ${t.c1};background-color:${t.c0};`) 🮙
+        span.theme-name= t.name
+
   script(type='application/javascript').
-    // initial state
-    const theme = localStorage.getItem('theme') || 'stolen from stackoverflow'
-    const themeItem = document.querySelector(`.theme-item[title='${theme}']`)
-    if (themeItem) {
-      themeItem.style.display = 'block'
-      document.querySelector(':root')
-              .dataset.theme = theme
-    } else {
-      document
-              .querySelector(`.theme-item`)
-              .style.display = 'block'
-    }
-    // choose theme
+    const applyThemeState = name => {
+      document.documentElement.dataset.theme = name;
+      localStorage.setItem('theme', name);
+      document.querySelectorAll('.theme-item').forEach(item => {
+        item.classList.toggle('active', item.title === name);
+      });
+    };
+
+    const initialTheme = localStorage.getItem('theme') || 'stolen from stackoverflow';
+    const exists = document.querySelector(`.theme-item[title="${initialTheme}"]`);
+    applyThemeState(exists ? initialTheme : document.querySelector('.theme-item').title);
+
     const chooseTheme = name => {
-      const panel = document.querySelector('.theme-panel')
-      const shadow = document.querySelector('.theme-shadow')
+      const shadow = document.querySelector('.theme-shadow');
       if (shadow.classList.contains('chooser-active')) {
-        document.querySelectorAll('.theme-item').forEach(item => {
-          if (item.title === name) {
-            document.querySelector(':root').dataset.theme = name
-            localStorage.setItem('theme', name);
-            item.style.display = 'inline-block'
-          } else {
-            item.style.display = 'none'
-          }
-        })
-        shadow.classList.remove('chooser-active')
+        applyThemeState(name);
+        shadow.classList.remove('chooser-active');
       } else {
-        shadow.classList.add('chooser-active')
-        document.querySelectorAll('.theme-item').forEach(item => {
-          item.style.display = 'inline-block'
-        })
+        shadow.classList.add('chooser-active');
       }
-    }
+    };

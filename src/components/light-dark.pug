@@ -1,35 +1,37 @@
 mixin light-dark()
   style.
-    div.light-dark {
-      border-width: 0.1rem;
-      font-weight: bold;
-      min-width: 1rem;
-      max-width: 1rem;
-      display: none; /*none, inline*/
-    }
-
-    div.light-dark:hover {
+    button.light-dark {
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0;
+      margin: 0.25rem 0;
+      display: none;
       cursor: pointer;
+      user-select: none;
     }
 
-  div.light-dark.light-dark-dark(onclick="toggleLightDark('dark')") 🌛︎︎
-  div.light-dark.light-dark-light(onclick="toggleLightDark('light')") 🌞︎︎
+    button.light-dark:hover {
+      background-color: var(--text-color);
+      color: var(--background-color);
+    }
+
+  button.light-dark.light-dark-dark(type="button" onclick="toggleLightDark('dark')") [ ☀ LIGHT ]
+  button.light-dark.light-dark-light(type="button" onclick="toggleLightDark('light')") [ ☾ DARK ]
 
   script(type="application/javascript").
     const toggleLightDark = mode => {
-      document.querySelector(`.light-dark-dark`).style.display = 'inline';
-      document.querySelector(`.light-dark-light`).style.display = 'inline';
+      document.querySelector('.light-dark-dark').style.display = 'inline-block';
+      document.querySelector('.light-dark-light').style.display = 'inline-block';
       document.querySelector(`.light-dark-${mode}`).style.display = 'none';
-      document.querySelector(":root").dataset.mode = mode;
+      document.documentElement.dataset.mode = mode;
       localStorage.setItem('mode', mode);
     }
 
     const tema = e => {
-      if (e.matches) {
-        toggleLightDark('dark');
-      } else {
-        toggleLightDark('light');
-      }
+      toggleLightDark(e.matches ? 'dark' : 'light');
     }
 
     const matchMedia = window.matchMedia('(prefers-color-scheme: dark)');
