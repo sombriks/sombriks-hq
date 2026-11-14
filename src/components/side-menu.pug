@@ -1,0 +1,57 @@
+include ./light-dark
+  include ./theme-chooser
+
+mixin side-menu
+  style.
+    div.side-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+
+    }
+
+    div.side-menu > details {
+      opacity: 0.4;
+    }
+
+    div.side-menu > details > summary > span:before {
+      /*content: '🡢';*/
+      font-size: 2rem;
+    }
+
+    div.side-menu > details[open] {
+      opacity: 0.8;
+    }
+
+    @media print {
+      .side-menu {
+        display: none;
+      }
+    }
+  div.side-menu
+    details
+      summary
+        span Menu
+      -
+        const menu = {
+          "_Start": "/",
+          "About": "/about",
+          "Bio": "/bio",
+          "Blog": "/blog",
+          "Contact": "/contact",
+          "Experiments": "/experiments",
+          "Links": "/links",
+        }
+      each m in Object.keys(menu)
+        p.
+          [ #[a(href=menu[m])=m] ]
+    details
+      summary
+        span ...
+      p
+        +theme-chooser
+      p
+        +light-dark
+

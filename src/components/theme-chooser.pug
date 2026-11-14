@@ -3,11 +3,18 @@ mixin theme-chooser()
   -
     let themes = temas.themes
   // estilos
-  style. 
+  style.
+    div.theme-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
     div.chooser-active {
       backdrop-filter: blur(0.3rem);
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-      border-radius:: 2rem;
+      border-radius: 2rem;
       position: absolute;
       z-index: 10000;
       height: 100vh;
@@ -21,7 +28,7 @@ mixin theme-chooser()
       max-height: 3rem;
       min-width: 3rem;
       max-width: 3rem;
-      display: none; 
+      display: none;
       /*none, inline-block*/
     }
 
@@ -41,22 +48,22 @@ mixin theme-chooser()
     // initial state
     const theme = localStorage.getItem('theme') || 'stolen from stackoverflow'
     const themeItem = document.querySelector(`.theme-item[title='${theme}']`)
-    if(themeItem)   {
+    if (themeItem) {
       themeItem.style.display = 'block'
       document.querySelector(':root')
-        .dataset.theme = theme
+              .dataset.theme = theme
     } else {
       document
-        .querySelector(`.theme-item`)
-        .style.display = 'block'
+              .querySelector(`.theme-item`)
+              .style.display = 'block'
     }
     // choose theme
     const chooseTheme = name => {
       const panel = document.querySelector('.theme-panel')
       const shadow = document.querySelector('.theme-shadow')
-      if(shadow.classList.contains('chooser-active')) {
+      if (shadow.classList.contains('chooser-active')) {
         document.querySelectorAll('.theme-item').forEach(item => {
-          if(item.title === name) {
+          if (item.title === name) {
             document.querySelector(':root').dataset.theme = name
             localStorage.setItem('theme', name);
             item.style.display = 'inline-block'

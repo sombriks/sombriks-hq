@@ -1,0 +1,36 @@
+
+details {
+    border: 2px solid transparent;
+    border-top-color: var(--text-color);
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+}
+
+details[open] {
+    border-color: var(--text-color);
+    padding-bottom: 1rem;
+}
+
+details > summary {
+    display: block;
+    width: fit-content;
+
+    transform: translateY(-55%);
+
+    background-color: var(--background-color);
+    padding: 0 0.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+details > summary::before {
+    content: "[ + ";
+}
+
+details[open] > summary::before {
+    content: "[ - ";
+}
+
+details > summary::after {
+    content: " ]";
+}

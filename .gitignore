@@ -22,3 +22,6 @@ yarn-error.log*
 .firebase
 
 *.bkp
+
+.junie
+skills/system

@@ -20,12 +20,16 @@ style.
   .break {
     break-after: page;
   }
+  div.fragment {
+      padding: 0.5rem;
+      break-inside: avoid;
+  }
   details {
     break-inside: avoid;
   }
   @media print {
     :root {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 .foto
@@ -41,42 +45,46 @@ each info in Object.keys(curriculum.resume['other contact info'])
 .break
 h2 Skills
 each skill in curriculum.resume.skills
-  details(open=true)
-    summary= Object.keys(skill)[0]
-    each item in skill.items
-      .block
-        div= Object.keys(item)[0]
-        div= Object.values(item)[0]
+  .fragment
+      details(open=true)
+        summary= Object.keys(skill)[0]
+        each item in skill.items
+          .block
+            div= Object.keys(item)[0]
+            div= Object.values(item)[0]
 .break
 h2 Work Experience
 each experience in curriculum.resume.work
-  details
-    summary
-      i= `${experience.position} at `
-      a(target="_blank" href=Object.values(experience)[0])
-        i= `${Object.keys(experience)[0]}`
-      i= ` (${experience.period})`
-    p= experience.description
-    h3 Projects
-    each project in experience.projects
+  .fragment
       details
-        summary= Object.keys(project)[0]
-        p= project.description
-        h4 Responsibilities
-        p= project.responsibilities
-    h3 Technologies
-    each tech in experience['tech stack']
-      .block
-        a(target="_blank" href=`http://bing.com?q=${tech}`)= tech
+        summary
+          i= `${experience.position} at `
+          a(target="_blank" href=Object.values(experience)[0])
+            i= `${Object.keys(experience)[0]}`
+          i= ` (${experience.period})`
+        p= experience.description
+        h3 Projects
+        each project in experience.projects
+          details
+            summary= Object.keys(project)[0]
+            p= project.description
+            h4 Responsibilities
+            p= project.responsibilities
+        h3 Technologies
+        each tech in experience['tech stack']
+          .block
+            a(target="_blank" href=`http://bing.com?q=${tech}`)= tech
+.break
 h2 Education
 each edu in curriculum.resume.education
-  details
-    summary
-      i= `${edu.type} at `
-      a(target="_blank" href=Object.values(edu)[0])
-        i= `${Object.keys(edu)[0]}`
-      i= ` (${edu.period})`
-    p= edu.description
+  .fragment
+      details
+        summary
+          i= `${edu.type} at `
+          a(target="_blank" href=Object.values(edu)[0])
+            i= `${Object.keys(edu)[0]}`
+          i= ` (${edu.period})`
+        p= edu.description
 h2 Other certifications
 each cert in curriculum.resume['other certifications']
   .block
