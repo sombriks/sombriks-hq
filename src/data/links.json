@@ -1675,5 +1675,14 @@
       "features",
       "kent beck"
     ]
+  },
+  {
+    "label":"JavaFx Techniques",
+    "link": "https://www.pragmaticcoding.ca/javafx/techniques/",
+    "tags": [
+      "javafx",
+      "techniques",
+      "opinions on how to develop javafx applications"
+    ]
   }
 ]
