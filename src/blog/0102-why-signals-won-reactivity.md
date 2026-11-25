@@ -3,7 +3,7 @@ layout: blog-layout.pug
 date: 2026-11-21
 tags:
   - posts
-  - misc
+  - reactivity
   - software architecture
 draft: false
 ---
